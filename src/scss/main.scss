@@ -60,20 +60,6 @@ body {
       }
     }
   }
-
-  .stats {
-    color: #555;
-    font-size: 14px;
-    margin: 6px;
-    padding-left: 15px;
-  }
-  .pull-right {
-    text-align: right;
-  }
-}
-
-#cal-heatmap {
-  padding: 8px;
 }
 
 table {
@@ -105,3 +91,5 @@ table {
     border-top: 1px solid #ddd;
   }
 }
+
+#map { position:absolute; top:127px; bottom:0; width:100%; }

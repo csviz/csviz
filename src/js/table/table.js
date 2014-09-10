@@ -4,18 +4,9 @@
 var React = require('react');
 var bcsv = require('binary-csv')
 var xhr = require('xhr')
-// var bops = require('bops')
-// var through = require('through')
-// var url = require('url')
-// var createTable = require('data-table')
-// var insertCSS = require('insert-css')
 var concat = require('concat-stream')
 var Buffer = require('buffer').Buffer
 
-// insertCSS(createTable.css)
-
-// var parsedURL = url.parse(window.location.href, true)
-// var csv = parsedURL.query.csv || 'http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.csv'
 var csv = 'sample.data.csv';
 
 module.exports = React.createClass({
@@ -39,9 +30,6 @@ module.exports = React.createClass({
 
     function render(rows) {
       self.setState({data: rows})
-      // console.log('rows', rows)
-      // var table = createTable(rows)
-      // table.appendTo(document.getElementById('table'))
     }
   },
   render: function() {

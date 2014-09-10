@@ -8,7 +8,12 @@ var concat = require('gulp-concat');
 var bourbon = require('node-bourbon').includePaths;
 
 var css = [
-  './src/scss/main.scss'
+  './src/scss/main.scss',
+  './node_modules/mapbox.js/theme/style.css'
+]
+
+var images = [
+  './node_modules/mapbox.js/theme/images/*'
 ]
 
 gulp.task('scripts', function () {
@@ -32,8 +37,13 @@ gulp.task('styles', function () {
     .pipe(gulp.dest('./dist/css'));
 });
 
+gulp.task('images', function () {
+  return gulp.src(images)
+    .pipe(gulp.dest('./dist/css/images'));
+});
+
 gulp.task('watch', function() {
   gulp.watch('src/**/*.*', ['default']);
 });
 
-gulp.task('default', ['styles', 'scripts']);
+gulp.task('default', ['styles', 'images', 'scripts']);
