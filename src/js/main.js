@@ -18,6 +18,7 @@ var App = React.createClass({
       <div>
         <header>
           <div className='header'>
+            <img className='logo' src='./dist/assets/images/logo.png' />
             <h1>Hello, CSViz.</h1>
           </div>
 
