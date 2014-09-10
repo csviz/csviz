@@ -1,5 +1,10 @@
 @import 'bourbon';
 
+$primary-color: #333;
+$border-color: #BBB;
+
+$primary-size: 16px;
+
 body {
   font-family: "Source Sans Pro", Helvetica,Arial,sans-serif;
   font-size: 16px;
@@ -7,4 +12,96 @@ body {
   color: #222;
   background-color: #fff;
   margin: 0px;
+
+  header {
+    border-bottom: 1px solid #999;
+    padding-bottom: 14px;
+    background-color: #fff;
+    background: -webkit-linear-gradient(top,#fff,#f0f0f0);
+    h1 {
+      padding: 4px 8px;
+      font-size: 24px;
+      color: #555;
+      font-weight: 300;
+    }
+    nav {
+      ul {
+        padding: 0px;
+        margin-left: 8px;
+        color: #333;
+        font-weight: 300;
+        li {
+          font-size: 14px;
+          display: inline;
+          &:last-child a {
+            border-right: 1px #ccc solid;
+            border-bottom-right-radius: 3px;
+            border-top-right-radius: 3px;
+          }
+          &:first-child a {
+            border-bottom-left-radius: 3px;
+            border-top-left-radius: 3px;
+          }
+          a {
+            color: #333;
+            padding: 4px;
+            border-top: 1px #ccc solid;
+            border-left: 1px #ccc solid;
+            border-bottom: 1px #ccc solid;
+            text-decoration: none;
+            &:hover {
+              background-color: #ccc;
+            }
+            &.active {
+              background-color: #ccc;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .stats {
+    color: #555;
+    font-size: 14px;
+    margin: 6px;
+    padding-left: 15px;
+  }
+  .pull-right {
+    text-align: right;
+  }
+}
+
+#cal-heatmap {
+  padding: 8px;
+}
+
+table {
+  width: 100%;
+  margin: 10px auto;
+  text-align: center;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+  tbody tr:hover td {
+    background-color: #f5f5f5;
+  }
+  tbody tr:nth-child(odd) td {
+    background-color: #f9f9f9;
+  }
+
+  th {
+    text-align: center;
+    padding: 5px;
+    max-width: 100px;
+    word-wrap: break-word;
+  }
+  td {
+    max-width: 100px;
+    word-wrap: break-word;
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+  }
 }

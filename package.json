@@ -16,9 +16,18 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "binary-csv": "^0.2.2",
+    "bops": "^0.1.1",
+    "buffer": "^2.5.0",
+    "concat-stream": "^1.4.6",
+    "data-table": "^2.0.0",
+    "insert-css": "^0.2.0",
     "lodash": "^2.4.1",
     "react": "^0.11.1",
-    "react-router": "^0.5.3"
+    "react-router": "^0.5.3",
+    "through": "^2.3.4",
+    "url": "^0.10.1",
+    "xhr": "^1.16.0"
   },
   "devDependencies": {
     "gulp": "~3.5.6",

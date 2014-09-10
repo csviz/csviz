@@ -1,5 +1,11 @@
-csviz
-=====
+CSViz
+-----------
 
+### Development
 
-Yo!
+* install `npm i`
+* build `gulp`
+* watch `gulp watch`
+
+### Liscense
+MIT
