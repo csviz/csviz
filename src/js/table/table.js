@@ -32,19 +32,39 @@ module.exports = React.createClass({
       self.setState({data: rows})
     }
   },
+  edit: function(e) {
+    console.log('on edit')
+  },
+  cancel: function(e) {
+    console.log('on cancel')
+  },
+  save: function(e) {
+    console.log('on save')
+  },
   render: function() {
     var rows = this.state.data.map(function (data, i) {
       return <tr key={i}><td>{data.Country}</td><td>{data.Indicator}</td></tr>;
     });
     return (
-      <table>
-        <thead>
-          <tr><th>Country</th><th>Indicator</th></tr>
-        </thead>
-        <tbody>
-          {rows}
-        </tbody>
-      </table>
+      <div>
+        <div className="pull-right">
+          <div>
+            <button onClick={this.cancel}>Cancel</button>
+            <button onClick={this.save}>Save</button>
+          </div>
+          <div>
+            <button onClick={this.edit}>Edit</button>
+          </div>
+        </div>
+        <table>
+          <thead>
+            <tr><th>Country</th><th>Indicator</th></tr>
+          </thead>
+          <tbody>
+            {rows}
+          </tbody>
+        </table>
+      </div>
 
     );
   }
