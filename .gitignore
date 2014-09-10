@@ -8,3 +8,4 @@ pids
 *.seed
 
 node_modules
+dist
