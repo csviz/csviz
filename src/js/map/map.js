@@ -8,8 +8,8 @@ var concat = require('concat-stream')
 var Buffer = require('buffer').Buffer
 var mapbox = require('mapbox.js')
 
-var csv = 'sample.data.csv';
-var geo = 'countries.geo.json';
+var csv = './sample.data.csv';
+var geo = './countries.geo.json';
 
 module.exports = React.createClass({
   getInitialState: function() {
@@ -21,8 +21,8 @@ module.exports = React.createClass({
   },
   componentWillMount: function() {
     var self = this;
-    xhr({ responseType: 'arraybuffer', url: 'http://localhost/' + csv}, csv_response)
-    xhr({ responseType: 'json', url: 'http://localhost/' + geo}, geo_response)
+    xhr({ responseType: 'arraybuffer', url: csv}, csv_response)
+    xhr({ responseType: 'json', url: geo}, geo_response)
 
     function geo_response(err, resp, data) {
       self.setState({geo_data: data.features})

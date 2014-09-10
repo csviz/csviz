@@ -7,7 +7,7 @@ var xhr = require('xhr')
 var concat = require('concat-stream')
 var Buffer = require('buffer').Buffer
 
-var csv = 'sample.data.csv';
+var csv = './sample.data.csv';
 
 module.exports = React.createClass({
   getInitialState: function() {
@@ -17,9 +17,9 @@ module.exports = React.createClass({
   },
   componentWillMount: function() {
     var self = this;
-    xhr({ responseType: 'arraybuffer', url: 'http://localhost/' + csv }, response)
+    xhr({ responseType: 'arraybuffer', url: csv}, csv_response)
 
-    function response(err, resp, data) {
+    function csv_response(err, resp, data) {
       if (err) throw err
       var buff = new Buffer(new Uint8Array(data))
       var parser = bcsv({json: true})
