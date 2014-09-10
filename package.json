@@ -1,0 +1,35 @@
+{
+  "name": "csviz",
+  "private": true,
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/csviz/csviz.git"
+  },
+  "homepage": "https://github.com/csviz/csviz",
+  "author": {
+    "name": "CSViz",
+    "email": "fraserxu@wiredcraft.com",
+    "url": "http://csviz.org"
+  },
+  "script": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "lodash": "^2.4.1",
+    "react": "^0.11.1",
+    "react-router": "^0.5.3"
+  },
+  "devDependencies": {
+    "gulp": "~3.5.6",
+    "gulp-concat": "^2.3.4",
+    "node-bourbon": "1.0.0",
+    "browserify": "^5.11.0",
+    "gulp-sass": "~0.4.0",
+    "reactify": "~0.5.1",
+    "vinyl-transform": "0.0.1"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
