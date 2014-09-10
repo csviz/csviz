@@ -14,7 +14,8 @@ module.exports = React.createClass({
   getInitialState: function() {
     return {
       csv_data: [],
-      editing: false
+      editing: false,
+      instance: {}
     };
   },
   componentWillMount: function() {
@@ -38,11 +39,6 @@ module.exports = React.createClass({
   },
   componentWillUpdate: function(nextProps, nextState) {
     if(nextState.csv_data) {
-      var header = helper.makeHeader(nextState.csv_data)
-      var columns = helper.makeColumns(nextState.csv_data)
-      console.log('header', header)
-      console.log('columns', columns)
-
       var $container = $('#handsontable')
       $container.handsontable({
         data: nextState.csv_data,
@@ -54,6 +50,12 @@ module.exports = React.createClass({
       });
     }
   },
+  componentDidUpdate: function(prevProps, prevState) {
+    if(Object.keys(prevState.instance).length === 0) {
+      var instance = $("#handsontable").handsontable('getInstance');
+      this.setState({instance: instance})
+    }
+  },
   edit: function(e) {
     console.log('on edit')
     this.setState({editing: true})
@@ -63,7 +65,7 @@ module.exports = React.createClass({
     this.setState({editing: false})
   },
   save: function(e) {
-    console.log('on save')
+    console.log(helper.string(this.state.instance))
     this.setState({editing: false})
   },
   render: function() {

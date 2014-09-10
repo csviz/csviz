@@ -32,6 +32,7 @@ gulp.task('scripts', function () {
 
   return gulp.src('./src/js/main.js')
     .pipe(browserified)
+    // .pipe(uglify())
     .pipe(gulp.dest('./dist/js'));
 });
 
