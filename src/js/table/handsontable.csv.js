@@ -10,10 +10,12 @@ module.exports = {
       })
       return header
     },
-    makeColumns: function(data) {
-      if(!data[0]) throw new Error('data should not be empty')
+    makeColumns: function(colHeaders) {
+      if(!colHeaders) throw new Error('data should not be empty')
       var columns = []
-
+      colHeaders.forEach(function(header) {
+        columns.push({data: header})
+      })
       return columns
     },
     string: function(instance) {
