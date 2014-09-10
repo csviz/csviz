@@ -23,6 +23,10 @@ var images = [
   './node_modules/mapbox.js/theme/images/*'
 ]
 
+var assets = [
+  './src/assets/**/*'
+]
+
 gulp.task('scripts', function () {
   var browserified = transform(function(filename) {
     var b = browserify(filename);
@@ -44,6 +48,11 @@ gulp.task('lib', function () {
     .pipe(gulp.dest('./dist/js'));
 });
 
+gulp.task('assets', function() {
+  return gulp.src(assets)
+    .pipe(gulp.dest('./dist/assets'));
+})
+
 gulp.task('styles', function () {
   return gulp.src(css)
     .pipe(sass({
@@ -59,7 +68,9 @@ gulp.task('images', function () {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('src/**/*.*', ['default']);
+  gulp.watch(css, ['styles']);
+  gulp.watch(assets, ['assets']);
+  gulp.watch('./src/js/**/*', ['scripts']);
 });
 
-gulp.task('default', ['styles', 'images', 'lib', 'scripts']);
+gulp.task('default', ['styles', 'images', 'lib', 'assets', 'scripts']);
