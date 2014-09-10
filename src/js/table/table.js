@@ -17,7 +17,7 @@ module.exports = React.createClass({
   },
   componentWillMount: function() {
     var self = this;
-    xhr({ responseType: 'arraybuffer', url: 'http://localhost:8000/' + csv }, response)
+    xhr({ responseType: 'arraybuffer', url: 'http://localhost/' + csv }, response)
 
     function response(err, resp, data) {
       if (err) throw err
