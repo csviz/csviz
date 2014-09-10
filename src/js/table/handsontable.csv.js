@@ -2,6 +2,20 @@
 
 // https://github.com/juantascon/jquery-handsontable-csv
 module.exports = {
+    makeHeader: function(data) {
+      if(!data[0]) throw new Error('data should not be empty')
+      var header = []
+      Object.keys(data[0]).forEach(function(key) {
+        header.push(key)
+      })
+      return header
+    },
+    makeColumns: function(data) {
+      if(!data[0]) throw new Error('data should not be empty')
+      var columns = []
+
+      return columns
+    },
     string: function(instance) {
         var headers = instance.getColHeader();
 

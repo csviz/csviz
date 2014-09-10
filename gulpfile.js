@@ -5,11 +5,18 @@ var browserify = require('browserify');
 var transform = require('vinyl-transform');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
 var bourbon = require('node-bourbon').includePaths;
 
 var css = [
   './src/scss/main.scss',
-  './node_modules/mapbox.js/theme/style.css'
+  './node_modules/mapbox.js/theme/style.css',
+  './src/libs/jquery.handsontable.css'
+]
+
+var libs = [
+  './src/libs/jquery.js',
+  './src/libs/jquery.handsontable.js'
 ]
 
 var images = [
@@ -25,6 +32,14 @@ gulp.task('scripts', function () {
 
   return gulp.src('./src/js/main.js')
     .pipe(browserified)
+    .pipe(gulp.dest('./dist/js'));
+});
+
+// jquery sucks here
+gulp.task('lib', function () {
+  return gulp.src(libs)
+    .pipe(uglify())
+    .pipe(concat('lib.js'))
     .pipe(gulp.dest('./dist/js'));
 });
 
@@ -46,4 +61,4 @@ gulp.task('watch', function() {
   gulp.watch('src/**/*.*', ['default']);
 });
 
-gulp.task('default', ['styles', 'images', 'scripts']);
+gulp.task('default', ['styles', 'images', 'lib', 'scripts']);

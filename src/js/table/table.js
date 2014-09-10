@@ -6,6 +6,7 @@ var bcsv = require('binary-csv')
 var xhr = require('xhr')
 var concat = require('concat-stream')
 var Buffer = require('buffer').Buffer
+var helper = require('./handsontable.csv')
 
 var csv = './sample.data.csv';
 
@@ -31,6 +32,26 @@ module.exports = React.createClass({
 
     function render(rows) {
       self.setState({csv_data: rows})
+    }
+  },
+  componentDidMount: function() {
+  },
+  componentWillUpdate: function(nextProps, nextState) {
+    if(nextState.csv_data) {
+      var header = helper.makeHeader(nextState.csv_data)
+      var columns = helper.makeColumns(nextState.csv_data)
+      console.log('header', header)
+      console.log('columns', columns)
+
+      var $container = $('#handsontable')
+      $container.handsontable({
+        data: nextState.csv_data,
+        colHeaders: helper.makeHeader(nextState.csv_data),
+        columns: [
+          {data: "Country"},
+          {data: "Indicator"}
+        ]
+      });
     }
   },
   edit: function(e) {
@@ -60,14 +81,7 @@ module.exports = React.createClass({
             <button onClick={this.edit}>Edit</button>
           </div>
         </div>
-        <table>
-          <thead>
-            <tr><th>Country</th><th>Indicator</th></tr>
-          </thead>
-          <tbody>
-            {rows}
-          </tbody>
-        </table>
+        <div id='handsontable'></div>
       </div>
 
     );
