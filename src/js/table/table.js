@@ -12,7 +12,8 @@ var csv = './sample.data.csv';
 module.exports = React.createClass({
   getInitialState: function() {
     return {
-      data: []
+      csv_data: [],
+      editing: false
     };
   },
   componentWillMount: function() {
@@ -29,30 +30,33 @@ module.exports = React.createClass({
     }
 
     function render(rows) {
-      self.setState({data: rows})
+      self.setState({csv_data: rows})
     }
   },
   edit: function(e) {
     console.log('on edit')
+    this.setState({editing: true})
   },
   cancel: function(e) {
     console.log('on cancel')
+    this.setState({editing: false})
   },
   save: function(e) {
     console.log('on save')
+    this.setState({editing: false})
   },
   render: function() {
-    var rows = this.state.data.map(function (data, i) {
+    var rows = this.state.csv_data.map(function (data, i) {
       return <tr key={i}><td>{data.Country}</td><td>{data.Indicator}</td></tr>;
     });
     return (
       <div>
         <div className="pull-right">
-          <div>
+          <div className={this.state.editing ? '' : 'hidden'}>
             <button onClick={this.cancel}>Cancel</button>
             <button onClick={this.save}>Save</button>
           </div>
-          <div>
+          <div className={this.state.editing ? 'hidden' : ''}>
             <button onClick={this.edit}>Edit</button>
           </div>
         </div>

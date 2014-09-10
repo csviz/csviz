@@ -1,1 +1,4 @@
-{}
+{
+  "csv": "./sample.data.csv",
+  "geo": "./countries.geo.json"
+}
