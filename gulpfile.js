@@ -16,7 +16,9 @@ var css = [
 
 var libs = [
   './src/libs/jquery.js',
-  './src/libs/jquery.handsontable.js'
+  './src/libs/jquery.handsontable.js',
+  './node_modules/hellojs/src/hello.js',
+  './node_modules/hellojs/src/modules/github.js'
 ]
 
 var images = [

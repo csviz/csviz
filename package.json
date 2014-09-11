@@ -16,6 +16,7 @@
     "binary-csv": "^0.2.2",
     "buffer": "^2.5.0",
     "concat-stream": "^1.4.6",
+    "github-api": "^0.7.0",
     "lodash": "^2.4.1",
     "mapbox.js": "^2.1.0",
     "react": "^0.11.1",

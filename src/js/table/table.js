@@ -7,6 +7,7 @@ var xhr = require('xhr')
 var concat = require('concat-stream')
 var Buffer = require('buffer').Buffer
 var helper = require('./handsontable.csv.js')
+var Github = require('github-api')
 
 var csv = './data/sample.data.csv';
 
@@ -56,16 +57,49 @@ module.exports = React.createClass({
     }
   },
   edit: function(e) {
-    console.log('on edit')
+    var self = this;
     this.setState({editing: true})
+    // hello.login('github')
+    // hello.on('auth.login', function(r) {
+    //   console.log('auth.login', r);
+    //   var github = new Github({
+    //     token: r.authResponse.access_token,
+    //     auth: 'oauth'
+    //   });
+    //   window.github = github
+    //   self.setState({ github: github})
+    })
   },
   cancel: function(e) {
     console.log('on cancel')
     this.setState({editing: false})
   },
   save: function(e) {
+    var self = this;
     console.log(helper.string(this.state.instance))
     this.setState({editing: false})
+
+    // function getRepo(user) {
+    //   var repo = self.state.github.getRepo(user.login, 'csviz')
+    //   console.log('repo', repo)
+    //   repo.getTree('master?recursive=true', function(err, tree) {
+    //     console.log('tree', tree)
+
+    //   });
+    //   repo.write('master', 'helloworld.md', 'Hello world from csviz!', 'Update CSV file from CSViz.', function(err) {});
+
+    // }
+
+    // if (Object.keys(this.state.user).length > 0) {
+    //   getRepo(this.state.user)
+    // } else {
+    //   this.state.github.getUser().show(null, function(err, data) {
+    //     self.setState({user: data});
+    //     getRepo(data)
+    //   })
+    // }
+
+
   },
   render: function() {
     var rows = this.state.csv_data.map(function (data, i) {
@@ -82,6 +116,7 @@ module.exports = React.createClass({
       <div className="container">
         <div className="controls">
           <button onClick={this.save}>Save</button>
+          <button onClick={this.edit}>Edit</button>
         </div>
         <div id='handsontable'></div>
       </div>
