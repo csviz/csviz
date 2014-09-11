@@ -9,8 +9,8 @@ var Buffer = require('buffer').Buffer
 var mapbox = require('mapbox.js')
 
 
-var csv = './sample.data.csv';
-var geo = './countries.geo.json';
+var csv = './data/sample.data.csv';
+var geo = './data/countries.geo.json';
 var colorCount = 6;
 
 module.exports = React.createClass({

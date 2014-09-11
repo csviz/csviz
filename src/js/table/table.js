@@ -8,7 +8,7 @@ var concat = require('concat-stream')
 var Buffer = require('buffer').Buffer
 var helper = require('./handsontable.csv.js')
 
-var csv = './sample.data.csv';
+var csv = './data/sample.data.csv';
 
 module.exports = React.createClass({
   getInitialState: function() {

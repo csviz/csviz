@@ -43079,8 +43079,8 @@ var Buffer = require('buffer').Buffer
 var mapbox = require('mapbox.js')
 
 
-var csv = './sample.data.csv';
-var geo = './countries.geo.json';
+var csv = './data/sample.data.csv';
+var geo = './data/countries.geo.json';
 var colorCount = 6;
 
 module.exports = React.createClass({displayName: 'exports',
@@ -43297,7 +43297,7 @@ var concat = require('concat-stream')
 var Buffer = require('buffer').Buffer
 var helper = require('./handsontable.csv.js')
 
-var csv = './sample.data.csv';
+var csv = './data/sample.data.csv';
 
 module.exports = React.createClass({displayName: 'exports',
   getInitialState: function() {
