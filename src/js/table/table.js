@@ -72,8 +72,8 @@ module.exports = React.createClass({
       return <tr key={i}><td>{data.Country}</td><td>{data.Indicator}</td></tr>;
     });
     return (
-      <div>
-        <div className="pull-right">
+      <div className="container">
+        <div className="controls">
           <div className={this.state.editing ? '' : 'hidden'}>
             <button onClick={this.cancel}>Cancel</button>
             <button onClick={this.save}>Save</button>

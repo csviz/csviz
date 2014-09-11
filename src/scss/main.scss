@@ -67,12 +67,14 @@ body {
       }
     }
   }
-  .pull-right {
-    text-align: right;
-  }
 }
 
-table {
+.container {
+  .controls {
+    text-align: right;
+  }
+
+  table {
     width: 100%;
     margin: 10px auto;
     text-align: center;
@@ -102,13 +104,14 @@ table {
     }
   }
 
-#handsontable {
-  margin: 8px 10px;
+  #handsontable {
+    margin: 8px 10px;
+  }
 }
 
 #map {
   position:absolute;
-  top:127px;
+  top:120px;
   bottom:0;
   width:100%;
 }
