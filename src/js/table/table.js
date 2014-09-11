@@ -68,7 +68,7 @@ module.exports = React.createClass({
     //   });
     //   window.github = github
     //   self.setState({ github: github})
-    })
+    // })
   },
   cancel: function(e) {
     console.log('on cancel')

@@ -45067,13 +45067,6 @@ var Routes = require('react-router/Routes');
 var Route = require('react-router/Route');
 var Link = require('react-router/Link');
 
-var GITHUB_CLIENT_ID = '4241fa1be189fa14c6e8'
-var OAUTH_PROXY_URL = 'https://auth-server.herokuapp.com/proxy';
-
-hello.init({
-  github : GITHUB_CLIENT_ID
-},  {redirect_uri:'../../redirect.html', oauth_proxy:OAUTH_PROXY_URL});
-
 var App = React.createClass({displayName: 'App',
   render: function() {
     return (
@@ -45348,9 +45341,7 @@ module.exports = React.createClass({displayName: 'exports',
     return {
       csv_data: [],
       editing: false,
-      instance: {},
-      github: {},
-      user: {}
+      instance: {}
     };
   },
   componentWillMount: function() {
@@ -45393,16 +45384,16 @@ module.exports = React.createClass({displayName: 'exports',
   edit: function(e) {
     var self = this;
     this.setState({editing: true})
-    hello.login('github')
-    hello.on('auth.login', function(r) {
-      console.log('auth.login', r);
-      var github = new Github({
-        token: r.authResponse.access_token,
-        auth: 'oauth'
-      });
-      window.github = github
-      self.setState({ github: github})
-    })
+    // hello.login('github')
+    // hello.on('auth.login', function(r) {
+    //   console.log('auth.login', r);
+    //   var github = new Github({
+    //     token: r.authResponse.access_token,
+    //     auth: 'oauth'
+    //   });
+    //   window.github = github
+    //   self.setState({ github: github})
+    // })
   },
   cancel: function(e) {
     console.log('on cancel')
@@ -45413,25 +45404,25 @@ module.exports = React.createClass({displayName: 'exports',
     console.log(helper.string(this.state.instance))
     this.setState({editing: false})
 
-    function getRepo(user) {
-      var repo = self.state.github.getRepo(user.login, 'csviz')
-      console.log('repo', repo)
-      // repo.getTree('master?recursive=true', function(err, tree) {
-      //   console.log('tree', tree)
+    // function getRepo(user) {
+    //   var repo = self.state.github.getRepo(user.login, 'csviz')
+    //   console.log('repo', repo)
+    //   repo.getTree('master?recursive=true', function(err, tree) {
+    //     console.log('tree', tree)
 
-      // });
-      repo.write('master', 'helloworld.md', 'Hello world from csviz!', 'Update CSV file from CSViz.', function(err) {});
+    //   });
+    //   repo.write('master', 'helloworld.md', 'Hello world from csviz!', 'Update CSV file from CSViz.', function(err) {});
 
-    }
+    // }
 
-    if (Object.keys(this.state.user).length > 0) {
-      getRepo(this.state.user)
-    } else {
-      this.state.github.getUser().show(null, function(err, data) {
-        self.setState({user: data});
-        getRepo(data)
-      })
-    }
+    // if (Object.keys(this.state.user).length > 0) {
+    //   getRepo(this.state.user)
+    // } else {
+    //   this.state.github.getUser().show(null, function(err, data) {
+    //     self.setState({user: data});
+    //     getRepo(data)
+    //   })
+    // }
 
 
   },
