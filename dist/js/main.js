@@ -43259,7 +43259,8 @@ module.exports = {
         var csv = ""
         csv += headers.join(",") + "\n";
 
-        for (var i = 0; i < instance.countRows(); i++) {
+        // ignore last line
+        for (var i = 0; i < instance.countRows() - 1 ; i++) {
             var row = [];
             for (var h in headers) {
                 var prop = instance.colToProp(h)
@@ -43360,16 +43361,17 @@ module.exports = React.createClass({displayName: 'exports',
     var rows = this.state.csv_data.map(function (data, i) {
       return React.DOM.tr({key: i}, React.DOM.td(null, data.Country), React.DOM.td(null, data.Indicator));
     });
+    // <div className={this.state.editing ? '' : 'hidden'}>
+    //   <button onClick={this.cancel}>Cancel</button>
+    //   <button onClick={this.save}>Save</button>
+    // </div>
+    // <div className={this.state.editing ? 'hidden' : ''}>
+    //   <button onClick={this.edit}>Edit</button>
+    // </div>
     return (
       React.DOM.div({className: "container"}, 
         React.DOM.div({className: "controls"}, 
-          React.DOM.div({className: this.state.editing ? '' : 'hidden'}, 
-            React.DOM.button({onClick: this.cancel}, "Cancel"), 
-            React.DOM.button({onClick: this.save}, "Save")
-          ), 
-          React.DOM.div({className: this.state.editing ? 'hidden' : ''}, 
-            React.DOM.button({onClick: this.edit}, "Edit")
-          )
+          React.DOM.button({onClick: this.save}, "Save")
         ), 
         React.DOM.div({id: "handsontable"})
       )

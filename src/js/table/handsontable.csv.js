@@ -24,7 +24,8 @@ module.exports = {
         var csv = ""
         csv += headers.join(",") + "\n";
 
-        for (var i = 0; i < instance.countRows(); i++) {
+        // ignore last line
+        for (var i = 0; i < instance.countRows() - 1 ; i++) {
             var row = [];
             for (var h in headers) {
                 var prop = instance.colToProp(h)
