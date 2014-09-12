@@ -45204,23 +45204,6 @@ User.prototype.get = function() {
     });
 }
 
-User.prototype.auth = function() {
-    return new Promise(function(resolve, reject) {
-        xhr({
-                uri: 'http://csviz.dev.wiredcraft.com/token',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Referer': window.location.href
-                }
-            },
-            function(err, resp, body) {
-                if(err)
-                    return reject(err);
-                resolve(body);
-            });
-    });
-}
-
 User.prototype.token = function(token) {
     if (!token)
         return this._token;
