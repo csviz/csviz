@@ -8,10 +8,15 @@ var concat = require('concat-stream')
 var Buffer = require('buffer').Buffer
 var helper = require('./handsontable.csv.js')
 var Github = require('github-api')
+var auth = require('../routes/auth')
+var user = require('../models/user')
 
 var csv = './data/sample.data.csv';
 
 module.exports = React.createClass({
+
+  mixins: [auth],
+
   getInitialState: function() {
     return {
       csv_data: [],
@@ -37,6 +42,7 @@ module.exports = React.createClass({
     }
   },
   componentDidMount: function() {
+
   },
   componentWillUpdate: function(nextProps, nextState) {
     if(nextState.csv_data) {
@@ -59,6 +65,7 @@ module.exports = React.createClass({
   edit: function(e) {
     var self = this;
     this.setState({editing: true})
+
     // hello.login('github')
     // hello.on('auth.login', function(r) {
     //   console.log('auth.login', r);
@@ -116,7 +123,7 @@ module.exports = React.createClass({
       <div className="container">
         <div className="controls">
           <button onClick={this.save}>Save</button>
-          <button onClick={this.edit}>Edit</button>
+          <a href="http://127.0.0.1:3000/token" >Edit</a>
         </div>
         <div id='handsontable'></div>
       </div>
