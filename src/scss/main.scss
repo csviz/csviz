@@ -1,190 +1,67 @@
 @import 'bourbon';
 @import 'normalize';
 
-@mixin uncollapse-margin {
-  @include clearfix();
-  &:before {
-    content: "";
-    display: table;
-  }
-}
+$primary-color: #333;
+$border-color: #BBB;
 
-@mixin unstyled-list {
-  list-style: none;
-  padding-left: 0;
-  @include margin(0 null 0 null);
-}
-
-@mixin horizontal-list($style: false) {
-  @if $style == true {
-    @include unstyled-list();
-  }
-
-  @include clearfix();
-  li { float: left; }
-}
-
-@mixin icon($icon) {
-  font-family: 'icomoon';
-  content: '#{$icon}';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-$white: #fff;
-$black: #000;
-$dark: #697380;
-$grey: #aeb3b4;
-$dark-green: #31d2b1;
-$light-green: #a6e8e4;
-$blue: #459cd0;
-
-$normal: 14px;
-$large: 16px;
-$small: 12px;
-
-$sans: 'open sans', #{$helvetica};
-
-@font-face {
-  font-family: 'icomoon';
-  src:url('../fonts/icomoon.eot?-ogcexc');
-  src:url('../fonts/icomoon.eot?#iefix-ogcexc') format('embedded-opentype'),
-      url('../fonts/icomoon.woff?-ogcexc') format('woff'),
-      url('../fonts/icomoon.ttf?-ogcexc') format('truetype'),
-      url('../fonts/icomoon.svg?-ogcexc#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-html, body {
-  height: 100%;
-}
+$primary-size: 16px;
 
 body {
-  color: $dark;
-  font: 400 #{$normal}/140% $sans;
-}
+  font-family: "Source Sans Pro", Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  line-height: 1.42857143;
+  color: #222;
+  background-color: #fff;
+  margin: 0px;
 
-a {
-  color: $blue;
-  text-decoration: none;
-  &:hover {
-    color: $blue;
-  }
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 400;
-}
-
-.table {
-  width: 100%;
-}
-
-.container {
-  @include padding(null 10px null 10px);
-}
-
-.cell {
-  width: 650px;
-  @include margin(null auto null auto);
-}
-
-.modal {
-  @include position(fixed, 0 0 0 0);
-  z-index: 1010;
-  .modal-backdrop {
-    @include position(fixed, 0 0 0 0);
-    z-index: 1000;
-    background-color: #000;
-    opacity: .5;
-  }
-  .modal-content {
-    width: 240px;
-    padding: 20px;
-    margin: 100px auto;
-    background-color: $white;
-    border-radius: 2px;
-    box-shadow: 0 0 3px rgba(0, 0, 0, .85);
-    position: relative;
-    z-index: 1020;
-  }
-}
-
-.dropdown {
-  position: relative;
-  @include transition(all .2s);
-  .dropdown-togger {
-  }
-  .dropdown-menu {
-    display: none;
-    min-width: 200px;
-    padding: 20px;
+  header {
+    border-bottom: 1px solid #999;
+    padding: 15px 8px;
     background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 2px;
-    @include position(absolute, 100% 20% null null);
-    z-index: 1050;
-  }
-  &:hover {
-    .dropdown-menu { display: block; }
-  }
-}
-
-.header {
-  @include padding(15px null 15px null);
-  box-shadow: 0 1px 3px rgba($black, .2);
-  background-color: $white;
-  @include position(fixed, 0 0 null 0);
-  .container {
-    @include clearfix();
-  }
-  .brand {
-    float: left;
-    display: block;
-    color: $dark;
-    font-size: $large;
-    padding-left: 25px;
-    position: relative;
-    img {
-      @include position(absolute, -2px null null 0);
+    background: -webkit-linear-gradient(top,#fff,#f0f0f0);
+    .header {
+      padding-left: 8px;
     }
-  }
-
-  .bar {
-    float: right;
-    @include horizontal-list(true);
-    li {
-      margin-left: 20px;
-      .avatar {
-        float: left;
-        display: block;
-        margin-right: 5px;
-        img {
-          display: block;
-          @include size(20px 20px);
-          border-radius: 2px;
-        }
-      }
-      &.dropdown {
-        .dropdown-menu { padding: 0; }
-        .menu {
-          @include unstyled-list();
-          li {
-            float: none;
-            margin-left: 0;
-            a {
-              display: block;
-              padding: 10px 20px;
-              &:hover {
-                background-color: #f7f7f7;
-              }
+    .logo {
+      display: inline;
+    }
+    h1 {
+      display: inline;
+      padding: 4px 8px;
+      font-size: 24px;
+      color: #555;
+      font-weight: 300;
+    }
+    nav {
+      ul {
+        padding: 0px;
+        margin-left: 8px;
+        color: #333;
+        font-weight: 300;
+        li {
+          font-size: 14px;
+          display: inline;
+          &:last-child a {
+            border-right: 1px #ccc solid;
+            border-bottom-right-radius: 3px;
+            border-top-right-radius: 3px;
+          }
+          &:first-child a {
+            border-bottom-left-radius: 3px;
+            border-top-left-radius: 3px;
+          }
+          a {
+            color: #333;
+            padding: 4px;
+            border-top: 1px #ccc solid;
+            border-left: 1px #ccc solid;
+            border-bottom: 1px #ccc solid;
+            text-decoration: none;
+            &:hover {
+              background-color: #ccc;
+            }
+            &.active {
+              background-color: #ccc;
             }
           }
         }
@@ -193,185 +70,53 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.main {
-  overflow: scroll;
-  height: 100%;
-  .inner {
-    padding-top: 50px;
+.container {
+  .controls {
+    text-align: right;
+  }
+
+  table {
+    width: 100%;
+    margin: 10px auto;
+    text-align: center;
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+    tbody tr:hover td {
+      background-color: #f5f5f5;
+    }
+    tbody tr:nth-child(odd) td {
+      background-color: #f9f9f9;
+    }
+
+    th {
+      text-align: center;
+      padding: 5px;
+      max-width: 100px;
+      word-wrap: break-word;
+    }
+    td {
+      max-width: 100px;
+      word-wrap: break-word;
+      padding: 8px;
+      line-height: 1.42857143;
+      vertical-align: top;
+      border-top: 1px solid #ddd;
+    }
+  }
+
+  #handsontable {
+    margin: 8px 10px;
   }
 }
 
-.welcome {
-  text-align: center;
-  width: 650px;
-  @include padding(50px null 50px null);
-  @include margin(null auto null auto);
-  h1 {
-    font-size: 38px;
-  }
-  p { color: $grey; }
-  .signin-with-gh {
-    display: inline-block;
-    color: $white;
-    @include clearfix();
-    .icon-gh {
-      float: left;
-      display: block;
-      font-size: 24px;
-      line-height: 45px;
-      height: 45px;
-      padding: 0 15px;
-      background-color: #2976b0;
-      border-radius: 2px 0 0 2px;
-      &:before {
-        @include icon(\e6ee);
-        @include position(relative, 2px null null null);
-      }
-    }
-    span {
-      float: left;
-      display: block;
-      line-height: 45px;
-      height: 45px;
-      padding: 0 15px;
-      @include background(linear-gradient(#3989c5, #3989c5));
-      border-radius: 0 2px 2px 0;
-    }
-  }
-
-  .steps {
-    @include horizontal-list(true);
-    margin-top: 40px;
-    li {
-      width: percentage(1/3);
-    }
-  }
+#map {
+  position:absolute;
+  top:120px;
+  bottom:0;
+  width:100%;
 }
 
-.excel {
-  width: auto;
-  height: auto;
-  margin-bottom: 48px;
-  th, td {
-    padding: 5px;
-    border: 1px solid #ddd;
-  }
-  th {
-    font-weight: 600;
-    background-color: #f7f7f7;
-    border-bottom-color: #bbb;
-  }
-  td {
-    width: 200px;
-  }
-  tr td:first-child {
-    font-weight: 600;
-    width: 300px;
-    background-color: #f7f7f7;
-  }
-}
-
-.controlbar {
-  text-align: right;
-  @include padding(10px null 10px null);
-  @include position(fixed, null 0 0 0);
-  background-color: $white;
-  box-shadow: 0 -1px 2px rgba($black, .2);
-  a {
-    color: $dark;
-  }
-  .button {
-    color: $white;
-    padding: 4px 10px;
-    margin-left: 20px;
-    border: none;
-    background-color: $dark-green;
-    border-radius: 2px;
-  }
-}
-
-.project {
-  background-color: #f7f7f7;
-  .create-project {
-    width: 80%;
-    @include margin(null auto null auto);
-    padding-top: 50px;
-  }
-
-  .button {
-    display: block;
-    color: $white;
-    font-size: 18px;
-    padding: 20px;
-    background-color: $dark-green;
-    border-radius: 2px;
-    .icon-plus {
-      float: left;
-      font-size: 20px;
-      margin-right: 20px;
-      &:before {
-        @include icon(\e67d);
-      }
-    }
-  }
-  .project-list {
-    font-size: 18px;
-    @include unstyled-list();
-    margin-top: 10px;
-    li { margin-bottom: 10px; }
-    a {
-      display: block;
-      color: $dark;
-      padding: 20px;
-      background-color: $white;
-      .logo {
-        float: left;
-        display: block;
-        margin-right: 10px;
-        @include position(relative, -5px null null -5px);
-        img {
-          display: block;
-          @include size(30px 30px);
-        }
-      }
-    }
-  }
-  .project-modal {
-    .steps {
-      @include unstyled-list();
-      @include padding(null 20px null 20px);
-      @include margin(20px null 20px null);
-      position: relative;
-      &:before {
-        content: "";
-        display: block;
-        width: 2px;
-        background-color: #565f6c;
-        @include position(absolute, 0 null 0 20px);
-      }
-      li {
-        @include padding(null 20px null 20px);
-        margin-bottom: 20px;
-        position: relative;
-        counter-increment: li;
-        &:before {
-          color: $white;
-          text-align: center;
-          content: counter(li);
-          display: block;
-          @include size(22px 22px);
-          background-color: #565f6c;
-          @include position(absolute, -2px null null -10px);
-          border-radius: 50%;
-        }
-      }
-    }
-    .icon-ok {
-      color: $dark-green;
-      margin-left: 5px;
-      &:before {
-        @include icon(\e677);
-      }
-    }
-  }
+.hidden {
+  display: none;
 }
