@@ -1,9 +1,7 @@
 var Promise = require('es6-promise').Promise,
     xhr = require('xhr');
 
-function User() {
-
-}
+function User() {}
 
 User.prototype.get = function() {
     this.token(window.localStorage.getItem('token'))
@@ -12,7 +10,7 @@ User.prototype.get = function() {
         if (!self._token)
             return reject(new Error('401'));
         xhr({
-                uri: 'http://127.0.0.1:3000/user',
+                uri: 'http://csviz.dev.wiredcraft.com/user',
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': 'Bearer ' + self._token
@@ -32,7 +30,7 @@ User.prototype.get = function() {
 User.prototype.auth = function() {
     return new Promise(function(resolve, reject) {
         xhr({
-                uri: 'http://127.0.0.1:3000/token',
+                uri: 'http://csviz.dev.wiredcraft.com/token',
                 headers: {
                     'Content-Type': 'application/json',
                     'Referer': window.location.href

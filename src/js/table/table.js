@@ -123,7 +123,7 @@ module.exports = React.createClass({
       <div className="container">
         <div className="controls">
           <button onClick={this.save}>Save</button>
-          <a href="http://127.0.0.1:3000/token" >Edit</a>
+          <a href="http://csviz.dev.wiredcraft.com/token">Edit</a>
         </div>
         <div id='handsontable'></div>
       </div>
