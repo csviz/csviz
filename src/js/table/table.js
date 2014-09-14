@@ -85,8 +85,9 @@ module.exports = React.createClass({
     this.setState({github: github})
 
     var repo = github.getRepo(user.attrs.github.login, 'csviz')
+
     // need to define the path of the data
-    repo.write('master', 'test.csv', editedData, 'Update CSV file from CSViz.', function(err) {
+    repo.write('master', 'data/sample.data.csv', editedData, 'Update CSV file from CSViz.', function(err) {
       console.log('err', err)
       console.log('write data success')
     });
