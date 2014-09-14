@@ -1,5 +1,5 @@
-var Promise = require('es6-promise').Promise,
-  xhr = require('xhr');
+var Promise = require('es6-promise').Promise;
+var xhr = require('xhr');
 
 function User() {}
 
@@ -18,7 +18,14 @@ User.prototype.get = function() {
     },
     function(err, resp, body) {
       if(err) return reject(err);
-      if (resp.statusCode === 200) self.attrs = body
+      if (resp.statusCode === 200) {
+        try {
+          var attrs = JSON.parse(body)
+        } catch (e) {
+          return reject(e)
+        }
+        self.attrs = attrs
+      }
       resolve(resp);
     });
   });
@@ -35,11 +42,15 @@ User.prototype.save = function () {
   return this;
 }
 
-User.prototype.clear = function() {
+User.prototype.clear = User.prototype.logout = function() {
   this._token = null;
   this.attrs = null
   window.localStorage.clear();
   return this;
+}
+
+User.prototype.loggedIn = function() {
+  return !!window.localStorage.token
 }
 
 module.exports = exports._user || (exports._user = new User())

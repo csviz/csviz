@@ -14,6 +14,7 @@ var user = require('../models/user')
 var csv = './data/sample.data.csv';
 
 module.exports = React.createClass({
+  displayName: 'TableComponent',
 
   mixins: [auth],
 
@@ -21,7 +22,8 @@ module.exports = React.createClass({
     return {
       csv_data: [],
       editing: false,
-      instance: {}
+      instance: {},
+      loggedIn: !!localStorage.token
     };
   },
   componentWillMount: function() {
@@ -83,19 +85,32 @@ module.exports = React.createClass({
   },
   save: function(e) {
     var self = this;
-    console.log(helper.string(this.state.instance))
+    var editedData = helper.string(this.state.instance)
+    console.log('editedData', editedData)
+
     this.setState({editing: false})
 
-    // function getRepo(user) {
-    //   var repo = self.state.github.getRepo(user.login, 'csviz')
-    //   console.log('repo', repo)
-    //   repo.getTree('master?recursive=true', function(err, tree) {
-    //     console.log('tree', tree)
+    var github = new Github({
+      token: user.attrs.github.accessToken,
+      auth: 'oauth'
+    });
 
-    //   });
-    //   repo.write('master', 'helloworld.md', 'Hello world from csviz!', 'Update CSV file from CSViz.', function(err) {});
+    this.setState({github: github})
 
-    // }
+    window.github = github
+
+    function getRepo(user) {
+      var repo = github.getRepo(user.attrs.github.login, 'csviz')
+      // repo.getTree('master?recursive=true', function(err, tree) {
+      //   console.log('tree', tree)
+      // });
+      repo.write('master', 'test.csv', editedData, 'Update CSV file from CSViz.', function(err) {
+        console.log('err', err)
+        console.log('write data success')
+      });
+    }
+
+    getRepo(user)
 
     // if (Object.keys(this.state.user).length > 0) {
     //   getRepo(this.state.user)

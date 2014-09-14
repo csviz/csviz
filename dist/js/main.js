@@ -45175,55 +45175,60 @@ module.exports = React.createClass({displayName: 'exports',
 });
 
 },{"binary-csv":1,"buffer":42,"concat-stream":45,"mapbox.js":83,"react":276,"xhr":277}],286:[function(require,module,exports){
-var Promise = require('es6-promise').Promise,
-    xhr = require('xhr');
+var Promise = require('es6-promise').Promise;
+var xhr = require('xhr');
 
 function User() {}
 
 User.prototype.get = function() {
-    this.token(window.localStorage.getItem('token'))
-    var self = this;
-    return new Promise(function(resolve, reject) {
-        if (!self._token)
-            return reject(new Error('401'));
-        xhr({
-                uri: 'http://csviz.dev.wiredcraft.com/user',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': 'Bearer ' + self._token
-                }
-            },
-            function(err, resp, body) {
-                if(err)
-                    return reject(err);
-                if (resp.statusCode === 200) {
-                    self.attrs = body
-                }
-                resolve(resp);
-            });
+  this.token(window.localStorage.getItem('token'))
+  var self = this;
+  return new Promise(function(resolve, reject) {
+    if (!self._token)
+      return reject(new Error('401'));
+    xhr({
+      uri: 'http://csviz.dev.wiredcraft.com/user',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + self._token
+      }
+    },
+    function(err, resp, body) {
+      if(err) return reject(err);
+      if (resp.statusCode === 200) {
+        try {
+          var attrs = JSON.parse(body)
+        } catch (e) {
+          return reject(e)
+        }
+        self.attrs = attrs
+      }
+      resolve(resp);
     });
+  });
 }
 
 User.prototype.token = function(token) {
-    if (!token)
-        return this._token;
-    this._token = token;
-    return this;
+  if (!token) return this._token;
+  this._token = token;
+  return this;
 }
 
 User.prototype.save = function () {
-    if(this._token)
-        window.localStorage.setItem('token', this._token);
-    return this;
+  if(this._token) window.localStorage.setItem('token', this._token);
+  return this;
 }
 
-User.prototype.clear = function() {
-    this._token = null;
-    this.attrs = null
-    window.localStorage.clear();
-    return this;
+User.prototype.clear = User.prototype.logout = function() {
+  this._token = null;
+  this.attrs = null
+  window.localStorage.clear();
+  return this;
 }
 
+User.prototype.loggedIn = function() {
+  return !!window.localStorage.token
+}
 
 module.exports = exports._user || (exports._user = new User())
 
@@ -45235,17 +45240,13 @@ exports.User = User
 var user = require('../models/user')
 
 var authenticatedRoute = {
-    statics: {
-        willTransitionTo: function(transition) {
-            return user.get().then(function(data) {
-
-
-            }, function(err) {
-                console.log(err.message)
-
-            })
-        }
+  statics: {
+    willTransitionTo: function(transition) {
+      return user.get().then(function(data) {
+      }, function(err) {
+      })
     }
+  }
 }
 
 module.exports = authenticatedRoute
@@ -45321,7 +45322,8 @@ var user = require('../models/user')
 
 var csv = './data/sample.data.csv';
 
-module.exports = React.createClass({displayName: 'exports',
+module.exports = React.createClass({
+  displayName: 'TableComponent',
 
   mixins: [auth],
 
@@ -45329,7 +45331,8 @@ module.exports = React.createClass({displayName: 'exports',
     return {
       csv_data: [],
       editing: false,
-      instance: {}
+      instance: {},
+      loggedIn: !!localStorage.token
     };
   },
   componentWillMount: function() {
@@ -45391,19 +45394,32 @@ module.exports = React.createClass({displayName: 'exports',
   },
   save: function(e) {
     var self = this;
-    console.log(helper.string(this.state.instance))
+    var editedData = helper.string(this.state.instance)
+    console.log('editedData', editedData)
+
     this.setState({editing: false})
 
-    // function getRepo(user) {
-    //   var repo = self.state.github.getRepo(user.login, 'csviz')
-    //   console.log('repo', repo)
-    //   repo.getTree('master?recursive=true', function(err, tree) {
-    //     console.log('tree', tree)
+    var github = new Github({
+      token: user.attrs.github.accessToken,
+      auth: 'oauth'
+    });
 
-    //   });
-    //   repo.write('master', 'helloworld.md', 'Hello world from csviz!', 'Update CSV file from CSViz.', function(err) {});
+    this.setState({github: github})
 
-    // }
+    window.github = github
+
+    function getRepo(user) {
+      var repo = github.getRepo(user.attrs.github.login, 'csviz')
+      // repo.getTree('master?recursive=true', function(err, tree) {
+      //   console.log('tree', tree)
+      // });
+      repo.write('master', 'test.csv', editedData, 'Update CSV file from CSViz.', function(err) {
+        console.log('err', err)
+        console.log('write data success')
+      });
+    }
+
+    getRepo(user)
 
     // if (Object.keys(this.state.user).length > 0) {
     //   getRepo(this.state.user)
