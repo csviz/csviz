@@ -45165,9 +45165,25 @@ module.exports = React.createClass({displayName: 'exports',
       }).addTo(nextState.map);
     }
   },
+
+  selectIndicator: function(option) {
+    console.log('option', option)
+
+    // use the map instance to update the map
+    // this.state.map
+  },
+
   render: function() {
+    var options = this.state.selectOptions.map(function(option, i) {
+      return React.DOM.option({key: i, value: option.value, onClick: this.selectIndicator(option)}, option.value)
+    })
     return (
       React.DOM.div(null, 
+        React.DOM.div(null, 
+          React.DOM.select(null, 
+            options
+          )
+        ), 
         React.DOM.div({id: "map"})
       )
     );
