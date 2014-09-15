@@ -42,7 +42,8 @@ User.prototype.save = function () {
   return this;
 }
 
-User.prototype.clear = User.prototype.logout = function() {
+User.prototype.clear =
+User.prototype.logout = function() {
   this._token = null;
   this.attrs = null
   window.localStorage.clear();

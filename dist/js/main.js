@@ -48718,6 +48718,7 @@ module.exports = function (headers) {
 var React = window.React = require('react');
 var github = require('./models/github.js');
 var auth = require('./routes/auth.js');
+var user = require('./models/user');
 
 // Pages
 var Map = require('./map/map.js');
@@ -48741,8 +48742,8 @@ var App = React.createClass({
   getInitialState: function() {
     return {
       meta: {},
-      loggedIn: false,
-      isTableActive: null
+      isTableActive: null,
+      loggedIn: false
     };
   },
 
@@ -48754,12 +48755,6 @@ var App = React.createClass({
     })
   },
 
-  setStateOnAuth: function(loggedIn) {
-    this.setState({
-      loggedIn: loggedIn
-    })
-  },
-
   componentWillMount: function() {
     // get repo meta data
     github.getPublicRepo('fraserxu', 'csviz', function(err, data) {
@@ -48767,17 +48762,12 @@ var App = React.createClass({
       this.setState({meta: data})
     }.bind(this))
 
-    // check login
-    if (!!window.localStorage.token) {
-      this.setStateOnAuth(true)
-    } else {
-      this.setStateOnAuth(false)
-    }
+    this.setState({loggedIn: user.loggedIn()})
   },
 
   logout: function() {
-    delete window.localStorage.token
-    this.setStateOnAuth(false)
+    user.logout()
+    this.setState({loggedIn: false})
   },
 
   render: function() {
@@ -48808,7 +48798,7 @@ var App = React.createClass({
 
         ), 
 
-        this.props.activeRouteHandler(null)
+        this.props.activeRouteHandler({loggedIn: this.state.loggedIn})
       )
     );
   }
@@ -48827,7 +48817,7 @@ var routes = (
 
 React.renderComponent(routes, document.body);
 
-},{"./map/map.js":304,"./models/github.js":305,"./routes/auth.js":307,"./statics/notfound.js":308,"./table/table.js":310,"react":295,"react-router":102}],304:[function(require,module,exports){
+},{"./map/map.js":304,"./models/github.js":305,"./models/user":306,"./routes/auth.js":307,"./statics/notfound.js":308,"./table/table.js":310,"react":295,"react-router":102}],304:[function(require,module,exports){
 /** @jsx React.DOM */
 'use strict';
 
@@ -49065,7 +49055,8 @@ User.prototype.save = function () {
   return this;
 }
 
-User.prototype.clear = User.prototype.logout = function() {
+User.prototype.clear =
+User.prototype.logout = function() {
   this._token = null;
   this.attrs = null
   window.localStorage.clear();
@@ -49189,27 +49180,13 @@ module.exports = React.createClass({
   getInitialState: function() {
     return {
       csv_data: [],
-      loggedIn: false,
       loading: false
     };
   },
 
-  setStateOnAuth: function(loggedIn) {
-    this.setState({
-      loggedIn: loggedIn
-    })
-  },
-
   componentWillMount: function() {
-    // check login
-    if (!!window.localStorage.token) {
-      this.setStateOnAuth(true)
-    } else {
-      this.setStateOnAuth(false)
-    }
-
+    // load csv data
     xhr({ responseType: 'arraybuffer', url: csv}, csv_response.bind(this))
-
     function csv_response(err, resp, data) {
       if (err) throw err
       var buff = new Buffer(new Uint8Array(data))
@@ -49218,7 +49195,6 @@ module.exports = React.createClass({
       parser.write(buff)
       parser.end()
     }
-
     function render(rows) {
       this.setState({csv_data: rows})
     }
@@ -49230,13 +49206,15 @@ module.exports = React.createClass({
       var colHeaders = helper.makeHeader(nextState.csv_data)
       $container.handsontable({
         data: nextState.csv_data,
-        colHeaders: colHeaders,
+        colHeaders: true,
         columns: helper.makeColumns(colHeaders),
-        minSpareRows: 5
+        minSpareRows: 5,
+        minSpareCols: 1
       });
     }
   },
 
+  // save changes to github
   save: function(e) {
     this.setState({loading: true})
     var table = $("#handsontable").handsontable('getInstance')
@@ -49257,19 +49235,23 @@ module.exports = React.createClass({
     }.bind(this));
 
   },
+
   render: function() {
+    var disabled = this.state.loading || !this.props.loggedIn
+
+    var loading = this.state.loading ?
+      React.DOM.span(null, "saving...") :
+      React.DOM.span(null);
     var classes = cx({
       'container': true,
       'loading': this.state.loading
     })
-    var loading = this.state.loading ?
-      React.DOM.span(null, "saving...") :
-      React.DOM.span(null);
+
     return (
       React.DOM.div({className: classes}, 
         React.DOM.div({id: "handsontable"}), 
         React.DOM.div({className: "footer"}, 
-          React.DOM.button({onClick: this.save}, "Save"), 
+          React.DOM.button({onClick: this.save, disabled: disabled}, "Save"), 
           loading
         )
       )

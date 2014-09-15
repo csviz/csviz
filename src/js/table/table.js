@@ -19,27 +19,13 @@ module.exports = React.createClass({
   getInitialState: function() {
     return {
       csv_data: [],
-      loggedIn: false,
       loading: false
     };
   },
 
-  setStateOnAuth: function(loggedIn) {
-    this.setState({
-      loggedIn: loggedIn
-    })
-  },
-
   componentWillMount: function() {
-    // check login
-    if (!!window.localStorage.token) {
-      this.setStateOnAuth(true)
-    } else {
-      this.setStateOnAuth(false)
-    }
-
+    // load csv data
     xhr({ responseType: 'arraybuffer', url: csv}, csv_response.bind(this))
-
     function csv_response(err, resp, data) {
       if (err) throw err
       var buff = new Buffer(new Uint8Array(data))
@@ -48,7 +34,6 @@ module.exports = React.createClass({
       parser.write(buff)
       parser.end()
     }
-
     function render(rows) {
       this.setState({csv_data: rows})
     }
@@ -60,13 +45,15 @@ module.exports = React.createClass({
       var colHeaders = helper.makeHeader(nextState.csv_data)
       $container.handsontable({
         data: nextState.csv_data,
-        colHeaders: colHeaders,
+        colHeaders: true,
         columns: helper.makeColumns(colHeaders),
-        minSpareRows: 5
+        minSpareRows: 5,
+        minSpareCols: 1
       });
     }
   },
 
+  // save changes to github
   save: function(e) {
     this.setState({loading: true})
     var table = $("#handsontable").handsontable('getInstance')
@@ -87,19 +74,22 @@ module.exports = React.createClass({
     }.bind(this));
 
   },
+
   render: function() {
+    var disabled = this.state.loading || !this.props.loggedIn
+    var loading = this.state.loading ?
+      <span>saving...</span> :
+      <span></span>;
     var classes = cx({
       'container': true,
       'loading': this.state.loading
     })
-    var loading = this.state.loading ?
-      <span>saving...</span> :
-      <span></span>;
+
     return (
       <div className={classes}>
         <div id='handsontable'></div>
         <div className="footer">
-          <button onClick={this.save}>Save</button>
+          <button onClick={this.save} disabled={disabled}>Save</button>
           {loading}
         </div>
       </div>

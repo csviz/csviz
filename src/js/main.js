@@ -4,6 +4,7 @@
 var React = window.React = require('react');
 var github = require('./models/github.js');
 var auth = require('./routes/auth.js');
+var user = require('./models/user');
 
 // Pages
 var Map = require('./map/map.js');
@@ -27,8 +28,8 @@ var App = React.createClass({
   getInitialState: function() {
     return {
       meta: {},
-      loggedIn: false,
-      isTableActive: null
+      isTableActive: null,
+      loggedIn: false
     };
   },
 
@@ -40,12 +41,6 @@ var App = React.createClass({
     })
   },
 
-  setStateOnAuth: function(loggedIn) {
-    this.setState({
-      loggedIn: loggedIn
-    })
-  },
-
   componentWillMount: function() {
     // get repo meta data
     github.getPublicRepo('fraserxu', 'csviz', function(err, data) {
@@ -53,17 +48,12 @@ var App = React.createClass({
       this.setState({meta: data})
     }.bind(this))
 
-    // check login
-    if (!!window.localStorage.token) {
-      this.setStateOnAuth(true)
-    } else {
-      this.setStateOnAuth(false)
-    }
+    this.setState({loggedIn: user.loggedIn()})
   },
 
   logout: function() {
-    delete window.localStorage.token
-    this.setStateOnAuth(false)
+    user.logout()
+    this.setState({loggedIn: false})
   },
 
   render: function() {
@@ -94,7 +84,7 @@ var App = React.createClass({
 
         </header>
 
-        <this.props.activeRouteHandler />
+        <this.props.activeRouteHandler loggedIn={this.state.loggedIn} />
       </div>
     );
   }
