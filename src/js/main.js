@@ -2,6 +2,8 @@
 'use strict';
 
 var React = window.React = require('react');
+var github = require('./models/github.js');
+var auth = require('./routes/auth');
 
 // Pages
 var Map = require('./map/map.js');
@@ -16,13 +18,52 @@ var NotFoundRoute = require('react-router/NotFoundRoute');
 var DefaultRoute = require('react-router/DefaultRoute');
 
 var App = React.createClass({
+  displayName: 'AppComponent',
+
+  mixins: [auth],
+
+  getInitialState: function() {
+    return {
+      meta: {},
+      loggedIn: false
+    };
+  },
+
+  setStateOnAuth: function(loggedIn) {
+    this.setState({
+      loggedIn: loggedIn
+    })
+  },
+
+  componentWillMount: function() {
+    // get repo meta data
+    github.getPublicRepo('fraserxu', 'csviz', function(err, data) {
+      if(err) console.log('get repo meta err', err)
+      this.setState({meta: data})
+    }.bind(this))
+
+    // check login
+    if (!!window.localStorage.token) {
+      this.setStateOnAuth(true)
+    } else {
+      this.setStateOnAuth(false)
+    }
+  },
+
   render: function() {
+    var loginOrOut = this.state.loggedIn ?
+      <button onClick={this.save}>Save</button> :
+      <button><a href="http://csviz.dev.wiredcraft.com/token">Login</a></button>;
+
     return (
       <div>
         <header>
           <div className='header'>
-            <img className='logo' src='./dist/assets/images/logo.png' />
-            <h1>Hello, CSViz.</h1>
+            <a href=''>
+              <img className='logo' src='./dist/assets/images/logo.png' />
+            </a>
+            <p>DESCRIPTION: {this.state.meta.description}</p>
+            <a target='_blank' href={this.state.meta.html_url}>{this.state.meta.name}</a>
           </div>
 
           <nav>
@@ -31,6 +72,10 @@ var App = React.createClass({
               <li><Link to="map">Map</Link></li>
             </ul>
           </nav>
+
+          <div className="controls">
+            {loginOrOut}
+          </div>
         </header>
 
         <this.props.activeRouteHandler />

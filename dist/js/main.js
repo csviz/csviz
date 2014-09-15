@@ -46674,6 +46674,8 @@ module.exports = function (headers) {
 'use strict';
 
 var React = window.React = require('react');
+var github = require('./models/github.js');
+var auth = require('./routes/auth');
 
 // Pages
 var Map = require('./map/map.js');
@@ -46687,14 +46689,53 @@ var Link = require('react-router/Link');
 var NotFoundRoute = require('react-router/NotFoundRoute');
 var DefaultRoute = require('react-router/DefaultRoute');
 
-var App = React.createClass({displayName: 'App',
+var App = React.createClass({
+  displayName: 'AppComponent',
+
+  mixins: [auth],
+
+  getInitialState: function() {
+    return {
+      meta: {},
+      loggedIn: false
+    };
+  },
+
+  setStateOnAuth: function(loggedIn) {
+    this.setState({
+      loggedIn: loggedIn
+    })
+  },
+
+  componentWillMount: function() {
+    // get repo meta data
+    github.getPublicRepo('fraserxu', 'csviz', function(err, data) {
+      if(err) console.log('get repo meta err', err)
+      this.setState({meta: data})
+    }.bind(this))
+
+    // check login
+    if (!!window.localStorage.token) {
+      this.setStateOnAuth(true)
+    } else {
+      this.setStateOnAuth(false)
+    }
+  },
+
   render: function() {
+    var loginOrOut = this.state.loggedIn ?
+      React.DOM.button({onClick: this.save}, "Save") :
+      React.DOM.button(null, React.DOM.a({href: "http://csviz.dev.wiredcraft.com/token"}, "Login"));
+
     return (
       React.DOM.div(null, 
         React.DOM.header(null, 
           React.DOM.div({className: "header"}, 
-            React.DOM.img({className: "logo", src: "./dist/assets/images/logo.png"}), 
-            React.DOM.h1(null, "Hello, CSViz.")
+            React.DOM.a({href: ""}, 
+              React.DOM.img({className: "logo", src: "./dist/assets/images/logo.png"})
+            ), 
+            React.DOM.p(null, "DESCRIPTION: ", this.state.meta.description), 
+            React.DOM.a({target: "_blank", href: this.state.meta.html_url}, this.state.meta.name)
           ), 
 
           React.DOM.nav(null, 
@@ -46702,6 +46743,10 @@ var App = React.createClass({displayName: 'App',
               React.DOM.li(null, Link({to: "table"}, "Table")), 
               React.DOM.li(null, Link({to: "map"}, "Map"))
             )
+          ), 
+
+          React.DOM.div({className: "controls"}, 
+            loginOrOut
           )
         ), 
 
@@ -46724,7 +46769,7 @@ var routes = (
 
 React.renderComponent(routes, document.body);
 
-},{"./map/map.js":287,"./statics/notfound.js":290,"./table/table.js":292,"react":278,"react-router/DefaultRoute":94,"react-router/Link":95,"react-router/NotFoundRoute":96,"react-router/Route":97,"react-router/Routes":98}],287:[function(require,module,exports){
+},{"./map/map.js":287,"./models/github.js":288,"./routes/auth":290,"./statics/notfound.js":291,"./table/table.js":293,"react":278,"react-router/DefaultRoute":94,"react-router/Link":95,"react-router/NotFoundRoute":96,"react-router/Route":97,"react-router/Routes":98}],287:[function(require,module,exports){
 /** @jsx React.DOM */
 'use strict';
 
@@ -46906,6 +46951,19 @@ module.exports = React.createClass({displayName: 'exports',
 });
 
 },{"binary-csv":1,"buffer":39,"concat-stream":42,"mapbox.js":80,"react":278,"xhr":279}],288:[function(require,module,exports){
+var xhr = require('xhr')
+
+var API_URL = 'https://api.github.com'
+
+module.exports = {
+  getPublicRepo: function(owner, repo, cb) {
+    xhr({responseType: 'json', url: API_URL + '/repos/' + owner + '/' + repo}, function(err, resp, data) {
+      if(err) cb(err)
+      cb(null, data)
+    })
+  }
+}
+},{"xhr":279}],289:[function(require,module,exports){
 var Promise = require('es6-promise').Promise;
 var xhr = require('xhr');
 
@@ -46967,7 +47025,7 @@ exports.user = new User()
 
 exports.User = User
 
-},{"es6-promise":54,"xhr":279}],289:[function(require,module,exports){
+},{"es6-promise":54,"xhr":279}],290:[function(require,module,exports){
 var user = require('../models/user')
 
 var authenticatedRoute = {
@@ -46982,7 +47040,7 @@ var authenticatedRoute = {
 
 module.exports = authenticatedRoute
 
-},{"../models/user":288}],290:[function(require,module,exports){
+},{"../models/user":289}],291:[function(require,module,exports){
 /**
  * @jsx React.DOM
  */
@@ -46997,7 +47055,7 @@ var notFound = React.createClass({displayName: 'notFound',
 
 module.exports = notFound
 
-},{}],291:[function(require,module,exports){
+},{}],292:[function(require,module,exports){
 'use strict';
 
 // https://github.com/juantascon/jquery-handsontable-csv
@@ -47052,7 +47110,7 @@ module.exports = {
         document.body.removeChild(link)
     }
 }
-},{}],292:[function(require,module,exports){
+},{}],293:[function(require,module,exports){
 /** @jsx React.DOM */
 'use strict';
 
@@ -47063,15 +47121,12 @@ var concat = require('concat-stream')
 var Buffer = require('buffer').Buffer
 var helper = require('./handsontable.csv.js')
 var Github = require('github-api')
-var auth = require('../routes/auth')
 var user = require('../models/user')
 
 var csv = './data/sample.data.csv';
 
 module.exports = React.createClass({
   displayName: 'TableComponent',
-
-  mixins: [auth],
 
   getInitialState: function() {
     return {
@@ -47121,7 +47176,6 @@ module.exports = React.createClass({
   },
 
   edit: function(e) {
-    var self = this;
     this.setState({editing: true})
   },
   cancel: function(e) {
@@ -47162,4 +47216,4 @@ module.exports = React.createClass({
   }
 });
 
-},{"../models/user":288,"../routes/auth":289,"./handsontable.csv.js":291,"binary-csv":1,"buffer":39,"concat-stream":42,"github-api":64,"react":278,"xhr":279}]},{},[286]);
+},{"../models/user":289,"./handsontable.csv.js":292,"binary-csv":1,"buffer":39,"concat-stream":42,"github-api":64,"react":278,"xhr":279}]},{},[286]);

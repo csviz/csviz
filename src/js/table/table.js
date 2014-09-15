@@ -8,15 +8,12 @@ var concat = require('concat-stream')
 var Buffer = require('buffer').Buffer
 var helper = require('./handsontable.csv.js')
 var Github = require('github-api')
-var auth = require('../routes/auth')
 var user = require('../models/user')
 
 var csv = './data/sample.data.csv';
 
 module.exports = React.createClass({
   displayName: 'TableComponent',
-
-  mixins: [auth],
 
   getInitialState: function() {
     return {
@@ -66,7 +63,6 @@ module.exports = React.createClass({
   },
 
   edit: function(e) {
-    var self = this;
     this.setState({editing: true})
   },
   cancel: function(e) {
