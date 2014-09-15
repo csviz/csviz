@@ -3,7 +3,9 @@
 
 var React = window.React = require('react');
 var github = require('./models/github.js');
-var auth = require('./routes/auth');
+var auth = require('./routes/auth.js');
+var Github = require('github-api');
+var helper = require('./table/handsontable.csv.js');
 
 // Pages
 var Map = require('./map/map.js');
@@ -11,22 +13,33 @@ var Table = require('./table/table.js');
 var NotFound = require('./statics/notfound.js');
 
 // Router
-var Routes = require('react-router/Routes');
-var Route = require('react-router/Route');
-var Link = require('react-router/Link');
-var NotFoundRoute = require('react-router/NotFoundRoute');
-var DefaultRoute = require('react-router/DefaultRoute');
+var Router = require('react-router');
+var Routes = Router.Routes;
+var Route = Router.Route;
+var Link = Router.Link;
+var NotFoundRoute = Router.NotFoundRoute;
+var DefaultRoute = Router.DefaultRoute;
+var ActiveState = Router.ActiveState;
 
 var App = React.createClass({
   displayName: 'AppComponent',
 
-  mixins: [auth],
+  mixins: [auth, ActiveState],
 
   getInitialState: function() {
     return {
       meta: {},
-      loggedIn: false
+      loggedIn: false,
+      isTableActive: null
     };
+  },
+
+  updateActiveState: function () {
+    // check if the current router is table or map
+    // will see update from react-router
+    this.setState({
+      isTableActive: App.isActive('table', undefined, undefined)
+    })
   },
 
   setStateOnAuth: function(loggedIn) {
@@ -50,32 +63,52 @@ var App = React.createClass({
     }
   },
 
+  save: function(e) {
+    // var editedData = helper.string(this.state.table)
+
+    // var github = new Github({
+    //   token: user.attrs.github.accessToken,
+    //   auth: 'oauth'
+    // });
+
+    // this.setState({github: github})
+
+    // var repo = github.getRepo(user.attrs.github.login, 'csviz')
+
+    // // need to define the path of the data
+    // repo.write('master', 'data/sample.data.csv', editedData, 'Update CSV file from CSViz.', function(err) {
+    //   console.log('err', err)
+    //   console.log('write data success')
+    // });
+
+  },
+
   render: function() {
     var loginOrOut = this.state.loggedIn ?
       <button onClick={this.save}>Save</button> :
       <button><a href="http://csviz.dev.wiredcraft.com/token">Login</a></button>;
 
+    var nav = this.state.isTableActive ?
+      <span><Link to="map">Map</Link></span> :
+      <span><Link to="table">Table</Link></span>;
+
     return (
       <div>
         <header>
-          <div className='header'>
+          <span className='header'>
             <a href=''>
               <img className='logo' src='./dist/assets/images/logo.png' />
             </a>
-            <p>DESCRIPTION: {this.state.meta.description}</p>
+            <span>{this.state.meta.description}</span>
             <a target='_blank' href={this.state.meta.html_url}>{this.state.meta.name}</a>
-          </div>
+          </span>
 
-          <nav>
-            <ul>
-              <li><Link to="table">Table</Link></li>
-              <li><Link to="map">Map</Link></li>
-            </ul>
-          </nav>
-
-          <div className="controls">
+          <span className="controls">
             {loginOrOut}
-          </div>
+          </span>
+
+          {nav}
+
         </header>
 
         <this.props.activeRouteHandler />

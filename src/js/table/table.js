@@ -19,30 +19,29 @@ module.exports = React.createClass({
     return {
       csv_data: [],
       editing: false,
-      instance: {},
-      loggedIn: !!localStorage.token
+      table: {}
     };
   },
+
   componentWillMount: function() {
-    var self = this;
-    xhr({ responseType: 'arraybuffer', url: csv}, csv_response)
+    xhr({ responseType: 'arraybuffer', url: csv}, csv_response.bind(this))
 
     function csv_response(err, resp, data) {
       if (err) throw err
       var buff = new Buffer(new Uint8Array(data))
       var parser = bcsv({json: true})
-      parser.pipe(concat(render))
+      parser.pipe(concat(render.bind(this)))
       parser.write(buff)
       parser.end()
     }
 
     function render(rows) {
-      self.setState({csv_data: rows})
+      this.setState({csv_data: rows})
     }
   },
 
   componentWillUpdate: function(nextProps, nextState) {
-    if(nextState.csv_data) {
+    if(nextState.csv_data.length) {
       var $container = $('#handsontable')
       var colHeaders = helper.makeHeader(nextState.csv_data)
       $container.handsontable({
@@ -54,51 +53,19 @@ module.exports = React.createClass({
     }
   },
 
-  // make instance
+  // make table
   componentDidUpdate: function(prevProps, prevState) {
-    if(Object.keys(prevState.instance).length === 0) {
-      var instance = $("#handsontable").handsontable('getInstance');
-      this.setState({instance: instance})
+    if(prevState.table && Object.keys(prevState.table).length === 0) {
+      var table = $("#handsontable").handsontable('getInstance');
+      this.setState({table: table})
     }
   },
 
-  edit: function(e) {
-    this.setState({editing: true})
-  },
-  cancel: function(e) {
-    console.log('on cancel')
-    this.setState({editing: false})
-  },
-  save: function(e) {
-    this.setState({editing: false})
-    var editedData = helper.string(this.state.instance)
-
-    var github = new Github({
-      token: user.attrs.github.accessToken,
-      auth: 'oauth'
-    });
-
-    this.setState({github: github})
-
-    var repo = github.getRepo(user.attrs.github.login, 'csviz')
-
-    // need to define the path of the data
-    repo.write('master', 'data/sample.data.csv', editedData, 'Update CSV file from CSViz.', function(err) {
-      console.log('err', err)
-      console.log('write data success')
-    });
-
-  },
   render: function() {
     return (
       <div className="container">
-        <div className="controls">
-          <button onClick={this.save}>Save</button>
-          <a href="http://csviz.dev.wiredcraft.com/token">Edit</a>
-        </div>
         <div id='handsontable'></div>
       </div>
-
     );
   }
 });

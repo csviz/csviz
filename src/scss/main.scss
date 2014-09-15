@@ -32,48 +32,10 @@ body {
       color: #555;
       font-weight: 300;
     }
-    nav {
-      ul {
-        padding: 0px;
-        margin-left: 8px;
-        color: #333;
-        font-weight: 300;
-        li {
-          font-size: 14px;
-          display: inline;
-          &:last-child a {
-            border-right: 1px #ccc solid;
-            border-bottom-right-radius: 3px;
-            border-top-right-radius: 3px;
-          }
-          &:first-child a {
-            border-bottom-left-radius: 3px;
-            border-top-left-radius: 3px;
-          }
-          a {
-            color: #333;
-            padding: 4px;
-            border-top: 1px #ccc solid;
-            border-left: 1px #ccc solid;
-            border-bottom: 1px #ccc solid;
-            text-decoration: none;
-            &:hover {
-              background-color: #ccc;
-            }
-            &.active {
-              background-color: #ccc;
-            }
-          }
-        }
-      }
-    }
   }
 }
 
 .container {
-  .controls {
-    text-align: right;
-  }
 
   table {
     width: 100%;
@@ -111,12 +73,8 @@ body {
 }
 
 #map {
-  position:absolute;
-  top:120px;
-  bottom:0;
-  width:100%;
-}
-
-.hidden {
-  display: none;
+  position: absolute;
+  top: 64px;
+  bottom: 0;
+  width: 100%;
 }

@@ -8,7 +8,6 @@ var concat = require('concat-stream')
 var Buffer = require('buffer').Buffer
 var mapbox = require('mapbox.js')
 
-
 var csv = './data/sample.data.csv';
 var geo = './data/countries.geo.json';
 var colorCount = 6;

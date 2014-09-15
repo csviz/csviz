@@ -341,35 +341,7 @@ body {
       font-size: 24px;
       color: #555;
       font-weight: 300; }
-    body header nav ul {
-      padding: 0px;
-      margin-left: 8px;
-      color: #333;
-      font-weight: 300; }
-      body header nav ul li {
-        font-size: 14px;
-        display: inline; }
-        body header nav ul li:last-child a {
-          border-right: 1px #ccc solid;
-          border-bottom-right-radius: 3px;
-          border-top-right-radius: 3px; }
-        body header nav ul li:first-child a {
-          border-bottom-left-radius: 3px;
-          border-top-left-radius: 3px; }
-        body header nav ul li a {
-          color: #333;
-          padding: 4px;
-          border-top: 1px #ccc solid;
-          border-left: 1px #ccc solid;
-          border-bottom: 1px #ccc solid;
-          text-decoration: none; }
-          body header nav ul li a:hover {
-            background-color: #ccc; }
-          body header nav ul li a.active {
-            background-color: #ccc; }
 
-.container .controls {
-  text-align: right; }
 .container table {
   width: 100%;
   margin: 10px auto;
@@ -398,12 +370,9 @@ body {
 
 #map {
   position: absolute;
-  top: 120px;
+  top: 64px;
   bottom: 0;
   width: 100%; }
-
-.hidden {
-  display: none; }
 
 /* general typography */
 .leaflet-container {
