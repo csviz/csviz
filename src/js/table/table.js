@@ -52,7 +52,7 @@ module.exports = React.createClass({
         data: nextState.csv_data,
         colHeaders: colHeaders,
         columns: helper.makeColumns(colHeaders),
-        minSpareRows: 1
+        minSpareRows: 5
       });
     }
   },

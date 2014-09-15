@@ -6,11 +6,14 @@ var React = window.React = require('react');
 // Pages
 var Map = require('./map/map.js');
 var Table = require('./table/table.js');
+var NotFound = require('./statics/notfound.js');
 
 // Router
 var Routes = require('react-router/Routes');
 var Route = require('react-router/Route');
 var Link = require('react-router/Link');
+var NotFoundRoute = require('react-router/NotFoundRoute');
+var DefaultRoute = require('react-router/DefaultRoute');
 
 var App = React.createClass({
   render: function() {
@@ -38,10 +41,12 @@ var App = React.createClass({
 
 var routes = (
   <Routes>
-    <Route name="app" path="/" handler={App}>
+    <Route name="app" handler={App}>
+      <Route name='map' path='/' handler={Map} />
       <Route name='table' path='/table' handler={Table} />
-      <Route name='map' path='/map' handler={Map} />
+      <DefaultRoute handler={Map} />
     </Route>
+    <NotFoundRoute name='notfound' handler={NotFound} />
   </Routes>
 );
 

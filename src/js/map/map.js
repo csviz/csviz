@@ -162,16 +162,16 @@ module.exports = React.createClass({
   },
 
   render: function() {
-    var options = this.state.selectOptions.map(function(option, i) {
-      return <option key={i} value={option.value} onClick={this.selectIndicator(option)}>{option.value}</option>
-    })
+    // var options = this.state.selectOptions.map(function(option, i) {
+    //   return <option key={i} value={option.value} onClick={this.selectIndicator(option)}>{option.value}</option>
+    // })
+    // <div>
+    //   <select>
+    //     {options}
+    //   </select>
+    // </div>
     return (
       <div>
-        <div>
-          <select>
-            {options}
-          </select>
-        </div>
         <div id='map'></div>
       </div>
     );
