@@ -6,6 +6,8 @@ var transform = require('vinyl-transform');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var plumber = require('gulp-plumber');
+var gutil = require('gulp-util');
 var bourbon = require('node-bourbon').includePaths;
 
 var css = [
@@ -35,35 +37,45 @@ gulp.task('scripts', function () {
   });
 
   return gulp.src('./src/js/main.js')
+    .pipe(plumber())
     .pipe(browserified)
     // .pipe(uglify())
+    .on('error', gutil.log)
     .pipe(gulp.dest('./dist/js'));
 });
 
 // jquery sucks here
 gulp.task('lib', function () {
   return gulp.src(libs)
+    .pipe(plumber())
     .pipe(uglify())
     .pipe(concat('lib.js'))
+    .on('error', gutil.log)
     .pipe(gulp.dest('./dist/js'));
 });
 
 gulp.task('assets', function() {
   return gulp.src(assets)
+    .pipe(plumber())
+    .on('error', gutil.log)
     .pipe(gulp.dest('./dist/assets'));
 })
 
 gulp.task('styles', function () {
   return gulp.src(css)
+    .pipe(plumber())
     .pipe(sass({
       includePaths: ['./src/scss'].concat(bourbon)
     }))
     .pipe(concat('all.css'))
+    .on('error', gutil.log)
     .pipe(gulp.dest('./dist/css'));
 });
 
 gulp.task('images', function () {
   return gulp.src(images)
+    .pipe(plumber())
+    .on('error', gutil.log)
     .pipe(gulp.dest('./dist/css/images'));
 });
 
