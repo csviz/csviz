@@ -1,7 +1,8 @@
 /** @jsx React.DOM */
 'use strict';
 
-var React = require('react');
+var React = require('react/addons');
+var cx = React.addons.classSet;
 var bcsv = require('binary-csv')
 var xhr = require('xhr')
 var concat = require('concat-stream')
@@ -18,12 +19,25 @@ module.exports = React.createClass({
   getInitialState: function() {
     return {
       csv_data: [],
-      editing: false,
-      table: {}
+      loggedIn: false,
+      loading: false
     };
   },
 
+  setStateOnAuth: function(loggedIn) {
+    this.setState({
+      loggedIn: loggedIn
+    })
+  },
+
   componentWillMount: function() {
+    // check login
+    if (!!window.localStorage.token) {
+      this.setStateOnAuth(true)
+    } else {
+      this.setStateOnAuth(false)
+    }
+
     xhr({ responseType: 'arraybuffer', url: csv}, csv_response.bind(this))
 
     function csv_response(err, resp, data) {
@@ -53,18 +67,41 @@ module.exports = React.createClass({
     }
   },
 
-  // make table
-  componentDidUpdate: function(prevProps, prevState) {
-    if(prevState.table && Object.keys(prevState.table).length === 0) {
-      var table = $("#handsontable").handsontable('getInstance');
-      this.setState({table: table})
-    }
-  },
+  save: function(e) {
+    this.setState({loading: true})
+    var table = $("#handsontable").handsontable('getInstance')
+    var editedData = helper.string(table)
 
+    var github = new Github({
+      token: user.attrs.github.accessToken,
+      auth: 'oauth'
+    });
+
+    var repo = github.getRepo(user.attrs.github.login, 'csviz')
+
+    // need to define the path of the data
+    repo.write('master', 'data/sample.data.csv', editedData, 'Update CSV file from CSViz.', function(err) {
+      if(err) console.log('err', err)
+      console.log('write data success')
+      this.setState({loading: false})
+    }.bind(this));
+
+  },
   render: function() {
+    var classes = cx({
+      'container': true,
+      'loading': this.state.loading
+    })
+    var loading = this.state.loading ?
+      <span>saving...</span> :
+      <span></span>;
     return (
-      <div className="container">
+      <div className={classes}>
         <div id='handsontable'></div>
+        <div className="footer">
+          <button onClick={this.save}>Save</button>
+          {loading}
+        </div>
       </div>
     );
   }

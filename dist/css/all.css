@@ -367,6 +367,12 @@ body {
     border-top: 1px solid #ddd; }
 .container #handsontable {
   margin: 8px 10px; }
+.container .footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding: 10px 20px;
+  border-top: 1px solid #ccc; }
 
 #map {
   position: absolute;

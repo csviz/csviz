@@ -4,8 +4,6 @@
 var React = window.React = require('react');
 var github = require('./models/github.js');
 var auth = require('./routes/auth.js');
-var Github = require('github-api');
-var helper = require('./table/handsontable.csv.js');
 
 // Pages
 var Map = require('./map/map.js');
@@ -63,29 +61,14 @@ var App = React.createClass({
     }
   },
 
-  save: function(e) {
-    // var editedData = helper.string(this.state.table)
-
-    // var github = new Github({
-    //   token: user.attrs.github.accessToken,
-    //   auth: 'oauth'
-    // });
-
-    // this.setState({github: github})
-
-    // var repo = github.getRepo(user.attrs.github.login, 'csviz')
-
-    // // need to define the path of the data
-    // repo.write('master', 'data/sample.data.csv', editedData, 'Update CSV file from CSViz.', function(err) {
-    //   console.log('err', err)
-    //   console.log('write data success')
-    // });
-
+  logout: function() {
+    delete window.localStorage.token
+    this.setStateOnAuth(false)
   },
 
   render: function() {
     var loginOrOut = this.state.loggedIn ?
-      <button onClick={this.save}>Save</button> :
+      <button onClick={this.logout}>Logout</button> :
       <button><a href="http://csviz.dev.wiredcraft.com/token">Login</a></button>;
 
     var nav = this.state.isTableActive ?
