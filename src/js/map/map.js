@@ -8,8 +8,13 @@ var concat = require('concat-stream')
 var Buffer = require('buffer').Buffer
 var mapbox = require('mapbox.js')
 
+// TODO: read from config
 var csv = './data/sample.data.csv';
 var geo = './data/countries.geo.json';
+var mapbox_token = 'pk.eyJ1IjoiZnJhc2VyeHUiLCJhIjoiZ2toZEJhayJ9.im7zAkjGosi1fFKB3PYD2Q';
+var mapbox_type = 'examples.map-i86nkdio';
+var map_location = [42, 9.56];
+var map_zoomlevel = 4;
 var colorCount = 6;
 
 module.exports = React.createClass({
@@ -71,8 +76,8 @@ module.exports = React.createClass({
    * and mount to state
    */
   componentDidMount: function() {
-    L.mapbox.accessToken = 'pk.eyJ1IjoiZnJhc2VyeHUiLCJhIjoiZ2toZEJhayJ9.im7zAkjGosi1fFKB3PYD2Q'
-    var map = L.mapbox.map('map', 'examples.map-i86nkdio').setView([42, 9.56], 4)
+    L.mapbox.accessToken = mapbox_token
+    var map = L.mapbox.map('map', mapbox_type).setView(map_location, map_zoomlevel)
     this.setState({map: map})
   },
   componentWillUpdate: function(nextProps, nextState) {

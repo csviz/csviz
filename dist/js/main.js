@@ -48828,8 +48828,13 @@ var concat = require('concat-stream')
 var Buffer = require('buffer').Buffer
 var mapbox = require('mapbox.js')
 
+// TODO: read from config
 var csv = './data/sample.data.csv';
 var geo = './data/countries.geo.json';
+var mapbox_token = 'pk.eyJ1IjoiZnJhc2VyeHUiLCJhIjoiZ2toZEJhayJ9.im7zAkjGosi1fFKB3PYD2Q';
+var mapbox_type = 'examples.map-i86nkdio';
+var map_location = [42, 9.56];
+var map_zoomlevel = 4;
 var colorCount = 6;
 
 module.exports = React.createClass({displayName: 'exports',
@@ -48891,8 +48896,8 @@ module.exports = React.createClass({displayName: 'exports',
    * and mount to state
    */
   componentDidMount: function() {
-    L.mapbox.accessToken = 'pk.eyJ1IjoiZnJhc2VyeHUiLCJhIjoiZ2toZEJhayJ9.im7zAkjGosi1fFKB3PYD2Q'
-    var map = L.mapbox.map('map', 'examples.map-i86nkdio').setView([42, 9.56], 4)
+    L.mapbox.accessToken = mapbox_token
+    var map = L.mapbox.map('map', mapbox_type).setView(map_location, map_zoomlevel)
     this.setState({map: map})
   },
   componentWillUpdate: function(nextProps, nextState) {
@@ -49172,7 +49177,10 @@ var helper = require('./handsontable.csv.js')
 var Github = require('github-api')
 var user = require('../models/user')
 
+// TODO: read from config
 var csv = './data/sample.data.csv';
+var csv_path = 'data/sample.data.csv';
+var commit_message = 'Update CSV file from CSViz.';
 
 module.exports = React.createClass({
   displayName: 'TableComponent',
@@ -49200,13 +49208,13 @@ module.exports = React.createClass({
     }
   },
 
+  // init the handsontable element
   componentWillUpdate: function(nextProps, nextState) {
     if(nextState.csv_data.length) {
       var $container = $('#handsontable')
       var colHeaders = helper.makeHeader(nextState.csv_data)
       $container.handsontable({
         data: nextState.csv_data,
-        colHeaders: true,
         columns: helper.makeColumns(colHeaders),
         minSpareRows: 5,
         minSpareCols: 1
@@ -49228,17 +49236,15 @@ module.exports = React.createClass({
     var repo = github.getRepo(user.attrs.github.login, 'csviz')
 
     // need to define the path of the data
-    repo.write('master', 'data/sample.data.csv', editedData, 'Update CSV file from CSViz.', function(err) {
+    repo.write('master', csv_path, editedData, commit_message, function(err) {
       if(err) console.log('err', err)
       console.log('write data success')
       this.setState({loading: false})
     }.bind(this));
-
   },
 
   render: function() {
     var disabled = this.state.loading || !this.props.loggedIn
-
     var loading = this.state.loading ?
       React.DOM.span(null, "saving...") :
       React.DOM.span(null);
