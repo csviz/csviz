@@ -9,3 +9,6 @@ pids
 .DS_Store
 
 node_modules
+
+# this is only used for development
+meta.json

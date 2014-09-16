@@ -48720,6 +48720,10 @@ var cx = React.addons.classSet;
 var github = require('./models/github.js');
 var auth = require('./routes/auth.js');
 var user = require('./models/user');
+var xhr = require('xhr');
+
+// TODO: read from config
+var META = './meta.json';
 
 // Pages
 var Map = require('./map/map.js');
@@ -48757,13 +48761,18 @@ var App = React.createClass({
   },
 
   componentWillMount: function() {
-    // get repo meta data
-    github.getPublicRepo('fraserxu', 'csviz', function(err, data) {
-      if(err) console.log('get repo meta err', err)
-      this.setState({meta: data})
-    }.bind(this))
+    xhr({ responseType: 'json', url: META}, meta_response.bind(this))
 
-    this.setState({loggedIn: user.loggedIn()})
+    function meta_response(err, resp, data) {
+      // get repo meta data
+      github.getPublicRepo(data.owner, data.repo, function(err, data) {
+        if(err) console.log('get repo meta err', err)
+        this.setState({meta: data})
+      }.bind(this))
+
+      this.setState({loggedIn: user.loggedIn()})
+    }
+
   },
 
   logout: function(e) {
@@ -48832,7 +48841,7 @@ var routes = (
 
 React.renderComponent(routes, document.body);
 
-},{"./map/map.js":304,"./models/github.js":305,"./models/user":306,"./routes/auth.js":307,"./statics/notfound.js":308,"./table/table.js":310,"react-router":102,"react/addons":136}],304:[function(require,module,exports){
+},{"./map/map.js":304,"./models/github.js":305,"./models/user":306,"./routes/auth.js":307,"./statics/notfound.js":308,"./table/table.js":310,"react-router":102,"react/addons":136,"xhr":296}],304:[function(require,module,exports){
 /** @jsx React.DOM */
 'use strict';
 

@@ -6,6 +6,10 @@ var cx = React.addons.classSet;
 var github = require('./models/github.js');
 var auth = require('./routes/auth.js');
 var user = require('./models/user');
+var xhr = require('xhr');
+
+// TODO: read from config
+var META = './meta.json';
 
 // Pages
 var Map = require('./map/map.js');
@@ -43,13 +47,18 @@ var App = React.createClass({
   },
 
   componentWillMount: function() {
-    // get repo meta data
-    github.getPublicRepo('fraserxu', 'csviz', function(err, data) {
-      if(err) console.log('get repo meta err', err)
-      this.setState({meta: data})
-    }.bind(this))
+    xhr({ responseType: 'json', url: META}, meta_response.bind(this))
 
-    this.setState({loggedIn: user.loggedIn()})
+    function meta_response(err, resp, data) {
+      // get repo meta data
+      github.getPublicRepo(data.owner, data.repo, function(err, data) {
+        if(err) console.log('get repo meta err', err)
+        this.setState({meta: data})
+      }.bind(this))
+
+      this.setState({loggedIn: user.loggedIn()})
+    }
+
   },
 
   logout: function(e) {
