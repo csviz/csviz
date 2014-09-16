@@ -32,7 +32,7 @@ module.exports = React.createClass({
     function csv_response(err, resp, data) {
       if (err) throw err
       var buff = new Buffer(new Uint8Array(data))
-      var parser = bcsv({json: true})
+      var parser = bcsv({json: true, separator: ';'})
       parser.pipe(concat(render.bind(this)))
       parser.write(buff)
       parser.end()

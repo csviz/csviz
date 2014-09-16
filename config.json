@@ -11,7 +11,7 @@
     "zoomlevel": 3
   },
   "git": {
-    "csv_path": "data/sample.data.csv",
+    "csv_path": "data/sample2.csv",
     "commit_message": "Update CSV file from CSViz."
   }
 }

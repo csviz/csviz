@@ -12,7 +12,7 @@ module.exports={
     "zoomlevel": 3
   },
   "git": {
-    "csv_path": "data/sample.data.csv",
+    "csv_path": "data/sample2.csv",
     "commit_message": "Update CSV file from CSViz."
   }
 }
@@ -49081,7 +49081,6 @@ module.exports = React.createClass({
           if (self.tooltipClosing){
             map.closePopup();
           }
-
         }, 1000);
       }
     };
@@ -49322,7 +49321,7 @@ module.exports = React.createClass({
     function csv_response(err, resp, data) {
       if (err) throw err
       var buff = new Buffer(new Uint8Array(data))
-      var parser = bcsv({json: true})
+      var parser = bcsv({json: true, separator: ';'})
       parser.pipe(concat(render.bind(this)))
       parser.write(buff)
       parser.end()

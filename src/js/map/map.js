@@ -216,7 +216,6 @@ module.exports = React.createClass({
           if (self.tooltipClosing){
             map.closePopup();
           }
-
         }, 1000);
       }
     };
