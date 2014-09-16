@@ -1,12 +1,12 @@
-Country,Indicator,Description,Whatever,Testing
-Austria,30,Austria,Austria,Testing
-Belgium,36,Belgium,Dummy,Testing
-Finland,89,Finland,Data,Testing
-France,1,France,China,Testing
-Germany,289,Germany,Japan,Testing
-Greece,77,Greece,USA,Testing
-Italy,6,Italy,中文,Testing
-Netherlands,5,Netherlands,Germany,Testing
-Spain,43,Spain,USA,Testing
-United Kingdom,88,United Kingdom,Whatever,Testing
-Switzerland,99,Switzerland,Xeodou,Testing
+Location;Indicator
+Austria;30
+Belgium;36
+Finland;89
+France;1
+Germany;289
+Greece;77
+Italy;6
+Netherlands;5
+Spain;43
+United Kingdom;88
+Switzerland;99

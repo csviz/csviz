@@ -18,7 +18,8 @@ var css = [
 
 var libs = [
   './src/libs/jquery.js',
-  './src/libs/jquery.handsontable.js'
+  './src/libs/jquery.handsontable.js',
+  './src/libs/topojson.js'
 ]
 
 var images = [
