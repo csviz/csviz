@@ -32,7 +32,7 @@ var App = React.createClass({
 
   getInitialState: function() {
     return {
-      meta: {},
+      repo: {},
       isTableActive: null,
       loggedIn: false
     };
@@ -49,11 +49,13 @@ var App = React.createClass({
   componentWillMount: function() {
     xhr({ responseType: 'json', url: META}, meta_response.bind(this))
 
-    function meta_response(err, resp, data) {
-      // get repo meta data
-      github.getPublicRepo(data.owner, data.repo, function(err, data) {
+    function meta_response(err, resp, meta) {
+      // get repo meta meta
+      github.getPublicRepo(meta.owner, meta.repo, function(err, data) {
         if(err) console.log('get repo meta err', err)
-        this.setState({meta: data})
+        this.setState({
+          repo: data
+        })
       }.bind(this))
 
       this.setState({loggedIn: user.loggedIn()})
@@ -73,7 +75,7 @@ var App = React.createClass({
       <a href="http://csviz.dev.wiredcraft.com/token">Login</a>;
 
     var profile = this.state.loggedIn ?
-      <a href='http://github.com/fraserxu/csviz' target='_blank'><img className='avatar' src={user.attrs.avatar_url} alt={user.attrs.name} />{user.attrs.name}</a> :
+      <a href={this.state.repo.html_url} target='_blank'><img className='avatar' src={user.attrs.avatar_url} alt={user.attrs.name} />{user.attrs.name}</a> :
       '';
 
     var map_classes = cx({
@@ -100,7 +102,7 @@ var App = React.createClass({
               <img src='./dist/assets/images/logo.png' alt='CSViz' />
               <span>Go to CSViz.org</span>
             </a>
-            <a href='http://github.com/wiredcraft/GPE' target='_blank'>fraserxu/csviz</a>
+            <a href={this.state.repo.html_url} target='_blank'>{this.state.repo.full_name}</a>
             <span className='tabs'>
               <Link to="map"><button className={map_classes}><span>Map</span></button></Link>
               <Link to="table"><button className={table_classes}><span>Data</span></button></Link>

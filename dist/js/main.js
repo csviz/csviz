@@ -48746,7 +48746,7 @@ var App = React.createClass({
 
   getInitialState: function() {
     return {
-      meta: {},
+      repo: {},
       isTableActive: null,
       loggedIn: false
     };
@@ -48763,11 +48763,13 @@ var App = React.createClass({
   componentWillMount: function() {
     xhr({ responseType: 'json', url: META}, meta_response.bind(this))
 
-    function meta_response(err, resp, data) {
-      // get repo meta data
-      github.getPublicRepo(data.owner, data.repo, function(err, data) {
+    function meta_response(err, resp, meta) {
+      // get repo meta meta
+      github.getPublicRepo(meta.owner, meta.repo, function(err, data) {
         if(err) console.log('get repo meta err', err)
-        this.setState({meta: data})
+        this.setState({
+          repo: data
+        })
       }.bind(this))
 
       this.setState({loggedIn: user.loggedIn()})
@@ -48787,7 +48789,7 @@ var App = React.createClass({
       React.DOM.a({href: "http://csviz.dev.wiredcraft.com/token"}, "Login");
 
     var profile = this.state.loggedIn ?
-      React.DOM.a({href: "http://github.com/fraserxu/csviz", target: "_blank"}, React.DOM.img({className: "avatar", src: user.attrs.avatar_url, alt: user.attrs.name}), user.attrs.name) :
+      React.DOM.a({href: this.state.repo.html_url, target: "_blank"}, React.DOM.img({className: "avatar", src: user.attrs.avatar_url, alt: user.attrs.name}), user.attrs.name) :
       '';
 
     var map_classes = cx({
@@ -48814,7 +48816,7 @@ var App = React.createClass({
               React.DOM.img({src: "./dist/assets/images/logo.png", alt: "CSViz"}), 
               React.DOM.span(null, "Go to CSViz.org")
             ), 
-            React.DOM.a({href: "http://github.com/wiredcraft/GPE", target: "_blank"}, "fraserxu/csviz"), 
+            React.DOM.a({href: this.state.repo.html_url, target: "_blank"}, this.state.repo.full_name), 
             React.DOM.span({className: "tabs"}, 
               Link({to: "map"}, React.DOM.button({className: map_classes}, React.DOM.span(null, "Map"))), 
               Link({to: "table"}, React.DOM.button({className: table_classes}, React.DOM.span(null, "Data")))
