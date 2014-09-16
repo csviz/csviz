@@ -11,10 +11,10 @@ var helper = require('./handsontable.csv.js')
 var Github = require('github-api')
 var user = require('../models/user')
 
-// TODO: read from config
-var csv = './data/sample.data.csv';
-var csv_path = 'data/sample.data.csv';
-var commit_message = 'Update CSV file from CSViz.';
+var config = require('../../../config.json');
+var csv = config.csv;
+var csv_path = config.git.csv_git;
+var commit_message = config.git.commit_message;
 
 module.exports = React.createClass({
   displayName: 'TableComponent',

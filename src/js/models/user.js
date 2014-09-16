@@ -17,7 +17,10 @@ User.prototype.get = function() {
       }
     },
     function(err, resp, body) {
-      if(err) return reject(err);
+      if(err) {
+        self.clear()
+        return reject(err);
+      }
       if (resp.statusCode === 200) {
         try {
           var attrs = JSON.parse(body)

@@ -8,8 +8,9 @@ var auth = require('./routes/auth.js');
 var user = require('./models/user');
 var xhr = require('xhr');
 
-// TODO: read from config
-var META = './meta.json';
+var config = require('../../config.json');
+var META = config.meta;
+var TOKEN_URL = config.token_url;
 
 // Pages
 var Map = require('./map/map.js');
@@ -72,7 +73,7 @@ var App = React.createClass({
   render: function() {
     var loginOrOut = this.state.loggedIn ?
       <a onClick={this.logout}>Logout</a> :
-      <a href="http://csviz.dev.wiredcraft.com/token">Login</a>;
+      <a href={TOKEN_URL}>Login</a>;
 
     var profile = this.state.loggedIn ?
       <a href={this.state.repo.html_url} target='_blank'><img className='avatar' src={user.attrs.avatar_url} alt={user.attrs.name} />{user.attrs.name}</a> :

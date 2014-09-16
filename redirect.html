@@ -4,19 +4,40 @@
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="dist/css/all.css">
   <title>CSViz Oauth</title>
+  <style>
+    body {
+      margin: 0 auto !important;
+      text-align: center !important;
+      padding-top: 200px;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
-    redirecting...
-    <script type="text/javascript">
-        var query = window.location.search.replace('?', '')
-        if (query){
-            var token = query.match(/token=(.*)/);
-            if(token){
-                window.localStorage.setItem('token', token[1]);
-            }
-        }
-        history.go(-1);
-    </script>
+  redirecting...
+  <p id='redirect' class='hidden'>
+    You have been logged out, please login from
+    <a href="http://csviz.dev.wiredcraft.com/#/">csviz</a>
+    or go <a id='back'>back</a>.
+  </p>
+  <script type="text/javascript">
+    document.getElementById('back').addEventListener('click', function goBack(e) {
+      e.preventDefault()
+      history.go(-1)
+    })
+    var query = window.location.search.replace('?', '')
+    if (query){
+      var token = query.match(/token=(.*)/);
+      if(token){
+        window.localStorage.setItem('token', token[1]);
+        history.go(-1)
+      }
+    }
+    // display redirect message
+    document.getElementById('redirect').removeAttribute('class')
+  </script>
 </body>
 </html>

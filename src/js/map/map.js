@@ -8,13 +8,13 @@ var concat = require('concat-stream')
 var Buffer = require('buffer').Buffer
 var mapbox = require('mapbox.js')
 
-// TODO: read from config
-var csv = './data/sample.data.csv';
-var geo = './data/countries.geo.json';
-var mapbox_token = 'pk.eyJ1IjoiZnJhc2VyeHUiLCJhIjoiZ2toZEJhayJ9.im7zAkjGosi1fFKB3PYD2Q';
-var mapbox_type = 'examples.map-i86nkdio';
-var map_location = [42, 9.56];
-var map_zoomlevel = 4;
+var config = require('../../../config.json');
+var csv = config.csv;
+var geo = config.geo;
+var mapbox_token = config.mapbox.token;
+var mapbox_type = config.mapbox.type;
+var map_location = config.mapbox.location;
+var map_zoomlevel = config.mapbox.zoomlevel;
 var colorCount = 6;
 
 module.exports = React.createClass({

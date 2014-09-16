@@ -1,4 +1,17 @@
 {
-  "csv": "./sample.data.csv",
-  "geo": "./countries.geo.json"
+  "meta": "./meta.json",
+  "token_url": "http://csviz.dev.wiredcraft.com/token",
+  "csv": "./data/sample.data.csv",
+  "csv_git": "",
+  "geo": "./data/countries.geo.json",
+  "mapbox": {
+    "token": "pk.eyJ1IjoiZnJhc2VyeHUiLCJhIjoiZ2toZEJhayJ9.im7zAkjGosi1fFKB3PYD2Q",
+    "type": "examples.map-i86nkdio",
+    "location": [42, 9.56],
+    "zoomlevel": 4
+  },
+  "git": {
+    "csv_path": "data/sample.data.csv",
+    "commit_message": "Update CSV file from CSViz."
+  }
 }
