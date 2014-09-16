@@ -178,6 +178,9 @@ module.exports = React.createClass({
     // </div>
     return (
       <section id='main'>
+        <div className='indicator'>
+        </div>
+
         <div id='map'></div>
       </section>
     );

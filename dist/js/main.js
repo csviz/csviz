@@ -49043,6 +49043,9 @@ module.exports = React.createClass({
     // </div>
     return (
       React.DOM.section({id: "main"}, 
+        React.DOM.div({className: "indicator"}
+        ), 
+
         React.DOM.div({id: "map"})
       )
     );

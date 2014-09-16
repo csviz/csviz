@@ -139,6 +139,11 @@ a {
   right: 0;
   top: $header;
 
+  .indicator {
+    position: fixed;
+    z-index: 1000;
+  }
+
   #map {
     position: fixed;
     top: $header;

@@ -35,9 +35,10 @@
         window.localStorage.setItem('token', token[1]);
         history.go(-1)
       }
+    } else {
+      // display redirect message
+      document.getElementById('redirect').removeAttribute('class')
     }
-    // display redirect message
-    document.getElementById('redirect').removeAttribute('class')
   </script>
 </body>
 </html>

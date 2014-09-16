@@ -1324,6 +1324,9 @@ a {
   position: absolute;
   right: 0;
   top: 55px; }
+  #main .indicator {
+    position: fixed;
+    z-index: 1000; }
   #main #map {
     position: fixed;
     top: 55px;
