@@ -1,58 +1,167 @@
-@import 'bourbon';
-@import 'normalize';
+$green: #31D2B1;
+$black: #2D3036;
+$headers: #EFF5FE;
+$grey: #ABB6C6;
 
-$primary-color: #333;
-$border-color: #BBB;
+/* Eggshell */
 
-$primary-size: 16px;
+@import 'eggshell';
+
+/* Grayscale fix (see https://github.com/sass/libsass/issues/151#issuecomment-33536506) */
+
+@function grayscale($value) {
+  @return #{ "grayscale(" + $value + ")" };
+}
+
+/* Layout */
+
+$footer: 55px;
+$header: 55px;
+$width: 700px;
+
+/* General */
+
+body,
+html {
+  height: 100%;
+}
 
 body {
-  font-family: "Source Sans Pro", Helvetica,Arial,sans-serif;
-  font-size: 16px;
-  line-height: 1.42857143;
-  color: #222;
-  background-color: #fff;
-  margin: 0px;
+  background: $black;
+  color: $grey;
+  @include font-size($larger);
+  position: relative;
+}
 
-  header {
-    border-bottom: 1px solid #999;
-    padding: 15px 8px;
-    background-color: #fff;
-    background: -webkit-linear-gradient(top,#fff,#f0f0f0);
-    .header {
-      padding-left: 8px;
-    }
-    .logo {
-      display: inline;
-    }
-    h1 {
-      display: inline;
-      padding: 4px 8px;
-      font-size: 24px;
-      color: #555;
-      font-weight: 300;
-    }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $headers;
+}
+
+a {
+  color: $green;
+  &:hover {
+    color: tint($green, 20%);
   }
 }
 
-.container {
-  #handsontable {
-    margin: 8px 10px;
-  }
-
-  .footer {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    padding: 10px 20px;
-    border-top: 1px solid #ccc;
-    background-color: #fff;
-  }
+.cancel:hover {
+  color: $green;
 }
 
-#map {
+#header {
+  @include clearfix;
+  left: 0;
+  padding: 0 $gutter/2;
   position: absolute;
-  top: 64px;
+  right: 0;
+  text-align: left;
+  top: 0;
+  vertical-align: middle;
+  img {
+    border-radius: $radius;
+    height: $gutter;
+    margin-bottom: -$gutter/4;
+    margin-right: $gutter/4;
+  }
+  a {
+    color: inherit;
+    padding: 1.5*$gutter/2 $gutter/2;
+    &:hover {
+      color: #FFF;
+    }
+    &.logo {
+      @include tooltip(right, #FFF);
+      span {
+        color: $black;
+      }
+    }
+  }
+  .links {
+    float: left;
+    & > a {
+      border-right: 1px solid shade($black, 20%);
+      float: left;
+    }
+  }
+  .user {
+    float: right;
+    @include font-size($smaller);
+    a {
+      border-left: 1px solid shade($black, 20%);
+      float: left;
+    }
+  }
+  .tabs {
+    float: left;
+    padding: $gutter/2;
+    button {
+      background: shade($black, 20%);
+      border: 1px solid shade($black, 20%);
+      border-radius: $radius;
+      float: left;
+      line-height: 1;
+      padding: 1.5*$gutter/4 $gutter/2;
+      @include tooltip(bottom, #FFF);
+      span {
+        color: $black;
+      }
+      &.active {
+        background: $green;
+        color: $black;
+        &:active,
+        &:hover {
+          color: $black;
+        }
+      }
+      &:before {
+        @include icon;
+      }
+      &:active,
+      &:hover {
+        color: #FFF;
+      }
+      &.map:before { content: 'z'; }
+      &.data:before { content: 'c'; }
+    }
+  }
+}
+
+#main {
+  background: shade($black, 20%);
   bottom: 0;
-  width: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: $header;
+
+  #map {
+    position: fixed;
+    top: $header;
+    bottom: 0;
+    width: 100%;
+  }
+
+  #footer {
+    background: $black;
+    bottom: 0;
+    left: 0;
+    padding: $gutter/2 $gutter;
+    position: absolute;
+    right: 0;
+    .credit {
+      color: shade($grey, 40%);
+      display: block;
+      float: right;
+      @include font-size($small);
+      margin-top: $gutter/4;
+      &:hover {
+        color: #FFF;
+      }
+    }
+  }
 }

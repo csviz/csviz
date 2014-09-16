@@ -8,7 +8,7 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var plumber = require('gulp-plumber');
 var gutil = require('gulp-util');
-var bourbon = require('node-bourbon').includePaths;
+var eggshell = require('eggshell').includePaths;
 
 var css = [
   './src/scss/main.scss',
@@ -25,8 +25,12 @@ var images = [
   './node_modules/mapbox.js/theme/images/*'
 ]
 
+var fonts = [
+  './src/assets/fonts/*'
+]
+
 var assets = [
-  './src/assets/**/*'
+  './src/assets/images/*'
 ]
 
 gulp.task('scripts', function () {
@@ -58,18 +62,25 @@ gulp.task('assets', function() {
   return gulp.src(assets)
     .pipe(plumber())
     .on('error', gutil.log)
-    .pipe(gulp.dest('./dist/assets'));
+    .pipe(gulp.dest('./dist/assets/images'));
 })
 
 gulp.task('styles', function () {
   return gulp.src(css)
     .pipe(plumber())
     .pipe(sass({
-      includePaths: ['./src/scss'].concat(bourbon)
+      includePaths: ['./src/scss'].concat(eggshell)
     }))
     .pipe(concat('all.css'))
     .on('error', gutil.log)
     .pipe(gulp.dest('./dist/css'));
+});
+
+gulp.task('fonts', function() {
+  return gulp.src(fonts)
+    .pipe(plumber())
+    .on('error', gutil.log)
+    .pipe(gulp.dest('./dist/css/fonts'));
 });
 
 gulp.task('images', function () {
@@ -85,4 +96,4 @@ gulp.task('watch', function() {
   gulp.watch('./src/js/**/*', ['scripts']);
 });
 
-gulp.task('default', ['styles', 'images', 'lib', 'assets', 'scripts']);
+gulp.task('default', ['styles', 'images', 'fonts', 'lib', 'assets', 'scripts']);

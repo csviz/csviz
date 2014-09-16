@@ -18,6 +18,8 @@ var map_zoomlevel = 4;
 var colorCount = 6;
 
 module.exports = React.createClass({
+  displayName: 'MapComponent',
+
   getInitialState: function() {
     return {
       csv_data: {},
@@ -175,9 +177,9 @@ module.exports = React.createClass({
     //   </select>
     // </div>
     return (
-      <div>
+      <section id='main'>
         <div id='map'></div>
-      </div>
+      </section>
     );
   }
 });

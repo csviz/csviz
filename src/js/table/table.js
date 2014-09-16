@@ -49,9 +49,9 @@ module.exports = React.createClass({
       var colHeaders = helper.makeHeader(nextState.csv_data)
       $container.handsontable({
         data: nextState.csv_data,
-        columns: helper.makeColumns(colHeaders),
+        colHeaders: colHeaders,
         minSpareRows: 5,
-        minSpareCols: 1
+        minSpareCols: 3
       });
     }
   },
@@ -79,22 +79,22 @@ module.exports = React.createClass({
 
   render: function() {
     var disabled = this.state.loading || !this.props.loggedIn
-    var loading = this.state.loading ?
-      <span>saving...</span> :
-      <span></span>;
     var classes = cx({
-      'container': true,
       'loading': this.state.loading
     })
 
     return (
-      <div className={classes}>
-        <div id='handsontable'></div>
-        <div className="footer">
-          <button onClick={this.save} disabled={disabled}>Save</button>
-          {loading}
+      <section id='main'>
+        <div className={classes}>
+          <div id='handsontable'></div>
+
+          <footer id='footer'>
+            <a href='http://wiredcraft.com' className='credit' target='_blank'>Built by Wiredcraft</a>
+            <button className='button add' onClick={this.save} disabled={disabled}>Save your changes</button>
+          </footer>
+
         </div>
-      </div>
+      </section>
     );
   }
 });

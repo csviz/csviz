@@ -1,7 +1,8 @@
 /** @jsx React.DOM */
 'use strict';
 
-var React = window.React = require('react');
+var React = require('react/addons');
+var cx = React.addons.classSet;
 var github = require('./models/github.js');
 var auth = require('./routes/auth.js');
 var user = require('./models/user');
@@ -51,37 +52,51 @@ var App = React.createClass({
     this.setState({loggedIn: user.loggedIn()})
   },
 
-  logout: function() {
+  logout: function(e) {
+    e.preventDefault()
     user.logout()
     this.setState({loggedIn: false})
   },
 
   render: function() {
     var loginOrOut = this.state.loggedIn ?
-      <button onClick={this.logout}>Logout</button> :
-      <button><a href="http://csviz.dev.wiredcraft.com/token">Login</a></button>;
+      <a onClick={this.logout}>Logout</a> :
+      <a href="http://csviz.dev.wiredcraft.com/token">Login</a>;
 
-    var nav = this.state.isTableActive ?
-      <span><Link to="map">Map</Link></span> :
-      <span><Link to="table">Table</Link></span>;
+    var profile = this.state.loggedIn ?
+      <a href='http://github.com/fraserxu/csviz' target='_blank'><img className='avatar' src={user.attrs.avatar_url} alt={user.attrs.name} />{user.attrs.name}</a> :
+      '';
+
+    var map_classes = cx({
+      'map': true,
+      'active': !this.state.isTableActive
+    })
+
+    var table_classes = cx({
+      'data': true,
+      'active': this.state.isTableActive
+    })
 
     return (
       <div>
-        <header>
-          <span className='header'>
-            <a href=''>
-              <img className='logo' src='./dist/assets/images/logo.png' />
-            </a>
-            <span>{this.state.meta.description}</span>
-            <a target='_blank' href={this.state.meta.html_url}>{this.state.meta.name}</a>
-          </span>
+        <header id='header'>
+          <nav className='user'>
+            {profile}
 
-          <span className="controls">
             {loginOrOut}
-          </span>
+          </nav>
 
-          {nav}
-
+          <nav className='links'>
+            <a href='/' className='logo'>
+              <img src='./dist/assets/images/logo.png' alt='CSViz' />
+              <span>Go to CSViz.org</span>
+            </a>
+            <a href='http://github.com/wiredcraft/GPE' target='_blank'>fraserxu/csviz</a>
+            <span className='tabs'>
+              <Link to="map"><button className={map_classes}><span>Map</span></button></Link>
+              <Link to="table"><button className={table_classes}><span>Data</span></button></Link>
+            </span>
+          </nav>
         </header>
 
         <this.props.activeRouteHandler loggedIn={this.state.loggedIn} />

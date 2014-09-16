@@ -2,6 +2,8 @@
  * @jsx React.DOM
  */
 
+var React = require('react')
+
 var notFound = React.createClass({
   render: function() {
     return (

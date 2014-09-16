@@ -26,13 +26,13 @@
   },
   "devDependencies": {
     "browserify": "^5.11.0",
+    "eggshell": "^0.1.20",
     "gulp": "~3.8.6",
     "gulp-concat": "^2.3.4",
     "gulp-plumber": "^0.6.5",
     "gulp-sass": "~0.7.3",
     "gulp-uglify": "^1.0.1",
     "gulp-util": "^3.0.1",
-    "node-bourbon": "1.2.3",
     "reactify": "~0.14.0",
     "vinyl-transform": "0.0.1"
   },

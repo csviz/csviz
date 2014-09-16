@@ -48715,7 +48715,8 @@ module.exports = function (headers) {
 /** @jsx React.DOM */
 'use strict';
 
-var React = window.React = require('react');
+var React = require('react/addons');
+var cx = React.addons.classSet;
 var github = require('./models/github.js');
 var auth = require('./routes/auth.js');
 var user = require('./models/user');
@@ -48765,37 +48766,51 @@ var App = React.createClass({
     this.setState({loggedIn: user.loggedIn()})
   },
 
-  logout: function() {
+  logout: function(e) {
+    e.preventDefault()
     user.logout()
     this.setState({loggedIn: false})
   },
 
   render: function() {
     var loginOrOut = this.state.loggedIn ?
-      React.DOM.button({onClick: this.logout}, "Logout") :
-      React.DOM.button(null, React.DOM.a({href: "http://csviz.dev.wiredcraft.com/token"}, "Login"));
+      React.DOM.a({onClick: this.logout}, "Logout") :
+      React.DOM.a({href: "http://csviz.dev.wiredcraft.com/token"}, "Login");
 
-    var nav = this.state.isTableActive ?
-      React.DOM.span(null, Link({to: "map"}, "Map")) :
-      React.DOM.span(null, Link({to: "table"}, "Table"));
+    var profile = this.state.loggedIn ?
+      React.DOM.a({href: "http://github.com/fraserxu/csviz", target: "_blank"}, React.DOM.img({className: "avatar", src: user.attrs.avatar_url, alt: user.attrs.name}), user.attrs.name) :
+      '';
+
+    var map_classes = cx({
+      'map': true,
+      'active': !this.state.isTableActive
+    })
+
+    var table_classes = cx({
+      'data': true,
+      'active': this.state.isTableActive
+    })
 
     return (
       React.DOM.div(null, 
-        React.DOM.header(null, 
-          React.DOM.span({className: "header"}, 
-            React.DOM.a({href: ""}, 
-              React.DOM.img({className: "logo", src: "./dist/assets/images/logo.png"})
-            ), 
-            React.DOM.span(null, this.state.meta.description), 
-            React.DOM.a({target: "_blank", href: this.state.meta.html_url}, this.state.meta.name)
-          ), 
+        React.DOM.header({id: "header"}, 
+          React.DOM.nav({className: "user"}, 
+            profile, 
 
-          React.DOM.span({className: "controls"}, 
             loginOrOut
           ), 
 
-          nav
-
+          React.DOM.nav({className: "links"}, 
+            React.DOM.a({href: "/", className: "logo"}, 
+              React.DOM.img({src: "./dist/assets/images/logo.png", alt: "CSViz"}), 
+              React.DOM.span(null, "Go to CSViz.org")
+            ), 
+            React.DOM.a({href: "http://github.com/wiredcraft/GPE", target: "_blank"}, "fraserxu/csviz"), 
+            React.DOM.span({className: "tabs"}, 
+              Link({to: "map"}, React.DOM.button({className: map_classes}, React.DOM.span(null, "Map"))), 
+              Link({to: "table"}, React.DOM.button({className: table_classes}, React.DOM.span(null, "Data")))
+            )
+          )
         ), 
 
         this.props.activeRouteHandler({loggedIn: this.state.loggedIn})
@@ -48817,7 +48832,7 @@ var routes = (
 
 React.renderComponent(routes, document.body);
 
-},{"./map/map.js":304,"./models/github.js":305,"./models/user":306,"./routes/auth.js":307,"./statics/notfound.js":308,"./table/table.js":310,"react":295,"react-router":102}],304:[function(require,module,exports){
+},{"./map/map.js":304,"./models/github.js":305,"./models/user":306,"./routes/auth.js":307,"./statics/notfound.js":308,"./table/table.js":310,"react-router":102,"react/addons":136}],304:[function(require,module,exports){
 /** @jsx React.DOM */
 'use strict';
 
@@ -48837,7 +48852,9 @@ var map_location = [42, 9.56];
 var map_zoomlevel = 4;
 var colorCount = 6;
 
-module.exports = React.createClass({displayName: 'exports',
+module.exports = React.createClass({
+  displayName: 'MapComponent',
+
   getInitialState: function() {
     return {
       csv_data: {},
@@ -48995,7 +49012,7 @@ module.exports = React.createClass({displayName: 'exports',
     //   </select>
     // </div>
     return (
-      React.DOM.div(null, 
+      React.DOM.section({id: "main"}, 
         React.DOM.div({id: "map"})
       )
     );
@@ -49098,6 +49115,8 @@ module.exports = authenticatedRoute
  * @jsx React.DOM
  */
 
+var React = require('react')
+
 var notFound = React.createClass({displayName: 'notFound',
   render: function() {
     return (
@@ -49108,7 +49127,7 @@ var notFound = React.createClass({displayName: 'notFound',
 
 module.exports = notFound
 
-},{}],309:[function(require,module,exports){
+},{"react":295}],309:[function(require,module,exports){
 'use strict';
 
 // https://github.com/juantascon/jquery-handsontable-csv
@@ -49150,14 +49169,11 @@ module.exports = {
 
         return csv;
     },
-
     download: function(instance, filename) {
         var csv = handsontable2csv.string(instance)
-
         var link = document.createElement("a");
         link.setAttribute("href", "data:text/plain;charset=utf-8," + encodeURIComponent(csv));
         link.setAttribute("download", filename);
-
         document.body.appendChild(link)
         link.click();
         document.body.removeChild(link)
@@ -49215,9 +49231,9 @@ module.exports = React.createClass({
       var colHeaders = helper.makeHeader(nextState.csv_data)
       $container.handsontable({
         data: nextState.csv_data,
-        columns: helper.makeColumns(colHeaders),
+        colHeaders: colHeaders,
         minSpareRows: 5,
-        minSpareCols: 1
+        minSpareCols: 3
       });
     }
   },
@@ -49245,20 +49261,20 @@ module.exports = React.createClass({
 
   render: function() {
     var disabled = this.state.loading || !this.props.loggedIn
-    var loading = this.state.loading ?
-      React.DOM.span(null, "saving...") :
-      React.DOM.span(null);
     var classes = cx({
-      'container': true,
       'loading': this.state.loading
     })
 
     return (
-      React.DOM.div({className: classes}, 
-        React.DOM.div({id: "handsontable"}), 
-        React.DOM.div({className: "footer"}, 
-          React.DOM.button({onClick: this.save, disabled: disabled}, "Save"), 
-          loading
+      React.DOM.section({id: "main"}, 
+        React.DOM.div({className: classes}, 
+          React.DOM.div({id: "handsontable"}), 
+
+          React.DOM.footer({id: "footer"}, 
+            React.DOM.a({href: "http://wiredcraft.com", className: "credit", target: "_blank"}, "Built by Wiredcraft"), 
+            React.DOM.button({className: "button add", onClick: this.save, disabled: disabled}, "Save your changes")
+          )
+
         )
       )
     );
