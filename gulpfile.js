@@ -18,7 +18,8 @@ var css = [
 
 var libs = [
   './src/libs/jquery.js',
-  './src/libs/jquery.handsontable.js'
+  './src/libs/jquery.handsontable.js',
+  './src/libs/topojson.js'
 ]
 
 var images = [
@@ -93,7 +94,7 @@ gulp.task('images', function () {
 gulp.task('watch', function() {
   gulp.watch(css, ['styles']);
   gulp.watch(assets, ['assets']);
-  gulp.watch('./src/js/**/*', ['scripts']);
+  gulp.watch(['./src/js/**/*', './config.json'], ['scripts']);
 });
 
 gulp.task('default', ['styles', 'images', 'fonts', 'lib', 'assets', 'scripts']);

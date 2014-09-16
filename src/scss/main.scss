@@ -140,8 +140,31 @@ a {
   top: $header;
 
   .indicator {
-    position: fixed;
+    background: $black;
     z-index: 1000;
+    right: $gutter;
+    top: $header + $gutter;
+    position: fixed;
+    border-radius: $radius;
+    .select > select,
+    input:not([type=submit]) {
+      background: tint($black, 5%);
+      border-color: tint($black, 10%);
+      &:hover {
+        background: tint($black, 10%);
+        border-color: tint($black, 20%);
+      }
+      &:focus,
+      &.active {
+        background: tint($black, 10%);
+        border-color: $green;
+        color: #FFF;
+      }
+    }
+
+    .select:after {
+      top: $gutter/4;
+    }
   }
 
   #map {
@@ -156,7 +179,7 @@ a {
     bottom: 0;
     left: 0;
     padding: $gutter/2 $gutter;
-    position: absolute;
+    position: fixed;
     right: 0;
     .credit {
       color: shade($grey, 40%);

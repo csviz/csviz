@@ -1,14 +1,14 @@
 {
   "meta": "./meta.json",
   "token_url": "http://csviz.dev.wiredcraft.com/token",
-  "csv": "./data/sample.data.csv",
+  "csv": "./data/sample2.csv",
   "csv_git": "",
-  "geo": "./data/countries.geo.json",
+  "geo": "./data/alternative_country_topo.json",
   "mapbox": {
     "token": "pk.eyJ1IjoiZnJhc2VyeHUiLCJhIjoiZ2toZEJhayJ9.im7zAkjGosi1fFKB3PYD2Q",
     "type": "examples.map-i86nkdio",
-    "location": [42, 9.56],
-    "zoomlevel": 4
+    "location": [32.52, 13.11],
+    "zoomlevel": 3
   },
   "git": {
     "csv_path": "data/sample.data.csv",

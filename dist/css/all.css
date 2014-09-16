@@ -1325,8 +1325,24 @@ a {
   right: 0;
   top: 55px; }
   #main .indicator {
+    background: #2D3036;
+    z-index: 1000;
+    right: 20px;
+    top: 75px;
     position: fixed;
-    z-index: 1000; }
+    border-radius: 2px; }
+    #main .indicator .select > select, #main .indicator input:not([type=submit]) {
+      background: #373a40;
+      border-color: #42444a; }
+      #main .indicator .select > select:hover, #main .indicator input:not([type=submit]):hover {
+        background: #42444a;
+        border-color: #57595e; }
+      #main .indicator .select > select:focus, #main .indicator .select > select.active, #main .indicator input:not([type=submit]):focus, #main .indicator input:not([type=submit]).active {
+        background: #42444a;
+        border-color: #31D2B1;
+        color: #FFF; }
+    #main .indicator .select:after {
+      top: 5px; }
   #main #map {
     position: fixed;
     top: 55px;
@@ -1337,7 +1353,7 @@ a {
     bottom: 0;
     left: 0;
     padding: 10px 20px;
-    position: absolute;
+    position: fixed;
     right: 0; }
     #main #footer .credit {
       color: #666d76;
