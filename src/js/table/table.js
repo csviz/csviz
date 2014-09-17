@@ -67,7 +67,7 @@ module.exports = React.createClass({
       auth: 'oauth'
     });
 
-    var repo = github.getRepo(user.attrs.github.login, 'csviz')
+    var repo = github.getRepo(user.attrs.github.login, this.props.meta || 'csviz')
 
     // need to define the path of the data
     repo.write('master', csv_path, editedData, commit_message, function(err) {

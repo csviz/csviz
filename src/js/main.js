@@ -34,6 +34,7 @@ var App = React.createClass({
   getInitialState: function() {
     return {
       repo: {},
+      meta: {},
       isTableActive: null,
       loggedIn: false
     };
@@ -55,6 +56,7 @@ var App = React.createClass({
       github.getPublicRepo(meta.owner, meta.repo, function(err, data) {
         if(err) console.log('get repo meta err', err)
         this.setState({
+          meta: meta,
           repo: data
         })
       }.bind(this))
@@ -111,7 +113,7 @@ var App = React.createClass({
           </nav>
         </header>
 
-        <this.props.activeRouteHandler loggedIn={this.state.loggedIn} />
+        <this.props.activeRouteHandler meta={this.state.meta} loggedIn={this.state.loggedIn} />
       </div>
     );
   }

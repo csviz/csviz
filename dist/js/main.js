@@ -48766,6 +48766,7 @@ var App = React.createClass({
   getInitialState: function() {
     return {
       repo: {},
+      meta: {},
       isTableActive: null,
       loggedIn: false
     };
@@ -48787,6 +48788,7 @@ var App = React.createClass({
       github.getPublicRepo(meta.owner, meta.repo, function(err, data) {
         if(err) console.log('get repo meta err', err)
         this.setState({
+          meta: meta,
           repo: data
         })
       }.bind(this))
@@ -48843,7 +48845,7 @@ var App = React.createClass({
           )
         ), 
 
-        this.props.activeRouteHandler({loggedIn: this.state.loggedIn})
+        this.props.activeRouteHandler({meta: this.state.meta, loggedIn: this.state.loggedIn})
       )
     );
   }
@@ -49356,7 +49358,7 @@ module.exports = React.createClass({
       auth: 'oauth'
     });
 
-    var repo = github.getRepo(user.attrs.github.login, 'csviz')
+    var repo = github.getRepo(user.attrs.github.login, this.props.meta || 'csviz')
 
     // need to define the path of the data
     repo.write('master', csv_path, editedData, commit_message, function(err) {
