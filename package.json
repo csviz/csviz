@@ -12,6 +12,17 @@
     "email": "fraserxu@wiredcraft.com",
     "url": "http://csviz.org"
   },
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "rootDir": "src",
+    "scriptPreprocessor": "<rootDir>/__tests__/preprocessor.js",
+    "unmockedModulePathPatterns": ["./node_modules/"],
+    "testPathIgnorePatterns": [
+      "<rootDir>/__tests__/preprocessor.js"
+    ]
+  },
   "dependencies": {
     "binary-csv": "^0.2.2",
     "buffer": "^2.5.0",
@@ -33,6 +44,8 @@
     "gulp-sass": "~0.7.3",
     "gulp-uglify": "^1.0.1",
     "gulp-util": "^3.0.1",
+    "jest-cli": "^0.1.18",
+    "react-tools": "^0.11.2",
     "reactify": "~0.14.0",
     "vinyl-transform": "0.0.1"
   },

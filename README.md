@@ -7,5 +7,9 @@ CSViz
 * build `gulp`
 * watch `gulp watch`
 
+### Running test
+
+* npm test
+
 ### Liscense
 MIT
