@@ -6,6 +6,7 @@ var transform = require('vinyl-transform');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var gulpif = require('gulp-if');
 var plumber = require('gulp-plumber');
 var gutil = require('gulp-util');
 var eggshell = require('eggshell').includePaths;
@@ -35,6 +36,8 @@ var assets = [
 ]
 
 gulp.task('scripts', function () {
+  var condition = (process.env.NODE_ENV === 'production') ? true : false;
+
   var browserified = transform(function(filename) {
     var b = browserify(filename);
     b.transform('reactify');
@@ -44,7 +47,7 @@ gulp.task('scripts', function () {
   return gulp.src('./src/js/main.js')
     .pipe(plumber())
     .pipe(browserified)
-    // .pipe(uglify())
+    .pipe(gulpif(condition, uglify()))
     .on('error', gutil.log)
     .pipe(gulp.dest('./dist/js'));
 });
