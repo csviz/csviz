@@ -16,6 +16,9 @@ var csv = config.csv;
 var csv_path = config.git.csv_path;
 var commit_message = config.git.commit_message;
 
+// trim the last spare rows
+var SPAREROWS = 5;
+
 module.exports = React.createClass({
   displayName: 'TableComponent',
 
@@ -50,7 +53,7 @@ module.exports = React.createClass({
       $container.handsontable({
         data: nextState.csv_data,
         colHeaders: colHeaders,
-        minSpareRows: 5,
+        minSpareRows: SPAREROWS || 5,
         minSpareCols: 3
       });
     }
@@ -60,7 +63,7 @@ module.exports = React.createClass({
   save: function(e) {
     this.setState({loading: true})
     var table = $("#handsontable").handsontable('getInstance')
-    var editedData = helper.string(table)
+    var editedData = helper.string(table, SPAREROWS)
 
     var github = new Github({
       token: user.attrs.github.accessToken,

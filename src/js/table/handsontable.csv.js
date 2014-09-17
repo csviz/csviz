@@ -18,14 +18,16 @@ module.exports = {
       })
       return columns
     },
-    string: function(instance) {
+    string: function(instance, SPAREROWS) {
+        if(!SPAREROWS) throw new Error('must define the SPAREROWS')
+
         var headers = instance.getColHeader();
 
         var csv = ""
-        csv += headers.join(",") + "\n";
+        csv += headers.join(";") + "\n";
 
         // ignore last line
-        for (var i = 0; i < instance.countRows() - 1 ; i++) {
+        for (var i = 0; i < instance.countRows() - SPAREROWS ; i++) {
             var row = [];
             for (var h in headers) {
                 var prop = instance.colToProp(h)
@@ -33,7 +35,7 @@ module.exports = {
                 row.push(value)
             }
 
-            csv += row.join(",")
+            csv += row.join(";")
             csv += "\n";
         }
 
