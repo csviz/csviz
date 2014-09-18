@@ -49,7 +49,7 @@ var App = React.createClass({
   },
 
   componentWillMount: function() {
-    xhr({ responseType: 'json', url: META}, meta_response.bind(this))
+    xhr({ responseType: 'json', url: META, timeout: 100 * 1000}, meta_response.bind(this))
 
     function meta_response(err, resp, meta) {
       // get repo meta meta

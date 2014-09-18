@@ -31,7 +31,7 @@ module.exports = React.createClass({
 
   componentWillMount: function() {
     // load csv data
-    xhr({ responseType: 'arraybuffer', url: csv}, csv_response.bind(this))
+    xhr({ responseType: 'arraybuffer', url: csv, timeout: 100 * 1000}, csv_response.bind(this))
     function csv_response(err, resp, data) {
       if (err) throw err
       var buff = new Buffer(new Uint8Array(data))
