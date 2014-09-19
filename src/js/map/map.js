@@ -29,7 +29,7 @@ module.exports = React.createClass({
       data_lookup: {},
       layer_lookup: {},
       map: {},
-      indicator: 'Youth literacy rate',
+      indicator: '',
       indicatorList: []
     };
   },
@@ -82,6 +82,7 @@ module.exports = React.createClass({
       })
       self.setState({
         indicatorList: indicators,
+        indicator: indicators[0] || '',
         csv_data: dataByCountry
       });
     }
