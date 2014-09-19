@@ -5,7 +5,7 @@
   "csv_git": "",
   "geo": "./data/alternative_country_topo.json",
   "mapbox": {
-    "token": "pk.eyJ1IjoiZnJhc2VyeHUiLCJhIjoiZ2toZEJhayJ9.im7zAkjGosi1fFKB3PYD2Q",
+    "token": "pk.eyJ1IjoiY3N2aXoiLCJhIjoiVVZIejF1ZyJ9.xFS0JJueEKUV7o0bj2IGIA",
     "type": "examples.map-i86nkdio",
     "location": [32.52, 13.11],
     "zoomlevel": 3
