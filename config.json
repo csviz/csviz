@@ -1,6 +1,6 @@
 {
   "meta": "./meta.json",
-  "token_url": "http://csviz.dev.wiredcraft.com/token",
+  "token_url": "http://csviz.org/token",
   "csv": "./data/sample2.csv",
   "csv_git": "",
   "geo": "./data/alternative_country_topo.json",
