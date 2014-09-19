@@ -1,12 +1,60 @@
-Location;Indicator
-Austria;30
-Belgium;36
-Finland;89
-France;1
-Germany;289
-Greece;77
-Italy;6
-Netherlands;5
-Spain;43
-United Kingdom;88
-Switzerland;99
+Location;Youth literacy rate;Teacher trained in primary schools;Out of school children rates;Pupil teacher ratio in primary schools;Primary schools completion rate;Lower secondary school completion rate;Gross enrollment rate primary schools
+Afghanistan;;;;;;;
+Albania;98.8;;;19;;92.36;69
+Benin;;;5.14;44;70.52;;19
+Bhutan;;;8.17;24;101.26;71.08;9
+Burkina Faso;39.3;95;33.24;48;57.6;19.17;4
+Burundi;88.9;95;;47;62.18;21.82;5
+Cambodia;87.1;100;1.62;46;98.13;45.71;15
+Cameroon;80.6;79;8.47;46;72.85;;30
+Central African Republic;65.6;58;27.84;80;45.35;12.93;
+Chad;47.9;;;61;35.25;17.42;1
+Comoros;86;;;;;;
+Ivory coast;67.5;99;;42;61.2;33.35;5
+Congo DRC;65.8;94;;35;72.82;38.44;4
+Djibouti;;;38.37;35;64.92;42.95;4
+Eritrea;90.1;90;65.79;41;31.21;50.1;13
+Ethiopia;55;57;19.77;54;50.72;26.95;18
+Gambia;68.1;63;26.25;34;70.33;61.39;
+Georgia;99.8;;1.39;6;108.14;108.56;
+Ghana;85.7;52;17.66;33;98.17;67.63;114
+Guinea;31.4;75;24.47;44;61.48;;
+Guinea-Bissau;73.2;;;;;;
+Guyana;93.1;;;;;;
+Haiti;;;;;;;
+Honduras;95.9;;5.99;;100.09;49.61;42
+Kenya;82.4;;;;;;
+Kyrgyz Republic;99.8;72;1.63;24;97.67;89.41;25
+Lao PDR;;97;4.12;27;95.12;46.32;24
+Lesotho;83.2;68;17.82;34;72.47;39.22;
+Liberia;49.1;;;;;;
+Madagascar;64.9;;;43;69.54;34.19;
+Malawi;72.1;78;;74;74.24;;
+Mali;46.9;;26.67;;58.69;;
+Mauritania;69;100;29.57;40;68.69;20.6;
+Mongolia;95.7;99;2.39;29;130.22;87.85;86
+Mozambique;67.1;84;13.56;55;52.19;23.17;
+Nepal;82.4;93;2.37;28;101.03;70.65;82
+Nicaragua;;;;;;;
+Niger;;97;36.38;39;49.31;12.07;6
+Nigeria;66.4;;;;;;
+Pakistan;70.7;84;27.54;41;71.86;42.95;
+Papua New Guinea;70.8;;;;;;
+Moldova;100;;9.47;16;89.64;;80
+Rwanda;77.3;96;1.29;59;57.74;35.48;13
+Sao Tome and Principe;80.2;;;29;;;50
+Senegal;65;65;20.61;32;60.48;35.66;14
+Sierra Leone;61;55;;33;72.36;53.81;9
+Somalia;;;;;;;
+South Sudan;;;;;;;
+Sudan;87.3;;;;;;
+Tajikistan;99.9;94;1.07;23;97.63;89.6;
+Timor-Leste;79.5;;;;;;
+Togo;79.9;83;;42;;41;11
+Uganda;87.4;;;;;;
+Tanzania;74.6;97;;46;80.75;40.43;34
+Uzbekistan;99.9;;;;;;
+Vietnam;97.1;100;1.8;19;101.24;80.54;77
+Yemen;86.4;;12.88;;69.82;47.71;
+Zambia;64;;4.52201;49;91.2957;;
+Zimbabwe;90.9;;;;;;
