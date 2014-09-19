@@ -3,6 +3,9 @@ var xhr = require('xhr');
 
 function User() {}
 
+var config = require('../../../config.json');
+var api = config.api;
+
 User.prototype.get = function() {
   this.token(window.localStorage.getItem('token'))
   var self = this;
@@ -10,7 +13,7 @@ User.prototype.get = function() {
     if (!self._token)
       return reject(new Error('401'));
     xhr({
-      uri: 'http://csviz.dev.wiredcraft.com/user',
+      uri: api + '/user',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer ' + self._token

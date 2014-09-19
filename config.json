@@ -1,5 +1,6 @@
 {
   "meta": "./meta.json",
+  "api": "http://csviz.org",
   "token_url": "http://csviz.org/token",
   "csv": "./data/sample2.csv",
   "csv_git": "",
