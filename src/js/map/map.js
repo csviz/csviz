@@ -129,18 +129,9 @@ module.exports = React.createClass({
       var min = Math.min.apply(Math, values)
 
       var rangePoints = [];
-
+      var step = (max - min)/COLOR_COUNT;
       for (var i = 0; i < COLOR_COUNT; i++){
         rangePoints.push(min + i*step);
-      }
-      //var step = (max - min)/COLOR_COUNT;
-      var exponentialSteps = [0, 16, 8, 4, 2, 1]
-      var step = (max - min)/31;
-
-      var prev = 0;
-      for (var i = 0; i < COLOR_COUNT; i++){
-        rangePoints.push(min + prev+exponentialSteps[i]*step);
-
       }
       return {min: min, max: max, ranges: rangePoints};
     }
