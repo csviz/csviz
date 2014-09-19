@@ -129,9 +129,18 @@ module.exports = React.createClass({
       var min = Math.min.apply(Math, values)
 
       var rangePoints = [];
-      var step = (max - min)/COLOR_COUNT;
+
       for (var i = 0; i < COLOR_COUNT; i++){
         rangePoints.push(min + i*step);
+
+      //var step = (max - min)/COLOR_COUNT;
+      var exponentialSteps = [0, 16, 8, 4, 2, 1]
+      var step = (max - min)/31;
+      
+      var prev = 0;
+      for (var i = 0; i < COLOR_COUNT; i++){
+        rangePoints.push(min + prev+exponentialSteps[i]*step);
+
       }
       return {min: min, max: max, ranges: rangePoints};
     }
@@ -143,12 +152,12 @@ module.exports = React.createClass({
      */
     function getColor(value, ranges){
       if (!value) return 'rgba(0,0,0,.0)';
-      if (value >= ranges.ranges[5]) return '#5B79AD';
-      if (value >= ranges.ranges[4]) return '#6884B3';
-      if (value >= ranges.ranges[3]) return '#6B87B4';
-      if (value >= ranges.ranges[2]) return '#819BC3';
-      if (value >= ranges.ranges[1]) return '#94AACB';
-      if (value >= ranges.ranges[0]) return '#A7BAD2';
+      if (value >= ranges.ranges[5]) return 'rgba(7,42,96,.6)';
+      if (value >= ranges.ranges[4]) return 'rgba(27,63,116,.6)';
+      if (value >= ranges.ranges[3]) return 'rgba(58,97,153,.6)';
+      if (value >= ranges.ranges[2]) return 'rgba(96,128,176,.6)';
+      if (value >= ranges.ranges[1]) return 'rgba(119,153,196,.6)';
+      return 'rgba(156,183,217,.6)';
     }
 
     var ranges = getRanges(data, indicator);
@@ -252,7 +261,6 @@ module.exports = React.createClass({
             </select>
           </form>
         </div>
-
         <div id='map'></div>
       </section>
     );
