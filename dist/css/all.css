@@ -597,7 +597,7 @@ button {
       border-color: #e1e1e1;
       color: #818286; }
   .button.delete, a.button.delete, button.button.delete {
-    background: #FF5F5F;
+    background: #B93A3A;
     border-radius: 2px;
     color: #FFF;
     display: inline-block;
@@ -609,13 +609,13 @@ button {
     -webkit-transition-duration: 0.1s;
     -moz-transition-duration: 0.1s;
     transition-duration: 0.1s;
-    border: 1px solid #e55555; }
+    border: 1px solid #a63434; }
     .button.delete:hover, .button.delete:focus, a.button.delete:hover, a.button.delete:focus, button.button.delete:hover, button.button.delete:focus {
-      background: #ff6f6f;
+      background: #c04d4d;
       color: #FFF;
       text-decoration: none; }
     .button.delete:active, .button.delete.active, a.button.delete:active, a.button.delete.active, button.button.delete:active, button.button.delete.active {
-      background: #e55555;
+      background: #a63434;
       color: #FFF;
       text-decoration: none; }
     .button.delete[disabled=disabled], .button.delete[disabled=true], .button.delete[disabled], a.button.delete[disabled=disabled], a.button.delete[disabled=true], a.button.delete[disabled], button.button.delete[disabled=disabled], button.button.delete[disabled=true], button.button.delete[disabled] {
@@ -634,7 +634,7 @@ button {
     color: #1b7ec0; }
 
 .remove:hover {
-  color: #FF5F5F; }
+  color: #B93A3A; }
 
 .icon {
   position: relative;
@@ -816,11 +816,11 @@ pre code, pre .code {
   margin-top: 5px; }
 
 input:not([type=submit]).ng-dirty.ng-invalid, textarea.ng-dirty.ng-invalid {
-  border-color: #FF5F5F; }
+  border-color: #B93A3A; }
   input:not([type=submit]).ng-dirty.ng-invalid + .description, input:not([type=submit]).ng-dirty.ng-invalid + .status + .description, textarea.ng-dirty.ng-invalid + .description, textarea.ng-dirty.ng-invalid + .status + .description {
-    color: #FF5F5F; }
+    color: #B93A3A; }
   input:not([type=submit]).ng-dirty.ng-invalid + .status:before, textarea.ng-dirty.ng-invalid + .status:before {
-    color: #FF5F5F;
+    color: #B93A3A;
     content: 'x'; }
 input:not([type=submit]).ng-valid + .status:before, textarea.ng-valid + .status:before {
   color: #31D2B1;
@@ -985,7 +985,7 @@ label, .label {
   .notification.error, .notification.info, .notification.ok, .notification.undefined, .notification.warning {
     color: #FFF; }
   .notification.error {
-    background: #FF5F5F; }
+    background: #B93A3A; }
   .notification.info {
     background: #1F8DD6; }
   .notification.ok {
@@ -1080,7 +1080,7 @@ label, .label {
         -webkit-font-smoothing: antialiased;
         content: 'X'; }
       #modal > .header .close:hover {
-        color: #FF5F5F; }
+        color: #B93A3A; }
       #modal > .header .close span {
         display: none; }
   #modal .body {
@@ -1355,6 +1355,16 @@ a {
     padding: 10px 20px;
     position: fixed;
     right: 0; }
+    #main #footer .msg {
+      display: inline; }
+      #main #footer .msg p {
+        display: inline;
+        margin-left: 10px;
+        font-size: 1.4rem; }
+      #main #footer .msg.error {
+        color: rosybrown; }
+      #main #footer .msg.success {
+        color: #ABB6C6; }
     #main #footer .credit {
       color: #666d76;
       display: block;

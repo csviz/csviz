@@ -1,4 +1,5 @@
 $green: #31D2B1;
+$red: #B93A3A;
 $black: #2D3036;
 $headers: #EFF5FE;
 $grey: #ABB6C6;
@@ -181,6 +182,20 @@ a {
     padding: $gutter/2 $gutter;
     position: fixed;
     right: 0;
+    .msg {
+      display: inline;
+      p {
+        display: inline;
+        margin-left: 10px;
+        font-size: 1.4rem;
+      }
+      &.error {
+        color: rosybrown;
+      }
+      &.success {
+        color: $grey;
+      }
+    }
     .credit {
       color: shade($grey, 40%);
       display: block;

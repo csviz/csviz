@@ -10,6 +10,7 @@ var Buffer = require('buffer').Buffer
 var helper = require('./handsontable.csv.js')
 var Github = require('github-api')
 var user = require('../models/user')
+var Message = require('../models/message')
 
 var config = require('../../../config.json');
 var csv = config.csv;
@@ -25,7 +26,11 @@ module.exports = React.createClass({
   getInitialState: function() {
     return {
       csv_data: [],
-      loading: false
+      loading: false,
+      msg: {
+        type: null,
+        message: ''
+      }
     };
   },
 
@@ -59,6 +64,13 @@ module.exports = React.createClass({
     }
   },
 
+  componentWillUnmount: function() {
+    this.setState({msg: {
+      type: null,
+      message: ''
+    }})
+  },
+
   // save changes to github
   save: function(e) {
     this.setState({loading: true})
@@ -75,8 +87,22 @@ module.exports = React.createClass({
     // need to define the path of the data
     repo.write('master', csv_path, editedData, commit_message, function(err) {
       this.setState({loading: false})
-      if(err) return console.log('err', err)
-      console.log('write data success')
+      if(err) {
+        return this.setState({msg: {
+          tpye: 'error',
+          message: 'Save data to github error, make sure you have the right permission.'
+        }})
+      }
+      this.setState({msg: {
+        type: 'success',
+        message: 'Save data to github successful, your page will be available shortly.'
+      }})
+      setTimeout(function() {
+        this.setState({msg: {
+          type: null,
+          message: ''
+        }})
+      }.bind(this), 5000)
     }.bind(this));
   },
 
@@ -94,6 +120,7 @@ module.exports = React.createClass({
           <footer id='footer'>
             <a href='http://wiredcraft.com' className='credit' target='_blank'>Built by Wiredcraft</a>
             <button className='button add' onClick={this.save} disabled={disabled}>Save your changes</button>
+            <Message type={this.state.msg.type} message={this.state.msg.message} />
           </footer>
 
         </div>
