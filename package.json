@@ -24,6 +24,7 @@
   "dependencies": {
     "flux": "^2.0.1",
     "react": "^0.11.2",
+    "react-document-title": "^0.1.2",
     "react-router": "^0.9.4"
   },
   "devDependencies": {

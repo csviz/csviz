@@ -4,6 +4,7 @@
 
 var React = require('react')
 var Router = require('react-router')
+var DocumentTitle = require('react-document-title')
 
 // Router
 var DefaultRoute = Router.DefaultRoute
@@ -17,15 +18,25 @@ var DataPage = require('./pages/Data')
 var MapPage = require('./pages/Map')
 var NotFound = require('./pages/NotFound')
 
+// Components
+var Header = require('./components/Header')
+
 var App = React.createClass({
 
   displayName: 'App',
 
+  propTypes: {
+    ac: React.PropTypes.func
+  },
+
   render: function() {
     return (
-      <div>
-        React Start Kit
-      </div>
+      <DocumentTitle title='CSViz'>
+        <div>
+          <Header />
+          <this.props.activeRouteHandler />
+        </div>
+      </DocumentTitle>
     )
   }
 })
