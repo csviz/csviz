@@ -14,7 +14,7 @@ var MapControls = React.createClass({
 
   render: function() {
     return (
-      <div>
+      <div className='sidebar'>
         <ControlHeader />
         <IndicatorSelector />
         <IndicatorDescription />

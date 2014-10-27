@@ -5,7 +5,7 @@ var API = require('../utils/API');
 var ActionTypes = require('../constants/ActionTypes');
 
 var MapActionCreators = {
-  requestCSV: function() {
+  requestCSV() {
     AppDispatcher.handleViewAction({
       type: ActionTypes.REQUEST_CSV
     })
@@ -13,7 +13,7 @@ var MapActionCreators = {
     API.csv()
   },
 
-  requestGEO: function() {
+  requestGEO() {
     AppDispatcher.handleViewAction({
       type: ActionTypes.REQUEST_GEO
     })

@@ -5,7 +5,7 @@ var copyProperties = require('react/lib/copyProperties');
 var PayloadSources = require('../constants/PayloadSources');
 
 var AppDispatcher = copyProperties(new Dispatcher(), {
-  handleServerAction(action) {
+  handleServerAction: function(action) {
     if (!action.type) {
       throw new Error('Empty action.type: you likely mistyped the action.')
     }
@@ -16,7 +16,7 @@ var AppDispatcher = copyProperties(new Dispatcher(), {
     });
   },
 
-  handleViewAction(action) {
+  handleViewAction: function(action) {
     if (!action.type) {
       throw new Error('Empty action.type: you likely mistyped the action.')
     }

@@ -12,3 +12,5 @@ node_modules
 
 # this is only used for development
 meta.json
+
+build

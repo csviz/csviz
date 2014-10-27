@@ -4,14 +4,14 @@ var AppDispatcher = require('../dispatcher/AppDispatcher');
 var ActionTypes = require('../constants/ActionTypes');
 
 var MapServerActionCreators = {
-  handleGEOSuccess(response) {
+  handleCSVSuccess: function(response) {
     AppDispatcher.handleServerAction({
       type: ActionTypes.REQUEST_CSV_SUCCESS,
       response: response
     })
   },
 
-  handleCSVError(err) {
+  handleCSVError: function(err) {
     console.log(err);
 
     AppDispatcher.handleServerAction({
@@ -19,20 +19,20 @@ var MapServerActionCreators = {
     })
   },
 
-  handleGEOSuccess(response) {
+  handleGEOSuccess: function(response) {
     AppDispatcher.handleServerAction({
       type: ActionTypes.REQUEST_GEO_SUCCESS,
       response: response
     })
   },
 
-  handleGEOError(err) {
+  handleGEOError: function(err) {
     console.log(err);
 
     AppDispatcher.handleServerAction({
       type: ActionTypes.REQUEST_GEO_ERROR
     })
-  },
+  }
 }
 
 module.exports = MapServerActionCreators;

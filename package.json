@@ -4,11 +4,11 @@
   "description": "Simple geo data viz for CSV files",
   "main": "main.js",
   "scripts": {
-    "build-js": "browserify main.js -t [ reactify --everything ] | uglifyjs -mc > build/bundle.js",
-    "build-css": "cat css/*.css > build/bundle.css",
+    "build-js": "browserify main.js -t [ reactify --everything --harmony ] | uglifyjs -mc > build/bundle.js",
+    "build-css": "node-sass sass/main.scss build/bundle.css",
     "build": "npm run build-js && npm run build-css",
-    "watch-js": "watchify main.js -t [ reactify --everything ] -o build/bundle.js -dv",
-    "watch-css": "catw css/*.css -o build/bundle.css -v",
+    "watch-js": "watchify main.js -t [ reactify --everything --harmony ] -o build/bundle.js -dv",
+    "watch-css": "catw sass/*.scss -o build/bundle.css -v",
     "watch": "npm run watch-js & npm run watch-css"
   },
   "repository": {
@@ -23,13 +23,17 @@
   "homepage": "https://github.com/csviz/csviz",
   "dependencies": {
     "flux": "^2.0.1",
+    "lodash": "^2.4.1",
+    "mapbox.js": "^2.1.4",
     "react": "^0.11.2",
     "react-document-title": "^0.1.2",
     "react-router": "^0.9.4",
+    "topojson": "^1.6.18",
     "xhr": "^1.17.0"
   },
   "devDependencies": {
     "catw": "^0.2.0",
+    "node-sass": "^1.0.3",
     "reactify": "^0.14.0",
     "watchify": "^2.1.0"
   }
