@@ -1,8 +1,8 @@
 {
   "name": "CSViz",
   "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Simple geo data viz for CSV files",
+  "main": "main.js",
   "scripts": {
     "build-js": "browserify main.js -t [ reactify --everything ] | uglifyjs -mc > build/bundle.js",
     "build-css": "cat css/*.css > build/bundle.css",
@@ -13,19 +13,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Wiredcraft/CSViz.git"
+    "url": "https://github.com/csviz/csviz.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Wiredcraft/CSViz/issues"
+    "url": "https://github.com/csviz/csviz/issues"
   },
-  "homepage": "https://github.com/Wiredcraft/CSViz",
+  "homepage": "https://github.com/csviz/csviz",
   "dependencies": {
     "flux": "^2.0.1",
     "react": "^0.11.2",
     "react-document-title": "^0.1.2",
-    "react-router": "^0.9.4"
+    "react-router": "^0.9.4",
+    "xhr": "^1.17.0"
   },
   "devDependencies": {
     "catw": "^0.2.0",
