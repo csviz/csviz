@@ -1,22 +1,17 @@
 body {
-  margin: 10px auto;
-}
+  margin: 10px auto; }
 
 .main {
   width: 60%;
   margin: 0;
   padding: 0;
   display: inline-block;
-  height: 100%;
-}
-
-#map {
-  height: 500px;
-}
+  position: relative; }
+  .main #map {
+    height: 500px; }
 
 .sidebar {
   width: 40%;
   margin: 0;
   padding: 0;
-  display: inline-block;
-}
+  display: inline-block; }
