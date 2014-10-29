@@ -13,6 +13,7 @@ var Graph = React.createClass({
   render: function() {
     return (
       <div classNama='graph-group'>
+        Average
         <Gauge />
         <LineChart />
       </div>
