@@ -7,8 +7,18 @@ var MapServerActionCreators = require('../actions/MapServerActionCreators')
 // configs
 // var config = require('../config.json')
 var geoUrl = '../data/alternative_country_topo.json'
+var configUrl = '../data/configuration.json'
 
 var API = {
+  config() {
+    xhr({ responseType: 'json', url: configUrl, timeout: 100 * 1000}, function(err, resp, data) {
+      if (err) {
+        return MapServerActionCreators.handleCONFIGError(err)
+      }
+      MapServerActionCreators.handleCONFIGSuccess(data)
+    })
+  },
+
   csv(csv, cb) {
     xhr({ responseType: 'arraybuffer', url: csv, timeout: 100 * 1000}, cb)
   },
