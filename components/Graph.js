@@ -2,7 +2,9 @@
  * @jsx React.DOM
  */
 
-var React = require('react');
+var React = require('react')
+var Gauge = require('./Graph/Gauge')
+var LineChart = require('./Graph/LineChart')
 
 var Graph = React.createClass({
 
@@ -10,8 +12,9 @@ var Graph = React.createClass({
 
   render: function() {
     return (
-      <div>
-        Graph Component
+      <div classNama='graph-group'>
+        <Gauge />
+        <LineChart />
       </div>
     );
   }

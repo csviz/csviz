@@ -26,15 +26,21 @@ var MapPage = React.createClass({
     }
   },
 
-  componentWillMount: function() {
+  componentDidMount: function() {
     MapActionCreators.requestGEO()
+  },
+
+  componentWillReceiveProps: function(nextProps) {
+    if (nextProps !== this.props) {
+      MapActionCreators.requestGEO()
+    }
   },
 
   render: function() {
     return (
       <DocumentTitle title='Map'>
         <div className='container'>
-          <Map />
+          <Map geo={this.state.geo_data} />
           <MapControls />
         </div>
       </DocumentTitle>

@@ -16,19 +16,30 @@ var Map = React.createClass({
 
   displayName: 'MapComponent',
 
-  getInitialState: function() {
+  getInitialState() {
     return {
       map: {}
     };
   },
 
-  componentDidMount: function() {
+  componentDidMount() {
     L.mapbox.accessToken = config.token
     var map = L.mapbox.map('map', config.type).setView(config.location, config.zoomlevel)
     this.setState({map: map})
   },
 
-  render: function() {
+  updateChoropleth() {
+    var map = this.state.map;
+
+    // clean existing layer
+    if (map && map.choropleth) {
+      map.choropleth._layers.forEach(function(layer) {
+        map.removeLayer(layer)
+      })
+    }
+  },
+
+  render() {
     return (
       <div className='main'>
         <div id='map'></div>

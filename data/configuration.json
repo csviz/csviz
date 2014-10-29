@@ -1,0 +1,16 @@
+{
+  "site": {
+    "name": "CSViz",
+    "description": "WiredViz is visualizatoin of data from Wiredcraft",
+    "logo": "http://wiredcraft.com/logo.png",
+    "url": "http://wiredcraft.com"
+  },
+  "ui": {
+    "legend": false,
+    "timeline": false,
+    "about": false,
+    "choropleth_color": 5,
+    "choropleth_start_color": "#ffffff",
+    "choropleth_end_color": "#000000"
+  }
+}

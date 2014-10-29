@@ -4,17 +4,15 @@
   "description": "Simple geo data viz for CSV files",
   "main": "main.js",
   "scripts": {
-    "lib-css": "cat node_modules/mapbox.js/theme/style.css > build/lib.css",
+    "lib-css": "cat node_modules/mapbox.js/theme/style.css node_modules/chartist/libdist/chartist.min.css > build/lib.css",
     "lib-assets": "cp -r node_modules/mapbox.js/theme/images build/",
     "lib": "npm run lib-css && npm run lib-assets",
-
     "build-js": "browserify main.js -t [ reactify --everything --harmony ] | uglifyjs -mc > build/bundle.js",
     "build-css": "node-sass sass/main.scss build/bundle.css",
     "build": "npm run lib && npm run build-js && npm run build-css",
-
     "watch-css": "watchy -w sass -- 'npm run build-css'",
     "watch-js": "watchify main.js -t [ reactify --everything --harmony ] -o build/bundle.js -dv",
-    "watch": "npm run watch-js & npm run watch-css"
+    "watch": "npm run lib && npm run watch-js & npm run watch-css"
   },
   "repository": {
     "type": "git",
@@ -27,6 +25,7 @@
   },
   "homepage": "https://github.com/csviz/csviz",
   "dependencies": {
+    "chartist": "^0.3.1",
     "flux": "^2.0.1",
     "lodash": "^2.4.1",
     "mapbox.js": "^2.1.4",

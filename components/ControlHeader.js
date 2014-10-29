@@ -10,8 +10,9 @@ var ControlHeader = React.createClass({
 
   render: function() {
     return (
-      <div>
-        Control Header Component
+      <div className='control-header'>
+        <img src='../assets/images/logo.png' />
+        <a href='http://csviz.org'>CSViz</a>
       </div>
     );
   }
