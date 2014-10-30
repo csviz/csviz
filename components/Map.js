@@ -41,7 +41,7 @@ var Map = React.createClass({
 
   render() {
     return (
-      <div className='main'>
+      <div className='main card'>
         <div id='map'></div>
       </div>
     )

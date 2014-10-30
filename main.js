@@ -21,9 +21,6 @@ var DataPage = require('./pages/Data')
 var MapPage = require('./pages/Map')
 var NotFound = require('./pages/NotFound')
 
-// Components
-var Header = require('./components/Header')
-
 var App = React.createClass({
 
   displayName: 'App',
@@ -52,7 +49,6 @@ var App = React.createClass({
     return (
       <DocumentTitle title='CSViz'>
         <div>
-          <Header configs={this.state.config} />
           <this.props.activeRouteHandler />
         </div>
       </DocumentTitle>

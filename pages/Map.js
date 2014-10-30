@@ -8,6 +8,7 @@ var createStoreMixin = require('../mixins/createStoreMixin')
 
 var GEOStore = require('../stores/GEOStore')
 var INDICATORStore = require('../stores/INDICATORStore')
+var CONFIGStore = require('../stores/CONFIGStore')
 var MapActionCreators = require('../actions/MapActionCreators')
 
 var Map = require('../components/Map')
@@ -17,15 +18,17 @@ var MapPage = React.createClass({
 
   displayName: 'MapPage',
 
-  mixins: [createStoreMixin(GEOStore, INDICATORStore)],
+  mixins: [createStoreMixin(GEOStore, INDICATORStore, CONFIGStore)],
 
   getStateFromStores: function() {
     var geo_data = GEOStore.get()
     var indicator_data = INDICATORStore.get()
+    var config_data = CONFIGStore.get()
 
     return {
-      geo_data: geo_data,
-      indicator_data: indicator_data
+      geo: geo_data,
+      configs: config_data,
+      indicators: indicator_data
     }
   },
 
@@ -34,12 +37,13 @@ var MapPage = React.createClass({
     MapActionCreators.requestIndicator()
   },
 
+
   render: function() {
     return (
       <DocumentTitle title='Map'>
         <div className='container'>
           <Map geo={this.state.geo_data} />
-          <MapControls />
+          <MapControls configs={this.state.configs} />
         </div>
       </DocumentTitle>
     )

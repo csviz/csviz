@@ -36,7 +36,7 @@ var Graph = React.createClass({
     }
 
     return (
-      <div classNama='graph-group'>
+      <div className='graph-group card'>
         Average
         <Chartist type={'Pie'} data={gaugeData} options={gaugeOptions}/>
         <Chartist type={'Line'} data={lineChartData} options={lineChartOptions}/>

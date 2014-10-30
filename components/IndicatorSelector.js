@@ -10,7 +10,7 @@ var IndicatorSelector = React.createClass({
 
   render: function() {
     return (
-      <div>
+      <div className='card'>
         Indicator Selector Component
       </div>
     );

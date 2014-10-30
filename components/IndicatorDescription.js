@@ -10,7 +10,7 @@ var IndicatorDescription = React.createClass({
 
   render: function() {
     return (
-      <div>
+      <div className='card'>
         Indicator Description Component
       </div>
     );

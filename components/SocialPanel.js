@@ -37,7 +37,7 @@ var SocialPanel = React.createClass({
 
   render() {
     return (
-      <div className='social-panel'>
+      <div className='social-panel card'>
         <Modal
           visible={this.state.shareModalOpen}
           onShow={this.onModalShow}
@@ -49,7 +49,7 @@ var SocialPanel = React.createClass({
 
           <p>Just copy and paste the URL below to share your visualization.</p>
 
-          <textarea value='http://datahub.globalpartnership.org/#/2010/domestic_and_external_financing/public_expenditure_on_education_as_a_share_of_public_expenditure'></textarea>
+          <textarea defaultValue='http://datahub.globalpartnership.org/#/2010/domestic_and_external_financing/public_expenditure_on_education_as_a_share_of_public_expenditure'></textarea>
 
           <a href='https://twitter.com'>Twitter</a>
           <a href='https://facebook.com'>Facebook</a>

@@ -12,10 +12,12 @@ var Graph = require('./Graph')
 
 var MapControls = React.createClass({
 
-  render: function() {
+  displayName: 'MapControls',
+
+  render() {
     return (
       <div className='sidebar'>
-        <ControlHeader />
+        <ControlHeader configs={this.props.configs} />
         <IndicatorSelector />
         <IndicatorDescription />
         <SocialPanel />
