@@ -6,7 +6,7 @@ var MapServerActionCreators = require('../actions/MapServerActionCreators')
 
 var geoUrl = '../data/alternative_country_topo.json'
 var configUrl = '../data/configuration.json'
-var indicatorUrl = '../data/indicators.json'
+var globalUrl = '../data/global.json'
 
 var API = {
   config() {
@@ -18,8 +18,8 @@ var API = {
     })
   },
 
-  indicator() {
-    xhr({ responseType: 'json', url: indicatorUrl, timeout: 100 * 1000}, function(err, resp, data) {
+  global() {
+    xhr({ responseType: 'json', url: globalUrl, timeout: 100 * 1000}, function(err, resp, data) {
       if (err) {
         return MapServerActionCreators.handleINDICATORError(err)
       }

@@ -13,12 +13,12 @@ var MapActionCreators = {
     API.config()
   },
 
-  requestIndicator() {
+  requestGlobal() {
     AppDispatcher.handleViewAction({
       type: ActionTypes.REQUEST_INDICATOR
     })
 
-    API.indicator()
+    API.global()
   },
 
   requestGEO() {
@@ -27,6 +27,13 @@ var MapActionCreators = {
     })
 
     API.geo()
+  },
+
+  changeIndicator(indicator) {
+    AppDispatcher.handleViewAction({
+      type: ActionTypes.CHANGE_INDICATOR,
+      response: indicator
+    })
   }
 }
 
