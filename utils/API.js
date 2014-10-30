@@ -4,10 +4,9 @@ var xhr = require('xhr')
 var topojson = require('topojson')
 var MapServerActionCreators = require('../actions/MapServerActionCreators')
 
-// configs
-// var config = require('../config.json')
 var geoUrl = '../data/alternative_country_topo.json'
 var configUrl = '../data/configuration.json'
+var indicatorUrl = '../data/indicators.json'
 
 var API = {
   config() {
@@ -19,8 +18,13 @@ var API = {
     })
   },
 
-  csv(csv, cb) {
-    xhr({ responseType: 'arraybuffer', url: csv, timeout: 100 * 1000}, cb)
+  indicator() {
+    xhr({ responseType: 'json', url: indicatorUrl, timeout: 100 * 1000}, function(err, resp, data) {
+      if (err) {
+        return MapServerActionCreators.handleINDICATORError(err)
+      }
+      MapServerActionCreators.handleINDICATORSuccess(data)
+    })
   },
 
   geo() {

@@ -2,12 +2,12 @@
  * @jsx React.DOM
  */
 
-var React = require('react');
-var DocumentTitle = require('react-document-title');
-var createStoreMixin = require('../mixins/createStoreMixin');
+var React = require('react')
+var DocumentTitle = require('react-document-title')
+var createStoreMixin = require('../mixins/createStoreMixin')
 
 var GEOStore = require('../stores/GEOStore')
-var CONFIGStore = require('../stores/CONFIGStore')
+var INDICATORStore = require('../stores/INDICATORStore')
 var MapActionCreators = require('../actions/MapActionCreators')
 
 var Map = require('../components/Map')
@@ -17,28 +17,21 @@ var MapPage = React.createClass({
 
   displayName: 'MapPage',
 
-  mixins: [createStoreMixin(GEOStore, CONFIGStore)],
+  mixins: [createStoreMixin(GEOStore, INDICATORStore)],
 
   getStateFromStores: function() {
     var geo_data = GEOStore.get()
-    var config_data = CONFIGStore.get()
+    var indicator_data = INDICATORStore.get()
 
     return {
       geo_data: geo_data,
-      config_data: config_data
+      indicator_data: indicator_data
     }
   },
 
   componentDidMount: function() {
     MapActionCreators.requestGEO()
-    MapActionCreators.requestConfig()
-  },
-
-  componentWillReceiveProps: function(nextProps) {
-    if (nextProps !== this.props) {
-      MapActionCreators.requestGEO()
-      MapActionCreators.requestConfig()
-    }
+    MapActionCreators.requestIndicator()
   },
 
   render: function() {
@@ -49,9 +42,9 @@ var MapPage = React.createClass({
           <MapControls />
         </div>
       </DocumentTitle>
-    );
+    )
   }
 
-});
+})
 
-module.exports = MapPage;
+module.exports = MapPage

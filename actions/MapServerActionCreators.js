@@ -4,6 +4,8 @@ var AppDispatcher = require('../dispatcher/AppDispatcher');
 var ActionTypes = require('../constants/ActionTypes');
 
 var MapServerActionCreators = {
+
+  // configuration
   handleCONFIGSuccess(response) {
     AppDispatcher.handleServerAction({
       type: ActionTypes.REQUEST_CONFIG_SUCCESS,
@@ -19,21 +21,23 @@ var MapServerActionCreators = {
     })
   },
 
-  handleCSVSuccess(response) {
+  // indicator data
+  handleINDICATORSuccess(response) {
     AppDispatcher.handleServerAction({
-      type: ActionTypes.REQUEST_CSV_SUCCESS,
+      type: ActionTypes.REQUEST_INDICATOR_SUCCESS,
       response: response
     })
   },
 
-  handleCSVError(err) {
+  handleINDICATORError(err) {
     console.log(err);
 
     AppDispatcher.handleServerAction({
-      type: ActionTypes.REQUEST_CSV_ERROR
+      type: ActionTypes.REQUEST_INDICATOR_ERROR
     })
   },
 
+  // geo data
   handleGEOSuccess(response) {
     AppDispatcher.handleServerAction({
       type: ActionTypes.REQUEST_GEO_SUCCESS,

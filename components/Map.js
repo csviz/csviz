@@ -19,7 +19,7 @@ var Map = React.createClass({
   getInitialState() {
     return {
       map: {}
-    };
+    }
   },
 
   componentDidMount() {
@@ -29,7 +29,7 @@ var Map = React.createClass({
   },
 
   updateChoropleth() {
-    var map = this.state.map;
+    var map = this.state.map
 
     // clean existing layer
     if (map && map.choropleth) {
@@ -44,9 +44,9 @@ var Map = React.createClass({
       <div className='main'>
         <div id='map'></div>
       </div>
-    );
+    )
   }
 
-});
+})
 
-module.exports = Map;
+module.exports = Map

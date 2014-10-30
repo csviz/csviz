@@ -2,7 +2,7 @@
   "site": {
     "name": "CSViz",
     "description": "WiredViz is visualizatoin of data from Wiredcraft",
-    "logo": "http://wiredcraft.com/logo.png",
+    "logo": "../assets/images/logo.png",
     "url": "http://wiredcraft.com"
   },
   "ui": {

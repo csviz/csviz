@@ -1,8 +1,8 @@
-'use strict';
+'use strict'
 
-var AppDispatcher = require('../dispatcher/AppDispatcher');
-var API = require('../utils/API');
-var ActionTypes = require('../constants/ActionTypes');
+var AppDispatcher = require('../dispatcher/AppDispatcher')
+var API = require('../utils/API')
+var ActionTypes = require('../constants/ActionTypes')
 
 var MapActionCreators = {
   requestConfig() {
@@ -13,12 +13,12 @@ var MapActionCreators = {
     API.config()
   },
 
-  requestCSV() {
+  requestIndicator() {
     AppDispatcher.handleViewAction({
-      type: ActionTypes.REQUEST_CSV
+      type: ActionTypes.REQUEST_INDICATOR
     })
 
-    API.csv()
+    API.indicator()
   },
 
   requestGEO() {
@@ -30,4 +30,4 @@ var MapActionCreators = {
   }
 }
 
-module.exports = MapActionCreators;
+module.exports = MapActionCreators

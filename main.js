@@ -1,10 +1,13 @@
 /** @jsx React.DOM */
-
-'use strict';
+'use strict'
 
 var React = require('react')
 var Router = require('react-router')
 var DocumentTitle = require('react-document-title')
+var createStoreMixin = require('./mixins/createStoreMixin')
+var MapActionCreators = require('./actions/MapActionCreators')
+
+var CONFIGStore = require('./stores/CONFIGStore')
 
 // Router
 var DefaultRoute = Router.DefaultRoute
@@ -25,15 +28,31 @@ var App = React.createClass({
 
   displayName: 'App',
 
-  propTypes: {
-    ac: React.PropTypes.func
+  mixins: [createStoreMixin(CONFIGStore)],
+
+  getStateFromStores() {
+    var config_data = CONFIGStore.get()
+
+    return {
+      config: config_data
+    }
   },
 
-  render: function() {
+  componentDidMount() {
+    MapActionCreators.requestConfig()
+  },
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps !== this.props) {
+      MapActionCreators.requestConfig()
+    }
+  },
+
+  render() {
     return (
       <DocumentTitle title='CSViz'>
         <div>
-          <Header />
+          <Header configs={this.state.config} />
           <this.props.activeRouteHandler />
         </div>
       </DocumentTitle>
@@ -54,7 +73,7 @@ var routes = (
 
 if ('production' !== process.env.NODE_ENV) {
   // Enable React devtools
-  window['React'] = React;
+  window['React'] = React
 }
 
 React.renderComponent(routes, document.body)
