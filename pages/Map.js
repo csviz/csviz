@@ -35,14 +35,14 @@ var MapPage = React.createClass({
   componentDidMount: function() {
     MapActionCreators.requestGEO()
     MapActionCreators.requestGlobal()
+    MapActionCreators.requestConfig()
   },
-
 
   render: function() {
     return (
       <DocumentTitle title='Map'>
         <div className='container'>
-          <Map geo={this.state.geo_data} />
+          <Map geo={this.state.geo} globals={this.state.globals} />
           <MapControls configs={this.state.configs} />
         </div>
       </DocumentTitle>
