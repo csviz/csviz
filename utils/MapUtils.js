@@ -6,7 +6,24 @@ var COLOR_COUNT = 6
 
 var MapUtils = {
 
-  getColor(value, ranges){
+  getCarColor(configs, value, selected_indicator) {
+    return configs.indicators[selected_indicator].options[value].color
+  },
+
+  getDepressedColor(d) {
+    console.log('d', d)
+    return d > 1000 ? '#8c2d04' :
+      d > 500  ? '#cc4c02' :
+      d > 200  ? '#ec7014' :
+      d > 100  ? '#fe9929' :
+      d > 50   ? '#fec44f' :
+      d > 20   ? '#fee391' :
+      d > 10   ? '#fff7bc' :
+      '#ffffe5'
+  },
+
+  getPovertyColor(value, indicators, selected_indicator){
+    var ranges = MapUtils.getPovertyRanges(indicators, selected_indicator)
     if (!value) return 'rgba(0,0,0,.0)'
     if (value >= ranges.ranges[5]) return 'rgba(7,42,96,.6)'
     if (value >= ranges.ranges[4]) return 'rgba(27,63,116,.6)'
@@ -16,7 +33,7 @@ var MapUtils = {
     return 'rgba(156,183,217,.6)'
   },
 
-  getRanges(indicators, selected_indicator) {
+  getPovertyRanges(indicators, selected_indicator) {
     var values = Object.keys(indicators)
     .map(function(country) {
       if (indicators[country][selected_indicator]) return indicators[country][selected_indicator]

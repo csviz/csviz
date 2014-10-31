@@ -44,6 +44,7 @@ var Map = React.createClass({
     var shapes = this.props.geo
     var selected_indicator = GLOBALStore.getSelectedIndicator()
     var indicators = this.props.globals.data.locations
+    var configs = this.props.configs
 
     // clean up existing layers
     if (this.state.countryLayer && this.state.countryLayer._layers !== undefined) {
@@ -68,16 +69,26 @@ var Map = React.createClass({
       var value
       var countryName = feature.properties['ISO_NAME']
 
-      if (countryName) {
-        if (countryName.toLowerCase() in indicators) {
-          value = indicators[countryName.toLowerCase()][selected_indicator]
-        }
+      if (countryName && countryName.toLowerCase() in indicators) {
+        value = indicators[countryName.toLowerCase()][selected_indicator]
       } else {
         console.log('No name', feature)
       }
 
-      var ranges = MapUtils.getRanges(indicators, selected_indicator)
-      var color = MapUtils.getColor(value, ranges)
+      switch(selected_indicator) {
+        case 'poverty':
+          var color = MapUtils.getPovertyColor(value, indicators, selected_indicator)
+          break
+
+        case 'car_color':
+          var color = MapUtils.getCarColor(configs, value, selected_indicator)
+          break
+
+        case 'depressed':
+          var color = MapUtils.getDepressedColor(value)
+          break
+      }
+
       return {
           weight: 0.0,
           opacity: 1,
