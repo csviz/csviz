@@ -18,8 +18,7 @@ var MapControls = React.createClass({
     return (
       <div className='sidebar'>
         <ControlHeader configs={this.props.configs} />
-        <IndicatorSelector />
-        <IndicatorDescription />
+        <IndicatorSelector configs={this.props.configs} />
         <SocialPanel />
         <Graph />
       </div>

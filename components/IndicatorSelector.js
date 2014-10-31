@@ -29,8 +29,25 @@ var IndicatorSelector = React.createClass({
   },
 
   render() {
-    var meta = this.state.globals.meta || {}
-    var indicators = meta.indicators || {}
+    var options, indicatorDescription
+    if (this.props.configs && this.props.configs.indicators) {
+      var indicators = this.props.configs.indicators
+      options = Object.keys(indicators)
+        .filter(function(key) {
+          return indicators[key].name
+        })
+        .map(function(key, index) {
+            return <option value={key}>{indicators[key].name}</option>
+        }.bind(this))
+    } else {
+      options = null
+    }
+
+    if (this.props.configs && this.props.configs.indicators && this.state.selected_indicator) {
+      indicatorDescription = this.props.configs.indicators[this.state.selected_indicator].description
+    } else {
+      indicatorDescription = null
+    }
 
     return (
       <div className='card'>
@@ -39,12 +56,12 @@ var IndicatorSelector = React.createClass({
           onChange={this.hanldeSelectChange}
           value={this.state.selected_indicator}
         >
-          {
-            Object.keys(indicators).map(function(key, index) {
-              return <option value={key}>{key}</option>
-            })
-          }
+          {options}
         </SelectBox>
+
+        <div className='description'>
+          {indicatorDescription}
+        </div>
       </div>
     )
   }

@@ -4,9 +4,7 @@
   "description": "Simple geo data viz for CSV files",
   "main": "main.js",
   "scripts": {
-    "lib-css": "cat node_modules/mapbox.js/theme/style.css node_modules/chartist/libdist/chartist.min.css > build/lib.css",
-    "lib-assets": "cp -r node_modules/mapbox.js/theme/images build/",
-    "lib": "npm run lib-css && npm run lib-assets",
+    "lib": "cp -r node_modules/mapbox.js/theme/images build/",
     "build-js": "browserify main.js -t [ reactify --everything --harmony ] | uglifyjs -mc > build/bundle.js",
     "build-css": "node-sass assets/sass/main.scss build/bundle.css",
     "build": "npm run lib && npm run build-js && npm run build-css",

@@ -6,11 +6,58 @@
     "url": "http://wiredcraft.com"
   },
   "ui": {
-    "legend": false,
-    "timeline": false,
-    "about": false,
-    "choropleth_color": 5,
+    "legend": "false",
+    "timeline": "false",
+    "about": "false",
+    "choropleth_color": "5",
     "choropleth_start_color": "#ffffff",
     "choropleth_end_color": "#000000"
+  },
+  "indicators": {
+    "global_growth_numeric": {
+      "type": "hidden"
+    },
+    "poverty": {
+      "name": "Average Poverty",
+      "id": "avg_poverty",
+      "description": "This is the average poverty",
+      "aggregate": "avg",
+      "type": "number",
+      "years": "true"
+    },
+    "car_color": {
+      "name": "Car color",
+      "description": "This is the typical car color",
+      "type": "select",
+      "options": {
+        "red": {
+          "label": "Red",
+          "color": "#FF0000"
+        },
+        "blue": {
+          "label": "Blue",
+          "color": "blue"
+        },
+        "white": {
+          "label": "White",
+          "color": "white"
+        }
+      }
+    },
+    "depressed": {
+      "name": "People are depressed",
+      "description": "This is the typical depressed",
+      "type": "boolean",
+      "options": {
+        "true": {
+          "label": "Depressed",
+          "color": "blue"
+        },
+        "false": {
+          "label": "Happy",
+          "color": "white"
+        }
+      }
+    }
   }
 }

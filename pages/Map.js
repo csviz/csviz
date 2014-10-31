@@ -42,7 +42,7 @@ var MapPage = React.createClass({
     return (
       <DocumentTitle title='Map'>
         <div className='container'>
-          <Map geo={this.state.geo} globals={this.state.globals} />
+          <Map configs={this.state.configs} geo={this.state.geo} globals={this.state.globals} />
           <MapControls configs={this.state.configs} />
         </div>
       </DocumentTitle>
