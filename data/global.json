@@ -34,28 +34,24 @@
   "data": {
     "locations": {
       "finland": {
-        "indicators": {
-          "gdp": {
-            "years": {
-              "2005": 0.4,
-              "2006": 0.3
-            }
-          },
-          "poverty": 1.4,
-          "car_color": "white"
-        }
+        "gdp": {
+          "years": {
+            "2005": 0.4,
+            "2006": 0.3
+          }
+        },
+        "poverty": 1.4,
+        "car_color": "white"
       },
       "china": {
-        "indicators": {
-          "gdp": {
-            "years": {
-              "2005": 2.4,
-              "2006": 2.6
-            }
-          },
-          "poverty": 1.5,
-          "car_color": "blue"
-        }
+        "gdp": {
+          "years": {
+            "2005": 2.4,
+            "2006": 2.6
+          }
+        },
+        "poverty": 1.5,
+        "car_color": "blue"
       }
     }
   }

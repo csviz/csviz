@@ -39,14 +39,14 @@ var IndicatorSelector = React.createClass({
         .map(function(key, index) {
             return <option value={key}>{indicators[key].name}</option>
         }.bind(this))
+
+        if (this.props.configs && this.props.configs.indicators && this.state.selected_indicator) {
+          indicatorDescription = this.props.configs.indicators[this.state.selected_indicator].description
+        } else {
+          indicatorDescription = null
+        }
     } else {
       options = null
-    }
-
-    if (this.props.configs && this.props.configs.indicators && this.state.selected_indicator) {
-      indicatorDescription = this.props.configs.indicators[this.state.selected_indicator].description
-    } else {
-      indicatorDescription = null
     }
 
     return (

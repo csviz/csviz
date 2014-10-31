@@ -92,7 +92,7 @@ var Map = React.createClass({
 
       if (countryName) {
         if (countryName.toLowerCase() in indicators) {
-          value = indicators[countryName.toLowerCase()].indicators[selected_indicator]
+          value = indicators[countryName.toLowerCase()][selected_indicator]
         }
       } else {
         console.log('No name', feature)
@@ -118,9 +118,50 @@ var Map = React.createClass({
       return 'rgba(156,183,217,.6)'
     }
 
+    function onEachFeature(feature, layer) {
+      var closeTooltip
+      var popup = new L.Popup({ autoPan: false })
+
+      layer.on({
+        mousemove: mousemove,
+        mouseout: mouseout,
+        click: zoomToFeature
+      })
+
+      function mousemove(e) {
+        var layer = e.target
+        popup.setLatLng(layer.getBounds().getCenter())
+
+        var value = 'No data'
+        var cname = layer.feature.properties['ISO_NAME'].toLowerCase()
+        if (cname in indicators && indicators[cname][selected_indicator] !== undefined) {
+          value = indicators[cname][selected_indicator]
+        }
+
+        popup.setContent('<div class="marker-title">' + layer.feature.properties['ISO_NAME'] + '</div>' + value)
+
+        if (!popup._map) popup.openOn(map)
+        window.clearTimeout(closeTooltip)
+
+        if (!L.Browser.ie && !L.Browser.opera) {
+          layer.bringToFront()
+        }
+      }
+
+      function mouseout(e) {
+        closeTooltip = window.setTimeout(function() {
+          map.closePopup()
+        }, 100)
+      }
+
+      function zoomToFeature(e) {
+        map.fitBounds(e.target.getBounds())
+      }
+    }
+
     var countryLayer = L.geoJson(filteredShapes, {
       style: getStyle,
-      onEachFeature: MapUtils.onEachFeature
+      onEachFeature: onEachFeature
     }).addTo(map)
 
   },
