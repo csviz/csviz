@@ -1,70 +1,43 @@
 'use strict';
 
-var closeTooltip
+var _ = require('lodash')
+
+var COLOR_COUNT = 6
 
 var MapUtils = {
 
-  getColor(d) {
-    return d > 1000 ? '#8c2d04' :
-      d > 500  ? '#cc4c02' :
-      d > 200  ? '#ec7014' :
-      d > 100  ? '#fe9929' :
-      d > 50   ? '#fec44f' :
-      d > 20   ? '#fee391' :
-      d > 10   ? '#fff7bc' :
-      '#ffffe5';
+  getColor(value, ranges){
+    if (!value) return 'rgba(0,0,0,.0)'
+    if (value >= ranges.ranges[5]) return 'rgba(7,42,96,.6)'
+    if (value >= ranges.ranges[4]) return 'rgba(27,63,116,.6)'
+    if (value >= ranges.ranges[3]) return 'rgba(58,97,153,.6)'
+    if (value >= ranges.ranges[2]) return 'rgba(96,128,176,.6)'
+    if (value >= ranges.ranges[1]) return 'rgba(119,153,196,.6)'
+    return 'rgba(156,183,217,.6)'
   },
 
-  getStyle(feature) {
-    return {
-      weight: 2,
-      opacity: 0.1,
-      color: 'black',
-      fillOpacity: 0.7,
-      fillColor: MapUtils.getColor(feature.properties.density)
-    }
-  },
-
-  onEachFeature(feature, layer) {
-    layer.on({
-      mousemove: MapUtils.mousemove,
-      mouseout: MapUtils.mouseout,
-      click: MapUtils.zoomToFeature
+  getRanges(indicators, selected_indicator) {
+    var values = Object.keys(indicators)
+    .map(function(country) {
+      if (indicators[country][selected_indicator]) return indicators[country][selected_indicator]
     })
-  },
+    .filter(function(val) {
+      return (val !== undefined && '' + Number(val) !== 'NaN')
+    })
 
-  mousemove(e) {
-    // var popup = new L.Popup({ autoPan: false})
-    // var layer = e.target
+    var max = _.max(values)
+    var min = _.min(values)
 
-    // popup.setLatLng(e.latlng);
-    // popup.setContent('<div class="marker-title">' + layer.feature.properties.name + '</div>' +
-    //     layer.feature.properties.density + ' people per square mile');
-
-    // if (!popup._map) popup.openOn(map);
-    // window.clearTimeout(closeTooltip);
-
-    // // highlight feature
-    // layer.setStyle({
-    //   weight: 3,
-    //   opacity: 0.3,
-    //   fillOpacity: 0.9
-    // });
-
-    // if (!L.Browser.ie && !L.Browser.opera) {
-    //     layer.bringToFront();
-    // }
-  },
-
-  mouseout(e) {
-    // countryLayer.resetStyle(e.target);
-    // closeTooltip = window.setTimeout(function() {
-    //     map.closePopup();
-    // }, 100);
-  },
-
-  zoomToFeature(e) {
-    // map.fitBounds(e.target.getBounds());
+    var rangePoints = []
+    var step = (max - min) / COLOR_COUNT
+    for (var i = 0; i < COLOR_COUNT; i++) {
+      rangePoints.push(min + i*step)
+    }
+    return {
+      min: min,
+      max: max,
+      ranges: rangePoints
+    }
   }
 }
 
