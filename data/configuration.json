@@ -46,6 +46,10 @@
         "white": {
           "label": "White",
           "color": "white"
+        },
+        "green": {
+          "label": "Green",
+          "color": "green"
         }
       }
     },
