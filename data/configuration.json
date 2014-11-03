@@ -11,7 +11,11 @@
     "about": "false",
     "choropleth_color": "5",
     "choropleth_start_color": "#ffffff",
-    "choropleth_end_color": "#000000"
+    "choropleth_end_color": "#000000",
+    "menu": {
+      "Financial": ["poverty"],
+      "Other": ["car_color", "depressed"]
+    }
   },
   "indicators": {
     "global_growth_numeric": {
@@ -22,6 +26,7 @@
       "id": "avg_poverty",
       "description": "This is the average poverty",
       "aggregate": "avg",
+      "precision": "1",
       "type": "number",
       "years": "true"
     },
