@@ -4,12 +4,16 @@
 
 var React = require('react')
 var Chartist = require('react-chartist')
+var GLOBALStore = require('../stores/GLOBALStore')
 
 var Graph = React.createClass({
 
   displayName: 'Graph',
 
   render: function() {
+
+    // var selected_indicator = GLOBALStore.getSelectedIndicator()
+    // var indicators = this.props.globals.data.locations
 
     var gaugeData = {
       series: [20, 10, 30, 40]
@@ -35,7 +39,7 @@ var Graph = React.createClass({
       low: -10,
       axisX: {
         labelInterpolationFnc: function(value, index) {
-          return index % 2 === 0 ? value : null
+          return index % 2 === 0 ? value : null;
         }
       }
     }
@@ -54,7 +58,6 @@ var Graph = React.createClass({
 
     return (
       <div className='graph-group card'>
-        Average
         <Chartist type={'Pie'} data={gaugeData} options={gaugeOptions} />
         <Chartist type={'Bar'} data={barChartData} options={barChartOptions} />
         <Chartist type={'Line'} data={lineChartData} options={lineChartOptions} />
