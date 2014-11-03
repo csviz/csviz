@@ -11,7 +11,6 @@ var MapUtils = {
   },
 
   getDepressedColor(d) {
-    console.log('d', d)
     return d > 1000 ? '#8c2d04' :
       d > 500  ? '#cc4c02' :
       d > 200  ? '#ec7014' :
