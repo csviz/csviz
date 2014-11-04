@@ -1,8 +1,8 @@
-'use strict';
+'use strict'
 
-var Dispatcher = require('flux').Dispatcher;
-var copyProperties = require('react/lib/copyProperties');
-var PayloadSources = require('../constants/PayloadSources');
+var Dispatcher = require('flux').Dispatcher
+var copyProperties = require('react/lib/copyProperties')
+var PayloadSources = require('../constants/PayloadSources')
 
 var AppDispatcher = copyProperties(new Dispatcher(), {
   handleServerAction: function(action) {
@@ -13,7 +13,7 @@ var AppDispatcher = copyProperties(new Dispatcher(), {
     this.dispatch({
       source: PayloadSources.SERVER_ACTION,
       action: action
-    });
+    })
   },
 
   handleViewAction: function(action) {
@@ -27,6 +27,6 @@ var AppDispatcher = copyProperties(new Dispatcher(), {
     })
   }
 
-});
+})
 
-module.exports = AppDispatcher;
+module.exports = AppDispatcher

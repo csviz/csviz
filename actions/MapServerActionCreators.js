@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-var AppDispatcher = require('../dispatcher/AppDispatcher');
-var ActionTypes = require('../constants/ActionTypes');
+var AppDispatcher = require('../dispatcher/AppDispatcher')
+var ActionTypes = require('../constants/ActionTypes')
 
 var MapServerActionCreators = {
 
@@ -14,7 +14,7 @@ var MapServerActionCreators = {
   },
 
   handleCONFIGError(err) {
-    console.log(err);
+    console.log(err)
 
     AppDispatcher.handleServerAction({
       type: ActionTypes.REQUEST_CONFIG_ERROR
@@ -30,7 +30,7 @@ var MapServerActionCreators = {
   },
 
   handleINDICATORError(err) {
-    console.log(err);
+    console.log(err)
 
     AppDispatcher.handleServerAction({
       type: ActionTypes.REQUEST_INDICATOR_ERROR
@@ -46,7 +46,7 @@ var MapServerActionCreators = {
   },
 
   handleGEOError(err) {
-    console.log(err);
+    console.log(err)
 
     AppDispatcher.handleServerAction({
       type: ActionTypes.REQUEST_GEO_ERROR
@@ -54,4 +54,4 @@ var MapServerActionCreators = {
   }
 }
 
-module.exports = MapServerActionCreators;
+module.exports = MapServerActionCreators

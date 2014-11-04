@@ -1,9 +1,7 @@
-/**
- * @jsx React.DOM
- */
+'use strict'
 
-var React = require('react');
-var DocumentTitle = require('react-document-title');
+var React = require('react')
+var DocumentTitle = require('react-document-title')
 
 var DataPage = React.createClass({
 
@@ -14,9 +12,9 @@ var DataPage = React.createClass({
           DataPage
         </div>
       </DocumentTitle>
-    );
+    )
   }
 
-});
+})
 
-module.exports = DataPage;
+module.exports = DataPage

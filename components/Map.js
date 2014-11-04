@@ -1,6 +1,4 @@
-/**
- * @jsx React.DOM
- */
+'use strict'
 
 var React = require('react')
 var mapbox = require('mapbox.js')

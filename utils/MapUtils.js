@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 var _ = require('lodash')
 
@@ -57,4 +57,4 @@ var MapUtils = {
   }
 }
 
-module.exports = MapUtils;
+module.exports = MapUtils

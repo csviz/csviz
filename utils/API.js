@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 var axios = require('axios')
 var topojson = require('topojson')

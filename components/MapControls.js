@@ -1,8 +1,6 @@
-/**
- * @jsx React.DOM
- */
+'use strict'
 
-var React = require('react');
+var React = require('react')
 
 var ControlHeader = require('./ControlHeader')
 var IndicatorSelector = require('./IndicatorSelector')
@@ -21,9 +19,9 @@ var MapControls = React.createClass({
         <SocialPanel />
         <Graph configs={this.props.configs} />
       </div>
-    );
+    )
   }
 
-});
+})
 
-module.exports = MapControls;
+module.exports = MapControls

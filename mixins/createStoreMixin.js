@@ -1,33 +1,33 @@
-'use strict';
+'use strict'
 
 function createStoreMixin(...stores) {
   var StoreMixin = {
-    getInitialState: function() {
-      return this.getStateFromStores(this.props);
+    getInitialState() {
+      return this.getStateFromStores(this.props)
     },
 
-    componentDidMount: function() {
+    componentDidMount() {
       stores.forEach(store =>
         store.addChangeListener(this.handleStoresChanged)
-      );
+      )
 
-      this.setState(this.getStateFromStores(this.props));
+      this.setState(this.getStateFromStores(this.props))
     },
 
-    componentWillUnmount: function() {
+    componentWillUnmount() {
       stores.forEach(store =>
         store.removeChangeListener(this.handleStoresChanged)
-      );
+      )
     },
 
-    handleStoresChanged: function() {
+    handleStoresChanged() {
       if (this.isMounted()) {
-        this.setState(this.getStateFromStores(this.props));
+        this.setState(this.getStateFromStores(this.props))
       }
     }
-  };
+  }
 
-  return StoreMixin;
+  return StoreMixin
 }
 
-module.exports = createStoreMixin;
+module.exports = createStoreMixin

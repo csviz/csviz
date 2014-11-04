@@ -1,9 +1,7 @@
-/**
- * @jsx React.DOM
- */
+'use strict'
 
-var React = require('react');
-var DocumentTitle = require('react-document-title');
+var React = require('react')
+var DocumentTitle = require('react-document-title')
 
 var NotFound = React.createClass({
 
@@ -14,9 +12,9 @@ var NotFound = React.createClass({
           Page Not Found!
         </div>
       </DocumentTitle>
-    );
+    )
   }
 
-});
+})
 
-module.exports = NotFound;
+module.exports = NotFound

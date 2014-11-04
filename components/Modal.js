@@ -1,8 +1,6 @@
-/**
- * @jsx React.DOM
- */
+'use strict'
 
-var React = require('react');
+var React = require('react')
 
 var Modal = React.createClass({
   displayName: "Modal",
@@ -10,93 +8,93 @@ var Modal = React.createClass({
   getInitialState: function () {
     return {
       visible: false
-    };
+    }
   },
 
   getDefaultProps: function () {
     return {
       onShow: function(){},
       onHide: function(){}
-    };
+    }
   },
 
   componentWillMount: function () {
-    this.handleBeforeComponentUpdate(this.props);
+    this.handleBeforeComponentUpdate(this.props)
   },
 
   componentWillUnmount: function () {
-    this.__setBodyOverflowVisible(true);
+    this.__setBodyOverflowVisible(true)
   },
 
   componentWillReceiveProps: function (props) {
-    this.handleBeforeComponentUpdate(props);
+    this.handleBeforeComponentUpdate(props)
   },
 
   componentDidMount: function () {
-    this.handleComponentUpdate(this.props, this.getInitialState());
+    this.handleComponentUpdate(this.props, this.getInitialState())
   },
 
   componentDidUpdate: function (prevProps, prevState) {
-    this.handleComponentUpdate(prevProps, prevState);
+    this.handleComponentUpdate(prevProps, prevState)
   },
 
   handleBeforeComponentUpdate: function (props) {
     if (props.hasOwnProperty('visible') && props.visible !== this.state.visible) {
       this.setState({
         visible: props.visible
-      });
+      })
     }
   },
 
   handleComponentUpdate: function (prevProps, prevState) {
     if (prevState.visible !== this.state.visible) {
       if (this.state.visible) {
-        this.props.onShow();
+        this.props.onShow()
       } else {
-        this.props.onHide();
+        this.props.onHide()
       }
-      this.__setBodyOverflowVisible(!this.state.visible);
+      this.__setBodyOverflowVisible(!this.state.visible)
     }
   },
 
   __setBodyOverflowVisible: function (visible) {
     if (!visible) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden'
     } else {
-      document.body.style.overflow = null;
+      document.body.style.overflow = null
     }
   },
 
   handleCloseBtnClick: function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-    this.toggleVisibility();
+    e.preventDefault()
+    e.stopPropagation()
+    this.toggleVisibility()
   },
 
   handleOverlayClick: function (e) {
     if (e.target === this.refs.overlay.getDOMNode()) {
-      e.preventDefault();
-      e.stopPropagation();
-      this.toggleVisibility();
+      e.preventDefault()
+      e.stopPropagation()
+      this.toggleVisibility()
     }
   },
 
   // called from the outside world
   toggleVisibility: function () {
-    var visible = !this.state.visible;
+    var visible = !this.state.visible
     this.setState({
       visible: visible
-    });
+    })
   },
 
   // called from the outside world
   show: function () {
-    this.setState({ visible: true });
+    this.setState({ visible: true })
   },
 
   // called from the outside world
   hide: function () {
-    this.setState({ visible: false });
+    this.setState({ visible: false })
   },
 
   render: function () {
@@ -111,7 +109,7 @@ var Modal = React.createClass({
           onClick: this.handleCloseBtnClick
         }, "×")),
 
-        React.DOM.div({ className: "overlay-content" }, this.props.children)));
+        React.DOM.div({ className: "overlay-content" }, this.props.children)))
   }
 })
 
