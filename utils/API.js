@@ -1,6 +1,6 @@
 'use strict';
 
-var xhr = require('xhr')
+var axios = require('axios')
 var topojson = require('topojson')
 var MapServerActionCreators = require('../actions/MapServerActionCreators')
 
@@ -10,30 +10,33 @@ var globalUrl = '../data/global.json'
 
 var API = {
   config() {
-    xhr({ responseType: 'json', url: configUrl, timeout: 100 * 1000}, function(err, resp, data) {
-      if (err) {
-        return MapServerActionCreators.handleCONFIGError(err)
-      }
-      MapServerActionCreators.handleCONFIGSuccess(data)
-    })
+    axios.get(configUrl).
+      then(function(res) {
+        MapServerActionCreators.handleCONFIGSuccess(res.data)
+      })
+      .catch(function(err) {
+        MapServerActionCreators.handleCONFIGError(err)
+      })
   },
 
   global() {
-    xhr({ responseType: 'json', url: globalUrl, timeout: 100 * 1000}, function(err, resp, data) {
-      if (err) {
-        return MapServerActionCreators.handleINDICATORError(err)
-      }
-      MapServerActionCreators.handleINDICATORSuccess(data)
-    })
+    axios.get(globalUrl).
+      then(function(res) {
+        MapServerActionCreators.handleINDICATORSuccess(res.data)
+      })
+      .catch(function(err) {
+        MapServerActionCreators.handleINDICATORError(err)
+      })
   },
 
   geo() {
-    xhr({ responseType: 'json', url: geoUrl, timeout: 100 * 1000}, function(err, resp, data) {
-      if (err) {
-        return MapServerActionCreators.handleGEOError(err)
-      }
-      MapServerActionCreators.handleGEOSuccess(topojson.feature(data, data.objects['Aqueduct_country']).features)
-    })
+    axios.get(geoUrl).
+      then(function(res) {
+        MapServerActionCreators.handleGEOSuccess(topojson.feature(res.data, res.data.objects['Aqueduct_country']).features)
+      })
+      .catch(function(err) {
+        MapServerActionCreators.handleGEOError(err)
+      })
   }
 }
 

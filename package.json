@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/csviz/csviz",
   "dependencies": {
+    "axios": "^0.4.1",
     "flux": "^2.0.1",
     "lodash": "^2.4.1",
     "mapbox.js": "^2.1.4",
@@ -32,8 +33,7 @@
     "react-document-title": "^0.1.2",
     "react-router": "^0.9.4",
     "react-select-box": "^0.8.1",
-    "topojson": "^1.6.18",
-    "xhr": "^1.17.0"
+    "topojson": "^1.6.18"
   },
   "devDependencies": {
     "catw": "^0.2.0",

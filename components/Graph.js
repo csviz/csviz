@@ -4,7 +4,7 @@
 
 var React = require('react')
 var Chartist = require('react-chartist')
-var GLOBALStore = require('../stores/GLOBALStore')
+// var GLOBALStore = require('../stores/GLOBALStore')
 
 var Graph = React.createClass({
 
@@ -13,7 +13,10 @@ var Graph = React.createClass({
   render: function() {
 
     // var selected_indicator = GLOBALStore.getSelectedIndicator()
-    // var indicators = this.props.globals.data.locations
+    // var globals = GLOBALStore.get()
+    // if (globals && globals.data) {
+    //   var indicators = globals.data.locations
+    // }
 
     var gaugeData = {
       series: [20, 10, 30, 40]
