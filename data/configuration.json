@@ -9,9 +9,11 @@
     "legend": "false",
     "timeline": "false",
     "about": "false",
-    "choropleth_color": "5",
-    "choropleth_start_color": "#ffffff",
-    "choropleth_end_color": "#000000",
+    "choropleth": {
+      "steps": "5",
+      "start": "#ffffff",
+      "end": "#000000"
+    },
     "menu": {
       "Financial": ["poverty"],
       "Other": ["car_color", "depressed"]
@@ -30,42 +32,24 @@
       "type": "number",
       "years": "true"
     },
+    "gdp": {
+      "name": "GDP",
+      "id": "avg_poverty",
+      "description": "This is the gdp",
+      "aggregate": "avg",
+      "precision": "1",
+      "type": "number",
+      "years": "true"
+    },
     "car_color": {
       "name": "Car color",
       "description": "This is the typical car color",
       "type": "select",
-      "options": {
-        "red": {
-          "label": "Red",
-          "color": "#FF0000"
-        },
-        "blue": {
-          "label": "Blue",
-          "color": "blue"
-        },
-        "white": {
-          "label": "White",
-          "color": "white"
-        },
-        "green": {
-          "label": "Green",
-          "color": "green"
-        }
-      }
-    },
-    "depressed": {
-      "name": "People are depressed",
-      "description": "This is the typical depressed",
-      "type": "boolean",
-      "options": {
-        "true": {
-          "label": "Depressed",
-          "color": "blue"
-        },
-        "false": {
-          "label": "Happy",
-          "color": "white"
-        }
+      "mapping": {
+        "Red": 0,
+        "Blue": 30,
+        "White": 60,
+        "Green": 90
       }
     }
   }
