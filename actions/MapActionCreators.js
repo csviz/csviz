@@ -34,6 +34,13 @@ var MapActionCreators = {
       type: ActionTypes.CHANGE_INDICATOR,
       response: indicator
     })
+  },
+
+  changeSelectedYear(year) {
+    AppDispatcher.handleViewAction({
+      type: ActionTypes.CHANGE_SELECTED_YEAR,
+      response: year
+    })
   }
 }
 

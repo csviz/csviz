@@ -6,9 +6,14 @@ var ActionTypes = require('../constants/ActionTypes')
 
 var _global_data = []
 var _selected_indicator = null
+var _selected_year = null
 
 function setSelectedIndicator(indicator) {
   _selected_indicator = indicator
+}
+
+function setSelectedYear(year) {
+  _selected_year = year
 }
 
 var IndicatorStore = createStore({
@@ -18,6 +23,10 @@ var IndicatorStore = createStore({
 
   getSelectedIndicator() {
     return _selected_indicator
+  },
+
+  getSelectedYear() {
+    return _selected_year
   }
 })
 
@@ -33,6 +42,10 @@ IndicatorStore.dispatchToken = AppDispatcher.register(function(payload) {
 
     case ActionTypes.CHANGE_INDICATOR:
       setSelectedIndicator(response)
+      break
+
+    case ActionTypes.CHANGE_SELECTED_YEAR:
+      setSelectedYear(response)
       break
   }
 

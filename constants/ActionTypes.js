@@ -12,6 +12,7 @@ module.exports = KeyMirror({
   REQUEST_INDICATOR_ERROR: null,
 
   CHANGE_INDICATOR: null,
+  CHANGE_SELECTED_YEAR: null,
 
   REQUEST_GEO: null,
   REQUEST_GEO_SUCCESS: null,

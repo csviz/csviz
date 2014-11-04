@@ -12,7 +12,7 @@ var IndicatorSelector = React.createClass({
 
   mixins: [createStoreMixin(GLOBALStore)],
 
-  getStateFromStores: function() {
+  getStateFromStores() {
     var selected_indicator = GLOBALStore.getSelectedIndicator()
     var global_data = GLOBALStore.get()
 

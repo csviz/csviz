@@ -7,7 +7,7 @@ var SocialPanel = React.createClass({
 
   displayName: 'SocialPanel',
 
-  getInitialState: function() {
+  getInitialState() {
     return {
       shareModalOpen: false
     };

@@ -6,7 +6,7 @@ var ControlHeader = React.createClass({
 
   displayName: 'ControlHeader',
 
-  render: function() {
+  render() {
     var site = this.props.configs.site || {}
     return (
       <div className='control-header card'>

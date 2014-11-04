@@ -71,4 +71,4 @@ if ('production' !== process.env.NODE_ENV) {
   window['React'] = React
 }
 
-React.renderComponent(routes, document.body)
+React.render(routes, document.body)

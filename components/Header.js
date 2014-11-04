@@ -6,7 +6,7 @@ var Header = React.createClass({
 
   displayName: 'Header',
 
-  render: function() {
+  render() {
     var site = this.props.configs.site || {}
     return (
       <div className='header'>

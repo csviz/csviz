@@ -8,7 +8,7 @@ var Graph = React.createClass({
 
   displayName: 'Graph',
 
-  render: function() {
+  render() {
 
     // var selected_indicator = GLOBALStore.getSelectedIndicator()
     // var globals = GLOBALStore.get()

@@ -5,40 +5,40 @@ var React = require('react')
 var Modal = React.createClass({
   displayName: "Modal",
 
-  getInitialState: function () {
+  getInitialState () {
     return {
       visible: false
     }
   },
 
-  getDefaultProps: function () {
+  getDefaultProps () {
     return {
-      onShow: function(){},
-      onHide: function(){}
+      onShow(){},
+      onHide(){}
     }
   },
 
-  componentWillMount: function () {
+  componentWillMount () {
     this.handleBeforeComponentUpdate(this.props)
   },
 
-  componentWillUnmount: function () {
+  componentWillUnmount () {
     this.__setBodyOverflowVisible(true)
   },
 
-  componentWillReceiveProps: function (props) {
+  componentWillReceiveProps (props) {
     this.handleBeforeComponentUpdate(props)
   },
 
-  componentDidMount: function () {
+  componentDidMount () {
     this.handleComponentUpdate(this.props, this.getInitialState())
   },
 
-  componentDidUpdate: function (prevProps, prevState) {
+  componentDidUpdate (prevProps, prevState) {
     this.handleComponentUpdate(prevProps, prevState)
   },
 
-  handleBeforeComponentUpdate: function (props) {
+  handleBeforeComponentUpdate (props) {
     if (props.hasOwnProperty('visible') && props.visible !== this.state.visible) {
       this.setState({
         visible: props.visible
@@ -46,7 +46,7 @@ var Modal = React.createClass({
     }
   },
 
-  handleComponentUpdate: function (prevProps, prevState) {
+  handleComponentUpdate (prevProps, prevState) {
     if (prevState.visible !== this.state.visible) {
       if (this.state.visible) {
         this.props.onShow()
@@ -57,7 +57,7 @@ var Modal = React.createClass({
     }
   },
 
-  __setBodyOverflowVisible: function (visible) {
+  __setBodyOverflowVisible (visible) {
     if (!visible) {
       document.body.style.overflow = 'hidden'
     } else {
@@ -65,13 +65,13 @@ var Modal = React.createClass({
     }
   },
 
-  handleCloseBtnClick: function (e) {
+  handleCloseBtnClick (e) {
     e.preventDefault()
     e.stopPropagation()
     this.toggleVisibility()
   },
 
-  handleOverlayClick: function (e) {
+  handleOverlayClick (e) {
     if (e.target === this.refs.overlay.getDOMNode()) {
       e.preventDefault()
       e.stopPropagation()
@@ -80,7 +80,7 @@ var Modal = React.createClass({
   },
 
   // called from the outside world
-  toggleVisibility: function () {
+  toggleVisibility () {
     var visible = !this.state.visible
     this.setState({
       visible: visible
@@ -88,16 +88,16 @@ var Modal = React.createClass({
   },
 
   // called from the outside world
-  show: function () {
+  show () {
     this.setState({ visible: true })
   },
 
   // called from the outside world
-  hide: function () {
+  hide () {
     this.setState({ visible: false })
   },
 
-  render: function () {
+  render () {
     return (
       React.DOM.div({
         className: "overlay"+ (this.state.visible ? "" : " hidden"),

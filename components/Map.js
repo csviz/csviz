@@ -30,7 +30,7 @@ var Map = React.createClass({
     this.setState({map: map})
   },
 
-  componentWillReceiveProps: function(nextProps) {
+  componentWillReceiveProps(nextProps) {
     if (!_.isEmpty(nextProps.geo) && !_.isEmpty(nextProps.globals) && !_.isEmpty(nextProps.configs)) {
       this.updateChoropleth()
     }
@@ -41,8 +41,11 @@ var Map = React.createClass({
 
     var shapes = this.props.geo
     var selected_indicator = GLOBALStore.getSelectedIndicator()
+    var selected_year = GLOBALStore.getSelectedYear()
     var indicators = this.props.globals.data.locations
     var configs = this.props.configs
+
+    if (selected_indicator == undefined) return
 
     // clean up existing layers
     if (this.state.countryLayer && this.state.countryLayer._layers !== undefined) {
@@ -73,18 +76,16 @@ var Map = React.createClass({
         console.log('No name', feature)
       }
 
-      switch(selected_indicator) {
-        case 'poverty':
-          var color = MapUtils.getPovertyColor(value, indicators, selected_indicator)
+      switch(configs.indicators[selected_indicator].type) {
+
+        case 'number':
+          var color = MapUtils.getNumberColor(value, indicators, configs, selected_indicator)
           break
 
-        case 'car_color':
-          var color = MapUtils.getCarColor(configs, value, selected_indicator)
+        case 'select':
+          var color = MapUtils.getSelectColor(value, configs, selected_indicator)
           break
 
-        case 'depressed':
-          var color = MapUtils.getDepressedColor(value)
-          break
       }
 
       return {
