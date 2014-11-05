@@ -32,8 +32,8 @@ var Timeline = React.createClass({
         <ul className='timeline'>
           { this.state.globals.meta ?
               this.state.globals.meta.indicators.gdp.years.map(function(year, key) {
-                return <li value={key} onClick={this.handleYearClick}>{year}</li>
-              }.bind(this)) : null
+                return <li value={key} className={ (year == this.state.selected_year) ? 'active' : null } onClick={this.handleYearClick}>{year}</li>
+              }, this) : null
           }
         </ul>
       </div>

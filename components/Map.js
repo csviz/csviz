@@ -8,7 +8,7 @@ var _ = require('lodash')
 
 var mapbox_config =  {
   "token": "pk.eyJ1IjoiY3N2aXoiLCJhIjoiVVZIejF1ZyJ9.xFS0JJueEKUV7o0bj2IGIA",
-  "type": "csviz.jhoclc79",
+  "type": "examples.map-i86nkdio",
   "location": [32.52, 13.11],
   "zoomlevel": 3
 }
@@ -44,8 +44,6 @@ var Map = React.createClass({
     var selected_year = GLOBALStore.getSelectedYear()
     var indicators = this.props.globals.data.locations
     var configs = this.props.configs
-
-    if (selected_indicator == undefined) return
 
     // clean up existing layers
     if (this.state.countryLayer && this.state.countryLayer._layers !== undefined) {
