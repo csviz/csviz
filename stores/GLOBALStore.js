@@ -38,6 +38,11 @@ IndicatorStore.dispatchToken = AppDispatcher.register(function(payload) {
   switch(payload.action.type) {
     case ActionTypes.REQUEST_INDICATOR_SUCCESS:
       _global_data = response
+
+      // set default indicator and years
+      // get first indicators
+      setSelectedIndicator(Object.keys(response.meta.indicators)[0])
+      setSelectedYear(response.meta.indicators.gdp.years[0])
       break
 
     case ActionTypes.CHANGE_INDICATOR:
