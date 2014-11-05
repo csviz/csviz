@@ -5,10 +5,17 @@ var Rainbow = require('./RainbowVis')
 
 var MapUtils = {
 
-  getNumberColor(value, indicators, configs, selected_indicator) {
+  getNumberColor(value, indicators, configs, selected_indicator, selected_year) {
+    var min, max
 
-    var max = _.max(indicators, function(country) { return country[selected_indicator]})[selected_indicator]
-    var min = _.min(indicators, function(country) { return country[selected_indicator]})[selected_indicator]
+    if (_.isUndefined(selected_year)) {
+      max = _.max(indicators, function(country) { return country[selected_indicator]})[selected_indicator]
+      min = _.min(indicators, function(country) { return country[selected_indicator]})[selected_indicator]
+    } else {
+      max = _.max(indicators, function(country) { return country[selected_indicator].years[selected_year]})[selected_indicator].years[selected_year]
+      min = _.min(indicators, function(country) { return country[selected_indicator].years[selected_year]})[selected_indicator].years[selected_year]
+    }
+
     var start = configs.ui.choropleth.start
     var end = configs.ui.choropleth.end
 

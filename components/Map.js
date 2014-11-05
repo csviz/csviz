@@ -67,7 +67,7 @@ var Map = React.createClass({
     this.setState({countryLayer: countryLayer})
 
     function getStyle(feature) {
-      var value
+      var value, color
       var countryName = feature.properties['ISO_NAME']
 
       if (countryName && countryName.toLowerCase() in indicators) {
@@ -79,11 +79,16 @@ var Map = React.createClass({
       switch(configs.indicators[selected_indicator].type) {
 
         case 'number':
-          var color = MapUtils.getNumberColor(value, indicators, configs, selected_indicator)
+          if (typeof value == 'number') {
+            color = MapUtils.getNumberColor(value, indicators, configs, selected_indicator)
+          } else {
+            // not a number, check years
+            color = MapUtils.getNumberColor(value.years[selected_year], indicators, configs, selected_indicator, selected_year)
+          }
           break
 
         case 'select':
-          var color = MapUtils.getSelectColor(value, configs, selected_indicator)
+          color = MapUtils.getSelectColor(value, configs, selected_indicator)
           break
 
       }
