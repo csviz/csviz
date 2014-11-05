@@ -27,7 +27,7 @@ var MapControls = React.createClass({
           <Timeline /> : null
         }
 
-        <SocialPanel />
+        <SocialPanel configs={this.props.configs} />
 
         { selected_indicator === 'poverty' ?
           <Average /> : null

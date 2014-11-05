@@ -21,10 +21,6 @@ var SocialPanel = React.createClass({
     this.setState({shareModalOpen: !this.state.shareModalOpen})
   },
 
-  download() {
-    console.log('download button clicked')
-  },
-
   onModalShow() {
     // this.toggleShareModal()
   },
@@ -34,6 +30,8 @@ var SocialPanel = React.createClass({
   },
 
   render() {
+    var Download = this.props.configs.data ? <a href={this.props.configs.data.globals} download>Download</a> : null
+
     return (
       <div className='social-panel card'>
         <Modal
@@ -55,7 +53,7 @@ var SocialPanel = React.createClass({
 
 
         <button onClick={this.toggleShareModal}>Share</button>
-        <button onClick={this.download}>Download</button>
+        {Download}
       </div>
     )
   }

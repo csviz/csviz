@@ -19,6 +19,9 @@
       "Other": ["car_color", "depressed"]
     }
   },
+  "data": {
+    "globals": "./data/global.json"
+  },
   "indicators": {
     "global_growth_numeric": {
       "type": "hidden"
