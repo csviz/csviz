@@ -3,11 +3,11 @@
 var React = require('react')
 var mui = require('material-ui')
 var DropDownMenu = mui.DropDownMenu
-
 var SelectBox = require('react-select-box')
 var MapActionCreators = require('../actions/MapActionCreators')
 var GLOBALStore = require('../stores/GLOBALStore')
 var createStoreMixin = require('../mixins/createStoreMixin')
+var _ = require('lodash')
 
 var IndicatorSelector = React.createClass({
 
@@ -30,10 +30,10 @@ var IndicatorSelector = React.createClass({
   },
 
   render() {
-    var menuItems, indicatorDescription
+    var MenuItems, indicatorDescription
     if (this.props.configs && this.props.configs.indicators) {
       var indicators = this.props.configs.indicators
-      menuItems = Object.keys(indicators)
+      var menuItems = Object.keys(indicators)
         .filter(function(key) {
           return indicators[key].name
         })
@@ -47,9 +47,13 @@ var IndicatorSelector = React.createClass({
           indicatorDescription = null
         }
 
-        menuItems = <DropDownMenu onChange={this.hanldeSelectChange} menuItems={menuItems} />
+        // get default selected index
+        var selectedIndex = _.indexOf(Object.keys(indicators).filter(function(key) {
+          return indicators[key].name
+        }), this.state.selected_indicator)
+        MenuItems = <DropDownMenu onChange={this.hanldeSelectChange} selectedIndex={selectedIndex} menuItems={menuItems} />
     } else {
-      menuItems = null
+      MenuItems = null
     }
 
     return (
@@ -59,7 +63,7 @@ var IndicatorSelector = React.createClass({
 
           <div className='selector'>
 
-            {menuItems}
+            {MenuItems}
 
           </div>
 
