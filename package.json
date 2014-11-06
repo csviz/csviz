@@ -36,7 +36,6 @@
     "topojson": "^1.6.18"
   },
   "devDependencies": {
-    "catw": "^0.2.0",
     "node-sass": "^1.0.3",
     "reactify": "^0.15.2",
     "watchify": "^2.1.0",

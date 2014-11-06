@@ -46,6 +46,11 @@ body {
       font-size: 1.6em;
       padding-left: $padding;
     }
+
+    .about {
+      display: inline-block;
+      float: right;
+    }
   }
 }
 
