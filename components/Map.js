@@ -156,8 +156,10 @@ var Map = React.createClass({
 
   render() {
     return (
-      <div className='main card'>
-        <div id='map'></div>
+      <div className='main'>
+        <div className='card map-container'>
+          <div id='map'></div>
+        </div>
       </div>
     )
   }

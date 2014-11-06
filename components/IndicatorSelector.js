@@ -1,6 +1,9 @@
 'use strict'
 
 var React = require('react')
+var mui = require('material-ui')
+var DropDownMenu = mui.DropDownMenu
+
 var SelectBox = require('react-select-box')
 var MapActionCreators = require('../actions/MapActionCreators')
 var GLOBALStore = require('../stores/GLOBALStore')
@@ -22,20 +25,20 @@ var IndicatorSelector = React.createClass({
     }
   },
 
-  hanldeSelectChange(indicator) {
-    MapActionCreators.changeIndicator(indicator)
+  hanldeSelectChange(e, key, menuItem) {
+    MapActionCreators.changeIndicator(menuItem.payload)
   },
 
   render() {
-    var options, indicatorDescription
+    var menuItems, indicatorDescription
     if (this.props.configs && this.props.configs.indicators) {
       var indicators = this.props.configs.indicators
-      options = Object.keys(indicators)
+      menuItems = Object.keys(indicators)
         .filter(function(key) {
           return indicators[key].name
         })
         .map(function(key, index) {
-            return <option value={key}>{indicators[key].name}</option>
+            return { payload: key, text: indicators[key].name }
         }.bind(this))
 
         if (this.props.configs && this.props.configs.indicators && this.state.selected_indicator) {
@@ -44,22 +47,28 @@ var IndicatorSelector = React.createClass({
           indicatorDescription = null
         }
     } else {
-      options = null
+      menuItems = [
+        { payload: '', text: 'No indicator.' }
+      ]
     }
 
     return (
       <div className='card'>
-        <SelectBox
-          label={'Select an indicator'}
-          onChange={this.hanldeSelectChange}
-          value={this.state.selected_indicator}
-        >
-          {options}
-        </SelectBox>
 
-        <div className='description'>
-          {indicatorDescription}
+        <div className='selector-box'>
+
+          <div className='selector'>
+
+            <DropDownMenu onChange={this.hanldeSelectChange} menuItems={menuItems} />
+
+          </div>
+
+          <div className='selector-description'>
+            {indicatorDescription}
+          </div>
+
         </div>
+
       </div>
     )
   }

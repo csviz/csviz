@@ -58,10 +58,12 @@ var Graph = React.createClass({
     }
 
     return (
-      <div className='graph-group card'>
-        <Chartist type={'Pie'} data={gaugeData} options={gaugeOptions} />
-        <Chartist type={'Bar'} data={barChartData} options={barChartOptions} />
-        <Chartist type={'Line'} data={lineChartData} options={lineChartOptions} />
+      <div className='card'>
+        <div className='graph-group'>
+          <Chartist type={'Pie'} data={gaugeData} options={gaugeOptions} />
+          <Chartist type={'Bar'} data={barChartData} options={barChartOptions} />
+          <Chartist type={'Line'} data={lineChartData} options={lineChartOptions} />
+        </div>
       </div>
     );
   }

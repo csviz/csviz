@@ -1,59 +1,44 @@
 'use strict'
 
 var React = require('react')
-var Modal = require('./Modal')
+var mui = require('material-ui')
+var PaperButton = mui.PaperButton
+var Dialog = mui.Dialog
 
 var SocialPanel = React.createClass({
 
   displayName: 'SocialPanel',
 
-  getInitialState() {
-    return {
-      shareModalOpen: false
-    };
-  },
-
-  share() {
-    this.toggleShareModal()
-  },
-
-  toggleShareModal() {
-    this.setState({shareModalOpen: !this.state.shareModalOpen})
-  },
-
-  onModalShow() {
-    // this.toggleShareModal()
-  },
-
-  onModalHide() {
-    this.toggleShareModal()
+  _showDialog: function() {
+    this.refs.shareDialog.show();
   },
 
   render() {
+    var dialogActions = [
+      { text: 'CANCEL' },
+      { text: 'SUBMIT', onClick: this._onDialogSubmit }
+    ]
     var Download = this.props.configs.data ? <a href={this.props.configs.data.globals} download>Download</a> : null
 
     return (
-      <div className='social-panel card'>
-        <Modal
-          visible={this.state.shareModalOpen}
-          onShow={this.onModalShow}
-          onHide={this.onModalHide}
-        >
-          <header>
-            <h1>Share</h1>
-          </header>
+      <div className='card'>
 
-          <p>Just copy and paste the URL below to share your visualization.</p>
+        <div className='social-panel'>
 
-          <textarea defaultValue='http://datahub.globalpartnership.org/#/2010/domestic_and_external_financing/public_expenditure_on_education_as_a_share_of_public_expenditure'></textarea>
+          <PaperButton label='Share' onClick={this._showDialog} />
+          <Dialog ref='shareDialog' title='Share' actions={dialogActions}>
 
-          <a href='https://twitter.com'>Twitter</a>
-          <a href='https://facebook.com'>Facebook</a>
-        </Modal>
+            <p>Just copy and paste the URL below to share your visualization.</p>
 
+            <textarea defaultValue='http://datahub.globalpartnership.org/#/2010/domestic_and_external_financing/public_expenditure_on_education_as_a_share_of_public_expenditure'></textarea>
 
-        <button onClick={this.toggleShareModal}>Share</button>
-        {Download}
+            <a href='https://twitter.com'>Twitter</a>
+            <a href='https://facebook.com'>Facebook</a>
+          </Dialog>
+
+          {Download}
+        </div>
+
       </div>
     )
   }

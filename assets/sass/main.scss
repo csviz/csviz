@@ -1,33 +1,60 @@
+@import '_variables';
+
+// material-ui
+@import 'material';
+
 body {
-  margin: 10px auto;
   background-color: #e1e1e1;
 }
 
 .main {
-  margin: 0;
-  padding: 0;
-  position: relative;
+  padding-top: $padding;
+  margin-top: $header;
 
-  #map {
-    height: 500px;
+  .map-container {
+    position: relative;
+    margin-top: -$padding * 2;
+
+    #map {
+      height: 500px;
+    }
   }
 }
 
 .sidebar {
-  width: 100%;
-  margin: 0;
-  padding: 0;
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: $header;
+    line-height: $header;
+    white-space: nowrap;
+    width: 100%;
+    background-color: #fff;
+    margin: 0;
+    padding: 0 $padding * 2;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+    img {
+      margin: 0 $margin;
+    }
+
+    h1 {
+      display: inline;
+      font-size: 1.6em;
+      padding-left: $padding;
+    }
+  }
 }
 
 .card {
-  margin: 10px 50px;
+  // margin: $padding 0;
   background-color: #fff;
-  padding: 5px 10px;
-  border-radius: 2px;
+  padding: $padding 0;
 }
 
-@import 'overlay';
-@import 'select-box';
 @import 'mapbox';
 @import 'chartist';
 @import 'timeline';
