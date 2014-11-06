@@ -46,10 +46,10 @@ var IndicatorSelector = React.createClass({
         } else {
           indicatorDescription = null
         }
+
+        menuItems = <DropDownMenu onChange={this.hanldeSelectChange} menuItems={menuItems} />
     } else {
-      menuItems = [
-        { payload: '', text: 'No indicator.' }
-      ]
+      menuItems = null
     }
 
     return (
@@ -59,7 +59,7 @@ var IndicatorSelector = React.createClass({
 
           <div className='selector'>
 
-            <DropDownMenu onChange={this.hanldeSelectChange} menuItems={menuItems} />
+            {menuItems}
 
           </div>
 
