@@ -116,12 +116,14 @@ var Map = React.createClass({
         var value = 'No data'
         var cname = layer.feature.properties['ISO_NAME'].toLowerCase()
         if (cname in indicators && indicators[cname][selected_indicator] !== undefined) {
+
           // gdp with years
           if (typeof indicators[cname][selected_indicator] == 'object') {
             value = indicators[cname][selected_indicator].years[selected_year]
           } else {
             value = indicators[cname][selected_indicator]
           }
+
         }
 
         popup.setContent('<div class="marker-title">' + layer.feature.properties['ISO_NAME'] + '</div>' + value)

@@ -52,6 +52,16 @@ body {
       float: right;
     }
   }
+
+  .selector-box {
+    .selector-description {
+      padding: $padding $padding * 2;
+    }
+  }
+
+  .social-panel {
+    padding: $padding $padding * 2;
+  }
 }
 
 .card {

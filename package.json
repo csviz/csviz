@@ -32,7 +32,6 @@
     "react-chartist": "^0.2.0",
     "react-document-title": "^0.1.2",
     "react-router": "^0.10.2",
-    "react-select-box": "^0.8.1",
     "topojson": "^1.6.18"
   },
   "devDependencies": {

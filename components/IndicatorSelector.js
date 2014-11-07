@@ -41,17 +41,18 @@ var IndicatorSelector = React.createClass({
             return { payload: key, text: indicators[key].name }
         }.bind(this))
 
-        if (this.props.configs && this.props.configs.indicators && this.state.selected_indicator) {
-          indicatorDescription = this.props.configs.indicators[this.state.selected_indicator].description
-        } else {
-          indicatorDescription = null
-        }
+      if (this.props.configs && this.props.configs.indicators && this.state.selected_indicator) {
+        indicatorDescription = this.props.configs.indicators[this.state.selected_indicator].description
+      } else {
+        indicatorDescription = null
+      }
 
-        // get default selected index
-        var selectedIndex = _.indexOf(Object.keys(indicators).filter(function(key) {
-          return indicators[key].name
-        }), this.state.selected_indicator)
-        MenuItems = <DropDownMenu onChange={this.hanldeSelectChange} selectedIndex={selectedIndex} menuItems={menuItems} />
+      // get default selected index
+      var selectedIndex = _.indexOf(Object.keys(indicators).filter(function(key) {
+        return indicators[key].name
+      }), this.state.selected_indicator)
+      MenuItems = <DropDownMenu onChange={this.hanldeSelectChange} selectedIndex={selectedIndex} menuItems={menuItems} />
+
     } else {
       MenuItems = null
     }

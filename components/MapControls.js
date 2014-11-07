@@ -33,7 +33,7 @@ var MapControls = React.createClass({
           <Average /> : null
         }
 
-        <Graph configs={this.props.configs} />
+        { /* <Graph configs={this.props.configs} /> */ }
       </div>
     )
   }
