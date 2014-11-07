@@ -116,6 +116,7 @@ var Map = React.createClass({
         var value = 'No data'
         var cname = layer.feature.properties['ISO_NAME'].toLowerCase()
         if (cname in indicators && indicators[cname][selected_indicator] !== undefined) {
+          var tooltipTemplate = configs.indicators[selected_indicator].tooltip
 
           // gdp with years
           if (typeof indicators[cname][selected_indicator] == 'object') {
@@ -125,6 +126,8 @@ var Map = React.createClass({
           }
 
         }
+
+        var value = MapUtils.compileTemplate(tooltipTemplate, {value: value})
 
         popup.setContent('<div class="marker-title">' + layer.feature.properties['ISO_NAME'] + '</div>' + value)
 

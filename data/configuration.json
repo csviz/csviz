@@ -32,8 +32,8 @@
       "description": "Sum of the Official Development Assistance disbursed to support activities in the basic education sector of development partner countries, as reported by donors and expressed as a percentage of Gross Domestic Product. Basic education aid includes flows directed to: primary education, basic life skills for youth and adults and early childhood education.",
       "aggregate": "avg",
       "precision": "1",
-      "display": "{{ this }}%",
-      "tooltip": "{{ this }}% {{ global_growth_numeric }}M",
+      "display": "{{ value }}%",
+      "tooltip": "{{ value }}% comes from template",
       "type": "number",
       "years": "true"
     },
@@ -43,14 +43,16 @@
       "description": "International Monetary Fund, World Economic Outlook Database (October 2013) and Organisation for Economic Cooperation and Development, Creditor Reporting System (December 2013)",
       "aggregate": "avg",
       "precision": "1",
+      "display": "{{ value }}%",
+      "tooltip": "{{ value }}% comes from template",
       "type": "number",
       "years": "true"
     },
     "car_color": {
       "name": "Car color",
       "description": "Aid committed for education plus 20 percent of General Budget Support committed. Divide the aid committed for total education in a given year by the GDP of the country and multiply by 100.",
-      "display": "{{ this }}%",
-      "tooltip": "{{ this }}% {{ global_growth_numeric }}M",
+      "display": "{{ value }}%",
+      "tooltip": "{{ value }}% comes from template",
       "type": "select",
       "mapping": {
         "Red": 0,
