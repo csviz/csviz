@@ -3,10 +3,6 @@
 var React = require('react')
 var Router = require('react-router')
 var DocumentTitle = require('react-document-title')
-var createStoreMixin = require('./mixins/createStoreMixin')
-var MapActionCreators = require('./actions/MapActionCreators')
-
-var CONFIGStore = require('./stores/CONFIGStore')
 
 // Router
 var DefaultRoute = Router.DefaultRoute
@@ -24,32 +20,10 @@ var App = React.createClass({
 
   displayName: 'App',
 
-  mixins: [createStoreMixin(CONFIGStore)],
-
-  getStateFromStores() {
-    var config_data = CONFIGStore.get()
-
-    return {
-      config: config_data
-    }
-  },
-
-  componentDidMount() {
-    MapActionCreators.requestConfig()
-  },
-
-  componentWillReceiveProps(nextProps) {
-    if (nextProps !== this.props) {
-      MapActionCreators.requestConfig()
-    }
-  },
-
   render() {
     return (
       <DocumentTitle title='CSViz'>
-        <div>
-          <this.props.activeRouteHandler />
-        </div>
+        <this.props.activeRouteHandler />
       </DocumentTitle>
     )
   }
