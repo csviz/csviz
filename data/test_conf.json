@@ -1,0 +1,1 @@
+{"ui": {"choropleth_start_color": "#ffffff", "choropleth_color_count": 5, "choropleth_end_color": "#000000", "legend": false, "menu": [{"Financial": ["GDP growth (annual %)"]}, {"Other": ["World Population"]}]}, "site": {"url": "http://csviz.org", "logo": "http://csviz.org/logo.gif", "name": "CSViz", "description": "The CSViz Demo App"}}
