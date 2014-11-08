@@ -34,9 +34,7 @@ var IndicatorSelector = React.createClass({
     if (this.props.configs && this.props.configs.indicators) {
       var indicators = this.props.configs.indicators
       var menuItems = Object.keys(indicators)
-        .filter(function(key) {
-          return indicators[key].name
-        })
+        .filter( key => indicators[key].name )
         .map(function(key, index) {
             return { payload: key, text: indicators[key].name }
         }.bind(this))

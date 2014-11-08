@@ -2,13 +2,13 @@
 
 var _ = require('lodash')
 var EventEmitter = require('events').EventEmitter
-var merge = require('react/lib/merge')
+var objectAssign = require('object-assign')
 var shallowEqual = require('react/lib/shallowEqual')
 var CHANGE_EVENT = 'change'
 
 var StoreUtils = {
   createStore(spec) {
-    var store = merge(EventEmitter.prototype, merge(spec, {
+    var store = objectAssign({}, EventEmitter.prototype, objectAssign({}, spec, {
       emitChange() {
         this.emit(CHANGE_EVENT)
       },
