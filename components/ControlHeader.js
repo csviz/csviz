@@ -22,7 +22,7 @@ var ControlHeader = React.createClass({
           <img src={site.logo} />
           <h1>{site.name}</h1>
           <div className='about'>
-            <Icon icon='help' onClick={this._showDialog} />
+            <Icon icon='action-info' onClick={this._showDialog} />
           </div>
         </div>
 
