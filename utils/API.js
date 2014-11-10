@@ -4,10 +4,10 @@ var axios = require('axios')
 var topojson = require('topojson')
 var MapServerActionCreators = require('../actions/MapServerActionCreators')
 
-var config = require('../data/configuration.json')
-var geoPath = config.data.geoPath
-var configPath = config.data.configPath
-var globalPath = config.data.globalPath
+var config = require('../config.json')
+var geoPath = config.geoPath
+var configPath = config.configPath
+var globalPath = config.globalPath
 
 var API = {
   config() {

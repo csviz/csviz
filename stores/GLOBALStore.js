@@ -1,5 +1,7 @@
 'use strict'
 
+var _ = require('lodash')
+
 var AppDispatcher = require('../dispatcher/AppDispatcher')
 var createStore= require('../utils/StoreUtils').createStore
 var ActionTypes = require('../constants/ActionTypes')
@@ -42,11 +44,13 @@ IndicatorStore.dispatchToken = AppDispatcher.register(function(payload) {
       // set default indicator and years
       // get first indicators
       setSelectedIndicator(Object.keys(response.meta.indicators)[0])
-      setSelectedYear(response.meta.indicators.gdp.years[0])
       break
 
     case ActionTypes.CHANGE_INDICATOR:
       setSelectedIndicator(response)
+      // also check if there's year filed
+      if(_global_data.meta.indicators[response].years && !_selected_year)
+      setSelectedYear(_global_data.meta.indicators[response].years[0])
       break
 
     case ActionTypes.CHANGE_SELECTED_YEAR:

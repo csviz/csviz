@@ -6,8 +6,8 @@ var MapUtils = require('../utils/MapUtils')
 var GLOBALStore = require('../stores/GLOBALStore')
 var _ = require('lodash')
 
-var config = require('../data/configuration.json')
-var mapbox_config = config.data.mapbox
+var config = require('../config.json')
+var mapbox_config = config.mapbox
 
 var Map = React.createClass({
 
@@ -39,6 +39,7 @@ var Map = React.createClass({
     var selected_indicator = GLOBALStore.getSelectedIndicator()
     var selected_year = GLOBALStore.getSelectedYear()
     var indicators = globals.data.locations
+    var meta = globals.meta
 
     // clean up existing layers
     if (this.state.countryLayer && this.state.countryLayer._layers !== undefined) {
@@ -72,11 +73,11 @@ var Map = React.createClass({
       switch(configs.indicators[selected_indicator].type) {
 
         case 'number':
-          if (typeof value == 'number') {
-            color = MapUtils.getNumberColor(value, indicators, configs, selected_indicator)
+          // check whether indicator has years
+          if (configs.indicators[selected_indicator].years) {
+            color = MapUtils.getNumberColor(value.years[selected_year],configs, meta, selected_indicator)
           } else {
-            // not a number, check years
-            color = MapUtils.getNumberColor(value.years[selected_year], indicators, configs, selected_indicator, selected_year)
+            color = MapUtils.getNumberColor(value, configs, meta, selected_indicator)
           }
           break
 
@@ -114,12 +115,11 @@ var Map = React.createClass({
           var tooltipTemplate = configs.indicators[selected_indicator].tooltip
 
           // gdp with years
-          if (typeof indicators[cname][selected_indicator] == 'object') {
+          if (configs.indicators[selected_indicator].years) {
             value = indicators[cname][selected_indicator].years[selected_year]
           } else {
             value = indicators[cname][selected_indicator]
           }
-
         }
 
         var value = MapUtils.compileTemplate(tooltipTemplate, {value: value})

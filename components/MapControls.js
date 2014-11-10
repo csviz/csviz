@@ -23,7 +23,7 @@ var MapControls = React.createClass({
 
         <IndicatorSelector configs={this.props.configs} />
 
-        {  selected_indicator === 'gdp' ?
+        {  this.props.configs.indicators && this.props.configs.indicators[selected_indicator].years ?
           <Timeline /> : null
         }
 

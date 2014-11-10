@@ -6,9 +6,9 @@
     "url": "http://wiredcraft.com"
   },
   "ui": {
-    "legend": "false",
-    "timeline": "false",
-    "about": "false",
+    "legend": false,
+    "timeline": false,
+    "about": false,
     "choropleth": {
       "steps": "5",
       "start": "#ffffff",
@@ -19,23 +19,9 @@
       "Other": ["car_color", "depressed"]
     }
   },
-  "data": {
-    "geoPath": "../data/alternative_country_topo.json",
-    "globalPath": "../data/global.json",
-    "configPath": "../data/configuration.json",
-    "mapbox": {
-      "token": "pk.eyJ1IjoiY3N2aXoiLCJhIjoiVVZIejF1ZyJ9.xFS0JJueEKUV7o0bj2IGIA",
-      "type": "examples.map-i86nkdio",
-      "location": [32.52, 13.11],
-      "zoomlevel": 3
-    }
-  },
   "indicators": {
-    "global_growth_numeric": {
-      "type": "hidden"
-    },
-    "poverty": {
-      "name": "Average Poverty",
+    "GDP growth (annual %)": {
+      "name": "GDP growth (annual %)",
       "id": "avg_poverty",
       "description": "Sum of the Official Development Assistance disbursed to support activities in the basic education sector of development partner countries, as reported by donors and expressed as a percentage of Gross Domestic Product. Basic education aid includes flows directed to: primary education, basic life skills for youth and adults and early childhood education.",
       "aggregate": "avg",
@@ -43,10 +29,10 @@
       "display": "{{ value }}%",
       "tooltip": "{{ value }}% comes from template",
       "type": "number",
-      "years": "true"
+      "years": false
     },
-    "gdp": {
-      "name": "GDP",
+    "World Population": {
+      "name": "World Population",
       "id": "avg_poverty",
       "description": "International Monetary Fund, World Economic Outlook Database (October 2013) and Organisation for Economic Cooperation and Development, Creditor Reporting System (December 2013)",
       "aggregate": "avg",
@@ -54,20 +40,7 @@
       "display": "{{ value }}%",
       "tooltip": "{{ value }}% comes from template",
       "type": "number",
-      "years": "true"
-    },
-    "car_color": {
-      "name": "Car color",
-      "description": "Aid committed for education plus 20 percent of General Budget Support committed. Divide the aid committed for total education in a given year by the GDP of the country and multiply by 100.",
-      "display": "{{ value }}%",
-      "tooltip": "{{ value }}% comes from template",
-      "type": "select",
-      "mapping": {
-        "Red": 0,
-        "Blue": 30,
-        "White": 60,
-        "Green": 90
-      }
+      "years": true
     }
   }
 }
