@@ -32,18 +32,17 @@ var Map = React.createClass({
 
   componentWillReceiveProps(nextProps) {
     if (!_.isEmpty(nextProps.geo) && !_.isEmpty(nextProps.globals) && !_.isEmpty(nextProps.configs)) {
-      this.updateChoropleth()
+      this.updateChoropleth(nextProps.geo, nextProps.globals, nextProps.configs)
     }
   },
 
-  updateChoropleth() {
+  updateChoropleth(geo, globals, configs) {
     var map = this.state.map
 
-    var shapes = this.props.geo
+    var shapes = geo
     var selected_indicator = GLOBALStore.getSelectedIndicator()
     var selected_year = GLOBALStore.getSelectedYear()
-    var indicators = this.props.globals.data.locations
-    var configs = this.props.configs
+    var indicators = globals.data.locations
 
     // clean up existing layers
     if (this.state.countryLayer && this.state.countryLayer._layers !== undefined) {
