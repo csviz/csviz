@@ -4,13 +4,14 @@ var axios = require('axios')
 var topojson = require('topojson')
 var MapServerActionCreators = require('../actions/MapServerActionCreators')
 
-var geoUrl = '../data/alternative_country_topo.json'
-var configUrl = '../data/configuration.json'
-var globalUrl = '../data/global.json'
+var config = require('../data/configuration.json')
+var geoPath = config.data.geoPath
+var configPath = config.data.configPath
+var globalPath = config.data.globalPath
 
 var API = {
   config() {
-    axios.get(configUrl).
+    axios.get(configPath).
       then(function(res) {
         MapServerActionCreators.handleCONFIGSuccess(res.data)
       })
@@ -20,7 +21,7 @@ var API = {
   },
 
   global() {
-    axios.get(globalUrl).
+    axios.get(globalPath).
       then(function(res) {
         MapServerActionCreators.handleINDICATORSuccess(res.data)
       })
@@ -30,7 +31,7 @@ var API = {
   },
 
   geo() {
-    axios.get(geoUrl).
+    axios.get(geoPath).
       then(function(res) {
         MapServerActionCreators.handleGEOSuccess(topojson.feature(res.data, res.data.objects['Aqueduct_country']).features)
       })

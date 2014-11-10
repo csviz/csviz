@@ -6,12 +6,8 @@ var MapUtils = require('../utils/MapUtils')
 var GLOBALStore = require('../stores/GLOBALStore')
 var _ = require('lodash')
 
-var mapbox_config =  {
-  "token": "pk.eyJ1IjoiY3N2aXoiLCJhIjoiVVZIejF1ZyJ9.xFS0JJueEKUV7o0bj2IGIA",
-  "type": "examples.map-i86nkdio",
-  "location": [32.52, 13.11],
-  "zoomlevel": 3
-}
+var config = require('../data/configuration.json')
+var mapbox_config = config.data.mapbox
 
 var Map = React.createClass({
 

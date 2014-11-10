@@ -1,16 +1,16 @@
 {
   "name": "CSViz",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Simple geo data viz for CSV files",
   "main": "main.js",
   "scripts": {
     "lib": "cp -r node_modules/mapbox.js/theme/images build/",
-    "build-js": "browserify main.js -t [ reactify --everything --harmony ] | uglifyjs -mc > build/bundle.js",
+    "build-js": "browserify main.js -t [ reactify --extension js --harmony ] | uglifyjs -mc > build/bundle.js",
     "build-css": "node-sass assets/sass/main.scss build/bundle.css",
     "build": "npm run lib && npm run build-js && npm run build-css",
     "watch-css": "watchy -w assets/sass -- 'npm run build-css'",
     "browser-sync": "browser-sync start --server --files 'build/*.*'",
-    "watch-js": "watchify main.js -t [ reactify --everything --harmony ] -o build/bundle.js -dv",
+    "watch-js": "watchify main.js -t [ reactify --extension js --harmony ] -o build/bundle.js -dv",
     "watch": "npm run lib &&  npm run browser-sync & npm run watch-js & npm run watch-css",
     "clean": "rm -rf build && mkdir build"
   },
@@ -18,7 +18,7 @@
     "type": "git",
     "url": "https://github.com/csviz/csviz.git"
   },
-  "author": "",
+  "author": "Wiredcraft",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/csviz/csviz/issues"

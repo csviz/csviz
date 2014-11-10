@@ -20,7 +20,15 @@
     }
   },
   "data": {
-    "globals": "./data/global.json"
+    "geoPath": "../data/alternative_country_topo.json",
+    "globalPath": "../data/global.json",
+    "configPath": "../data/configuration.json",
+    "mapbox": {
+      "token": "pk.eyJ1IjoiY3N2aXoiLCJhIjoiVVZIejF1ZyJ9.xFS0JJueEKUV7o0bj2IGIA",
+      "type": "examples.map-i86nkdio",
+      "location": [32.52, 13.11],
+      "zoomlevel": 3
+    }
   },
   "indicators": {
     "global_growth_numeric": {

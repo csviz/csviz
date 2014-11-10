@@ -3,7 +3,7 @@ CSVIZ
 
 ### Build process
 
-I include neither `Grunt` nor `Gulp` for the build process, instead I use the `npm run` command provided from the npm cli. For **how** and **why**, you can refer to [task automation with npm run](www.substack.net/task_automation_with_npm_run) from Substack.
+I include neither `Grunt` nor `Gulp` for the build process, instead I use the `npm run` command provided from the npm cli. For **how** and **why**, you can refer to [task automation with npm run](www.substack.net/task_automation_with_npm_run) from substack.
 
 #### Dependencies
 
