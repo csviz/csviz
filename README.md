@@ -1,17 +1,13 @@
 CSVIZ
 ==========
 
-### Dependencies
-
-* React - View
-* Flux - Data flow
-* React-router - Router
-* Chartist - Graph
-* Map - Mapbox
-
 ### Build process
 
 I include neither `Grunt` nor `Gulp` for the build process, instead I use the `npm run` command provided from the npm cli. For **how** and **why**, you can refer to [task automation with npm run](www.substack.net/task_automation_with_npm_run) from Substack.
+
+#### Dependencies
+
+Make sure you have `browserify`, `watchy`, `watchify`, `browser-sync` installed with `npm install browserify watchy watchify browser-sync -g`
 
 #### Development
 
@@ -22,8 +18,10 @@ $ npm run watch
 You can use this command to:
 
 * `npm run lib` - This task will copy third-party libraries that has **css** files and **images**;
+* `npm run browser-sync` -  This task will start a static server and watch file changes;
 * `npm run watch-js` - This task will listen on changes on js files for browserify
 * `npm run watch-css` - This task will listen on changes on sass files from `/sass` folder and re-build the css files
+
 
 #### Production
 

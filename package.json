@@ -9,8 +9,9 @@
     "build-css": "node-sass assets/sass/main.scss build/bundle.css",
     "build": "npm run lib && npm run build-js && npm run build-css",
     "watch-css": "watchy -w assets/sass -- 'npm run build-css'",
+    "browser-sync": "browser-sync start --server --files 'build/*.*'",
     "watch-js": "watchify main.js -t [ reactify --everything --harmony ] -o build/bundle.js -dv",
-    "watch": "npm run lib && npm run watch-js & npm run watch-css",
+    "watch": "npm run lib &&  npm run browser-sync & npm run watch-js & npm run watch-css",
     "clean": "rm -rf build && mkdir build"
   },
   "repository": {
