@@ -7,7 +7,7 @@
     "lib": "cp -r node_modules/mapbox.js/theme/images build/",
     "build-js": "browserify main.js -t [ reactify --extension js --harmony ] | uglifyjs -mc > build/bundle.js",
     "build-css": "node-sass assets/sass/main.scss build/bundle.css",
-    "build": "npm run lib && npm run build-js && npm run build-css",
+    "build": "mkdir -p build && npm run build-lib && npm run build-js && npm run build-css",
     "watch-css": "watchy -w assets/sass -- 'npm run build-css'",
     "browser-sync": "browser-sync start --server --files 'build/*.*'",
     "watch-js": "watchify main.js -t [ reactify --extension js --harmony ] -o build/bundle.js -dv",
