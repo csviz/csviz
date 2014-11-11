@@ -1,1 +1,34 @@
-{"ui": {"choropleth_start_color": "#ffffff", "choropleth_color_count": 5, "choropleth_end_color": "#000000", "legend": false, "menu": [{"Financial": ["GDP growth (annual %)"]}, {"Other": ["World Population"]}]}, "site": {"url": "http://csviz.org", "logo": "http://csviz.org/logo.gif", "name": "CSViz", "description": "The CSViz Demo App"}}
+{
+  "indicators": {
+    "GDP growth (annual %)": {
+      "type": "number"
+    }, 
+    "World Population": {
+      "type": "number"
+    }
+  }, 
+  "site": {
+    "description": "The CSViz Demo App", 
+    "logo": "http://csviz.org/logo.gif", 
+    "name": "CSViz", 
+    "url": "http://csviz.org"
+  }, 
+  "ui": {
+    "choropleth_color_count": 5, 
+    "choropleth_end_color": "#000000", 
+    "choropleth_start_color": "#ffffff", 
+    "legend": false, 
+    "menu": [
+      {
+        "Financial": [
+          "GDP growth (annual %)"
+        ]
+      }, 
+      {
+        "Other": [
+          "World Population"
+        ]
+      }
+    ]
+  }
+}
