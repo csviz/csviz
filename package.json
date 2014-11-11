@@ -5,9 +5,9 @@
   "main": "main.js",
   "scripts": {
     "lib": "cp -r node_modules/mapbox.js/theme/images build/",
-    "build-js": "browserify main.js -t [ reactify --extension js --harmony ] | uglifyjs -mc > build/bundle.js",
-    "build-css": "node-sass assets/sass/main.scss build/bundle.css",
-    "build": "mkdir -p build && npm run build-lib && npm run build-js && npm run build-css",
+    "build-js": "node_modules/browserify/bin/cmd.js main.js -t [ reactify --extension js --harmony ] | uglifyjs -mc > build/bundle.js",
+    "build-css": "node_modules/node-sass/bin/node-sass assets/sass/main.scss build/bundle.css",
+    "build": "mkdir -p build && npm run lib && npm run build-js && npm run build-css",
     "watch-css": "watchy -w assets/sass -- 'npm run build-css'",
     "browser-sync": "browser-sync start --server --files 'build/*.*'",
     "watch-js": "watchify main.js -t [ reactify --extension js --harmony ] -o build/bundle.js -dv",
@@ -41,6 +41,7 @@
     "node-sass": "^1.0.3",
     "reactify": "^0.15.2",
     "watchify": "^2.1.0",
-    "watchy": "^0.5.3"
+    "watchy": "^0.5.3",
+    "browserify": "^6.2.0"
   }
 }
