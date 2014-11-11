@@ -2,8 +2,8 @@
   "data": {
     "locations": {
       "afghanistan": {
-        "GDP growth (annual %)": 14.4347412712, 
-        "World Population": {
+        "gdp_growth": 14.4347412712, 
+        "world_population": {
           "years": {
             "2008": 27032197, 
             "2009": 27708187, 
@@ -14,8 +14,8 @@
         }
       }, 
       "albania": {
-        "GDP growth (annual %)": 1.2999872059, 
-        "World Population": {
+        "gdp_growth": 1.2999872059, 
+        "world_population": {
           "years": {
             "2008": 2912559, 
             "2009": 2884303, 
@@ -26,8 +26,8 @@
         }
       }, 
       "algeria": {
-        "GDP growth (annual %)": 3.2999913838, 
-        "World Population": {
+        "gdp_growth": 3.2999913838, 
+        "world_population": {
           "years": {
             "2008": 35725377, 
             "2009": 36383302, 
@@ -38,8 +38,8 @@
         }
       }, 
       "american_samoa": {
-        "GDP growth (annual %)": null, 
-        "World Population": {
+        "gdp_growth": null, 
+        "world_population": {
           "years": {
             "2008": 57053, 
             "2009": 56245, 
@@ -50,8 +50,8 @@
         }
       }, 
       "andorra": {
-        "GDP growth (annual %)": null, 
-        "World Population": {
+        "gdp_growth": null, 
+        "world_population": {
           "years": {
             "2008": 79969, 
             "2009": 78659, 
@@ -62,8 +62,8 @@
         }
       }, 
       "angola": {
-        "GDP growth (annual %)": 5.1886541345, 
-        "World Population": {
+        "gdp_growth": 5.1886541345, 
+        "world_population": {
           "years": {
             "2008": 18314441, 
             "2009": 18926650, 
@@ -74,8 +74,8 @@
         }
       }, 
       "antigua_and_barbuda": {
-        "GDP growth (annual %)": 3.3122441384, 
-        "World Population": {
+        "gdp_growth": 3.3122441384, 
+        "world_population": {
           "years": {
             "2008": 85349, 
             "2009": 86300, 
@@ -86,8 +86,8 @@
         }
       }, 
       "argentina": {
-        "GDP growth (annual %)": 0.9461972011, 
-        "World Population": {
+        "gdp_growth": 0.9461972011, 
+        "world_population": {
           "years": {
             "2008": 39676083, 
             "2009": 40023641, 
@@ -98,8 +98,8 @@
         }
       }, 
       "armenia": {
-        "GDP growth (annual %)": 7.2, 
-        "World Population": {
+        "gdp_growth": 7.2, 
+        "world_population": {
           "years": {
             "2008": 2977488, 
             "2009": 2968154, 
@@ -110,8 +110,8 @@
         }
       }, 
       "aruba": {
-        "GDP growth (annual %)": null, 
-        "World Population": {
+        "gdp_growth": null, 
+        "world_population": {
           "years": {
             "2008": 101344, 
             "2009": 101418, 
@@ -122,8 +122,8 @@
         }
       }, 
       "australia": {
-        "GDP growth (annual %)": 3.6148417335, 
-        "World Population": {
+        "gdp_growth": 3.6148417335, 
+        "world_population": {
           "years": {
             "2008": 21249200, 
             "2009": 21691700, 
@@ -134,8 +134,8 @@
         }
       }, 
       "austria": {
-        "GDP growth (annual %)": 0.870499679, 
-        "World Population": {
+        "gdp_growth": 0.870499679, 
+        "world_population": {
           "years": {
             "2008": 8336926, 
             "2009": 8365275, 
@@ -146,8 +146,8 @@
         }
       }, 
       "azerbaijan": {
-        "GDP growth (annual %)": 2.2, 
-        "World Population": {
+        "gdp_growth": 2.2, 
+        "world_population": {
           "years": {
             "2008": 8763400, 
             "2009": 8947243, 
@@ -158,8 +158,8 @@
         }
       }, 
       "bahamas_the": {
-        "GDP growth (annual %)": 1.8321717443, 
-        "World Population": {
+        "gdp_growth": 1.8321717443, 
+        "world_population": {
           "years": {
             "2008": 348340, 
             "2009": 354492, 
@@ -170,8 +170,8 @@
         }
       }, 
       "bahrain": {
-        "GDP growth (annual %)": 3.3995578427, 
-        "World Population": {
+        "gdp_growth": 3.3995578427, 
+        "world_population": {
           "years": {
             "2008": 1116038, 
             "2009": 1191539, 
@@ -182,8 +182,8 @@
         }
       }, 
       "bangladesh": {
-        "GDP growth (annual %)": 6.233705051, 
-        "World Population": {
+        "gdp_growth": 6.233705051, 
+        "world_population": {
           "years": {
             "2008": 147969967, 
             "2009": 149503100, 
@@ -194,8 +194,8 @@
         }
       }, 
       "barbados": {
-        "GDP growth (annual %)": 0.0092936803, 
-        "World Population": {
+        "gdp_growth": 0.0092936803, 
+        "world_population": {
           "years": {
             "2008": 277634, 
             "2009": 279006, 
@@ -206,8 +206,8 @@
         }
       }, 
       "belarus": {
-        "GDP growth (annual %)": 1.7313912234, 
-        "World Population": {
+        "gdp_growth": 1.7313912234, 
+        "world_population": {
           "years": {
             "2008": 9528000, 
             "2009": 9507000, 
@@ -218,8 +218,8 @@
         }
       }, 
       "belgium": {
-        "GDP growth (annual %)": -0.1438018946, 
-        "World Population": {
+        "gdp_growth": -0.1438018946, 
+        "world_population": {
           "years": {
             "2008": 10709973, 
             "2009": 10796493, 
@@ -230,8 +230,8 @@
         }
       }, 
       "belize": {
-        "GDP growth (annual %)": 4.0175019889, 
-        "World Population": {
+        "gdp_growth": 4.0175019889, 
+        "world_population": {
           "years": {
             "2008": 293544, 
             "2009": 301016, 
@@ -242,8 +242,8 @@
         }
       }, 
       "benin": {
-        "GDP growth (annual %)": 5.3999738765, 
-        "World Population": {
+        "gdp_growth": 5.3999738765, 
+        "world_population": {
           "years": {
             "2008": 8973293, 
             "2009": 9240783, 
@@ -254,8 +254,8 @@
         }
       }, 
       "bermuda": {
-        "GDP growth (annual %)": -4.8686002644, 
-        "World Population": {
+        "gdp_growth": -4.8686002644, 
+        "world_population": {
           "years": {
             "2008": 65273, 
             "2009": 65636, 
@@ -266,8 +266,8 @@
         }
       }, 
       "bhutan": {
-        "GDP growth (annual %)": 4.6200169055, 
-        "World Population": {
+        "gdp_growth": 4.6200169055, 
+        "world_population": {
           "years": {
             "2008": 692159, 
             "2009": 704542, 
@@ -278,8 +278,8 @@
         }
       }, 
       "bolivia": {
-        "GDP growth (annual %)": 5.176430946, 
-        "World Population": {
+        "gdp_growth": 5.176430946, 
+        "world_population": {
           "years": {
             "2008": 9834098, 
             "2009": 9993406, 
@@ -290,8 +290,8 @@
         }
       }, 
       "bosnia_and_herzegovina": {
-        "GDP growth (annual %)": -0.7000000372, 
-        "World Population": {
+        "gdp_growth": -0.7000000372, 
+        "world_population": {
           "years": {
             "2008": 3861201, 
             "2009": 3853446, 
@@ -302,8 +302,8 @@
         }
       }, 
       "botswana": {
-        "GDP growth (annual %)": 4.2568065743, 
-        "World Population": {
+        "gdp_growth": 4.2568065743, 
+        "world_population": {
           "years": {
             "2008": 1933719, 
             "2009": 1951715, 
@@ -314,8 +314,8 @@
         }
       }, 
       "brazil": {
-        "GDP growth (annual %)": 1.0318036484, 
-        "World Population": {
+        "gdp_growth": 1.0318036484, 
+        "world_population": {
           "years": {
             "2008": 191765567, 
             "2009": 193490922, 
@@ -326,8 +326,8 @@
         }
       }, 
       "brunei_darussalam": {
-        "GDP growth (annual %)": 0.9483546618, 
-        "World Population": {
+        "gdp_growth": 0.9483546618, 
+        "world_population": {
           "years": {
             "2008": 388017, 
             "2009": 394400, 
@@ -338,8 +338,8 @@
         }
       }, 
       "bulgaria": {
-        "GDP growth (annual %)": 0.601010623, 
-        "World Population": {
+        "gdp_growth": 0.601010623, 
+        "world_population": {
           "years": {
             "2008": 7492561, 
             "2009": 7444443, 
@@ -350,8 +350,8 @@
         }
       }, 
       "burkina_faso": {
-        "GDP growth (annual %)": 9.5374201145, 
-        "World Population": {
+        "gdp_growth": 9.5374201145, 
+        "world_population": {
           "years": {
             "2008": 14659646, 
             "2009": 15094967, 
@@ -362,8 +362,8 @@
         }
       }, 
       "burundi": {
-        "GDP growth (annual %)": 4.0193655324, 
-        "World Population": {
+        "gdp_growth": 4.0193655324, 
+        "world_population": {
           "years": {
             "2008": 8624280, 
             "2009": 8926687, 
@@ -374,8 +374,8 @@
         }
       }, 
       "cabo_verde": {
-        "GDP growth (annual %)": 1.2362627224, 
-        "World Population": {
+        "gdp_growth": 1.2362627224, 
+        "world_population": {
           "years": {
             "2008": 13940518, 
             "2009": 14144225, 
@@ -386,8 +386,8 @@
         }
       }, 
       "cambodia": {
-        "GDP growth (annual %)": 7.3133455051, 
-        "World Population": {
+        "gdp_growth": 7.3133455051, 
+        "world_population": {
           "years": {
             "2008": 19595026, 
             "2009": 20103945, 
@@ -398,8 +398,8 @@
         }
       }, 
       "cameroon": {
-        "GDP growth (annual %)": 4.6, 
-        "World Population": {
+        "gdp_growth": 4.6, 
+        "world_population": {
           "years": {
             "2008": 33245773, 
             "2009": 33628571, 
@@ -410,8 +410,8 @@
         }
       }, 
       "canada": {
-        "GDP growth (annual %)": 1.7090056561, 
-        "World Population": {
+        "gdp_growth": 1.7090056561, 
+        "world_population": {
           "years": {
             "2008": 484651, 
             "2009": 485714, 
@@ -422,8 +422,8 @@
         }
       }, 
       "cayman_islands": {
-        "GDP growth (annual %)": null, 
-        "World Population": {
+        "gdp_growth": null, 
+        "world_population": {
           "years": {
             "2008": 52912, 
             "2009": 54275, 
@@ -434,8 +434,8 @@
         }
       }, 
       "central_african_republic": {
-        "GDP growth (annual %)": 4.0999737919, 
-        "World Population": {
+        "gdp_growth": 4.0999737919, 
+        "world_population": {
           "years": {
             "2008": 4185106, 
             "2009": 4266247, 
@@ -446,8 +446,8 @@
         }
       }, 
       "chad": {
-        "GDP growth (annual %)": 8.8825760705, 
-        "World Population": {
+        "gdp_growth": 8.8825760705, 
+        "world_population": {
           "years": {
             "2008": 11030628, 
             "2009": 11371325, 
@@ -458,8 +458,8 @@
         }
       }, 
       "channel_islands": {
-        "GDP growth (annual %)": null, 
-        "World Population": {
+        "gdp_growth": null, 
+        "world_population": {
           "years": {
             "2008": 157554, 
             "2009": 158565, 
@@ -470,8 +470,8 @@
         }
       }, 
       "chile": {
-        "GDP growth (annual %)": 5.3817563669, 
-        "World Population": {
+        "gdp_growth": 5.3817563669, 
+        "world_population": {
           "years": {
             "2008": 16831184, 
             "2009": 16991729, 
@@ -482,8 +482,8 @@
         }
       }, 
       "china": {
-        "GDP growth (annual %)": 7.652553, 
-        "World Population": {
+        "gdp_growth": 7.652553, 
+        "world_population": {
           "years": {
             "2008": 1324655000, 
             "2009": 1331260000, 
@@ -494,8 +494,8 @@
         }
       }, 
       "colombia": {
-        "GDP growth (annual %)": 4.0490258033, 
-        "World Population": {
+        "gdp_growth": 4.0490258033, 
+        "world_population": {
           "years": {
             "2008": 45153037, 
             "2009": 45802561, 
@@ -506,8 +506,8 @@
         }
       }, 
       "comoros": {
-        "GDP growth (annual %)": 2.961140068, 
-        "World Population": {
+        "gdp_growth": 2.961140068, 
+        "world_population": {
           "years": {
             "2008": 649291, 
             "2009": 666097, 
@@ -518,8 +518,8 @@
         }
       }, 
       "congo_dem_rep": {
-        "GDP growth (annual %)": 7.1578643992, 
-        "World Population": {
+        "gdp_growth": 7.1578643992, 
+        "world_population": {
           "years": {
             "2008": 58819038, 
             "2009": 60486276, 
@@ -530,8 +530,8 @@
         }
       }, 
       "congo_rep": {
-        "GDP growth (annual %)": 3.7999958518, 
-        "World Population": {
+        "gdp_growth": 3.7999958518, 
+        "world_population": {
           "years": {
             "2008": 3876475, 
             "2009": 3995146, 
@@ -542,8 +542,8 @@
         }
       }, 
       "costa_rica": {
-        "GDP growth (annual %)": 5.1338507112, 
-        "World Population": {
+        "gdp_growth": 5.1338507112, 
+        "world_population": {
           "years": {
             "2008": 4532711, 
             "2009": 4601424, 
@@ -554,8 +554,8 @@
         }
       }, 
       "cote_divoire": {
-        "GDP growth (annual %)": 9.496, 
-        "World Population": {
+        "gdp_growth": 9.496, 
+        "world_population": {
           "years": {
             "2008": 18260044, 
             "2009": 18601342, 
@@ -566,8 +566,8 @@
         }
       }, 
       "croatia": {
-        "GDP growth (annual %)": -1.8697164344, 
-        "World Population": {
+        "gdp_growth": -1.8697164344, 
+        "world_population": {
           "years": {
             "2008": 4434508, 
             "2009": 4429078, 
@@ -578,8 +578,8 @@
         }
       }, 
       "cuba": {
-        "GDP growth (annual %)": null, 
-        "World Population": {
+        "gdp_growth": null, 
+        "world_population": {
           "years": {
             "2008": 11296355, 
             "2009": 11288826, 
@@ -590,8 +590,8 @@
         }
       }, 
       "curacao": {
-        "GDP growth (annual %)": null, 
-        "World Population": {
+        "gdp_growth": null, 
+        "world_population": {
           "years": {
             "2008": 144971, 
             "2009": 145890, 
@@ -602,8 +602,8 @@
         }
       }, 
       "cyprus": {
-        "GDP growth (annual %)": -2.4, 
-        "World Population": {
+        "gdp_growth": -2.4, 
+        "world_population": {
           "years": {
             "2008": 1077089, 
             "2009": 1090553, 
@@ -614,8 +614,8 @@
         }
       }, 
       "czech_republic": {
-        "GDP growth (annual %)": -1.0211192554, 
-        "World Population": {
+        "gdp_growth": -1.0211192554, 
+        "world_population": {
           "years": {
             "2008": 10384603, 
             "2009": 10443936, 
@@ -626,8 +626,8 @@
         }
       }, 
       "denmark": {
-        "GDP growth (annual %)": -0.3587282621, 
-        "World Population": {
+        "gdp_growth": -0.3587282621, 
+        "world_population": {
           "years": {
             "2008": 5493621, 
             "2009": 5523095, 
@@ -638,8 +638,8 @@
         }
       }, 
       "djibouti": {
-        "GDP growth (annual %)": 3.0034964367, 
-        "World Population": {
+        "gdp_growth": 3.0034964367, 
+        "world_population": {
           "years": {
             "2008": 810100, 
             "2009": 821865, 
@@ -650,8 +650,8 @@
         }
       }, 
       "dominica": {
-        "GDP growth (annual %)": -1.1844331641, 
-        "World Population": {
+        "gdp_growth": -1.1844331641, 
+        "world_population": {
           "years": {
             "2008": 70883, 
             "2009": 70996, 
@@ -662,8 +662,8 @@
         }
       }, 
       "dominican_republic": {
-        "GDP growth (annual %)": 3.8876826006, 
-        "World Population": {
+        "gdp_growth": 3.8876826006, 
+        "world_population": {
           "years": {
             "2008": 9750195, 
             "2009": 9884265, 
@@ -674,8 +674,8 @@
         }
       }, 
       "ecuador": {
-        "GDP growth (annual %)": 5.1232676756, 
-        "World Population": {
+        "gdp_growth": 5.1232676756, 
+        "world_population": {
           "years": {
             "2008": 14512402, 
             "2009": 14756424, 
@@ -686,8 +686,8 @@
         }
       }, 
       "egypt_arab_rep": {
-        "GDP growth (annual %)": 2.2130289069, 
-        "World Population": {
+        "gdp_growth": 2.2130289069, 
+        "world_population": {
           "years": {
             "2008": 75491922, 
             "2009": 76775023, 
@@ -698,8 +698,8 @@
         }
       }, 
       "el_salvador": {
-        "GDP growth (annual %)": 1.8809554607, 
-        "World Population": {
+        "gdp_growth": 1.8809554607, 
+        "world_population": {
           "years": {
             "2008": 6151776, 
             "2009": 6183484, 
@@ -710,8 +710,8 @@
         }
       }, 
       "equatorial_guinea": {
-        "GDP growth (annual %)": 3.2171816794, 
-        "World Population": {
+        "gdp_growth": 3.2171816794, 
+        "world_population": {
           "years": {
             "2008": 658025, 
             "2009": 676851, 
@@ -722,8 +722,8 @@
         }
       }, 
       "eritrea": {
-        "GDP growth (annual %)": 7.017108852, 
-        "World Population": {
+        "gdp_growth": 7.017108852, 
+        "world_population": {
           "years": {
             "2008": 5382163, 
             "2009": 5557889, 
@@ -734,8 +734,8 @@
         }
       }, 
       "estonia": {
-        "GDP growth (annual %)": 3.9389071376, 
-        "World Population": {
+        "gdp_growth": 3.9389071376, 
+        "world_population": {
           "years": {
             "2008": 1337090, 
             "2009": 1334515, 
@@ -746,8 +746,8 @@
         }
       }, 
       "ethiopia": {
-        "GDP growth (annual %)": 8.7253129078, 
-        "World Population": {
+        "gdp_growth": 8.7253129078, 
+        "world_population": {
           "years": {
             "2008": 82621190, 
             "2009": 84838032, 
@@ -758,8 +758,8 @@
         }
       }, 
       "faeroe_islands": {
-        "GDP growth (annual %)": null, 
-        "World Population": {
+        "gdp_growth": null, 
+        "world_population": {
           "years": {
             "2008": 49601, 
             "2009": 49600, 
@@ -770,8 +770,8 @@
         }
       }, 
       "fiji": {
-        "GDP growth (annual %)": 2.2021280237, 
-        "World Population": {
+        "gdp_growth": 2.2021280237, 
+        "world_population": {
           "years": {
             "2008": 843851, 
             "2009": 852479, 
@@ -782,8 +782,8 @@
         }
       }, 
       "finland": {
-        "GDP growth (annual %)": -1.0080670145, 
-        "World Population": {
+        "gdp_growth": -1.0080670145, 
+        "world_population": {
           "years": {
             "2008": 5313399, 
             "2009": 5338871, 
@@ -794,8 +794,8 @@
         }
       }, 
       "france": {
-        "GDP growth (annual %)": 0.0138792984, 
-        "World Population": {
+        "gdp_growth": 0.0138792984, 
+        "world_population": {
           "years": {
             "2008": 64371099, 
             "2009": 64702921, 
@@ -806,8 +806,8 @@
         }
       }, 
       "french_polynesia": {
-        "GDP growth (annual %)": null, 
-        "World Population": {
+        "gdp_growth": null, 
+        "world_population": {
           "years": {
             "2008": 262877, 
             "2009": 265412, 
@@ -818,8 +818,8 @@
         }
       }, 
       "gabon": {
-        "GDP growth (annual %)": 5.6, 
-        "World Population": {
+        "gdp_growth": 5.6, 
+        "world_population": {
           "years": {
             "2008": 1482843, 
             "2009": 1519155, 
@@ -830,8 +830,8 @@
         }
       }, 
       "gambia_the": {
-        "GDP growth (annual %)": 6.0548303269, 
-        "World Population": {
+        "gdp_growth": 6.0548303269, 
+        "world_population": {
           "years": {
             "2008": 1577984, 
             "2009": 1628332, 
@@ -842,8 +842,8 @@
         }
       }, 
       "georgia": {
-        "GDP growth (annual %)": 6.1800100102, 
-        "World Population": {
+        "gdp_growth": 6.1800100102, 
+        "world_population": {
           "years": {
             "2008": 4383800, 
             "2009": 4410900, 
@@ -854,8 +854,8 @@
         }
       }, 
       "germany": {
-        "GDP growth (annual %)": 0.6886553099, 
-        "World Population": {
+        "gdp_growth": 0.6886553099, 
+        "world_population": {
           "years": {
             "2008": 82110097, 
             "2009": 81902307, 
@@ -866,8 +866,8 @@
         }
       }, 
       "ghana": {
-        "GDP growth (annual %)": 8.7898061768, 
-        "World Population": {
+        "gdp_growth": 8.7898061768, 
+        "world_population": {
           "years": {
             "2008": 23110139, 
             "2009": 23691533, 
@@ -878,8 +878,8 @@
         }
       }, 
       "greece": {
-        "GDP growth (annual %)": -6.9726500516, 
-        "World Population": {
+        "gdp_growth": -6.9726500516, 
+        "world_population": {
           "years": {
             "2008": 11186439, 
             "2009": 11187085, 
@@ -890,8 +890,8 @@
         }
       }, 
       "greenland": {
-        "GDP growth (annual %)": null, 
-        "World Population": {
+        "gdp_growth": null, 
+        "world_population": {
           "years": {
             "2008": 56328, 
             "2009": 56323, 
@@ -902,8 +902,8 @@
         }
       }, 
       "grenada": {
-        "GDP growth (annual %)": -1.7970401691, 
-        "World Population": {
+        "gdp_growth": -1.7970401691, 
+        "world_population": {
           "years": {
             "2008": 103932, 
             "2009": 104296, 
@@ -914,8 +914,8 @@
         }
       }, 
       "guam": {
-        "GDP growth (annual %)": null, 
-        "World Population": {
+        "gdp_growth": null, 
+        "world_population": {
           "years": {
             "2008": 158310, 
             "2009": 158621, 
@@ -926,8 +926,8 @@
         }
       }, 
       "guatemala": {
-        "GDP growth (annual %)": 2.969832897, 
-        "World Population": {
+        "gdp_growth": 2.969832897, 
+        "world_population": {
           "years": {
             "2008": 13648307, 
             "2009": 13988988, 
@@ -938,8 +938,8 @@
         }
       }, 
       "guinea": {
-        "GDP growth (annual %)": 3.9441119886, 
-        "World Population": {
+        "gdp_growth": 3.9441119886, 
+        "world_population": {
           "years": {
             "2008": 10314678, 
             "2009": 10593248, 
@@ -950,8 +950,8 @@
         }
       }, 
       "guineabissau": {
-        "GDP growth (annual %)": -1.45, 
-        "World Population": {
+        "gdp_growth": -1.45, 
+        "world_population": {
           "years": {
             "2008": 1516920, 
             "2009": 1550905, 
@@ -962,8 +962,8 @@
         }
       }, 
       "guyana": {
-        "GDP growth (annual %)": 4.8164589171, 
-        "World Population": {
+        "gdp_growth": 4.8164589171, 
+        "world_population": {
           "years": {
             "2008": 775739, 
             "2009": 781055, 
@@ -974,8 +974,8 @@
         }
       }, 
       "haiti": {
-        "GDP growth (annual %)": 2.8850960508, 
-        "World Population": {
+        "gdp_growth": 2.8850960508, 
+        "world_population": {
           "years": {
             "2008": 9638255, 
             "2009": 9765153, 
@@ -986,8 +986,8 @@
         }
       }, 
       "honduras": {
-        "GDP growth (annual %)": 3.8631391139, 
-        "World Population": {
+        "gdp_growth": 3.8631391139, 
+        "world_population": {
           "years": {
             "2008": 7322368, 
             "2009": 7469844, 
@@ -998,8 +998,8 @@
         }
       }, 
       "hong_kong_sar_china": {
-        "GDP growth (annual %)": 1.5486049594, 
-        "World Population": {
+        "gdp_growth": 1.5486049594, 
+        "world_population": {
           "years": {
             "2008": 6957800, 
             "2009": 6972800, 
@@ -1010,8 +1010,8 @@
         }
       }, 
       "hungary": {
-        "GDP growth (annual %)": -1.6645052769, 
-        "World Population": {
+        "gdp_growth": -1.6645052769, 
+        "world_population": {
           "years": {
             "2008": 10038188, 
             "2009": 10022650, 
@@ -1022,8 +1022,8 @@
         }
       }, 
       "iceland": {
-        "GDP growth (annual %)": 1.4629593562, 
-        "World Population": {
+        "gdp_growth": 1.4629593562, 
+        "world_population": {
           "years": {
             "2008": 317414, 
             "2009": 318499, 
@@ -1034,8 +1034,8 @@
         }
       }, 
       "india": {
-        "GDP growth (annual %)": 4.7362796354, 
-        "World Population": {
+        "gdp_growth": 4.7362796354, 
+        "world_population": {
           "years": {
             "2008": 1174662334, 
             "2009": 1190138069, 
@@ -1046,8 +1046,8 @@
         }
       }, 
       "indonesia": {
-        "GDP growth (annual %)": 6.2636705098, 
-        "World Population": {
+        "gdp_growth": 6.2636705098, 
+        "world_population": {
           "years": {
             "2008": 234243489, 
             "2009": 237486894, 
@@ -1058,8 +1058,8 @@
         }
       }, 
       "iran_islamic_rep": {
-        "GDP growth (annual %)": 2.9999999693, 
-        "World Population": {
+        "gdp_growth": 2.9999999693, 
+        "world_population": {
           "years": {
             "2008": 72660887, 
             "2009": 73542954, 
@@ -1070,8 +1070,8 @@
         }
       }, 
       "iraq": {
-        "GDP growth (annual %)": 9.1563279302, 
-        "World Population": {
+        "gdp_growth": 9.1563279302, 
+        "world_population": {
           "years": {
             "2008": 29429829, 
             "2009": 30163199, 
@@ -1082,8 +1082,8 @@
         }
       }, 
       "ireland": {
-        "GDP growth (annual %)": 0.1570323256, 
-        "World Population": {
+        "gdp_growth": 0.1570323256, 
+        "world_population": {
           "years": {
             "2008": 4489544, 
             "2009": 4535375, 
@@ -1094,8 +1094,8 @@
         }
       }, 
       "isle_of_man": {
-        "GDP growth (annual %)": null, 
-        "World Population": {
+        "gdp_growth": null, 
+        "world_population": {
           "years": {
             "2008": 82561, 
             "2009": 83293, 
@@ -1106,8 +1106,8 @@
         }
       }, 
       "israel": {
-        "GDP growth (annual %)": 3.351850004, 
-        "World Population": {
+        "gdp_growth": 3.351850004, 
+        "world_population": {
           "years": {
             "2008": 7308800, 
             "2009": 7485600, 
@@ -1118,8 +1118,8 @@
         }
       }, 
       "italy": {
-        "GDP growth (annual %)": -2.3676811231, 
-        "World Population": {
+        "gdp_growth": -2.3676811231, 
+        "world_population": {
           "years": {
             "2008": 58826731, 
             "2009": 59095365, 
@@ -1130,8 +1130,8 @@
         }
       }, 
       "jamaica": {
-        "GDP growth (annual %)": 0.7242985659, 
-        "World Population": {
+        "gdp_growth": 0.7242985659, 
+        "world_population": {
           "years": {
             "2008": 2671934, 
             "2009": 2681386, 
@@ -1142,8 +1142,8 @@
         }
       }, 
       "japan": {
-        "GDP growth (annual %)": 1.446951894, 
-        "World Population": {
+        "gdp_growth": 1.446951894, 
+        "world_population": {
           "years": {
             "2008": 127704040, 
             "2009": 127557958, 
@@ -1154,8 +1154,8 @@
         }
       }, 
       "jordan": {
-        "GDP growth (annual %)": 2.6515943436, 
-        "World Population": {
+        "gdp_growth": 2.6515943436, 
+        "world_population": {
           "years": {
             "2008": 5786000, 
             "2009": 5915000, 
@@ -1166,8 +1166,8 @@
         }
       }, 
       "kazakhstan": {
-        "GDP growth (annual %)": 5.0000000003, 
-        "World Population": {
+        "gdp_growth": 5.0000000003, 
+        "world_population": {
           "years": {
             "2008": 15674000, 
             "2009": 16092701, 
@@ -1178,8 +1178,8 @@
         }
       }, 
       "kenya": {
-        "GDP growth (annual %)": 4.5525536832, 
-        "World Population": {
+        "gdp_growth": 4.5525536832, 
+        "world_population": {
           "years": {
             "2008": 38773277, 
             "2009": 39824734, 
@@ -1190,8 +1190,8 @@
         }
       }, 
       "kiribati": {
-        "GDP growth (annual %)": 2.81, 
-        "World Population": {
+        "gdp_growth": 2.81, 
+        "world_population": {
           "years": {
             "2008": 94832, 
             "2009": 96272, 
@@ -1202,8 +1202,8 @@
         }
       }, 
       "korea_dem_rep": {
-        "GDP growth (annual %)": null, 
-        "World Population": {
+        "gdp_growth": null, 
+        "world_population": {
           "years": {
             "2008": 24243894, 
             "2009": 24371865, 
@@ -1214,8 +1214,8 @@
         }
       }, 
       "korea_rep": {
-        "GDP growth (annual %)": 2.2923824264, 
-        "World Population": {
+        "gdp_growth": 2.2923824264, 
+        "world_population": {
           "years": {
             "2008": 48948698, 
             "2009": 49182038, 
@@ -1226,8 +1226,8 @@
         }
       }, 
       "kosovo": {
-        "GDP growth (annual %)": 2.7, 
-        "World Population": {
+        "gdp_growth": 2.7, 
+        "world_population": {
           "years": {
             "2008": 1747383, 
             "2009": 1761474, 
@@ -1238,8 +1238,8 @@
         }
       }, 
       "kuwait": {
-        "GDP growth (annual %)": 6.1861732325, 
-        "World Population": {
+        "gdp_growth": 6.1861732325, 
+        "world_population": {
           "years": {
             "2008": 2702221, 
             "2009": 2850102, 
@@ -1250,8 +1250,8 @@
         }
       }, 
       "kyrgyz_republic": {
-        "GDP growth (annual %)": -0.0888321289, 
-        "World Population": {
+        "gdp_growth": -0.0888321289, 
+        "world_population": {
           "years": {
             "2008": 5318700, 
             "2009": 5383300, 
@@ -1262,8 +1262,8 @@
         }
       }, 
       "lao_pdr": {
-        "GDP growth (annual %)": 8.1973117785, 
-        "World Population": {
+        "gdp_growth": 8.1973117785, 
+        "world_population": {
           "years": {
             "2008": 6139127, 
             "2009": 6267968, 
@@ -1274,8 +1274,8 @@
         }
       }, 
       "latvia": {
-        "GDP growth (annual %)": 5, 
-        "World Population": {
+        "gdp_growth": 5, 
+        "world_population": {
           "years": {
             "2008": 2177322, 
             "2009": 2141669, 
@@ -1286,8 +1286,8 @@
         }
       }, 
       "lebanon": {
-        "GDP growth (annual %)": 2.2, 
-        "World Population": {
+        "gdp_growth": 2.2, 
+        "world_population": {
           "years": {
             "2008": 4186088, 
             "2009": 4246924, 
@@ -1298,8 +1298,8 @@
         }
       }, 
       "lesotho": {
-        "GDP growth (annual %)": 6.5114390371, 
-        "World Population": {
+        "gdp_growth": 6.5114390371, 
+        "world_population": {
           "years": {
             "2008": 1972199, 
             "2009": 1989873, 
@@ -1310,8 +1310,8 @@
         }
       }, 
       "liberia": {
-        "GDP growth (annual %)": 10.2386420305, 
-        "World Population": {
+        "gdp_growth": 10.2386420305, 
+        "world_population": {
           "years": {
             "2008": 3672714, 
             "2009": 3821440, 
@@ -1322,8 +1322,8 @@
         }
       }, 
       "libya": {
-        "GDP growth (annual %)": 104.4844632768, 
-        "World Population": {
+        "gdp_growth": 104.4844632768, 
+        "world_population": {
           "years": {
             "2008": 5876805, 
             "2009": 5964325, 
@@ -1334,8 +1334,8 @@
         }
       }, 
       "liechtenstein": {
-        "GDP growth (annual %)": null, 
-        "World Population": {
+        "gdp_growth": null, 
+        "world_population": {
           "years": {
             "2008": 35582, 
             "2009": 35851, 
@@ -1346,8 +1346,8 @@
         }
       }, 
       "lithuania": {
-        "GDP growth (annual %)": 3.7, 
-        "World Population": {
+        "gdp_growth": 3.7, 
+        "world_population": {
           "years": {
             "2008": 3198231, 
             "2009": 3162916, 
@@ -1358,8 +1358,8 @@
         }
       }, 
       "luxembourg": {
-        "GDP growth (annual %)": -0.175722682, 
-        "World Population": {
+        "gdp_growth": -0.175722682, 
+        "world_population": {
           "years": {
             "2008": 488650, 
             "2009": 497783, 
@@ -1370,8 +1370,8 @@
         }
       }, 
       "macao_sar_china": {
-        "GDP growth (annual %)": 9.1394032386, 
-        "World Population": {
+        "gdp_growth": 9.1394032386, 
+        "world_population": {
           "years": {
             "2008": 507528, 
             "2009": 521617, 
@@ -1382,8 +1382,8 @@
         }
       }, 
       "macedonia_fyr": {
-        "GDP growth (annual %)": -0.4, 
-        "World Population": {
+        "gdp_growth": -0.4, 
+        "world_population": {
           "years": {
             "2008": 2098769, 
             "2009": 2100558, 
@@ -1394,8 +1394,8 @@
         }
       }, 
       "madagascar": {
-        "GDP growth (annual %)": 2.3601111259, 
-        "World Population": {
+        "gdp_growth": 2.3601111259, 
+        "world_population": {
           "years": {
             "2008": 19926785, 
             "2009": 20495695, 
@@ -1406,8 +1406,8 @@
         }
       }, 
       "malawi": {
-        "GDP growth (annual %)": 1.8857995075, 
-        "World Population": {
+        "gdp_growth": 1.8857995075, 
+        "world_population": {
           "years": {
             "2008": 14138207, 
             "2009": 14573338, 
@@ -1418,8 +1418,8 @@
         }
       }, 
       "malaysia": {
-        "GDP growth (annual %)": 5.639831813, 
-        "World Population": {
+        "gdp_growth": 5.639831813, 
+        "world_population": {
           "years": {
             "2008": 27302348, 
             "2009": 27790324, 
@@ -1430,8 +1430,8 @@
         }
       }, 
       "maldives": {
-        "GDP growth (annual %)": 1.3316298953, 
-        "World Population": {
+        "gdp_growth": 1.3316298953, 
+        "world_population": {
           "years": {
             "2008": 313843, 
             "2009": 319660, 
@@ -1442,8 +1442,8 @@
         }
       }, 
       "mali": {
-        "GDP growth (annual %)": -0.408303574, 
-        "World Population": {
+        "gdp_growth": -0.408303574, 
+        "world_population": {
           "years": {
             "2008": 13138299, 
             "2009": 13559296, 
@@ -1454,8 +1454,8 @@
         }
       }, 
       "malta": {
-        "GDP growth (annual %)": 1.1, 
-        "World Population": {
+        "gdp_growth": 1.1, 
+        "world_population": {
           "years": {
             "2008": 409379, 
             "2009": 412477, 
@@ -1466,8 +1466,8 @@
         }
       }, 
       "marshall_islands": {
-        "GDP growth (annual %)": 3.2729643235, 
-        "World Population": {
+        "gdp_growth": 3.2729643235, 
+        "world_population": {
           "years": {
             "2008": 52245, 
             "2009": 52341, 
@@ -1478,8 +1478,8 @@
         }
       }, 
       "mauritania": {
-        "GDP growth (annual %)": 7, 
-        "World Population": {
+        "gdp_growth": 7, 
+        "world_population": {
           "years": {
             "2008": 3422901, 
             "2009": 3516077, 
@@ -1490,8 +1490,8 @@
         }
       }, 
       "mauritius": {
-        "GDP growth (annual %)": 3.2277849691, 
-        "World Population": {
+        "gdp_growth": 3.2277849691, 
+        "world_population": {
           "years": {
             "2008": 1268565, 
             "2009": 1275032, 
@@ -1502,8 +1502,8 @@
         }
       }, 
       "mexico": {
-        "GDP growth (annual %)": 3.9830893303, 
-        "World Population": {
+        "gdp_growth": 3.9830893303, 
+        "world_population": {
           "years": {
             "2008": 114968039, 
             "2009": 116422752, 
@@ -1514,8 +1514,8 @@
         }
       }, 
       "micronesia_fed_sts": {
-        "GDP growth (annual %)": 0.4336649816, 
-        "World Population": {
+        "gdp_growth": 0.4336649816, 
+        "world_population": {
           "years": {
             "2008": 104498, 
             "2009": 103983, 
@@ -1526,8 +1526,8 @@
         }
       }, 
       "moldova": {
-        "GDP growth (annual %)": -0.7, 
-        "World Population": {
+        "gdp_growth": -0.7, 
+        "world_population": {
           "years": {
             "2008": 3570108, 
             "2009": 3565604, 
@@ -1538,8 +1538,8 @@
         }
       }, 
       "monaco": {
-        "GDP growth (annual %)": null, 
-        "World Population": {
+        "gdp_growth": null, 
+        "world_population": {
           "years": {
             "2008": 35686, 
             "2009": 36314, 
@@ -1550,8 +1550,8 @@
         }
       }, 
       "mongolia": {
-        "GDP growth (annual %)": 12.4011006951, 
-        "World Population": {
+        "gdp_growth": 12.4011006951, 
+        "world_population": {
           "years": {
             "2008": 2632834, 
             "2009": 2672223, 
@@ -1562,8 +1562,8 @@
         }
       }, 
       "montenegro": {
-        "GDP growth (annual %)": -2.5, 
-        "World Population": {
+        "gdp_growth": -2.5, 
+        "world_population": {
           "years": {
             "2008": 618649, 
             "2009": 619408, 
@@ -1574,8 +1574,8 @@
         }
       }, 
       "morocco": {
-        "GDP growth (annual %)": 2.6946642169, 
-        "World Population": {
+        "gdp_growth": 2.6946642169, 
+        "world_population": {
           "years": {
             "2008": 30955151, 
             "2009": 31276564, 
@@ -1586,8 +1586,8 @@
         }
       }, 
       "mozambique": {
-        "GDP growth (annual %)": 7.2415695357, 
-        "World Population": {
+        "gdp_growth": 7.2415695357, 
+        "world_population": {
           "years": {
             "2008": 22762525, 
             "2009": 23361025, 
@@ -1598,8 +1598,8 @@
         }
       }, 
       "myanmar": {
-        "GDP growth (annual %)": null, 
-        "World Population": {
+        "gdp_growth": null, 
+        "world_population": {
           "years": {
             "2008": 51174018, 
             "2009": 51540490, 
@@ -1610,8 +1610,8 @@
         }
       }, 
       "namibia": {
-        "GDP growth (annual %)": 6.6907163868, 
-        "World Population": {
+        "gdp_growth": 6.6907163868, 
+        "world_population": {
           "years": {
             "2008": 2110791, 
             "2009": 2143498, 
@@ -1622,8 +1622,8 @@
         }
       }, 
       "nepal": {
-        "GDP growth (annual %)": 4.8524763403, 
-        "World Population": {
+        "gdp_growth": 4.8524763403, 
+        "world_population": {
           "years": {
             "2008": 26249412, 
             "2009": 26544943, 
@@ -1634,8 +1634,8 @@
         }
       }, 
       "netherlands": {
-        "GDP growth (annual %)": -1.2471751438, 
-        "World Population": {
+        "gdp_growth": -1.2471751438, 
+        "world_population": {
           "years": {
             "2008": 16445593, 
             "2009": 16530388, 
@@ -1646,8 +1646,8 @@
         }
       }, 
       "new_caledonia": {
-        "GDP growth (annual %)": null, 
-        "World Population": {
+        "gdp_growth": null, 
+        "world_population": {
           "years": {
             "2008": 243985, 
             "2009": 245580, 
@@ -1658,8 +1658,8 @@
         }
       }, 
       "new_zealand": {
-        "GDP growth (annual %)": 2.5299015304, 
-        "World Population": {
+        "gdp_growth": 2.5299015304, 
+        "world_population": {
           "years": {
             "2008": 4268900, 
             "2009": 4315800, 
@@ -1670,8 +1670,8 @@
         }
       }, 
       "nicaragua": {
-        "GDP growth (annual %)": 3.3547404566, 
-        "World Population": {
+        "gdp_growth": 3.3547404566, 
+        "world_population": {
           "years": {
             "2008": 5667983, 
             "2009": 5743329, 
@@ -1682,8 +1682,8 @@
         }
       }, 
       "niger": {
-        "GDP growth (annual %)": 10.8275503401, 
-        "World Population": {
+        "gdp_growth": 10.8275503401, 
+        "world_population": {
           "years": {
             "2008": 14737895, 
             "2009": 15302948, 
@@ -1694,8 +1694,8 @@
         }
       }, 
       "nigeria": {
-        "GDP growth (annual %)": 4.2792773139, 
-        "World Population": {
+        "gdp_growth": 4.2792773139, 
+        "world_population": {
           "years": {
             "2008": 151208080, 
             "2009": 155381020, 
@@ -1706,8 +1706,8 @@
         }
       }, 
       "northern_mariana_islands": {
-        "GDP growth (annual %)": null, 
-        "World Population": {
+        "gdp_growth": null, 
+        "world_population": {
           "years": {
             "2008": 57345, 
             "2009": 55278, 
@@ -1718,8 +1718,8 @@
         }
       }, 
       "norway": {
-        "GDP growth (annual %)": 2.896294367, 
-        "World Population": {
+        "gdp_growth": 2.896294367, 
+        "world_population": {
           "years": {
             "2008": 4768212, 
             "2009": 4828726, 
@@ -1730,8 +1730,8 @@
         }
       }, 
       "oman": {
-        "GDP growth (annual %)": 4.986, 
-        "World Population": {
+        "gdp_growth": 4.986, 
+        "world_population": {
           "years": {
             "2008": 2593523, 
             "2009": 2663224, 
@@ -1742,8 +1742,8 @@
         }
       }, 
       "pakistan": {
-        "GDP growth (annual %)": 4.0159076706, 
-        "World Population": {
+        "gdp_growth": 4.0159076706, 
+        "world_population": {
           "years": {
             "2008": 167008083, 
             "2009": 170093999, 
@@ -1754,8 +1754,8 @@
         }
       }, 
       "palau": {
-        "GDP growth (annual %)": 5.6978201821, 
-        "World Population": {
+        "gdp_growth": 5.6978201821, 
+        "world_population": {
           "years": {
             "2008": 20228, 
             "2009": 20344, 
@@ -1766,8 +1766,8 @@
         }
       }, 
       "panama": {
-        "GDP growth (annual %)": 10.2471046592, 
-        "World Population": {
+        "gdp_growth": 10.2471046592, 
+        "world_population": {
           "years": {
             "2008": 3553480, 
             "2009": 3615846, 
@@ -1778,8 +1778,8 @@
         }
       }, 
       "papua_new_guinea": {
-        "GDP growth (annual %)": 8, 
-        "World Population": {
+        "gdp_growth": 8, 
+        "world_population": {
           "years": {
             "2008": 6550877, 
             "2009": 6704829, 
@@ -1790,8 +1790,8 @@
         }
       }, 
       "paraguay": {
-        "GDP growth (annual %)": -1.2389685058, 
-        "World Population": {
+        "gdp_growth": -1.2389685058, 
+        "world_population": {
           "years": {
             "2008": 6236005, 
             "2009": 6347383, 
@@ -1802,8 +1802,8 @@
         }
       }, 
       "peru": {
-        "GDP growth (annual %)": 5.9505910793, 
-        "World Population": {
+        "gdp_growth": 5.9505910793, 
+        "world_population": {
           "years": {
             "2008": 28625628, 
             "2009": 28934303, 
@@ -1814,8 +1814,8 @@
         }
       }, 
       "philippines": {
-        "GDP growth (annual %)": 6.8145407078, 
-        "World Population": {
+        "gdp_growth": 6.8145407078, 
+        "world_population": {
           "years": {
             "2008": 90371287, 
             "2009": 91886400, 
@@ -1826,8 +1826,8 @@
         }
       }, 
       "poland": {
-        "GDP growth (annual %)": 1.9050896698, 
-        "World Population": {
+        "gdp_growth": 1.9050896698, 
+        "world_population": {
           "years": {
             "2008": 38125759, 
             "2009": 38151603, 
@@ -1838,8 +1838,8 @@
         }
       }, 
       "portugal": {
-        "GDP growth (annual %)": -3.2305153947, 
-        "World Population": {
+        "gdp_growth": -3.2305153947, 
+        "world_population": {
           "years": {
             "2008": 10558177, 
             "2009": 10568247, 
@@ -1850,8 +1850,8 @@
         }
       }, 
       "puerto_rico": {
-        "GDP growth (annual %)": -2.7724990762, 
-        "World Population": {
+        "gdp_growth": -2.7724990762, 
+        "world_population": {
           "years": {
             "2008": 3760866, 
             "2009": 3740410, 
@@ -1862,8 +1862,8 @@
         }
       }, 
       "qatar": {
-        "GDP growth (annual %)": 2.56, 
-        "World Population": {
+        "gdp_growth": 2.56, 
+        "world_population": {
           "years": {
             "2008": 1359114, 
             "2009": 1564082, 
@@ -1874,8 +1874,8 @@
         }
       }, 
       "romania": {
-        "GDP growth (annual %)": 0.3536783975, 
-        "World Population": {
+        "gdp_growth": 0.3536783975, 
+        "world_population": {
           "years": {
             "2008": 20537875, 
             "2009": 20367487, 
@@ -1886,8 +1886,8 @@
         }
       }, 
       "russian_federation": {
-        "GDP growth (annual %)": 3.4355454394, 
-        "World Population": {
+        "gdp_growth": 3.4355454394, 
+        "world_population": {
           "years": {
             "2008": 141956409, 
             "2009": 141909244, 
@@ -1898,8 +1898,8 @@
         }
       }, 
       "rwanda": {
-        "GDP growth (annual %)": 7.3062922517, 
-        "World Population": {
+        "gdp_growth": 7.3062922517, 
+        "world_population": {
           "years": {
             "2008": 10222961, 
             "2009": 10529668, 
@@ -1910,8 +1910,8 @@
         }
       }, 
       "samoa": {
-        "GDP growth (annual %)": 2.9396082892, 
-        "World Population": {
+        "gdp_growth": 2.9396082892, 
+        "world_population": {
           "years": {
             "2008": 183444, 
             "2009": 184704, 
@@ -1922,8 +1922,8 @@
         }
       }, 
       "san_marino": {
-        "GDP growth (annual %)": null, 
-        "World Population": {
+        "gdp_growth": null, 
+        "world_population": {
           "years": {
             "2008": 30549, 
             "2009": 30698, 
@@ -1934,8 +1934,8 @@
         }
       }, 
       "sao_tome_and_principe": {
-        "GDP growth (annual %)": 4, 
-        "World Population": {
+        "gdp_growth": 4, 
+        "world_population": {
           "years": {
             "2008": 168253, 
             "2009": 173240, 
@@ -1946,8 +1946,8 @@
         }
       }, 
       "saudi_arabia": {
-        "GDP growth (annual %)": 5.812, 
-        "World Population": {
+        "gdp_growth": 5.812, 
+        "world_population": {
           "years": {
             "2008": 26366358, 
             "2009": 26796375, 
@@ -1958,8 +1958,8 @@
         }
       }, 
       "senegal": {
-        "GDP growth (annual %)": 3.4529025825, 
-        "World Population": {
+        "gdp_growth": 3.4529025825, 
+        "world_population": {
           "years": {
             "2008": 12238791, 
             "2009": 12586827, 
@@ -1970,8 +1970,8 @@
         }
       }, 
       "serbia": {
-        "GDP growth (annual %)": -1.523, 
-        "World Population": {
+        "gdp_growth": -1.523, 
+        "world_population": {
           "years": {
             "2008": 7350221, 
             "2009": 7320807, 
@@ -1982,8 +1982,8 @@
         }
       }, 
       "seychelles": {
-        "GDP growth (annual %)": 2.8985, 
-        "World Population": {
+        "gdp_growth": 2.8985, 
+        "world_population": {
           "years": {
             "2008": 86956, 
             "2009": 87298, 
@@ -1994,8 +1994,8 @@
         }
       }, 
       "sierra_leone": {
-        "GDP growth (annual %)": 15.2238474117, 
-        "World Population": {
+        "gdp_growth": 15.2238474117, 
+        "world_population": {
           "years": {
             "2008": 5532139, 
             "2009": 5641182, 
@@ -2006,8 +2006,8 @@
         }
       }, 
       "singapore": {
-        "GDP growth (annual %)": 2.503728581, 
-        "World Population": {
+        "gdp_growth": 2.503728581, 
+        "world_population": {
           "years": {
             "2008": 4839400, 
             "2009": 4987600, 
@@ -2018,8 +2018,8 @@
         }
       }, 
       "sint_maarten_": {
-        "GDP growth (annual %)": null, 
-        "World Population": {
+        "gdp_growth": null, 
+        "world_population": {
           "years": {
             "2008": 40459, 
             "2009": 39133, 
@@ -2030,8 +2030,8 @@
         }
       }, 
       "slovak_republic": {
-        "GDP growth (annual %)": 1.8013052476, 
-        "World Population": {
+        "gdp_growth": 1.8013052476, 
+        "world_population": {
           "years": {
             "2008": 5379233, 
             "2009": 5386406, 
@@ -2042,8 +2042,8 @@
         }
       }, 
       "slovenia": {
-        "GDP growth (annual %)": -2.5430680958, 
-        "World Population": {
+        "gdp_growth": -2.5430680958, 
+        "world_population": {
           "years": {
             "2008": 2021316, 
             "2009": 2039669, 
@@ -2054,8 +2054,8 @@
         }
       }, 
       "solomon_islands": {
-        "GDP growth (annual %)": 4.8585931835, 
-        "World Population": {
+        "gdp_growth": 4.8585931835, 
+        "world_population": {
           "years": {
             "2008": 503541, 
             "2009": 514964, 
@@ -2066,8 +2066,8 @@
         }
       }, 
       "somalia": {
-        "GDP growth (annual %)": null, 
-        "World Population": {
+        "gdp_growth": null, 
+        "world_population": {
           "years": {
             "2008": 9140259, 
             "2009": 9380854, 
@@ -2078,8 +2078,8 @@
         }
       }, 
       "south_africa": {
-        "GDP growth (annual %)": 2.4668694939, 
-        "World Population": {
+        "gdp_growth": 2.4668694939, 
+        "world_population": {
           "years": {
             "2008": 49561256, 
             "2009": 50222996, 
@@ -2090,8 +2090,8 @@
         }
       }, 
       "south_sudan": {
-        "GDP growth (annual %)": -48.9829830446, 
-        "World Population": {
+        "gdp_growth": -48.9829830446, 
+        "world_population": {
           "years": {
             "2008": 9118386, 
             "2009": 9520571, 
@@ -2102,8 +2102,8 @@
         }
       }, 
       "spain": {
-        "GDP growth (annual %)": -1.641456256, 
-        "World Population": {
+        "gdp_growth": -1.641456256, 
+        "world_population": {
           "years": {
             "2008": 45954106, 
             "2009": 46362946, 
@@ -2114,8 +2114,8 @@
         }
       }, 
       "sri_lanka": {
-        "GDP growth (annual %)": 6.3413615505, 
-        "World Population": {
+        "gdp_growth": 6.3413615505, 
+        "world_population": {
           "years": {
             "2008": 20217000, 
             "2009": 20450000, 
@@ -2126,8 +2126,8 @@
         }
       }, 
       "st_kitts_and_nevis": {
-        "GDP growth (annual %)": -1.2287887654, 
-        "World Population": {
+        "gdp_growth": -1.2287887654, 
+        "world_population": {
           "years": {
             "2008": 51110, 
             "2009": 51731, 
@@ -2138,8 +2138,8 @@
         }
       }, 
       "st_lucia": {
-        "GDP growth (annual %)": -1.2833168806, 
-        "World Population": {
+        "gdp_growth": -1.2833168806, 
+        "world_population": {
           "years": {
             "2008": 172734, 
             "2009": 175200, 
@@ -2150,8 +2150,8 @@
         }
       }, 
       "st_martin_": {
-        "GDP growth (annual %)": null, 
-        "World Population": {
+        "gdp_growth": null, 
+        "world_population": {
           "years": {
             "2008": 29376, 
             "2009": 29820, 
@@ -2162,8 +2162,8 @@
         }
       }, 
       "st_vincent_and_the_grenadines": {
-        "GDP growth (annual %)": 1.5921616656, 
-        "World Population": {
+        "gdp_growth": 1.5921616656, 
+        "world_population": {
           "years": {
             "2008": 109158, 
             "2009": 109249, 
@@ -2174,8 +2174,8 @@
         }
       }, 
       "sudan": {
-        "GDP growth (annual %)": -10.1, 
-        "World Population": {
+        "gdp_growth": -10.1, 
+        "world_population": {
           "years": {
             "2008": 34040065, 
             "2009": 34853178, 
@@ -2186,8 +2186,8 @@
         }
       }, 
       "suriname": {
-        "GDP growth (annual %)": 3.8777660695, 
-        "World Population": {
+        "gdp_growth": 3.8777660695, 
+        "world_population": {
           "years": {
             "2008": 515372, 
             "2009": 520173, 
@@ -2198,8 +2198,8 @@
         }
       }, 
       "swaziland": {
-        "GDP growth (annual %)": 1.9211785253, 
-        "World Population": {
+        "gdp_growth": 1.9211785253, 
+        "world_population": {
           "years": {
             "2008": 1153929, 
             "2009": 1173678, 
@@ -2210,8 +2210,8 @@
         }
       }, 
       "sweden": {
-        "GDP growth (annual %)": 0.9281755581, 
-        "World Population": {
+        "gdp_growth": 0.9281755581, 
+        "world_population": {
           "years": {
             "2008": 9219637, 
             "2009": 9298515, 
@@ -2222,8 +2222,8 @@
         }
       }, 
       "switzerland": {
-        "GDP growth (annual %)": 1.0490934579, 
-        "World Population": {
+        "gdp_growth": 1.0490934579, 
+        "world_population": {
           "years": {
             "2008": 7647675, 
             "2009": 7743831, 
@@ -2234,8 +2234,8 @@
         }
       }, 
       "syrian_arab_republic": {
-        "GDP growth (annual %)": null, 
-        "World Population": {
+        "gdp_growth": null, 
+        "world_population": {
           "years": {
             "2008": 20346056, 
             "2009": 21031546, 
@@ -2246,8 +2246,8 @@
         }
       }, 
       "tajikistan": {
-        "GDP growth (annual %)": 7.5, 
-        "World Population": {
+        "gdp_growth": 7.5, 
+        "world_population": {
           "years": {
             "2008": 7275252, 
             "2009": 7447396, 
@@ -2258,8 +2258,8 @@
         }
       }, 
       "tanzania": {
-        "GDP growth (annual %)": 6.9329883235, 
-        "World Population": {
+        "gdp_growth": 6.9329883235, 
+        "world_population": {
           "years": {
             "2008": 42353790, 
             "2009": 43639752, 
@@ -2270,8 +2270,8 @@
         }
       }, 
       "thailand": {
-        "GDP growth (annual %)": 7.6671737989, 
-        "World Population": {
+        "gdp_growth": 7.6671737989, 
+        "world_population": {
           "years": {
             "2008": 66185340, 
             "2009": 66277335, 
@@ -2282,8 +2282,8 @@
         }
       }, 
       "timorleste": {
-        "GDP growth (annual %)": 8.3404987102, 
-        "World Population": {
+        "gdp_growth": 8.3404987102, 
+        "world_population": {
           "years": {
             "2008": 1032182, 
             "2009": 1049156, 
@@ -2294,8 +2294,8 @@
         }
       }, 
       "togo": {
-        "GDP growth (annual %)": 5.9124911196, 
-        "World Population": {
+        "gdp_growth": 5.9124911196, 
+        "world_population": {
           "years": {
             "2008": 5987491, 
             "2009": 6144457, 
@@ -2306,8 +2306,8 @@
         }
       }, 
       "tonga": {
-        "GDP growth (annual %)": 0.8464590804, 
-        "World Population": {
+        "gdp_growth": 0.8464590804, 
+        "world_population": {
           "years": {
             "2008": 102947, 
             "2009": 103557, 
@@ -2318,8 +2318,8 @@
         }
       }, 
       "trinidad_and_tobago": {
-        "GDP growth (annual %)": 1.521672127, 
-        "World Population": {
+        "gdp_growth": 1.521672127, 
+        "world_population": {
           "years": {
             "2008": 1316449, 
             "2009": 1322518, 
@@ -2330,8 +2330,8 @@
         }
       }, 
       "tunisia": {
-        "GDP growth (annual %)": 4.0901557194, 
-        "World Population": {
+        "gdp_growth": 4.0901557194, 
+        "world_population": {
           "years": {
             "2008": 10328900, 
             "2009": 10439600, 
@@ -2342,8 +2342,8 @@
         }
       }, 
       "turkey": {
-        "GDP growth (annual %)": 2.1274606134, 
-        "World Population": {
+        "gdp_growth": 2.1274606134, 
+        "world_population": {
           "years": {
             "2008": 70363511, 
             "2009": 71241080, 
@@ -2354,8 +2354,8 @@
         }
       }, 
       "turkmenistan": {
-        "GDP growth (annual %)": 11.1018388818, 
-        "World Population": {
+        "gdp_growth": 11.1018388818, 
+        "world_population": {
           "years": {
             "2008": 4917543, 
             "2009": 4978962, 
@@ -2366,8 +2366,8 @@
         }
       }, 
       "turks_and_caicos_islands": {
-        "GDP growth (annual %)": null, 
-        "World Population": {
+        "gdp_growth": null, 
+        "world_population": {
           "years": {
             "2008": 29481, 
             "2009": 30247, 
@@ -2378,8 +2378,8 @@
         }
       }, 
       "tuvalu": {
-        "GDP growth (annual %)": 0.1744581448, 
-        "World Population": {
+        "gdp_growth": 0.1744581448, 
+        "world_population": {
           "years": {
             "2008": 9788, 
             "2009": 9808, 
@@ -2390,8 +2390,8 @@
         }
       }, 
       "uganda": {
-        "GDP growth (annual %)": 3.410515784, 
-        "World Population": {
+        "gdp_growth": 3.410515784, 
+        "world_population": {
           "years": {
             "2008": 31778799, 
             "2009": 32864328, 
@@ -2402,8 +2402,8 @@
         }
       }, 
       "ukraine": {
-        "GDP growth (annual %)": 0.2, 
-        "World Population": {
+        "gdp_growth": 0.2, 
+        "world_population": {
           "years": {
             "2008": 46258200, 
             "2009": 46053300, 
@@ -2414,8 +2414,8 @@
         }
       }, 
       "united_arab_emirates": {
-        "GDP growth (annual %)": 4.365219161, 
-        "World Population": {
+        "gdp_growth": 4.365219161, 
+        "world_population": {
           "years": {
             "2008": 6798635, 
             "2009": 7718319, 
@@ -2426,8 +2426,8 @@
         }
       }, 
       "united_kingdom": {
-        "GDP growth (annual %)": 0.2777230438, 
-        "World Population": {
+        "gdp_growth": 0.2777230438, 
+        "world_population": {
           "years": {
             "2008": 61806995, 
             "2009": 62276270, 
@@ -2438,8 +2438,8 @@
         }
       }, 
       "united_states": {
-        "GDP growth (annual %)": 2.7789588371, 
-        "World Population": {
+        "gdp_growth": 2.7789588371, 
+        "world_population": {
           "years": {
             "2008": 304093966, 
             "2009": 306771529, 
@@ -2450,8 +2450,8 @@
         }
       }, 
       "uruguay": {
-        "GDP growth (annual %)": 3.6763673574, 
-        "World Population": {
+        "gdp_growth": 3.6763673574, 
+        "world_population": {
           "years": {
             "2008": 3348898, 
             "2009": 3360431, 
@@ -2462,8 +2462,8 @@
         }
       }, 
       "uzbekistan": {
-        "GDP growth (annual %)": 8.2, 
-        "World Population": {
+        "gdp_growth": 8.2, 
+        "world_population": {
           "years": {
             "2008": 27302800, 
             "2009": 27767400, 
@@ -2474,8 +2474,8 @@
         }
       }, 
       "vanuatu": {
-        "GDP growth (annual %)": 1.8001037524, 
-        "World Population": {
+        "gdp_growth": 1.8001037524, 
+        "world_population": {
           "years": {
             "2008": 225398, 
             "2009": 230833, 
@@ -2486,8 +2486,8 @@
         }
       }, 
       "venezuela_rb": {
-        "GDP growth (annual %)": 5.6262685335, 
-        "World Population": {
+        "gdp_growth": 5.6262685335, 
+        "world_population": {
           "years": {
             "2008": 28120312, 
             "2009": 28583040, 
@@ -2498,8 +2498,8 @@
         }
       }, 
       "vietnam": {
-        "GDP growth (annual %)": 5.247367156, 
-        "World Population": {
+        "gdp_growth": 5.247367156, 
+        "world_population": {
           "years": {
             "2008": 85122300, 
             "2009": 86025000, 
@@ -2510,8 +2510,8 @@
         }
       }, 
       "virgin_islands_": {
-        "GDP growth (annual %)": null, 
-        "World Population": {
+        "gdp_growth": null, 
+        "world_population": {
           "years": {
             "2008": 107091, 
             "2009": 106707, 
@@ -2522,8 +2522,8 @@
         }
       }, 
       "west_bank_and_gaza": {
-        "GDP growth (annual %)": 13.8372555942, 
-        "World Population": {
+        "gdp_growth": 13.8372555942, 
+        "world_population": {
           "years": {
             "2008": 3596688, 
             "2009": 3702218, 
@@ -2534,8 +2534,8 @@
         }
       }, 
       "yemen_rep": {
-        "GDP growth (annual %)": 2.4698785142, 
-        "World Population": {
+        "gdp_growth": 2.4698785142, 
+        "world_population": {
           "years": {
             "2008": 21703571, 
             "2009": 22229625, 
@@ -2546,8 +2546,8 @@
         }
       }, 
       "zambia": {
-        "GDP growth (annual %)": 7.2699652778, 
-        "World Population": {
+        "gdp_growth": 7.2699652778, 
+        "world_population": {
           "years": {
             "2008": 12456527, 
             "2009": 12825031, 
@@ -2558,8 +2558,8 @@
         }
       }, 
       "zimbabwe": {
-        "GDP growth (annual %)": 5.3173568045, 
-        "World Population": {
+        "gdp_growth": 5.3173568045, 
+        "world_population": {
           "years": {
             "2008": 12784041, 
             "2009": 12888918, 
@@ -2573,11 +2573,11 @@
   }, 
   "meta": {
     "indicators": {
-      "GDP growth (annual %)": {
+      "gdp_growth": {
         "max_value": 104.4844632768, 
         "min_value": 2.4698785142
       }, 
-      "World Population": {
+      "world_population": {
         "max_value": 1350695000, 
         "min_value": 9788, 
         "years": [
