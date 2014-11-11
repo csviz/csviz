@@ -1,0 +1,75 @@
+@import '_variables';
+
+// material-ui
+@import 'material';
+
+body {
+  background-color: #e1e1e1;
+}
+
+.main {
+  padding-top: $padding;
+  margin-top: $header;
+
+  .map-container {
+    position: relative;
+    margin-top: -$padding * 2;
+
+    #map {
+      height: 500px;
+    }
+  }
+}
+
+.sidebar {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: $header;
+    line-height: $header;
+    white-space: nowrap;
+    width: 100%;
+    background-color: #fff;
+    margin: 0;
+    padding: 0 $padding * 2;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+    img {
+      margin: 0 $margin;
+    }
+
+    h1 {
+      display: inline;
+      font-size: 1.6em;
+      padding-left: $padding;
+    }
+
+    .about {
+      display: inline-block;
+      float: right;
+    }
+  }
+
+  .selector-box {
+    .selector-description {
+      padding: $padding $padding * 2;
+    }
+  }
+
+  .social-panel {
+    padding: $padding $padding * 2;
+  }
+}
+
+.card {
+  // margin: $padding 0;
+  background-color: #fff;
+  padding: $padding 0;
+}
+
+@import 'mapbox';
+@import 'chartist';
+@import 'timeline';

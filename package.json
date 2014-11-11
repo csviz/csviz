@@ -1,58 +1,46 @@
 {
-  "name": "csviz",
-  "private": true,
+  "name": "CSViz",
   "version": "0.1.0",
+  "description": "Simple geo data viz for CSV files",
+  "main": "main.js",
+  "scripts": {
+    "lib": "cp -r node_modules/mapbox.js/theme/images build/",
+    "build-js": "browserify main.js -t [ reactify --extension js --harmony ] | uglifyjs -mc > build/bundle.js",
+    "build-css": "node-sass assets/sass/main.scss build/bundle.css",
+    "build": "npm run lib && npm run build-js && npm run build-css",
+    "watch-css": "watchy -w assets/sass -- 'npm run build-css'",
+    "browser-sync": "browser-sync start --server --files 'build/*.*'",
+    "watch-js": "watchify main.js -t [ reactify --extension js --harmony ] -o build/bundle.js -dv",
+    "watch": "npm run lib &&  npm run browser-sync & npm run watch-js & npm run watch-css",
+    "clean": "rm -rf build && mkdir build"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/csviz/csviz.git"
   },
+  "author": "Wiredcraft",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/csviz/csviz/issues"
+  },
   "homepage": "https://github.com/csviz/csviz",
-  "author": {
-    "name": "CSViz",
-    "email": "fraserxu@wiredcraft.com",
-    "url": "http://csviz.org"
-  },
-  "scripts": {
-    "test": "jest"
-  },
-  "jest": {
-    "rootDir": "src",
-    "scriptPreprocessor": "<rootDir>/__tests__/preprocessor.js",
-    "unmockedModulePathPatterns": [
-      "./node_modules/"
-    ],
-    "testPathIgnorePatterns": [
-      "<rootDir>/__tests__/preprocessor.js"
-    ]
-  },
   "dependencies": {
-    "binary-csv": "^0.2.2",
-    "buffer": "^2.5.0",
-    "concat-stream": "^1.4.6",
-    "es6-promise": "^1.0.0",
-    "github-api": "^0.7.0",
+    "axios": "^0.4.1",
+    "flux": "^2.0.1",
     "lodash": "^2.4.1",
-    "mapbox.js": "^2.1.0",
-    "react": "^0.11.1",
-    "react-router": "^0.7.0",
-    "xhr": "^1.16.0"
+    "mapbox.js": "^2.1.4",
+    "material-ui": "^0.2.1",
+    "react": "^0.12.0",
+    "react-chartist": "^0.2.0",
+    "react-document-title": "^0.1.2",
+    "react-router": "^0.10.2",
+    "topojson": "^1.6.18",
+    "object-assign": "^1.0.0"
   },
   "devDependencies": {
-    "browserify": "^5.11.0",
-    "eggshell": "^0.1.20",
-    "gulp": "~3.8.6",
-    "gulp-concat": "^2.3.4",
-    "gulp-if": "^1.2.4",
-    "gulp-plumber": "^0.6.5",
-    "gulp-sass": "~0.7.3",
-    "gulp-uglify": "^1.0.1",
-    "gulp-util": "^3.0.1",
-    "jest-cli": "^0.1.18",
-    "react-tools": "^0.11.2",
-    "reactify": "~0.14.0",
-    "vinyl-transform": "0.0.1"
-  },
-  "engines": {
-    "node": ">=0.10.0"
+    "node-sass": "^1.0.3",
+    "reactify": "^0.15.2",
+    "watchify": "^2.1.0",
+    "watchy": "^0.5.3"
   }
 }
