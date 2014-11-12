@@ -37,12 +37,16 @@
     "gdp_growth": {
       "type": "number",
       "name": "GDP growth (annual %)",
-      "description": "Growth per year"
+      "description": "Growth per year",
+      "display": "{{ currentIndicator }}%",
+      "tooltip": "tooltip: {{ currentIndicator }}%"
     },
     "world_population": {
       "type": "number",
       "description": "Population of country",
-      "name": "World Population"
+      "name": "World Population",
+      "display": "{{ currentIndicator }}%",
+      "tooltip": "tooltip: {{ currentIndicator}}%"
     }
   }
 }
