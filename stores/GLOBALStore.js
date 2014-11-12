@@ -46,6 +46,7 @@ IndicatorStore.dispatchToken = AppDispatcher.register(function(payload) {
       break
 
     case ActionTypes.CHANGE_INDICATOR:
+      console.log('on indcator change')
       setSelectedIndicator(response)
       // also check if there's year filed
       if(_global_data.meta.indicators[response].years && !_selected_year) {
