@@ -75,7 +75,7 @@ var Map = React.createClass({
         case 'number':
           // check whether indicator has years
           if (configs.indicators[selected_indicator].years) {
-            color = MapUtils.getNumberColor(value.years[selected_year],configs, meta, selected_indicator)
+            color = MapUtils.getNumberColor(value.years[selected_year], configs, meta, selected_indicator)
           } else {
             color = MapUtils.getNumberColor(value, configs, meta, selected_indicator)
           }

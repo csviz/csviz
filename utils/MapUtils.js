@@ -1,7 +1,7 @@
 'use strict'
 
 var _ = require('lodash')
-var Rainbow = require('./RainbowVis')
+// var Rainbow = require('./RainbowVis')
 
 var MapUtils = {
 
@@ -9,10 +9,17 @@ var MapUtils = {
 
     var min = meta.indicators[selected_indicator].min_value
     var max = meta.indicators[selected_indicator].max_value
-    var start = configs.ui.choropleth.start
-    var end = configs.ui.choropleth.end
+    // var start = configs.ui.choropleth.start
+    // var end = configs.ui.choropleth.end
+    var colors = configs.ui.choropleth
+    var steps = configs.ui.choropleth.length
+    var step = (max - min)/steps
 
-    return MapUtils.getColorCode(min, max, start, end, value)
+    var colorIndex = ((value - min)/step).toFixed()
+
+    return colors[colorIndex]
+
+    // return MapUtils.getColorFromRange(value, ranges, colors)
   },
 
   getSelectColor(value, configs, selected_indicator) {
@@ -26,16 +33,17 @@ var MapUtils = {
     return MapUtils.getColorCode(min, max, start, end, d)
   },
 
-  getColorCode(min, max, start, end, d) {
-    var rainbow = new Rainbow()
 
-    // ['#ffffff', ... '#000000']
-    rainbow.setSpectrum(start, end)
-    // [0, ... 90]
-    rainbow.setNumberRange(min, max)
+  // getColorCode(min, max, start, end, d) {
+  //   var rainbow = new Rainbow()
 
-    return '#' + rainbow.colorAt(d)
-  },
+  //   // ['#ffffff', ... '#000000']
+  //   rainbow.setSpectrum(start, end)
+  //   // [0, ... 90]
+  //   rainbow.setNumberRange(min, max)
+
+  //   return '#' + rainbow.colorAt(d)
+  // },
 
   compileTemplate(tpl, data) {
     var re = /{{(.+?)}}/g,
