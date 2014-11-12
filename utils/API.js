@@ -14,6 +14,7 @@ var API = {
     axios.get(configPath).
       then(function(res) {
         MapServerActionCreators.handleCONFIGSuccess(res.data)
+        return true
       })
       .catch(function(err) {
         MapServerActionCreators.handleCONFIGError(err)
@@ -24,6 +25,7 @@ var API = {
     axios.get(globalPath).
       then(function(res) {
         MapServerActionCreators.handleINDICATORSuccess(res.data)
+        return true
       })
       .catch(function(err) {
         MapServerActionCreators.handleINDICATORError(err)
@@ -34,6 +36,7 @@ var API = {
     axios.get(geoPath).
       then(function(res) {
         MapServerActionCreators.handleGEOSuccess(topojson.feature(res.data, res.data.objects['Aqueduct_country']).features)
+        return true
       })
       .catch(function(err) {
         MapServerActionCreators.handleGEOError(err)
