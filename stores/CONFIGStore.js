@@ -4,7 +4,7 @@ var AppDispatcher = require('../dispatcher/AppDispatcher')
 var createStore= require('../utils/StoreUtils').createStore
 var ActionTypes = require('../constants/ActionTypes')
 
-var _config_data = []
+var _config_data = {}
 
 var CONFIGStore = createStore({
   get() {

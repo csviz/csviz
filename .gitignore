@@ -12,3 +12,6 @@ node_modules
 
 # this is only used for development
 meta.json
+
+data/view_configuration.json
+data/global.json
