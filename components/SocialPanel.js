@@ -5,6 +5,9 @@ var mui = require('material-ui')
 var PaperButton = mui.PaperButton
 var Dialog = mui.Dialog
 
+var config = require('../config.json')
+var globalPath = config.globalPath
+
 var SocialPanel = React.createClass({
 
   displayName: 'SocialPanel',
@@ -20,7 +23,7 @@ var SocialPanel = React.createClass({
   },
 
   _download() {
-    window.location = this.props.configs.data.globals
+    window.location = globalPath
   },
 
   _setShareContent(event, value) {
@@ -43,7 +46,6 @@ var SocialPanel = React.createClass({
     var dialogActions = [
       { text: 'CLOSE' }
     ]
-    // var Download = this.props.configs.data ? <a href={this.props.configs.data.globals} download>Download</a> : null
 
     return (
       <div className='card'>
