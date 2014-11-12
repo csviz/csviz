@@ -9,6 +9,12 @@ var SocialPanel = React.createClass({
 
   displayName: 'SocialPanel',
 
+  getInitialState: function() {
+    return {
+      shareContent: window.location.href
+    };
+  },
+
   _showDialog() {
     this.refs.shareDialog.show();
   },
@@ -17,10 +23,25 @@ var SocialPanel = React.createClass({
     window.location = this.props.configs.data.globals
   },
 
+  _setShareContent(event, value) {
+    this.setState({shareContent: event.target.value})
+  },
+
+  _shareOnTwitter() {
+    var twitter_url = 'https://twitter.com/share?url=' + encodeURIComponent(this.state.shareContent) + '&text=' + encodeURIComponent(this.state.shareContent) + '&via=csviz'
+
+    window.open(twitter_url, 'Share via Twitter', 'width=600,height=400,resizable,scrollbars,status')
+  },
+
+  _shareOnFacebook() {
+    var facebook_url = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(this.state.shareContent)
+
+    window.open(facebook_url, 'Share via Facebook', 'width=600,height=400,resizable,scrollbars,status')
+  },
+
   render() {
     var dialogActions = [
-      { text: 'CANCEL' },
-      { text: 'SUBMIT', onClick: this._onDialogSubmit }
+      { text: 'CLOSE' }
     ]
     // var Download = this.props.configs.data ? <a href={this.props.configs.data.globals} download>Download</a> : null
 
@@ -38,10 +59,18 @@ var SocialPanel = React.createClass({
 
           <p>Just copy and paste the URL below to share your visualization.</p>
 
-          <textarea defaultValue={window.location.href}></textarea>
+          <textarea
+            onChange={this._setShareContent}
+            value={this.state.shareContent}
+            rows="5"
+            cols="80"
+          />
 
-          <a href='https://twitter.com'>Twitter</a>
-          <a href='https://facebook.com'>Facebook</a>
+          <div className='share-links'>
+            <PaperButton label='Share on Twitter' onClick={this._shareOnTwitter} />
+            <PaperButton label='Share on Facebook' onClick={this._shareOnFacebook} />
+          </div>
+
         </Dialog>
       </div>
     )

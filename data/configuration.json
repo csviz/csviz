@@ -10,10 +10,11 @@
     "timeline": false,
     "about": false,
     "choropleth": [
-      "#ffffff",
-      "#fffccc",
-      "#fffbbb",
-      "#000000"
+      "#74a6ae",
+      "#78aca6",
+      "#7fb59b",
+      "#88c08c",
+      "#91cc7d"
     ],
     "menu": {
       "Financial": ["poverty"],

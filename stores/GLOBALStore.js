@@ -41,8 +41,7 @@ IndicatorStore.dispatchToken = AppDispatcher.register(function(payload) {
     case ActionTypes.REQUEST_INDICATOR_SUCCESS:
       _global_data = response
 
-      // set default indicator and years
-      // get first indicators
+      // set default indicator
       setSelectedIndicator(Object.keys(response.meta.indicators)[0])
       break
 
