@@ -49,8 +49,9 @@ IndicatorStore.dispatchToken = AppDispatcher.register(function(payload) {
     case ActionTypes.CHANGE_INDICATOR:
       setSelectedIndicator(response)
       // also check if there's year filed
-      if(_global_data.meta.indicators[response].years && !_selected_year)
-      setSelectedYear(_global_data.meta.indicators[response].years[0])
+      if(_global_data.meta.indicators[response].years && !_selected_year) {
+        setSelectedYear(_global_data.meta.indicators[response].years[0])
+      }
       break
 
     case ActionTypes.CHANGE_SELECTED_YEAR:

@@ -33,7 +33,6 @@ var MapUtils = {
     return MapUtils.getColorCode(min, max, start, end, d)
   },
 
-
   // getColorCode(min, max, start, end, d) {
   //   var rainbow = new Rainbow()
 
