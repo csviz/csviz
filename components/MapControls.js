@@ -1,6 +1,7 @@
 'use strict'
 
 var React = require('react')
+var _ = require('lodash')
 
 var ControlHeader = require('./ControlHeader')
 var IndicatorSelector = require('./IndicatorSelector')
@@ -23,7 +24,7 @@ var MapControls = React.createClass({
 
         <IndicatorSelector configs={this.props.configs} />
 
-        {  this.props.configs.indicators && this.props.configs.indicators[selected_indicator].years ?
+        {  this.props.configs.indicators && !_.isEmpty(selected_indicator) && this.props.configs.indicators[selected_indicator].years ?
           <Timeline /> : null
         }
 
