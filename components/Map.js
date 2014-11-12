@@ -122,7 +122,7 @@ var Map = React.createClass({
           }
         }
 
-        var value = MapUtils.compileTemplate(tooltipTemplate, {value: value})
+        var value = MapUtils.compileTemplate(tooltipTemplate, {currentIndicator: value})
 
         popup.setContent('<div class="marker-title">' + layer.feature.properties['ISO_NAME'] + '</div>' + value)
 

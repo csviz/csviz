@@ -4830,7 +4830,8 @@ body {
   padding: 0 10px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
   .sidebar .header img {
-    margin: 0 5px; }
+    margin: 0 5px;
+    width: 20px; }
   .sidebar .header h1 {
     display: inline;
     font-size: 1.6em;

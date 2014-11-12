@@ -3,7 +3,7 @@
     "name": "CSViz",
     "description": "The CSViz Demo App",
     "url": "http://csviz.org",
-    "logo": "http://csviz.org/logo.gif"
+    "logo": "http://csviz.dev.wiredcraft.com/assets/images/logo.png"
   },
   "ui": {
     "legend": false,
