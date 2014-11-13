@@ -69,9 +69,10 @@ body {
     }
 
     .about {
+      position: fixed;
+      right: 0;
       display: inline-block;
-      float: right;
-      margin-top: $margin;
+      top: $margin;
     }
   }
 
@@ -177,9 +178,12 @@ body {
 
   @include desktop {
     width: 31.25%;
-    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: scroll;
     background: #fff;
-    min-height: 1000px;
 
     .timeline-box {
       position: fixed;
