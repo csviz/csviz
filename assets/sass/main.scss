@@ -94,7 +94,6 @@ body {
     text-align: center;
     margin-top: 2 * $margin;
     margin-bottom: 2 * $margin;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     padding-left: 2 * $margin;
     height: 40px;
 
@@ -168,6 +167,10 @@ body {
       .selector {
         margin-top: -($padding * 3);
       }
+    }
+
+    .timeline-box {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }
 
   }

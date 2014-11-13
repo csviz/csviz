@@ -4866,7 +4866,6 @@ body {
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     padding-left: 10px;
     height: 40px; }
     .sidebar .timeline-box .timeline li {
@@ -4913,6 +4912,9 @@ body {
 
     .sidebar .selector-box .selector {
       margin-top: -15px; }
+
+    .sidebar .timeline-box {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
  }
   @media (min-width: 768px) {
     .sidebar {
