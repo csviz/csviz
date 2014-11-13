@@ -24,6 +24,7 @@ body {
 .sidebar {
   .header {
     position: fixed;
+    z-index: 1000;
     top: 0;
     left: 0;
     right: 0;
@@ -40,6 +41,8 @@ body {
     img {
       margin: 0 $margin;
       width: 20px;
+      height: 25px;
+      margin-top: -10px;
     }
 
     h1 {
@@ -51,17 +54,87 @@ body {
     .about {
       display: inline-block;
       float: right;
+      margin-top: $margin;
     }
   }
 
   .selector-box {
+    .selector {
+      margin-top: -($padding * 3);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      .mui-drop-down-menu {
+        margin-left: -($padding * 3);
+      }
+
+    }
     .selector-description {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
       padding: $padding $padding * 2;
     }
   }
 
+  .timeline-box {
+    text-align: center;
+    margin-top: 2 * $margin;
+    margin-bottom: 2 * $margin;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding-left: 2 * $margin;
+
+    .timeline {
+      margin-bottom: 20px;
+      li {
+        display: inline;
+        list-style: none;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+        border-left: 1px solid rgba(0, 0, 0, 0.05);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        padding: 5px 10px;
+        cursor: pointer;
+        &.active {
+          background-color: rgba(0, 0, 0, 0.05);
+        }
+        &:last-child {
+          border-right: 1px solid rgba(0, 0, 0, 0.05);
+        }
+      }
+
+    }
+  }
+
   .social-panel {
+    text-align: center;
     padding: $padding $padding * 2;
+    .mui-paper-button {
+      width: 50%;
+    }
+    // override the default icon style
+    .mui-paper-button-icon {
+      float: left;
+      font-size: 15px;
+      height: 20px;
+      margin-top: 2 * $margin;
+      margin-right: $margin;
+    }
+  }
+
+  .average-box {
+    h5 {
+      margin-left: 2 * $margin;
+    }
+    .average-chart {
+      ul {
+        margin-left: 2 * $margin;
+        li {
+          padding: 2 * $padding 0;
+          list-style: none;
+          border-top: 1px solid rgba(0, 0, 0, 0.05);
+          .value {
+            float: right;
+            margin-right: 2 * $margin;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -73,4 +146,3 @@ body {
 
 @import 'mapbox';
 @import 'chartist';
-@import 'timeline';
