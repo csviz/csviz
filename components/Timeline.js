@@ -30,16 +30,14 @@ var Timeline = React.createClass({
     var selected_indicator = GLOBALStore.getSelectedIndicator()
 
     return (
-      <div className='card'>
-        <div className='timeline-box'>
-          <ul className='timeline'>
-            { this.state.globals.meta ?
-                this.state.globals.meta.indicators[selected_indicator].years.map(function(year, key) {
-                  return <li value={key} className={ (year == this.state.selected_year) ? 'active' : null } onClick={this.handleYearClick}>{year}</li>
-                }, this) : null
-            }
-          </ul>
-        </div>
+      <div className='timeline-box'>
+        <ul className='timeline'>
+          { this.state.globals.meta ?
+              this.state.globals.meta.indicators[selected_indicator].years.map(function(year, key) {
+                return <li value={key} className={ (year == this.state.selected_year) ? 'active' : null } onClick={this.handleYearClick}>{year}</li>
+              }, this) : null
+          }
+        </ul>
       </div>
     )
   }
