@@ -17,7 +17,7 @@ var Average = React.createClass({
     var globals = GLOBALStore.get()
     var configs = this.props.configs
 
-    // var Chart = null
+    var Chart = null
     var values = []
     var countryList = null
 
@@ -37,30 +37,39 @@ var Average = React.createClass({
             </li>
           )
         })
-        // var barChartData = {
-        //   labels: globals.meta.indicators[selected_indicator].years,
-        //   series: [values]
-        // }
-        // var barChartOptions = {
-        //   showArea: true,
-        //   low: globals.meta.indicators[selected_indicator].min_value
-        // }
 
-        // Chart = <Chartist type={'Line'} data={barChartData} options={barChartOptions} />
+        average = globals.meta.indicators[selected_indicator].avg.years[selected_year].toFixed(2)
+        var dataSeries = _.map(globals.meta.indicators[selected_indicator].avg.years, function(value) {
+          return (value.toFixed(2))/1000
+        })
+
+        var barChartData = {
+          labels: globals.meta.indicators[selected_indicator].years,
+          series: [dataSeries]
+        }
+        var barChartOptions = {
+          showArea: true,
+          low: globals.meta.indicators[selected_indicator].min_value,
+          axisY: {
+            labelInterpolationFnc(value) {
+              return value + ' K'
+            }
+          }
+        }
+
+        Chart = <Chartist type={'Line'} data={barChartData} options={barChartOptions} />
       } else {
         values = _.map(globals.data.locations, selected_indicator)
+        average = globals.meta.indicators[selected_indicator].avg.toFixed(2)
       }
 
-
-      average = (_.reduce(values, function(sum, num) {
-        return sum + num
-      }) / values.length).toFixed(2) * 100
     }
 
     return (
       <div className='card'>
         <div className='average-box'>
-          <h5>AVERAGE: {average}%</h5>
+          <h5>AVERAGE: {average}</h5>
+          {Chart}
           <div className='average-chart'>
             <ul className='country-list'>
               {countryList}
