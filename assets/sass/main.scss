@@ -1,4 +1,5 @@
 @import '_variables';
+@import '_layout';
 
 // material-ui
 @import 'material';
@@ -8,26 +9,40 @@ body {
 }
 
 .main {
-  padding-top: $padding;
-  margin-top: $header;
-
   .map-container {
     position: relative;
-    margin-top: -$padding * 2;
+  }
 
-    #map {
-      height: 500px;
+  @include tablet {
+    padding-top: $padding;
+    margin-top: $header;
+    .map-container {
+      margin-top: -$padding * 2;
+      #map {
+        height: 500px;
+      }
     }
   }
+
+  @include desktop {
+    width: 68.75%;
+    float: left;
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+    .map-container {
+      height: 100%;
+      #map {
+        min-height: 980px;
+      }
+    }
+    .card {
+      padding-top: 0;
+    }
+  }
+
 }
 
 .sidebar {
   .header {
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-    right: 0;
     height: $header;
     line-height: $header;
     white-space: nowrap;
@@ -59,8 +74,8 @@ body {
   }
 
   .selector-box {
+    margin-top: -$margin;
     .selector {
-      margin-top: -($padding * 3);
       border-bottom: 1px solid rgba(0, 0, 0, 0.05);
       .mui-drop-down-menu {
         margin-left: -($padding * 3);
@@ -76,12 +91,12 @@ body {
   .timeline-box {
     text-align: center;
     margin-top: 2 * $margin;
-    margin-bottom: 2 * $margin;
+    margin-bottom: 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     padding-left: 2 * $margin;
+    height: 40px;
 
     .timeline {
-      margin-bottom: 20px;
       li {
         display: inline;
         list-style: none;
@@ -136,12 +151,46 @@ body {
       }
     }
   }
+
+  // ipad mini size(768px)
+  @include tablet {
+    .header {
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+
+    .selector-box {
+      .selector {
+        margin-top: -($padding * 3);
+      }
+    }
+
+  }
+
+  @include desktop {
+    width: 31.25%;
+    float: right;
+    background: #fff;
+    min-height: 1000px;
+  }
+
+  @include retina {
+
+  }
+
+  @include print {
+
+  }
 }
 
 .card {
-  // margin: $padding 0;
-  background-color: #fff;
   padding: $padding 0;
+  @include tablet {
+    background-color: #fff;
+  }
 }
 
 @import 'mapbox';

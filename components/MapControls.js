@@ -20,13 +20,14 @@ var MapControls = React.createClass({
 
     return (
       <div className='sidebar'>
-        <ControlHeader configs={this.props.configs} />
 
-        <IndicatorSelector configs={this.props.configs} />
+        <ControlHeader configs={this.props.configs} />
 
         {  this.props.configs.indicators && !_.isEmpty(selected_indicator) && this.props.configs.indicators[selected_indicator].years ?
           <Timeline /> : null
         }
+
+        <IndicatorSelector configs={this.props.configs} />
 
         <SocialPanel configs={this.props.configs} />
 
