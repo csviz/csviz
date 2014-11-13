@@ -52,8 +52,8 @@ var SocialPanel = React.createClass({
 
         <div className='social-panel'>
 
-          <PaperButton label='Share' onClick={this._showDialog} />
-          <PaperButton label='Download' onClick={this._download} />
+          <PaperButton icon='social-share' label='Share' onClick={this._showDialog} />
+          <PaperButton icon='file-cloud-download' label='Download' onClick={this._download} />
 
         </div>
 

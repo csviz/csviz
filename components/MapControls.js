@@ -30,9 +30,7 @@ var MapControls = React.createClass({
 
         <SocialPanel configs={this.props.configs} />
 
-        { selected_indicator === 'poverty' ?
-          <Average /> : null
-        }
+        <Average configs={this.props.configs} />
 
         { /* <Graph configs={this.props.configs} /> */ }
       </div>
