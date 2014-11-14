@@ -27,13 +27,11 @@ var Average = React.createClass({
           return data['years'][selected_year]
         })
 
-        countryList = Object.keys(globals.meta.locations).map(function(countryName) {
-          return globals.meta.locations[countryName]
-        }).map(function(countryLabel) {
+        countryList = Object.keys(globals.data.locations).map(function(countryName, key) {
           return (
-            <li className='countryItem'>
-              <span className='label'>{countryLabel}</span>
-              <span className='value'>42%</span>
+            <li key={key} className='countryItem'>
+              <span className='label'>{globals.meta.locations[countryName].label}</span>
+              <span className='value'>{globals.data.locations[countryName][selected_indicator].years[selected_year]}</span>
             </li>
           )
         })
@@ -49,13 +47,14 @@ var Average = React.createClass({
         }
         var barChartOptions = {
           showArea: true,
-          low: globals.meta.indicators[selected_indicator].min_value,
+          low: (globals.meta.indicators[selected_indicator].avg.years[selected_year].toFixed(2))/1000,
           axisY: {
             labelInterpolationFnc(value) {
               return value + ' K'
             }
           }
         }
+
 
         Chart = <Chartist type={'Line'} data={barChartData} options={barChartOptions} />
       } else {
@@ -69,7 +68,9 @@ var Average = React.createClass({
       <div className='card'>
         <div className='average-box'>
           <h5>AVERAGE: {average}</h5>
-          {Chart}
+          <div className='chart'>
+            {Chart}
+          </div>
           <div className='average-chart'>
             <ul className='country-list'>
               {countryList}

@@ -4,10 +4,6 @@
 // material-ui
 @import 'material';
 
-body {
-  background-color: #e1e1e1;
-}
-
 .main {
   .map-container {
     position: relative;
@@ -42,8 +38,6 @@ body {
 }
 
 .sidebar {
-  background: #fff;
-
   .header {
     height: $header;
     line-height: $header;
@@ -70,7 +64,7 @@ body {
 
     .about {
       position: fixed;
-      right: 0;
+      right: $padding * 2;
       display: inline-block;
       top: $margin;
     }
@@ -134,9 +128,20 @@ body {
     }
   }
 
+  .share-dialog {
+    textarea {
+      resize: none;
+      margin: 4 * $margin 0;
+      padding: $padding;
+    }
+  }
+
   .average-box {
     h5 {
       margin-left: 2 * $margin;
+    }
+    .chart {
+      padding: 2 * $padding;
     }
     .average-chart {
       ul {
@@ -178,12 +183,12 @@ body {
 
   @include desktop {
     width: 31.25%;
-    position: absolute;
+    // position: absolute;
+    height: 100vh;
     top: 0;
-    right: 0;
-    bottom: 0;
+    // right: 0;
+    // bottom: 0;
     overflow-y: scroll;
-    background: #fff;
 
     .timeline-box {
       position: fixed;

@@ -57,9 +57,9 @@ var SocialPanel = React.createClass({
 
         </div>
 
-        <Dialog ref='shareDialog' title='Share' actions={dialogActions}>
+        <Dialog className='share-dialog' ref='shareDialog' title='Share' actions={dialogActions}>
 
-          <p>Just copy and paste the URL below to share your visualization.</p>
+          Just copy and paste the URL below to share your visualization.
 
           <textarea
             onChange={this._setShareContent}
@@ -74,6 +74,7 @@ var SocialPanel = React.createClass({
           </div>
 
         </Dialog>
+
       </div>
     )
   }

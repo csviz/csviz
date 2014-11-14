@@ -28,7 +28,9 @@ var ControlHeader = React.createClass({
 
         <Dialog ref='aboutDialog' title='About'>
 
-          Country borders or names do not necessarily reflect the Global Partnership for Education's official position. This map is for illustrative purposes and does not imply the expression of any opinion on the part of the Global Partnership for Education, concerning the legal status of any country or territory or concerning the delimitation of frontiers or boundaries.
+          Country borders or names do not necessarily reflect the Global Partnership for Education's official position.
+
+          This map is for illustrative purposes and does not imply the expression of any opinion on the part of the Global Partnership for Education, concerning the legal status of any country or territory or concerning the delimitation of frontiers or boundaries.
 
         </Dialog>
       </div>
