@@ -15,6 +15,9 @@ var ControlHeader = React.createClass({
 
   render() {
     var site = this.props.configs.site || {}
+    var dialogActions = [
+      { text: 'CLOSE' }
+    ]
 
     return (
       <div className='card'>
@@ -26,7 +29,7 @@ var ControlHeader = React.createClass({
           </div>
         </div>
 
-        <Dialog ref='aboutDialog' title='About'>
+        <Dialog ref='aboutDialog' title='About' actions={dialogActions}>
 
           Country borders or names do not necessarily reflect the Global Partnership for Education's official position.
 
