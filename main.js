@@ -35,7 +35,6 @@ var routes = (
       <DefaultRoute handler={MapPage}/>
       <NotFoundRoute handler={NotFound}/>
       <Route name="map" path="map" handler={MapPage}/>
-      <Route name="data" path="data" handler={DataPage}/>
     </Route>
   </Routes>
 )
