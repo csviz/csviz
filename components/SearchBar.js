@@ -54,9 +54,7 @@ var Timeline = React.createClass({
 
     return (
       <div className='search-bar'>
-        <Paper>
-          {SearchBarComponent}
-        </Paper>
+        {SearchBarComponent}
       </div>
     )
   }

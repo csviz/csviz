@@ -179,6 +179,28 @@
       border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }
 
+    .search-bar {
+      position: fixed;
+      right: 20px;
+      top: 0;
+      width: 80%;
+      padding-right: $padding * 4;
+      z-index: 10000;
+
+      .Select {
+        height: 42px;
+      }
+
+      .Select-input input:focus {
+        box-shadow: none;
+      }
+
+      .Select-control {
+        border: none;
+        height: 40px;
+        margin-top: 8px;
+      }
+    }
   }
 
   @include desktop {
