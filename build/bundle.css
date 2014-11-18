@@ -4921,8 +4921,8 @@ html {
   .sidebar .search-bar {
     position: fixed;
     right: 20px;
+    left: 100px;
     top: 0;
-    width: 80%;
     padding-right: 20px;
     z-index: 10000; }
     .sidebar .search-bar .Select {

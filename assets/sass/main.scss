@@ -182,8 +182,8 @@
     .search-bar {
       position: fixed;
       right: 20px;
+      left: 100px;
       top: 0;
-      width: 80%;
       padding-right: $padding * 4;
       z-index: 10000;
 
@@ -264,8 +264,6 @@
     list-style: none;
   }
 }
-
-
 
 @import 'mapbox';
 @import 'chartist';
