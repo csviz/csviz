@@ -3,6 +3,7 @@
 var React = require('react')
 var mapbox = require('mapbox.js')
 var MapUtils = require('../utils/MapUtils')
+var MapActionCreators = require('../actions/MapActionCreators')
 var GLOBALStore = require('../stores/GLOBALStore')
 var _ = require('lodash')
 
@@ -16,7 +17,8 @@ var Map = React.createClass({
   getInitialState() {
     return {
       map: {},
-      countryLayer: null
+      countryLayer: null,
+      legend: null
     }
   },
 
@@ -33,11 +35,13 @@ var Map = React.createClass({
   },
 
   updateChoropleth(geo, globals, configs) {
+    var self = this
     var map = this.state.map
 
     var shapes = geo
     var selected_indicator = GLOBALStore.getSelectedIndicator()
     var selected_year = GLOBALStore.getSelectedYear()
+    var selected_country = GLOBALStore.getSelectedCountry()
     var indicators = globals.data.locations
     var meta = globals.meta
 
@@ -53,6 +57,7 @@ var Map = React.createClass({
       return shape.properties['ISO_NAME'].toLowerCase() in indicators
     })
 
+    // add country choropleth
     var countryLayer = L.geoJson(filteredShapes, {
       style: getStyle,
       onEachFeature: onEachFeature
@@ -60,6 +65,7 @@ var Map = React.createClass({
 
     this.setState({countryLayer: countryLayer})
 
+    // get style function
     function getStyle(feature) {
       var value, color
       var countryName = feature.properties['ISO_NAME']
@@ -88,10 +94,10 @@ var Map = React.createClass({
       }
 
       return {
-          weight: 0.0,
-          opacity: 1,
-          fillOpacity: 1,
-          fillColor: color
+        weight: 0.0,
+        opacity: 1,
+        fillOpacity: 1,
+        fillColor: color
       }
     }
 
@@ -102,7 +108,7 @@ var Map = React.createClass({
       layer.on({
         mousemove: mousemove,
         mouseout: mouseout,
-        click: zoomToFeature
+        click: onMapClick
       })
 
       function mousemove(e) {
@@ -147,11 +153,50 @@ var Map = React.createClass({
         }, 100)
       }
 
-      function zoomToFeature(e) {
+      function onMapClick(e) {
+        // zoomToFeature
         map.fitBounds(e.target.getBounds())
+
+        // set selected country
+        MapActionCreators.changeSelectedCountry(e.target.feature.properties['ISO_NAME'].toLowerCase())
       }
     }
 
+    // add legend
+    // clean up first
+    if(!_.isEmpty(this.state.legend)) {
+      map.legendControl.removeLegend(this.state.legend)
+    }
+    var legend = getLegendHTML()
+    map.legendControl.addLegend(legend)
+    this.setState({legend: legend})
+
+    function getLegendHTML() {
+      if (!self.props.configs || !self.props.globals) return
+      var selected_indicator = GLOBALStore.getSelectedIndicator()
+      var configs = self.props.configs
+      var indicatorName = configs.indicators[selected_indicator].name
+
+      var labels = [], from, to
+      var min = globals.meta.indicators[selected_indicator].min_value.toFixed()
+      var max = globals.meta.indicators[selected_indicator].max_value.toFixed()
+      var colors = configs.ui.choropleth
+      var steps = configs.ui.choropleth.length
+      var step = ((max - min)/steps).toFixed()
+
+      for (var i = 0; i < steps; i++) {
+        if (i == 0) {
+          from = parseInt(min)
+          to = parseInt(from) + parseInt(step)
+        } else {
+          from = parseInt(to + 1)
+          to = parseInt(from) + parseInt(step)
+        }
+        labels.push(`<li><span class='swatch' style='background:${colors[i]}'></span>${from}${'&ndash;'}${to}</li>`)
+      }
+
+      return `<span>${indicatorName}</span><ul class='legend-list'>${labels.join('')}</ul>`
+    }
   },
 
   render() {

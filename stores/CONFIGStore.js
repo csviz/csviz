@@ -19,9 +19,10 @@ CONFIGStore.dispatchToken = AppDispatcher.register(function(payload) {
 
   if(response && payload.action.type === 'REQUEST_CONFIG_SUCCESS') {
     _config_data = response
+    CONFIGStore.emitChange()
   }
 
-  CONFIGStore.emitChange()
+
 })
 
 module.exports = CONFIGStore

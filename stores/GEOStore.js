@@ -19,9 +19,9 @@ GEOStore.dispatchToken = AppDispatcher.register(function(payload) {
 
   if(response && payload.action.type === 'REQUEST_GEO_SUCCESS') {
     _geo_data = response
+    GEOStore.emitChange()
   }
 
-  GEOStore.emitChange()
 })
 
 module.exports = GEOStore

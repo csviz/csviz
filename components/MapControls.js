@@ -9,6 +9,7 @@ var SocialPanel = require('./SocialPanel')
 var Graph = require('./Graph')
 var Timeline = require('./Timeline')
 var Average = require('./Average')
+var SearchBar = require('./SearchBar')
 var GLOBALStore = require('../stores/GLOBALStore')
 
 var MapControls = React.createClass({
@@ -26,6 +27,8 @@ var MapControls = React.createClass({
         {  this.props.configs.indicators && !_.isEmpty(selected_indicator) && this.props.configs.indicators[selected_indicator].years ?
           <Timeline /> : null
         }
+
+        <SearchBar />
 
         <IndicatorSelector configs={this.props.configs} />
 

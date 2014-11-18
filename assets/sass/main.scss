@@ -200,6 +200,18 @@
         }
       }
     }
+
+    .search-bar {
+      position: fixed;
+      right: 31.25%;
+      top: $padding * 4;
+      padding-right: $padding * 4;
+      width: 350px;
+
+      .Select-input input:focus {
+        box-shadow: none;
+      }
+    }
   }
 
   @include retina {
@@ -218,5 +230,21 @@
   }
 }
 
+.map-legend {
+  .swatch {
+    width:20px;
+    height:20px;
+    float:left;
+    margin-right:10px;
+  }
+
+  .legend-list {
+    list-style: none;
+  }
+}
+
+
+
 @import 'mapbox';
 @import 'chartist';
+@import 'select';
