@@ -18,11 +18,64 @@ var Map = React.createClass({
     return {
       map: {},
       countryLayer: null,
-      legend: null
+      legend: null,
+      current_selected_country: null
+    }
+  },
+
+  handleStoreChange() {
+    if (this.state.countryLayer && this.state.map) {
+      this.state.countryLayer.eachLayer(function(layer) {
+        if(layer.feature.properties['ISO_NAME'].toLowerCase() === GLOBALStore.getSelectedCountry()) {
+          this.state.map.fitBounds(layer.getBounds())
+
+          var popup = new L.Popup({ autoPan: false })
+          var indicators = this.props.globals.data.locations
+          var configs = this.props.configs
+          var selected_indicator = GLOBALStore.getSelectedIndicator()
+          var selected_year = GLOBALStore.getSelectedYear()
+
+          // // missing
+          popup.setLatLng(layer.getBounds().getCenter())
+
+          var value = 'No data'
+          var cname = layer.feature.properties['ISO_NAME'].toLowerCase()
+          if (cname in indicators && indicators[cname][selected_indicator] !== undefined) {
+            var tooltipTemplate = configs.indicators[selected_indicator].tooltip
+
+            // gdp with years
+            if (configs.indicators[selected_indicator].years) {
+              value = indicators[cname][selected_indicator].years[selected_year]
+            } else {
+              value = indicators[cname][selected_indicator]
+            }
+          }
+
+          var value = MapUtils.compileTemplate(tooltipTemplate, {currentIndicator: value})
+
+          popup.setContent('<div class="marker-title">' + layer.feature.properties['ISO_NAME'] + '</div>' + value)
+
+          if (!popup._map) popup.openOn(this.state.map)
+          // window.clearTimeout(closeTooltip)
+
+          layer.setStyle({
+            weight: 3,
+            opacity: 0.3,
+            fillOpacity: 0.9
+          })
+
+          if (!L.Browser.ie && !L.Browser.opera) {
+            layer.bringToFront()
+          }
+
+        }
+      }.bind(this))
     }
   },
 
   componentDidMount() {
+    GLOBALStore.addChangeListener(this.handleStoreChange)
+
     L.mapbox.accessToken = mapbox_config.token
     var map = L.mapbox.map('map', mapbox_config.type).setView(mapbox_config.location, mapbox_config.zoomlevel)
     this.setState({map: map})
@@ -172,7 +225,7 @@ var Map = React.createClass({
     this.setState({legend: legend})
 
     function getLegendHTML() {
-      if (!self.props.configs || !self.props.globals) return
+      if (!_.isEmpty(self.props.configs) || !_.isEmpty(self.props.globals)) return
       var selected_indicator = GLOBALStore.getSelectedIndicator()
       var configs = self.props.configs
       var indicatorName = configs.indicators[selected_indicator].name

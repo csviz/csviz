@@ -27,7 +27,6 @@ var Timeline = React.createClass({
 
   handleSearchChange(countryName) {
     if(_.contains(Object.keys(this.state.globals.meta.locations), countryName)) {
-      console.log('countryName', countryName)
       MapActionCreators.changeSelectedCountry(countryName)
     }
   },
