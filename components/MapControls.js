@@ -6,7 +6,6 @@ var _ = require('lodash')
 var ControlHeader = require('./ControlHeader')
 var IndicatorSelector = require('./IndicatorSelector')
 var SocialPanel = require('./SocialPanel')
-var Graph = require('./Graph')
 var Timeline = require('./Timeline')
 var Average = require('./Average')
 var SearchBar = require('./SearchBar')
@@ -36,7 +35,6 @@ var MapControls = React.createClass({
 
         <Average configs={this.props.configs} />
 
-        { /* <Graph configs={this.props.configs} /> */ }
       </div>
     )
   }

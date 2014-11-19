@@ -23,6 +23,7 @@ var Map = React.createClass({
     }
   },
 
+  // TODO: Clean up this part
   handleStoreChange() {
     if (this.state.countryLayer && this.state.map) {
       this.state.countryLayer.eachLayer(function(layer) {
@@ -34,12 +35,11 @@ var Map = React.createClass({
           var configs = this.props.configs
           var selected_indicator = GLOBALStore.getSelectedIndicator()
           var selected_year = GLOBALStore.getSelectedYear()
-
-          // // missing
-          popup.setLatLng(layer.getBounds().getCenter())
-
           var value = 'No data'
           var cname = layer.feature.properties['ISO_NAME'].toLowerCase()
+
+          popup.setLatLng(layer.getBounds().getCenter())
+
           if (cname in indicators && indicators[cname][selected_indicator] !== undefined) {
             var tooltipTemplate = configs.indicators[selected_indicator].tooltip
 
