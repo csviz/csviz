@@ -4876,12 +4876,12 @@ html {
       background-color: rgba(0, 0, 0, 0.05); }
     .sidebar .timeline-box .timeline li:last-child {
       border-right: 1px solid rgba(0, 0, 0, 0.05); }
-.sidebar .social-panel {
+.sidebar .social-panel-box {
   text-align: center;
   padding: 5px 10px; }
-  .sidebar .social-panel .mui-paper-button {
+  .sidebar .social-panel-box .mui-paper-button {
     width: 50%; }
-  .sidebar .social-panel .mui-paper-button-icon {
+  .sidebar .social-panel-box .mui-paper-button-icon {
     float: left;
     font-size: 15px;
     height: 20px;

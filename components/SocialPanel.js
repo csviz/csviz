@@ -4,6 +4,11 @@ var React = require('react')
 var mui = require('material-ui')
 var PaperButton = mui.PaperButton
 var Dialog = mui.Dialog
+var saveAs = require('filesaver.js')
+var GLOBALStore = require('../stores/GLOBALStore')
+var axios = require('axios')
+
+window.saveAs = saveAs
 
 var config = require('../config.json')
 var globalPath = config.globalPath
@@ -23,7 +28,12 @@ var SocialPanel = React.createClass({
   },
 
   _download() {
-    window.location = globalPath
+    var csv_url = './data/GDP_growth.csv'
+    axios.get(csv_url).then(function(res) {
+      saveAs(new Blob([res.data], {
+        type: 'text/plain;charset=utf-8'
+      }), 'csviz.csv')
+    })
   },
 
   _setShareContent(event, value) {
@@ -49,8 +59,7 @@ var SocialPanel = React.createClass({
 
     return (
       <div className='card'>
-
-        <div className='social-panel'>
+        <div className='social-panel-box'>
 
           <PaperButton icon='social-share' label='Share' onClick={this._showDialog} />
           <PaperButton icon='file-cloud-download' label='Download' onClick={this._download} />
