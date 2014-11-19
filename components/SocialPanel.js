@@ -66,7 +66,7 @@ var SocialPanel = React.createClass({
 
         </div>
 
-        <Dialog className='share-dialog' ref='shareDialog' title='Share' actions={dialogActions}>
+        <Dialog className='share-dialog-box' ref='shareDialog' title='Share' actions={dialogActions}>
 
           Just copy and paste the URL below to share your visualization.
 
@@ -77,7 +77,7 @@ var SocialPanel = React.createClass({
             cols="80"
           />
 
-          <div className='share-links'>
+          <div className='share-dialog-links'>
             <PaperButton label='Share on Twitter' onClick={this._shareOnTwitter} />
             <PaperButton label='Share on Facebook' onClick={this._shareOnFacebook} />
           </div>

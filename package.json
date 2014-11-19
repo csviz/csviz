@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "lib": "cp -r node_modules/mapbox.js/theme/images build/",
-    "build-js": "node_modules/browserify/bin/cmd.js main.js -t [ reactify --extension js --harmony ] | uglifyjs -mc > build/bundle.js",
+    "build-js": "NODE_ENV=production node_modules/browserify/bin/cmd.js main.js -t [ reactify --extension js --harmony ] | uglifyjs -mc > build/bundle.js",
     "build-css": "node_modules/node-sass/bin/node-sass assets/sass/main.scss build/bundle.css",
     "build": "mkdir -p build && npm run lib && npm run build-js && npm run build-css",
     "watch-css": "watchy -w assets/sass -- 'npm run build-css'",
@@ -36,10 +36,11 @@
     "react-chartist": "^0.2.0",
     "react-document-title": "^0.1.2",
     "react-router": "^0.10.2",
-    "react-select": "^0.2.3",
+    "react-select-box": "^1.0.0",
     "topojson": "^1.6.18"
   },
   "devDependencies": {
+    "envify": "^3.2.0",
     "node-sass": "^1.0.3",
     "reactify": "^0.15.2",
     "watchify": "^2.1.0",

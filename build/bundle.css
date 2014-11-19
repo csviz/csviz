@@ -4887,7 +4887,7 @@ html {
     height: 20px;
     margin-top: 10px;
     margin-right: 5px; }
-.sidebar .share-dialog textarea {
+.sidebar .share-dialog-box textarea {
   resize: none;
   margin: 20px 0;
   padding: 5px; }
