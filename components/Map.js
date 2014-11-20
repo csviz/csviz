@@ -27,7 +27,7 @@ var Map = React.createClass({
   handleStoreChange() {
     if (this.state.countryLayer && this.state.map) {
       this.state.countryLayer.eachLayer(function(layer) {
-        if(layer.feature.properties['ISO_NAME'].toLowerCase() === GLOBALStore.getSelectedCountry()) {
+        if(MapUtils.getCountryNameId(layer.feature.properties['ISO_NAME']) === GLOBALStore.getSelectedCountry()) {
           this.state.map.fitBounds(layer.getBounds())
 
           var popup = new L.Popup({ autoPan: false })
@@ -36,7 +36,7 @@ var Map = React.createClass({
           var selected_indicator = GLOBALStore.getSelectedIndicator()
           var selected_year = GLOBALStore.getSelectedYear()
           var value = 'No data'
-          var cname = layer.feature.properties['ISO_NAME'].toLowerCase()
+          var cname = MapUtils.getCountryNameId(layer.feature.properties['ISO_NAME'])
 
           popup.setLatLng(layer.getBounds().getCenter())
 
@@ -107,7 +107,7 @@ var Map = React.createClass({
     }
 
     var filteredShapes = shapes.filter(function(shape) {
-      return shape.properties['ISO_NAME'].toLowerCase() in indicators
+      return MapUtils.getCountryNameId(shape.properties['ISO_NAME']) in indicators
     })
 
     // add country choropleth
@@ -121,10 +121,10 @@ var Map = React.createClass({
     // get style function
     function getStyle(feature) {
       var value, color
-      var countryName = feature.properties['ISO_NAME']
+      var countryName = MapUtils.getCountryNameId(feature.properties['ISO_NAME'])
 
-      if (countryName && countryName.toLowerCase() in indicators) {
-        value = indicators[countryName.toLowerCase()][selected_indicator]
+      if (countryName in indicators) {
+        value = indicators[countryName][selected_indicator]
       } else {
         console.log('No name', feature)
       }
@@ -169,7 +169,8 @@ var Map = React.createClass({
         popup.setLatLng(e.latlng)
 
         var value = 'No data'
-        var cname = layer.feature.properties['ISO_NAME'].toLowerCase()
+        var cname = MapUtils.getCountryNameId(layer.feature.properties['ISO_NAME'])
+
         if (cname in indicators && indicators[cname][selected_indicator] !== undefined) {
           var tooltipTemplate = configs.indicators[selected_indicator].tooltip
 
@@ -211,7 +212,7 @@ var Map = React.createClass({
         map.fitBounds(e.target.getBounds())
 
         // set selected country
-        MapActionCreators.changeSelectedCountry(e.target.feature.properties['ISO_NAME'].toLowerCase())
+        MapActionCreators.changeSelectedCountry(MapUtils.getCountryNameId(e.target.feature.properties['ISO_NAME']))
       }
     }
 

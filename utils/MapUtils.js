@@ -65,6 +65,22 @@ var MapUtils = {
     try { result = new Function('obj', code).apply(data, [data]); }
     catch(err) { console.error("'" + err.message + "'", " in \n\nCode:\n", code, "\n"); }
     return result
+  },
+
+  getCountryNameId(name) {
+    var ALLOWED_CHARS = '0123456789abcdefghijklmnopqrstuvwxyz_'
+
+    return name
+          .toLowerCase()
+          .trim()
+          .replace(' ', '_')
+          .split('')
+          .filter(function(char) {
+            if (_.contains(ALLOWED_CHARS, char)) {
+              return char
+            }
+          })
+          .join('')
   }
 }
 
