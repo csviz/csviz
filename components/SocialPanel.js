@@ -26,11 +26,15 @@ var SocialPanel = React.createClass({
   },
 
   _download() {
-    var csv_url = './data/GDP_growth.csv'
+    var selected_indicator = GLOBALStore.getSelectedIndicator()
+    var globals = GLOBALStore.get()
+    var source_path = globals.meta.indicators[selected_indicator].source_file
+
+    var csv_url = `./data/${source_path}`
     axios.get(csv_url).then(function(res) {
       saveAs(new Blob([res.data], {
         type: 'text/plain;charset=utf-8'
-      }), 'csviz.csv')
+      }), source_path)
     })
   },
 
