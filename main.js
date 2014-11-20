@@ -1,15 +1,9 @@
 'use strict'
 
 var React = require('react')
-var Router = require('react-router')
 var DocumentTitle = require('react-document-title')
 
-// Router
-var DefaultRoute = Router.DefaultRoute
-var Link = Router.Link
-var NotFoundRoute = Router.NotFoundRoute
-var Route = Router.Route
-var Routes = Router.Routes
+var { DefaultRoute, Link, NotFoundRoute, Route, Routes } = require('react-router')
 
 // Pages
 var DataPage = require('./pages/Data')
