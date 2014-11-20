@@ -17,6 +17,14 @@ var MapUtils = {
 
     var colorIndex = ((value - min)/step).toFixed()
 
+    if (colorIndex <= 0) {
+      colorIndex = 0
+    }
+
+    if (colorIndex >= steps) {
+      colorIndex = steps - 1
+    }
+
     return colors[colorIndex]
 
     // return MapUtils.getColorFromRange(value, ranges, colors)
