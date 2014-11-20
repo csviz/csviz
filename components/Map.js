@@ -225,7 +225,7 @@ var Map = React.createClass({
     this.setState({legend: legend})
 
     function getLegendHTML() {
-      if (!_.isEmpty(self.props.configs) || !_.isEmpty(self.props.globals)) return
+      if (_.isEmpty(self.props.configs) || _.isEmpty(self.props.globals)) return
       var selected_indicator = GLOBALStore.getSelectedIndicator()
       var configs = self.props.configs
       var indicatorName = configs.indicators[selected_indicator].name
@@ -249,6 +249,7 @@ var Map = React.createClass({
       }
 
       return `<span>${indicatorName}</span><ul class='legend-list'>${labels.join('')}</ul>`
+
     }
   },
 

@@ -8,8 +8,6 @@ var saveAs = require('filesaver.js')
 var GLOBALStore = require('../stores/GLOBALStore')
 var axios = require('axios')
 
-window.saveAs = saveAs
-
 var config = require('../config.json')
 var globalPath = config.globalPath
 
