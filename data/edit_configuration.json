@@ -4,9 +4,8 @@
     "description": "The CSViz Demo App",
     "url": "http://csviz.org",
     "logo": "http://csviz.org/logo.gif",
-    "domain": "http://csviz.github.io/csviz"
+    "domain": "http://csviz.github.io/csviz",
     "repository": "fraserxu/csviz"
-
   },
   "ui": {
     "legend": false,
