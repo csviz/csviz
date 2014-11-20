@@ -3,7 +3,8 @@
     "name": "CSViz",
     "description": "The CSViz Demo App",
     "url": "http://csviz.org",
-    "logo": "http://csviz.dev.wiredcraft.com/assets/images/logo.png"
+    "logo": "http://csviz.org/logo.gif",
+    "repository": "fraserxu/csviz"
   },
   "ui": {
     "legend": false,
@@ -31,11 +32,12 @@
       "type": "location",
       "location_type": "country"
     },
-    "year": {
+    "Year": {
       "type": "year"
     },
     "gdp_growth": {
       "type": "number",
+      "precision" : 2,
       "name": "GDP growth (annual %)",
       "description": "Growth per year",
       "display": "{{ currentIndicator }}%",
@@ -46,7 +48,7 @@
       "description": "Population of country",
       "name": "World Population",
       "display": "{{ currentIndicator }}%",
-      "tooltip": "tooltip: {{ currentIndicator}}%"
+      "tooltip": "tooltip: {{ currentIndicator }}%"
     }
   }
 }
