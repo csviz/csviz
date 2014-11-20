@@ -6,9 +6,9 @@ var _ = require('lodash')
 var ControlHeader = require('./ControlHeader')
 var IndicatorSelector = require('./IndicatorSelector')
 var SocialPanel = require('./SocialPanel')
-var Graph = require('./Graph')
 var Timeline = require('./Timeline')
 var Average = require('./Average')
+var SearchBar = require('./SearchBar')
 var GLOBALStore = require('../stores/GLOBALStore')
 
 var MapControls = React.createClass({
@@ -27,13 +27,14 @@ var MapControls = React.createClass({
           <Timeline /> : null
         }
 
+        <SearchBar />
+
         <IndicatorSelector configs={this.props.configs} />
 
         <SocialPanel configs={this.props.configs} />
 
         <Average configs={this.props.configs} />
 
-        { /* <Graph configs={this.props.configs} /> */ }
       </div>
     )
   }

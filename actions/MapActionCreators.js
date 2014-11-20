@@ -41,6 +41,13 @@ var MapActionCreators = {
       type: ActionTypes.CHANGE_SELECTED_YEAR,
       response: year
     })
+  },
+
+  changeSelectedCountry(country) {
+    AppDispatcher.handleViewAction({
+      type: ActionTypes.CHANGE_SELECTED_COUNTRY,
+      response: country
+    })
   }
 }
 

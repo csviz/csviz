@@ -4,6 +4,9 @@ var React = require('react')
 var mui = require('material-ui')
 var PaperButton = mui.PaperButton
 var Dialog = mui.Dialog
+var saveAs = require('filesaver.js')
+var GLOBALStore = require('../stores/GLOBALStore')
+var axios = require('axios')
 
 var config = require('../config.json')
 var globalPath = config.globalPath
@@ -23,7 +26,12 @@ var SocialPanel = React.createClass({
   },
 
   _download() {
-    window.location = globalPath
+    var csv_url = './data/GDP_growth.csv'
+    axios.get(csv_url).then(function(res) {
+      saveAs(new Blob([res.data], {
+        type: 'text/plain;charset=utf-8'
+      }), 'csviz.csv')
+    })
   },
 
   _setShareContent(event, value) {
@@ -49,17 +57,16 @@ var SocialPanel = React.createClass({
 
     return (
       <div className='card'>
-
-        <div className='social-panel'>
+        <div className='social-panel-box'>
 
           <PaperButton icon='social-share' label='Share' onClick={this._showDialog} />
           <PaperButton icon='file-cloud-download' label='Download' onClick={this._download} />
 
         </div>
 
-        <Dialog ref='shareDialog' title='Share' actions={dialogActions}>
+        <Dialog className='share-dialog-box' ref='shareDialog' title='Share' actions={dialogActions}>
 
-          <p>Just copy and paste the URL below to share your visualization.</p>
+          Just copy and paste the URL below to share your visualization.
 
           <textarea
             onChange={this._setShareContent}
@@ -68,12 +75,13 @@ var SocialPanel = React.createClass({
             cols="80"
           />
 
-          <div className='share-links'>
+          <div className='share-dialog-links'>
             <PaperButton label='Share on Twitter' onClick={this._shareOnTwitter} />
             <PaperButton label='Share on Facebook' onClick={this._shareOnFacebook} />
           </div>
 
         </Dialog>
+
       </div>
     )
   }

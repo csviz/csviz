@@ -1,15 +1,9 @@
 'use strict'
 
 var React = require('react')
-var Router = require('react-router')
 var DocumentTitle = require('react-document-title')
 
-// Router
-var DefaultRoute = Router.DefaultRoute
-var Link = Router.Link
-var NotFoundRoute = Router.NotFoundRoute
-var Route = Router.Route
-var Routes = Router.Routes
+var { DefaultRoute, Link, NotFoundRoute, Route, Routes } = require('react-router')
 
 // Pages
 var DataPage = require('./pages/Data')
@@ -35,7 +29,6 @@ var routes = (
       <DefaultRoute handler={MapPage}/>
       <NotFoundRoute handler={NotFound}/>
       <Route name="map" path="map" handler={MapPage}/>
-      <Route name="data" path="data" handler={DataPage}/>
     </Route>
   </Routes>
 )

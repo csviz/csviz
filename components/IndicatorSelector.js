@@ -47,6 +47,8 @@ var IndicatorSelector = React.createClass({
         indicatorDescription = null
       }
 
+      if(_.isEmpty(this.state.selected_indicator)) return null
+
       // get default selected index
       var selectedIndex = _.indexOf(Object.keys(indicators).filter(function(key) {
         return indicators[key].name

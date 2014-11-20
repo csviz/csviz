@@ -5,7 +5,7 @@ var objectAssign = require('object-assign')
 var PayloadSources = require('../constants/PayloadSources')
 
 var AppDispatcher = objectAssign(new Dispatcher(), {
-  handleServerAction: function(action) {
+  handleServerAction(action) {
     if (!action.type) {
       throw new Error('Empty action.type: you likely mistyped the action.')
     }
@@ -16,7 +16,7 @@ var AppDispatcher = objectAssign(new Dispatcher(), {
     })
   },
 
-  handleViewAction: function(action) {
+  handleViewAction(action) {
     if (!action.type) {
       throw new Error('Empty action.type: you likely mistyped the action.')
     }
