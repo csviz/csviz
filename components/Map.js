@@ -6,6 +6,7 @@ var MapUtils = require('../utils/MapUtils')
 var MapActionCreators = require('../actions/MapActionCreators')
 var GLOBALStore = require('../stores/GLOBALStore')
 var _ = require('lodash')
+var numeral = require('numeral')
 
 var config = require('../config.json')
 var mapbox_config = config.mapbox
@@ -45,9 +46,9 @@ var Map = React.createClass({
 
             // gdp with years
             if (configs.indicators[selected_indicator].years) {
-              value = indicators[cname][selected_indicator].years[selected_year]
+              value = indicators[cname][selected_indicator].years[selected_year].toFixed(2)
             } else {
-              value = indicators[cname][selected_indicator]
+              value = indicators[cname][selected_indicator].toFixed(2)
             }
           }
 
@@ -176,9 +177,11 @@ var Map = React.createClass({
 
           // gdp with years
           if (configs.indicators[selected_indicator].years) {
-            value = indicators[cname][selected_indicator].years[selected_year]
+            value = indicators[cname][selected_indicator].years[selected_year].toFixed(2)
+            value = numeral(value).format('0,0')
           } else {
-            value = indicators[cname][selected_indicator]
+            value = indicators[cname][selected_indicator].toFixed(2)
+            value = numeral(value).format('0,0')
           }
         }
 
@@ -246,7 +249,7 @@ var Map = React.createClass({
           from = parseInt(to + 1)
           to = parseInt(from) + parseInt(step)
         }
-        labels.push(`<li><span class='swatch' style='background:${colors[i]}'></span>${from}${'&ndash;'}${to}</li>`)
+        labels.push(`<li><span class='swatch' style='background:${colors[i]}'></span>${numeral(from).format('0,0')}${'&ndash;'}${numeral(to).format('0,0')}</li>`)
       }
 
       return `<span>${indicatorName}</span><ul class='legend-list'>${labels.join('')}</ul>`

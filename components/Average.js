@@ -4,6 +4,7 @@ var React = require('react')
 var Chartist = require('react-chartist')
 var GLOBALStore = require('../stores/GLOBALStore')
 var _ = require('lodash')
+var numeral = require('numeral')
 
 var Average = React.createClass({
 
@@ -28,10 +29,12 @@ var Average = React.createClass({
         })
 
         countryList = Object.keys(globals.data.locations).map(function(countryName, key) {
+          var formattedValue = numeral(globals.data.locations[countryName][selected_indicator].years[selected_year]).format('0,0')
+
           return (
             <li key={key} className='countryItem'>
               <span className='label'>{globals.meta.locations[countryName].label}</span>
-              <span className='value'>{globals.data.locations[countryName][selected_indicator].years[selected_year]}</span>
+              <span className='value'>{formattedValue}</span>
             </li>
           )
         })
@@ -50,7 +53,7 @@ var Average = React.createClass({
           low: (globals.meta.indicators[selected_indicator].avg.years[selected_year].toFixed(2))/1000,
           axisY: {
             labelInterpolationFnc(value) {
-              return value + ' K'
+              return numeral(value).format('0 a')
             }
           }
         }
