@@ -2,8 +2,9 @@
 
 var React = require('react')
 var DocumentTitle = require('react-document-title')
+var Router = require('react-router')
 
-var { DefaultRoute, Link, NotFoundRoute, Route, Routes } = require('react-router')
+var { DefaultRoute, Link, NotFoundRoute, Route, RouteHandler } = require('react-router')
 
 // Pages
 var DataPage = require('./pages/Data')
@@ -17,20 +18,18 @@ var App = React.createClass({
   render() {
     return (
       <DocumentTitle title='CSViz'>
-        <this.props.activeRouteHandler />
+        <RouteHandler />
       </DocumentTitle>
     )
   }
 })
 
 var routes = (
-  <Routes location="hash">
-    <Route name="app" path="/" handler={App}>
-      <DefaultRoute handler={MapPage}/>
-      <NotFoundRoute handler={NotFound}/>
-      <Route name="map" path="map" handler={MapPage}/>
-    </Route>
-  </Routes>
+  <Route name="app" path="/" handler={App}>
+    <DefaultRoute handler={MapPage}/>
+    <NotFoundRoute handler={NotFound}/>
+    <Route name="map" path="map" handler={MapPage}/>
+  </Route>
 )
 
 if ('production' !== process.env.NODE_ENV) {
@@ -38,4 +37,6 @@ if ('production' !== process.env.NODE_ENV) {
   window['React'] = React
 }
 
-React.render(routes, document.body)
+Router.run(routes, function(Handler) {
+  React.render(<Handler/>, document.body)
+})

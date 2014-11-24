@@ -11,7 +11,7 @@
     "watch-css": "watchy -w assets/sass -- 'npm run build-css'",
     "browser-sync": "browser-sync start --server --files 'build/*.*'",
     "watch-js": "watchify main.js -t [ reactify --extension js --harmony ] -o build/bundle.js -dv",
-    "watch": "npm run lib &&  npm run browser-sync & npm run watch-js & npm run watch-css",
+    "watch": "npm run lib && npm run browser-sync & npm run watch-js & npm run watch-css",
     "clean": "rm -rf build && mkdir build"
   },
   "repository": {
@@ -33,10 +33,10 @@
     "material-ui": "^0.2.2",
     "numeral": "^1.5.3",
     "object-assign": "^1.0.0",
-    "react": "^0.12.0",
+    "react": "^0.12.1",
     "react-chartist": "^0.2.0",
     "react-document-title": "^0.1.3",
-    "react-router": "^0.10.2",
+    "react-router": "^0.11.1",
     "react-select": "^0.2.3",
     "topojson": "^1.6.18"
   },
