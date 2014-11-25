@@ -260,7 +260,7 @@ var Map = React.createClass({
   render() {
     return (
       <div className='main'>
-        <div className='card map-container'>
+        <div className='map-container'>
           <div id='map'></div>
         </div>
       </div>

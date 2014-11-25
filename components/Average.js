@@ -62,7 +62,7 @@ var Average = React.createClass({
       <div className='card'>
         <div className='average-box'>
           <div className='average-box-header'>
-            <span className='label'>AVERAGE</span>
+            <span className='label'>Average</span>
             <div className='chart'>
               {Chart}
             </div>
