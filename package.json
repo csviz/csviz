@@ -9,7 +9,7 @@
     "build-css": "node_modules/node-sass/bin/node-sass assets/sass/main.scss build/bundle.css",
     "build": "mkdir -p build && npm run lib && npm run build-js && npm run build-css",
     "watch-css": "watchy -w assets/sass -- 'npm run build-css'",
-    "browser-sync": "browser-sync start --server --files 'build/*.*'",
+    "browser-sync": "browser-sync start --server --files 'build/*.*' --logLevel silent",
     "watch-js": "watchify main.js -t [ reactify --extension js --harmony ] -o build/bundle.js -dv",
     "watch": "npm run lib && npm run browser-sync & npm run watch-js & npm run watch-css",
     "clean": "rm -rf build && mkdir build"
@@ -38,6 +38,7 @@
     "react-document-title": "^0.1.3",
     "react-router": "^0.11.1",
     "react-select": "^0.2.3",
+    "react-sparkline": "^0.2.1",
     "topojson": "^1.6.18"
   },
   "devDependencies": {

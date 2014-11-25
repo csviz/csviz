@@ -137,12 +137,19 @@
   }
 
   .average-box {
-    h5 {
-      margin-left: 2 * $margin;
+    .average-box-header {
+      padding-left: 2 * $padding;
+      margin: 2 * $margin 0;
+      h5 {
+        margin-left: 2 * $margin;
+        display: inline;
+      }
+      .chart {
+        float: right;
+        display: inline-block;
+      }
     }
-    .chart {
-      padding: 2 * $padding;
-    }
+
     .average-chart {
       ul {
         margin-left: 2 * $margin;
@@ -150,12 +157,16 @@
           padding: 2 * $padding 0;
           list-style: none;
           border-top: 1px solid rgba(0, 0, 0, 0.05);
-          .value {
-            float: right;
-            margin-right: 2 * $margin;
-          }
         }
       }
+    }
+
+    .value {
+      float: right;
+      margin-right: 2 * $margin;
+    }
+    .chart {
+      float: right;
     }
   }
 
@@ -266,5 +277,4 @@
 }
 
 @import 'mapbox';
-@import 'chartist';
 @import 'select';
