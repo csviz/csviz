@@ -10,36 +10,21 @@ var configPath = _config.configPath
 var globalPath = _config.globalPath
 
 var API = {
-  config() {
-    axios.get(configPath).
-      then(function(res) {
-        MapServerActionCreators.handleCONFIGSuccess(res.data)
-        return true
-      })
-      .catch(function(err) {
-        MapServerActionCreators.handleCONFIGError(err)
-      })
-  },
+  all() {
+    axios.all([axios.get(configPath), axios.get(globalPath), axios.get(geoPath)])
+      .then(function(data) {
+        var _data = {}
+        if (data) {
+          _data['configs'] = data[0].data
+          _data['global'] = data[1].data
+          _data['geo'] = topojson.feature(data[2].data, data[2].data.objects['Aqueduct_country']).features
+        }
 
-  global() {
-    axios.get(globalPath).
-      then(function(res) {
-        MapServerActionCreators.handleINDICATORSuccess(res.data)
+        MapServerActionCreators.handleDATASuccess(_data)
         return true
       })
       .catch(function(err) {
-        MapServerActionCreators.handleINDICATORError(err)
-      })
-  },
-
-  geo() {
-    axios.get(geoPath).
-      then(function(res) {
-        MapServerActionCreators.handleGEOSuccess(topojson.feature(res.data, res.data.objects['Aqueduct_country']).features)
-        return true
-      })
-      .catch(function(err) {
-        MapServerActionCreators.handleGEOError(err)
+        MapServerActionCreators.handleDATAError(err)
       })
   }
 }

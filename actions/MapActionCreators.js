@@ -5,28 +5,12 @@ var API = require('../utils/API')
 var ActionTypes = require('../constants/ActionTypes')
 
 var MapActionCreators = {
-  requestConfig() {
+  requestAll() {
     AppDispatcher.handleViewAction({
-      type: ActionTypes.REQUEST_CONFIG
+      type: ActionTypes.REQUEST_DATA
     })
 
-    API.config()
-  },
-
-  requestGlobal() {
-    AppDispatcher.handleViewAction({
-      type: ActionTypes.REQUEST_INDICATOR
-    })
-
-    API.global()
-  },
-
-  requestGEO() {
-    AppDispatcher.handleViewAction({
-      type: ActionTypes.REQUEST_GEO
-    })
-
-    API.geo()
+    API.all()
   },
 
   changeIndicator(indicator) {

@@ -1,27 +1,25 @@
 'use strict'
 
+var _ = require('lodash')
 var React = require('react')
 var mui = require('material-ui')
 var DropDownMenu = mui.DropDownMenu
-var SelectBox = require('react-select-box')
+
 var MapActionCreators = require('../actions/MapActionCreators')
-var GLOBALStore = require('../stores/GLOBALStore')
+var Store = require('../stores/Store')
 var createStoreMixin = require('../mixins/createStoreMixin')
-var _ = require('lodash')
 
 var IndicatorSelector = React.createClass({
 
   displayName: 'IndicatorSelector',
 
-  mixins: [createStoreMixin(GLOBALStore)],
+  mixins: [createStoreMixin(Store)],
 
   getStateFromStores() {
-    var selected_indicator = GLOBALStore.getSelectedIndicator()
-    var global_data = GLOBALStore.get()
+    var selected_indicator = Store.getSelectedIndicator()
 
     return {
-      selected_indicator: selected_indicator,
-      globals: global_data
+      selected_indicator: selected_indicator
     }
   },
 
@@ -30,24 +28,23 @@ var IndicatorSelector = React.createClass({
   },
 
   render() {
-    var MenuItems, indicatorDescription
-    if (this.props.configs && this.props.configs.indicators) {
-      var indicators = this.props.configs.indicators
+    var MenuItems = 'loading...'
+    var indicatorDescription = 'loading...'
+
+    var data = this.props.data
+
+    // after get the configs
+    if (data.configs && data.configs.indicators) {
+      var indicators = data.configs.indicators
       var menuItems = Object.keys(indicators)
-        .filter(function(key) {
-          return indicators[key].name
-        })
-        .map(function(key, index) {
-            return { payload: key, text: indicators[key].name }
-        }.bind(this))
+        .filter(key => indicators[key].name)
+        .map(key => ({ payload: key, text: indicators[key].name }))
 
-      if (this.props.configs && this.props.configs.indicators && this.state.selected_indicator) {
-        indicatorDescription = this.props.configs.indicators[this.state.selected_indicator].description
+      if (this.state.selected_indicator) {
+        indicatorDescription = data.configs.indicators[this.state.selected_indicator].description
       } else {
-        indicatorDescription = null
+        indicatorDescription = 'There\'s no description for this indicator.'
       }
-
-      if(_.isEmpty(this.state.selected_indicator)) return null
 
       // get default selected index
       var selectedIndex = _.indexOf(Object.keys(indicators).filter(function(key) {

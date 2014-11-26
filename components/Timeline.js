@@ -2,23 +2,34 @@
 
 var React = require('react')
 var MapActionCreators = require('../actions/MapActionCreators')
-var GLOBALStore = require('../stores/GLOBALStore')
+var Store = require('../stores/Store')
 var createStoreMixin = require('../mixins/createStoreMixin')
 
 var Timeline = React.createClass({
 
   displayName: 'Timeline',
 
-  mixins: [createStoreMixin(GLOBALStore)],
+  mixins: [createStoreMixin(Store)],
 
   getStateFromStores() {
-    var global_data = GLOBALStore.get()
-    var selected_year = GLOBALStore.getSelectedYear()
+    var selected_indicator = Store.getSelectedIndicator()
+    var selected_year = Store.getSelectedYear()
 
     return {
-      globals: global_data,
-      selected_year: selected_year
+      selected_year: selected_year,
+      selected_indicator: selected_indicator
     }
+  },
+
+  componentDidMount() {
+    Store.addIndicatorChangeListener(this.handleStoreChange)
+    Store.addYearChangeListener(this.handleStoreChange)
+
+    this.setState(this.getStateFromStores())
+  },
+
+  handleStoreChange() {
+    this.setState(this.getStateFromStores())
   },
 
   handleYearClick(e) {
@@ -27,16 +38,20 @@ var Timeline = React.createClass({
   },
 
   render() {
-    var selected_indicator = GLOBALStore.getSelectedIndicator()
+    var timeline = null
+    var selected_indicator = Store.getSelectedIndicator()
+    var selected_year = Store.getSelectedYear()
+
+    if (this.props.data.global && selected_indicator && selected_year && this.props.data.configs.indicators[selected_indicator].years.length) {
+      timeline = this.props.data.global.meta.indicators[selected_indicator].years.map(function(year) {
+        return <li key={year} value={year} className={ (year == selected_year) ? 'active' : null } onClick={this.handleYearClick}>{year}</li>
+      }, this)
+    }
 
     return (
       <div className='timeline-box'>
         <ul className='timeline'>
-          { this.state.globals.meta ?
-              this.state.globals.meta.indicators[selected_indicator].years.map(function(year, key) {
-                return <li value={key} className={ (year == this.state.selected_year) ? 'active' : null } onClick={this.handleYearClick}>{year}</li>
-              }, this) : null
-          }
+          { timeline }
         </ul>
       </div>
     )

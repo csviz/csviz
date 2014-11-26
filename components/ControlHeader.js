@@ -9,15 +9,17 @@ var ControlHeader = React.createClass({
 
   displayName: 'ControlHeader',
 
-  _showDialog: function() {
+  _showDialog() {
     this.refs.aboutDialog.show()
   },
 
   render() {
-    var site = this.props.configs.site || {}
-    var dialogActions = [
-      { text: 'CLOSE' }
-    ]
+    var site = {}
+    var dialogActions = [{ text: 'CLOSE' }]
+
+    if (this.props.data.configs) {
+      site = this.props.data.configs.site || {}
+    }
 
     return (
       <div className='card'>

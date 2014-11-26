@@ -5,53 +5,22 @@ var ActionTypes = require('../constants/ActionTypes')
 
 var MapServerActionCreators = {
 
-  // configuration
-  handleCONFIGSuccess(response) {
+  // all data
+  handleDATASuccess(response) {
     AppDispatcher.handleServerAction({
-      type: ActionTypes.REQUEST_CONFIG_SUCCESS,
+      type: ActionTypes.REQUEST_DATA_SUCCESS,
       response: response
     })
   },
 
-  handleCONFIGError(err) {
+  handleDATAError(err) {
     console.log(err)
 
     AppDispatcher.handleServerAction({
-      type: ActionTypes.REQUEST_CONFIG_ERROR
-    })
-  },
-
-  // indicator data
-  handleINDICATORSuccess(response) {
-    AppDispatcher.handleServerAction({
-      type: ActionTypes.REQUEST_INDICATOR_SUCCESS,
-      response: response
-    })
-  },
-
-  handleINDICATORError(err) {
-    console.log(err)
-
-    AppDispatcher.handleServerAction({
-      type: ActionTypes.REQUEST_INDICATOR_ERROR
-    })
-  },
-
-  // geo data
-  handleGEOSuccess(response) {
-    AppDispatcher.handleServerAction({
-      type: ActionTypes.REQUEST_GEO_SUCCESS,
-      response: response
-    })
-  },
-
-  handleGEOError(err) {
-    console.log(err)
-
-    AppDispatcher.handleServerAction({
-      type: ActionTypes.REQUEST_GEO_ERROR
+      type: ActionTypes.REQUEST_DATA_ERROR
     })
   }
+
 }
 
 module.exports = MapServerActionCreators

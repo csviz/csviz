@@ -1,59 +1,79 @@
 'use strict'
 
+var _ = require('lodash')
 var React = require('react')
 var Sparkline = require('react-sparkline')
-var GLOBALStore = require('../stores/GLOBALStore')
-var _ = require('lodash')
 var numeral = require('numeral')
+
+var MapActionCreators = require('../actions/MapActionCreators')
+var Store = require('../stores/Store')
+var createStoreMixin = require('../mixins/createStoreMixin')
 
 var Average = React.createClass({
 
   displayName: 'Average',
 
+  mixins: [createStoreMixin(Store)],
+
+  getStateFromStores() {
+    var selected_indicator = Store.getSelectedIndicator()
+    var selected_year = Store.getSelectedYear()
+
+    return {
+      selected_year: selected_year,
+      selected_indicator: selected_indicator
+    }
+  },
+
+  componentDidMount() {
+    Store.addIndicatorChangeListener(this.handleStoreChange)
+    Store.addYearChangeListener(this.handleStoreChange)
+
+    this.setState(this.getStateFromStores())
+  },
+
+  handleStoreChange() {
+    this.setState(this.getStateFromStores())
+  },
+
   render() {
-    var average
+    var average, Chart, values, countryList
+    var global = this.props.data.global
+    var configs = this.props.data.configs
+    var selected_indicator = Store.getSelectedIndicator()
+    var selected_year = Store.getSelectedYear()
 
-    var selected_indicator = GLOBALStore.getSelectedIndicator()
-    var selected_year = GLOBALStore.getSelectedYear()
-    var globals = GLOBALStore.get()
-    var configs = this.props.configs
-
-    var Chart = null
-    var values = []
-    var countryList = null
-    var sl = null
-
-    if (!_.isEmpty(selected_indicator) && !_.isEmpty(globals)) {
-      if (!_.isEmpty(configs) && configs.indicators[selected_indicator].years) {
-        values = _.map(_.map(globals.data.locations, selected_indicator), function(data) {
+    if (!_.isEmpty(selected_indicator) && !_.isEmpty(global)) {
+      if (!_.isEmpty(configs) && configs.indicators[selected_indicator].years.length) {
+        values = _.map(_.map(global.data.locations, selected_indicator), function(data) {
           return data['years'][selected_year]
         })
 
-        countryList = Object.keys(globals.data.locations).map(function(countryName, key) {
-          var formattedValue = numeral(globals.data.locations[countryName][selected_indicator].years[selected_year]).format('0,0')
-          var countryData = _.map(globals.data.locations[countryName][selected_indicator].years, function(value) {
+        countryList = Object.keys(global.data.locations).map(function(countryName, key) {
+          var formattedValue = numeral(global.data.locations[countryName][selected_indicator].years[selected_year]).format('0,0')
+          var countryData = _.map(global.data.locations[countryName][selected_indicator].years, function(value) {
             return value
           })
           var countryChart = <Sparkline data={countryData} />
 
           return (
             <li key={key} className='countryItem'>
-              <span className='label'>{globals.meta.locations[countryName].label}</span>
+              <span className='label'>{global.meta.locations[countryName].label}</span>
               <span className='chart'>{countryChart}</span>
               <span className='value'>{formattedValue}</span>
             </li>
           )
         })
 
-        average = globals.meta.indicators[selected_indicator].avg.years[selected_year].toFixed(2)
-        var dataSeries = _.map(globals.meta.indicators[selected_indicator].avg.years, function(value) {
-          return (value.toFixed(2))/1000
+        average = global.meta.indicators[selected_indicator].avg.years[selected_year].toFixed(2)
+        var dataSeries = _.map(global.meta.indicators[selected_indicator].avg.years, function(value) {
+          return value.toFixed(2)
         })
 
         Chart = <Sparkline data={dataSeries} />
       } else {
-        values = _.map(globals.data.locations, selected_indicator)
-        average = globals.meta.indicators[selected_indicator].avg.toFixed(2)
+        values = _.map(global.data.locations, selected_indicator)
+        average = global.meta.indicators[selected_indicator].avg.toFixed(2)
       }
 
     }

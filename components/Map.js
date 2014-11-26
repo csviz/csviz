@@ -1,12 +1,14 @@
 'use strict'
 
+var _ = require('lodash')
 var React = require('react')
 var mapbox = require('mapbox.js')
-var MapUtils = require('../utils/MapUtils')
-var MapActionCreators = require('../actions/MapActionCreators')
-var GLOBALStore = require('../stores/GLOBALStore')
-var _ = require('lodash')
 var numeral = require('numeral')
+
+var MapActionCreators = require('../actions/MapActionCreators')
+var Store = require('../stores/Store')
+var createStoreMixin = require('../mixins/createStoreMixin')
+var MapUtils = require('../utils/MapUtils')
 
 var config = require('../config.json')
 var mapbox_config = config.mapbox
@@ -15,28 +17,56 @@ var Map = React.createClass({
 
   displayName: 'MapComponent',
 
+  mixins: [createStoreMixin(Store)],
+
+  getStateFromStores() {
+    var selected_indicator = Store.getSelectedIndicator()
+    var selected_year = Store.getSelectedYear()
+    var selected_country = Store.getSelectedCountry()
+
+    return {
+      selected_indicator: selected_indicator,
+      selected_year: selected_year,
+      selected_country: selected_country
+    }
+  },
+
   getInitialState() {
     return {
       map: {},
       countryLayer: null,
-      legend: null,
-      current_selected_country: null
+      legend: null
     }
   },
 
-  // TODO: Clean up this part
-  handleStoreChange() {
+  componentDidMount() {
+    Store.addCountryChangeListener(this.handleCountryChange)
+    Store.addIndicatorChangeListener(this.updateChoropleth)
+    Store.addYearChangeListener(this.updateChoropleth)
+
+    this.setState(this.getStateFromStores())
+
+    L.mapbox.accessToken = mapbox_config.token
+    var map = L.mapbox.map('map', mapbox_config.type).setView(mapbox_config.location, mapbox_config.zoomlevel)
+    this.setState({map: map})
+  },
+
+  handleCountryChange() {
+    // TODO: somehow this does not get udpated from state, so get from store directly
+    var selected_indicator = Store.getSelectedIndicator()
+    var selected_year = Store.getSelectedYear()
+    var selected_country = Store.getSelectedCountry()
+
     if (this.state.countryLayer && this.state.map) {
       this.state.countryLayer.eachLayer(function(layer) {
-        if(MapUtils.getCountryNameId(layer.feature.properties['ISO_NAME']) === GLOBALStore.getSelectedCountry()) {
+        if(MapUtils.getCountryNameId(layer.feature.properties['ISO_NAME']) === selected_country) {
           this.state.map.fitBounds(layer.getBounds())
 
-          var popup = new L.Popup({ autoPan: false })
-          var indicators = this.props.globals.data.locations
-          var configs = this.props.configs
-          var selected_indicator = GLOBALStore.getSelectedIndicator()
-          var selected_year = GLOBALStore.getSelectedYear()
           var value = 'No data'
+          var popup = new L.Popup({ autoPan: false })
+          var indicators = this.props.data.global.data.locations
+          var configs = this.props.data.configs
+
           var cname = MapUtils.getCountryNameId(layer.feature.properties['ISO_NAME'])
 
           popup.setLatLng(layer.getBounds().getCenter())
@@ -45,7 +75,7 @@ var Map = React.createClass({
             var tooltipTemplate = configs.indicators[selected_indicator].tooltip
 
             // gdp with years
-            if (configs.indicators[selected_indicator].years) {
+            if (configs.indicators[selected_indicator].years.length) {
               value = indicators[cname][selected_indicator].years[selected_year].toFixed(2)
             } else {
               value = indicators[cname][selected_indicator].toFixed(2)
@@ -57,47 +87,27 @@ var Map = React.createClass({
           popup.setContent('<div class="marker-title">' + layer.feature.properties['ISO_NAME'] + '</div>' + value)
 
           if (!popup._map) popup.openOn(this.state.map)
-          // window.clearTimeout(closeTooltip)
 
-          layer.setStyle({
-            weight: 3,
-            opacity: 0.3,
-            fillOpacity: 0.9
-          })
+          layer.setStyle({ weight: 3, opacity: 0.3, fillOpacity: 0.9 })
 
-          if (!L.Browser.ie && !L.Browser.opera) {
-            layer.bringToFront()
-          }
+          if (!L.Browser.ie && !L.Browser.opera) layer.bringToFront()
 
         }
       }.bind(this))
     }
   },
 
-  componentDidMount() {
-    GLOBALStore.addChangeListener(this.handleStoreChange)
+  updateChoropleth() {
 
-    L.mapbox.accessToken = mapbox_config.token
-    var map = L.mapbox.map('map', mapbox_config.type).setView(mapbox_config.location, mapbox_config.zoomlevel)
-    this.setState({map: map})
-  },
+    if (_.isEmpty(this.props.data) || _.isEmpty(this.state.selected_indicator)) return
 
-  componentWillReceiveProps(nextProps) {
-    if (!_.isEmpty(nextProps.geo) && !_.isEmpty(nextProps.globals) && !_.isEmpty(nextProps.configs)) {
-      this.updateChoropleth(nextProps.geo, nextProps.globals, nextProps.configs)
-    }
-  },
-
-  updateChoropleth(geo, globals, configs) {
-    var self = this
     var map = this.state.map
-
-    var shapes = geo
-    var selected_indicator = GLOBALStore.getSelectedIndicator()
-    var selected_year = GLOBALStore.getSelectedYear()
-    var selected_country = GLOBALStore.getSelectedCountry()
-    var indicators = globals.data.locations
-    var meta = globals.meta
+    var global = this.props.data.global
+    var meta = global.meta
+    var configs = this.props.data.configs
+    var indicators = global.data.locations
+    var selected_indicator = Store.getSelectedIndicator()
+    var selected_year = Store.getSelectedYear()
 
     // clean up existing layers
     if (this.state.countryLayer && this.state.countryLayer._layers !== undefined) {
@@ -107,7 +117,7 @@ var Map = React.createClass({
       this.setState({countryLayer: null})
     }
 
-    var filteredShapes = shapes.filter(function(shape) {
+    var filteredShapes = this.props.data.geo.filter(function(shape) {
       return MapUtils.getCountryNameId(shape.properties['ISO_NAME']) in indicators
     })
 
@@ -130,29 +140,17 @@ var Map = React.createClass({
         console.log('No name', feature)
       }
 
-      switch(configs.indicators[selected_indicator].type) {
-
-        case 'number':
-          // check whether indicator has years
-          if (configs.indicators[selected_indicator].years) {
-            color = MapUtils.getNumberColor(value.years[selected_year], configs, meta, selected_indicator)
-          } else {
-            color = MapUtils.getNumberColor(value, configs, meta, selected_indicator)
-          }
-          break
-
-        case 'select':
-          color = MapUtils.getSelectColor(value, configs, selected_indicator)
-          break
-
+      if (configs.indicators[selected_indicator].type == 'number') {
+        if (configs.indicators[selected_indicator].years.length) {
+          color = MapUtils.getNumberColor(value.years[selected_year], configs, meta, selected_indicator)
+        } else {
+          color = MapUtils.getNumberColor(value, configs, meta, selected_indicator)
+        }
+      } else {
+        color = MapUtils.getSelectColor(value, configs, selected_indicator)
       }
 
-      return {
-        weight: 0.0,
-        opacity: 1,
-        fillOpacity: 1,
-        fillColor: color
-      }
+      return { weight: 0.0, opacity: 1, fillOpacity: 1, fillColor: color }
     }
 
     function onEachFeature(feature, layer) {
@@ -176,12 +174,14 @@ var Map = React.createClass({
           var tooltipTemplate = configs.indicators[selected_indicator].tooltip
 
           // gdp with years
-          if (configs.indicators[selected_indicator].years) {
+          if (configs.indicators[selected_indicator].years.length) {
             value = indicators[cname][selected_indicator].years[selected_year].toFixed(2)
             value = numeral(value).format('0,0')
           } else {
-            value = indicators[cname][selected_indicator].toFixed(2)
-            value = numeral(value).format('0,0')
+            if(indicators[cname][selected_indicator]) {
+              value = indicators[cname][selected_indicator].toFixed(2)
+              value = numeral(value).format('0,0')
+            }
           }
         }
 
@@ -192,15 +192,9 @@ var Map = React.createClass({
         if (!popup._map) popup.openOn(map)
         window.clearTimeout(closeTooltip)
 
-        layer.setStyle({
-          weight: 3,
-          opacity: 0.3,
-          fillOpacity: 0.9
-        })
+        layer.setStyle({ weight: 3, opacity: 0.3, fillOpacity: 0.9 })
 
-        if (!L.Browser.ie && !L.Browser.opera) {
-          layer.bringToFront()
-        }
+        if (!L.Browser.ie && !L.Browser.opera) layer.bringToFront()
       }
 
       function mouseout(e) {
@@ -221,22 +215,18 @@ var Map = React.createClass({
 
     // add legend
     // clean up first
-    if(!_.isEmpty(this.state.legend)) {
-      map.legendControl.removeLegend(this.state.legend)
-    }
+    if(!_.isEmpty(this.state.legend)) map.legendControl.removeLegend(this.state.legend)
+
     var legend = getLegendHTML()
     map.legendControl.addLegend(legend)
     this.setState({legend: legend})
 
     function getLegendHTML() {
-      if (_.isEmpty(self.props.configs) || _.isEmpty(self.props.globals)) return
-      var selected_indicator = GLOBALStore.getSelectedIndicator()
-      var configs = self.props.configs
       var indicatorName = configs.indicators[selected_indicator].name
 
       var labels = [], from, to
-      var min = globals.meta.indicators[selected_indicator].min_value.toFixed()
-      var max = globals.meta.indicators[selected_indicator].max_value.toFixed()
+      var min = global.meta.indicators[selected_indicator].min_value.toFixed()
+      var max = global.meta.indicators[selected_indicator].max_value.toFixed()
       var colors = configs.ui.choropleth
       var steps = configs.ui.choropleth.length
       var step = ((max - min)/steps).toFixed()

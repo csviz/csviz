@@ -1,39 +1,34 @@
 'use strict'
 
 var React = require('react')
-var _ = require('lodash')
 
 var ControlHeader = require('./ControlHeader')
+var Timeline = require('./Timeline')
+var SearchBar = require('./SearchBar')
 var IndicatorSelector = require('./IndicatorSelector')
 var SocialPanel = require('./SocialPanel')
-var Timeline = require('./Timeline')
 var Average = require('./Average')
-var SearchBar = require('./SearchBar')
-var GLOBALStore = require('../stores/GLOBALStore')
 
 var MapControls = React.createClass({
 
   displayName: 'MapControls',
 
   render() {
-    var selected_indicator = GLOBALStore.getSelectedIndicator()
 
     return (
       <div className='sidebar'>
 
-        <ControlHeader configs={this.props.configs} />
+        <ControlHeader data={this.props.data} />
 
-        {  this.props.configs.indicators && !_.isEmpty(selected_indicator) && this.props.configs.indicators[selected_indicator].years ?
-          <Timeline /> : null
-        }
+        <Timeline data={this.props.data} />
 
-        <SearchBar />
+        <SearchBar data={this.props.data} />
 
-        <IndicatorSelector configs={this.props.configs} />
+        <IndicatorSelector data={this.props.data} />
 
-        <SocialPanel configs={this.props.configs} />
+        <SocialPanel data={this.props.data} />
 
-        <Average configs={this.props.configs} />
+        <Average data={this.props.data} />
 
       </div>
     )

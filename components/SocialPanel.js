@@ -5,7 +5,9 @@ var mui = require('material-ui')
 var PaperButton = mui.PaperButton
 var Dialog = mui.Dialog
 var saveAs = require('filesaver.js')
-var GLOBALStore = require('../stores/GLOBALStore')
+
+var createStoreMixin = require('../mixins/createStoreMixin')
+var Store = require('../stores/Store')
 var axios = require('axios')
 
 var config = require('../config.json')
@@ -14,6 +16,16 @@ var globalPath = config.globalPath
 var SocialPanel = React.createClass({
 
   displayName: 'SocialPanel',
+
+  mixins: [createStoreMixin(Store)],
+
+  getStateFromStores() {
+    var selected_indicator = Store.getSelectedIndicator()
+
+    return {
+      selected_indicator: selected_indicator
+    }
+  },
 
   getInitialState: function() {
     return {
@@ -26,9 +38,8 @@ var SocialPanel = React.createClass({
   },
 
   _download() {
-    var selected_indicator = GLOBALStore.getSelectedIndicator()
-    var globals = GLOBALStore.get()
-    var source_path = globals.meta.indicators[selected_indicator].source_file
+    var selected_indicator = this.state.selected_indicator
+    var source_path = this.props.data.global.meta.indicators[selected_indicator].source_file
 
     var csv_url = `./data/${source_path}`
     axios.get(csv_url).then(function(res) {
