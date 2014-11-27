@@ -1,6 +1,8 @@
 CSVIZ
 ==========
 
+[ ![Codeship Status for csviz/csviz](https://codeship.com/projects/f910fb50-581b-0132-4456-2264a2250d8e/status?branch=master)](https://codeship.com/projects/50001)
+
 ### Build process
 
 I include neither `Grunt` nor `Gulp` for the build process, instead I use the `npm run` command provided from the npm cli. For **how** and **why**, you can refer to [task automation with npm run](www.substack.net/task_automation_with_npm_run) from substack.
