@@ -23,15 +23,24 @@ var IndicatorSelector = React.createClass({
     }
   },
 
+  componentDidMount() {
+    Store.addIndicatorChangeListener(this.handleStoreChange)
+
+    this.setState(this.getStateFromStores())
+  },
+
+  handleStoreChange() {
+    this.setState(this.getStateFromStores())
+  },
+
   hanldeSelectChange(e, key, menuItem) {
     MapActionCreators.changeIndicator(menuItem.payload)
   },
 
   render() {
-    var MenuItems = 'loading...'
-    var indicatorDescription = 'loading...'
-
+    var MenuItems, indicatorDescription
     var data = this.props.data
+    var selected_indicator = Store.getSelectedIndicator()
 
     // after get the configs
     if (data.configs && data.configs.indicators) {
@@ -40,8 +49,8 @@ var IndicatorSelector = React.createClass({
         .filter(key => indicators[key].name)
         .map(key => ({ payload: key, text: indicators[key].name }))
 
-      if (this.state.selected_indicator) {
-        indicatorDescription = data.configs.indicators[this.state.selected_indicator].description
+      if (selected_indicator) {
+        indicatorDescription = data.configs.indicators[selected_indicator].description
       } else {
         indicatorDescription = 'There\'s no description for this indicator.'
       }
@@ -49,7 +58,7 @@ var IndicatorSelector = React.createClass({
       // get default selected index
       var selectedIndex = _.indexOf(Object.keys(indicators).filter(function(key) {
         return indicators[key].name
-      }), this.state.selected_indicator)
+      }), selected_indicator)
       MenuItems = <DropDownMenu onChange={this.hanldeSelectChange} selectedIndex={selectedIndex} menuItems={menuItems} />
 
     } else {
