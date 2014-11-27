@@ -160,6 +160,11 @@
       margin: 4 * $margin 0;
       padding: $padding;
     }
+    .dialog-content {
+      .mui-paper-button {
+        margin-right: 2 * $margin;
+      }
+    }
   }
 
   .average-box {
@@ -289,13 +294,6 @@
     }
   }
 
-  @include retina {
-
-  }
-
-  @include print {
-
-  }
 }
 
 .card {
