@@ -1,10 +1,14 @@
 'use strict'
 
 var _ = require('lodash')
+var numeral = require('numeral')
 // var Rainbow = require('./RainbowVis')
 
 var MapUtils = {
 
+  /**
+   * Given a value, to calculate the color value from the current indicator and confif data
+   */
   getNumberColor(value, configs, meta, selected_indicator) {
 
     var min = meta.indicators[selected_indicator].min_value
@@ -52,6 +56,9 @@ var MapUtils = {
   //   return '#' + rainbow.colorAt(d)
   // },
 
+  /**
+   * A simple template helper function to genrerate markup from data
+   */
   compileTemplate(tpl, data) {
     var re = /{{(.+?)}}/g,
       reExp = /(^( )?(var|if|for|else|switch|case|break|{|}|;))(.*)?/g,
@@ -75,6 +82,9 @@ var MapUtils = {
     return result
   },
 
+  /**
+   * Normalize country name
+   */
   getCountryNameId(name) {
     var ALLOWED_CHARS = '0123456789abcdefghijklmnopqrstuvwxyz_'
 
@@ -89,6 +99,48 @@ var MapUtils = {
             }
           })
           .join('')
+  },
+
+  /**
+   * Center the given country on the map
+   */
+  centerOnCountry(countryName, map, countryLayer) {
+    if (countryLayer && map) {
+      countryLayer.eachLayer(function(layer) {
+        if(MapUtils.getCountryNameId(layer.feature.properties['ISO_NAME']) === countryName) {
+          map.fitBounds(layer.getBounds())
+
+          layer.setStyle({ weight: 3, opacity: 0.3, fillOpacity: 0.9 })
+        }
+      })
+    }
+  },
+
+  /**
+   * Get Legend Html with the selected Indicator
+   */
+  getLegendHTML(configs, global, selected_indicator) {
+    var indicatorName = configs.indicators[selected_indicator].name
+
+    var labels = [], from, to
+    var min = global.meta.indicators[selected_indicator].min_value.toFixed()
+    var max = global.meta.indicators[selected_indicator].max_value.toFixed()
+    var colors = configs.ui.choropleth
+    var steps = configs.ui.choropleth.length
+    var step = ((max - min)/steps).toFixed()
+
+    for (var i = 0; i < steps; i++) {
+      if (i == 0) {
+        from = parseInt(min)
+        to = parseInt(from) + parseInt(step)
+      } else {
+        from = parseInt(to + 1)
+        to = parseInt(from) + parseInt(step)
+      }
+      labels.push(`<li><span class='swatch' style='background:${colors[i]}'></span>${numeral(from).format('0,0')}${'&ndash;'}${numeral(to).format('0,0')}</li>`)
+    }
+
+    return `<span>${indicatorName}</span><ul class='legend-list'>${labels.join('')}</ul>`
   }
 }
 
