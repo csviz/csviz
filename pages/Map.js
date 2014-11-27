@@ -1,5 +1,6 @@
 'use strict'
 
+var _ = require('lodash')
 var React = require('react')
 var DocumentTitle = require('react-document-title')
 
@@ -9,6 +10,7 @@ var createStoreMixin = require('../mixins/createStoreMixin')
 
 var Map = require('../components/Map')
 var MapControls = require('../components/MapControls')
+var Spinner = require('../components/Spinner')
 
 var MapPage = React.createClass({
 
@@ -27,9 +29,13 @@ var MapPage = React.createClass({
   },
 
   render() {
+    var spinner = <Spinner />
+    if (!_.isEmpty(this.state.data)) spinner = null
+
     return (
       <DocumentTitle title='Map'>
         <div className='container'>
+          {spinner}
           <Map data={this.state.data} />
           <MapControls data={this.state.data} />
         </div>
