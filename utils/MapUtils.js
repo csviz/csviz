@@ -137,7 +137,7 @@ var MapUtils = {
         from = parseInt(to + 1)
         to = parseInt(from) + parseInt(step)
       }
-      labels.push(`<li><span class='swatch' style='background:${colors[i]}'></span>${numeral(from).format('0,0')}${'&ndash;'}${numeral(to).format('0,0')}</li>`)
+      labels.push(`<li><span class='swatch' style='background:${colors[i]}'></span>${numeral(from).format('0.0a')}${'&ndash;'}${numeral(to).format('0.0a')}</li>`)
     }
 
     return `<span>${indicatorName}</span><ul class='legend-list'>${labels.join('')}</ul>`

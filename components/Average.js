@@ -54,7 +54,7 @@ var Average = React.createClass({
           var countryData = _.map(global.data.locations[countryName][selected_indicator].years, function(value) {
             return value
           })
-          var countryChart = <Sparkline data={countryData} />
+          var countryChart = <Sparkline data={countryData} circleDiameter={0} />
 
           return (
             <li key={key} className='countryItem'>
@@ -65,15 +65,15 @@ var Average = React.createClass({
           )
         })
 
-        average = global.meta.indicators[selected_indicator].avg.years[selected_year].toFixed(2)
+        average = numeral(global.meta.indicators[selected_indicator].avg.years[selected_year]).format('0,0')
         var dataSeries = _.map(global.meta.indicators[selected_indicator].avg.years, function(value) {
           return value.toFixed(2)
         })
 
-        Chart = <Sparkline data={dataSeries} />
+        Chart = <Sparkline data={dataSeries} circleDiameter={0} />
       } else {
         values = _.map(global.data.locations, selected_indicator)
-        average = global.meta.indicators[selected_indicator].avg.toFixed(2)
+        average = numeral(global.meta.indicators[selected_indicator].avg).format('0,0')
       }
 
     }
