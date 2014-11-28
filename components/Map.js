@@ -92,18 +92,14 @@ var Map = React.createClass({
       var value, color
       var countryName = MapUtils.getCountryNameId(feature.properties['ISO_NAME'])
 
-      if (countryName in indicators) {
-        value = indicators[countryName][selected_indicator]
-      } else {
-        console.log('No name', feature)
-      }
+      // make sure country exist
+      if (countryName in indicators) value = indicators[countryName][selected_indicator]
+      // check if the value has years
+      if (configs.indicators[selected_indicator].years.length) value = value.years[selected_year]
 
+      // check the type of the data
       if (configs.indicators[selected_indicator].type == 'number') {
-        if (configs.indicators[selected_indicator].years.length) {
-          color = MapUtils.getNumberColor(value.years[selected_year], configs, meta, selected_indicator)
-        } else {
-          color = MapUtils.getNumberColor(value, configs, meta, selected_indicator)
-        }
+        color = MapUtils.getNumberColor(value, configs, meta, selected_indicator)
       } else {
         color = MapUtils.getSelectColor(value, configs, selected_indicator)
       }
@@ -111,6 +107,7 @@ var Map = React.createClass({
       return { weight: 0.0, opacity: 1, fillOpacity: 1, fillColor: color }
     }
 
+    // on each feature handler
     function onEachFeature(feature, layer) {
       var closeTooltip
       var popup = new L.Popup({ autoPan: false })
@@ -121,6 +118,7 @@ var Map = React.createClass({
         click: onMapClick
       })
 
+      // mouse move handler
       function mousemove(e) {
         var layer = e.target
         popup.setLatLng(e.latlng)
@@ -155,6 +153,7 @@ var Map = React.createClass({
         if (!L.Browser.ie && !L.Browser.opera) layer.bringToFront()
       }
 
+      // on mouse out handler
       function mouseout(e) {
         countryLayer.resetStyle(e.target)
         closeTooltip = window.setTimeout(function() {
@@ -162,6 +161,7 @@ var Map = React.createClass({
         }, 100)
       }
 
+      // on map click handler
       function onMapClick(e) {
         var selectedCountryName = MapUtils.getCountryNameId(e.target.feature.properties['ISO_NAME'])
         MapUtils.centerOnCountry(selectedCountryName, map, countryLayer)
