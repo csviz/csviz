@@ -3,37 +3,15 @@ CSVIZ
 
 [ ![Codeship Status for csviz/csviz](https://codeship.com/projects/f910fb50-581b-0132-4456-2264a2250d8e/status?branch=master)](https://codeship.com/projects/50001)
 
-### Build process
-
-I include neither `Grunt` nor `Gulp` for the build process, instead I use the `npm run` command provided from the npm cli. For **how** and **why**, you can refer to [task automation with npm run](www.substack.net/task_automation_with_npm_run) from substack.
-
-#### Dependencies
-
-Make sure you have `browserify`, `watchy`, `watchify`, `browser-sync` installed with `npm install browserify watchy watchify browser-sync -g`
-
-#### Development
+### Build process([npm all the thing](www.substack.net/task_automation_with_npm_run))
 
 ```
+// development
 $ npm run watch
-```
 
-You can use this command to:
-
-* `npm run lib` - This task will copy third-party libraries that has **css** files and **images**;
-* `npm run browser-sync` -  This task will start a static server and watch file changes;
-* `npm run watch-js` - This task will listen on changes on js files for browserify
-* `npm run watch-css` - This task will listen on changes on sass files from `/sass` folder and re-build the css files
-
-
-#### Production
-
-```
+//production
 $ npm run build
 ```
-
-* `npm run lib` - This task will copy third-party libraries that has **css** files and **images**;
-* `npm run build-js` - This task will run the browserify task and uglify the code at the same time for production environment;
-* `npm run build-css` - Build css file from sass for production
 
 _PS: If you have problem running the above commands, you can try to run `npm run clean` to clean up(`rm -rf build && mkdir build`) the build folder._
 
@@ -52,15 +30,6 @@ Reference: [Getting To Know Flux, the React.js Architecture](http://scotch.io/tu
 * MapActionCreators - trigger the **view action** to **dispatcher**
 * MapServerActionCreators - listen on the server response event and send the **server action** to **dispatcher**
 
-#### Dispatcher
-
-#### Stores
-
-Now we have three main stores:
-
-* CONFIGStore - store the data read from the `data/configuration.json`
-* GEOStore - store the data read from the `data/alternative_country_top.json`
-* GLOBALStore - store the indicators data and meta data read from `data/global.json`, also include the **app state** like `selected_indicator`
 
 #### View(Components)
 
@@ -72,7 +41,6 @@ Our app is made from serval reusable component:
   - indicator selector(selectbox for change indicator)
   - social pannel(share and download)
   - graph(gauge, bar chart, line chart...)
-
 
 #### Pages
 
