@@ -118,6 +118,10 @@
     height: 40px;
 
     .timeline {
+      .play-button {
+        display: inline-block;
+        width: 60px;
+      }
       li {
         display: inline;
         list-style: none;
