@@ -1,36 +1,23 @@
 'use strict'
 
 var _ = require('lodash')
+var EventEmitter = require('events').EventEmitter
+var objectAssign = require('object-assign')
 
 var AppDispatcher = require('../dispatcher/AppDispatcher')
-var createStore= require('../utils/StoreUtils').createStore
 var ActionTypes = require('../constants/ActionTypes')
 
-var _data = {}
-var _global_data = {}
-var _config_data = {}
-var _geo_data = []
-var _selected_indicator = null
-var _selected_year = null
-var _selected_country = null
-
-var INDICATOR_CHANGE_EVENT = 'indicator change'
-var COUNTRY_CHANGE_EVENT = 'country change'
+var CHANGE_EVENT = 'change'
 var YEAR_CHANGE_EVENT = 'year change'
+var COUNTRY_CHANGE_EVENT = 'country change'
+var INDICATOR_CHANGE_EVENT = 'indicator change'
 
-function setSelectedIndicator(indicator) {
-  _selected_indicator = indicator
-}
+// init data
+var _data = {}
+var _selected_year, _selected_indicator, _selected_country
 
-function setSelectedYear(year) {
-  _selected_year = year
-}
-
-function setSelectedCountry(country) {
-  _selected_country = country
-}
-
-var Store = createStore({
+// init store
+var Store = objectAssign({}, EventEmitter.prototype, {
   getAll() {
     return _data
   },
@@ -45,6 +32,18 @@ var Store = createStore({
 
   getSelectedCountry() {
     return _selected_country
+  },
+
+  addChangeListener(callback) {
+    this.on(CHANGE_EVENT, callback)
+  },
+
+  emitChange() {
+    this.emit(CHANGE_EVENT)
+  },
+
+  removeChangeListener(callback) {
+    this.removeListener(CHANGE_EVENT, callback)
   },
 
   addIndicatorChangeListener(callback) {
@@ -72,6 +71,18 @@ var Store = createStore({
   }
 })
 
+function setSelectedIndicator(indicator) {
+  _selected_indicator = indicator
+}
+
+function setSelectedYear(year) {
+  _selected_year = year
+}
+
+function setSelectedCountry(country) {
+  _selected_country = country
+}
+
 Store.dispatchToken = AppDispatcher.register(function(payload) {
 
   var action = payload.action
@@ -93,7 +104,7 @@ Store.dispatchToken = AppDispatcher.register(function(payload) {
       setSelectedIndicator(response)
 
       // set default year if the year is still empty
-      if (_data && _data.configs.indicators[response].years.length && _.isEmpty(_selected_year)) {
+      if (_data.configs && _data.configs.indicators[response].years.length && _.isEmpty(_selected_year)) {
         setSelectedYear(_data.configs.indicators[response].years[0])
       }
 

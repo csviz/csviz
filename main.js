@@ -7,7 +7,6 @@ var Router = require('react-router')
 var { DefaultRoute, Link, NotFoundRoute, Route, RouteHandler } = require('react-router')
 
 // Pages
-var DataPage = require('./pages/Data')
 var MapPage = require('./pages/Map')
 var NotFound = require('./pages/NotFound')
 
