@@ -131,17 +131,23 @@ var Map = React.createClass({
 
           // gdp with years
           if (configs.indicators[selected_indicator].years.length) {
-            value = indicators[cname][selected_indicator].years[selected_year].toFixed(2)
-            value = numeral(value).format('0,0')
+            var value = indicators[cname][selected_indicator].years[selected_year]
+            if (value) {
+              value = indicators[cname][selected_indicator].years[selected_year].toFixed(2)
+              value = numeral(value).format('0,0')
+              value = MapUtils.compileTemplate(tooltipTemplate, {currentIndicator: value})
+            }
           } else {
             if(indicators[cname][selected_indicator]) {
               value = indicators[cname][selected_indicator].toFixed(2)
-              value = numeral(value).format('0,0')
+              if (value) {
+                value = numeral(value).format('0,0')
+                value = MapUtils.compileTemplate(tooltipTemplate, {currentIndicator: value})
+              }
+
             }
           }
         }
-
-        var value = MapUtils.compileTemplate(tooltipTemplate, {currentIndicator: value})
 
         popup.setContent('<div class="marker-title">' + layer.feature.properties['ISO_NAME'] + '</div>' + value)
 
