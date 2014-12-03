@@ -38,7 +38,7 @@ var SocialPanel = React.createClass({
   },
 
   _download() {
-    var selected_indicator = this.state.selected_indicator
+    var selected_indicator = Store.getSelectedIndicator()
     var source_path = this.props.data.global.meta.indicators[selected_indicator].source_file
 
     var csv_url = `./data/${source_path}`
