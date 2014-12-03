@@ -14,7 +14,7 @@
     "watch-js": "watchify main.js -t [ reactify --extension js --harmony ] -o build/bundle.js -dv",
     "watch": "npm run lib && npm run browser-sync & npm run watch-js & npm run watch-css",
     "clean": "rm -rf build && mkdir build",
-    "pre-deploy": "rm -rf dist && mkdir -p dist && cp index.html dist/ && cp -r data dist && cp -r build dist",
+    "pre-deploy": "cp -r data/tmpData/ data",
     "deploy": "gh-pages-deploy"
   },
   "gh-pages-deploy": {
