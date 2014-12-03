@@ -14,14 +14,7 @@
     "watch-js": "watchify main.js -t [ reactify --extension js --harmony ] -o build/bundle.js -dv",
     "watch": "npm run lib && npm run browser-sync & npm run watch-js & npm run watch-css",
     "clean": "rm -rf build && mkdir build",
-    "pre-deploy": "cp -r data/tmpData/ data",
-    "deploy": "gh-pages-deploy"
-  },
-  "gh-pages-deploy": {
-    "prep": [
-      "pre-deploy"
-    ],
-    "noprompt": true
+    "deploy": "git checkout gh-pages && git reset --hard origin/master && cp -r data/tmpData/ data && git add -A . && git commit -a -m 'gh-pages update' && git push origin gh-pages --force && git checkout master"
   },
   "repository": {
     "type": "git",
@@ -52,7 +45,6 @@
   "devDependencies": {
     "browserify": "^6.2.0",
     "envify": "^3.2.0",
-    "gh-pages-deploy": "^0.1.1",
     "node-sass": "^1.0.3",
     "reactify": "^0.15.2",
     "uglify-js": "^2.4.15",
