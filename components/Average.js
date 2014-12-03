@@ -37,18 +37,15 @@ var Average = React.createClass({
   },
 
   render() {
-    var average, Chart, values, countryList
+    var average, Chart, countryList
     var global = this.props.data.global
     var configs = this.props.data.configs
     var selected_indicator = Store.getSelectedIndicator()
     var selected_year = Store.getSelectedYear()
 
     if (!_.isEmpty(selected_indicator) && !_.isEmpty(global)) {
+      // indicator with years
       if (!_.isEmpty(configs) && configs.indicators[selected_indicator].years.length) {
-        values = _.map(_.map(global.data.locations, selected_indicator), function(data) {
-          return data['years'][selected_year]
-        })
-
         countryList = Object.keys(global.data.locations).map(function(countryName, key) {
           var formattedValue = numeral(global.data.locations[countryName][selected_indicator].years[selected_year]).format('0,0')
           var countryData = _.map(global.data.locations[countryName][selected_indicator].years, function(value) {
@@ -71,9 +68,19 @@ var Average = React.createClass({
         })
 
         Chart = <Sparkline data={dataSeries} circleDiameter={0} />
+      // indicator without years
       } else {
-        values = _.map(global.data.locations, selected_indicator)
-        average = numeral(global.meta.indicators[selected_indicator].avg).format('0,0')
+        countryList = Object.keys(global.data.locations).map(function(countryName, key) {
+          var countryValue = global.data.locations[countryName][selected_indicator]
+          var formattedValue = countryValue ? (numeral(countryValue).format('0.000') + '%') : 'no data'
+          return (
+            <li key={key} className={ (countryValue ? '' : 'empty') + ' countryItem'}>
+              <span className='label'>{global.meta.locations[countryName].label}</span>
+              <span className='value'>{formattedValue}</span>
+            </li>
+          )
+        })
+        average = numeral(global.meta.indicators[selected_indicator].avg).format('0.000') + '%'
       }
 
     }
