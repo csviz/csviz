@@ -97,14 +97,19 @@ var Map = React.createClass({
       // check if the value has years
       if (configs.indicators[selected_indicator].years.length) value = value.years[selected_year]
 
-      // check the type of the data
-      if (configs.indicators[selected_indicator].type == 'number') {
-        color = MapUtils.getNumberColor(value, configs, meta, selected_indicator)
+      if (value) {
+        // check the type of the data
+        if (configs.indicators[selected_indicator].type == 'number') {
+          color = MapUtils.getNumberColor(value, configs, meta, selected_indicator)
+        } else {
+          color = MapUtils.getSelectColor(value, configs, selected_indicator)
+        }
+
+        return { weight: 0.0, opacity: 1, fillOpacity: 1, fillColor: color }
       } else {
-        color = MapUtils.getSelectColor(value, configs, selected_indicator)
+        return { weight: 0.5, fillOpacity: 0.8, fillColor: '#eff3ff' }
       }
 
-      return { weight: 0.0, opacity: 1, fillOpacity: 1, fillColor: color }
     }
 
     // on each feature handler
