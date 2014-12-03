@@ -13,7 +13,16 @@
     "browser-sync": "browser-sync start --server --files 'build/*.*' --logLevel silent",
     "watch-js": "watchify main.js -t [ reactify --extension js --harmony ] -o build/bundle.js -dv",
     "watch": "npm run lib && npm run browser-sync & npm run watch-js & npm run watch-css",
-    "clean": "rm -rf build && mkdir build"
+    "clean": "rm -rf build && mkdir build",
+    "pre-deploy": "rm -rf dist && mkdir -p dist && cp index.html dist/ && cp -r data dist && cp -r build dist",
+    "deploy": "gh-pages-deploy"
+  },
+  "gh-pages-deploy": {
+    "staticpath": "dist",
+    "prep": [
+      "pre-deploy"
+    ],
+    "noprompt": true
   },
   "repository": {
     "type": "git",
@@ -44,6 +53,7 @@
   "devDependencies": {
     "browserify": "^6.2.0",
     "envify": "^3.2.0",
+    "gh-pages-deploy": "^0.1.1",
     "node-sass": "^1.0.3",
     "reactify": "^0.15.2",
     "uglify-js": "^2.4.15",
