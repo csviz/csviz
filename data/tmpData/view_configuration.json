@@ -7,7 +7,7 @@
       "precision": 2,
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
-      "years": false
+      "years": []
     },
     "world_population": {
       "description": "The world population is the total number of living humans on Earth. ",
@@ -15,7 +15,13 @@
       "name": "World Population",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
-      "years": true
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012"
+      ]
     }
   },
   "site": {
