@@ -18,16 +18,19 @@ var Average = React.createClass({
   getStateFromStores() {
     var selected_indicator = Store.getSelectedIndicator()
     var selected_year = Store.getSelectedYear()
+    var selected_country = Store.getSelectedCountry()
 
     return {
       selected_year: selected_year,
-      selected_indicator: selected_indicator
+      selected_indicator: selected_indicator,
+      selected_country: selected_country
     }
   },
 
   componentDidMount() {
     Store.addIndicatorChangeListener(this.handleStoreChange)
     Store.addYearChangeListener(this.handleStoreChange)
+    Store.addCountryChangeListener(this.handleStoreChange)
 
     this.setState(this.getStateFromStores())
   },
@@ -36,12 +39,17 @@ var Average = React.createClass({
     this.setState(this.getStateFromStores())
   },
 
+  onCountryClick(countryName) {
+    MapActionCreators.changeSelectedCountry(countryName)
+  },
+
   render() {
     var average, Chart, countryList
     var global = this.props.data.global
     var configs = this.props.data.configs
     var selected_indicator = Store.getSelectedIndicator()
     var selected_year = Store.getSelectedYear()
+    var selected_country = Store.getSelectedCountry()
 
     if (!_.isEmpty(selected_indicator) && !_.isEmpty(global)) {
       // indicator with years
@@ -54,13 +62,13 @@ var Average = React.createClass({
           var countryChart = <Sparkline data={countryData} circleDiameter={0} />
 
           return (
-            <li key={key} className='countryItem'>
+            <li key={key} className={ (formattedValue ? '' : 'empty') + (selected_country == countryName ? ' active' : '') + ' countryItem'} onClick={this.onCountryClick.bind(this, countryName)}>
               <span className='label'>{global.meta.locations[countryName].label}</span>
               <span className='chart'>{countryChart}</span>
               <span className='value'>{formattedValue}</span>
             </li>
           )
-        })
+        }.bind(this))
 
         average = numeral(global.meta.indicators[selected_indicator].avg.years[selected_year]).format('0,0')
         var dataSeries = _.map(global.meta.indicators[selected_indicator].avg.years, function(value) {
@@ -73,13 +81,14 @@ var Average = React.createClass({
         countryList = Object.keys(global.data.locations).map(function(countryName, key) {
           var countryValue = global.data.locations[countryName][selected_indicator]
           var formattedValue = countryValue ? (numeral(countryValue).format('0.000') + '%') : 'no data'
+
           return (
-            <li key={key} className={ (countryValue ? '' : 'empty') + ' countryItem'}>
+            <li key={key} className={ (countryValue ? '' : 'empty') + (selected_country == countryName ? ' active' : '') + ' countryItem'} onClick={this.onCountryClick.bind(this, countryName)}>
               <span className='label'>{global.meta.locations[countryName].label}</span>
               <span className='value'>{formattedValue}</span>
             </li>
           )
-        })
+        }.bind(this))
         average = numeral(global.meta.indicators[selected_indicator].avg).format('0.000') + '%'
       }
 

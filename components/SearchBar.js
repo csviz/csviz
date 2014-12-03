@@ -1,12 +1,13 @@
 'use strict'
 
+var _ = require('lodash')
 var React = require('react')
 var mui = require('material-ui')
 var Paper = mui.Paper
 var SearchBar = require('react-select')
 
 var MapActionCreators = require('../actions/MapActionCreators')
-var _ = require('lodash')
+
 
 var Timeline = React.createClass({
 
