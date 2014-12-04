@@ -79,7 +79,7 @@ var Map = React.createClass({
       // make sure country exist
       if (countryName in indicators) value = indicators[countryName][selected_indicator]
       // check if the value has years
-      if (configs.indicators[selected_indicator].years.length) value = value.years[selected_year]
+      if (value && configs.indicators[selected_indicator].years.length) value = value.years[selected_year]
 
       if (value) {
         // check the type of the data

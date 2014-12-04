@@ -40,11 +40,15 @@ var Average = React.createClass({
       // indicator with years
       if (!_.isEmpty(configs) && configs.indicators[selected_indicator].years.length) {
         countryList = Object.keys(global.data.locations).map(function(countryName, key) {
-          var formattedValue = numeral(global.data.locations[countryName][selected_indicator].years[selected_year]).format('0,0')
-          var countryData = _.map(global.data.locations[countryName][selected_indicator].years, function(value) {
-            return value
-          })
-          var countryChart = <Sparkline data={countryData} circleDiameter={0} />
+
+          if (global.data.locations[countryName][selected_indicator]) {
+            var formattedValue = numeral(global.data.locations[countryName][selected_indicator].years[selected_year]).format('0,0')
+            var countryData = _.map(global.data.locations[countryName][selected_indicator].years, function(value) {
+              return value
+            })
+            var countryChart = <Sparkline data={countryData} circleDiameter={0} />
+
+          }
 
           return (
             <li key={key} className={ (formattedValue ? '' : 'empty') + (selected_country == countryName ? ' active' : '') + ' countryItem'} onClick={this.onCountryClick.bind(this, countryName)}>
@@ -55,12 +59,15 @@ var Average = React.createClass({
           )
         }.bind(this))
 
-        average = numeral(global.meta.indicators[selected_indicator].avg.years[selected_year]).format('0,0')
-        var dataSeries = _.map(global.meta.indicators[selected_indicator].avg.years, function(value) {
-          return value.toFixed(2)
-        })
+        if (global.meta.indicators[selected_indicator].avg) {
+          average = numeral(global.meta.indicators[selected_indicator].avg.years[selected_year]).format('0,0')
+          var dataSeries = _.map(global.meta.indicators[selected_indicator].avg.years, function(value) {
+            return value.toFixed(2)
+          })
 
-        Chart = <Sparkline data={dataSeries} circleDiameter={0} />
+          Chart = <Sparkline data={dataSeries} circleDiameter={0} />
+        }
+
       // indicator without years
       } else {
         countryList = Object.keys(global.data.locations).map(function(countryName, key) {
