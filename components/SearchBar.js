@@ -7,11 +7,21 @@ var Paper = mui.Paper
 var SearchBar = require('react-select')
 
 var MapActionCreators = require('../actions/MapActionCreators')
-
+var Store = require('../stores/Store')
 
 var Timeline = React.createClass({
 
   displayName: 'SearchBar',
+
+  componentDidMount() {
+    Store.addCountryChangeListener(this.handleStoreChange)
+
+    this.setState({})
+  },
+
+  handleStoreChange() {
+    this.setState({})
+  },
 
   handleSearchChange(countryName) {
     if(_.contains(Object.keys(this.props.data.global.meta.locations), countryName)) {
@@ -20,6 +30,7 @@ var Timeline = React.createClass({
   },
 
   render() {
+    var selected_country = Store.getSelectedCountry()
     var SearchBarComponent
     var options = []
 
@@ -33,7 +44,7 @@ var Timeline = React.createClass({
         name='country'
         options={options}
         onChange={this.handleSearchChange}
-        value={ null }
+        value={ selected_country }
       />)
 
     }

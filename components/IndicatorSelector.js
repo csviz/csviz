@@ -7,30 +7,19 @@ var DropDownMenu = mui.DropDownMenu
 
 var MapActionCreators = require('../actions/MapActionCreators')
 var Store = require('../stores/Store')
-var createStoreMixin = require('../mixins/createStoreMixin')
 
 var IndicatorSelector = React.createClass({
 
   displayName: 'IndicatorSelector',
 
-  mixins: [createStoreMixin(Store)],
-
-  getStateFromStores() {
-    var selected_indicator = Store.getSelectedIndicator()
-
-    return {
-      selected_indicator: selected_indicator
-    }
-  },
-
   componentDidMount() {
     Store.addIndicatorChangeListener(this.handleStoreChange)
 
-    this.setState(this.getStateFromStores())
+    this.setState({})
   },
 
   handleStoreChange() {
-    this.setState(this.getStateFromStores())
+    this.setState({})
   },
 
   hanldeSelectChange(e, key, menuItem) {

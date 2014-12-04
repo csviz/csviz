@@ -7,36 +7,21 @@ var numeral = require('numeral')
 
 var MapActionCreators = require('../actions/MapActionCreators')
 var Store = require('../stores/Store')
-var createStoreMixin = require('../mixins/createStoreMixin')
 
 var Average = React.createClass({
 
   displayName: 'Average',
-
-  mixins: [createStoreMixin(Store)],
-
-  getStateFromStores() {
-    var selected_indicator = Store.getSelectedIndicator()
-    var selected_year = Store.getSelectedYear()
-    var selected_country = Store.getSelectedCountry()
-
-    return {
-      selected_year: selected_year,
-      selected_indicator: selected_indicator,
-      selected_country: selected_country
-    }
-  },
 
   componentDidMount() {
     Store.addIndicatorChangeListener(this.handleStoreChange)
     Store.addYearChangeListener(this.handleStoreChange)
     Store.addCountryChangeListener(this.handleStoreChange)
 
-    this.setState(this.getStateFromStores())
+    this.setState({})
   },
 
   handleStoreChange() {
-    this.setState(this.getStateFromStores())
+    this.setState({})
   },
 
   onCountryClick(countryName) {

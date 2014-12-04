@@ -6,7 +6,6 @@ var PaperButton = mui.PaperButton
 var Dialog = mui.Dialog
 var saveAs = require('filesaver.js')
 
-var createStoreMixin = require('../mixins/createStoreMixin')
 var Store = require('../stores/Store')
 var axios = require('axios')
 
@@ -17,14 +16,14 @@ var SocialPanel = React.createClass({
 
   displayName: 'SocialPanel',
 
-  mixins: [createStoreMixin(Store)],
+  componentDidMount() {
+    Store.addIndicatorChangeListener(this.handleStoreChange)
 
-  getStateFromStores() {
-    var selected_indicator = Store.getSelectedIndicator()
+    this.setState({})
+  },
 
-    return {
-      selected_indicator: selected_indicator
-    }
+  handleStoreChange() {
+    this.setState({})
   },
 
   getInitialState: function() {

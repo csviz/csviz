@@ -5,13 +5,10 @@ var _ = require('lodash')
 
 var MapActionCreators = require('../actions/MapActionCreators')
 var Store = require('../stores/Store')
-var createStoreMixin = require('../mixins/createStoreMixin')
 
 var Timeline = React.createClass({
 
   displayName: 'Timeline',
-
-  mixins: [createStoreMixin(Store)],
 
   getInitialState() {
     return {
@@ -20,29 +17,19 @@ var Timeline = React.createClass({
     }
   },
 
-  getStateFromStores() {
-    var selected_indicator = Store.getSelectedIndicator()
-    var selected_year = Store.getSelectedYear()
-
-    return {
-      selected_year: selected_year,
-      selected_indicator: selected_indicator
-    }
-  },
-
   componentDidMount() {
     Store.addIndicatorChangeListener(this.handleStoreChange)
     Store.addYearChangeListener(this.handleStoreChange)
 
-    this.setState(this.getStateFromStores())
+    this.setState({})
+  },
+
+  handleStoreChange() {
+    this.setState({})
   },
 
   componentWillUnmount() {
     if (this.state.playLoop) window.clearInterval(this.state.playLoop)
-  },
-
-  handleStoreChange() {
-    this.setState(this.getStateFromStores())
   },
 
   handleYearClick(e) {

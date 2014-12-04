@@ -7,7 +7,6 @@ var numeral = require('numeral')
 
 var MapActionCreators = require('../actions/MapActionCreators')
 var Store = require('../stores/Store')
-var createStoreMixin = require('../mixins/createStoreMixin')
 var MapUtils = require('../utils/MapUtils')
 
 var config = require('../config.json')
@@ -16,20 +15,6 @@ var mapbox_config = config.mapbox
 var Map = React.createClass({
 
   displayName: 'MapComponent',
-
-  mixins: [createStoreMixin(Store)],
-
-  getStateFromStores() {
-    var selected_indicator = Store.getSelectedIndicator()
-    var selected_year = Store.getSelectedYear()
-    var selected_country = Store.getSelectedCountry()
-
-    return {
-      selected_indicator: selected_indicator,
-      selected_year: selected_year,
-      selected_country: selected_country
-    }
-  },
 
   getInitialState() {
     return {
@@ -44,8 +29,6 @@ var Map = React.createClass({
     Store.addIndicatorChangeListener(this.updateChoropleth)
     Store.addYearChangeListener(this.updateChoropleth)
 
-    this.setState(this.getStateFromStores())
-
     L.mapbox.accessToken = mapbox_config.token
     var map = L.mapbox.map('map', mapbox_config.type).setView(mapbox_config.location, mapbox_config.zoomlevel)
     this.setState({map: map})
@@ -59,15 +42,16 @@ var Map = React.createClass({
   },
 
   updateChoropleth() {
-    if (_.isEmpty(this.props.data) || _.isEmpty(this.state.selected_indicator)) return
+    var selected_indicator = Store.getSelectedIndicator()
+    var selected_year = Store.getSelectedYear()
+
+    if (_.isEmpty(this.props.data) || _.isEmpty(selected_indicator)) return
 
     var global = this.props.data.global
     var meta = global.meta
     var map = this.state.map
     var configs = this.props.data.configs
     var indicators = global.data.locations
-    var selected_indicator = Store.getSelectedIndicator()
-    var selected_year = Store.getSelectedYear()
 
     // clean up existing layers
     if (this.state.countryLayer && this.state.countryLayer._layers !== undefined) {
