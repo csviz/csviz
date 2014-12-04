@@ -2,6 +2,42 @@
   "data": {
     "locations": {
       "afghanistan": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 43.72982,
+            "2009": 42.83639,
+            "2010": 44.41709,
+            "2011": 43.51915,
+            "2012": 0
+          }
+        },
         "gdp_growth": 14.4347412712,
         "world_population": {
           "years": {
@@ -14,6 +50,42 @@
         }
       },
       "albania": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 54.81878,
+            "2009": 58.92474,
+            "2010": 60.67995,
+            "2011": 63.9691,
+            "2012": 69.11775
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 54.4192,
+            "2009": 58.98529,
+            "2010": 60.77182,
+            "2011": 63.85826,
+            "2012": 68.60648
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 54.6095,
+            "2009": 58.95661,
+            "2010": 60.72844,
+            "2011": 63.91048,
+            "2012": 68.84789
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 19.4078,
+            "2009": 20.17793,
+            "2010": 19.70208,
+            "2011": 19.86917,
+            "2012": 19.48298
+          }
+        },
         "gdp_growth": 1.2999872059,
         "world_population": {
           "years": {
@@ -242,6 +314,42 @@
         }
       },
       "benin": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 12.25299,
+            "2009": 13.37532,
+            "2010": 17.21275,
+            "2011": 18.89945,
+            "2012": 18.91031
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 12.49233,
+            "2009": 12.87302,
+            "2010": 16.52413,
+            "2011": 18.34229,
+            "2012": 18.22797
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 12.37354,
+            "2009": 13.12209,
+            "2010": 16.86536,
+            "2011": 18.61827,
+            "2012": 18.56563
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 44.55301,
+            "2009": 44.86809,
+            "2010": 46.3918,
+            "2011": 44.20067,
+            "2012": 44.14979
+          }
+        },
         "gdp_growth": 5.3999738765,
         "world_population": {
           "years": {
@@ -266,6 +374,42 @@
         }
       },
       "bhutan": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 1.09033,
+            "2009": 0,
+            "2010": 2.2917,
+            "2011": 5.71114,
+            "2012": 9.12489
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 0.99693,
+            "2009": 0,
+            "2010": 2.45529,
+            "2011": 5.25868,
+            "2012": 9.5039
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 1.04281,
+            "2009": 1.29824,
+            "2010": 2.37477,
+            "2011": 5.48123,
+            "2012": 9.31758
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 29.87891,
+            "2009": 27.70221,
+            "2010": 25.89606,
+            "2011": 25.37845,
+            "2012": 23.9859
+          }
+        },
         "gdp_growth": 4.6200169055,
         "world_population": {
           "years": {
@@ -350,6 +494,42 @@
         }
       },
       "burkina_faso": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 3.01682,
+            "2009": 2.9367,
+            "2010": 2.78844,
+            "2011": 3.14649,
+            "2012": 3.73867
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 2.9872,
+            "2009": 2.90139,
+            "2010": 2.85401,
+            "2011": 3.12704,
+            "2012": 3.69297
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 2.91875,
+            "2010": 2.82179,
+            "2011": 3.1366,
+            "2012": 3.71543
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 48.92155,
+            "2009": 48.90026,
+            "2010": 52.39988,
+            "2011": 52.68641,
+            "2012": 48.23903
+          }
+        },
         "gdp_growth": 9.5374201145,
         "world_population": {
           "years": {
@@ -374,6 +554,42 @@
         }
       },
       "burundi": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 7.84957,
+            "2010": 6.7661,
+            "2011": 5.16521,
+            "2012": 5.29586
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 7.51355,
+            "2010": 6.83705,
+            "2011": 5.11304,
+            "2012": 5.26801
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 11.81186,
+            "2010": 10.47639,
+            "2011": 7.9252,
+            "2012": 8.15737
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 0,
+            "2009": 51.36121,
+            "2010": 50.6021,
+            "2011": 48.31143,
+            "2012": 47.10468
+          }
+        },
         "gdp_growth": 4.0193655324,
         "world_population": {
           "years": {
@@ -398,6 +614,42 @@
         }
       },
       "cambodia": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 13.98117,
+            "2009": 0,
+            "2010": 12.92439,
+            "2011": 12.94222,
+            "2012": 15.33555
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 13.14549,
+            "2009": 0,
+            "2010": 12.44136,
+            "2011": 12.40566,
+            "2012": 14.57865
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 13.55501,
+            "2009": 0,
+            "2010": 12.67819,
+            "2011": 12.6685,
+            "2012": 14.94822
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 48.53713,
+            "2009": 49.07538,
+            "2010": 48.44957,
+            "2011": 47.29163,
+            "2012": 45.72134
+          }
+        },
         "gdp_growth": 7.3133455051,
         "world_population": {
           "years": {
@@ -410,6 +662,42 @@
         }
       },
       "cameroon": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 22.41662,
+            "2009": 23.88453,
+            "2010": 25.58325,
+            "2011": 27.02218,
+            "2012": 30.18438
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 21.92884,
+            "2009": 23.21826,
+            "2010": 25.03517,
+            "2011": 26.28297,
+            "2012": 29.41113
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 22.17086,
+            "2009": 23.54886,
+            "2010": 25.30715,
+            "2011": 26.64986,
+            "2012": 29.79492
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 46.03527,
+            "2009": 46.31569,
+            "2010": 45.79474,
+            "2011": 45.43773,
+            "2012": 45.56349
+          }
+        },
         "gdp_growth": 4.6,
         "world_population": {
           "years": {
@@ -446,6 +734,42 @@
         }
       },
       "central_african_republic": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 4.22448,
+            "2009": 4.66827,
+            "2010": 0,
+            "2011": 5.73046,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 4.18681,
+            "2009": 4.55981,
+            "2010": 0,
+            "2011": 5.6329,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 4.20569,
+            "2009": 4.61419,
+            "2010": 0,
+            "2011": 5.68185,
+            "2012": 0
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 100.23649,
+            "2009": 94.61257,
+            "2010": 84.32027,
+            "2011": 81.31051,
+            "2012": 80.11576
+          }
+        },
         "gdp_growth": 4.0999737919,
         "world_population": {
           "years": {
@@ -458,6 +782,42 @@
         }
       },
       "chad": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 1.64948,
+            "2011": 1.65878,
+            "2012": 1.42367
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 1.78875,
+            "2011": 1.88016,
+            "2012": 1.51592
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 1.71972,
+            "2011": 1.77046,
+            "2012": 1.47021
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 62.40153,
+            "2009": 61.01961,
+            "2010": 62.20393,
+            "2011": 62.59056,
+            "2012": 61.26763
+          }
+        },
         "gdp_growth": 8.8825760705,
         "world_population": {
           "years": {
@@ -506,6 +866,42 @@
         }
       },
       "comoros": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 23.25933,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 24.09718,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 23.68581,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 30.15332,
+            "2009": 0,
+            "2010": 0,
+            "2011": 27.74673,
+            "2012": 0
+          }
+        },
         "gdp_growth": 2.961140068,
         "world_population": {
           "years": {
@@ -518,6 +914,42 @@
         }
       },
       "congo_democratic_republic_of_the": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 3.57011,
+            "2009": 4.3198,
+            "2010": 3.73201,
+            "2011": 4.06761,
+            "2012": 4.44968
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 3.39698,
+            "2009": 4.08272,
+            "2010": 3.50807,
+            "2011": 3.86916,
+            "2012": 4.20811
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 3.4832,
+            "2009": 4.20078,
+            "2010": 3.61964,
+            "2011": 3.96807,
+            "2012": 4.32854
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 39.02034,
+            "2009": 37.32547,
+            "2010": 37.0131,
+            "2011": 37.37094,
+            "2012": 34.74758
+          }
+        },
         "gdp_growth": 7.1578643992,
         "world_population": {
           "years": {
@@ -626,6 +1058,42 @@
         }
       },
       "djibouti": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 3.33733,
+            "2009": 3.18243,
+            "2010": 0,
+            "2011": 4.76591,
+            "2012": 4.07828
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 3.64523,
+            "2009": 3.3057,
+            "2010": 0,
+            "2011": 4.85958,
+            "2012": 4.0054
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 3.49337,
+            "2009": 3.2449,
+            "2010": 0,
+            "2011": 4.81337,
+            "2012": 4.04135
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 34.0344,
+            "2009": 34.14014,
+            "2010": 0,
+            "2011": 35.23512,
+            "2012": 34.93245
+          }
+        },
         "gdp_growth": 3.0034964367,
         "world_population": {
           "years": {
@@ -662,6 +1130,42 @@
         }
       },
       "east_timor": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 42.44422,
+            "2009": 29.77684,
+            "2010": 30.19877,
+            "2011": 31.35481,
+            "2012": 0
+          }
+        },
         "gdp_growth": 8.3404987102,
         "world_population": {
           "years": {
@@ -722,6 +1226,42 @@
         }
       },
       "eritrea": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 11.60475,
+            "2009": 11.75028,
+            "2010": 11.79958,
+            "2011": 13.05779,
+            "2012": 12.66799
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 11.82809,
+            "2009": 11.58088,
+            "2010": 12.16791,
+            "2011": 13.18988,
+            "2012": 12.5647
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 11.71863,
+            "2009": 11.66387,
+            "2010": 11.98753,
+            "2011": 13.12521,
+            "2012": 12.61525
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 42.95363,
+            "2009": 38.46821,
+            "2010": 37.95899,
+            "2011": 40.4643,
+            "2012": 40.9313
+          }
+        },
         "gdp_growth": 7.017108852,
         "world_population": {
           "years": {
@@ -746,6 +1286,42 @@
         }
       },
       "ethiopia": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 3.31947,
+            "2009": 3.65528,
+            "2010": 4.21512,
+            "2011": 4.67037,
+            "2012": 17.14632
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 3.41385,
+            "2009": 3.75676,
+            "2010": 4.36769,
+            "2011": 4.88051,
+            "2012": 18.22384
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 62.28293,
+            "2009": 57.9406,
+            "2010": 54.05852,
+            "2011": 55.06929,
+            "2012": 53.74934
+          }
+        },
         "gdp_growth": 8.7253129078,
         "world_population": {
           "years": {
@@ -830,6 +1406,42 @@
         }
       },
       "gambia_the": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 30.47544,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 29.21722,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 29.84055,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 34.36475,
+            "2009": 36.6417,
+            "2010": 0,
+            "2011": 37.61854,
+            "2012": 33.86525
+          }
+        },
         "gdp_growth": 6.0548303269,
         "world_population": {
           "years": {
@@ -842,6 +1454,42 @@
         }
       },
       "georgia": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 57.86627,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 8.68001,
+            "2009": 8.9205,
+            "2010": 8.1578,
+            "2011": 0,
+            "2012": 6.25983
+          }
+        },
         "gdp_growth": 6.1800100102,
         "world_population": {
           "years": {
@@ -866,6 +1514,42 @@
         }
       },
       "ghana": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 102.79962,
+            "2009": 106.6287,
+            "2010": 0,
+            "2011": 0,
+            "2012": 115.45589
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 99.82085,
+            "2009": 103.27302,
+            "2010": 0,
+            "2011": 0,
+            "2012": 112.46256
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 101.28082,
+            "2009": 104.91754,
+            "2010": 0,
+            "2011": 0,
+            "2012": 113.92949
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 32.24014,
+            "2009": 33.11177,
+            "2010": 0,
+            "2011": 31.04223,
+            "2012": 32.98357
+          }
+        },
         "gdp_growth": 8.7898061768,
         "world_population": {
           "years": {
@@ -938,6 +1622,42 @@
         }
       },
       "guinea": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 10.85756,
+            "2009": 11.45382,
+            "2010": 12.45098,
+            "2011": 15.2673,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 10.73814,
+            "2009": 11.80502,
+            "2010": 12.81486,
+            "2011": 15.86997,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 10.7974,
+            "2009": 11.63076,
+            "2010": 12.63432,
+            "2011": 15.57103,
+            "2012": 0
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 44.11118,
+            "2009": 43.68705,
+            "2010": 42.18615,
+            "2011": 44.08141,
+            "2012": 43.55555
+          }
+        },
         "gdp_growth": 3.9441119886,
         "world_population": {
           "years": {
@@ -950,6 +1670,42 @@
         }
       },
       "guineabissau": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 6.71602,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 6.38818,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 6.55222,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 51.92515,
+            "2011": 0,
+            "2012": 0
+          }
+        },
         "gdp_growth": -1.45,
         "world_population": {
           "years": {
@@ -962,6 +1718,42 @@
         }
       },
       "guyana": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 69.50202,
+            "2009": 68.52533,
+            "2010": 65.0801,
+            "2011": 66.13423,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 64.69439,
+            "2009": 61.54871,
+            "2010": 57.79364,
+            "2011": 59.45747,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 66.95352,
+            "2009": 64.80337,
+            "2010": 61.18037,
+            "2011": 62.56523,
+            "2012": 66.1807
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 25.56042,
+            "2009": 25.56063,
+            "2010": 24.61945,
+            "2011": 24.59172,
+            "2012": 0
+          }
+        },
         "gdp_growth": 4.8164589171,
         "world_population": {
           "years": {
@@ -974,6 +1766,42 @@
         }
       },
       "haiti": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
         "gdp_growth": 2.8850960508,
         "world_population": {
           "years": {
@@ -986,6 +1814,42 @@
         }
       },
       "honduras": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 40.94667,
+            "2009": 42.92839,
+            "2010": 44.31128,
+            "2011": 44.46914,
+            "2012": 42.8425
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 39.8231,
+            "2009": 40.28066,
+            "2010": 43.00713,
+            "2011": 43.33688,
+            "2012": 41.68012
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 40.37356,
+            "2009": 41.57745,
+            "2010": 43.64574,
+            "2011": 43.89127,
+            "2012": 42.24927
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 33.34365,
+            "2009": 33.87645,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
         "gdp_growth": 3.8631391139,
         "world_population": {
           "years": {
@@ -1130,6 +1994,42 @@
         }
       },
       "ivory_coast": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 3.20557,
+            "2009": 3.87612,
+            "2010": 0,
+            "2011": 4.51705,
+            "2012": 5.38429
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 3.26222,
+            "2009": 3.96683,
+            "2010": 0,
+            "2011": 4.4908,
+            "2012": 5.38409
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 3.23401,
+            "2009": 3.92167,
+            "2010": 0,
+            "2011": 4.50387,
+            "2012": 5.38419
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 41.8902,
+            "2009": 42.12742,
+            "2010": 0,
+            "2011": 48.84621,
+            "2012": 41.71605
+          }
+        },
         "gdp_growth": 9.496,
         "world_population": {
           "years": {
@@ -1190,6 +2090,42 @@
         }
       },
       "kenya": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 45.9995,
+            "2009": 50.84773,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 48.0877,
+            "2009": 51.263,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 47.05102,
+            "2009": 51.05678,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 46.53791,
+            "2009": 46.78019,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
         "gdp_growth": 4.5525536832,
         "world_population": {
           "years": {
@@ -1262,6 +2198,42 @@
         }
       },
       "kyrgyzstan": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 17.61567,
+            "2009": 18.4983,
+            "2010": 19.23864,
+            "2011": 20.74025,
+            "2012": 24.93118
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 17.2672,
+            "2009": 18.69822,
+            "2010": 18.94918,
+            "2011": 20.83699,
+            "2012": 24.49771
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 17.43773,
+            "2009": 18.60011,
+            "2010": 19.09141,
+            "2011": 20.78942,
+            "2012": 24.71067
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 24.19711,
+            "2009": 24.03166,
+            "2010": 24.28436,
+            "2011": 24.91639,
+            "2012": 23.89988
+          }
+        },
         "gdp_growth": -0.0888321289,
         "world_population": {
           "years": {
@@ -1274,6 +2246,42 @@
         }
       },
       "laos": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 15.32407,
+            "2009": 18.99464,
+            "2010": 20.83144,
+            "2011": 22.17361,
+            "2012": 24.60103
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 14.46585,
+            "2009": 18.08536,
+            "2010": 20.03318,
+            "2011": 20.92424,
+            "2012": 23.52694
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 14.88696,
+            "2009": 18.53108,
+            "2010": 20.42411,
+            "2011": 21.53561,
+            "2012": 24.05234
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 30.49379,
+            "2009": 29.15319,
+            "2010": 28.83207,
+            "2011": 26.80852,
+            "2012": 27.12631
+          }
+        },
         "gdp_growth": 8.1973117785,
         "world_population": {
           "years": {
@@ -1310,6 +2318,42 @@
         }
       },
       "lesotho": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 32.918126,
+            "2009": 34.324908,
+            "2010": 35.73169,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 35.04477,
+            "2009": 33.75728,
+            "2010": 33.77485,
+            "2011": 33.87564,
+            "2012": 34.07946
+          }
+        },
         "gdp_growth": 6.5114390371,
         "world_population": {
           "years": {
@@ -1322,6 +2366,42 @@
         }
       },
       "liberia": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 24.26131,
+            "2009": 27.36148,
+            "2010": 0,
+            "2011": 26.83431,
+            "2012": 0
+          }
+        },
         "gdp_growth": 10.2386420305,
         "world_population": {
           "years": {
@@ -1406,6 +2486,42 @@
         }
       },
       "madagascar": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 8.82219,
+            "2009": 9.73012,
+            "2010": 8.70845,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 8.52799,
+            "2009": 9.44244,
+            "2010": 8.49253,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 8.67435,
+            "2009": 9.58542,
+            "2010": 8.59978,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 47.15533,
+            "2009": 47.90319,
+            "2010": 40.14191,
+            "2011": 43.24486,
+            "2012": 43.06725
+          }
+        },
         "gdp_growth": 2.3601111259,
         "world_population": {
           "years": {
@@ -1418,6 +2534,42 @@
         }
       },
       "malawi": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 78.40557,
+            "2009": 80.67995,
+            "2010": 79.27172,
+            "2011": 76.07357,
+            "2012": 74.08589
+          }
+        },
         "gdp_growth": 1.8857995075,
         "world_population": {
           "years": {
@@ -1454,6 +2606,42 @@
         }
       },
       "mali": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 3.64429,
+            "2009": 3.61436,
+            "2010": 3.62889,
+            "2011": 3.8426,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 3.51122,
+            "2009": 3.38139,
+            "2010": 3.39647,
+            "2011": 3.69777,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 3.57656,
+            "2009": 3.49578,
+            "2010": 3.51061,
+            "2011": 3.76892,
+            "2012": 0
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 51.43719,
+            "2009": 50.14558,
+            "2010": 50.39826,
+            "2011": 48.47335,
+            "2012": 0
+          }
+        },
         "gdp_growth": -0.408303574,
         "world_population": {
           "years": {
@@ -1490,6 +2678,42 @@
         }
       },
       "mauritania": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 37.22792,
+            "2009": 39.0677,
+            "2010": 37.15186,
+            "2011": 39.29443,
+            "2012": 40.12932
+          }
+        },
         "gdp_growth": 7,
         "world_population": {
           "years": {
@@ -1538,6 +2762,42 @@
         }
       },
       "moldova": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 72.04355,
+            "2009": 73.79509,
+            "2010": 74.86037,
+            "2011": 76.93301,
+            "2012": 78.97288
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 73.17867,
+            "2009": 74.90454,
+            "2010": 76.11693,
+            "2011": 77.3505,
+            "2012": 80.28951
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 72.62811,
+            "2009": 74.36624,
+            "2010": 75.50635,
+            "2011": 77.14787,
+            "2012": 79.64987
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 15.86201,
+            "2009": 15.74791,
+            "2010": 15.41452,
+            "2011": 15.3188,
+            "2012": 15.7877
+          }
+        },
         "gdp_growth": -0.7,
         "world_population": {
           "years": {
@@ -1562,6 +2822,42 @@
         }
       },
       "mongolia": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 59.394,
+            "2009": 77.76891,
+            "2010": 79.83703,
+            "2011": 85.63406,
+            "2012": 86.23104
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 55.62521,
+            "2009": 74.94992,
+            "2010": 77.12925,
+            "2011": 82.16066,
+            "2012": 85.32086
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 57.49109,
+            "2009": 76.34373,
+            "2010": 78.46776,
+            "2011": 83.87715,
+            "2012": 85.77061
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 31.14934,
+            "2009": 30.36106,
+            "2010": 30.23907,
+            "2011": 29.32321,
+            "2012": 28.77793
+          }
+        },
         "gdp_growth": 12.4011006951,
         "world_population": {
           "years": {
@@ -1598,6 +2894,42 @@
         }
       },
       "mozambique": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 63.99922,
+            "2009": 61.28936,
+            "2010": 58.48961,
+            "2011": 55.41963,
+            "2012": 54.84224
+          }
+        },
         "gdp_growth": 7.2415695357,
         "world_population": {
           "years": {
@@ -1622,6 +2954,42 @@
         }
       },
       "nepal": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 56.09907,
+            "2009": 62.06867,
+            "2010": 68.45832,
+            "2011": 75.57538,
+            "2012": 80.65239
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 61.57793,
+            "2009": 65.41639,
+            "2010": 70.86746,
+            "2011": 77.20161,
+            "2012": 82.61956
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 58.93173,
+            "2009": 63.79602,
+            "2010": 69.7,
+            "2011": 76.41235,
+            "2012": 81.66173
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 37.81655,
+            "2009": 33.30905,
+            "2010": 31.91867,
+            "2011": 29.61413,
+            "2012": 27.5331
+          }
+        },
         "gdp_growth": 4.8524763403,
         "world_population": {
           "years": {
@@ -1670,6 +3038,42 @@
         }
       },
       "nicaragua": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 56.01199,
+            "2009": 0,
+            "2010": 55.69358,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 55.45493,
+            "2009": 0,
+            "2010": 54.26599,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 55.72784,
+            "2009": 0,
+            "2010": 54.96525,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 29.19228,
+            "2009": 0,
+            "2010": 30.21638,
+            "2011": 0,
+            "2012": 0
+          }
+        },
         "gdp_growth": 3.3547404566,
         "world_population": {
           "years": {
@@ -1682,6 +3086,42 @@
         }
       },
       "niger": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 2.52742,
+            "2009": 2.96501,
+            "2010": 4.21295,
+            "2011": 5.86085,
+            "2012": 6.41712
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 2.39006,
+            "2009": 3.14679,
+            "2010": 4.08631,
+            "2011": 5.53124,
+            "2012": 6.12045
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 2.45735,
+            "2009": 3.05779,
+            "2010": 4.14831,
+            "2011": 5.69276,
+            "2012": 6.26576
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 40.71853,
+            "2009": 38.83216,
+            "2010": 38.61445,
+            "2011": 39.00208,
+            "2012": 38.75524
+          }
+        },
         "gdp_growth": 10.8275503401,
         "world_population": {
           "years": {
@@ -1694,6 +3134,42 @@
         }
       },
       "nigeria": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 12.5182,
+            "2009": 11.84532,
+            "2010": 13.30046,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 11.93735,
+            "2009": 14.03599,
+            "2010": 13.47805,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 12.22146,
+            "2009": 12.96489,
+            "2010": 13.39122,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 36.02612,
+            "2011": 0,
+            "2012": 0
+          }
+        },
         "gdp_growth": 4.2792773139,
         "world_population": {
           "years": {
@@ -1742,6 +3218,42 @@
         }
       },
       "pakistan": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 88.79822,
+            "2009": 86.24669,
+            "2010": 0,
+            "2011": 0,
+            "2012": 82.13443
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 40.66857,
+            "2009": 39.68783,
+            "2010": 40.45158,
+            "2011": 39.83264,
+            "2012": 41.35274
+          }
+        },
         "gdp_growth": 4.0159076706,
         "world_population": {
           "years": {
@@ -1778,6 +3290,42 @@
         }
       },
       "papua_new_guinea": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 98.52247,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 101.01803,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 99.81572,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
         "gdp_growth": 8,
         "world_population": {
           "years": {
@@ -1898,6 +3446,42 @@
         }
       },
       "rwanda": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 16.21639,
+            "2009": 17.09859,
+            "2010": 11.10913,
+            "2011": 12.36644,
+            "2012": 13.6621
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 15.55407,
+            "2009": 17.15284,
+            "2010": 10.54943,
+            "2011": 11.77199,
+            "2012": 12.88876
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 15.88583,
+            "2009": 17.12559,
+            "2010": 10.83032,
+            "2011": 12.07018,
+            "2012": 13.27627
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 67.73053,
+            "2009": 68.29941,
+            "2010": 64.61867,
+            "2011": 58.09439,
+            "2012": 59.27851
+          }
+        },
         "gdp_growth": 7.3062922517,
         "world_population": {
           "years": {
@@ -1994,6 +3578,42 @@
         }
       },
       "senegal": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 11.15758,
+            "2009": 11.94736,
+            "2010": 13.35821,
+            "2011": 14.38892,
+            "2012": 15.06384
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 9.87155,
+            "2009": 10.51379,
+            "2010": 11.95563,
+            "2011": 12.59644,
+            "2012": 13.46585
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 10.50815,
+            "2009": 11.22308,
+            "2010": 12.64929,
+            "2011": 13.48265,
+            "2012": 14.25577
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 36.43514,
+            "2009": 34.65629,
+            "2010": 33.65179,
+            "2011": 32.93963,
+            "2012": 31.68179
+          }
+        },
         "gdp_growth": 3.4529025825,
         "world_population": {
           "years": {
@@ -2030,6 +3650,42 @@
         }
       },
       "sierra_leone": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 7.248,
+            "2012": 9.54102
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 6.96919,
+            "2012": 8.9371
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 7.10906,
+            "2012": 9.23984
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 31.33123,
+            "2012": 32.99373
+          }
+        },
         "gdp_growth": 15.2238474117,
         "world_population": {
           "years": {
@@ -2090,6 +3746,42 @@
         }
       },
       "so_tom_and_prncipe": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 44.42013,
+            "2009": 47.28247,
+            "2010": 41.22031,
+            "2011": 53.42063,
+            "2012": 50.87595
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 42.05582,
+            "2009": 43.71473,
+            "2010": 37.81502,
+            "2011": 50.84827,
+            "2012": 48.99384
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 43.22677,
+            "2009": 45.4822,
+            "2010": 39.50285,
+            "2011": 52.12353,
+            "2012": 49.92666
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 0,
+            "2009": 26.17273,
+            "2010": 26.20046,
+            "2011": 29.79713,
+            "2012": 28.65004
+          }
+        },
         "gdp_growth": 4,
         "world_population": {
           "years": {
@@ -2114,6 +3806,42 @@
         }
       },
       "somalia": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
         "gdp_growth": null,
         "world_population": {
           "years": {
@@ -2138,6 +3866,42 @@
         }
       },
       "south_sudan": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 5.92251,
+            "2012": 0
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
         "gdp_growth": -48.9829830446,
         "world_population": {
           "years": {
@@ -2174,6 +3938,42 @@
         }
       },
       "sudan": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 27.30331,
+            "2009": 34.93946,
+            "2010": 31.21567,
+            "2011": 35.17332,
+            "2012": 0
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 45,
+            "2009": 44,
+            "2010": 43,
+            "2011": 43,
+            "2012": 0
+          }
+        },
         "gdp_growth": -10.1,
         "world_population": {
           "years": {
@@ -2233,8 +4033,7 @@
           }
         }
       },
-      "syrian_arab_republic": {
-        "gdp_growth": null,
+      "syria": {
         "world_population": {
           "years": {
             "2008": 20346056,
@@ -2245,7 +4044,46 @@
           }
         }
       },
+      "syrian_arab_republic": {
+        "gdp_growth": null
+      },
       "tajikistan": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 8.26332,
+            "2009": 8.13878,
+            "2010": 7.67958,
+            "2011": 7.96443,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 9.5544,
+            "2009": 9.38029,
+            "2010": 9.09273,
+            "2011": 9.60301,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 8.92471,
+            "2009": 8.77538,
+            "2010": 8.40452,
+            "2011": 8.80492,
+            "2012": 0
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 22.67432,
+            "2009": 23.24594,
+            "2010": 25.18145,
+            "2011": 23.27456,
+            "2012": 23.00472
+          }
+        },
         "gdp_growth": 7.5,
         "world_population": {
           "years": {
@@ -2258,6 +4096,42 @@
         }
       },
       "tanzania": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 34.56425,
+            "2009": 33.46324,
+            "2010": 33.35328,
+            "2011": 0,
+            "2012": 33.77631
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 33.83314,
+            "2009": 32.61791,
+            "2010": 32.68191,
+            "2011": 0,
+            "2012": 34.96092
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 34.1958,
+            "2009": 33.03725,
+            "2010": 33.01498,
+            "2011": 0,
+            "2012": 34.37336
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 52.3892,
+            "2009": 53.70457,
+            "2010": 50.76274,
+            "2011": 0,
+            "2012": 45.56776
+          }
+        },
         "gdp_growth": 6.9329883235,
         "world_population": {
           "years": {
@@ -2282,6 +4156,42 @@
         }
       },
       "togo": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 4.93944,
+            "2009": 7.61372,
+            "2010": 7.72184,
+            "2011": 9.69047,
+            "2012": 11.37974
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 4.7953,
+            "2009": 7.31571,
+            "2010": 7.54018,
+            "2011": 9.4895,
+            "2012": 11.02423
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 4.86731,
+            "2009": 7.46458,
+            "2010": 7.63094,
+            "2011": 9.58992,
+            "2012": 11.20185
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 41.32555,
+            "2009": 43.50925,
+            "2010": 40.57306,
+            "2011": 40.94767,
+            "2012": 41.67781
+          }
+        },
         "gdp_growth": 5.9124911196,
         "world_population": {
           "years": {
@@ -2378,6 +4288,42 @@
         }
       },
       "uganda": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 12.33786,
+            "2009": 0,
+            "2010": 13.87378,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 11.71092,
+            "2009": 0,
+            "2010": 13.27222,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 12.0221,
+            "2009": 0,
+            "2010": 13.57082,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 49.92589,
+            "2009": 49.28122,
+            "2010": 48.576,
+            "2011": 47.77601,
+            "2012": 0
+          }
+        },
         "gdp_growth": 3.410515784,
         "world_population": {
           "years": {
@@ -2462,6 +4408,42 @@
         }
       },
       "uzbekistan": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 26.88325,
+            "2009": 25.62011,
+            "2010": 25.13427,
+            "2011": 24.76915,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 26.44127,
+            "2009": 25.51768,
+            "2010": 25.40392,
+            "2011": 24.88569,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 26.65816,
+            "2009": 25.56795,
+            "2010": 25.27155,
+            "2011": 24.82847,
+            "2012": 0
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 17.60546,
+            "2009": 17.11574,
+            "2010": 17.76213,
+            "2011": 15.6244,
+            "2012": 0
+          }
+        },
         "gdp_growth": 8.2,
         "world_population": {
           "years": {
@@ -2498,6 +4480,42 @@
         }
       },
       "vietnam": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 66.85705,
+            "2009": 65.76518,
+            "2010": 67.46272,
+            "2011": 69.43788,
+            "2012": 75.2546
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 66.17196,
+            "2009": 67.47085,
+            "2010": 69.80298,
+            "2011": 74.7205,
+            "2012": 78.95142
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 66.50369,
+            "2009": 66.64593,
+            "2010": 68.67462,
+            "2011": 72.18088,
+            "2012": 77.18204
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 19.92674,
+            "2009": 19.5222,
+            "2010": 19.90175,
+            "2011": 19.63155,
+            "2012": 19.39912
+          }
+        },
         "gdp_growth": 5.247367156,
         "world_population": {
           "years": {
@@ -2509,7 +4527,46 @@
           }
         }
       },
+      "west_bank_and_gaza": {
+        "gdp_growth": 13.8372555942
+      },
       "yemen": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 1.15846,
+            "2009": 0,
+            "2010": 1.23932,
+            "2011": 1.43263,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 1.30262,
+            "2009": 0,
+            "2010": 1.38262,
+            "2011": 1.61881,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 1.232,
+            "2009": 0,
+            "2010": 1.31244,
+            "2011": 1.52764,
+            "2012": 0
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 30.81078,
+            "2011": 30.25279,
+            "2012": 0
+          }
+        },
         "gdp_growth": 2.4698785142,
         "world_population": {
           "years": {
@@ -2522,6 +4579,42 @@
         }
       },
       "zambia": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 54.17641,
+            "2009": 0,
+            "2010": 52.98507,
+            "2011": 55.86195,
+            "2012": 49.22433
+          }
+        },
         "gdp_growth": 7.2699652778,
         "world_population": {
           "years": {
@@ -2534,6 +4627,42 @@
         }
       },
       "zimbabwe": {
+        "Primary Gross Enrollment Ratio, Female (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Male (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Primary Gross Enrollment Ratio, Total (%)": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
+        "Pupil Teacher Ratio, Primary Education": {
+          "years": {
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0
+          }
+        },
         "gdp_growth": 5.3173568045,
         "world_population": {
           "years": {
@@ -2549,8 +4678,92 @@
   },
   "meta": {
     "indicators": {
+      "Primary Gross Enrollment Ratio, Female (%)": {
+        "avg": {
+          "years": {
+            "2008": 17.958030000000004,
+            "2009": 15.508760677966098,
+            "2010": 14.908460338983053,
+            "2011": 13.435131186440678,
+            "2012": 14.68669881355932
+          }
+        },
+        "max_value": 115.45589,
+        "min_value": 0,
+        "source_file": "primary_gross_enrollment_ratio.csv",
+        "years": [
+          "2008",
+          "2009",
+          "2010",
+          "2011",
+          "2012"
+        ]
+      },
+      "Primary Gross Enrollment Ratio, Male (%)": {
+        "avg": {
+          "years": {
+            "2008": 17.7832206779661,
+            "2009": 15.265414576271185,
+            "2010": 14.648885932203392,
+            "2011": 13.255282372881355,
+            "2012": 14.592050847457628
+          }
+        },
+        "max_value": 112.46256,
+        "min_value": 0,
+        "source_file": "primary_gross_enrollment_ratio.csv",
+        "years": [
+          "2008",
+          "2009",
+          "2010",
+          "2011",
+          "2012"
+        ]
+      },
+      "Primary Gross Enrollment Ratio, Total (%)": {
+        "avg": {
+          "years": {
+            "2008": 21.267594847457627,
+            "2009": 18.04850505084746,
+            "2010": 15.899096101694917,
+            "2011": 14.005384067796614,
+            "2012": 16.90249559322034
+          }
+        },
+        "max_value": 113.92949,
+        "min_value": 0,
+        "source_file": "primary_gross_enrollment_ratio.csv",
+        "years": [
+          "2008",
+          "2009",
+          "2010",
+          "2011",
+          "2012"
+        ]
+      },
+      "Pupil Teacher Ratio, Primary Education": {
+        "avg": {
+          "years": {
+            "2008": 33.15487016949154,
+            "2009": 31.9671366101695,
+            "2010": 30.43296237288136,
+            "2011": 31.196269152542378,
+            "2012": 25.75061677966102
+          }
+        },
+        "max_value": 100.23649,
+        "min_value": 0,
+        "source_file": "Pupil Teacher Ratio, Primary Education.csv",
+        "years": [
+          "2008",
+          "2009",
+          "2010",
+          "2011",
+          "2012"
+        ]
+      },
       "gdp_growth": {
-        "avg": 3.5803665751218086,
+        "avg": 3.6346358291910055,
         "max_value": 104.4844632768,
         "min_value": -48.9829830446,
         "source_file": "GDP_growth.csv"
@@ -3138,6 +5351,9 @@
       "switzerland": {
         "label": "Switzerland"
       },
+      "syria": {
+        "label": "Syria"
+      },
       "syrian_arab_republic": {
         "label": "Syrian Arab Republic"
       },
@@ -3206,6 +5422,9 @@
       },
       "vietnam": {
         "label": "Vietnam"
+      },
+      "west_bank_and_gaza": {
+        "label": "West Bank and Gaza"
       },
       "yemen": {
         "label": "Yemen"
