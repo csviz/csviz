@@ -93,12 +93,12 @@
   },
   "ui": {
     "choropleth": [
-      "#5B79AD",
-      "#6884B3",
-      "#6B87B4",
-      "#819BC3",
+      "#A7BAD2",
       "#94AACB",
-      "#A7BAD2"
+      "#819BC3",
+      "#6B87B4",
+      "#6884B3",
+      "#5B79AD"
     ],
     "legend": false,
     "menu": [
