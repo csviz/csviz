@@ -56,15 +56,16 @@ var Average = React.createClass({
 
           return (
             <li key={key} className={ (hasData ? '' : 'empty') + (selected_country == countryName ? ' active' : '') + ' countryItem'} onClick={this.onCountryClick.bind(this, countryName)}>
-              <span className='label'>{global.meta.locations[countryName].label}</span>
-              <span className='chart'>{countryChart}</span>
+            <span className='chart'>{countryChart}</span>
               <span className='value'>{formattedValue}</span>
+              <div className='label'><span className='ellipsis'>{global.meta.locations[countryName].label}</span></div>
+
             </li>
           )
         }.bind(this))
 
         if (global.meta.indicators[selected_indicator].avg) {
-          average = numeral(global.meta.indicators[selected_indicator].avg.years[selected_year]).format('0,0')
+          average = numeral(global.meta.indicators[selected_indicator].avg.years[selected_year]).format('0.000')
           var dataSeries = _.map(global.meta.indicators[selected_indicator].avg.years, function(value) {
             return value.toFixed(2)
           })

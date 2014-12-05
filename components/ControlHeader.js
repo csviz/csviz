@@ -24,11 +24,11 @@ var ControlHeader = React.createClass({
     return (
       <div className='card'>
         <div className='header'>
-          <img src={site.logo} />
-          <h1>{site.name}</h1>
           <div className='about'>
             <Icon icon='action-info' onClick={this._showDialog} />
           </div>
+          <img src={site.logo} />
+          <h1>{site.name}</h1>
         </div>
 
         <Dialog ref='aboutDialog' title='About' actions={dialogActions}>

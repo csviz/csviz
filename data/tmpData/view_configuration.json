@@ -5,7 +5,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Primary Gross Enrollment Ratio, Female (%)",
       "precision": 2,
-      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "tooltip": "Female GER: {{ currentIndicator }}%",
       "type": "number",
       "years": [
         "2008",
@@ -20,7 +20,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Primary Gross Enrollment Ratio, Male (%)",
       "precision": 2,
-      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "tooltip": "Male GER: {{ currentIndicator }}%",
       "type": "number",
       "years": [
         "2008",
@@ -35,7 +35,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Primary Gross Enrollment Ratio, Total (%)",
       "precision": 2,
-      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "tooltip": "Total GER: {{ currentIndicator }}%",
       "type": "number",
       "years": [
         "2008",
@@ -50,7 +50,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Pupil Teacher Ratio, Primary Education",
       "precision": 2,
-      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "tooltip": "Pupil Teacher Ratio: {{ currentIndicator }}%",
       "type": "number",
       "years": [
         "2008",
@@ -65,7 +65,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "GDP growth (annual %)",
       "precision": 2,
-      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "tooltip": "GDP: {{ currentIndicator }}%",
       "type": "number",
       "years": []
     },
@@ -73,7 +73,7 @@
       "description": "The world population is the total number of living humans on Earth. In June 2013, the United Nations Department of Economic and Social Affairs, Population Division estimated that as of 2010, the world population was 6.916 billion.",
       "display": "{{ currentIndicator }}%",
       "name": "World Population",
-      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "tooltip": "World Population: {{ currentIndicator }}",
       "type": "number",
       "years": [
         "2008",

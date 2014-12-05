@@ -91,6 +91,7 @@ var Map = React.createClass({
 
         return { weight: 0.0, opacity: 1, fillOpacity: 1, fillColor: color }
       } else {
+        // for country with no data
         return { weight: 0.5, fillOpacity: 0.8, fillColor: '#eff3ff' }
       }
 
@@ -118,19 +119,19 @@ var Map = React.createClass({
         if (cname in indicators && indicators[cname][selected_indicator] !== undefined) {
           var tooltipTemplate = configs.indicators[selected_indicator].tooltip
 
-          // gdp with years
+          // data with years
           if (configs.indicators[selected_indicator].years.length) {
             var value = indicators[cname][selected_indicator].years[selected_year]
             if (value) {
               value = indicators[cname][selected_indicator].years[selected_year].toFixed(2)
-              value = numeral(value).format('0,0')
+              value = numeral(value).format('0.000')
               value = MapUtils.compileTemplate(tooltipTemplate, {currentIndicator: value})
             }
           } else {
             if(indicators[cname][selected_indicator]) {
               value = indicators[cname][selected_indicator].toFixed(2)
               if (value) {
-                value = numeral(value).format('0,0')
+                value = numeral(value).format('0.000')
                 value = MapUtils.compileTemplate(tooltipTemplate, {currentIndicator: value})
               }
 

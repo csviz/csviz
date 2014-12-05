@@ -4,7 +4,7 @@
   "configPath": "./data/view_configuration.json",
   "mapbox": {
     "token": "pk.eyJ1IjoiY3N2aXoiLCJhIjoiVVZIejF1ZyJ9.xFS0JJueEKUV7o0bj2IGIA",
-    "type": "wiredcraft.3v01kyb9",
+    "type": "examples.map-i87786ca",
     "location": [32.52, 13.11],
     "zoomlevel": 3
   }
