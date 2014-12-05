@@ -195,10 +195,10 @@
           list-style: none;
           border-top: 1px solid rgba(0, 0, 0, 0.05);
           &.active {
-            background: rgba(8, 169, 28, 0.25);
+            color: rgb(8, 169, 28);
           }
           &.empty {
-            background: rgba(0, 0, 0, 0.05);
+            color: #918888;
           }
         }
 
