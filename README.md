@@ -3,9 +3,13 @@ CSVIZ
 
 [ ![Codeship Status for csviz/csviz](https://codeship.com/projects/f910fb50-581b-0132-4456-2264a2250d8e/status?branch=master)](https://codeship.com/projects/50001)
 
+### [Live example](http://csviz.github.io/csviz/)
+
 ### Build process([npm all the thing](www.substack.net/task_automation_with_npm_run))
 
 ```
+$ npm install
+
 // development
 $ npm run watch
 
@@ -13,13 +17,11 @@ $ npm run watch
 $ npm run build
 ```
 
-_PS: If you have problem running the above commands, you can try to run `npm run clean` to clean up(`rm -rf build && mkdir build`) the build folder._
+_PS: If you have problem running the above commands, you can try to run `npm run clean` to clean up the build folder._
 
 ### Architecture
 
 First, we are using the [flux](http://facebook.github.io/flux/) architecture from Facebook.
-
-![flux](https://cloud.githubusercontent.com/assets/1183541/4838381/103d4aee-5fe8-11e4-9b17-f6551f340ae7.png)
 
 Reference: [Getting To Know Flux, the React.js Architecture](http://scotch.io/tutorials/javascript/getting-to-know-flux-the-react-js-architecture)
 
