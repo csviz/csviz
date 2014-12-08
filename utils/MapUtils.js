@@ -2,6 +2,7 @@
 
 var _ = require('lodash')
 var numeral = require('numeral')
+var d3 = require('d3')
 // var Rainbow = require('./RainbowVis')
 
 var MapUtils = {
@@ -13,25 +14,13 @@ var MapUtils = {
 
     var min = meta.indicators[selected_indicator].min_value
     var max = meta.indicators[selected_indicator].max_value
-    // var start = configs.ui.choropleth.start
-    // var end = configs.ui.choropleth.end
-    var colors = configs.ui.choropleth
-    var steps = configs.ui.choropleth.length
-    var step = (max - min)/steps
+    var _color = d3.scale.log()
+      .domain([min, max])
+      .range(["hsl(62,100%,90%)", "hsl(228,30%,20%)"])
+      .interpolate(d3.interpolateHcl)
 
-    var colorIndex = ((value - min)/step).toFixed()
+    return _color(value)
 
-    if (colorIndex <= 0) {
-      colorIndex = 0
-    }
-
-    if (colorIndex >= steps) {
-      colorIndex = steps - 1
-    }
-
-    return colors[colorIndex]
-
-    // return MapUtils.getColorFromRange(value, ranges, colors)
   },
 
   getSelectColor(value, configs, selected_indicator) {
@@ -89,16 +78,16 @@ var MapUtils = {
     var ALLOWED_CHARS = '0123456789abcdefghijklmnopqrstuvwxyz_'
 
     return name
-          .toLowerCase()
-          .trim()
-          .replace(' ', '_')
-          .split('')
-          .filter(function(char) {
-            if (_.contains(ALLOWED_CHARS, char)) {
-              return char
-            }
-          })
-          .join('')
+      .toLowerCase()
+      .trim()
+      .replace(' ', '_')
+      .split('')
+      .filter(function(char) {
+        if (_.contains(ALLOWED_CHARS, char)) {
+          return char
+        }
+      })
+      .join('')
   },
 
   /**
@@ -122,22 +111,28 @@ var MapUtils = {
   getLegendHTML(configs, global, selected_indicator) {
     var indicatorName = configs.indicators[selected_indicator].name
 
-    var labels = [], from, to
+    var labels = [], from, to, color
     var min = global.meta.indicators[selected_indicator].min_value.toFixed()
     var max = global.meta.indicators[selected_indicator].max_value.toFixed()
-    var colors = configs.ui.choropleth
     var steps = configs.ui.choropleth.length
     var step = ((max - min)/steps).toFixed()
+
+    var _color = d3.scale.log()
+      .domain([min, max])
+      .range(["hsl(62,100%,90%)", "hsl(228,30%,20%)"])
+      .interpolate(d3.interpolateHcl)
 
     for (var i = 0; i < steps; i++) {
       if (i == 0) {
         from = parseInt(min)
         to = parseInt(from) + parseInt(step)
+        color = _color((from + to)/2)
       } else {
         from = parseInt(to + 1)
         to = parseInt(from) + parseInt(step)
+        color = _color((from + to)/2)
       }
-      labels.push(`<li><span class='swatch' style='background:${colors[i]}'></span>${numeral(from).format('0.0a')}${'&ndash;'}${numeral(to).format('0.0a')}</li>`)
+      labels.push(`<li><span class='swatch' style='background:${color}; opacity:0.7'></span>${numeral(from).format('0.0a')}${'&ndash;'}${numeral(to).format('0.0a')}</li>`)
     }
 
     return `<span>${indicatorName}</span><ul class='legend-list'>${labels.join('')}</ul>`

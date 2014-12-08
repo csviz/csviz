@@ -89,10 +89,22 @@ var Map = React.createClass({
           color = MapUtils.getSelectColor(value, configs, selected_indicator)
         }
 
-        return { weight: 0.0, opacity: 1, fillOpacity: 1, fillColor: color }
+        return {
+          weight: 1,
+          opacity: 1,
+          color: 'white',
+          dashArray: '3',
+          fillOpacity: 0.7,
+          fillColor: color
+        }
       } else {
         // for country with no data
-        return { weight: 0.5, fillOpacity: 0.8, fillColor: '#eff3ff' }
+        return {
+          opacity: 1,
+          color: 'white',
+          weight: 0.5,
+          fillColor: '#ccc'
+        }
       }
 
     }
