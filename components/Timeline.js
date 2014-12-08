@@ -61,7 +61,7 @@ var Timeline = React.createClass({
   },
 
   render() {
-    var timeline, playButton
+    var TimelineBox, timeline, playButton
     var selected_indicator = Store.getSelectedIndicator()
     var selected_year = Store.getSelectedYear()
 
@@ -78,14 +78,18 @@ var Timeline = React.createClass({
           }
         </li>
       )
-    }
 
-    return (
-      <div className='timeline-box'>
+      TimelineBox = (
         <ul className='timeline'>
           {playButton}
           {timeline}
         </ul>
+      )
+    }
+
+    return (
+      <div className='timeline-box'>
+        {TimelineBox}
       </div>
     )
   }
