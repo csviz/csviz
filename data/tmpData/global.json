@@ -4689,7 +4689,7 @@
           }
         },
         "max_value": 115.45589,
-        "min_value": 0,
+        "min_value": 13.255282372881355,
         "source_file": "primary_gross_enrollment_ratio.csv",
         "years": [
           "2008",
@@ -4710,7 +4710,7 @@
           }
         },
         "max_value": 112.46256,
-        "min_value": 0,
+        "min_value": 13.255282372881355,
         "source_file": "primary_gross_enrollment_ratio.csv",
         "years": [
           "2008",
@@ -4731,7 +4731,7 @@
           }
         },
         "max_value": 113.92949,
-        "min_value": 0,
+        "min_value": 14.005384067796614,
         "source_file": "primary_gross_enrollment_ratio.csv",
         "years": [
           "2008",
@@ -4752,7 +4752,7 @@
           }
         },
         "max_value": 100.23649,
-        "min_value": 0,
+        "min_value": 25.75061677966102,
         "source_file": "Pupil Teacher Ratio, Primary Education.csv",
         "years": [
           "2008",
