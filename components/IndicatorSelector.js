@@ -66,7 +66,6 @@ var IndicatorSelector = React.createClass({
           </div>
 
           <div className='selector-description'>
-            <h5>Description</h5>
             <p>{indicatorDescription}</p>
           </div>
 

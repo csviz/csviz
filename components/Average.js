@@ -56,7 +56,7 @@ var Average = React.createClass({
 
           return (
             <li key={key} className={ (hasData ? '' : 'empty') + (selected_country == countryName ? ' active' : '') + ' countryItem'} onClick={this.onCountryClick.bind(this, countryName)}>
-            <span className='chart'>{countryChart}</span>
+              <span className='chart'>{countryChart}</span>
               <span className='value'>{formattedValue}</span>
               <div className='label'><span className='ellipsis'>{global.meta.locations[countryName].label}</span></div>
 
@@ -81,8 +81,8 @@ var Average = React.createClass({
 
           return (
             <li key={key} className={ (countryValue ? '' : 'empty') + (selected_country == countryName ? ' active' : '') + ' countryItem'} onClick={this.onCountryClick.bind(this, countryName)}>
-              <span className='label'>{global.meta.locations[countryName].label}</span>
               <span className='value'>{formattedValue}</span>
+              <span className='label'>{global.meta.locations[countryName].label}</span>
             </li>
           )
         }.bind(this))
@@ -95,11 +95,11 @@ var Average = React.createClass({
       <div className='card'>
         <div className='average-box'>
           <div className='average-box-header'>
-            <span className='label'>Average</span>
             <div className='chart'>
               {Chart}
             </div>
             <span className='value'>{average}</span>
+            <span className='label'>Average</span>
           </div>
           <div className='average-chart'>
             <ul className='country-list'>
