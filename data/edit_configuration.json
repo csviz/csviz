@@ -3,18 +3,15 @@
     "name": "CSViz",
     "description": "The CSViz Demo App",
     "url": "http://csviz.org",
-    "logo": "http://csviz.dev.wiredcraft.com/assets/images/logo.png",
-    "repository": "fraserxu/csviz"
+    "logo": "http://csviz.org/logo.gif"
   },
   "ui": {
     "legend": false,
     "choropleth": [
-      "#5B79AD",
-      "#6884B3",
-      "#6B87B4",
-      "#819BC3",
-      "#94AACB",
-      "#A7BAD2"
+      "#ffffff",
+      "#fffccc",
+      "#fffbbb",
+      "#000000"
     ],
     "menu": [
       {
@@ -37,20 +34,52 @@
     "Year": {
       "type": "year"
     },
+    "Primary Gross Enrollment Ratio, Total (%)": {
+      "type": "number",
+      "precision" : 2,
+      "name": "Primary Gross Enrollment Ratio, Total (%)",
+      "description": "Growth per year",
+      "display": "{{ currentIndicator }}%",
+      "tooltip": "tooltip: {{ currentIndicator }}%"
+    },
+    "Primary Gross Enrollment Ratio, Male (%)": {
+      "type": "number",
+      "precision" : 2,
+      "name": "Primary Gross Enrollment Ratio, Male (%)",
+      "description": "Growth per year",
+      "display": "{{ currentIndicator }}%",
+      "tooltip": "tooltip: {{ currentIndicator }}%"
+    },
+    "Primary Gross Enrollment Ratio, Female (%)": {
+      "type": "number",
+      "precision" : 2,
+      "name": "Primary Gross Enrollment Ratio, Female (%)",
+      "description": "Growth per year",
+      "display": "{{ currentIndicator }}%",
+      "tooltip": "tooltip: {{ currentIndicator }}%"
+    },
+    "Pupil Teacher Ratio, Primary Education": {
+      "type": "number",
+      "precision" : 2,
+      "name": "Pupil Teacher Ratio, Primary Education",
+      "description": "Growth per year",
+      "display": "{{ currentIndicator }}%",
+      "tooltip": "tooltip: {{ currentIndicator }}%"
+    },
     "gdp_growth": {
       "type": "number",
       "precision" : 2,
       "name": "GDP growth (annual %)",
       "description": "Growth per year",
       "display": "{{ currentIndicator }}%",
-      "tooltip": "GDP growth {{ currentIndicator }}%"
+      "tooltip": "tooltip: {{ currentIndicator }}%"
     },
     "world_population": {
       "type": "number",
       "description": "Population of country",
       "name": "World Population",
       "display": "{{ currentIndicator }}%",
-      "tooltip": "Population of country {{ currentIndicator }}"
+      "tooltip": "tooltip: {{ currentIndicator }}%"
     }
   }
 }
