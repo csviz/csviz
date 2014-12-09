@@ -9,7 +9,6 @@ var Store = require('../stores/Store')
 
 var Map = require('../components/Map')
 var MapControls = require('../components/MapControls')
-var Spinner = require('../components/Spinner')
 
 var MapPage = React.createClass({
 
@@ -38,13 +37,9 @@ var MapPage = React.createClass({
   },
 
   render() {
-    var spinner = <Spinner />
-    if (!_.isEmpty(this.state.data)) spinner = null
-
     return (
       <DocumentTitle title='Map'>
-        <div className='container'>
-          {spinner}
+        <div className={(_.isEmpty(this.state.data) ? 'loading' : '') + ' container'}>
           <Map data={this.state.data} />
           <MapControls data={this.state.data} />
         </div>
