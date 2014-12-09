@@ -55,23 +55,12 @@ var IndicatorSelector = React.createClass({
     }
 
     return (
-      <div className='card'>
-
-        <div className='selector-box'>
-
-          <div className='selector'>
-
-            {MenuItems}
-
-          </div>
-
-          <div className='selector-description'>
-            <p>{indicatorDescription}</p>
-          </div>
-
-        </div>
-
-      </div>
+      <section className='indicator'>
+        <header className='select'>
+          {MenuItems}
+        </header>
+        <p className='description'>{indicatorDescription}</p>
+      </section>
     )
   }
 

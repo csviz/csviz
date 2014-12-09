@@ -70,33 +70,24 @@ var SocialPanel = React.createClass({
     ]
 
     return (
-      <div className='card'>
-        <div className='social-panel-box'>
-
-          <PaperButton icon='social-share' label='Share' onClick={this._showDialog} />
-          <PaperButton icon='file-cloud-download' label='Download' onClick={this._download} />
-
-        </div>
+      <section className='links'>
+        <PaperButton className='share' label='Share' onClick={this._showDialog} />
+        <PaperButton className='download' label='Download' onClick={this._download} />
 
         <Dialog className='share-dialog-box' ref='shareDialog' title='Share' actions={dialogActions}>
-
           Just copy and paste the URL below to share your visualization.
-
           <textarea
             onChange={this._setShareContent}
             value={this.state.shareContent}
             rows="5"
             cols="80"
           />
-
           <div className='share-dialog-links'>
             <PaperButton label='Share on Twitter' onClick={this._shareOnTwitter} />
             <PaperButton label='Share on Facebook' onClick={this._shareOnFacebook} />
           </div>
-
         </Dialog>
-
-      </div>
+      </section>
     )
   }
 

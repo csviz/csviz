@@ -8,6 +8,8 @@ var numeral = require('numeral')
 var MapActionCreators = require('../actions/MapActionCreators')
 var Store = require('../stores/Store')
 var MapUtils = require('../utils/MapUtils')
+var Timeline = require('./Timeline')
+var SearchBar = require('./SearchBar')
 
 var config = require('../config.json')
 var mapbox_config = config.mapbox
@@ -187,11 +189,11 @@ var Map = React.createClass({
 
   render() {
     return (
-      <div className='main'>
-        <div className='map-container'>
-          <div id='map'></div>
-        </div>
-      </div>
+      <section id='main'>
+        <div id='map'></div>
+        <SearchBar data={this.props.data} />
+        <Timeline data={this.props.data} />
+      </section>
     )
   }
 

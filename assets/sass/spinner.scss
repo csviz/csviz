@@ -46,7 +46,7 @@
 
 .loading {
   position: relative;
-  // @include user-select(none);
+  /*@include user-select(none);*/
   &:before {
     background: rgba(0, 0, 0, 0.5);
     bottom: 0;
@@ -59,7 +59,6 @@
   }
   &:after {
     background: #FFF;
-    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     content: "\e86c";
     font-size: 20px;
