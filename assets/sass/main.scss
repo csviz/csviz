@@ -5,6 +5,7 @@
 @import 'material';
 
 .container {
+  position: relative;
   width: 100%;
   height: 100%;
 }
@@ -174,6 +175,18 @@
   .average-box {
     border-top: 1px solid rgba(0, 0, 0, 0.05);
 
+    .average-box-toggler {
+      padding-top: $padding;
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      .mui-icon {
+        width: 200px;
+        font-size: 30px;
+        font-weight: bold;
+      }
+    }
+
     .average-box-header {
       padding-left: 2 * $padding;
       margin: 2 * $margin 0;
@@ -201,7 +214,9 @@
             display: none;
           }
         }
-
+        &.hide {
+          display: none;
+        }
       }
     }
 
@@ -228,7 +243,7 @@
   @include tablet {
     .header {
       position: fixed;
-      z-index: 1000;
+      z-index: 999;
       top: 0;
       left: 0;
       right: 0;
@@ -250,7 +265,7 @@
       left: 100px;
       top: 0;
       padding-right: $padding * 4;
-      z-index: 10000;
+      z-index: 999;
 
       .Select {
         height: 42px;
@@ -341,3 +356,4 @@
 @import 'mapbox';
 @import 'select';
 @import 'spinner';
+@import 'animation';
