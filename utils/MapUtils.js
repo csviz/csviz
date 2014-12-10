@@ -3,7 +3,6 @@
 var _ = require('lodash')
 var numeral = require('numeral')
 var d3 = require('d3')
-// var Rainbow = require('./RainbowVis')
 
 var MapUtils = {
 
@@ -12,14 +11,34 @@ var MapUtils = {
    */
   getNumberColor(value, configs, meta, selected_indicator) {
 
+    // var min = meta.indicators[selected_indicator].min_value
+    // var max = meta.indicators[selected_indicator].max_value
+    // var _color = d3.scale.log()
+    //   .domain([min, max])
+    //   .range(["rgb(8,48,107)", "rgb(247,251,255)"])
+    //   .interpolate(d3.interpolateHcl)
+
+    // return _color(value)
+
     var min = meta.indicators[selected_indicator].min_value
     var max = meta.indicators[selected_indicator].max_value
-    var _color = d3.scale.log()
-      .domain([min, max])
-      .range(["hsl(62,100%,90%)", "hsl(228,30%,20%)"])
-      .interpolate(d3.interpolateHcl)
+    // var start = configs.ui.choropleth.start
+    // var end = configs.ui.choropleth.end
+    var colors = configs.ui.choropleth
+    var steps = configs.ui.choropleth.length
+    var step = (max - min)/steps
 
-    return _color(value)
+    var colorIndex = ((value - min)/step).toFixed()
+
+    if (colorIndex <= 0) {
+      colorIndex = 0
+    }
+
+    if (colorIndex >= steps) {
+      colorIndex = steps - 1
+    }
+
+    return colors[colorIndex]
 
   },
 
@@ -33,17 +52,6 @@ var MapUtils = {
 
     return MapUtils.getColorCode(min, max, start, end, d)
   },
-
-  // getColorCode(min, max, start, end, d) {
-  //   var rainbow = new Rainbow()
-
-  //   // ['#ffffff', ... '#000000']
-  //   rainbow.setSpectrum(start, end)
-  //   // [0, ... 90]
-  //   rainbow.setNumberRange(min, max)
-
-  //   return '#' + rainbow.colorAt(d)
-  // },
 
   /**
    * A simple template helper function to genrerate markup from data
@@ -93,16 +101,9 @@ var MapUtils = {
   /**
    * Center the given country on the map
    */
-  centerOnCountry(countryName, map, countryLayer) {
-    if (countryLayer && map) {
-      countryLayer.eachLayer(function(layer) {
-        if(MapUtils.getCountryNameId(layer.feature.properties['ISO_NAME']) === countryName) {
-          map.fitBounds(layer.getBounds())
-
-          layer.setStyle({ weight: 3, opacity: 0.3, fillOpacity: 0.9 })
-        }
-      })
-    }
+  centerOnCountry(layer, map) {
+    map.fitBounds(layer.getBounds())
+    // layer.setStyle({ color: 'black' })
   },
 
   /**
@@ -142,7 +143,6 @@ var MapUtils = {
    * Add a tooltip
    */
   addTooltip(map, layer, popup, indicators, selected_indicator, configs, selected_year) {
-
     popup.setLatLng(layer.getBounds().getCenter())
 
     var value = 'No data'
@@ -173,7 +173,7 @@ var MapUtils = {
     popup.setContent('<div class="marker-title">' + layer.feature.properties['ISO_NAME'] + '</div>' + value)
 
     if (!popup._map) popup.openOn(map)
-    layer.setStyle({ weight: 3, opacity: 0.3, fillOpacity: 0.9 })
+    // layer.setStyle({ color: 'black' })
     if (!L.Browser.ie && !L.Browser.opera) layer.bringToFront()
   }
 }

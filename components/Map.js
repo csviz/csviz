@@ -39,17 +39,16 @@ var Map = React.createClass({
   handleCountryChange() {
     var selected_country = Store.getSelectedCountry()
     if (selected_country && this.state.map && this.state.countryLayer) {
-      MapUtils.centerOnCountry(selected_country, this.state.map, this.state.countryLayer)
-
       this.state.countryLayer.eachLayer(function(layer) {
         if(MapUtils.getCountryNameId(layer.feature.properties['ISO_NAME']) === selected_country) {
-
-          var popup = new L.Popup({ autoPan: false })
+          var popup = new L.Popup({ autoPan: false, closeButton: false })
           var indicators = this.props.data.global.data.locations
           var configs = this.props.data.configs
           var selected_indicator = Store.getSelectedIndicator()
           var selected_year = Store.getSelectedYear()
 
+          this.state.map.fitBounds(layer.getBounds())
+          MapUtils.centerOnCountry(layer, this.state.map)
           MapUtils.addTooltip(this.state.map, layer, popup, indicators, selected_indicator, configs, selected_year)
         }
       }.bind(this))
@@ -85,6 +84,9 @@ var Map = React.createClass({
       onEachFeature: onEachFeature
     }).addTo(map)
 
+    // var borderLayer = L.mapbox.tileLayer('mapbox.world-borders-light').addTo(map)
+    // L.control.orderlayers(borderLayer, countryLayer)
+
     this.setState({countryLayer: countryLayer})
 
     // get style function
@@ -106,20 +108,19 @@ var Map = React.createClass({
         }
 
         return {
-          weight: 1,
-          opacity: 1,
+          weight: 0.5,
+          opacity: 0.8,
           color: 'white',
-          dashArray: '3',
-          fillOpacity: 0.7,
+          fillOpacity: 0.8,
           fillColor: color
         }
       } else {
         // for country with no data
         return {
-          opacity: 1,
-          color: 'white',
           weight: 0.5,
-          fillColor: '#ccc'
+          opacity: 0.8,
+          color: 'white',
+          fillOpacity: 0.8
         }
       }
 
@@ -128,7 +129,7 @@ var Map = React.createClass({
     // on each feature handler
     function onEachFeature(feature, layer) {
       var closeTooltip
-      var popup = new L.Popup({ autoPan: false })
+      var popup = new L.Popup({ autoPan: false, closeButton: false })
 
       layer.on({
         mousemove: mousemove,
@@ -153,8 +154,10 @@ var Map = React.createClass({
 
       // on map click handler
       function onMapClick(e) {
+        var layer = e.target
         var selectedCountryName = MapUtils.getCountryNameId(e.target.feature.properties['ISO_NAME'])
-        MapUtils.centerOnCountry(selectedCountryName, map, countryLayer)
+
+        MapUtils.centerOnCountry(layer, map)
         MapActionCreators.changeSelectedCountry(selectedCountryName)
       }
     }
