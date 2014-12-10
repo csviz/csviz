@@ -36,59 +36,349 @@
     "Year": {
       "type": "year"
     },
-    "gdp_growth": {
+    "percentage_of_teacher_trained_lower_secondary__education": {
+      "description": "Percentage of teacher trained, Lower Secondary  Education",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
-      "precision" : 2,
-      "name": "GDP growth (annual %)",
-      "description": "Growth per year",
-    "Primary Gross Enrollment Ratio, Total (%)": {
-      "type": "number",
-      "precision" : 2,
-      "name": "Primary Gross Enrollment Ratio, Total (%)",
-      "description": "A statistical measure used in the education sector and by the UN in its Education Index to determine the number of students enrolled in school at several different grade levels (like elementary, middle school and high school), and use it to show the ratio of the number of students who live in that country to those who qualify for the particular grade level.",
       "display": "{{ currentIndicator }}%",
-      "tooltip": "tooltip: {{ currentIndicator }}%"
+      "name": "Percentage of teacher trained, Lower Secondary  Education"
     },
-    "Primary Gross Enrollment Ratio, Male (%)": {
+    "percentage_of_teacher_trained_primary_education": {
+      "description": "Percentage of teacher trained, Primary Education",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
-      "precision" : 2,
-      "name": "Primary Gross Enrollment Ratio, Male (%)",
-      "description": "A statistical measure used in the education sector and by the UN in its Education Index to determine the number of students enrolled in school at several different grade levels (like elementary, middle school and high school), and use it to show the ratio of the number of students who live in that country to those who qualify for the particular grade level.",
       "display": "{{ currentIndicator }}%",
-      "tooltip": "tooltip: {{ currentIndicator }}%"
+      "name": "Percentage of teacher trained, Primary Education"
     },
-    "Primary Gross Enrollment Ratio, Female (%)": {
+    "primary_out_of_school_children_rate_male_": {
+      "description": "Primary Out of School Children Rate Male (%)",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
-      "precision" : 2,
-      "name": "Primary Gross Enrollment Ratio, Female (%)",
-      "description": "A statistical measure used in the education sector and by the UN in its Education Index to determine the number of students enrolled in school at several different grade levels (like elementary, middle school and high school), and use it to show the ratio of the number of students who live in that country to those who qualify for the particular grade level.",
       "display": "{{ currentIndicator }}%",
-      "tooltip": "tooltip: {{ currentIndicator }}%"
+      "name": "Primary Out of School Children Rate Male (%)"
     },
-    "Pupil Teacher Ratio, Primary Education": {
+    "youth__total": {
+      "description": "Youth (15-24) literacy rate (%) Total",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
-      "precision" : 2,
-      "name": "Pupil Teacher Ratio, Primary Education",
-      "description": "Pupil-teacher ratio. Primary is the number of pupils enrolled in primary school divided by the number of primary school teachers.",
       "display": "{{ currentIndicator }}%",
-      "tooltip": "tooltip: {{ currentIndicator }}%"
+      "name": "Youth (15-24) literacy rate (%) Total"
     },
-    "world_population": {
+    "primary_gross_enrollment_ratio_gpi": {
+      "description": "Primary Gross Enrollment Ratio GPI",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
-      "description": "Population of country",
-      "name": "World Population",
-      "precision" : 2,
-      "name": "GDP growth (annual %)",
-      "description": "Annual percentage growth rate of GDP at market prices based on constant local currency. Aggregates are based on constant 2005 U.S. dollars. GDP is the sum of gross value added by all resident producers in the economy plus any product taxes and minus any subsidies not included in the value of the products.",
       "display": "{{ currentIndicator }}%",
-      "tooltip": "tooltip: {{ currentIndicator }}%"
+      "name": "Primary Gross Enrollment Ratio GPI"
     },
-    "world_population": {
+    "youth__male": {
+      "description": "Youth (15-24) literacy rate (%) Male",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
-      "description": "The world population is the total number of living humans on Earth. In June 2013, the United Nations Department of Economic and Social Affairs, Population Division estimated that as of 2010, the world population was 6.916 billion.",
-      "name": "World Population",
       "display": "{{ currentIndicator }}%",
-      "tooltip": "tooltip: {{ currentIndicator }}%"
+      "name": "Youth (15-24) literacy rate (%) Male"
+    },
+    "pupil_teacher_ratio_lower_secondary_education": {
+      "description": "Pupil Teacher Ratio, Lower Secondary Education",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "Pupil Teacher Ratio, Lower Secondary Education"
+    },
+    "lower_secondary_completion_rate_male_": {
+      "description": "Lower Secondary Completion Rate Male (%)",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "Lower Secondary Completion Rate Male (%)"
+    },
+    "public_expenditure_on_education_as__of_gdp": {
+      "description": "Public expenditure on education as % of GDP",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "Public expenditure on education as % of GDP"
+    },
+    "aid_committed_for_total_education_as__of_gdp": {
+      "description": "AID committed for total Education as % of GDP",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "AID committed for total Education as % of GDP"
+    },
+    "primary_completion_rate_female_": {
+      "description": "Primary Completion Rate Female (%)",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "Primary Completion Rate Female (%)"
+    },
+    "percentage_of_repeaters_in_primary_total_": {
+      "description": "Percentage of repeaters in primary Total (%)",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "Percentage of repeaters in primary Total (%)"
+    },
+    "jsrs_conducted": {
+      "description": "JSRs conducted",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "JSRs conducted"
+    },
+    "gpe_funding_disbursement__as__of_gdp": {
+      "description": "GPE Funding Disbursement  as % of GDP",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "GPE Funding Disbursement  as % of GDP"
+    },
+    "primary_out_of_school_children_rate_total_": {
+      "description": "Primary Out of School Children Rate Total (%)",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "Primary Out of School Children Rate Total (%)"
+    },
+    "educational_expenditure_in_primary_as__of_total_educational_expenditure": {
+      "description": "Educational expenditure in primary as % of total educational expenditure",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "Educational expenditure in primary as % of total educational expenditure"
+    },
+    "aid_committed_for_basic_education_current_prices_": {
+      "description": "AID committed for Basic Education- Current prices (USD millions)",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "AID committed for Basic Education- Current prices (USD millions)"
+    },
+    "primary_gross_enrollment_ratio_female_": {
+      "description": "Primary Gross Enrollment Ratio Female (%)",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "Primary Gross Enrollment Ratio Female (%)"
+    },
+    "aid_disbursed_for_total_education_current_prices_": {
+      "description": "AID disbursed for total Education- Current prices (USD millions)",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "AID disbursed for total Education- Current prices (USD millions)"
+    },
+    "primary_completion_rate_total_": {
+      "description": "Primary Completion Rate Total (%)",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "Primary Completion Rate Total (%)"
+    },
+    "gpe_annual_funding_disbursements": {
+      "description": "GPE Annual Funding Disbursements",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "GPE Annual Funding Disbursements"
+    },
+    "jsr_report_available": {
+      "description": "JSR report available",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "JSR report available"
+    },
+    "aid_disbursed_for_total_education_as__of_gdp": {
+      "description": "AID disbursed for total Education as % of GDP",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "AID disbursed for total Education as % of GDP"
+    },
+    "primary_gross_enrollment_ratio_total_": {
+      "description": "Primary Gross Enrollment Ratio Total (%)",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "Primary Gross Enrollment Ratio Total (%)"
+    },
+    "pupil_teacher_ratio_primary_education": {
+      "description": "Pupil Teacher Ratio, Primary Education",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "Pupil Teacher Ratio, Primary Education"
+    },
+    "lower_secondary_completion_rate_total_": {
+      "description": "Lower Secondary Completion Rate Total (%)",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "Lower Secondary Completion Rate Total (%)"
+    },
+    "aid_committed_for_basic_education_as__of_gdp": {
+      "description": "AID committed for Basic Education as % of GDP",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "AID committed for Basic Education as % of GDP"
+    },
+    "primary_gross_enrollment_ratio_male_": {
+      "description": "Primary Gross Enrollment Ratio Male (%)",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "Primary Gross Enrollment Ratio Male (%)"
+    },
+    "aid_committed_for_total_education_current_prices_": {
+      "description": "AID committed for total Education- Current prices (USD millions)",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "AID committed for total Education- Current prices (USD millions)"
+    },
+    "gpe_funding_approval_as__of_gdp": {
+      "description": "GPE Funding Approval as % of GDP",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "GPE Funding Approval as % of GDP"
+    },
+    "gpe_annual_funding_approvals": {
+      "description": "GPE Annual Funding Approvals",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "GPE Annual Funding Approvals"
+    },
+    "percentage_of_repeaters_in_lower_secondary_total_": {
+      "description": "Percentage of repeaters in lower secondary Total (%)",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "Percentage of repeaters in lower secondary Total (%)"
+    },
+    "public_expenditure_on_education_as__of_public_expenditure": {
+      "description": "Public Expenditure on Education as % of Public Expenditure",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "Public Expenditure on Education as % of Public Expenditure"
+    },
+    "aid_disbursed_for_basic_education_as__of_gdp": {
+      "description": "AID disbursed for Basic Education as % of GDP",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "AID disbursed for Basic Education as % of GDP"
+    },
+    "lower_secondary_completion_rate_female_": {
+      "description": "Lower Secondary Completion Rate Female (%)",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "Lower Secondary Completion Rate Female (%)"
+    },
+    "primary_completion_rate_gpi": {
+      "description": "Primary Completion Rate GPI",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "Primary Completion Rate GPI"
+    },
+    "youth__female": {
+      "description": "Youth (15-24) literacy rate (%) female",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "Youth (15-24) literacy rate (%) female"
+    },
+    "_of_missing_data_domestic_financing_": {
+      "description": "% of missing data, domestic financing (%)",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "% of missing data, domestic financing (%)"
+    },
+    "primary_out_of_school_children_rate_female_": {
+      "description": "Primary Out of School Children Rate Female (%)",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "Primary Out of School Children Rate Female (%)"
+    },
+    "equivalent_children_supported_in_basic_education": {
+      "description": "Equivalent Children Supported in basic education",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "Equivalent Children Supported in basic education"
+    },
+    "primary_completion_rate_male_": {
+      "description": "Primary Completion Rate Male (%)",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "Primary Completion Rate Male (%)"
+    },
+    "lower_secondary_completion_rate_gpi": {
+      "description": "Lower Secondary Completion Rate GPI",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "Lower Secondary Completion Rate GPI"
+    },
+    "aid_disbursed_for_basic_education_current_prices_": {
+      "description": "AID disbursed for Basic Education- Current prices (USD millions)",
+      "precision": 2,
+      "tooltip": "tooltip: {{ currentIndicator }}%",
+      "type": "number",
+      "display": "{{ currentIndicator }}%",
+      "name": "AID disbursed for Basic Education- Current prices (USD millions)"
     }
   }
 }
