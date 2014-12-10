@@ -242,12 +242,18 @@ h6 {
       width: $gutter;
     }
   }
+  .leaflet-left {
+    .leaflet-control {
+      border: 0;
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
   .search,
   .timeline {
     background: #FFF;
-    border: 1px solid $line;
     border-radius: $radius;
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+    line-height: 140%;
     position: fixed;
     z-index: 999;
   }
@@ -263,10 +269,46 @@ h6 {
       border: 0;
       border-radius: $radius;
     }
+    .Select-clear {
+      font-family: 'mdfonticon';
+      padding: $gutter/4 $gutter/2;
+    }
+    .Select-arrow {
+      top: 1.5*$gutter/2;
+    }
+    .Select-menu {
+      border:0 ;
+      border-radius: $radius;
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+      .Select-option {
+        &.is-focused {
+          background: $light;
+        }
+      }
+    }
   }
   .timeline {
-    bottom: $gutter/2;
+    bottom: $gutter;
     left: $gutter/2;
+    ul {
+      list-style: none;
+      li {
+        border-right: 1px solid $line;
+        cursor: pointer;
+        display: inline-block;
+        padding: $gutter/2 1.5*$gutter/2;
+        &:last-child {
+          border-right: 0;
+        }
+        &:hover {
+          background: $light;
+        }
+        &.active {
+          background: $light;
+          font-weight: bold;
+        }
+      }
+    }
   }
 }
 

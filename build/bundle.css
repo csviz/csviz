@@ -5728,11 +5728,14 @@ h1, h2, h3, h4, h5, h6 {
   float: left;
   margin-right: 5px;
   width: 20px; }
+#main .leaflet-left .leaflet-control {
+  border: 0;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1); }
 #main .search, #main .timeline {
   background: #FFF;
-  border: 1px solid #E5E5E5;
   border-radius: 2px;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+  line-height: 140%;
   position: fixed;
   z-index: 999; }
 #main .search {
@@ -5745,9 +5748,34 @@ h1, h2, h3, h4, h5, h6 {
   #main .search .Select-control {
     border: 0;
     border-radius: 2px; }
+  #main .search .Select-clear {
+    font-family: 'mdfonticon';
+    padding: 5px 10px; }
+  #main .search .Select-arrow {
+    top: 15px; }
+  #main .search .Select-menu {
+    border: 0;
+    border-radius: 2px;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1); }
+    #main .search .Select-menu .Select-option.is-focused {
+      background: #FAFAFA; }
 #main .timeline {
-  bottom: 10px;
+  bottom: 20px;
   left: 10px; }
+  #main .timeline ul {
+    list-style: none; }
+    #main .timeline ul li {
+      border-right: 1px solid #E5E5E5;
+      cursor: pointer;
+      display: inline-block;
+      padding: 10px 15px; }
+      #main .timeline ul li:last-child {
+        border-right: 0; }
+      #main .timeline ul li:hover {
+        background: #FAFAFA; }
+      #main .timeline ul li.active {
+        background: #FAFAFA;
+        font-weight: bold; }
 
 /**
  * React Select
