@@ -59,7 +59,7 @@ var Average = React.createClass({
             countryData = _.map(global.data.locations[countryName][selected_indicator].years, function(value) {
               return value
             })
-            countryChart = <BarchartEnvelope data={countryData}  width={100} height={16} />
+            countryChart = <BarchartEnvelope data={countryData}  width={80} height={20} />
             hasData = true
           } else {
             formattedValue = 'No data'
@@ -81,7 +81,7 @@ var Average = React.createClass({
             return value.toFixed(2)
           })
 
-          Chart = <BarchartEnvelope data={dataSeries} width={100} height={16}/>
+          Chart = <BarchartEnvelope data={dataSeries} width={80} height={20}/>
           // Chart = <Sparkline data={dataSeries} circleDiameter={0} />
         }
 

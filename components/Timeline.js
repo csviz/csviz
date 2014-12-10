@@ -80,7 +80,7 @@ var Timeline = React.createClass({
       )
 
       TimelineBox = (
-        <ul className='timeline'>
+        <ul>
           {playButton}
           {timeline}
         </ul>
@@ -88,7 +88,7 @@ var Timeline = React.createClass({
     }
 
     return (
-      <div className='timeline-box'>
+      <div className='timeline'>
         {TimelineBox}
       </div>
     )
