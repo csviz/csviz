@@ -40,6 +40,20 @@ var Map = React.createClass({
     var selected_country = Store.getSelectedCountry()
     if (selected_country && this.state.map && this.state.countryLayer) {
       MapUtils.centerOnCountry(selected_country, this.state.map, this.state.countryLayer)
+
+      this.state.countryLayer.eachLayer(function(layer) {
+        if(MapUtils.getCountryNameId(layer.feature.properties['ISO_NAME']) === selected_country) {
+
+          var popup = new L.Popup({ autoPan: false })
+          var indicators = this.props.data.global.data.locations
+          var configs = this.props.data.configs
+          var selected_indicator = Store.getSelectedIndicator()
+          var selected_year = Store.getSelectedYear()
+
+          MapUtils.addTooltip(this.state.map, layer, popup, indicators, selected_indicator, configs, selected_year)
+        }
+      }.bind(this))
+
     }
   },
 
@@ -125,42 +139,8 @@ var Map = React.createClass({
       // mouse move handler
       function mousemove(e) {
         var layer = e.target
-        popup.setLatLng(e.latlng)
-
-        var value = 'No data'
-        var cname = MapUtils.getCountryNameId(layer.feature.properties['ISO_NAME'])
-
-        if (cname in indicators && indicators[cname][selected_indicator] !== undefined) {
-          var tooltipTemplate = configs.indicators[selected_indicator].tooltip
-
-          // data with years
-          if (configs.indicators[selected_indicator].years.length) {
-            var value = indicators[cname][selected_indicator].years[selected_year]
-            if (value) {
-              value = indicators[cname][selected_indicator].years[selected_year].toFixed(2)
-              value = numeral(value).format('0.000')
-              value = MapUtils.compileTemplate(tooltipTemplate, {currentIndicator: value})
-            }
-          } else {
-            if(indicators[cname][selected_indicator]) {
-              value = indicators[cname][selected_indicator].toFixed(2)
-              if (value) {
-                value = numeral(value).format('0.000')
-                value = MapUtils.compileTemplate(tooltipTemplate, {currentIndicator: value})
-              }
-
-            }
-          }
-        }
-
-        popup.setContent('<div class="marker-title">' + layer.feature.properties['ISO_NAME'] + '</div>' + value)
-
-        if (!popup._map) popup.openOn(map)
+        MapUtils.addTooltip(map, layer, popup, indicators, selected_indicator, configs, selected_year)
         window.clearTimeout(closeTooltip)
-
-        layer.setStyle({ weight: 3, opacity: 0.3, fillOpacity: 0.9 })
-
-        if (!L.Browser.ie && !L.Browser.opera) layer.bringToFront()
       }
 
       // on mouse out handler

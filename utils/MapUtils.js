@@ -136,6 +136,45 @@ var MapUtils = {
     }
 
     return `<ul class='legend-list'>${labels.join('')}</ul>`
+  },
+
+  /**
+   * Add a tooltip
+   */
+  addTooltip(map, layer, popup, indicators, selected_indicator, configs, selected_year) {
+
+    popup.setLatLng(layer.getBounds().getCenter())
+
+    var value = 'No data'
+    var countryName = MapUtils.getCountryNameId(layer.feature.properties['ISO_NAME'])
+
+    if (countryName in indicators && indicators[countryName][selected_indicator] !== undefined) {
+      var tooltipTemplate = configs.indicators[selected_indicator].tooltip
+
+      // data with years
+      if (configs.indicators[selected_indicator].years.length) {
+        var value = indicators[countryName][selected_indicator].years[selected_year]
+        if (value) {
+          value = indicators[countryName][selected_indicator].years[selected_year].toFixed(2)
+          value = numeral(value).format('0.000')
+          value = MapUtils.compileTemplate(tooltipTemplate, {currentIndicator: value})
+        }
+      } else {
+        if(indicators[countryName][selected_indicator]) {
+          value = indicators[countryName][selected_indicator].toFixed(2)
+          if (value) {
+            value = numeral(value).format('0.000')
+            value = MapUtils.compileTemplate(tooltipTemplate, {currentIndicator: value})
+          }
+        }
+      }
+    }
+
+    popup.setContent('<div class="marker-title">' + layer.feature.properties['ISO_NAME'] + '</div>' + value)
+
+    if (!popup._map) popup.openOn(map)
+    layer.setStyle({ weight: 3, opacity: 0.3, fillOpacity: 0.9 })
+    if (!L.Browser.ie && !L.Browser.opera) layer.bringToFront()
   }
 }
 
