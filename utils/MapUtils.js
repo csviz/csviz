@@ -115,28 +115,44 @@ var MapUtils = {
     var labels = [], from, to, color
     var min = global.meta.indicators[selected_indicator].min_value.toFixed()
     var max = global.meta.indicators[selected_indicator].max_value.toFixed()
+    var colors = configs.ui.choropleth
     var steps = configs.ui.choropleth.length
     var step = ((max - min)/steps).toFixed()
-
-    var _color = d3.scale.log()
-      .domain([min, max])
-      .range(["hsl(62,100%,90%)", "hsl(228,30%,20%)"])
-      .interpolate(d3.interpolateHcl)
 
     for (var i = 0; i < steps; i++) {
       if (i == 0) {
         from = parseInt(min)
         to = parseInt(from) + parseInt(step)
-        color = _color((from + to)/2)
       } else {
         from = parseInt(to + 1)
         to = parseInt(from) + parseInt(step)
-        color = _color((from + to)/2)
       }
-      labels.push(`<li><span class='swatch' style='background:${color}; opacity:0.7'></span>${numeral(from).format('0.0a')}${'&ndash;'}${numeral(to).format('0.0a')}</li>`)
+      labels.push(`<li><span class='swatch' style='background:${colors[i]}'></span>${numeral(from).format('0.0a')}${'&ndash;'}${numeral(to).format('0.0a')}</li>`)
     }
 
     return `<ul class='legend-list'>${labels.join('')}</ul>`
+    // var steps = configs.ui.choropleth.length
+    // var step = ((max - min)/steps).toFixed()
+
+    // var _color = d3.scale.log()
+    //   .domain([min, max])
+    //   .range(["hsl(62,100%,90%)", "hsl(228,30%,20%)"])
+    //   .interpolate(d3.interpolateHcl)
+
+    // for (var i = 0; i < steps; i++) {
+    //   if (i == 0) {
+    //     from = parseInt(min)
+    //     to = parseInt(from) + parseInt(step)
+    //     color = _color((from + to)/2)
+    //   } else {
+    //     from = parseInt(to + 1)
+    //     to = parseInt(from) + parseInt(step)
+    //     color = _color((from + to)/2)
+    //   }
+    //   labels.push(`<li><span class='swatch' style='background:${color}; opacity:0.7'></span>${numeral(from).format('0.0a')}${'&ndash;'}${numeral(to).format('0.0a')}</li>`)
+    // }
+
+    // return `<ul class='legend-list'>${labels.join('')}</ul>`
   },
 
   /**
