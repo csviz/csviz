@@ -299,6 +299,18 @@ h6 {
         cursor: pointer;
         display: inline-block;
         padding: $gutter/2 1.5*$gutter/2;
+        &.action {
+          &:before {
+            content: '\e833';
+            font-family: 'mdfonticon';
+          }
+          &.active:before {
+            content: '\e830';
+          }
+          span {
+            display: none;
+          }
+        }
         &:last-child {
           border-right: 0;
         }

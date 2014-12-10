@@ -5772,6 +5772,13 @@ h1, h2, h3, h4, h5, h6 {
       cursor: pointer;
       display: inline-block;
       padding: 10px 15px; }
+      #main .timeline ul li.action:before {
+        content: '\e833';
+        font-family: 'mdfonticon'; }
+      #main .timeline ul li.action.active:before {
+        content: '\e830'; }
+      #main .timeline ul li.action span {
+        display: none; }
       #main .timeline ul li:last-child {
         border-right: 0; }
       #main .timeline ul li:hover {
