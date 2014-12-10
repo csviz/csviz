@@ -3,6 +3,8 @@
 var _ = require('lodash')
 var React = require('react')
 var Sparkline = require('react-sparkline')
+var mui = require('material-ui')
+var Icon = mui.Icon
 var numeral = require('numeral')
 
 var MapActionCreators = require('../actions/MapActionCreators')
@@ -11,6 +13,12 @@ var Store = require('../stores/Store')
 var Average = React.createClass({
 
   displayName: 'Average',
+
+  getInitialState() {
+    return {
+      isAverageOpen: false
+    }
+  },
 
   componentDidMount() {
     Store.addIndicatorChangeListener(this.handleStoreChange)
@@ -26,6 +34,10 @@ var Average = React.createClass({
 
   onCountryClick(countryName) {
     MapActionCreators.changeSelectedCountry(countryName)
+  },
+
+  toggleAverage() {
+    this.setState({isAverageOpen: !this.state.isAverageOpen})
   },
 
   render() {
@@ -94,6 +106,10 @@ var Average = React.createClass({
     return (
       <div className='card'>
         <div className='average-box'>
+          <div className='average-box-toggler'>
+            <Icon icon={this.state.isAverageOpen ? 'hardware-keyboard-arrow-up' : 'hardware-keyboard-arrow-down'} onClick={this.toggleAverage}/>
+          </div>
+
           <div className='average-box-header'>
             <div className='chart'>
               {Chart}
@@ -101,8 +117,9 @@ var Average = React.createClass({
             <span className='value'>{average}</span>
             <span className='label'>Average</span>
           </div>
+
           <div className='average-chart'>
-            <ul className='country-list'>
+            <ul className={ (this.state.isAverageOpen ? 'toggle-average-box-enter' : 'hide') + ' country-list' }>
               {countryList}
             </ul>
           </div>
