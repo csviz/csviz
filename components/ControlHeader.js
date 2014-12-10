@@ -22,23 +22,9 @@ var ControlHeader = React.createClass({
     }
 
     return (
-      <div className='card'>
-        <div className='header'>
-          <div className='about'>
-            <Icon icon='action-info' onClick={this._showDialog} />
-          </div>
-          <img src={site.logo} />
-          <h1>{site.name}</h1>
-        </div>
-
-        <Dialog ref='aboutDialog' title='About' actions={dialogActions}>
-
-          Country borders or names do not necessarily reflect the Global Partnership for Education's official position.
-
-          This map is for illustrative purposes and does not imply the expression of any opinion on the part of the Global Partnership for Education, concerning the legal status of any country or territory or concerning the delimitation of frontiers or boundaries.
-
-        </Dialog>
-      </div>
+      <header className='header'>
+        <h1>{site.name}</h1>
+      </header>
     )
   }
 

@@ -39,10 +39,10 @@ var MapPage = React.createClass({
   render() {
     return (
       <DocumentTitle title='Map'>
-        <div className={(_.isEmpty(this.state.data) ? 'loading' : '') + ' container'}>
+        <section className={_.isEmpty(this.state.data) ? 'loading' : ''} id='app'>
           <Map data={this.state.data} />
           <MapControls data={this.state.data} />
-        </div>
+        </section>
       </DocumentTitle>
     )
   }

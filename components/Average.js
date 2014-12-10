@@ -2,7 +2,7 @@
 
 var _ = require('lodash')
 var React = require('react')
-var Sparkline = require('react-sparkline')
+var BarchartEnvelope = require('react-barchart-envelope')
 var mui = require('material-ui')
 var Icon = mui.Icon
 var numeral = require('numeral')
@@ -59,19 +59,18 @@ var Average = React.createClass({
             countryData = _.map(global.data.locations[countryName][selected_indicator].years, function(value) {
               return value
             })
-            countryChart = <Sparkline data={countryData} circleDiameter={0} />
+            countryChart = <BarchartEnvelope data={countryData}  width={100} height={16} />
             hasData = true
           } else {
-            formattedValue = 'no data'
+            formattedValue = 'No data'
             hasData = false
           }
 
           return (
             <li key={key} className={ (hasData ? '' : 'empty') + (selected_country == countryName ? ' active' : '') + ' countryItem'} onClick={this.onCountryClick.bind(this, countryName)}>
-              <span className='chart'>{countryChart}</span>
+              <span className='label'>{global.meta.locations[countryName].label}</span>
               <span className='value'>{formattedValue}</span>
-              <div className='label'><span className='ellipsis'>{global.meta.locations[countryName].label}</span></div>
-
+              <span className='chart'>{countryChart}</span>
             </li>
           )
         }.bind(this))
@@ -82,19 +81,20 @@ var Average = React.createClass({
             return value.toFixed(2)
           })
 
-          Chart = <Sparkline data={dataSeries} circleDiameter={0} />
+          Chart = <BarchartEnvelope data={dataSeries} width={100} height={16}/>
+          // Chart = <Sparkline data={dataSeries} circleDiameter={0} />
         }
 
       // indicator without years
       } else {
         countryList = Object.keys(global.data.locations).map(function(countryName, key) {
           var countryValue = global.data.locations[countryName][selected_indicator]
-          var formattedValue = countryValue ? (numeral(countryValue).format('0.000') + '%') : 'no data'
+          var formattedValue = countryValue ? (numeral(countryValue).format('0.000') + '%') : 'No data'
 
           return (
             <li key={key} className={ (countryValue ? '' : 'empty') + (selected_country == countryName ? ' active' : '') + ' countryItem'} onClick={this.onCountryClick.bind(this, countryName)}>
-              <span className='value'>{formattedValue}</span>
               <span className='label'>{global.meta.locations[countryName].label}</span>
+              <span className='value'>{formattedValue}</span>
             </li>
           )
         }.bind(this))
@@ -104,27 +104,16 @@ var Average = React.createClass({
     }
 
     return (
-      <div className='card'>
-        <div className='average-box'>
-          <div className='average-box-toggler'>
-            <Icon icon={this.state.isAverageOpen ? 'hardware-keyboard-arrow-up' : 'hardware-keyboard-arrow-down'} onClick={this.toggleAverage}/>
-          </div>
-
-          <div className='average-box-header'>
-            <div className='chart'>
-              {Chart}
-            </div>
-            <span className='value'>{average}</span>
-            <span className='label'>Average</span>
-          </div>
-
-          <div className='average-chart'>
-            <ul className={ (this.state.isAverageOpen ? 'toggle-average-box-enter' : 'hide') + ' country-list' }>
-              {countryList}
-            </ul>
-          </div>
-        </div>
-      </div>
+      <section className='drilldown'>
+        <header className='header'>
+          <span className='label'>Average</span>
+          <span className='value'>{average}</span>
+          <span className='chart'>{Chart}</span>
+        </header>
+        <ul className='list'>
+          {countryList}
+        </ul>
+      </section>
     )
   }
 
