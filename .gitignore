@@ -7,7 +7,7 @@ pids
 *.pid
 *.seed
 .DS_Store
-
+.idea
 node_modules
 
 # this is only used for development

@@ -36,6 +36,11 @@
     "Year": {
       "type": "year"
     },
+    "gdp_growth": {
+      "type": "number",
+      "precision" : 2,
+      "name": "GDP growth (annual %)",
+      "description": "Growth per year",
     "Primary Gross Enrollment Ratio, Total (%)": {
       "type": "number",
       "precision" : 2,
@@ -68,8 +73,10 @@
       "display": "{{ currentIndicator }}%",
       "tooltip": "tooltip: {{ currentIndicator }}%"
     },
-    "gdp_growth": {
+    "world_population": {
       "type": "number",
+      "description": "Population of country",
+      "name": "World Population",
       "precision" : 2,
       "name": "GDP growth (annual %)",
       "description": "Annual percentage growth rate of GDP at market prices based on constant local currency. Aggregates are based on constant 2005 U.S. dollars. GDP is the sum of gross value added by all resident producers in the economy plus any product taxes and minus any subsidies not included in the value of the products.",
