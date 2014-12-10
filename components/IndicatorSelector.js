@@ -2,8 +2,6 @@
 
 var _ = require('lodash')
 var React = require('react')
-var mui = require('material-ui')
-var DropDownMenu = mui.DropDownMenu
 
 var MapActionCreators = require('../actions/MapActionCreators')
 var Store = require('../stores/Store')
@@ -22,8 +20,8 @@ var IndicatorSelector = React.createClass({
     this.setState({})
   },
 
-  hanldeSelectChange(e, key, menuItem) {
-    MapActionCreators.changeIndicator(menuItem.payload)
+  hanldeSelectChange(e) {
+    MapActionCreators.changeIndicator(e.target.value)
   },
 
   render() {
@@ -34,21 +32,18 @@ var IndicatorSelector = React.createClass({
     // after get the configs
     if (data.configs && data.configs.indicators) {
       var indicators = data.configs.indicators
-      var menuItems = Object.keys(indicators)
+      var MenuItems = Object.keys(indicators)
         .filter(key => indicators[key].name)
         .map(key => ({ payload: key, text: indicators[key].name }))
+        .map((data, index) => (
+          <option key={index} value={data.payload} defaultValue={selected_indicator === data.payload}>{data.text}</option>
+        ))
 
       if (selected_indicator) {
         indicatorDescription = data.configs.indicators[selected_indicator].description
       } else {
         indicatorDescription = 'There\'s no description for this indicator.'
       }
-
-      // get default selected index
-      var selectedIndex = _.indexOf(Object.keys(indicators).filter(function(key) {
-        return indicators[key].name
-      }), selected_indicator)
-      MenuItems = <DropDownMenu onChange={this.hanldeSelectChange} selectedIndex={selectedIndex} menuItems={menuItems} />
 
     } else {
       MenuItems = null
@@ -57,7 +52,9 @@ var IndicatorSelector = React.createClass({
     return (
       <section className='indicator'>
         <header className='select'>
-          {MenuItems}
+          <select onChange={this.hanldeSelectChange}>
+            {MenuItems}
+          </select>
         </header>
         <p className='description'>{indicatorDescription}</p>
       </section>
