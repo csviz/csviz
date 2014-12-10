@@ -6,24 +6,26 @@
     "logo": "http://csviz.dev.wiredcraft.com/assets/images/logo.png"
   },
   "ui": {
-    "legend": false,
-    "choropleth": [
-      "#ffffff",
-      "#fffeee",
-      "#fffddd",
-      "#fffccc",
-      "#fffbbb",
-      "#fffaaa"
-    ],
+    "legend": {
+      "choropleth": [
+        "#ffffff",
+        "#fffeee",
+        "#fffddd",
+        "#fffccc",
+        "#fffbbb",
+        "#fffaaa"
+      ]
+    },
+
     "menu": [
       {
         "Financial": [
-          "GDP growth (annual %)"
+          "Percentage of teacher trained, Lower Secondary  Education"
         ]
       },
       {
         "Other": [
-          "World Population"
+          "Percentage of teacher trained, Primary Education"
         ]
       }
     ]
