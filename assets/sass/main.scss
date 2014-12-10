@@ -94,7 +94,8 @@ h6 {
         pointer-events: none;
         position: absolute;
         right: $gutter/2;
-        top: $gutter;
+        top: 50%;
+        word-wrap: break-word;
         &:hover {
           color: inherit;
         }

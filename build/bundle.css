@@ -4862,7 +4862,8 @@ h1, h2, h3, h4, h5, h6 {
       pointer-events: none;
       position: absolute;
       right: 10px;
-      top: 20px; }
+      top: 50%;
+      word-wrap: break-word; }
       #sidebar .indicator .select:after:hover {
         color: inherit; }
     #sidebar .indicator .select:hover:after {
