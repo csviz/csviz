@@ -128,6 +128,7 @@ h6 {
       padding: 1.5*$gutter/2 $gutter;
     }
     .list {
+      list-style: none;
       li {
         cursor: pointer;
         padding: 1.5*$gutter/2 $gutter;

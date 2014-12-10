@@ -4883,11 +4883,13 @@ h1, h2, h3, h4, h5, h6 {
       border-width: 1px 0;
       font-weight: bold;
       padding: 15px 20px; }
-    #sidebar .drilldown .list li {
-      cursor: pointer;
-      padding: 15px 20px; }
-      #sidebar .drilldown .list li:hover {
-        background: #FFF; }
+    #sidebar .drilldown .list {
+      list-style: none; }
+      #sidebar .drilldown .list li {
+        cursor: pointer;
+        padding: 15px 20px; }
+        #sidebar .drilldown .list li:hover {
+          background: #FFF; }
     #sidebar .drilldown .label {
       float: left;
       max-width: 160px;
