@@ -4823,6 +4823,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 400px;
   top: 0; }
   #main #map {
+    background: #4D4D4D;
     height: 100%;
     width: 100%; }
 
