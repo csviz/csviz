@@ -6,16 +6,13 @@
     "logo": "http://csviz.dev.wiredcraft.com/assets/images/logo.png"
   },
   "ui": {
-    "legend": {
-      "choropleth": [
-        "#ffffff",
-        "#fffeee",
-        "#fffddd",
-        "#fffccc",
-        "#fffbbb",
-        "#fffaaa"
-      ]
-    },
+    "choropleth": [
+      "#ccebc5",
+      "#a8ddb5",
+      "#7bccc4",
+      "#43a2ca",
+      "#0868ac"
+    ],
 
     "menu": [
       {
