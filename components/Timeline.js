@@ -71,11 +71,13 @@ var Timeline = React.createClass({
       }, this)
 
       playButton = (
-        <li className='play-button' onClick={this.playTimeline}>
-          { this.state.isTimelinePlaying ?
-            'Stop' :
-            'Play'
-          }
+        <li className={ this.state.isTimelinePlaying ? 'action active' : 'action' } onClick={this.playTimeline}>
+          <span>
+            { this.state.isTimelinePlaying ?
+              'Stop' :
+              'Play'
+            }
+          </span>
         </li>
       )
 

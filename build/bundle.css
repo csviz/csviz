@@ -4823,6 +4823,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 400px;
   top: 0; }
   #main #map {
+    background: #4D4D4D;
     height: 100%;
     width: 100%; }
 
@@ -4848,7 +4849,43 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid #E5E5E5;
     border-width: 1px 0;
     font-weight: bold;
-    font-size: 15px; }
+    font-size: 17px;
+    position: relative;
+    word-wrap: break-word; }
+    #sidebar .indicator .select:after {
+      bottom: 0;
+      color: #BBB;
+      content: '\e640';
+      cursor: pointer;
+      font-family: 'mdfonticon';
+      line-height: inherit;
+      pointer-events: none;
+      position: absolute;
+      right: 10px;
+      top: 20px; }
+      #sidebar .indicator .select:after:hover {
+        color: inherit; }
+    #sidebar .indicator .select:hover:after {
+      color: inherit; }
+    #sidebar .indicator .select select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -ms-appearance: none;
+      -o-appearance: none;
+      background: #FFF;
+      border: 0;
+      box-shadow: none;
+      color: inherit;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: inherit;
+      height: auto;
+      line-height: 120%;
+      outline: none;
+      padding: 15px 20px;
+      padding-right: 30px;
+      width: 100%; }
     #sidebar .indicator .select .mui-drop-down-menu .mui-menu-control .mui-menu-label {
       padding-left: 20px; }
   #sidebar .indicator .description {
@@ -4883,11 +4920,13 @@ h1, h2, h3, h4, h5, h6 {
       border-width: 1px 0;
       font-weight: bold;
       padding: 15px 20px; }
-    #sidebar .drilldown .list li {
-      cursor: pointer;
-      padding: 15px 20px; }
-      #sidebar .drilldown .list li:hover {
-        background: #FFF; }
+    #sidebar .drilldown .list {
+      list-style: none; }
+      #sidebar .drilldown .list li {
+        cursor: pointer;
+        padding: 15px 20px; }
+        #sidebar .drilldown .list li:hover {
+          background: #FFF; }
     #sidebar .drilldown .label {
       float: left;
       max-width: 160px;
@@ -5769,7 +5808,17 @@ h1, h2, h3, h4, h5, h6 {
       cursor: pointer;
       display: inline-block;
       padding: 10px 15px; }
+      #main .timeline ul li.action:before {
+        content: '\e833';
+        font-family: 'mdfonticon'; }
+      #main .timeline ul li.action.active:before {
+        content: '\e830'; }
+      #main .timeline ul li.action span {
+        display: none; }
+      #main .timeline ul li:first-child {
+        border-radius: 2px 0 0 2px; }
       #main .timeline ul li:last-child {
+        border-radius: 0 2px 2px 0;
         border-right: 0; }
       #main .timeline ul li:hover {
         background: #FAFAFA; }

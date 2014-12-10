@@ -120,7 +120,7 @@ var Map = React.createClass({
           weight: 0.5,
           opacity: 0.8,
           color: 'white',
-          fillOpacity: 0.8
+          fillOpacity: 0.3
         }
       }
 

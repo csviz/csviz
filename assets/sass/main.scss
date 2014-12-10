@@ -50,6 +50,7 @@ h6 {
   right: $sidebar;
   top: 0;
   #map {
+    background: $black;
     height: 100%;
     width: 100%;
   }
@@ -80,7 +81,49 @@ h6 {
       border: 1px solid $line;
       border-width: 1px 0;
       font-weight: bold;
-      font-size: $larger;
+      font-size: $large;
+      position: relative;
+      word-wrap: break-word;
+      &:after {
+        bottom: 0;
+        color: $grey;
+        content: '\e640';
+        cursor: pointer;
+        font-family: 'mdfonticon';
+        line-height: inherit;
+        pointer-events: none;
+        position: absolute;
+        right: $gutter/2;
+        top: $gutter;
+        &:hover {
+          color: inherit;
+        }
+      }
+      &:hover {
+        &:after {
+          color: inherit;
+        }
+      }
+      select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+        background: #FFF;
+        border: 0;
+        box-shadow: none;
+        color: inherit;
+        cursor: pointer;
+        font-family: inherit;
+        font-size: inherit;
+        height: auto;
+        line-height: 120%;
+        outline: none;
+        padding: 1.5*$gutter/2 $gutter;
+        padding-right: 1.5*$gutter;
+        width: 100%;
+      }
       .mui-drop-down-menu {
         .mui-menu-control {
           .mui-menu-label {
@@ -128,6 +171,7 @@ h6 {
       padding: 1.5*$gutter/2 $gutter;
     }
     .list {
+      list-style: none;
       li {
         cursor: pointer;
         padding: 1.5*$gutter/2 $gutter;
@@ -297,7 +341,23 @@ h6 {
         cursor: pointer;
         display: inline-block;
         padding: $gutter/2 1.5*$gutter/2;
+        &.action {
+          &:before {
+            content: '\e833';
+            font-family: 'mdfonticon';
+          }
+          &.active:before {
+            content: '\e830';
+          }
+          span {
+            display: none;
+          }
+        }
+        &:first-child {
+          border-radius: $radius 0 0 $radius;
+        }
         &:last-child {
+          border-radius: 0 $radius $radius 0;
           border-right: 0;
         }
         &:hover {
