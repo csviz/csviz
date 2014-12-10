@@ -5,6 +5,7 @@
 $header: 5px;
 $sidebar: 400px;
 $gutter: 20px;
+$radius: 2px;
 
 $small: 11px;
 $larger: 15px;
@@ -118,6 +119,7 @@ h6 {
   .drilldown {
     background: $light;
     font-size: $larger;
+    line-height: 120%;
     text-align: right;
     .header {
       border: 1px solid $line;
@@ -136,6 +138,17 @@ h6 {
     }
     .label {
       float: left;
+      max-width: ($sidebar - 4*$gutter)/2;
+      text-align: left;
+    }
+    .label,
+    .value {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .value {
+      max-width: ($sidebar - 4*$gutter)/4;
     }
     .chart {
       display: inline-block;
@@ -146,274 +159,15 @@ h6 {
         color: $grey;
         font-size: $small;
         text-transform: uppercase;
-        &:before {
-          content: "\e84f";
-          font-family: 'mdfonticon';
-          margin-right: $gutter/4;
-        }
       }
     }
   }
-
-  /*
-
-  .selector-box {
-    margin-top: -($margin * 2);
-    .selector {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-
-      // override the default dropdown style
-      .mui-drop-down-menu {
-        padding-left: 2 * $padding;
-        width: 95% !important;
-        .mui-menu-control .mui-menu-label {
-          padding-left: 0px;
-        }
-        .mui-menu {
-          width: 100% !important;
-        }
-      }
-
-    }
-    .selector-description {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-      padding: $padding $padding * 2;
-      h5 {
-        font-size: 14px;
-        margin-top: 2 * $margin;
-      }
-      p {
-        font-size: 15px;
-      }
-    }
-  }
-
-  .timeline-box {
-    text-align: center;
-    margin-top: 2 * $margin;
-    margin-bottom: 2 * $margin;
-    padding-left: 2 * $margin;
-
-    .timeline {
-      height: 40px;
-      .play-button {
-        display: inline-block;
-        width: 60px;
-      }
-      li {
-        display: inline-block;
-        list-style: none;
-        border-top: 1px solid rgba(0, 0, 0, 0.05);
-        border-left: 1px solid rgba(0, 0, 0, 0.05);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        padding: 5px 10px;
-        cursor: pointer;
-        &.active {
-          background-color: rgba(0, 0, 0, 0.05);
-        }
-        &:last-child {
-          border-right: 1px solid rgba(0, 0, 0, 0.05);
-        }
-      }
-
-    }
-  }
-
-  .social-panel-box {
-    text-align: center;
-    padding: $padding $padding * 2;
-    .mui-paper-button {
-      width: 45%;
-      margin: 0 2.5%;
-    }
-    // override the default icon style
-    .mui-paper-button-icon {
-      float: left;
-      font-size: 15px;
-      height: 20px;
-      margin-top: 2 * $margin;
-      margin-right: $margin * 4;
-    }
-  }
-
-  .share-dialog-box {
-    textarea {
-      resize: none;
-      margin: 4 * $margin 0;
-      padding: $padding;
-    }
-    .dialog-content {
-      .mui-paper-button {
-        margin-right: 2 * $margin;
-      }
-    }
-  }
-
-  .average-box {
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
-
-    .average-box-toggler {
-      padding-top: $padding;
-      width: 100%;
-      text-align: center;
-      position: absolute;
-      .mui-icon {
-        width: 200px;
-        font-size: 30px;
-        font-weight: bold;
-      }
-    }
-
-    .average-box-header {
-      padding-left: 2 * $padding;
-      margin: 2 * $margin 0;
-      h5 {
-        margin-left: 2 * $margin;
-        display: inline;
-      }
-      .chart {
-        float: right;
-        display: inline-block;
-      }
-    }
-
-    .average-chart {
-      ul {
-        margin-left: 2 * $margin;
-        li {
-          padding: 2 * $padding 0;
-          list-style: none;
-          border-top: 1px solid rgba(0, 0, 0, 0.05);
-          &.active {
-            color: rgb(8, 169, 28);
-          }
-          &.empty {
-            display: none;
-          }
-        }
-        &.hide {
-          display: none;
-        }
-      }
-    }
-
-    .label {
-      overflow: hidden;
-      .ellipsis{
-        overflow: hidden;
-        text-overflow:ellipsis;
-        white-space: nowrap;
-        display: block;
-      }
-    }
-
-    .value {
-      float: right;
-      margin-right: 2 * $margin;
-    }
-    .chart {
-      float: right;
-    }
-  }
-
-  // ipad mini size(768px)
-  @include tablet {
-    .header {
-      position: fixed;
-      z-index: 999;
-      top: 0;
-      left: 0;
-      right: 0;
-    }
-
-    .selector-box {
-      .selector {
-        margin-top: -($padding * 3);
-      }
-    }
-
-    .timeline-box {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    }
-
-    .search-bar {
-      position: fixed;
-      right: 20px;
-      left: 100px;
-      top: 0;
-      padding-right: $padding * 4;
-      z-index: 999;
-
-      .Select {
-        height: 42px;
-      }
-
-      .Select-input input:focus {
-        box-shadow: none;
-      }
-
-      .Select-control {
-        border: none;
-        height: 40px;
-        margin-top: 8px;
-        .Select-arrow {
-          margin-top: 1px;
-        }
-        .Select-clear {
-          margin-top: 2px;
-        }
-      }
-    }
-  }
-
-  @include desktop {
-    width: 31.25%;
-    min-width: 380px;
-    // position: absolute;
-    height: 100%;
-    top: 0;
-    // right: 0;
-    // bottom: 0;
-    overflow-y: scroll;
-
-    .timeline-box {
-      position: fixed;
-      left: 0px;
-      bottom: 0px;
-      .timeline {
-        li {
-          background-color: #fff;
-        }
-      }
-    }
-
-    .search-bar {
-      position: fixed;
-      right: 31.25%;
-      top: $padding * 4;
-      padding-right: $padding * 4;
-      width: 350px;
-
-      .Select-input input:focus {
-        box-shadow: none;
-      }
-      .Select-control {
-        .Select-arrow {
-          margin-top: 1px;
-        }
-        .Select-clear {
-          margin-top: 2px;
-        }
-      }
-    }
-  }*/
-
 }
 
 
 /* ------- */
-/*
-.container {
+
+/*.container {
   position: relative;
   width: 100%;
   height: 100%;
@@ -458,20 +212,63 @@ h6 {
     background-color: #fff;
   }
 }
+*/
 
-.map-legend {
-  .swatch {
-    width:20px;
-    height:20px;
-    float:left;
-    margin-right:10px;
-  }
-
-  .legend-list {
-    list-style: none;
-  }
-}*/
+/* MAP */
 
 @import 'mapbox';
+
+#main {
+  .map-legend {
+    .legend-list {
+      list-style: none;
+      li {
+        &:first-child {
+          .swatch {
+            border-radius: $radius $radius 0 0;
+          }
+        }
+        &:last-child {
+          .swatch {
+            border-radius: 0 0 $radius $radius;
+          }
+        }
+      }
+    }
+    .swatch {
+      height: $gutter;
+      float: left;
+      margin-right: $gutter/4;
+      width: $gutter;
+    }
+  }
+  .search,
+  .timeline {
+    background: #FFF;
+    border: 1px solid $line;
+    border-radius: $radius;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+    position: fixed;
+    z-index: 999;
+  }
+  .search {
+    right: $sidebar + $gutter/2;
+    top: $gutter/2;
+    width: 240px;
+    input {
+      box-shadow: none;
+      outline: none;
+    }
+    .Select-control {
+      border: 0;
+      border-radius: $radius;
+    }
+  }
+  .timeline {
+    bottom: $gutter/2;
+    left: $gutter/2;
+  }
+}
+
 @import 'select';
 @import 'spinner';
