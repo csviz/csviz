@@ -1,83 +1,161 @@
-@import '_variables';
 @import '_layout';
 
-// material-ui
+/* Variables */
+
+$header: 5px;
+$sidebar: 400px;
+$gutter: 20px;
+
+$small: 11px;
+$larger: 15px;
+$large: 17px;
+$huge: 20px;
+
+$background: #EDEDED;
+$light: #FAFAFA;
+$black: #4D4D4D;
+$grey: #BBB;
+$line: #E5E5E5;
+
+/* Material UI */
+
 @import 'material';
 
-.container {
-  width: 100%;
+/* GENERAL */
+
+html,
+body,
+#app {
   height: 100%;
+  line-height: 120%;
+  width: 100%;
 }
 
-.main {
-  .map-container {
-    position: relative;
-  }
-
-  @include tablet {
-    padding-top: $padding;
-    margin-top: $header;
-    .map-container {
-      margin-top: -$padding * 2;
-      #map {
-        height: 500px;
-      }
-    }
-  }
-
-  @include desktop {
-    width: 68.75%;
-    float: left;
-    border-right: 1px solid rgba(0, 0, 0, 0.05);
-    .map-container {
-      #map {
-        height: 100vh;
-        width: 100%;
-      }
-    }
-    .card {
-      padding-top: 0;
-    }
-  }
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 160%;
 }
 
-.sidebar {
-  .header {
-    height: $header;
-    line-height: $header;
-    white-space: nowrap;
+/* SIDEBAR */
+
+#main {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: $sidebar;
+  top: 0;
+  #map {
+    height: 100%;
     width: 100%;
-    background-color: #fff;
-    margin: 0;
-    padding: 0 $padding * 2;
+  }
+}
 
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-
-    img {
-      margin: 0 $margin;
-      width: 20px;
-      height: 25px;
-      margin-top: -10px;
-    }
-
+#sidebar {
+  background: #FFF;
+  border-left: 1px solid $line;
+  bottom: 0;
+  box-shadow: -2px 0 1px rgba(0, 0, 0, 0.08); // Need to make it x-compatible
+  overflow-y: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: $sidebar;
+  > .header {
+    background: $background;
+    padding: 1.5*$gutter/2 $gutter;
     h1 {
-      display: inline;
-      font-size: 1.6em;
-      padding-left: $padding;
+      color: rgba(0, 0, 0, 0.9);
+      font-size: $large;
+      line-height: 1;
+      margin: 0;
     }
-
-    .about {
-      position: relative;
-      float: right;
+  }
+  .indicator {
+    .select {
+      border: 1px solid $line;
+      border-width: 1px 0;
+      font-weight: bold;
+      font-size: $larger;
+      .mui-drop-down-menu {
+        .mui-menu-control {
+          .mui-menu-label {
+            padding-left: $gutter;
+          }
+        }
+      }
+    }
+    .description {
+      margin: 0;
+      padding: 1.5*$gutter/2 $gutter;
+    }
+  }
+  .links {
+    background: $light;
+    padding: 1.5*$gutter/2 $gutter;
+    text-align: right;
+    .mui-paper-button {
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: ($sidebar - 3*$gutter)/2;
+      .mui-paper-container {
+        box-shadow: none !important;
+      }
+      .mui-paper-button-content span:before {
+        font-family: 'mdfonticon';
+        margin-right: $gutter/2;
+      }
+    }
+    .share {
+      float: left;
+    }
+    .download .mui-paper-button-content span:before { content: '\e744'; }
+    .share .mui-paper-button-content span:before { content: '\e61a'; }
+  }
+  .drilldown {
+    background: $light;
+    font-size: $larger;
+    text-align: right;
+    .header {
+      border: 1px solid $line;
+      border-width: 1px 0;
+      font-weight: bold;
+      padding: 1.5*$gutter/2 $gutter;
+    }
+    .list {
+      li {
+        cursor: pointer;
+        padding: 1.5*$gutter/2 $gutter;
+        &:hover {
+          background: #FFF;
+        }
+      }
+    }
+    .label {
+      float: left;
+    }
+    .chart {
       display: inline-block;
-      top: $margin;
-      // fixed the right padding issue
-      .mui-icon-highlight {
-        display: none;
+      margin-left: $gutter;
+    }
+    .empty {
+      .value {
+        color: $grey;
+        font-size: $small;
+        text-transform: uppercase;
+        &:before {
+          content: "\e84f";
+          font-family: 'mdfonticon';
+          margin-right: $gutter/4;
+        }
       }
     }
   }
+
+  /*
 
   .selector-box {
     margin-top: -($margin * 2);
@@ -174,6 +252,18 @@
   .average-box {
     border-top: 1px solid rgba(0, 0, 0, 0.05);
 
+    .average-box-toggler {
+      padding-top: $padding;
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      .mui-icon {
+        width: 200px;
+        font-size: 30px;
+        font-weight: bold;
+      }
+    }
+
     .average-box-header {
       padding-left: 2 * $padding;
       margin: 2 * $margin 0;
@@ -198,10 +288,12 @@
             color: rgb(8, 169, 28);
           }
           &.empty {
-            color: #918888;
+            display: none;
           }
         }
-
+        &.hide {
+          display: none;
+        }
       }
     }
 
@@ -228,7 +320,7 @@
   @include tablet {
     .header {
       position: fixed;
-      z-index: 1000;
+      z-index: 999;
       top: 0;
       left: 0;
       right: 0;
@@ -250,7 +342,7 @@
       left: 100px;
       top: 0;
       padding-right: $padding * 4;
-      z-index: 10000;
+      z-index: 999;
 
       .Select {
         height: 42px;
@@ -314,6 +406,48 @@
         }
       }
     }
+  }*/
+
+}
+
+
+/* ------- */
+/*
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  .map-container {
+    position: relative;
+  }
+
+  @include tablet {
+    padding-top: $padding;
+    margin-top: $header;
+    .map-container {
+      margin-top: -$padding * 2;
+      #map {
+        height: 500px;
+      }
+    }
+  }
+
+  @include desktop {
+    width: 68.75%;
+    float: left;
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+    .map-container {
+      #map {
+        height: 100vh;
+        width: 100%;
+      }
+    }
+    .card {
+      padding-top: 0;
+    }
   }
 
 }
@@ -336,7 +470,7 @@
   .legend-list {
     list-style: none;
   }
-}
+}*/
 
 @import 'mapbox';
 @import 'select';

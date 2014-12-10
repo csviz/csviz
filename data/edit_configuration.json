@@ -3,15 +3,17 @@
     "name": "CSViz",
     "description": "The CSViz Demo App",
     "url": "http://csviz.org",
-    "logo": "http://csviz.org/logo.gif"
+    "logo": "http://csviz.dev.wiredcraft.com/assets/images/logo.png"
   },
   "ui": {
     "legend": false,
     "choropleth": [
       "#ffffff",
+      "#fffeee",
+      "#fffddd",
       "#fffccc",
       "#fffbbb",
-      "#000000"
+      "#fffaaa"
     ],
     "menu": [
       {
@@ -39,6 +41,35 @@
       "precision" : 2,
       "name": "GDP growth (annual %)",
       "description": "Growth per year",
+    "Primary Gross Enrollment Ratio, Total (%)": {
+      "type": "number",
+      "precision" : 2,
+      "name": "Primary Gross Enrollment Ratio, Total (%)",
+      "description": "A statistical measure used in the education sector and by the UN in its Education Index to determine the number of students enrolled in school at several different grade levels (like elementary, middle school and high school), and use it to show the ratio of the number of students who live in that country to those who qualify for the particular grade level.",
+      "display": "{{ currentIndicator }}%",
+      "tooltip": "tooltip: {{ currentIndicator }}%"
+    },
+    "Primary Gross Enrollment Ratio, Male (%)": {
+      "type": "number",
+      "precision" : 2,
+      "name": "Primary Gross Enrollment Ratio, Male (%)",
+      "description": "A statistical measure used in the education sector and by the UN in its Education Index to determine the number of students enrolled in school at several different grade levels (like elementary, middle school and high school), and use it to show the ratio of the number of students who live in that country to those who qualify for the particular grade level.",
+      "display": "{{ currentIndicator }}%",
+      "tooltip": "tooltip: {{ currentIndicator }}%"
+    },
+    "Primary Gross Enrollment Ratio, Female (%)": {
+      "type": "number",
+      "precision" : 2,
+      "name": "Primary Gross Enrollment Ratio, Female (%)",
+      "description": "A statistical measure used in the education sector and by the UN in its Education Index to determine the number of students enrolled in school at several different grade levels (like elementary, middle school and high school), and use it to show the ratio of the number of students who live in that country to those who qualify for the particular grade level.",
+      "display": "{{ currentIndicator }}%",
+      "tooltip": "tooltip: {{ currentIndicator }}%"
+    },
+    "Pupil Teacher Ratio, Primary Education": {
+      "type": "number",
+      "precision" : 2,
+      "name": "Pupil Teacher Ratio, Primary Education",
+      "description": "Pupil-teacher ratio. Primary is the number of pupils enrolled in primary school divided by the number of primary school teachers.",
       "display": "{{ currentIndicator }}%",
       "tooltip": "tooltip: {{ currentIndicator }}%"
     },
@@ -46,12 +77,15 @@
       "type": "number",
       "description": "Population of country",
       "name": "World Population",
+      "precision" : 2,
+      "name": "GDP growth (annual %)",
+      "description": "Annual percentage growth rate of GDP at market prices based on constant local currency. Aggregates are based on constant 2005 U.S. dollars. GDP is the sum of gross value added by all resident producers in the economy plus any product taxes and minus any subsidies not included in the value of the products.",
       "display": "{{ currentIndicator }}%",
       "tooltip": "tooltip: {{ currentIndicator }}%"
     },
     "world_population": {
       "type": "number",
-      "description": "Population of country",
+      "description": "The world population is the total number of living humans on Earth. In June 2013, the United Nations Department of Economic and Social Affairs, Population Division estimated that as of 2010, the world population was 6.916 billion.",
       "name": "World Population",
       "display": "{{ currentIndicator }}%",
       "tooltip": "tooltip: {{ currentIndicator }}%"

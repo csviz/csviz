@@ -135,7 +135,7 @@ var MapUtils = {
       labels.push(`<li><span class='swatch' style='background:${color}; opacity:0.7'></span>${numeral(from).format('0.0a')}${'&ndash;'}${numeral(to).format('0.0a')}</li>`)
     }
 
-    return `<span>${indicatorName}</span><ul class='legend-list'>${labels.join('')}</ul>`
+    return `<ul class='legend-list'>${labels.join('')}</ul>`
   }
 }
 
