@@ -158,8 +158,11 @@ var MapUtils = {
   /**
    * Add a tooltip
    */
-  addTooltip(map, layer, popup, indicators, selected_indicator, configs, selected_year) {
-    popup.setLatLng(layer.getBounds().getCenter())
+  addTooltip(map, layer, popup, indicators, selected_indicator, configs, selected_year, e) {
+
+    var latlng = e ? e.latlng : layer.getBounds().getCenter()
+
+    popup.setLatLng(latlng)
 
     var value = 'No data'
     var countryName = MapUtils.getCountryNameId(layer.feature.properties['ISO_NAME'])

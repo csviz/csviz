@@ -140,7 +140,7 @@ var Map = React.createClass({
       // mouse move handler
       function mousemove(e) {
         var layer = e.target
-        MapUtils.addTooltip(map, layer, popup, indicators, selected_indicator, configs, selected_year)
+        MapUtils.addTooltip(map, layer, popup, indicators, selected_indicator, configs, selected_year, e)
         window.clearTimeout(closeTooltip)
       }
 
