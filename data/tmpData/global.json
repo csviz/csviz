@@ -1,16 +1,6 @@
 {
   "data": {
     "locations": {
-      "": {
-        "_of_missing_data_outcome_indicators_": {
-          "years": {
-            "2008": null,
-            "2009": null,
-            "2010": null,
-            "2011": null
-          }
-        }
-      },
       "afghanistan": {
         "_of_missing_data_domestic_financing_": {
           "years": {
@@ -24464,19 +24454,6 @@
   },
   "meta": {
     "indicators": {
-      "Year": {
-        "avg": {
-          "years": {
-            "2000-2005": "20002005",
-            "2007-2012": "20072012",
-            "2008": "2008",
-            "2009": "2009",
-            "2010": "2010",
-            "2011": "2011",
-            "2012": "2012"
-          }
-        }
-      },
       "_of_missing_data_domestic_financing_": {
         "avg": {
           "years": {
@@ -25802,10 +25779,6 @@
     "level": "admin0",
     "location_type": "country",
     "locations": {
-      "": {
-        "ISO": "NF-",
-        "label": ""
-      },
       "afghanistan": {
         "ISO": "AFG",
         "label": "Afghanistan"
