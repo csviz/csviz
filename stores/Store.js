@@ -96,7 +96,7 @@ Store.dispatchToken = AppDispatcher.register(function(payload) {
       var configs = response.configs
       var defaultIndicator = Object.keys(meta.indicators)[0]
       if (response.configs.indicators[defaultIndicator].years.length) {
-        setSelectedYear(_.last(response.configs.indicators[defaultIndicator].years))
+        setSelectedYear(response.configs.indicators[defaultIndicator].years[0])
       }
 
       setSelectedIndicator(defaultIndicator)
