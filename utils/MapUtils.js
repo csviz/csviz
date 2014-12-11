@@ -7,6 +7,13 @@ var d3 = require('d3')
 var MapUtils = {
 
   /**
+   * Check n if is an integer
+   */
+  isInt(n) {
+    return n % 1 === 0
+  },
+
+  /**
    * Given a value, to calculate the color value from the current indicator and confif data
    */
   getNumberColor(value, configs, meta, selected_indicator) {
@@ -174,17 +181,19 @@ var MapUtils = {
       if (configs.indicators[selected_indicator].years.length) {
         var value = indicators[countryName][selected_indicator].years[selected_year]
         if (value) {
-          value = indicators[countryName][selected_indicator].years[selected_year].toFixed(2)
-          value = numeral(value).format('0.000')
+          if (!MapUtils.isInt(value)) {
+            value = indicators[countryName][selected_indicator].years[selected_year].toFixed(2)
+            value = numeral(value).format('0.000')
+          }
           value = MapUtils.compileTemplate(tooltipTemplate, {currentIndicator: value})
         }
       } else {
         if(indicators[countryName][selected_indicator]) {
-          value = indicators[countryName][selected_indicator].toFixed(2)
-          if (value) {
-            value = numeral(value).format('0.000')
-            value = MapUtils.compileTemplate(tooltipTemplate, {currentIndicator: value})
+          value = indicators[countryName][selected_indicator]
+          if (value && !MapUtils.isInt(value)) {
+            value = numeral(value.toFixed(2)).format('0.000')
           }
+          value = MapUtils.compileTemplate(tooltipTemplate, {currentIndicator: value})
         }
       }
     }
@@ -192,7 +201,6 @@ var MapUtils = {
     popup.setContent('<div class="marker-title">' + layer.feature.properties['ISO_NAME'] + '</div>' + value)
 
     if (!popup._map) popup.openOn(map)
-    // layer.setStyle({ color: 'black' })
     if (!L.Browser.ie && !L.Browser.opera) layer.bringToFront()
   }
 }
