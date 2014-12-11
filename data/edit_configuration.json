@@ -3,15 +3,16 @@
     "name": "CSViz",
     "description": "The CSViz Demo App",
     "url": "http://csviz.org",
-    "logo": "http://csviz.org/logo.gif"
+    "logo": "http://csviz.dev.wiredcraft.com/assets/images/logo.png"
   },
   "ui": {
     "legend": false,
     "choropleth": [
-      "#ffffff",
-      "#fffccc",
-      "#fffbbb",
-      "#000000"
+      "#ccebc5",
+      "#a8ddb5",
+      "#7bccc4",
+      "#43a2ca",
+      "#0868ac"
     ],
     "menu": [
       {
