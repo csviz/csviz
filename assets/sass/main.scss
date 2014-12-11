@@ -74,6 +74,10 @@ h6 {
       font-size: $large;
       line-height: 1;
       margin: 0;
+      display: inline-block;
+    }
+    span {
+      padding-left: $gutter;
     }
   }
   .indicator {

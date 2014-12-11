@@ -24,6 +24,7 @@ var ControlHeader = React.createClass({
     return (
       <header className='header'>
         <h1>{site.name}</h1>
+        <span>{site.description}</span>
       </header>
     )
   }
