@@ -17,33 +17,15 @@ var MapUtils = {
    * Given a value, to calculate the color value from the current indicator and confif data
    */
   getNumberColor(value, configs, meta, selected_indicator) {
-
-    // var min = meta.indicators[selected_indicator].min_value
-    // var max = meta.indicators[selected_indicator].max_value
-    // var _color = d3.scale.log()
-    //   .domain([min, max])
-    //   .range(["rgb(8,48,107)", "rgb(247,251,255)"])
-    //   .interpolate(d3.interpolateHcl)
-
-    // return _color(value)
-
     var min = meta.indicators[selected_indicator].min_value
     var max = meta.indicators[selected_indicator].max_value
-    // var start = configs.ui.choropleth.start
-    // var end = configs.ui.choropleth.end
     var colors = configs.ui.choropleth
     var steps = configs.ui.choropleth.length
     var step = (max - min)/steps
-
     var colorIndex = ((value - min)/step).toFixed()
 
-    if (colorIndex <= 0) {
-      colorIndex = 0
-    }
-
-    if (colorIndex >= steps) {
-      colorIndex = steps - 1
-    }
+    if (colorIndex <= 0) { colorIndex = 0 }
+    if (colorIndex >= steps) { colorIndex = steps - 1 }
 
     return colors[colorIndex]
 
