@@ -38,23 +38,27 @@ var Timeline = React.createClass({
   },
 
   playTimeline() {
+    var playLoop = this.state.playLoop
     var selected_indicator = Store.getSelectedIndicator()
     this.setState({ isTimelinePlaying: !this.state.isTimelinePlaying })
 
     if (this.state.isTimelinePlaying) {
-      if (this.state.playLoop) window.clearInterval(this.state.playLoop)
+      if (playLoop) window.clearInterval(playLoop)
+      this.setState({ playLoop: null })
     } else if (!this.state.isTimelinePlaying) {
-      var playLoop = window.setInterval(function() {
-        var current_year = parseInt(Store.getSelectedYear())
-        if (current_year >= parseInt(_.last(this.props.data.global.meta.indicators[selected_indicator].years))) {
+      playLoop = window.setInterval(function() {
+        var current_year = Store.getSelectedYear()
+        var current_year_index = _.indexOf(this.props.data.global.meta.indicators[selected_indicator].years, current_year)
+
+        if (current_year_index == this.props.data.global.meta.indicators[selected_indicator].years.length - 1) {
           window.clearInterval(playLoop)
           this.setState({ isTimelinePlaying: false })
+          playLoop = null
         } else {
-          var next_year = current_year + 1
-          MapActionCreators.changeSelectedYear(next_year)
+          var next_year_index = current_year_index + 1
+          MapActionCreators.changeSelectedYear(this.props.data.global.meta.indicators[selected_indicator].years[next_year_index])
         }
-      }.bind(this), 1000)
-
+      }.bind(this), 600)
       this.setState({ playLoop: playLoop })
     }
 
