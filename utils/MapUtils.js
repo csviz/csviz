@@ -7,36 +7,25 @@ var d3 = require('d3')
 var MapUtils = {
 
   /**
+   * Check n if is an integer
+   */
+  isInt(n) {
+    return n % 1 === 0
+  },
+
+  /**
    * Given a value, to calculate the color value from the current indicator and confif data
    */
   getNumberColor(value, configs, meta, selected_indicator) {
-
-    // var min = meta.indicators[selected_indicator].min_value
-    // var max = meta.indicators[selected_indicator].max_value
-    // var _color = d3.scale.log()
-    //   .domain([min, max])
-    //   .range(["rgb(8,48,107)", "rgb(247,251,255)"])
-    //   .interpolate(d3.interpolateHcl)
-
-    // return _color(value)
-
     var min = meta.indicators[selected_indicator].min_value
     var max = meta.indicators[selected_indicator].max_value
-    // var start = configs.ui.choropleth.start
-    // var end = configs.ui.choropleth.end
     var colors = configs.ui.choropleth
     var steps = configs.ui.choropleth.length
     var step = (max - min)/steps
-
     var colorIndex = ((value - min)/step).toFixed()
 
-    if (colorIndex <= 0) {
-      colorIndex = 0
-    }
-
-    if (colorIndex >= steps) {
-      colorIndex = steps - 1
-    }
+    if (colorIndex <= 0) { colorIndex = 0 }
+    if (colorIndex >= steps) { colorIndex = steps - 1 }
 
     return colors[colorIndex]
 
@@ -174,17 +163,19 @@ var MapUtils = {
       if (configs.indicators[selected_indicator].years.length) {
         var value = indicators[countryName][selected_indicator].years[selected_year]
         if (value) {
-          value = indicators[countryName][selected_indicator].years[selected_year].toFixed(2)
-          value = numeral(value).format('0.000')
+          if (!MapUtils.isInt(value)) {
+            value = indicators[countryName][selected_indicator].years[selected_year].toFixed(2)
+            value = numeral(value).format('0.000')
+          }
           value = MapUtils.compileTemplate(tooltipTemplate, {currentIndicator: value})
         }
       } else {
         if(indicators[countryName][selected_indicator]) {
-          value = indicators[countryName][selected_indicator].toFixed(2)
-          if (value) {
-            value = numeral(value).format('0.000')
-            value = MapUtils.compileTemplate(tooltipTemplate, {currentIndicator: value})
+          value = indicators[countryName][selected_indicator]
+          if (value && !MapUtils.isInt(value)) {
+            value = numeral(value.toFixed(2)).format('0.000')
           }
+          value = MapUtils.compileTemplate(tooltipTemplate, {currentIndicator: value})
         }
       }
     }
@@ -192,7 +183,6 @@ var MapUtils = {
     popup.setContent('<div class="marker-title">' + layer.feature.properties['ISO_NAME'] + '</div>' + value)
 
     if (!popup._map) popup.openOn(map)
-    // layer.setStyle({ color: 'black' })
     if (!L.Browser.ie && !L.Browser.opera) layer.bringToFront()
   }
 }

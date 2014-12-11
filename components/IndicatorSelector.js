@@ -12,7 +12,6 @@ var IndicatorSelector = React.createClass({
 
   componentDidMount() {
     Store.addIndicatorChangeListener(this.handleStoreChange)
-
     this.setState({})
   },
 

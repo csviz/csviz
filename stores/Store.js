@@ -107,8 +107,8 @@ Store.dispatchToken = AppDispatcher.register(function(payload) {
     case ActionTypes.CHANGE_INDICATOR:
       setSelectedIndicator(response)
 
-      // set default year if the year is still empty
-      if (_data.configs && _data.configs.indicators[response].years.length && _.isEmpty(_selected_year)) {
+      // change selected_year whenever indicator change because they have different start year
+      if (_data.configs && _data.configs.indicators[response].years.length) {
         setSelectedYear(_data.configs.indicators[response].years[0])
       }
 
