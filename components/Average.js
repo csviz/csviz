@@ -3,8 +3,6 @@
 var _ = require('lodash')
 var React = require('react')
 var BarchartEnvelope = require('react-barchart-envelope')
-var mui = require('material-ui')
-var Icon = mui.Icon
 var numeral = require('numeral')
 
 var MapActionCreators = require('../actions/MapActionCreators')
@@ -59,7 +57,13 @@ var Average = React.createClass({
             countryData = _.map(global.data.locations[countryName][selected_indicator].years, function(value) {
               return value
             })
-            countryChart = <BarchartEnvelope data={countryData}  width={80} height={20} />
+
+            if (_.contains(countryData, null)) {
+              countryChart = 'incomplete data'
+            } else {
+              countryChart = <BarchartEnvelope data={countryData}  width={80} height={20} />
+            }
+
             hasData = true
           } else {
             formattedValue = 'No data'
@@ -82,7 +86,6 @@ var Average = React.createClass({
           })
 
           Chart = <BarchartEnvelope data={dataSeries} width={80} height={20}/>
-          // Chart = <Sparkline data={dataSeries} circleDiameter={0} />
         }
 
       // indicator without years
