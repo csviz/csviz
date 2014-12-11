@@ -1,12 +1,12 @@
 Location,Year,Equivalent Children Supported in basic education
 Afghanistan,2013,0
 Afghanistan,2012,91270.954745385
-Albania,2013,0
-Albania,2012,0
+Albania,2013,
+Albania,2012,
 Benin,2013,0
 Benin,2012,89088.8233975217
-Bhutan,2013,0
-Bhutan,2012,0
+Bhutan,2013,
+Bhutan,2012,
 Burkina Faso,2013,0
 Burkina Faso,2012,298358.937553566
 Burundi,2013,151376.025643531
@@ -45,10 +45,10 @@ Guyana,2013,0
 Guyana,2012,15671.9792050846
 Haiti,2013,6716.4096623563
 Haiti,2012,55426.7560897865
-Honduras,2013,0
-Honduras,2012,0
-Kenya,2013,0
-Kenya,2012,0
+Honduras,2013,
+Honduras,2012,
+Kenya,2013,
+Kenya,2012,
 Kyrgyzstan,2013,5612.4278974014
 Kyrgyzstan,2012,16858.0178595034
 Lao People's Democratic Republic,2013,40630.2857139851
@@ -75,10 +75,10 @@ Nicaragua,2013,2949.3342743114
 Nicaragua,2012,0
 Niger,2013,0
 Niger,2012,23746.0374640251
-Nigeria,2013,0
-Nigeria,2012,0
-Pakistan,2013,0
-Pakistan,2012,0
+Nigeria,2013,
+Nigeria,2012,
+Pakistan,2013,
+Pakistan,2012,
 Papua New Guinea,2013,21610.4974159264
 Papua New Guinea,2012,1680.0691299435
 Republic of Moldova,2013,880.6446195402
@@ -107,8 +107,8 @@ Uganda,2013,0
 Uganda,2012,0
 United Republic of Tanzania,2013,23033.4259484872
 United Republic of Tanzania,2012,0
-Uzbekistan,2013,0
-Uzbekistan,2012,0
+Uzbekistan,2013,
+Uzbekistan,2012,
 Viet Nam,2013,186208.49026398
 Viet Nam,2012,0
 Yemen,2013,33344.0666128809
