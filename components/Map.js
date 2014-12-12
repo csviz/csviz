@@ -90,8 +90,8 @@ var Map = React.createClass({
       onEachFeature: onEachFeature
     }).addTo(map)
 
-    // var borderLayer = L.mapbox.tileLayer('mapbox.world-borders-light').addTo(map)
-    // L.control.orderlayers(borderLayer, countryLayer)
+    var labelLayer = L.mapbox.tileLayer(mapbox_config.label).addTo(map)
+    L.control.orderlayers(labelLayer, countryLayer)
 
     this.setState({countryLayer: countryLayer})
 
