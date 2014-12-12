@@ -2,8 +2,10 @@
 
 var _ = require('lodash')
 var React = require('react')
-var BarchartEnvelope = require('react-barchart-envelope')
 var numeral = require('numeral')
+var Router = require('react-router')
+var objectAssign = require('object-assign')
+var BarchartEnvelope = require('react-barchart-envelope')
 
 var MapActionCreators = require('../actions/MapActionCreators')
 var Store = require('../stores/Store')
@@ -11,6 +13,8 @@ var Store = require('../stores/Store')
 var Average = React.createClass({
 
   displayName: 'Average',
+
+  mixins: [ Router.State, Router.Navigation ],
 
   getInitialState() {
     return {
@@ -31,6 +35,10 @@ var Average = React.createClass({
   },
 
   onCountryClick(countryName) {
+    var queries = this.getQuery()
+    var _queries = objectAssign(queries, {country: countryName})
+
+    this.replaceWith('app', {}, _queries)
     MapActionCreators.changeSelectedCountry(countryName)
   },
 

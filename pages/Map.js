@@ -1,6 +1,7 @@
 'use strict'
 
 var _ = require('lodash')
+var Router = require('react-router')
 var React = require('react')
 var DocumentTitle = require('react-document-title')
 
@@ -14,6 +15,8 @@ var MapPage = React.createClass({
 
   displayName: 'MapPage',
 
+  mixins: [ Router.State ],
+
   getInitialState() {
     return {
       data: Store.getAll()
@@ -23,7 +26,7 @@ var MapPage = React.createClass({
   componentDidMount() {
     Store.addChangeListener(this.handleStoresChanged)
 
-    MapActionCreators.requestAll()
+    MapActionCreators.requestAll(this.getQuery())
   },
 
   componentWillUnmount() {
@@ -31,9 +34,7 @@ var MapPage = React.createClass({
   },
 
   handleStoresChanged() {
-    if (this.isMounted()) {
-      this.setState({data: Store.getAll()})
-    }
+    if (this.isMounted()) this.setState({data: Store.getAll()})
   },
 
   render() {

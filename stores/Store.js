@@ -92,16 +92,9 @@ Store.dispatchToken = AppDispatcher.register(function(payload) {
     case ActionTypes.REQUEST_DATA_SUCCESS:
       _data = response
 
-      var meta = response.global.meta
-      var configs = response.configs
-      var defaultIndicator = Object.keys(meta.indicators)[0]
-      if (response.configs.indicators[defaultIndicator].years.length) {
-        setSelectedYear(response.configs.indicators[defaultIndicator].years[0])
-      }
-
-      setSelectedIndicator(defaultIndicator)
+      // setSelectedIndicator(defaultIndicator)
       Store.emitChange()
-      Store.emitIndicatorChange()
+      // Store.emitIndicatorChange()
       break
 
     case ActionTypes.CHANGE_INDICATOR:

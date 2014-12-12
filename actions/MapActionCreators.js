@@ -5,12 +5,12 @@ var API = require('../utils/API')
 var ActionTypes = require('../constants/ActionTypes')
 
 var MapActionCreators = {
-  requestAll() {
+  requestAll(queries) {
     AppDispatcher.handleViewAction({
       type: ActionTypes.REQUEST_DATA
     })
 
-    API.all()
+    API.all(queries)
   },
 
   changeIndicator(indicator) {

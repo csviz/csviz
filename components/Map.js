@@ -2,6 +2,8 @@
 
 var _ = require('lodash')
 var React = require('react')
+var Router = require('react-router')
+var objectAssign = require('object-assign')
 var mapbox = require('mapbox.js')
 var numeral = require('numeral')
 
@@ -18,6 +20,8 @@ var Map = React.createClass({
 
   displayName: 'MapComponent',
 
+  mixins: [ Router.State, Router.Navigation ],
+
   getInitialState() {
     return {
       map: {},
@@ -27,6 +31,7 @@ var Map = React.createClass({
   },
 
   componentDidMount() {
+    Store.addChangeListener(this.updateChoropleth)
     Store.addCountryChangeListener(this.handleCountryChange)
     Store.addIndicatorChangeListener(this.updateChoropleth)
     Store.addYearChangeListener(this.updateChoropleth)
@@ -52,20 +57,21 @@ var Map = React.createClass({
           MapUtils.addTooltip(this.state.map, layer, popup, indicators, selected_indicator, configs, selected_year)
         }
       }.bind(this))
-
     }
   },
 
   updateChoropleth() {
+    var self = this
+    var data = Store.getAll()
     var selected_indicator = Store.getSelectedIndicator()
     var selected_year = Store.getSelectedYear()
 
-    if (_.isEmpty(this.props.data) || _.isEmpty(selected_indicator)) return
+    if (_.isEmpty(data) || _.isEmpty(selected_indicator)) return
 
-    var global = this.props.data.global
+    var global = data.global
     var meta = global.meta
     var map = this.state.map
-    var configs = this.props.data.configs
+    var configs = data.configs
     var indicators = global.data.locations
 
     // clean up existing layers
@@ -77,7 +83,7 @@ var Map = React.createClass({
     }
 
     // add country choropleth
-    var countryLayer = L.geoJson(this.props.data.geo.filter((shape) =>
+    var countryLayer = L.geoJson(data.geo.filter((shape) =>
       MapUtils.getCountryNameId(shape.properties['ISO_NAME']) in indicators
     ), {
       style: getStyle,
@@ -157,6 +163,8 @@ var Map = React.createClass({
         var layer = e.target
         var selectedCountryName = MapUtils.getCountryNameId(e.target.feature.properties['ISO_NAME'])
 
+        self.updateQuery({country: selectedCountryName})
+
         MapUtils.centerOnCountry(layer, map)
         MapActionCreators.changeSelectedCountry(selectedCountryName)
       }
@@ -168,6 +176,12 @@ var Map = React.createClass({
     var legend = MapUtils.getLegendHTML(configs, global, selected_indicator)
     map.legendControl.addLegend(legend)
     this.setState({legend: legend})
+  },
+
+  updateQuery(data) {
+    var queries = this.getQuery()
+    var _queries = objectAssign(queries, data)
+    this.replaceWith('app', {}, _queries)
   },
 
   render() {

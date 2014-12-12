@@ -10,7 +10,7 @@ var configPath = _config.configPath
 var globalPath = _config.globalPath
 
 var API = {
-  all() {
+  all(queries) {
     axios.all([axios.get(configPath), axios.get(globalPath), axios.get(geoPath)])
       .then(function(data) {
         var _data = {}
@@ -21,6 +21,17 @@ var API = {
         }
 
         MapServerActionCreators.handleDATASuccess(_data)
+
+        var MapActionCreators = require('../actions/MapActionCreators')
+        var defaultIndicator = queries.indicator || Object.keys(_data.global.meta.indicators)[0]
+        MapActionCreators.changeIndicator(defaultIndicator)
+        if (_data.configs.indicators[defaultIndicator].years.length) {
+          var defaultYear = queries.year || _data.configs.indicators[defaultIndicator].years[0]
+          MapActionCreators.changeSelectedYear(defaultYear)
+        }
+        var defaultCountry = queries.country || null
+        MapActionCreators.changeSelectedCountry(defaultCountry)
+
         return true
       })
       .catch(function(err) {

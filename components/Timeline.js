@@ -2,6 +2,8 @@
 
 var _ = require('lodash')
 var React = require('react')
+var Router = require('react-router')
+var objectAssign = require('object-assign')
 
 var MapActionCreators = require('../actions/MapActionCreators')
 var Store = require('../stores/Store')
@@ -9,6 +11,8 @@ var Store = require('../stores/Store')
 var Timeline = React.createClass({
 
   displayName: 'Timeline',
+
+  mixins: [ Router.State, Router.Navigation ],
 
   getInitialState() {
     return {
@@ -34,6 +38,11 @@ var Timeline = React.createClass({
 
   handleYearClick(e) {
     var selected_year = e.target.innerHTML
+    var queries = this.getQuery()
+    var _queries = objectAssign(queries, {year: selected_year})
+
+    this.replaceWith('app', {}, _queries)
+
     MapActionCreators.changeSelectedYear(selected_year)
   },
 
@@ -56,7 +65,13 @@ var Timeline = React.createClass({
           playLoop = null
         } else {
           var next_year_index = current_year_index + 1
-          MapActionCreators.changeSelectedYear(this.props.data.global.meta.indicators[selected_indicator].years[next_year_index])
+          var next_year = this.props.data.global.meta.indicators[selected_indicator].years[next_year_index]
+
+          var queries = this.getQuery()
+          var _queries = objectAssign(queries, {year: next_year})
+
+          this.replaceWith('app', {}, _queries)
+          MapActionCreators.changeSelectedYear(next_year)
         }
       }.bind(this), 600)
       this.setState({ playLoop: playLoop })
