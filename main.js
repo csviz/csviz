@@ -36,6 +36,6 @@ if ('production' !== process.env.NODE_ENV) {
   window['React'] = React
 }
 
-Router.run(routes, Router.HistoryLocation, function(Handler) {
+Router.run(routes, function(Handler) {
   React.render(<Handler/>, document.body)
 })

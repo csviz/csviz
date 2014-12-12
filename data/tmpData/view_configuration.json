@@ -1000,11 +1000,11 @@
     }
   },
   "site": {
-    "description": "The CSViz Demo App",
+    "description": "gpe",
     "logo": "http://csviz.dev.wiredcraft.com/assets/images/logo.png",
-    "name": "CSViz",
-    "repository": "bbss/csviz",
-    "url": "http://csviz.org"
+    "name": "gpe",
+    "repository": "fraserxu/gpe",
+    "url": "https://fraserxu.github.io/gpe"
   },
   "ui": {
     "choropleth": [
