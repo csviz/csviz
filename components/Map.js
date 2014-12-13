@@ -88,10 +88,9 @@ var Map = React.createClass({
     ), {
       style: getStyle,
       onEachFeature: onEachFeature
-    }).addTo(map)
+    }).setZIndex(1).addTo(map)
 
-    var labelLayer = L.mapbox.tileLayer(mapbox_config.label).addTo(map)
-    L.control.orderlayers(labelLayer, countryLayer)
+    var labelLayer = L.mapbox.tileLayer(mapbox_config.label).setZIndex(2).addTo(map)
 
     this.setState({countryLayer: countryLayer})
 
