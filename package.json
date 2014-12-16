@@ -4,6 +4,7 @@
   "description": "Simple geo data viz for CSV files",
   "main": "main.js",
   "scripts": {
+    "env": "env",
     "lib": "cp -r node_modules/mapbox.js/theme/images build/",
     "build-js": "NODE_ENV=production node_modules/browserify/bin/cmd.js main.js -t [ reactify --extension js --harmony ] | node_modules/uglify-js/bin/uglifyjs -mc > build/bundle.js",
     "build-css": "node_modules/node-sass/bin/node-sass assets/sass/main.scss build/bundle.css",
@@ -37,7 +38,7 @@
     "numeral": "^1.5.3",
     "object-assign": "^1.0.0",
     "react": "^0.12.1",
-    "react-barchart-envelope": "0.0.2",
+    "react-barchart-envelope": "0.2.0",
     "react-document-title": "^0.1.3",
     "react-router": "^0.11.1",
     "react-select": "^0.2.6",

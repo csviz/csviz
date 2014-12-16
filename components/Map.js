@@ -82,18 +82,6 @@ var Map = React.createClass({
       this.setState({countryLayer: null})
     }
 
-    // add country choropleth
-    var countryLayer = L.geoJson(data.geo.filter((shape) =>
-      MapUtils.getCountryNameId(shape.properties['ISO_NAME']) in indicators
-    ), {
-      style: getStyle,
-      onEachFeature: onEachFeature
-    }).setZIndex(1).addTo(map)
-
-    var labelLayer = L.mapbox.tileLayer(mapbox_config.label).setZIndex(2).addTo(map)
-
-    this.setState({countryLayer: countryLayer})
-
     // get style function
     function getStyle(feature) {
       var value, color
@@ -175,6 +163,22 @@ var Map = React.createClass({
     var legend = MapUtils.getLegendHTML(configs, global, selected_indicator)
     map.legendControl.addLegend(legend)
     this.setState({legend: legend})
+
+    // add country choropleth
+    var countryLayer = L.geoJson(data.geo.filter((shape) =>
+      MapUtils.getCountryNameId(shape.properties['ISO_NAME']) in indicators
+    ), {
+      style: getStyle,
+      onEachFeature: onEachFeature
+    }).setZIndex(1).addTo(map)
+
+    var labelLayer = L.mapbox.tileLayer(mapbox_config.label).addTo(map)
+    labelLayer.setZIndex(2)
+    // if (!L.Browser.ie && !L.Browser.opera) labelLayer.bringToFront()
+    // map.addLayer(mapbox.layer().id(mapbox_config.label))
+    // map.addLayer(mapbox.layer().id(mapbox_config.label))
+
+    this.setState({countryLayer: countryLayer})
   },
 
   updateQuery(data) {
