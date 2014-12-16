@@ -17,5 +17,12 @@
     "menu": {}
   },
   "columns": {
+    "Location": {
+      "type": "location",
+      "location_type": "country"
+    },
+    "Year": {
+      "type": "year"
+    }
   }
 }
