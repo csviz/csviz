@@ -39,11 +39,23 @@ var IndicatorSelector = React.createClass({
     // after get the configs
     if (data.configs && data.configs.indicators && selected_indicator) {
 
-      var indicators = data.configs.indicators
-      var MenuItems = Object.keys(indicators)
-        .filter(key => indicators[key].name)
-        .map(key => ({ payload: key, text: indicators[key].name }))
-        .map((data, index) => (<option key={index} value={data.payload}>{data.text}</option>))
+      var menuData = data.configs.ui.menu
+      var menu = Object.keys(menuData).map(function(groupName) {
+        var menuItem = menuData[groupName].map(function(menuItemData, menuIndex) {
+          return (<option key={menuIndex} value={menuItemData.id}>{menuItemData.label}</option>)
+        })
+        return (
+          <optgroup key={groupName} label={groupName}>
+            {menuItem}
+          </optgroup>
+        )
+      })
+
+      // var indicators = data.configs.indicators
+      // var MenuItems = Object.keys(indicators)
+      //   .filter(key => indicators[key].name)
+      //   .map(key => ({ payload: key, text: indicators[key].name }))
+      //   .map((data, index) => (<option key={index} value={data.payload}>{data.text}</option>))
 
       indicatorDescription = data.configs.indicators[selected_indicator].description
 
@@ -55,7 +67,7 @@ var IndicatorSelector = React.createClass({
       <section className='indicator'>
         <header className='select'>
           <select onChange={this.hanldeSelectChange} value={selected_indicator}>
-            {MenuItems}
+            {menu}
           </select>
         </header>
         <p className='description'>{indicatorDescription}</p>
