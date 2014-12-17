@@ -162,13 +162,17 @@ var MapUtils = {
       // data with years
       if (configs.indicators[selected_indicator].years.length) {
         var value = indicators[countryName][selected_indicator].years[selected_year]
+
         if (value) {
           if (!MapUtils.isInt(value)) {
             value = indicators[countryName][selected_indicator].years[selected_year].toFixed(2)
             value = numeral(value).format('0.000')
           }
           value = MapUtils.compileTemplate(tooltipTemplate, {currentIndicator: value})
+        } else {
+          value = 'No data'
         }
+
       } else {
         if(indicators[countryName][selected_indicator]) {
           value = indicators[countryName][selected_indicator]

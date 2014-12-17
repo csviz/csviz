@@ -41,7 +41,6 @@ var BarchartEnvelope = React.createClass({
     var tooltip = this.props.tooltip || false
     if (data.length === 0) return
 
-
     // need some hack here for the last step of the line
     var _data = data.slice()
     if (data.length > 1) _data.push(_data[_data.length - 1])
@@ -108,8 +107,6 @@ var BarchartEnvelope = React.createClass({
         })
         .style('cursor', 'pointer')
         .on('mouseover', function(d) {
-          // d3.select(this)
-          //   .attr('fill', 'orange')
 
           if (tooltip) {
             var xPosition = parseFloat(d3.select(this).attr('x')) + width / data.length / 2
@@ -129,10 +126,6 @@ var BarchartEnvelope = React.createClass({
 
         })
         .on('mouseout', function() {
-          // d3.select(this)
-          //   .transition()
-          //   .duration(250)
-          //   .attr('fill', 'rgba(0, 0, 0, 0)')
 
           if (tooltip) {
             d3.select('#tooltip').remove()

@@ -16,12 +16,6 @@ var Average = React.createClass({
 
   mixins: [ Router.State, Router.Navigation ],
 
-  getInitialState() {
-    return {
-      isAverageOpen: false
-    }
-  },
-
   componentDidMount() {
     Store.addIndicatorChangeListener(this.handleStoreChange)
     Store.addYearChangeListener(this.handleStoreChange)
@@ -67,7 +61,7 @@ var Average = React.createClass({
           var hasData, formattedValue, countryData, countryChart
 
           if (indicators[countryName][selected_indicator]) {
-            formattedValue = numeral(indicators[countryName][selected_indicator].years[selected_year]).format('0,0')
+            formattedValue = numeral(indicators[countryName][selected_indicator].years[selected_year]).format('0.000')
             countryData = _.map(indicators[countryName][selected_indicator].years, function(value) {
               return value
             })
@@ -76,7 +70,7 @@ var Average = React.createClass({
               countryChart = 'incomplete data'
             } else {
               countryChart = <BarchartEnvelope data={countryData} width={80} height={20} />
-              countryChartBody = <BarchartEnvelope onBarchartClick={onBarchartClick} data={countryData} hoverEffect={true} tooltip={true} width={300} height={80} selectedIndex={selectedIndex} />
+              countryChartBody = <BarchartEnvelope onBarchartClick={onBarchartClick} data={countryData} hoverEffect={true} width={300} height={80} selectedIndex={selectedIndex} />
             }
 
             hasData = true
