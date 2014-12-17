@@ -4815,6 +4815,9 @@ html, body, #app {
 h1, h2, h3, h4, h5, h6 {
   line-height: 160%; }
 
+textarea {
+  resize: none; }
+
 /* SIDEBAR */
 #main {
   bottom: 0;
@@ -4827,35 +4830,35 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
     width: 100%; }
 
-#sidebar {
+.sidebarPanel {
   background: #FFF;
   border-left: 1px solid #E5E5E5;
   bottom: 0;
   box-shadow: -2px 0 1px rgba(0, 0, 0, 0.08);
   overflow-y: auto;
-  position: fixed;
+  position: absolute;
   right: 0;
   top: 0;
   width: 400px; }
-  #sidebar > .header {
+  .sidebarPanel > .header {
     background: #EDEDED;
     padding: 15px 20px; }
-    #sidebar > .header h1 {
+    .sidebarPanel > .header h1 {
       color: rgba(0, 0, 0, 0.9);
       font-size: 17px;
       line-height: 1;
       margin: 0;
       display: inline-block; }
-    #sidebar > .header span {
+    .sidebarPanel > .header span {
       padding-left: 20px; }
-  #sidebar .indicator .select {
+  .sidebarPanel .indicator .select {
     border: 1px solid #E5E5E5;
     border-width: 1px 0;
     font-weight: bold;
     font-size: 17px;
     position: relative;
     word-wrap: break-word; }
-    #sidebar .indicator .select:after {
+    .sidebarPanel .indicator .select:after {
       bottom: 0;
       color: #BBB;
       content: '\e640';
@@ -4867,11 +4870,11 @@ h1, h2, h3, h4, h5, h6 {
       right: 10px;
       top: 50%;
       word-wrap: break-word; }
-      #sidebar .indicator .select:after:hover {
+      .sidebarPanel .indicator .select:after:hover {
         color: inherit; }
-    #sidebar .indicator .select:hover:after {
+    .sidebarPanel .indicator .select:hover:after {
       color: inherit; }
-    #sidebar .indicator .select select {
+    .sidebarPanel .indicator .select select {
       appearance: none;
       -webkit-appearance: none;
       -moz-appearance: none;
@@ -4890,74 +4893,82 @@ h1, h2, h3, h4, h5, h6 {
       padding: 15px 20px;
       padding-right: 30px;
       width: 100%; }
-    #sidebar .indicator .select .mui-drop-down-menu .mui-menu-control .mui-menu-label {
+    .sidebarPanel .indicator .select .mui-drop-down-menu .mui-menu-control .mui-menu-label {
       padding-left: 20px; }
-  #sidebar .indicator .description {
+  .sidebarPanel .indicator .description {
     margin: 0;
     padding: 15px 20px; }
-  #sidebar .links {
+  .sidebarPanel .links {
     background: #FAFAFA;
     padding: 15px 20px;
     text-align: right; }
-    #sidebar .links .mui-paper-button {
+    .sidebarPanel .links .mui-paper-button {
       box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
       text-align: center;
       width: 170px; }
-      #sidebar .links .mui-paper-button .mui-paper-container {
+      .sidebarPanel .links .mui-paper-button .mui-paper-container {
         box-shadow: none !important; }
-      #sidebar .links .mui-paper-button .mui-paper-button-content span:before {
+      .sidebarPanel .links .mui-paper-button .mui-paper-button-content span:before {
         font-family: 'mdfonticon';
         margin-right: 10px; }
-    #sidebar .links .share {
+    .sidebarPanel .links .share {
       float: left; }
-    #sidebar .links .download .mui-paper-button-content span:before {
+    .sidebarPanel .links .share-dialog-box {
+      position: fixed;
+      max-width: 600px;
+      width: 80%;
+      margin-left: -300px; }
+      @media (max-width: 767px) {
+        .sidebarPanel .links .share-dialog-box {
+          margin-left: -40%; } }
+    .sidebarPanel .links .download .mui-paper-button-content span:before {
       content: '\e744'; }
-    #sidebar .links .share .mui-paper-button-content span:before {
+    .sidebarPanel .links .share .mui-paper-button-content span:before {
       content: '\e61a'; }
-  #sidebar .drilldown {
+  .sidebarPanel .drilldown {
     background: #FAFAFA;
     font-size: 15px;
     line-height: 120%;
     text-align: right; }
-    #sidebar .drilldown .header {
+    .sidebarPanel .drilldown .header {
       border: 1px solid #E5E5E5;
       border-width: 1px 0;
       font-weight: bold;
       padding: 15px 20px; }
-    #sidebar .drilldown .list {
+    .sidebarPanel .drilldown .list {
       list-style: none; }
-      #sidebar .drilldown .list li header {
+      .sidebarPanel .drilldown .list li header {
         cursor: pointer;
         padding: 15px 20px; }
-        #sidebar .drilldown .list li header:hover {
+        .sidebarPanel .drilldown .list li header:hover {
           background: #FFF; }
-      #sidebar .drilldown .list li rect {
+      .sidebarPanel .drilldown .list li rect {
         -moz-transition: all 0.3s;
         -o-transition: all 0.3s;
         -webkit-transition: all 0.3s;
         transition: all 0.3s; }
-      #sidebar .drilldown .list li rect:hover {
+      .sidebarPanel .drilldown .list li rect:hover {
         fill: orange; }
-    #sidebar .drilldown .label {
+    .sidebarPanel .drilldown .label {
       float: left;
       max-width: 160px;
       text-align: left; }
-    #sidebar .drilldown .label, #sidebar .drilldown .value {
+    .sidebarPanel .drilldown .label, .sidebarPanel .drilldown .value {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap; }
-    #sidebar .drilldown .value {
+    .sidebarPanel .drilldown .value {
       max-width: 80px; }
-    #sidebar .drilldown .chart {
+    .sidebarPanel .drilldown .chart {
       display: inline-block;
       margin-left: 20px; }
-    #sidebar .drilldown .detail {
+    .sidebarPanel .drilldown .detail {
       padding: 40px 20px;
       background: #fff;
       display: none; }
-      #sidebar .drilldown .detail.show {
+      .sidebarPanel .drilldown .detail.show {
         display: block; }
-    #sidebar .drilldown .empty .value {
+    .sidebarPanel .drilldown .empty .value {
       color: #BBB;
       font-size: 11px;
       text-transform: uppercase; }

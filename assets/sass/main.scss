@@ -40,7 +40,7 @@ h5,
 h6 {
   line-height: 160%;
 }
-
+textarea{resize:none}
 /* SIDEBAR */
 
 #main {
@@ -56,13 +56,13 @@ h6 {
   }
 }
 
-#sidebar {
+.sidebarPanel{
   background: #FFF;
   border-left: 1px solid $line;
   bottom: 0;
   box-shadow: -2px 0 1px rgba(0, 0, 0, 0.08); // Need to make it x-compatible
   overflow-y: auto;
-  position: fixed;
+  position: absolute;
   right: 0;
   top: 0;
   width: $sidebar;
@@ -161,6 +161,17 @@ h6 {
     .share {
       float: left;
     }
+    .share-dialog-box{
+    position:fixed;
+      max-width:600px;
+            width:80%;
+      
+      margin-left:-300px;
+      @include tablet{
+      margin-left:-40%;
+
+      }
+  }
     .download .mui-paper-button-content span:before { content: '\e744'; }
     .share .mui-paper-button-content span:before { content: '\e61a'; }
   }

@@ -14,10 +14,12 @@ var MapControls = React.createClass({
   render() {
     return (
       <aside id='sidebar'>
+      <div className='sidebarPanel'>
         <ControlHeader data={this.props.data} />
         <IndicatorSelector data={this.props.data} />
         <SocialPanel data={this.props.data} />
         <Average data={this.props.data} />
+        </div>
       </aside>
     )
   }
