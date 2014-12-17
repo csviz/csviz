@@ -99,7 +99,7 @@ var MapUtils = {
    * Get Legend Html with the selected Indicator
    */
   getLegendHTML(configs, global, selected_indicator) {
-    var indicatorName = configs.indicators[selected_indicator].name
+    if (!global.meta.indicators[selected_indicator].min_value || !global.meta.indicators[selected_indicator].max_value) return
 
     var labels = [], from, to, color
     var min = global.meta.indicators[selected_indicator].min_value.toFixed()

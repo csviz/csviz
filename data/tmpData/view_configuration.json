@@ -5,6 +5,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "% of missing data, domestic financing (%)",
       "precision": 2,
+      "source_file": "% of missing data, domestic financing (%)-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -19,6 +20,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "% of missing data outcome indicators (%)",
       "precision": 2,
+      "source_file": "% of missing data outcome indicators (%)-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -33,6 +35,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "% of missing data, service delivery (%)",
       "precision": 2,
+      "source_file": "% of missing data, service delivery (%)-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -47,6 +50,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "AID committed for Basic Education as % of GDP",
       "precision": 2,
+      "source_file": "AID committed for Basic Education as % of GDP-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -62,6 +66,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "AID committed for Basic Education- Current prices (USD millions)",
       "precision": 2,
+      "source_file": "AID committed for Basic Education- Current prices (USD millions)-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -77,6 +82,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "AID committed for total Education as % of GDP",
       "precision": 2,
+      "source_file": "AID committed for total Education as % of GDP-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -92,6 +98,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "AID committed for total Education- Current prices (USD millions)",
       "precision": 2,
+      "source_file": "AID committed for total Education- Current prices (USD millions)-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -107,6 +114,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "AID disbursed for Basic Education as % of GDP",
       "precision": 2,
+      "source_file": "AID disbursed for Basic Education as % of GDP-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -122,6 +130,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "AID disbursed for Basic Education- Current prices (USD millions)",
       "precision": 2,
+      "source_file": "AID disbursed for Basic Education- Current prices (USD millions)-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -137,6 +146,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "AID disbursed for total Education as % of GDP",
       "precision": 2,
+      "source_file": "AID disbursed for total Education as % of GDP-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -152,6 +162,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "AID disbursed for total Education- Current prices (USD millions)",
       "precision": 2,
+      "source_file": "AID disbursed for total Education- Current prices (USD millions)-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -167,6 +178,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Educational expenditure in primary as % of total educational expenditure",
       "precision": 2,
+      "source_file": "Educational expenditure in primary as % of total educational expenditure-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -182,6 +194,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Equivalent Children Supported in basic education",
       "precision": 2,
+      "source_file": "Equivalent Children Supported in basic education-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -194,6 +207,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "GPE Annual Funding Approvals",
       "precision": 2,
+      "source_file": "GPE Annual Funding Approvals-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -212,6 +226,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "GPE Annual Funding Disbursements",
       "precision": 2,
+      "source_file": "GPE Annual Funding Disbursements-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -232,6 +247,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "GPE Funding Approval as % of GDP",
       "precision": 2,
+      "source_file": "GPE Funding Approval as % of GDP-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -248,6 +264,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "GPE Funding Disbursement  as % of GDP",
       "precision": 2,
+      "source_file": "GPE Funding Disbursement  as % of GDP-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -264,6 +281,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "JSR report available",
       "precision": 2,
+      "source_file": "JSR report available-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -278,6 +296,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "JSRs conducted",
       "precision": 2,
+      "source_file": "JSRs conducted-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -292,6 +311,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Learning Math highest Boys - PASEC",
       "precision": 2,
+      "source_file": "Learning Math highest Boys - PASEC-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -303,6 +323,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Learning Math highest Boys - SACMEQ",
       "precision": 2,
+      "source_file": "Learning Math highest Boys - SACMEQ-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -314,6 +335,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Learning Math highest Boys - TIMS",
       "precision": 2,
+      "source_file": "Learning Math highest Boys - TIMS-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -325,6 +347,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Learning Math highest Girls - PASEC",
       "precision": 2,
+      "source_file": "Learning Math highest Girls - PASEC-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -336,6 +359,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Learning Math highest Girls - SACMEQ",
       "precision": 2,
+      "source_file": "Learning Math highest Girls - SACMEQ-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -347,6 +371,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Learning Math highest Girls - TIMS",
       "precision": 2,
+      "source_file": "Learning Math highest Girls - TIMS-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -358,6 +383,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Learning Math highest Total - PASEC",
       "precision": 2,
+      "source_file": "Learning Math highest Total - PASEC-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -369,6 +395,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Learning Math highest Total - SACMEQ",
       "precision": 2,
+      "source_file": "Learning Math highest Total - SACMEQ-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -380,6 +407,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Learning Math highest Total - TIMS",
       "precision": 2,
+      "source_file": "Learning Math highest Total - TIMS-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -391,6 +419,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Learning Math Lowest Boys - PASEC",
       "precision": 2,
+      "source_file": "Learning Math Lowest Boys - PASEC-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -402,6 +431,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Learning Math Lowest Boys - SACMEQ",
       "precision": 2,
+      "source_file": "Learning Math Lowest Boys - SACMEQ-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -413,6 +443,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Learning Math Lowest Boys - TIMS",
       "precision": 2,
+      "source_file": "Learning Math Lowest Boys - TIMS-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -424,6 +455,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Learning Math Lowest Girls - PASEC",
       "precision": 2,
+      "source_file": "Learning Math Lowest Girls - PASEC-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -435,6 +467,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Learning Math Lowest Girls - SACMEQ",
       "precision": 2,
+      "source_file": "Learning Math Lowest Girls - SACMEQ-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -446,6 +479,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Learning Math Lowest Girls - TIMS",
       "precision": 2,
+      "source_file": "Learning Math Lowest Girls - TIMS-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -457,6 +491,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Learning Math Lowest Total - PASEC",
       "precision": 2,
+      "source_file": "Learning Math Lowest Total - PASEC-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -468,6 +503,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Learning Math Lowest Total - SACMEQ",
       "precision": 2,
+      "source_file": "Learning Math Lowest Total - SACMEQ-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -479,6 +515,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Learning Math Lowest Total - TIMS",
       "precision": 2,
+      "source_file": "Learning Math Lowest Total - TIMS-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -490,6 +527,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Learning Reading highest Boys - PASEC",
       "precision": 2,
+      "source_file": "Learning Reading highest Boys - PASEC-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -501,6 +539,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Learning Reading highest Boys - SACMEQ",
       "precision": 2,
+      "source_file": "Learning Reading highest Boys - SACMEQ-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -512,6 +551,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Learning Reading highest Girls - PASEC",
       "precision": 2,
+      "source_file": "Learning Reading highest Girls - PASEC-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -523,6 +563,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Learning Reading highest Girls - SACMEQ",
       "precision": 2,
+      "source_file": "Learning Reading highest Girls - SACMEQ-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -534,6 +575,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Learning Reading highest Total - PASEC",
       "precision": 2,
+      "source_file": "Learning Reading highest Total - PASEC-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -545,6 +587,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Learning Reading highest Total - SACMEQ",
       "precision": 2,
+      "source_file": "Learning Reading highest Total - SACMEQ-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -556,6 +599,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Learning Reading Lowest Boys - PASEC",
       "precision": 2,
+      "source_file": "Learning Reading Lowest Boys - PASEC-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -567,6 +611,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Learning Reading Lowest Boys - SACMEQ",
       "precision": 2,
+      "source_file": "Learning Reading Lowest Boys - SACMEQ-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -578,6 +623,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Learning Reading Lowest Girls - PASEC",
       "precision": 2,
+      "source_file": "Learning Reading Lowest Girls - PASEC-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -589,6 +635,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Learning Reading Lowest Girls - SACMEQ",
       "precision": 2,
+      "source_file": "Learning Reading Lowest Girls - SACMEQ-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -600,6 +647,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Learning Reading Lowest Total - PASEC",
       "precision": 2,
+      "source_file": "Learning Reading Lowest Total - PASEC-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -611,6 +659,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Learning Reading Lowest Total - SACMEQ",
       "precision": 2,
+      "source_file": "Learning Reading Lowest Total - SACMEQ-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -622,6 +671,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Lower Secondary Completion Rate Female (%)",
       "precision": 2,
+      "source_file": "Lower Secondary Completion Rate Female (%)-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -637,6 +687,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Lower Secondary Completion Rate GPI",
       "precision": 2,
+      "source_file": "Lower Secondary Completion Rate GPI-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -652,6 +703,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Lower Secondary Completion Rate Male (%)",
       "precision": 2,
+      "source_file": "Lower Secondary Completion Rate Male (%)-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -667,6 +719,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Lower Secondary Completion Rate Total (%)",
       "precision": 2,
+      "source_file": "Lower Secondary Completion Rate Total (%)-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -682,6 +735,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Percentage of repeaters in lower secondary Total (%)",
       "precision": 2,
+      "source_file": "Percentage of repeaters in lower secondary Total (%)-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -697,6 +751,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Percentage of repeaters in primary Total (%)",
       "precision": 2,
+      "source_file": "Percentage of repeaters in primary Total (%)-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -712,6 +767,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Percentage of teacher trained, Lower Secondary  Education",
       "precision": 2,
+      "source_file": "Percentage of teacher trained, Lower Secondary  Education-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -727,6 +783,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Percentage of teacher trained, Primary Education",
       "precision": 2,
+      "source_file": "Percentage of teacher trained, Primary Education-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -742,6 +799,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Primary Completion Rate Female (%)",
       "precision": 2,
+      "source_file": "Primary Completion Rate Female (%)-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -757,6 +815,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Primary Completion Rate GPI",
       "precision": 2,
+      "source_file": "Primary Completion Rate GPI-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -772,6 +831,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Primary Completion Rate Male (%)",
       "precision": 2,
+      "source_file": "Primary Completion Rate Male (%)-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -787,6 +847,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Primary Completion Rate Total (%)",
       "precision": 2,
+      "source_file": "Primary Completion Rate Total (%)-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -802,6 +863,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Primary Gross Enrollment Ratio Female (%)",
       "precision": 2,
+      "source_file": "Primary Gross Enrollment Ratio Female (%)-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -817,6 +879,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Primary Gross Enrollment Ratio GPI",
       "precision": 2,
+      "source_file": "Primary Gross Enrollment Ratio GPI-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -832,6 +895,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Primary Gross Enrollment Ratio Male (%)",
       "precision": 2,
+      "source_file": "Primary Gross Enrollment Ratio Male (%)-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -847,6 +911,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Primary Gross Enrollment Ratio Total (%)",
       "precision": 2,
+      "source_file": "Primary Gross Enrollment Ratio Total (%)-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -862,6 +927,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Primary Out of School Children Rate Female (%)",
       "precision": 2,
+      "source_file": "Primary Out of School Children Rate Female (%)-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -877,6 +943,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Primary Out of School Children Rate Male (%)",
       "precision": 2,
+      "source_file": "Primary Out of School Children Rate Male (%)-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -892,6 +959,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Primary Out of School Children Rate Total (%)",
       "precision": 2,
+      "source_file": "Primary Out of School Children Rate Total (%)-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -907,6 +975,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Public expenditure on education as % of GDP",
       "precision": 2,
+      "source_file": "Public expenditure on education as % of GDP-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -922,6 +991,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Public Expenditure on Education as % of Public Expenditure",
       "precision": 2,
+      "source_file": "Public Expenditure on Education as % of Public Expenditure-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -937,6 +1007,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Pupil Teacher Ratio, Lower Secondary Education",
       "precision": 2,
+      "source_file": "Pupil Teacher Ratio, Lower Secondary Education-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -952,6 +1023,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Pupil Teacher Ratio, Primary Education",
       "precision": 2,
+      "source_file": "Pupil Teacher Ratio, Primary Education-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -967,6 +1039,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Youth (15-24) literacy rate (%) female",
       "precision": 2,
+      "source_file": "Youth (15-24) literacy rate (%) female-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -979,6 +1052,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Youth (15-24) literacy rate (%) Male",
       "precision": 2,
+      "source_file": "Youth (15-24) literacy rate (%) Male-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -991,6 +1065,7 @@
       "display": "{{ currentIndicator }}%",
       "name": "Youth (15-24) literacy rate (%) Total",
       "precision": 2,
+      "source_file": "Youth (15-24) literacy rate (%) Total-reformatted.csv",
       "tooltip": "tooltip: {{ currentIndicator }}%",
       "type": "number",
       "years": [
@@ -1000,11 +1075,11 @@
     }
   },
   "site": {
-    "description": "gpe",
+    "description": "null",
     "logo": "http://csviz.dev.wiredcraft.com/assets/images/logo.png",
-    "name": "gpe",
-    "repository": "fraserxu/gpe",
-    "url": "https://fraserxu.github.io/gpe"
+    "name": "csvizsource",
+    "repository": "bbss/csvizsource",
+    "url": "https://bbss.github.io/csvizsource"
   },
   "ui": {
     "choropleth": [
@@ -1015,17 +1090,310 @@
       "#0868ac"
     ],
     "legend": false,
-    "menu": [
-      {
-        "Financial": [
-          "GDP growth (annual %)"
-        ]
-      },
-      {
-        "Other": [
-          "World Population"
-        ]
-      }
-    ]
+    "menu": {
+      "grouped": [],
+      "ungrouped": [
+        {
+          "id": "learning_reading_lowest_girls__sacmeq",
+          "label": "Learning Reading Lowest Girls - SACMEQ"
+        },
+        {
+          "id": "youth__male",
+          "label": "Youth (15-24) literacy rate (%) Male"
+        },
+        {
+          "id": "learning_math_highest_girls__tims",
+          "label": "Learning Math highest Girls - TIMS"
+        },
+        {
+          "id": "aid_committed_for_basic_education_current_prices_",
+          "label": "AID committed for Basic Education- Current prices (USD millions)"
+        },
+        {
+          "id": "primary_out_of_school_children_rate_male_",
+          "label": "Primary Out of School Children Rate Male (%)"
+        },
+        {
+          "id": "learning_reading_highest_boys__sacmeq",
+          "label": "Learning Reading highest Boys - SACMEQ"
+        },
+        {
+          "id": "primary_completion_rate_total_",
+          "label": "Primary Completion Rate Total (%)"
+        },
+        {
+          "id": "lower_secondary_completion_rate_gpi",
+          "label": "Lower Secondary Completion Rate GPI"
+        },
+        {
+          "id": "percentage_of_repeaters_in_lower_secondary_total_",
+          "label": "Percentage of repeaters in lower secondary Total (%)"
+        },
+        {
+          "id": "primary_gross_enrollment_ratio_total_",
+          "label": "Primary Gross Enrollment Ratio Total (%)"
+        },
+        {
+          "id": "primary_completion_rate_female_",
+          "label": "Primary Completion Rate Female (%)"
+        },
+        {
+          "id": "learning_reading_highest_girls__sacmeq",
+          "label": "Learning Reading highest Girls - SACMEQ"
+        },
+        {
+          "id": "learning_math_highest_total__tims",
+          "label": "Learning Math highest Total - TIMS"
+        },
+        {
+          "id": "learning_math_lowest_girls__sacmeq",
+          "label": "Learning Math Lowest Girls - SACMEQ"
+        },
+        {
+          "id": "jsrs_conducted",
+          "label": "JSRs conducted"
+        },
+        {
+          "id": "aid_committed_for_basic_education_as__of_gdp",
+          "label": "AID committed for Basic Education as % of GDP"
+        },
+        {
+          "id": "learning_math_highest_boys__sacmeq",
+          "label": "Learning Math highest Boys - SACMEQ"
+        },
+        {
+          "id": "lower_secondary_completion_rate_male_",
+          "label": "Lower Secondary Completion Rate Male (%)"
+        },
+        {
+          "id": "learning_reading_lowest_total__pasec",
+          "label": "Learning Reading Lowest Total - PASEC"
+        },
+        {
+          "id": "learning_math_highest_boys__pasec",
+          "label": "Learning Math highest Boys - PASEC"
+        },
+        {
+          "id": "learning_reading_lowest_boys__pasec",
+          "label": "Learning Reading Lowest Boys - PASEC"
+        },
+        {
+          "id": "aid_disbursed_for_basic_education_current_prices_",
+          "label": "AID disbursed for Basic Education- Current prices (USD millions)"
+        },
+        {
+          "id": "pupil_teacher_ratio_primary_education",
+          "label": "Pupil Teacher Ratio, Primary Education"
+        },
+        {
+          "id": "learning_reading_lowest_girls__pasec",
+          "label": "Learning Reading Lowest Girls - PASEC"
+        },
+        {
+          "id": "learning_math_highest_girls__pasec",
+          "label": "Learning Math highest Girls - PASEC"
+        },
+        {
+          "id": "learning_math_lowest_total__tims",
+          "label": "Learning Math Lowest Total - TIMS"
+        },
+        {
+          "id": "learning_math_lowest_girls__pasec",
+          "label": "Learning Math Lowest Girls - PASEC"
+        },
+        {
+          "id": "aid_disbursed_for_total_education_current_prices_",
+          "label": "AID disbursed for total Education- Current prices (USD millions)"
+        },
+        {
+          "id": "learning_math_highest_total__sacmeq",
+          "label": "Learning Math highest Total - SACMEQ"
+        },
+        {
+          "id": "learning_math_lowest_girls__tims",
+          "label": "Learning Math Lowest Girls - TIMS"
+        },
+        {
+          "id": "primary_gross_enrollment_ratio_female_",
+          "label": "Primary Gross Enrollment Ratio Female (%)"
+        },
+        {
+          "id": "primary_gross_enrollment_ratio_male_",
+          "label": "Primary Gross Enrollment Ratio Male (%)"
+        },
+        {
+          "id": "primary_out_of_school_children_rate_total_",
+          "label": "Primary Out of School Children Rate Total (%)"
+        },
+        {
+          "id": "gpe_annual_funding_disbursements",
+          "label": "GPE Annual Funding Disbursements"
+        },
+        {
+          "id": "learning_math_lowest_total__pasec",
+          "label": "Learning Math Lowest Total - PASEC"
+        },
+        {
+          "id": "aid_disbursed_for_basic_education_as__of_gdp",
+          "label": "AID disbursed for Basic Education as % of GDP"
+        },
+        {
+          "id": "public_expenditure_on_education_as__of_gdp",
+          "label": "Public expenditure on education as % of GDP"
+        },
+        {
+          "id": "gpe_funding_disbursement__as__of_gdp",
+          "label": "GPE Funding Disbursement  as % of GDP"
+        },
+        {
+          "id": "educational_expenditure_in_primary_as__of_total_educational_expenditure",
+          "label": "Educational expenditure in primary as % of total educational expenditure"
+        },
+        {
+          "id": "learning_reading_highest_boys__pasec",
+          "label": "Learning Reading highest Boys - PASEC"
+        },
+        {
+          "id": "pupil_teacher_ratio_lower_secondary_education",
+          "label": "Pupil Teacher Ratio, Lower Secondary Education"
+        },
+        {
+          "id": "percentage_of_teacher_trained_lower_secondary__education",
+          "label": "Percentage of teacher trained, Lower Secondary  Education"
+        },
+        {
+          "id": "learning_math_highest_boys__tims",
+          "label": "Learning Math highest Boys - TIMS"
+        },
+        {
+          "id": "primary_out_of_school_children_rate_female_",
+          "label": "Primary Out of School Children Rate Female (%)"
+        },
+        {
+          "id": "percentage_of_teacher_trained_primary_education",
+          "label": "Percentage of teacher trained, Primary Education"
+        },
+        {
+          "id": "learning_reading_highest_total__pasec",
+          "label": "Learning Reading highest Total - PASEC"
+        },
+        {
+          "id": "jsr_report_available",
+          "label": "JSR report available"
+        },
+        {
+          "id": "learning_math_lowest_boys__pasec",
+          "label": "Learning Math Lowest Boys - PASEC"
+        },
+        {
+          "id": "percentage_of_repeaters_in_primary_total_",
+          "label": "Percentage of repeaters in primary Total (%)"
+        },
+        {
+          "id": "_of_missing_data_outcome_indicators_",
+          "label": "% of missing data outcome indicators (%)"
+        },
+        {
+          "id": "aid_disbursed_for_total_education_as__of_gdp",
+          "label": "AID disbursed for total Education as % of GDP"
+        },
+        {
+          "id": "primary_completion_rate_male_",
+          "label": "Primary Completion Rate Male (%)"
+        },
+        {
+          "id": "lower_secondary_completion_rate_total_",
+          "label": "Lower Secondary Completion Rate Total (%)"
+        },
+        {
+          "id": "learning_math_lowest_boys__sacmeq",
+          "label": "Learning Math Lowest Boys - SACMEQ"
+        },
+        {
+          "id": "learning_reading_lowest_boys__sacmeq",
+          "label": "Learning Reading Lowest Boys - SACMEQ"
+        },
+        {
+          "id": "learning_math_lowest_boys__tims",
+          "label": "Learning Math Lowest Boys - TIMS"
+        },
+        {
+          "id": "primary_gross_enrollment_ratio_gpi",
+          "label": "Primary Gross Enrollment Ratio GPI"
+        },
+        {
+          "id": "equivalent_children_supported_in_basic_education",
+          "label": "Equivalent Children Supported in basic education"
+        },
+        {
+          "id": "learning_reading_lowest_total__sacmeq",
+          "label": "Learning Reading Lowest Total - SACMEQ"
+        },
+        {
+          "id": "primary_completion_rate_gpi",
+          "label": "Primary Completion Rate GPI"
+        },
+        {
+          "id": "learning_reading_highest_girls__pasec",
+          "label": "Learning Reading highest Girls - PASEC"
+        },
+        {
+          "id": "learning_math_lowest_total__sacmeq",
+          "label": "Learning Math Lowest Total - SACMEQ"
+        },
+        {
+          "id": "aid_committed_for_total_education_as__of_gdp",
+          "label": "AID committed for total Education as % of GDP"
+        },
+        {
+          "id": "learning_math_highest_total__pasec",
+          "label": "Learning Math highest Total - PASEC"
+        },
+        {
+          "id": "_of_missing_data_service_delivery_",
+          "label": "% of missing data, service delivery (%)"
+        },
+        {
+          "id": "youth__total",
+          "label": "Youth (15-24) literacy rate (%) Total"
+        },
+        {
+          "id": "youth__female",
+          "label": "Youth (15-24) literacy rate (%) female"
+        },
+        {
+          "id": "lower_secondary_completion_rate_female_",
+          "label": "Lower Secondary Completion Rate Female (%)"
+        },
+        {
+          "id": "learning_reading_highest_total__sacmeq",
+          "label": "Learning Reading highest Total - SACMEQ"
+        },
+        {
+          "id": "aid_committed_for_total_education_current_prices_",
+          "label": "AID committed for total Education- Current prices (USD millions)"
+        },
+        {
+          "id": "gpe_annual_funding_approvals",
+          "label": "GPE Annual Funding Approvals"
+        },
+        {
+          "id": "_of_missing_data_domestic_financing_",
+          "label": "% of missing data, domestic financing (%)"
+        },
+        {
+          "id": "public_expenditure_on_education_as__of_public_expenditure",
+          "label": "Public Expenditure on Education as % of Public Expenditure"
+        },
+        {
+          "id": "learning_math_highest_girls__sacmeq",
+          "label": "Learning Math highest Girls - SACMEQ"
+        },
+        {
+          "id": "gpe_funding_approval_as__of_gdp",
+          "label": "GPE Funding Approval as % of GDP"
+        }
+      ]
+    }
   }
 }
