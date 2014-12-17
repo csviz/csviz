@@ -41,9 +41,10 @@ var BarchartEnvelope = React.createClass({
     var tooltip = this.props.tooltip || false
     if (data.length === 0) return
 
+
     // need some hack here for the last step of the line
     var _data = data.slice()
-    _data.push(_data[_data.length - 1])
+    if (data.length > 1) _data.push(_data[_data.length - 1])
 
     var xScale = d3.scale.linear()
       .domain([0, _data.length])

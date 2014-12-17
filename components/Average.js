@@ -102,12 +102,19 @@ var Average = React.createClass({
         }.bind(this))
 
         if (global.meta.indicators[selected_indicator].avg) {
+          var hasInvalidValue = false
           average = numeral(global.meta.indicators[selected_indicator].avg.years[selected_year]).format('0.000')
+
           var dataSeries = _.map(global.meta.indicators[selected_indicator].avg.years, function(value) {
-            return value.toFixed(2)
+            if (!value) {
+              hasInvalidValue = true
+              console.warn(selected_indicator + ' has invalid data')
+            } else {
+              return value.toFixed(2)
+            }
           })
 
-          Chart = <BarchartEnvelope data={dataSeries} width={80} height={20}/>
+          if (!hasInvalidValue) Chart = <BarchartEnvelope data={dataSeries} width={80} height={20}/>
         }
 
       // indicator without years
