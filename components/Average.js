@@ -6,6 +6,7 @@ var numeral = require('numeral')
 var Router = require('react-router')
 var objectAssign = require('object-assign')
 var BarchartEnvelope = require('./BarchartEnvelope')
+var Scatterplot = require('./Scatterplot')
 
 var MapActionCreators = require('../actions/MapActionCreators')
 var Store = require('../stores/Store')
@@ -70,7 +71,8 @@ var Average = React.createClass({
               countryChart = 'incomplete data'
             } else {
               countryChart = <BarchartEnvelope data={countryData} width={80} height={20} />
-              countryChartBody = <BarchartEnvelope onBarchartClick={onBarchartClick} data={countryData} hoverEffect={true} width={300} height={80} selectedIndex={selectedIndex} />
+              // countryChartBody = <BarchartEnvelope onBarchartClick={onBarchartClick} data={countryData} hoverEffect={true} width={300} height={80} selectedIndex={selectedIndex} />
+              countryChartBody = <Scatterplot data={countryData} />
             }
 
             hasData = true

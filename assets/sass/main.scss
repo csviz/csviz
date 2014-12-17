@@ -165,7 +165,7 @@ textarea{resize:none}
     position:fixed;
       max-width:600px;
             width:80%;
-      
+
       margin-left:-300px;
       @include tablet{
       margin-left:-40%;
@@ -227,7 +227,7 @@ textarea{resize:none}
       margin-left: $gutter;
     }
     .detail {
-      padding: $gutter*2 $gutter;
+      padding: $gutter / 2;
       background: #fff;
       display: none;
       &.show {
