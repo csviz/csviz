@@ -37,7 +37,7 @@ var Average = React.createClass({
     MapActionCreators.changeSelectedCountry(countryName)
   },
 
-  onBarchartClick(d, i) {
+  onCircleClick(d, i) {
     var selected_indicator = Store.getSelectedIndicator()
     var selectedYear = this.props.data.global.meta.indicators[selected_indicator].years[i]
     MapActionCreators.changeSelectedYear(selectedYear)
@@ -50,7 +50,7 @@ var Average = React.createClass({
     var selected_indicator = Store.getSelectedIndicator()
     var selected_year = Store.getSelectedYear()
     var selected_country = Store.getSelectedCountry()
-    var onBarchartClick = this.onBarchartClick
+    var onCircleClick = this.onCircleClick
 
     if (!_.isEmpty(selected_indicator) && !_.isEmpty(global)) {
       var indicators = global.data.locations
@@ -72,7 +72,7 @@ var Average = React.createClass({
             } else {
               countryChart = <BarchartEnvelope data={countryData} width={80} height={20} />
               // countryChartBody = <BarchartEnvelope onBarchartClick={onBarchartClick} data={countryData} hoverEffect={true} width={300} height={80} selectedIndex={selectedIndex} />
-              countryChartBody = <Scatterplot data={countryData} />
+              countryChartBody = <Scatterplot data={countryData} selectedIndex={selectedIndex} onCircleClick={onCircleClick} />
             }
 
             hasData = true

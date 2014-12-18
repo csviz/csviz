@@ -34,6 +34,8 @@ var Scatterplot = React.createClass({
     var width = this.props.width
     var height = this.props.height
     var data = this.props.data.slice()
+    var selectedIndex = this.props.selectedIndex
+    var onCircleClick = this.props.onCircleClick || (function() {})
 
     var xScale = d3.scale.linear()
       .domain([0, data.length])
@@ -61,16 +63,31 @@ var Scatterplot = React.createClass({
         return rScale(d)
       })
       .attr('fill', '#23D0EC')
-      .style('opacity', .3)
-      .on('mouseover', function() {
-        d3.select(this)
-          .style('opacity', .8)
+      .style('cursor', 'pointer')
+      .style('opacity', function(d, i) {
+        if (selectedIndex === i) {
+          return .9
+        } else {
+          return .3
+        }
       })
-      .on('mouseout', function() {
+      .on('mouseover', function(d) {
+        d3.select(this)
+          .attr('r', function(d) {
+            return rScale(d) + 2
+          })
+      })
+      .on('mouseout', function(d) {
         d3.select(this)
           .transition()
           .delay(250)
-          .style('opacity', .3)
+          .attr('r', function(d) {
+            return rScale(d)
+          })
+      })
+      .on('click', function(d, i) {
+        d3.select(this).style('opacity', .8)
+        onCircleClick(d, i)
       })
 
     svg.selectAll('text')
@@ -78,7 +95,7 @@ var Scatterplot = React.createClass({
       .enter()
       .append('text')
       .text(function(d) {
-        return numeral(d).format('0.000')
+        return numeral(d).format('0.00')
       })
       .style('pointer-events', 'none')
       .attr('font-size', 10)
