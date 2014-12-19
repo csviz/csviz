@@ -3,6 +3,10 @@
 var React = require('react')
 var d3 = require('d3')
 var numeral = require('numeral')
+var MapUtils = require('../utils/MapUtils')
+var _ = require('lodash')
+
+var Store = require('../stores/Store')
 
 var Scatterplot = React.createClass({
   getDefaultProps: function() {
@@ -62,7 +66,16 @@ var Scatterplot = React.createClass({
       .attr('r', function(d) {
         return rScale(d)
       })
-      .attr('fill', '#23D0EC')
+      .attr('fill', function(d, i) {
+        var data = Store.getAll()
+        var selected_indicator = Store.getSelectedIndicator()
+        if (_.isEmpty(data) || _.isEmpty(selected_indicator)) return
+
+        var configs = data.configs
+        var meta = data.global.meta
+
+        return MapUtils.getNumberColor(d, configs, meta, selected_indicator)
+      })
       .style('cursor', 'pointer')
       .style('opacity', function(d, i) {
         if (selectedIndex === i) {
