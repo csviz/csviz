@@ -14,7 +14,7 @@ var MapControls = React.createClass({
   render() {
     return (
       <aside id='sidebar'>
-      <div className='sidebarPanel'>
+      <div className='sidebar-panel'>
         <ControlHeader data={this.props.data} />
         <IndicatorSelector data={this.props.data} />
         <SocialPanel data={this.props.data} />

@@ -14,9 +14,14 @@ var ControlHeader = React.createClass({
     }
 
     return (
-      <header className='header'>
+      <header className='header tablet-nav'>
         <h1>{site.name}</h1>
         <span>{site.description}</span>
+        <h2>DataHub</h2>
+        <ul>
+        <li><a><img src="assets/images/icon-texture.png" width="18"/></a></li>
+        <li><a><img src="assets/images/icon-search.png" width="18"/></a></li>
+        </ul>
       </header>
     )
   }
