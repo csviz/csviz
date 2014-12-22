@@ -43,6 +43,7 @@ var Map = React.createClass({
 
   handleCountryChange() {
     var selected_country = Store.getSelectedCountry()
+
     if (selected_country && this.state.map && this.state.countryLayer) {
       this.state.countryLayer.eachLayer(function(layer) {
         if(MapUtils.getCountryNameId(layer.feature.properties['ISO_NAME']) === selected_country) {
@@ -103,7 +104,7 @@ var Map = React.createClass({
           weight: 0.5,
           opacity: 0.8,
           color: 'white',
-          fillOpacity: 0.8,
+          fillOpacity: 0.65,
           fillColor: color
         }
       } else {
@@ -112,7 +113,7 @@ var Map = React.createClass({
           weight: 0.5,
           opacity: 0.8,
           color: 'white',
-          fillOpacity: 0.3
+          fillColor: '#eeeeee'
         }
       }
 
@@ -164,9 +165,9 @@ var Map = React.createClass({
     this.setState({legend: legend})
 
     // add country choropleth
-    var countryLayer = L.geoJson(data.geo.filter((shape) =>
-      MapUtils.getCountryNameId(shape.properties['ISO_NAME']) in indicators
-    ), {
+    var countryLayer = L.geoJson(data.geo.filter(function (shape) {
+      return MapUtils.getCountryNameId(shape.properties['ISO_NAME']) in indicators
+    }), {
       style: getStyle,
       onEachFeature: onEachFeature
     }).setZIndex(1).addTo(map)
