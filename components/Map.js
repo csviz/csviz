@@ -52,7 +52,6 @@ var Map = React.createClass({
           var selected_indicator = Store.getSelectedIndicator()
           var selected_year = Store.getSelectedYear()
 
-          this.state.map.fitBounds(layer.getBounds())
           MapUtils.centerOnCountry(layer, this.state.map)
           MapUtils.addTooltip(this.state.map, layer, popup, indicators, selected_indicator, configs, selected_year)
         }
@@ -174,9 +173,6 @@ var Map = React.createClass({
 
     var labelLayer = L.mapbox.tileLayer(mapbox_config.label).addTo(map)
     labelLayer.setZIndex(2)
-    // if (!L.Browser.ie && !L.Browser.opera) labelLayer.bringToFront()
-    // map.addLayer(mapbox.layer().id(mapbox_config.label))
-    // map.addLayer(mapbox.layer().id(mapbox_config.label))
 
     this.setState({countryLayer: countryLayer})
   },
@@ -190,11 +186,11 @@ var Map = React.createClass({
   render() {
     return (
       <section id='main'>
-        <div id='map'></div>    
+        <div id='map'></div>
         <Timeline data={this.props.data} />
         <SearchBar data={this.props.data} />
       </section>
-      
+
     )
   }
 

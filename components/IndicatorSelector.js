@@ -4,6 +4,7 @@ var _ = require('lodash')
 var React = require('react')
 var Router = require('react-router')
 var objectAssign = require('object-assign')
+var MapUtils = require('../utils/MapUtils')
 
 var MapActionCreators = require('../actions/MapActionCreators')
 var Store = require('../stores/Store')
@@ -40,16 +41,34 @@ var IndicatorSelector = React.createClass({
     if (data.configs && data.configs.indicators && selected_indicator) {
 
       var menuData = data.configs.ui.menu
-      var menu = Object.keys(menuData).map(function(groupName) {
-        var menuItem = menuData[groupName].map(function(menuItemData, menuIndex) {
-          return (<option key={menuIndex} value={menuItemData.id}>{menuItemData.label}</option>)
-        })
-        return (
-          <optgroup key={groupName} label={groupName}>
-            {menuItem}
-          </optgroup>
-        )
+      var menu = menuData.map(function(menuItem, menuIndex) {
+        if (_.isString(menuItem)) {
+          var value = MapUtils.getCountryNameId(menuItem)
+          return (<option key={menuIndex} value={value}>{menuItem}</option>)
+        } else if (_.isObject(menuItem)) {
+          var groupName = Object.keys(menuItem)[0]
+          var options = menuItem[groupName].map(function(optionsItem, index) {
+            var value = MapUtils.getCountryNameId(optionsItem)
+            return (<option key={index} value={optionsItem}>{optionsItem}</option>)
+          })
+          return (
+            <optgroup key={groupName} label={groupName}>
+              {options}
+            </optgroup>
+          )
+        }
       })
+
+      // var menu = Object.keys(menuData).map(function(groupName) {
+      //   var menuItem = menuData[groupName].map(function(menuItemData, menuIndex) {
+      //     return (<option key={menuIndex} value={menuItemData.id}>{menuItemData.label}</option>)
+      //   })
+      //   return (
+      //     <optgroup key={groupName} label={groupName}>
+      //       {menuItem}
+      //     </optgroup>
+      //   )
+      // })
 
       // var indicators = data.configs.indicators
       // var MenuItems = Object.keys(indicators)
