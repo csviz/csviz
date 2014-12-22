@@ -1,6 +1,6 @@
 {
   "name": "CSViz",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple geo data viz for CSV files",
   "main": "main.js",
   "scripts": {
