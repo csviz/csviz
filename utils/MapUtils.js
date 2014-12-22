@@ -19,6 +19,9 @@ var MapUtils = {
   getNumberColor(value, configs, meta, selected_indicator) {
     var min = meta.indicators[selected_indicator].min_value
     var max = meta.indicators[selected_indicator].max_value
+
+    // TODO: read color from individual indicator config
+
     var colors = configs.ui.choropleth
     var steps = configs.ui.choropleth.length
     var step = (max - min)/steps
@@ -72,26 +75,17 @@ var MapUtils = {
    * Normalize country name
    */
   getCountryNameId(name) {
-    var ALLOWED_CHARS = '0123456789abcdefghijklmnopqrstuvwxyz_'
-
-    return name
-      .toLowerCase()
-      .trim()
-      .replace(' ', '_')
-      .split('')
-      .filter(function(char) {
-        if (_.contains(ALLOWED_CHARS, char)) {
-          return char
-        }
-      })
-      .join('')
+    return name.toLowerCase().replace(/ /g, '_').replace(/[^0-9a-z_]/g, '')
   },
 
   /**
    * Center the given country on the map
    */
   centerOnCountry(layer, map) {
-    map.fitBounds(layer.getBounds())
+    setTimeout(function() {
+      map.fitBounds(layer.getBounds(), {maxZoom: 5})
+    }, 0)
+
     // layer.setStyle({ color: 'black' })
   },
 
@@ -99,7 +93,8 @@ var MapUtils = {
    * Get Legend Html with the selected Indicator
    */
   getLegendHTML(configs, global, selected_indicator) {
-    // if (!global.meta.indicators[selected_indicator].min_value || !global.meta.indicators[selected_indicator].max_value) return
+
+    if (_.isNull(global.meta.indicators[selected_indicator].min_value) || _.isNull(global.meta.indicators[selected_indicator].max_value)) return
 
     var labels = [], from, to, color
     var min = global.meta.indicators[selected_indicator].min_value.toFixed()
