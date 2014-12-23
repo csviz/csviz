@@ -83,8 +83,7 @@ var Timeline = React.createClass({
     var TimelineBox, timeline, playButton
     var selected_indicator = Store.getSelectedIndicator()
     var selected_year = Store.getSelectedYear()
-
-    if (this.props.data.global && selected_indicator && selected_year && this.props.data.configs.indicators[selected_indicator].years.length) {
+    if (this.props.data.global && selected_indicator && selected_year && this.props.data.configs.indicators[selected_indicator].years.length > 1) {
       timeline = this.props.data.global.meta.indicators[selected_indicator].years.map(function(year) {
         return <li key={year} value={year} className={ (year == selected_year) ? 'active' : null } onClick={this.handleYearClick}>{year}</li>
       }, this)
