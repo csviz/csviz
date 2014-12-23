@@ -15,23 +15,7 @@ var TOGGLE_SEARCH_EVNET = 'toggle search'
 
 // init data
 var _data = {}
-var _selected_year, _selected_indicator, _selected_country
-var _showSearch = false
-
-function setStatusOnresize() {
-  console.log('on resize')
-  if (window.innerWidth > 768) {
-    console.log(' gt 768', true)
-    _showSearch = true
-  } else {
-    _showSearch = false
-  }  
-}
-
-// init 
-setStatusOnresize()
-// on resize
-window.onresize = setStatusOnresize
+var _selected_year, _selected_indicator, _selected_country, _showSearch = false
 
 // init store
 var Store = objectAssign({}, EventEmitter.prototype, {

@@ -20,7 +20,7 @@ var ControlHeader = React.createClass({
   handleStoreChange() {
     this.setState({})
   },
-  
+
   _showDialog() {
     this.refs.legendDialog.show();
   },
@@ -46,14 +46,11 @@ var ControlHeader = React.createClass({
       <header className='header tablet-nav'>
         <h1>{site.name}</h1>
         <span>{site.description}</span>
-        <h2>DataHub</h2>
+        <h2>{site.name}</h2>
         <ul>
-        <li><a onClick={this._showDialog}><img src="assets/images/icon-texture.png" width="18"/></a></li>
-        <li><a onClick={this._toogleSearch}><img src="assets/images/icon-search.png" width="18"/></a></li>
+          { /** <li><a onClick={this._showDialog}><img src="assets/images/icon-texture.png" width="18"/></a></li> **/ }
+          <li><a onClick={this._toogleSearch}><img src="assets/images/icon-search.png" width="18"/></a></li>
         </ul>
-         <Dialog className='legend-dialog-box' ref='legendDialog' title='legend' actions={dialogActions}>
-          11111111
-        </Dialog>
       </header>
       </div>
     )

@@ -17,26 +17,19 @@ var Timeline = React.createClass({
     if (window.innerWidth > 768) {
       MapActionCreators.changeSearchStatus(true)
     } else {
-      console.log('lt 768')
       MapActionCreators.changeSearchStatus(false)
-    }  
+    }
   },
 
   componentWillMount() {
-    // init 
     this.setStatusOnresize()
-    // on resize
     window.onresize = this.setStatusOnresize
   },
 
   componentDidMount() {
     Store.addCountryChangeListener(this.handleStoreChange)
-    Store.addSearchChangeListener(this.handleSearchStatusChange)
+    Store.addSearchChangeListener(this.handleStoreChange)
 
-    this.setState({})
-  },
-
-  handleSearchStatusChange() {
     this.setState({})
   },
 
