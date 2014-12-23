@@ -71,7 +71,6 @@ var Average = React.createClass({
               countryChart = 'incomplete data'
             } else {
               countryChart = <BarchartEnvelope data={countryData} width={80} height={20} />
-              // countryChartBody = <BarchartEnvelope onBarchartClick={onBarchartClick} data={countryData} hoverEffect={true} width={300} height={80} selectedIndex={selectedIndex} />
               countryChartBody = <Scatterplot data={countryData} selectedIndex={selectedIndex} onCircleClick={onCircleClick} />
             }
 
