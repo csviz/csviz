@@ -35,7 +35,7 @@
             "2012": 1.2277510241
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 205.124947,
             "2009": 189.7593042,
@@ -53,7 +53,7 @@
             "2012": 1.8233532285
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 355.382564,
             "2009": 289.3612244,
@@ -71,7 +71,7 @@
             "2012": 1.0772134335
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 141.3094629,
             "2009": 158.0711166,
@@ -89,7 +89,7 @@
             "2012": 1.7271452447
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 240.7472758,
             "2009": 278.1373492,
@@ -382,19 +382,19 @@
             "2012": null
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 30.11322,
             "2007-2012": 32.11322
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 59.87907,
             "2007-2012": 61.87907
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 44.99005,
             "2007-2012": 46.99005
@@ -435,7 +435,7 @@
             "2012": 0.0175136805
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 8.4699235,
             "2009": 4.9491125,
@@ -453,7 +453,7 @@
             "2012": 0.4701428032
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 84.138949,
             "2009": 68.122266,
@@ -471,7 +471,7 @@
             "2012": 0.0687696606
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 4.6222725,
             "2009": 6.3721003,
@@ -489,7 +489,7 @@
             "2012": 0.5925593131
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 67.195109,
             "2009": 72.4797826,
@@ -736,19 +736,19 @@
             "2012": 19.48298
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 99.49808,
             "2007-2012": 98.85624
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 99.36846,
             "2007-2012": 98.73136
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 99.43515,
             "2007-2012": 98.79119
@@ -789,7 +789,7 @@
             "2012": 0.5849935056
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 40.9378036,
             "2009": 35.1942577,
@@ -807,7 +807,7 @@
             "2012": 1.1186545988
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 80.6850322,
             "2009": 106.1555094,
@@ -825,7 +825,7 @@
             "2012": 0.4093245658
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 39.9282898,
             "2009": 33.89047,
@@ -843,7 +843,7 @@
             "2012": 0.8900276114
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 74.1736456,
             "2009": 76.380366,
@@ -1136,19 +1136,19 @@
             "2012": 44.14979
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 33.238,
             "2007-2012": 30.78655
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 59.20508,
             "2007-2012": 54.86694
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 45.30962,
             "2007-2012": 42.3627
@@ -1189,7 +1189,7 @@
             "2012": 0.03564753
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 13.376716,
             "2009": 0.6816505,
@@ -1207,7 +1207,7 @@
             "2012": 0.1542353186
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 18.125999,
             "2009": 5.625311,
@@ -1225,7 +1225,7 @@
             "2012": 0.0503264728
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 14.4008114,
             "2009": 3.7833373,
@@ -1243,7 +1243,7 @@
             "2012": 0.2179550693
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 24.0848258,
             "2009": 16.7050566,
@@ -1490,19 +1490,19 @@
             "2012": 23.9859
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 67.96426,
             "2007-2012": 67.96426
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 80.04192,
             "2007-2012": 80.04192
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 74.40521,
             "2007-2012": 74.40521
@@ -1543,7 +1543,7 @@
             "2012": 0.6910115395
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 108.2516407,
             "2009": 75.2295798,
@@ -1561,7 +1561,7 @@
             "2012": 1.0660265314
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 193.4746374,
             "2009": 155.9555776,
@@ -1579,7 +1579,7 @@
             "2012": 0.6885591736
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 101.1243047,
             "2009": 101.7177406,
@@ -1597,7 +1597,7 @@
             "2012": 1.133998485
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 150.6616754,
             "2009": 179.9162422,
@@ -1890,19 +1890,19 @@
             "2012": 48.23903
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 24.81137,
             "2007-2012": 33.12532
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 38.38109,
             "2007-2012": 46.73374
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 31.22926,
             "2007-2012": 39.25778
@@ -1943,7 +1943,7 @@
             "2012": 0.8807351659
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 50.763986,
             "2009": 13.4939049,
@@ -1961,7 +1961,7 @@
             "2012": 2.0335929045
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 90.551559,
             "2009": 36.0792858,
@@ -1979,7 +1979,7 @@
             "2012": 0.6283549474
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 21.406269,
             "2009": 21.2457948,
@@ -1997,7 +1997,7 @@
             "2012": 1.2899824272
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 48.188947,
             "2009": 44.6229016,
@@ -2350,19 +2350,19 @@
             "2012": 47.10468
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 70.3653,
             "2007-2012": 88.11345
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 76.78002,
             "2007-2012": 89.59275
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 73.33006,
             "2007-2012": 88.88637
@@ -2403,7 +2403,7 @@
             "2012": 0.0755894744
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 10.0949489,
             "2009": 12.145894,
@@ -2421,7 +2421,7 @@
             "2012": 0.2716761935
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 33.4213668,
             "2009": 32.418432,
@@ -2439,7 +2439,7 @@
             "2012": 0.1923953499
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 20.7684225,
             "2009": 19.338038,
@@ -2457,7 +2457,7 @@
             "2012": 0.5083377461
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 41.544127,
             "2009": 44.094854,
@@ -2750,19 +2750,19 @@
             "2012": 45.72134
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 78.896,
             "2007-2012": 85.86868
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 87.92011,
             "2007-2012": 88.35612
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 83.38286,
             "2007-2012": 87.13246
@@ -2803,7 +2803,7 @@
             "2012": 0.0270667532
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 20.0970925,
             "2009": 26.4902025,
@@ -2821,7 +2821,7 @@
             "2012": 0.415296466
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 166.929101,
             "2009": 140.33837,
@@ -2839,7 +2839,7 @@
             "2012": 0.0323258841
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 28.9176024,
             "2009": 22.4184805,
@@ -2857,7 +2857,7 @@
             "2012": 0.4416879328
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 144.9667418,
             "2009": 130.473067,
@@ -3150,19 +3150,19 @@
             "2012": 45.56349
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 77.96249,
             "2007-2012": 76.42093
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 88.42245,
             "2007-2012": 85.39748
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 83.09829,
             "2007-2012": 80.57444
@@ -3203,7 +3203,7 @@
             "2012": 0.5295254834
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 6.2545165,
             "2009": 14.628865,
@@ -3221,7 +3221,7 @@
             "2012": 0.9197025322
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 16.510725,
             "2009": 33.472258,
@@ -3239,7 +3239,7 @@
             "2012": 0.2500364871
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 3.8035828,
             "2009": 8.9819052,
@@ -3257,7 +3257,7 @@
             "2012": 0.6664133057
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 12.0197656,
             "2009": 20.8814804,
@@ -3550,19 +3550,19 @@
             "2012": 80.11576
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 49.01935,
             "2007-2012": 26.97133
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 72.59475,
             "2007-2012": 48.8571
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 60.80705,
             "2007-2012": 36.35627
@@ -3603,7 +3603,7 @@
             "2012": 0.0456269496
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 14.6506095,
             "2009": 3.339078,
@@ -3621,7 +3621,7 @@
             "2012": 0.1844130155
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 23.584851,
             "2009": 10.276607,
@@ -3639,7 +3639,7 @@
             "2012": 0.0836686705
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 9.197339,
             "2009": 10.823,
@@ -3657,7 +3657,7 @@
             "2012": 0.136219155
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 17.105415,
             "2009": 19.616058,
@@ -4010,19 +4010,19 @@
             "2012": 61.26763
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 23.2354,
             "2007-2012": 43.99729
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 55.6862,
             "2007-2012": 53.79584
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 37.55735,
             "2007-2012": 48.92033
@@ -4063,7 +4063,7 @@
             "2012": 0.7981330872
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 1.3518955,
             "2009": 2.8516531,
@@ -4081,7 +4081,7 @@
             "2012": 3.2329020805
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 8.906899,
             "2009": 21.2216472,
@@ -4099,7 +4099,7 @@
             "2012": 0.2185350168
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 4.6105868,
             "2009": 3.0964756,
@@ -4117,7 +4117,7 @@
             "2012": 2.131610302
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 15.8230196,
             "2009": 12.4491722,
@@ -4470,26 +4470,26 @@
             "2012": null
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 77.55762,
             "2007-2012": 86.51807
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 83.95133,
             "2007-2012": 86.31325
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 80.18576,
             "2007-2012": 86.41433
           }
         }
       },
-      "congo_": {
+      "congo_drc": {
         "jsr_report_available": {
           "years": {
             "2010": null,
@@ -4603,7 +4603,7 @@
             "2012": 0.1479873662
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 3.149167,
             "2009": 37.2013612,
@@ -4621,7 +4621,7 @@
             "2012": 0.3729426309
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 21.280192,
             "2009": 89.7836134,
@@ -4639,7 +4639,7 @@
             "2012": 0.1462385623
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 6.1953515,
             "2009": 40.9679445,
@@ -4657,7 +4657,7 @@
             "2012": 0.3799046887
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 29.033658,
             "2009": 99.258112,
@@ -4950,19 +4950,19 @@
             "2012": 41.71605
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 52.12517,
             "2007-2012": 62.74958
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 70.84072,
             "2007-2012": 72.29478
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 60.72365,
             "2007-2012": 67.52731
@@ -5003,7 +5003,7 @@
             "2012": 0.2315183278
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 45.8051365,
             "2009": 104.1993118,
@@ -5021,7 +5021,7 @@
             "2012": 0.5772335247
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 71.62927,
             "2009": 191.6798006,
@@ -5039,7 +5039,7 @@
             "2012": 0.4032151939
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 48.021044,
             "2009": 100.9992141,
@@ -5057,7 +5057,7 @@
             "2012": 0.6708593842
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 83.456396,
             "2009": 185.0409302,
@@ -5394,19 +5394,19 @@
             "2012": 34.74758
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 63.0907,
             "2007-2012": 53.25022
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 77.98111,
             "2007-2012": 78.93642
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 70.41626,
             "2007-2012": 65.77653
@@ -5447,7 +5447,7 @@
             "2012": 1.3067629911
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 8.5977797,
             "2009": 6.397285,
@@ -5465,7 +5465,7 @@
             "2012": 2.3827954062
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 21.5484434,
             "2009": 16.064367,
@@ -5483,7 +5483,7 @@
             "2012": 1.0199591876
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 12.704231,
             "2009": 10.3851122,
@@ -5501,7 +5501,7 @@
             "2012": 1.9869880945
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 28.582786,
             "2009": 22.0726034,
@@ -5794,19 +5794,19 @@
             "2012": 34.93245
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": null,
             "2007-2012": null
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": null,
             "2007-2012": null
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": null,
             "2007-2012": null
@@ -5847,7 +5847,7 @@
             "2012": 0.1721156856
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 6.947413,
             "2009": 0.579098,
@@ -5865,7 +5865,7 @@
             "2012": 0.4089149094
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 8.153952,
             "2009": 1.813697,
@@ -5883,7 +5883,7 @@
             "2012": 0.2773528299
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 9.409622,
             "2009": 10.040644,
@@ -5901,7 +5901,7 @@
             "2012": 0.8911475097
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 15.594375,
             "2009": 20.519206,
@@ -6194,19 +6194,19 @@
             "2012": 40.9313
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 69.4834,
             "2007-2012": 88.68132
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 86.25322,
             "2007-2012": 93.186
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 77.94529,
             "2007-2012": 90.95256
@@ -6247,7 +6247,7 @@
             "2012": 0.6254315629
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 99.6341805,
             "2009": 226.48303,
@@ -6265,7 +6265,7 @@
             "2012": 1.024210548
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 180.540064,
             "2009": 432.777721,
@@ -6283,7 +6283,7 @@
             "2012": 0.3294676522
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 77.1818674,
             "2009": 183.188666,
@@ -6301,7 +6301,7 @@
             "2012": 0.6350109935
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 147.5587518,
             "2009": 356.707989,
@@ -6594,19 +6594,19 @@
             "2012": 53.74934
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 38.5,
             "2007-2012": 47.04113
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 62.2,
             "2007-2012": 62.97093
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 49.9,
             "2007-2012": 54.98298
@@ -6647,7 +6647,7 @@
             "2012": 1.5535537775
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 1.905324,
             "2009": 3.2041895,
@@ -6665,7 +6665,7 @@
             "2012": 1.832255022
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 4.80356,
             "2009": 6.823968,
@@ -6683,7 +6683,7 @@
             "2012": 0.5963387445
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 8.0072965,
             "2009": 5.0644095,
@@ -6701,7 +6701,7 @@
             "2012": 1.0640512775
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 12.445665,
             "2009": 9.004356,
@@ -6978,19 +6978,19 @@
             "2012": 33.86525
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 41.39434,
             "2007-2012": 65.54938
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 64.34049,
             "2007-2012": 73.41031
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 52.55502,
             "2007-2012": 69.43474
@@ -7049,7 +7049,7 @@
             "2012": 0.0768683418
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 29.397865,
             "2009": 19.2740976,
@@ -7067,7 +7067,7 @@
             "2012": 0.2570794378
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 85.273333,
             "2009": 86.8127572,
@@ -7085,7 +7085,7 @@
             "2012": 0.0868048421
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 31.456759,
             "2009": 8.8996055,
@@ -7103,7 +7103,7 @@
             "2012": 0.2840261908
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 92.420035,
             "2009": 42.7163,
@@ -7380,19 +7380,19 @@
             "2012": 6.25983
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 99.86236,
             "2007-2012": 99.85287
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 99.78848,
             "2007-2012": 99.74878
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 99.82542,
             "2007-2012": 99.80049
@@ -7433,7 +7433,7 @@
             "2012": 0.1656482436
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 112.498131,
             "2009": 64.5428657,
@@ -7451,7 +7451,7 @@
             "2012": 0.6042424968
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 192.094914,
             "2009": 121.2690234,
@@ -7469,7 +7469,7 @@
             "2012": 0.2088137876
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 72.2667763,
             "2009": 89.8568955,
@@ -7487,7 +7487,7 @@
             "2012": 0.4244895586
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 128.0845826,
             "2009": 172.148475,
@@ -7810,19 +7810,19 @@
             "2012": 32.98357
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 65.48871,
             "2007-2012": 83.23453
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 75.9459,
             "2007-2012": 88.31075
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 70.66306,
             "2007-2012": 85.71615
@@ -7863,7 +7863,7 @@
             "2012": 0.4395056907
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 59.079803,
             "2009": 3.8481895,
@@ -7881,7 +7881,7 @@
             "2012": 1.0560771307
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 93.774092,
             "2009": 30.761638,
@@ -7899,7 +7899,7 @@
             "2012": 0.3064665536
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 23.9679452,
             "2009": 10.0642042,
@@ -7917,7 +7917,7 @@
             "2012": 1.0018726847
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 53.0240524,
             "2009": 39.2075564,
@@ -8210,19 +8210,19 @@
             "2012": 43.55555
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 34.06904,
             "2007-2012": 21.79673
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 59.46237,
             "2007-2012": 37.56715
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 47.09126,
             "2007-2012": 31.40642
@@ -8263,7 +8263,7 @@
             "2012": 1.8853704131
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 14.2080685,
             "2009": 11.0538799,
@@ -8281,7 +8281,7 @@
             "2012": 2.3031292831
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 24.405201,
             "2009": 24.6033048,
@@ -8299,7 +8299,7 @@
             "2012": 0.4867894168
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 10.8725817,
             "2009": 7.5351893,
@@ -8317,7 +8317,7 @@
             "2012": 0.9644389793
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 18.2446584,
             "2009": 16.2666956,
@@ -8610,19 +8610,19 @@
             "2012": null
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 45.90365,
             "2007-2012": 68.86572
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 74.80124,
             "2007-2012": 79.69294
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 59.49285,
             "2007-2012": 74.27579
@@ -8663,7 +8663,7 @@
             "2012": 0.0377726308
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 0.097401,
             "2009": 0.53529,
@@ -8681,7 +8681,7 @@
             "2012": 0.0472787836
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 0.499993,
             "2009": 1.275439,
@@ -8699,7 +8699,7 @@
             "2012": 0.0700413366
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 8.559176,
             "2009": 3.9408312,
@@ -8717,7 +8717,7 @@
             "2012": 0.1110671146
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 9.983759,
             "2009": 7.9143734,
@@ -9010,19 +9010,19 @@
             "2012": null
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 90.67022,
             "2007-2012": 93.67022
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 89.42121,
             "2007-2012": 92.42121
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 90.09894,
             "2007-2012": 93.09894
@@ -9063,7 +9063,7 @@
             "2012": 0.9979109719
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 41.9217653,
             "2009": 60.665859,
@@ -9081,7 +9081,7 @@
             "2012": 1.253363756
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 75.1786536,
             "2009": 103.516102,
@@ -9099,7 +9099,7 @@
             "2012": 0.6796373728
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 33.8388982,
             "2009": 59.968466,
@@ -9117,7 +9117,7 @@
             "2012": 1.1865200253
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 62.0449244,
             "2009": 96.011665,
@@ -9410,19 +9410,19 @@
             "2012": null
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 80.68945,
             "2007-2012": 70.48078
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 82.65737,
             "2007-2012": 74.36741
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 81.61633,
             "2007-2012": 72.34672
@@ -9463,7 +9463,7 @@
             "2012": 0.2118369973
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 37.0959856,
             "2009": 27.645311,
@@ -9481,7 +9481,7 @@
             "2012": 0.2568402486
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 72.1338052,
             "2009": 34.516994,
@@ -9499,7 +9499,7 @@
             "2012": 0.1902624757
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 34.0277105,
             "2009": 22.5533885,
@@ -9517,7 +9517,7 @@
             "2012": 0.2415630108
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 57.684604,
             "2009": 41.070153,
@@ -9764,19 +9764,19 @@
             "2012": null
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 90.91032,
             "2007-2012": 95.98721
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 86.89099,
             "2007-2012": 94.00283
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 88.94272,
             "2007-2012": 94.98095
@@ -9817,7 +9817,7 @@
             "2012": 0.2413433521
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 40.5639495,
             "2009": 46.651823,
@@ -9835,7 +9835,7 @@
             "2012": 0.5114596088
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 70.561371,
             "2009": 130.754618,
@@ -9853,7 +9853,7 @@
             "2012": 0.174898507
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 67.829159,
             "2009": 73.9342839,
@@ -9871,7 +9871,7 @@
             "2012": 0.3612762091
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 111.215432,
             "2009": 143.0545308,
@@ -10224,19 +10224,19 @@
             "2012": null
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 91.94255,
             "2007-2012": 81.63257
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 93.30952,
             "2007-2012": 83.20542
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 92.52818,
             "2007-2012": 82.39047
@@ -10295,7 +10295,7 @@
             "2012": 0.3421028735
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 7.545234,
             "2009": 6.0070295,
@@ -10313,7 +10313,7 @@
             "2012": 0.934736212
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 29.715475,
             "2009": 29.328847,
@@ -10331,7 +10331,7 @@
             "2012": 0.1922976054
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 11.041454,
             "2009": 8.6903147,
@@ -10349,7 +10349,7 @@
             "2012": 0.566470879
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 27.717464,
             "2009": 27.5912924,
@@ -10626,19 +10626,19 @@
             "2012": 23.89988
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 99.74129,
             "2007-2012": 99.79959
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 99.65078,
             "2007-2012": 99.70463
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 99.69563,
             "2007-2012": 99.75185
@@ -10697,7 +10697,7 @@
             "2012": 0.4802448588
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 11.0625464,
             "2009": 10.1256352,
@@ -10715,7 +10715,7 @@
             "2012": 0.7987629048
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 37.6082738,
             "2009": 29.9247784,
@@ -10733,7 +10733,7 @@
             "2012": 0.3001405954
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 16.1191034,
             "2009": 21.0993692,
@@ -10751,7 +10751,7 @@
             "2012": 0.692553691
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 38.7098208,
             "2009": 48.1671204,
@@ -11028,19 +11028,19 @@
             "2012": 27.12631
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 73.56058,
             "2007-2012": 78.73984
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 88.06197,
             "2007-2012": 89.18749
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 80.59856,
             "2007-2012": 83.93106
@@ -11081,7 +11081,7 @@
             "2012": 0.2262168427
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 7.3714753,
             "2009": 9.8179935,
@@ -11099,7 +11099,7 @@
             "2012": 0.3944310037
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 20.7755936,
             "2009": 12.268087,
@@ -11117,7 +11117,7 @@
             "2012": 0.3040317716
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 5.7436382,
             "2009": 11.830971,
@@ -11135,7 +11135,7 @@
             "2012": 0.5718602926
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 15.6551774,
             "2009": 15.101166,
@@ -11488,19 +11488,19 @@
             "2012": 34.07946
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 97.49609,
             "2007-2012": 92.09389
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 84.82558,
             "2007-2012": 74.18503
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 90.9269,
             "2007-2012": 83.19441
@@ -11541,7 +11541,7 @@
             "2012": 2.0807681776
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 61.4288355,
             "2009": 31.7955662,
@@ -11559,7 +11559,7 @@
             "2012": 2.590070669
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 97.696918,
             "2009": 45.7761394,
@@ -11577,7 +11577,7 @@
             "2012": 1.8492255652
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 48.7860862,
             "2009": 21.8657325,
@@ -11595,7 +11595,7 @@
             "2012": 2.3650642215
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 85.2743924,
             "2009": 26.941286,
@@ -11888,19 +11888,19 @@
             "2012": null
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 35.03327,
             "2007-2012": 37.17031
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 63.0036,
             "2007-2012": 63.45102
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 49.15212,
             "2007-2012": 49.07411
@@ -11941,7 +11941,7 @@
             "2012": 0.3376227785
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 50.0844981,
             "2009": 15.760329,
@@ -11959,7 +11959,7 @@
             "2012": 1.0242114362
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 111.8146612,
             "2009": 43.458966,
@@ -11977,7 +11977,7 @@
             "2012": 0.1657856529
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 49.0370511,
             "2009": 24.8641579,
@@ -11995,7 +11995,7 @@
             "2012": 0.4277710487
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 102.1604352,
             "2009": 52.6588338,
@@ -12288,19 +12288,19 @@
             "2012": 43.06725
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 68.18623,
             "2007-2012": 63.96708
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 72.65446,
             "2007-2012": 65.91478
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 70.23622,
             "2007-2012": 64.94025
@@ -12341,7 +12341,7 @@
             "2012": 1.3116135841
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 41.1545263,
             "2009": 38.0066186,
@@ -12359,7 +12359,7 @@
             "2012": 3.3982898419
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 76.2161306,
             "2009": 66.5740822,
@@ -12377,7 +12377,7 @@
             "2012": 1.9144403402
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 61.5758274,
             "2009": 49.6826445,
@@ -12395,7 +12395,7 @@
             "2012": 3.0780356876
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 100.7367188,
             "2009": 74.511167,
@@ -12748,19 +12748,19 @@
             "2012": 74.08589
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 65.98174,
             "2007-2012": 69.98174
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 70.26925,
             "2007-2012": 74.26925
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 68.13956,
             "2007-2012": 72.13956
@@ -12801,7 +12801,7 @@
             "2012": 0.3992495513
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 63.3518675,
             "2009": 102.118576,
@@ -12819,7 +12819,7 @@
             "2012": 0.653964671
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 121.952835,
             "2009": 155.282834,
@@ -12837,7 +12837,7 @@
             "2012": 0.3829727881
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 130.9987675,
             "2009": 106.3114697,
@@ -12855,7 +12855,7 @@
             "2012": 0.6698054656
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 192.43181,
             "2009": 163.3438874,
@@ -13148,19 +13148,19 @@
             "2012": null
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 23.91412,
             "2007-2012": 39.00856
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 36.97091,
             "2007-2012": 56.31502
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 30.54688,
             "2007-2012": 47.13698
@@ -13201,7 +13201,7 @@
             "2012": 0.2844900965
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 2.728031,
             "2009": 2.886674,
@@ -13219,7 +13219,7 @@
             "2012": 0.8047281493
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 14.826996,
             "2009": 16.999134,
@@ -13237,7 +13237,7 @@
             "2012": 0.1369010155
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 16.2843855,
             "2009": 10.3858795,
@@ -13255,7 +13255,7 @@
             "2012": 0.7112177964
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 35.627502,
             "2009": 28.686,
@@ -13548,19 +13548,19 @@
             "2012": 40.12932
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 55.48371,
             "2007-2012": 66.18019
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 67.73265,
             "2007-2012": 71.63848
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 61.33665,
             "2007-2012": 68.95474
@@ -13619,7 +13619,7 @@
             "2012": 0.1095574274
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 3.241686,
             "2009": 21.363132,
@@ -13637,7 +13637,7 @@
             "2012": 0.3644992962
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 46.108933,
             "2009": 62.056784,
@@ -13655,7 +13655,7 @@
             "2012": 0.2606583291
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 13.395643,
             "2009": 5.3926595,
@@ -13673,7 +13673,7 @@
             "2012": 0.7766768746
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 33.755614,
             "2009": 27.878354,
@@ -13981,19 +13981,19 @@
             "2012": 28.77793
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 98.43194,
             "2007-2012": 98.90874
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 96.99861,
             "2007-2012": 98.02181
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 97.71012,
             "2007-2012": 98.46025
@@ -14034,7 +14034,7 @@
             "2012": 0.4941715326
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 117.7148339,
             "2009": 167.7898827,
@@ -14052,7 +14052,7 @@
             "2012": 1.0095237518
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 250.3153248,
             "2009": 314.1691624,
@@ -14070,7 +14070,7 @@
             "2012": 0.7393865326
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 154.6441001,
             "2009": 180.3653862,
@@ -14088,7 +14088,7 @@
             "2012": 1.514605907
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 271.8899682,
             "2009": 296.0327454,
@@ -14441,19 +14441,19 @@
             "2012": 54.84224
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 50.03891,
             "2007-2012": 56.54005
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 74.36055,
             "2007-2012": 79.84044
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 61.89289,
             "2007-2012": 67.14964
@@ -14494,7 +14494,7 @@
             "2012": 1.0017843839
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 22.6179245,
             "2009": 203.556906,
@@ -14512,7 +14512,7 @@
             "2012": 1.7401767328
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 44.600547,
             "2009": 345.913105,
@@ -14530,7 +14530,7 @@
             "2012": 0.3827244778
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 67.554957,
             "2009": 130.3036585,
@@ -14548,7 +14548,7 @@
             "2012": 0.8257232514
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 92.123687,
             "2009": 171.827014,
@@ -14841,19 +14841,19 @@
             "2012": 27.5331
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 60.14379,
             "2007-2012": 77.46866
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 80.61597,
             "2007-2012": 89.23629
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 70.05362,
             "2007-2012": 82.35369
@@ -14894,7 +14894,7 @@
             "2012": 0.6394276937
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 21.3975575,
             "2009": 14.777548,
@@ -14912,7 +14912,7 @@
             "2012": 0.8647812107
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 59.892537,
             "2009": 31.204261,
@@ -14930,7 +14930,7 @@
             "2012": 0.1666423901
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 42.8168565,
             "2009": 42.449224,
@@ -14948,7 +14948,7 @@
             "2012": 0.2604568152
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 73.37651,
             "2009": 81.896862,
@@ -15241,19 +15241,19 @@
             "2012": null
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 88.81788,
             "2007-2012": 88.84248
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 83.63,
             "2007-2012": 85.15562
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 86.22252,
             "2007-2012": 87.00925
@@ -15294,7 +15294,7 @@
             "2012": 0.4265952228
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 36.1360849,
             "2009": 17.6274339,
@@ -15312,7 +15312,7 @@
             "2012": 0.9552689856
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 62.8023518,
             "2009": 35.8002288,
@@ -15330,7 +15330,7 @@
             "2012": 0.4418584289
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 39.9233835,
             "2009": 25.9658115,
@@ -15348,7 +15348,7 @@
             "2012": 0.8235716106
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 61.036987,
             "2009": 43.34446,
@@ -15641,19 +15641,19 @@
             "2012": 38.75524
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 14.23355,
             "2007-2012": 15.05777
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 26.23006,
             "2007-2012": 34.53362
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 19.79119,
             "2007-2012": 23.52378
@@ -15694,7 +15694,7 @@
             "2012": 0.0162142846
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 18.4260775,
             "2009": 37.3178725,
@@ -15712,7 +15712,7 @@
             "2012": 0.0436391894
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 34.498519,
             "2009": 138.972194,
@@ -15730,7 +15730,7 @@
             "2012": 0.0184372997
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 37.0776597,
             "2009": 43.0047135,
@@ -15748,7 +15748,7 @@
             "2012": 0.0545377771
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 101.4846154,
             "2009": 132.704366,
@@ -15995,19 +15995,19 @@
             "2012": null
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 60.50937,
             "2007-2012": 57.95389
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 78.12795,
             "2007-2012": 75.56594
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 68.99378,
             "2007-2012": 66.38354
@@ -16048,7 +16048,7 @@
             "2012": 0.2056867679
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 148.8773785,
             "2009": 611.9005368,
@@ -16066,7 +16066,7 @@
             "2012": 0.2523905909
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 253.833578,
             "2009": 1288.3868146,
@@ -16084,7 +16084,7 @@
             "2012": 0.0916640795
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 88.3674016,
             "2009": 288.832432,
@@ -16102,7 +16102,7 @@
             "2012": 0.1865332832
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 128.0380252,
             "2009": 563.733301,
@@ -16333,29 +16333,29 @@
             "2012": 41.35274
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 53.08856,
             "2007-2012": 63.13681
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 76.65172,
             "2007-2012": 78.04242
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 65.08658,
             "2007-2012": 70.76933
           }
         }
       },
-      "pakistan_": {
+      "pakistan__baluchistan": {
         "jsr_report_available": {
           "years": {
-            "2010": 1,
+            "2010": null,
             "2011": null,
             "2012": null,
             "2013": null
@@ -16363,17 +16363,17 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": 1,
+            "2010": null,
             "2011": null,
             "2012": null,
             "2013": null
           }
         }
       },
-      "pakistan__": {
+      "pakistan_sindh": {
         "jsr_report_available": {
           "years": {
-            "2010": null,
+            "2010": 1,
             "2011": null,
             "2012": null,
             "2013": null
@@ -16381,7 +16381,7 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": null,
+            "2010": 1,
             "2011": null,
             "2012": null,
             "2013": null
@@ -16422,7 +16422,7 @@
             "2012": 0.2896125149
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 23.329743,
             "2009": 38.101861,
@@ -16440,7 +16440,7 @@
             "2012": 0.6234914365
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 42.614282,
             "2009": 47.679664,
@@ -16458,7 +16458,7 @@
             "2012": 0.3009653628
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 22.713348,
             "2009": 41.7279414,
@@ -16476,7 +16476,7 @@
             "2012": 0.6787616493
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 39.84126,
             "2009": 57.7393038,
@@ -16769,19 +16769,19 @@
             "2012": null
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 64.05813,
             "2007-2012": 75.81795
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 69.13374,
             "2007-2012": 66.82729
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 66.67899,
             "2007-2012": 71.19374
@@ -16822,7 +16822,7 @@
             "2012": 0.0862826255
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 5.446202,
             "2009": 0.3983295,
@@ -16840,7 +16840,7 @@
             "2012": 0.4429159956
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 24.37135,
             "2009": 14.507526,
@@ -16858,7 +16858,7 @@
             "2012": 0.1423859501
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 10.7283986,
             "2009": 0.6508115,
@@ -16876,7 +16876,7 @@
             "2012": 0.4743214865
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 34.8913752,
             "2009": 16.883857,
@@ -17153,19 +17153,19 @@
             "2012": 15.7877
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 99.65157,
             "2007-2012": 100
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 99.40321,
             "2007-2012": 100
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 99.52508,
             "2007-2012": 100
@@ -17206,7 +17206,7 @@
             "2012": 0.2751232451
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 39.0674322,
             "2009": 52.084405,
@@ -17224,7 +17224,7 @@
             "2012": 0.6009027059
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 89.3399974,
             "2009": 120.917657,
@@ -17242,7 +17242,7 @@
             "2012": 0.410114011
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 71.3843347,
             "2009": 61.2520484,
@@ -17260,7 +17260,7 @@
             "2012": 1.0212883627
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 112.7770144,
             "2009": 115.5325328,
@@ -17553,19 +17553,19 @@
             "2012": 59.27851
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 76.86258,
             "2007-2012": 77.97246
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 78.52217,
             "2007-2012": 76.65858
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 77.62033,
             "2007-2012": 77.34463
@@ -17606,7 +17606,7 @@
             "2012": 0.160093346
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 0.294805,
             "2009": 1.650647,
@@ -17624,7 +17624,7 @@
             "2012": 2.5671520913
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 6.911713,
             "2009": 8.949723,
@@ -17642,7 +17642,7 @@
             "2012": 0.5814036122
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 1.3353465,
             "2009": 1.799451,
@@ -17660,7 +17660,7 @@
             "2012": 3.1524988593
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 8.015944,
             "2009": 8.785009,
@@ -17953,19 +17953,19 @@
             "2012": 28.65004
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 94.85257,
             "2007-2012": 77.33728
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 95.97399,
             "2007-2012": 83.05633
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 95.41546,
             "2007-2012": 80.20316
@@ -18006,7 +18006,7 @@
             "2012": 0.5536445327
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 101.5717091,
             "2009": 56.8763308,
@@ -18024,7 +18024,7 @@
             "2012": 1.3979598225
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 259.3910502,
             "2009": 158.7874766,
@@ -18042,7 +18042,7 @@
             "2012": 0.5378789952
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 67.875598,
             "2009": 62.9389916,
@@ -18060,7 +18060,7 @@
             "2012": 1.5882043687
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 176.52471,
             "2009": 178.6886502,
@@ -18353,19 +18353,19 @@
             "2012": 31.68179
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 40.96837,
             "2007-2012": 58.99902
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 58.48508,
             "2007-2012": 73.96651
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 49.12449,
             "2007-2012": 66.03274
@@ -18406,7 +18406,7 @@
             "2012": 0.5247559989
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 19.1321044,
             "2009": 22.9254835,
@@ -18424,7 +18424,7 @@
             "2012": 0.9892515862
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 36.4623028,
             "2009": 34.796138,
@@ -18442,7 +18442,7 @@
             "2012": 0.4063806334
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 23.8236996,
             "2009": 24.6936968,
@@ -18460,7 +18460,7 @@
             "2012": 0.7731588651
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 39.0194122,
             "2009": 35.7849786,
@@ -18753,19 +18753,19 @@
             "2012": 32.99373
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 37.35752,
             "2007-2012": 53.82065
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 59.61425,
             "2007-2012": 71.63672
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 47.92761,
             "2007-2012": 62.71661
@@ -18806,7 +18806,7 @@
             "2012": null
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 37.5251995,
             "2009": 15.4375765,
@@ -18824,7 +18824,7 @@
             "2012": null
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 61.025578,
             "2009": 17.331148,
@@ -18842,7 +18842,7 @@
             "2012": null
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 16.5933245,
             "2009": 23.2343155,
@@ -18860,7 +18860,7 @@
             "2012": null
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 18.580997,
             "2009": 26.843276,
@@ -19137,19 +19137,19 @@
             "2012": null
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": null,
             "2007-2012": null
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": null,
             "2007-2012": null
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": null,
             "2007-2012": null
@@ -19244,7 +19244,7 @@
             "2012": 0.5817917515
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 0,
             "2009": 0,
@@ -19262,7 +19262,7 @@
             "2012": 0.7470612916
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 0,
             "2009": 0,
@@ -19280,7 +19280,7 @@
             "2012": 0.440392089
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 0,
             "2009": 0,
@@ -19298,7 +19298,7 @@
             "2012": 0.6471614677
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 0,
             "2009": 0,
@@ -19591,19 +19591,19 @@
             "2012": null
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": null,
             "2007-2012": null
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": null,
             "2007-2012": null
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": null,
             "2007-2012": null
@@ -19644,7 +19644,7 @@
             "2012": 0.0108259714
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 46.0275005,
             "2009": 57.45946,
@@ -19662,7 +19662,7 @@
             "2012": 0.0353478042
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 76.725708,
             "2009": 89.861561,
@@ -19680,7 +19680,7 @@
             "2012": 0.0157787564
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 43.3041476,
             "2009": 51.2737502,
@@ -19698,7 +19698,7 @@
             "2012": 0.0457584153
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 63.3083892,
             "2009": 86.2445184,
@@ -19991,19 +19991,19 @@
             "2012": null
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 72.33138,
             "2007-2012": 85.45938
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 85.69496,
             "2007-2012": 90.31431
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 78.15559,
             "2007-2012": 87.91188
@@ -20044,7 +20044,7 @@
             "2012": 0.0752208838
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 2.1364815,
             "2009": 28.6377985,
@@ -20062,7 +20062,7 @@
             "2012": 0.5569325211
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 9.540684,
             "2009": 37.319537,
@@ -20080,7 +20080,7 @@
             "2012": 0.2220243678
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 9.09116,
             "2009": 16.9766,
@@ -20098,7 +20098,7 @@
             "2012": 0.3918176765
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 14.306429,
             "2009": 28.075906,
@@ -20391,19 +20391,19 @@
             "2012": 23.00472
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 99.84972,
             "2007-2012": 99.88239
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 99.84443,
             "2007-2012": 99.85813
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 99.84706,
             "2007-2012": 99.87011
@@ -20568,7 +20568,7 @@
             "2012": 0.1283125238
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 9.987003,
             "2009": 8.5537368,
@@ -20586,7 +20586,7 @@
             "2012": 0.5940777619
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 21.869108,
             "2009": 23.6547696,
@@ -20604,7 +20604,7 @@
             "2012": 0.1901235635
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 15.2828576,
             "2009": 15.743795,
@@ -20622,7 +20622,7 @@
             "2012": 0.5511522063
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 28.5728242,
             "2009": 33.010361,
@@ -20907,19 +20907,19 @@
             "2012": null
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 74.56844,
             "2007-2012": 78.56844
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 76.48976,
             "2007-2012": 80.48976
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 75.52868,
             "2007-2012": 79.52868
@@ -20960,7 +20960,7 @@
             "2012": 0.1411631954
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 21.7216805,
             "2009": 9.065692,
@@ -20978,7 +20978,7 @@
             "2012": 0.6863950393
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 40.574542,
             "2009": 29.124838,
@@ -20996,7 +20996,7 @@
             "2012": 0.1041409508
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 10.1268481,
             "2009": 11.2788733,
@@ -21014,7 +21014,7 @@
             "2012": 0.4092916972
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 30.3844902,
             "2009": 30.5795466,
@@ -21367,19 +21367,19 @@
             "2012": 41.67781
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 63.55485,
             "2007-2012": 72.70812
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 83.78623,
             "2007-2012": 86.91668
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 74.43957,
             "2007-2012": 79.88591
@@ -21396,7 +21396,7 @@
             "2012": 0.4410863236
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 2338.7400746,
             "2009": 3351.4551185,
@@ -21414,7 +21414,7 @@
             "2012": 0.8952651167
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 5027.0204842,
             "2009": 7238.233475,
@@ -21432,7 +21432,7 @@
             "2012": 0.3603424351
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 2308.9263244,
             "2009": 2876.6044549,
@@ -21450,7 +21450,7 @@
             "2012": 0.796700012
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 4475.9027228,
             "2009": 5794.8439178,
@@ -21482,7 +21482,7 @@
           }
         }
       },
-      "total_": {
+      "total_millions_us_dollars": {
         "gpe_annual_funding_approvals": {
           "years": {
             "2003-2006": 509.51039368,
@@ -21564,7 +21564,7 @@
             "2012": 0.2144587676
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 115.4814299,
             "2009": 130.5650512,
@@ -21582,7 +21582,7 @@
             "2012": 0.2857778798
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 188.9562928,
             "2009": 323.8713644,
@@ -21600,7 +21600,7 @@
             "2012": 0.1742132853
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 79.8411629,
             "2009": 58.1547734,
@@ -21618,7 +21618,7 @@
             "2012": 0.5950664049
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 139.0301908,
             "2009": 128.4075178,
@@ -21971,19 +21971,19 @@
             "2012": null
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 76.1791,
             "2007-2012": 85.47146
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 85.95758,
             "2007-2012": 89.63519
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 80.79116,
             "2007-2012": 87.40883
@@ -22024,7 +22024,7 @@
             "2012": 0.2086283892
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 59.1647632,
             "2009": 268.3722584,
@@ -22042,7 +22042,7 @@
             "2012": 0.4020371374
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 233.0147364,
             "2009": 546.2884138,
@@ -22060,7 +22060,7 @@
             "2012": 0.4273413828
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 81.7808485,
             "2009": 143.2772458,
@@ -22078,7 +22078,7 @@
             "2012": 0.9211162311
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 190.841202,
             "2009": 328.7539306,
@@ -22355,19 +22355,19 @@
             "2012": 45.56776
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 76.20202,
             "2007-2012": 72.771
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 80.91718,
             "2007-2012": 76.49114
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 78.39605,
             "2007-2012": 74.56052
@@ -22408,7 +22408,7 @@
             "2012": 0.0082240947
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 31.9941545,
             "2009": 6.707579,
@@ -22426,7 +22426,7 @@
             "2012": 0.0469026998
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 46.43323,
             "2009": 48.744502,
@@ -22444,7 +22444,7 @@
             "2012": 0.0125103463
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 2.890147,
             "2009": 5.8339715,
@@ -22462,7 +22462,7 @@
             "2012": 0.0925187401
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 27.566776,
             "2009": 30.286287,
@@ -22709,19 +22709,19 @@
             "2012": null
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 99.89448,
             "2007-2012": 99.99349
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 99.85337,
             "2007-2012": 99.89208
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 99.87435,
             "2007-2012": 99.94198
@@ -22762,7 +22762,7 @@
             "2012": 0.0673983381
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 45.6226195,
             "2009": 230.1829607,
@@ -22780,7 +22780,7 @@
             "2012": 0.1661709661
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 273.000187,
             "2009": 690.0887324,
@@ -22798,7 +22798,7 @@
             "2012": 0.0417356567
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 91.7087796,
             "2009": 184.3431953,
@@ -22816,7 +22816,7 @@
             "2012": 0.1626077156
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 275.2360032,
             "2009": 463.5286826,
@@ -23093,19 +23093,19 @@
             "2012": 19.39912
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 94.05552,
             "2007-2012": 96.78113
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 95.58781,
             "2007-2012": 97.39524
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 94.83651,
             "2007-2012": 97.09167
@@ -23164,7 +23164,7 @@
             "2012": 0.1902932888
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 67.068039,
             "2009": 60.108301,
@@ -23182,7 +23182,7 @@
             "2012": 0.3622653967
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 128.921302,
             "2009": 110.386328,
@@ -23200,7 +23200,7 @@
             "2012": 0.1477560866
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 60.8836745,
             "2009": 72.912993,
@@ -23218,7 +23218,7 @@
             "2012": 0.2515916848
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 82.997009,
             "2009": 107.780677,
@@ -23511,19 +23511,19 @@
             "2012": null
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 60.46399,
             "2007-2012": 77.80584
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 92.82117,
             "2007-2012": 96.71224
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 76.9273,
             "2007-2012": 87.41462
@@ -23564,7 +23564,7 @@
             "2012": 0.2018576241
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 118.0957076,
             "2009": 61.2482533,
@@ -23582,7 +23582,7 @@
             "2012": 0.3999443545
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 226.1160592,
             "2009": 116.6581906,
@@ -23600,7 +23600,7 @@
             "2012": 0.1892068679
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 79.3489789,
             "2009": 102.7118122,
@@ -23618,7 +23618,7 @@
             "2012": 0.3209883497
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 141.5378268,
             "2009": 196.8056124,
@@ -23971,19 +23971,19 @@
             "2012": 49.22433
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 66.31098,
             "2007-2012": 58.47755
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 77.72512,
             "2007-2012": 70.30841
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 69.08881,
             "2007-2012": 64.04964
@@ -24024,7 +24024,7 @@
             "2012": 0.5023530555
           }
         },
-        "aid_committed_for_basic_education_current_prices_": {
+        "aid_committed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 1.658894,
             "2009": 21.182567,
@@ -24042,7 +24042,7 @@
             "2012": 0.613497174
           }
         },
-        "aid_committed_for_total_education_current_prices_": {
+        "aid_committed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 5.50516,
             "2009": 31.670956,
@@ -24060,7 +24060,7 @@
             "2012": 0.5325463222
           }
         },
-        "aid_disbursed_for_basic_education_current_prices_": {
+        "aid_disbursed_for_basic_education_current_prices_usd_millions": {
           "years": {
             "2008": 2.419993,
             "2009": 9.6184515,
@@ -24078,7 +24078,7 @@
             "2012": 0.6672596001
           }
         },
-        "aid_disbursed_for_total_education_current_prices_": {
+        "aid_disbursed_for_total_education_current_prices_usd_millions": {
           "years": {
             "2008": 6.567915,
             "2009": 19.94614,
@@ -24431,19 +24431,19 @@
             "2012": null
           }
         },
-        "youth__female": {
+        "youth_1524_literacy_rate__female": {
           "years": {
             "2000-2005": 90.12456,
             "2007-2012": 92.12456
           }
         },
-        "youth__male": {
+        "youth_1524_literacy_rate__male": {
           "years": {
             "2000-2005": 87.59058,
             "2007-2012": 89.59058
           }
         },
-        "youth__total": {
+        "youth_1524_literacy_rate__total": {
           "years": {
             "2000-2005": 88.9307,
             "2007-2012": 90.9307
@@ -24532,7 +24532,7 @@
           "2012"
         ]
       },
-      "aid_committed_for_basic_education_current_prices_": {
+      "aid_committed_for_basic_education_current_prices_usd_millions": {
         "avg": {
           "years": {
             "2008": 77.95800248666667,
@@ -24574,7 +24574,7 @@
           "2012"
         ]
       },
-      "aid_committed_for_total_education_current_prices_": {
+      "aid_committed_for_total_education_current_prices_usd_millions": {
         "avg": {
           "years": {
             "2008": 167.56734947333328,
@@ -24616,7 +24616,7 @@
           "2012"
         ]
       },
-      "aid_disbursed_for_basic_education_current_prices_": {
+      "aid_disbursed_for_basic_education_current_prices_usd_millions": {
         "avg": {
           "years": {
             "2008": 76.96421081333334,
@@ -24658,7 +24658,7 @@
           "2012"
         ]
       },
-      "aid_disbursed_for_total_education_current_prices_": {
+      "aid_disbursed_for_total_education_current_prices_usd_millions": {
         "avg": {
           "years": {
             "2008": 149.1967574266667,
@@ -25730,7 +25730,7 @@
           "2012"
         ]
       },
-      "youth__female": {
+      "youth_1524_literacy_rate__female": {
         "avg": {
           "years": {
             "2000-2005": 63.6159222831,
@@ -25745,7 +25745,7 @@
           "2007-2012"
         ]
       },
-      "youth__male": {
+      "youth_1524_literacy_rate__male": {
         "avg": {
           "years": {
             "2000-2005": 78.1461789881,
@@ -25760,7 +25760,7 @@
           "2007-2012"
         ]
       },
-      "youth__total": {
+      "youth_1524_literacy_rate__total": {
         "avg": {
           "years": {
             "2000-2005": 70.6893386276,
@@ -25823,7 +25823,7 @@
         "ISO": "COM",
         "label": "Comoros"
       },
-      "congo_": {
+      "congo_drc": {
         "ISO": "COD",
         "label": "Congo (DRC)"
       },
@@ -25963,13 +25963,13 @@
         "ISO": "PAK",
         "label": "Pakistan"
       },
-      "pakistan_": {
-        "ISO": "PAK",
-        "label": "Pakistan (Sindh)"
-      },
-      "pakistan__": {
+      "pakistan__baluchistan": {
         "ISO": "PAK",
         "label": "Pakistan  (Baluchistan)"
+      },
+      "pakistan_sindh": {
+        "ISO": "PAK",
+        "label": "Pakistan (Sindh)"
       },
       "papua_new_guinea": {
         "ISO": "PNG",
@@ -26048,10 +26048,10 @@
         "label": "Togo"
       },
       "total": {
-        "ISO": "COL",
+        "ISO": "BOL",
         "label": "Total"
       },
-      "total_": {
+      "total_millions_us_dollars": {
         "ISO": "NF-",
         "label": "Total (millions US dollars)"
       },

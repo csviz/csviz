@@ -75,7 +75,7 @@ var MapUtils = {
    * Normalize country name
    */
   getCountryNameId(name) {
-    return name.toLowerCase().replace(/ /g, '_').replace(/[^0-9a-z_]/g, '')
+    return name.toLowerCase().replace(/ *\([^)]*\) */g, '').replace(/ /g, '_').replace(/[^0-9a-z_]/g, '')
   },
 
   /**
