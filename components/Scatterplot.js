@@ -12,7 +12,7 @@ var Scatterplot = React.createClass({
   getDefaultProps: function() {
     return {
       width: 350,
-      height: 150,
+      height: 100,
       data: [15, 12, 25, 8, 20]
     }
   },
@@ -43,7 +43,7 @@ var Scatterplot = React.createClass({
 
     var xScale = d3.scale.linear()
       .domain([0, data.length])
-      .range([height/2, width - height/2])
+      .range([height/4, width - height/4])
 
     var rScale = d3.scale.linear()
       .domain([d3.min(data), d3.max(data)])
@@ -81,7 +81,7 @@ var Scatterplot = React.createClass({
         if (selectedIndex === i) {
           return .9
         } else {
-          return .3
+          return .6
         }
       })
       .on('mouseover', function(d) {
