@@ -102,6 +102,11 @@ textarea {
             top: $gutter*2.5;
             box-shadow:none;
         }
+        .header-container{
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
         .header {
             background: $background;
             padding: 1.5*$gutter/2 $gutter;
@@ -115,6 +120,14 @@ textarea {
             span {
                 padding-left: $gutter;
             }
+            .header{
+                .legend-dialog-box{
+                    @include desktop{
+
+                    }
+                }
+
+            }
         }
         .tablet-nav {
             border-bottom: 1px solid $line;
@@ -123,7 +136,7 @@ textarea {
                 display: none
             }
             @include tablet {
-                position: fixed;
+                position:fixed;
                 top: 0px;
                 left: 0px;
                 width: 100%;
@@ -264,32 +277,7 @@ textarea {
                     float: none
                 }
             }
-            .share-dialog-box {
-                position: fixed;
-                max-width: 600px;
-                width: 80%;
-                margin-left: -300px;
-                text-align: left;
-                .mui-paper-button {
-                    float: left;
-                    margin-right: 10px;
-                    width: ($sidebar - 3*$gutter)/2+10;
-                }
-                .dialog-actions {
-                    padding-top: 28px;
-                }
-                .dialog-title {
-                    text-align: left;
-                    color: $black;
-                }
-                .dialog-content span {
-                    text-align: left;
-                    color: $lightgrey;
-                }
-                @include tablet {
-                    margin-left: -40%;
-                }
-            }
+
             .download .mui-paper-button-content span:before {
                 content: '\e744';
             }
@@ -297,6 +285,48 @@ textarea {
                 content: '\e61a';
             }
         }
+                    .dialog{
+                position: fixed;
+                max-width: 600px;
+                width: 80%;
+                margin-left: -300px;
+                text-align: left;
+                z-index: $create*50;
+                .mui-paper-button {
+                    float: left;
+                    margin-right: 10px;
+                    width: ($sidebar - 3*$gutter)/2+10;
+                    @include tablet{
+                        float: none;
+                        margin: 0px auto 10px auto;
+                    }
+                }
+                .dialog-actions {
+                    padding: $gutter+8 $gutter 16px $gutter;
+                    @include tablet{
+                        padding-top:0px;
+                    }
+                }
+                .dialog-title {
+                    text-align: left;
+                    color: $black;
+                }
+                .share-dialog-links{
+                        @include tablet {
+                            text-align: center
+                        }
+                }
+                .dialog-content span {
+                    text-align: left;
+                    color: $lightgrey;
+                    
+                }
+                @include tablet {
+                    margin-left: -40%;
+                    min-width: 300px;
+                }
+            }
+
         .drilldown {
             background: $light;
             font-size: $larger;

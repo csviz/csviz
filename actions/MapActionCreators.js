@@ -32,6 +32,13 @@ var MapActionCreators = {
       type: ActionTypes.CHANGE_SELECTED_COUNTRY,
       response: country
     })
+  },
+
+  changeSearchStatus(status) {
+    AppDispatcher.handleViewAction({
+      type: ActionTypes.CHANGE_SEARCH_STATUS,
+      response: status
+    })
   }
 }
 

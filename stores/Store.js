@@ -11,10 +11,27 @@ var CHANGE_EVENT = 'change'
 var YEAR_CHANGE_EVENT = 'year change'
 var COUNTRY_CHANGE_EVENT = 'country change'
 var INDICATOR_CHANGE_EVENT = 'indicator change'
+var TOGGLE_SEARCH_EVNET = 'toggle search'
 
 // init data
 var _data = {}
 var _selected_year, _selected_indicator, _selected_country
+var _showSearch = false
+
+function setStatusOnresize() {
+  console.log('on resize')
+  if (window.innerWidth > 768) {
+    console.log(' gt 768', true)
+    _showSearch = true
+  } else {
+    _showSearch = false
+  }  
+}
+
+// init 
+setStatusOnresize()
+// on resize
+window.onresize = setStatusOnresize
 
 // init store
 var Store = objectAssign({}, EventEmitter.prototype, {
@@ -32,6 +49,10 @@ var Store = objectAssign({}, EventEmitter.prototype, {
 
   getSelectedCountry() {
     return _selected_country
+  },
+
+  getSearchStatus() {
+    return _showSearch
   },
 
   addChangeListener(callback) {
@@ -68,6 +89,14 @@ var Store = objectAssign({}, EventEmitter.prototype, {
 
   emitYearChange() {
     this.emit(YEAR_CHANGE_EVENT)
+  },
+
+  addSearchChangeListener(callback) {
+    this.on(TOGGLE_SEARCH_EVNET, callback)
+  },
+
+  emitSearchChange() {
+    this.emit(TOGGLE_SEARCH_EVNET)
   }
 })
 
@@ -81,6 +110,10 @@ function setSelectedYear(year) {
 
 function setSelectedCountry(country) {
   _selected_country = country
+}
+
+function setSearchStatus(status) {
+  _showSearch = status
 }
 
 Store.dispatchToken = AppDispatcher.register(function(payload) {
@@ -116,6 +149,11 @@ Store.dispatchToken = AppDispatcher.register(function(payload) {
     case ActionTypes.CHANGE_SELECTED_YEAR:
       setSelectedYear(response)
       Store.emitYearChange()
+      break
+
+    case ActionTypes.CHANGE_SEARCH_STATUS:
+      setSearchStatus(response)
+      Store.emitSearchChange()
       break
   }
 

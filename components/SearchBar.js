@@ -13,9 +13,30 @@ var Timeline = React.createClass({
 
   displayName: 'SearchBar',
 
+  setStatusOnresize() {
+    if (window.innerWidth > 768) {
+      MapActionCreators.changeSearchStatus(true)
+    } else {
+      console.log('lt 768')
+      MapActionCreators.changeSearchStatus(false)
+    }  
+  },
+
+  componentWillMount() {
+    // init 
+    this.setStatusOnresize()
+    // on resize
+    window.onresize = this.setStatusOnresize
+  },
+
   componentDidMount() {
     Store.addCountryChangeListener(this.handleStoreChange)
+    Store.addSearchChangeListener(this.handleSearchStatusChange)
 
+    this.setState({})
+  },
+
+  handleSearchStatusChange() {
     this.setState({})
   },
 
@@ -31,10 +52,11 @@ var Timeline = React.createClass({
 
   render() {
     var selected_country = Store.getSelectedCountry()
+    var currentSearchStatus = Store.getSearchStatus()
     var SearchBarComponent
     var options = []
 
-    if (this.props.data.global) {
+    if (currentSearchStatus && this.props.data.global) {
 
       options = Object.keys(this.props.data.global.meta.locations).map(function(country) {
         return { value: country, label: this.props.data.global.meta.locations[country].label}
