@@ -1,6 +1,6 @@
 {
   "indicators": {
-    "_of_missing_data_domestic_financing_": {
+    "_of_missing_data_domestic_financing": {
       "description": "% of missing data, domestic financing (%)",
       "display": "{{ currentIndicator }}%",
       "name": "% of missing data, domestic financing (%)",
@@ -15,7 +15,7 @@
         "2011"
       ]
     },
-    "_of_missing_data_outcome_indicators_": {
+    "_of_missing_data_outcome_indicators": {
       "description": "% of missing data outcome indicators (%)",
       "display": "{{ currentIndicator }}%",
       "name": "% of missing data outcome indicators (%)",
@@ -30,7 +30,7 @@
         "2011"
       ]
     },
-    "_of_missing_data_service_delivery_": {
+    "_of_missing_data_service_delivery": {
       "description": "% of missing data, service delivery (%)",
       "display": "{{ currentIndicator }}%",
       "name": "% of missing data, service delivery (%)",
@@ -61,7 +61,7 @@
         "2012"
       ]
     },
-    "aid_committed_for_basic_education_current_prices_usd_millions": {
+    "aid_committed_for_basic_education_current_prices": {
       "description": "AID committed for Basic Education- Current prices (USD millions)",
       "display": "{{ currentIndicator }}%",
       "name": "AID committed for Basic Education- Current prices (USD millions)",
@@ -93,7 +93,7 @@
         "2012"
       ]
     },
-    "aid_committed_for_total_education_current_prices_usd_millions": {
+    "aid_committed_for_total_education_current_prices": {
       "description": "AID committed for total Education- Current prices (USD millions)",
       "display": "{{ currentIndicator }}%",
       "name": "AID committed for total Education- Current prices (USD millions)",
@@ -125,7 +125,7 @@
         "2012"
       ]
     },
-    "aid_disbursed_for_basic_education_current_prices_usd_millions": {
+    "aid_disbursed_for_basic_education_current_prices": {
       "description": "AID disbursed for Basic Education- Current prices (USD millions)",
       "display": "{{ currentIndicator }}%",
       "name": "AID disbursed for Basic Education- Current prices (USD millions)",
@@ -157,7 +157,7 @@
         "2012"
       ]
     },
-    "aid_disbursed_for_total_education_current_prices_usd_millions": {
+    "aid_disbursed_for_total_education_current_prices": {
       "description": "AID disbursed for total Education- Current prices (USD millions)",
       "display": "{{ currentIndicator }}%",
       "name": "AID disbursed for total Education- Current prices (USD millions)",
@@ -666,7 +666,7 @@
         "2007"
       ]
     },
-    "lower_secondary_completion_rate_female_": {
+    "lower_secondary_completion_rate_female": {
       "description": "Lower Secondary Completion Rate Female (%)",
       "display": "{{ currentIndicator }}%",
       "name": "Lower Secondary Completion Rate Female (%)",
@@ -698,7 +698,7 @@
         "2012"
       ]
     },
-    "lower_secondary_completion_rate_male_": {
+    "lower_secondary_completion_rate_male": {
       "description": "Lower Secondary Completion Rate Male (%)",
       "display": "{{ currentIndicator }}%",
       "name": "Lower Secondary Completion Rate Male (%)",
@@ -714,7 +714,7 @@
         "2012"
       ]
     },
-    "lower_secondary_completion_rate_total_": {
+    "lower_secondary_completion_rate_total": {
       "description": "Lower Secondary Completion Rate Total (%)",
       "display": "{{ currentIndicator }}%",
       "name": "Lower Secondary Completion Rate Total (%)",
@@ -730,7 +730,7 @@
         "2012"
       ]
     },
-    "percentage_of_repeaters_in_lower_secondary_total_": {
+    "percentage_of_repeaters_in_lower_secondary_total": {
       "description": "Percentage of repeaters in lower secondary Total (%)",
       "display": "{{ currentIndicator }}%",
       "name": "Percentage of repeaters in lower secondary Total (%)",
@@ -746,7 +746,7 @@
         "2012"
       ]
     },
-    "percentage_of_repeaters_in_primary_total_": {
+    "percentage_of_repeaters_in_primary_total": {
       "description": "Percentage of repeaters in primary Total (%)",
       "display": "{{ currentIndicator }}%",
       "name": "Percentage of repeaters in primary Total (%)",
@@ -794,7 +794,7 @@
         "2012"
       ]
     },
-    "primary_completion_rate_female_": {
+    "primary_completion_rate_female": {
       "description": "Primary Completion Rate Female (%)",
       "display": "{{ currentIndicator }}%",
       "name": "Primary Completion Rate Female (%)",
@@ -826,7 +826,7 @@
         "2012"
       ]
     },
-    "primary_completion_rate_male_": {
+    "primary_completion_rate_male": {
       "description": "Primary Completion Rate Male (%)",
       "display": "{{ currentIndicator }}%",
       "name": "Primary Completion Rate Male (%)",
@@ -842,7 +842,7 @@
         "2012"
       ]
     },
-    "primary_completion_rate_total_": {
+    "primary_completion_rate_total": {
       "description": "Primary Completion Rate Total (%)",
       "display": "{{ currentIndicator }}%",
       "name": "Primary Completion Rate Total (%)",
@@ -858,7 +858,7 @@
         "2012"
       ]
     },
-    "primary_gross_enrollment_ratio_female_": {
+    "primary_gross_enrollment_ratio_female": {
       "description": "Primary Gross Enrollment Ratio Female (%)",
       "display": "{{ currentIndicator }}%",
       "name": "Primary Gross Enrollment Ratio Female (%)",
@@ -890,7 +890,7 @@
         "2012"
       ]
     },
-    "primary_gross_enrollment_ratio_male_": {
+    "primary_gross_enrollment_ratio_male": {
       "description": "Primary Gross Enrollment Ratio Male (%)",
       "display": "{{ currentIndicator }}%",
       "name": "Primary Gross Enrollment Ratio Male (%)",
@@ -906,7 +906,7 @@
         "2012"
       ]
     },
-    "primary_gross_enrollment_ratio_total_": {
+    "primary_gross_enrollment_ratio_total": {
       "description": "Primary Gross Enrollment Ratio Total (%)",
       "display": "{{ currentIndicator }}%",
       "name": "Primary Gross Enrollment Ratio Total (%)",
@@ -922,7 +922,7 @@
         "2012"
       ]
     },
-    "primary_out_of_school_children_rate_female_": {
+    "primary_out_of_school_children_rate_female": {
       "description": "Primary Out of School Children Rate Female (%)",
       "display": "{{ currentIndicator }}%",
       "name": "Primary Out of School Children Rate Female (%)",
@@ -938,7 +938,7 @@
         "2012"
       ]
     },
-    "primary_out_of_school_children_rate_male_": {
+    "primary_out_of_school_children_rate_male": {
       "description": "Primary Out of School Children Rate Male (%)",
       "display": "{{ currentIndicator }}%",
       "name": "Primary Out of School Children Rate Male (%)",
@@ -954,7 +954,7 @@
         "2012"
       ]
     },
-    "primary_out_of_school_children_rate_total_": {
+    "primary_out_of_school_children_rate_total": {
       "description": "Primary Out of School Children Rate Total (%)",
       "display": "{{ currentIndicator }}%",
       "name": "Primary Out of School Children Rate Total (%)",
@@ -1034,7 +1034,7 @@
         "2012"
       ]
     },
-    "youth_1524_literacy_rate__female": {
+    "youth__female": {
       "description": "Youth (15-24) literacy rate (%) female",
       "display": "{{ currentIndicator }}%",
       "name": "Youth (15-24) literacy rate (%) female",
@@ -1047,7 +1047,7 @@
         "2007-2012"
       ]
     },
-    "youth_1524_literacy_rate__male": {
+    "youth__male": {
       "description": "Youth (15-24) literacy rate (%) Male",
       "display": "{{ currentIndicator }}%",
       "name": "Youth (15-24) literacy rate (%) Male",
@@ -1060,7 +1060,7 @@
         "2007-2012"
       ]
     },
-    "youth_1524_literacy_rate__total": {
+    "youth__total": {
       "description": "Youth (15-24) literacy rate (%) Total",
       "display": "{{ currentIndicator }}%",
       "name": "Youth (15-24) literacy rate (%) Total",
@@ -1075,173 +1075,22 @@
     }
   },
   "site": {
-    "description": "csviz",
+    "description": "test strip name",
     "logo": "http://csviz.dev.wiredcraft.com/assets/images/logo.png",
-    "name": "csviz",
-    "repository": "fraserxu/csviz",
-    "url": "https://fraserxu.github.io/csviz"
+    "name": "teststripname",
+    "repository": "fraserxu/teststripname",
+    "url": "https://fraserxu.github.io/teststripname"
   },
   "ui": {
     "choropleth": [
-      "#eeeeee",
-      "#42c6da",
-      "#3cb9ec",
-      "#42a5f5",
-      "#4a80df",
-      "#5c6bc0"
+      "#ccebc5",
+      "#a8ddb5",
+      "#7bccc4",
+      "#43a2ca",
+      "#0868ac"
     ],
     "legend": false,
     "menu": [
-      "Learning Reading Lowest Girls - SACMEQ",
-      "Youth (15-24) literacy rate (%) Male",
-      "Learning Math highest Girls - TIMS",
-      "AID committed for Basic Education- Current prices (USD millions)",
-      "Primary Out of School Children Rate Male (%)",
-      "Learning Reading highest Boys - SACMEQ",
-      "Primary Completion Rate Total (%)",
-      "Lower Secondary Completion Rate GPI",
-      "Percentage of repeaters in lower secondary Total (%)",
-      "Primary Gross Enrollment Ratio Total (%)",
-      "Primary Completion Rate Female (%)",
-      "Learning Reading highest Girls - SACMEQ",
-      "Learning Math highest Total - TIMS",
-      "Learning Math Lowest Girls - SACMEQ",
-      "JSRs conducted",
-      "AID committed for Basic Education as % of GDP",
-      "Learning Math highest Boys - SACMEQ",
-      "Lower Secondary Completion Rate Male (%)",
-      "Learning Reading Lowest Total - PASEC",
-      "Learning Math highest Boys - PASEC",
-      "Learning Reading Lowest Boys - PASEC",
-      "AID disbursed for Basic Education- Current prices (USD millions)",
-      "Pupil Teacher Ratio, Primary Education",
-      "Learning Reading Lowest Girls - PASEC",
-      "Learning Math highest Girls - PASEC",
-      "Learning Math Lowest Total - TIMS",
-      "Learning Math Lowest Girls - PASEC",
-      "AID disbursed for total Education- Current prices (USD millions)",
-      "Learning Math highest Total - SACMEQ",
-      "Learning Math Lowest Girls - TIMS",
-      "Primary Gross Enrollment Ratio Female (%)",
-      "Primary Gross Enrollment Ratio Male (%)",
-      "Primary Out of School Children Rate Total (%)",
-      "GPE Annual Funding Disbursements",
-      "Learning Math Lowest Total - PASEC",
-      "AID disbursed for Basic Education as % of GDP",
-      "Public expenditure on education as % of GDP",
-      "GPE Funding Disbursement  as % of GDP",
-      "Educational expenditure in primary as % of total educational expenditure",
-      "Learning Reading highest Boys - PASEC",
-      "Pupil Teacher Ratio, Lower Secondary Education",
-      "Percentage of teacher trained, Lower Secondary  Education",
-      "Learning Math highest Boys - TIMS",
-      "Primary Out of School Children Rate Female (%)",
-      "Percentage of teacher trained, Primary Education",
-      "Learning Reading highest Total - PASEC",
-      "JSR report available",
-      "Learning Math Lowest Boys - PASEC",
-      "Percentage of repeaters in primary Total (%)",
-      "% of missing data outcome indicators (%)",
-      "AID disbursed for total Education as % of GDP",
-      "Primary Completion Rate Male (%)",
-      "Lower Secondary Completion Rate Total (%)",
-      "Learning Math Lowest Boys - SACMEQ",
-      "Learning Reading Lowest Boys - SACMEQ",
-      "Learning Math Lowest Boys - TIMS",
-      "Primary Gross Enrollment Ratio GPI",
-      "Equivalent Children Supported in basic education",
-      "Learning Reading Lowest Total - SACMEQ",
-      "Primary Completion Rate GPI",
-      "Learning Reading highest Girls - PASEC",
-      "Learning Math Lowest Total - SACMEQ",
-      "AID committed for total Education as % of GDP",
-      "Learning Math highest Total - PASEC",
-      "% of missing data, service delivery (%)",
-      "Youth (15-24) literacy rate (%) Total",
-      "Youth (15-24) literacy rate (%) female",
-      "Lower Secondary Completion Rate Female (%)",
-      "Learning Reading highest Total - SACMEQ",
-      "AID committed for total Education- Current prices (USD millions)",
-      "GPE Annual Funding Approvals",
-      "% of missing data, domestic financing (%)",
-      "Public Expenditure on Education as % of Public Expenditure",
-      "Learning Math highest Girls - SACMEQ",
-      "GPE Funding Approval as % of GDP",
-      "Learning Reading Lowest Girls - SACMEQ",
-      "Youth (15-24) literacy rate (%) Male",
-      "Learning Math highest Girls - TIMS",
-      "AID committed for Basic Education- Current prices (USD millions)",
-      "Primary Out of School Children Rate Male (%)",
-      "Learning Reading highest Boys - SACMEQ",
-      "Primary Completion Rate Total (%)",
-      "Lower Secondary Completion Rate GPI",
-      "Percentage of repeaters in lower secondary Total (%)",
-      "Primary Gross Enrollment Ratio Total (%)",
-      "Primary Completion Rate Female (%)",
-      "Learning Reading highest Girls - SACMEQ",
-      "Learning Math highest Total - TIMS",
-      "Learning Math Lowest Girls - SACMEQ",
-      "JSRs conducted",
-      "AID committed for Basic Education as % of GDP",
-      "Learning Math highest Boys - SACMEQ",
-      "Lower Secondary Completion Rate Male (%)",
-      "Learning Reading Lowest Total - PASEC",
-      "Learning Math highest Boys - PASEC",
-      "Learning Reading Lowest Boys - PASEC",
-      "AID disbursed for Basic Education- Current prices (USD millions)",
-      "Pupil Teacher Ratio, Primary Education",
-      "Learning Reading Lowest Girls - PASEC",
-      "Learning Math highest Girls - PASEC",
-      "Learning Math Lowest Total - TIMS",
-      "Learning Math Lowest Girls - PASEC",
-      "AID disbursed for total Education- Current prices (USD millions)",
-      "Learning Math highest Total - SACMEQ",
-      "Learning Math Lowest Girls - TIMS",
-      "Primary Gross Enrollment Ratio Female (%)",
-      "Primary Gross Enrollment Ratio Male (%)",
-      "Primary Out of School Children Rate Total (%)",
-      "GPE Annual Funding Disbursements",
-      "Learning Math Lowest Total - PASEC",
-      "AID disbursed for Basic Education as % of GDP",
-      "Public expenditure on education as % of GDP",
-      "GPE Funding Disbursement  as % of GDP",
-      "Educational expenditure in primary as % of total educational expenditure",
-      "Learning Reading highest Boys - PASEC",
-      "Pupil Teacher Ratio, Lower Secondary Education",
-      "Percentage of teacher trained, Lower Secondary  Education",
-      "Learning Math highest Boys - TIMS",
-      "Primary Out of School Children Rate Female (%)",
-      "Percentage of teacher trained, Primary Education",
-      "Learning Reading highest Total - PASEC",
-      "JSR report available",
-      "Learning Math Lowest Boys - PASEC",
-      "Percentage of repeaters in primary Total (%)",
-      "% of missing data outcome indicators (%)",
-      "AID disbursed for total Education as % of GDP",
-      "Primary Completion Rate Male (%)",
-      "Lower Secondary Completion Rate Total (%)",
-      "Learning Math Lowest Boys - SACMEQ",
-      "Learning Reading Lowest Boys - SACMEQ",
-      "Learning Math Lowest Boys - TIMS",
-      "Primary Gross Enrollment Ratio GPI",
-      "Equivalent Children Supported in basic education",
-      "Learning Reading Lowest Total - SACMEQ",
-      "Primary Completion Rate GPI",
-      "Learning Reading highest Girls - PASEC",
-      "Learning Math Lowest Total - SACMEQ",
-      "AID committed for total Education as % of GDP",
-      "Learning Math highest Total - PASEC",
-      "% of missing data, service delivery (%)",
-      "Youth (15-24) literacy rate (%) Total",
-      "Youth (15-24) literacy rate (%) female",
-      "Lower Secondary Completion Rate Female (%)",
-      "Learning Reading highest Total - SACMEQ",
-      "AID committed for total Education- Current prices (USD millions)",
-      "GPE Annual Funding Approvals",
-      "% of missing data, domestic financing (%)",
-      "Public Expenditure on Education as % of Public Expenditure",
-      "Learning Math highest Girls - SACMEQ",
-      "GPE Funding Approval as % of GDP",
       "Learning Reading Lowest Girls - SACMEQ",
       "Youth (15-24) literacy rate (%) Male",
       "Learning Math highest Girls - TIMS",
