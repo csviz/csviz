@@ -32,8 +32,16 @@ var SocialPanel = React.createClass({
     };
   },
 
+  getShareContent() {
+    var selected_indicator = Store.getSelectedIndicator() || ''
+    var selected_year = Store.getSelectedYear() || ''
+    return `${selected_indicator} for ${selected_year} via @gpforeducation ${window.location.href}`
+  },
+
   _showDialog() {
-    this.refs.shareDialog.show();
+    var content = this.getShareContent()
+    this.setState({shareContent: content})
+    this.refs.shareDialog.show()
   },
 
   _download() {
