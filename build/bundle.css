@@ -5936,10 +5936,10 @@ textarea {
 #main .leaflet-left .leaflet-control {
   border: 0;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1); }
-  @media (max-width: 768px) {
-    #main .leaflet-left .leaflet-control {
-      position: absolute;
-      top: 328px; } }
+@media (max-width: 768px) {
+  #main .leaflet-control-container .leaflet-top {
+    top: 272px; }
+ }
 #main .search, #main .timeline {
   background: #FFF;
   border-radius: 2px;

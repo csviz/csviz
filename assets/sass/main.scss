@@ -476,10 +476,11 @@ textarea {
         .leaflet-control {
             border: 0;
             box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
-            @include tablet {
-                position: absolute;
-                top: 328px;
-            }
+        }
+    }
+    .leaflet-control-container{
+        @include tablet{
+        .leaflet-top{top:272px}
         }
     }
     .search, .timeline {
