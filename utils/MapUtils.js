@@ -103,6 +103,9 @@ var MapUtils = {
     var steps = configs.ui.choropleth.length
     var step = ((max - min)/steps).toFixed()
 
+    // legend for country with Data not available
+    labels.push('<li><span class="swatch" style="background:#eeeeee"></span>Data not available</li>')
+
     for (var i = 0; i < steps; i++) {
       if (i == 0) {
         from = parseInt(min)
@@ -126,7 +129,7 @@ var MapUtils = {
 
     popup.setLatLng(latlng)
 
-    var value = 'No data'
+    var value = 'Data not available'
     var countryName = MapUtils.getCountryNameId(layer.feature.properties['ISO_NAME'])
 
     if (countryName in indicators && indicators[countryName][selected_indicator] !== undefined) {
@@ -143,7 +146,7 @@ var MapUtils = {
           }
           value = MapUtils.compileTemplate(tooltipTemplate, {currentIndicator: value})
         } else {
-          value = 'No data'
+          value = 'Data not available'
         }
 
       } else {
