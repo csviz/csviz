@@ -173,8 +173,12 @@ var Map = React.createClass({
       onEachFeature: onEachFeature
     }).setZIndex(1).addTo(map)
 
-    var labelLayer = L.mapbox.tileLayer(mapbox_config.label).addTo(map)
-    labelLayer.setZIndex(2)
+    L.control.layers({}, {
+      'Country Label': L.mapbox.tileLayer(mapbox_config.label)
+    }).addTo(map)
+
+    // var labelLayer = L.mapbox.tileLayer(mapbox_config.label).addTo(map)
+    // labelLayer.setZIndex(2)
     // if (!L.Browser.ie && !L.Browser.opera) labelLayer.bringToFront()
     // map.addLayer(mapbox.layer().id(mapbox_config.label))
     // map.addLayer(mapbox.layer().id(mapbox_config.label))
