@@ -5005,7 +5005,7 @@ textarea {
       #sidebar .sidebar-panel .links .mui-paper-button {
         box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
         text-align: center;
-        width: 170px; }
+        width: 165px; }
         @media (max-width: 768px) {
           #sidebar .sidebar-panel .links .mui-paper-button {
             width: 100%;
@@ -5066,7 +5066,10 @@ textarea {
         border: 1px solid #E5E5E5;
         border-width: 1px 0;
         font-weight: bold;
-        padding: 15px 20px; }
+        padding: 15px 20px 15px 0;
+        box-shadow: none; }
+        #sidebar .sidebar-panel .drilldown .header span.chart {
+          padding-left: 0px; }
       #sidebar .sidebar-panel .drilldown .list {
         list-style: none; }
         #sidebar .sidebar-panel .drilldown .list li header {
@@ -5104,7 +5107,7 @@ textarea {
         #sidebar .sidebar-panel .drilldown .detail.show {
           display: block; }
       #sidebar .sidebar-panel .drilldown .empty .value {
-        color: #BBB;
+        color: #5262BC;
         font-size: 11px;
         text-transform: uppercase; }
 
