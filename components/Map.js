@@ -169,17 +169,18 @@ var Map = React.createClass({
     this.setState({legend: legend})
 
     // add country choropleth
-    var countryLayer = L.geoJson(data.geo.filter(function (shape) {
-      return MapUtils.getCountryNameId(shape.properties['ISO_NAME']) in indicators
-    }), {
-      style: getStyle,
-      onEachFeature: onEachFeature
-    })
+    if (!this.state.countryLayer) {
+      var countryLayer = L.geoJson(data.geo.filter(function (shape) {
+        return MapUtils.getCountryNameId(shape.properties['ISO_NAME']) in indicators
+      }), {
+        style: getStyle,
+        onEachFeature: onEachFeature
+      }).addTo(map)
+    }
 
     if (!this.state.controlLayer) {
       var controlLayer = L.control.layers(null, {
-      'Choropleth': countryLayer.addTo(map),
-      'Country Label': L.mapbox.tileLayer(mapbox_config.label)
+        'Country Label': L.mapbox.tileLayer(mapbox_config.label)
       }, {
         position: 'topleft'
       }).addTo(map)
