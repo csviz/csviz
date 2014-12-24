@@ -191,11 +191,11 @@ var Map = React.createClass({
   render() {
     return (
       <section id='main'>
-        <div id='map'></div>    
+        <div id='map'></div>
         <Timeline data={this.props.data} />
         <SearchBar data={this.props.data} />
       </section>
-      
+
     )
   }
 

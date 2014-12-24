@@ -64,15 +64,11 @@ var Average = React.createClass({
           if (indicators[countryName][selected_indicator]) {
             formattedValue = numeral(indicators[countryName][selected_indicator].years[selected_year]).format('0.000')
             countryData = _.map(indicators[countryName][selected_indicator].years, function(value) {
-              return value
+              return value || 0
             })
 
-            if (_.contains(countryData, null)) {
-              countryChart = 'incomplete data'
-            } else {
-              countryChart = <BarchartEnvelope data={countryData} width={80} height={20} />
-              countryChartBody = <Scatterplot data={countryData} selectedIndex={selectedIndex} onCircleClick={onCircleClick} />
-            }
+            countryChart = <BarchartEnvelope data={countryData} width={80} height={20} />
+            countryChartBody = <Scatterplot data={countryData} selectedIndex={selectedIndex} onCircleClick={onCircleClick} />
 
             hasData = true
           } else {

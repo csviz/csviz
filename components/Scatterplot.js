@@ -12,7 +12,7 @@ var Scatterplot = React.createClass({
   getDefaultProps: function() {
     return {
       width: 350,
-      height: 100,
+      height: 150,
       data: [15, 12, 25, 8, 20]
     }
   },
@@ -43,7 +43,7 @@ var Scatterplot = React.createClass({
 
     var xScale = d3.scale.linear()
       .domain([0, data.length])
-      .range([height/4, width - height/4])
+      .range([height/4 + 2, width])
 
     var rScale = d3.scale.linear()
       .domain([d3.min(data), d3.max(data)])
@@ -62,7 +62,7 @@ var Scatterplot = React.createClass({
       .attr('cx', function(d, i) {
         return xScale(i)
       })
-      .attr('cy', height/2)
+      .attr('cy', height/2 - 20)
       .attr('r', function(d) {
         return rScale(d)
       })
@@ -103,21 +103,47 @@ var Scatterplot = React.createClass({
         onCircleClick(d, i)
       })
 
-    svg.selectAll('text')
+    svg.selectAll('year-label')
       .data(data)
       .enter()
       .append('text')
-      .text(function(d) {
-        return numeral(d).format('0.00')
+      .text(function(d, i) {
+        try {
+          var _data = Store.getAll()
+          var selected_indicator = Store.getSelectedIndicator()
+          var meta = _data.global.meta.indicators
+          var indicatorData = meta[selected_indicator]
+        } catch (e) {
+          console.error('get year from meta error', e)
+        }
+        return indicatorData.years[i]
       })
       .style('pointer-events', 'none')
-      .attr('font-size', 10)
-      .attr('fill', 'black')
+      .attr('font-size', 12)
+      .attr('fill', '#5262BC')
       .attr('x', function(d, i) {
         return xScale(i)
       })
       .attr('y', height/2 + 40)
       .attr('text-anchor', 'middle')
+
+    svg.selectAll('values')
+      .data(data)
+      .enter()
+      .append('text')
+      .text(function(d, i) {
+        return numeral(d).format('0.00')
+      })
+      .style('pointer-events', 'none')
+      .attr('font-size', 12)
+      .attr('fill', '#212121')
+      .attr('x', function(d, i) {
+        return xScale(i)
+      })
+      .attr('y', height/2 + 60)
+      .attr('text-anchor', 'middle')
+
+
   }
 })
 

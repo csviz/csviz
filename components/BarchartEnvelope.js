@@ -41,12 +41,8 @@ var BarchartEnvelope = React.createClass({
     var tooltip = this.props.tooltip || false
     if (data.length === 0) return
 
-    // need some hack here for the last step of the line
-    var _data = data.slice()
-    if (data.length > 1) _data.push(_data[_data.length - 1])
-
     var xScale = d3.scale.linear()
-      .domain([0, _data.length])
+      .domain([0, data.length])
       .range([2, width - 2])
 
     var yScale = d3.scale.linear()
@@ -63,25 +59,7 @@ var BarchartEnvelope = React.createClass({
       .attr('height', height)
       .append('g')
 
-    var line = d3.svg.line()
-      .interpolate('step-after')
-      .x(function(d, i) {
-        return xScale(i)
-      })
-      .y(function(d, i) {
-        return yScale(d)
-      })
-
-    svg.append('path')
-      .datum(_data)
-      .attr('class', 'envelope')
-      .style('fill', 'none')
-      .style('stroke', this.props.strokeColor)
-      .style('stroke-width', this.props.strokeWidth)
-      .attr('d', line)
-
-    if (hoverEffect) {
-      svg.selectAll('rect')
+    svg.selectAll('rect')
         .data(data)
         .enter()
         .append('rect')
@@ -93,17 +71,17 @@ var BarchartEnvelope = React.createClass({
         })
         // the width of the rect is actually calculated from the muted array
         .attr('width', function() {
-          return width / _data.length
+          return width / data.length - 2
         })
         .attr('height', function(d) {
           return barchartScale(d)
         })
         .attr('fill', function(d, i) {
-          if (selectedIndex === i) {
-            return 'orange'
-          } else {
-            return 'rgba(0, 0, 0, 0)'
-          }
+          // if (selectedIndex === i) {
+            return '#ccc'
+          // } else {
+            // return 'rgba(0, 0, 0, 0)'
+          // }
         })
         .style('cursor', 'pointer')
         .on('mouseover', function(d) {
@@ -140,14 +118,6 @@ var BarchartEnvelope = React.createClass({
 
           onBarchartClick(d, i)
         })
-
-      if (tooltip) {
-        svg.append('title')
-        .text(function(d) {
-          return d
-        })
-      }
-    }
   }
 })
 
