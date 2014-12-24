@@ -76,6 +76,7 @@ textarea {
         width: 100%;
         height: $gutter*22.5;
         padding-top: $gutter*2.5;
+        z-index: 1
     }
     #map {
         background: $black;
@@ -109,6 +110,11 @@ textarea {
         .header {
             background: $background;
             padding: 1.5*$gutter/2 $gutter;
+            @include tablet{
+                padding: 1.5*$gutter/2 $gutter/4 $gutter $gutter ;
+            -moz-box-shadow:0px 2px 5px rgba(0,0,0,.1); -webkit-box-shadow:0px 2px 5px rgba(0,0,0,.1); box-shadow:0px 2px 5px rgba(0,0,0,.1);
+
+            }
             h1 {
                 color: rgba(0, 0, 0, 0.9);
                 font-size: $large;
@@ -118,14 +124,6 @@ textarea {
             }
             span {
                 padding-left: $gutter;
-            }
-            .header{
-                .legend-dialog-box{
-                    @include desktop{
-
-                    }
-                }
-
             }
         }
         .tablet-nav {
@@ -502,6 +500,8 @@ textarea {
             top: 50px;
             width: 100%;
             z-index: $create*50+1;
+            -moz-box-shadow:0px 2px 5px rgba(0,0,0,.1); -webkit-box-shadow:0px 2px 5px rgba(0,0,0,.1); box-shadow:0px 2px 5px rgba(0,0,0,.1);
+
         }
         input {
             box-shadow: none;
@@ -522,13 +522,17 @@ textarea {
             font-family: 'mdfonticon';
             padding: $gutter/4 $gutter/2;
             @include tablet {
-                padding: $larger+1 $gutter;
+                position:absolute;
+                padding:0px;
+                top: $gutter*0.5+3;
+                right:$gutter*2+10;
             }
         }
         .Select-arrow {
             top: 1.5*$gutter/2;
             @include tablet {
-                top: $gutter+5;
+                top: $gutter+2;
+                right: $gutter+3;
             }
         }
         .Select-menu {

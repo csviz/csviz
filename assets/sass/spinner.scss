@@ -55,7 +55,7 @@
     position: absolute;
     right: 0;
     top: 0;
-    z-index: 999;
+    z-index: 1002;
   }
   &:after {
     background: #FFF;
@@ -71,6 +71,6 @@
     position: absolute;
     @include spin(0.8s);
     top: 50%;
-    z-index: 999;
+    z-index: 1002;
   }
 }
