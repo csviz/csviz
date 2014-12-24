@@ -11,7 +11,7 @@ var Store = require('../stores/Store')
 var Scatterplot = React.createClass({
   getDefaultProps: function() {
     return {
-      width: 350,
+      width: 310,
       height: 150,
       data: [15, 12, 25, 8, 20]
     }

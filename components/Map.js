@@ -26,7 +26,8 @@ var Map = React.createClass({
     return {
       map: {},
       countryLayer: null,
-      legend: null
+      legend: null,
+      controlLayer: null
     }
   },
 
@@ -80,7 +81,9 @@ var Map = React.createClass({
       for (var layer_i in this.state.countryLayer._layers) {
         map.removeLayer(this.state.countryLayer._layers[layer_i])
       }
-      this.setState({countryLayer: null})
+      this.setState({
+        countryLayer: null
+      })
     }
 
     // get style function
@@ -166,24 +169,27 @@ var Map = React.createClass({
     this.setState({legend: legend})
 
     // add country choropleth
-    var countryLayer = L.geoJson(data.geo.filter(function (shape) {
-      return MapUtils.getCountryNameId(shape.properties['ISO_NAME']) in indicators
-    }), {
-      style: getStyle,
-      onEachFeature: onEachFeature
-    }).setZIndex(1).addTo(map)
+    if (!this.state.countryLayer) {
+      var countryLayer = L.geoJson(data.geo.filter(function (shape) {
+        return MapUtils.getCountryNameId(shape.properties['ISO_NAME']) in indicators
+      }), {
+        style: getStyle,
+        onEachFeature: onEachFeature
+      }).addTo(map)
+    }
 
-    L.control.layers({}, {
-      'Country Label': L.mapbox.tileLayer(mapbox_config.label)
-    }).addTo(map)
+    if (!this.state.controlLayer) {
+      var controlLayer = L.control.layers(null, {
+        'Country Label': L.mapbox.tileLayer(mapbox_config.label)
+      }, {
+        position: 'topleft'
+      }).addTo(map)
+      this.setState({controlLayer: controlLayer})
+    }
 
-    // var labelLayer = L.mapbox.tileLayer(mapbox_config.label).addTo(map)
-    // labelLayer.setZIndex(2)
-    // if (!L.Browser.ie && !L.Browser.opera) labelLayer.bringToFront()
-    // map.addLayer(mapbox.layer().id(mapbox_config.label))
-    // map.addLayer(mapbox.layer().id(mapbox_config.label))
-
-    this.setState({countryLayer: countryLayer})
+    this.setState({
+      countryLayer: countryLayer
+    })
   },
 
   updateQuery(data) {
