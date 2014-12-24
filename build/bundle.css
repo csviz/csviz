@@ -6291,7 +6291,7 @@ textarea {
     position: absolute;
     right: 0;
     top: 0;
-    z-index: 999; }
+    z-index: 1002; }
   .loading:after {
     background: #FFF;
     border-radius: 50%;
@@ -6310,4 +6310,4 @@ textarea {
     -o-animation: spinning 0.8s linear infinite;
     animation: spinning 0.8s linear infinite;
     top: 50%;
-    z-index: 999; }
+    z-index: 1002; }
