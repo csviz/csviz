@@ -53,6 +53,7 @@ textarea {
 .dialog .dialog-overlay {
     z-index: $create*50+1;
 }
+
 /*.leaflet-bottom.leaflet-right{
     @include tablet{
     width:$gutter*15; margin-left:-($gutter*7.5);left:50%;
@@ -128,7 +129,7 @@ textarea {
 
         }
         .tablet-nav {
-            border-bottom: 1px solid $line;
+            // border-bottom: 1px solid $line;
 
             h2, ul {
                 display: none
@@ -195,17 +196,23 @@ textarea {
                 position: relative;
                 word-wrap: break-word;
                 &:after {
-                    bottom: 0;
-                    color: $grey;
+                    color: #BBB;
                     content: '\e640';
                     cursor: pointer;
                     font-family: 'mdfonticon';
                     line-height: inherit;
                     pointer-events: none;
                     position: absolute;
-                    right: $gutter/2;
+                    right: $gutter/4;
                     top: 50%;
+                    margin-top: -12px;
                     word-wrap: break-word;
+                    border-left: 1px solid #e1e1e1;
+                    height: $gutter+5;
+                    line-height: $gutter+5;
+                    padding-left: $gutter/4;
+
+
                     &:hover {
                         color: inherit;
                     }
@@ -221,7 +228,7 @@ textarea {
                     -moz-appearance: none;
                     -ms-appearance: none;
                     -o-appearance: none;
-                    background: #FFF;
+                    background: #f9f9f9;
                     border: 0;
                     box-shadow: none;
                     color: inherit;
@@ -234,6 +241,9 @@ textarea {
                     padding: 1.5*$gutter/2 $gutter;
                     padding-right: 1.5*$gutter;
                     width: 100%;
+                    &:hover{
+                        background:#fff
+                    }
                 }
                 .mui-drop-down-menu {
                     .mui-menu-control {
@@ -293,10 +303,9 @@ textarea {
                 .mui-paper-button {
                     float: left;
                     margin-right: 10px;
-                    width: ($sidebar - 3*$gutter)/2+10;
+                    width: ($sidebar - 3*$gutter)/2;
                     @include tablet{
                         float: none;
-                        margin: 0px auto 10px auto;
                     }
                 }
                 .dialog-actions {
@@ -559,7 +568,7 @@ textarea {
         }
     }
     .timeline {
-        bottom: $gutter;
+        bottom: $gutter*1.5;
         left: $gutter/2;
         @include tablet {
             position: relative;
