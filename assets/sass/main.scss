@@ -296,7 +296,6 @@ textarea {
                     width: ($sidebar - 3*$gutter)/2+10;
                     @include tablet{
                         float: none;
-                        margin: 0px auto 10px auto;
                     }
                 }
                 .dialog-actions {
@@ -559,7 +558,7 @@ textarea {
         }
     }
     .timeline {
-        bottom: $gutter;
+        bottom: $gutter*1.5;
         left: $gutter/2;
         @include tablet {
             position: relative;

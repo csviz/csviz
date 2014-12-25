@@ -139,6 +139,9 @@ var Map = React.createClass({
         var layer = e.target
         MapUtils.addTooltip(map, layer, popup, indicators, selected_indicator, configs, selected_year, e)
         window.clearTimeout(closeTooltip)
+        layer.setStyle({
+          fillOpacity: 1
+        })
       }
 
       // on mouse out handler
