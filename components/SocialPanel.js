@@ -72,6 +72,11 @@ var SocialPanel = React.createClass({
     window.open(facebook_url, 'Share via Facebook', 'width=600,height=400,resizable,scrollbars,status')
   },
 
+  _shareOnGooglePlus() {
+    var google_url = `https://plus.google.com/share?url=${window.location.href}`
+    window.open(google_url, 'Share via Google+', 'width=600,height=400,resizable,scrollbars,status')
+  },
+
   render() {
     var dialogActions = [
       { text: 'CLOSE' }
@@ -91,8 +96,9 @@ var SocialPanel = React.createClass({
             cols="80"
           />
           <div className='share-dialog-links'>
-            <PaperButton label='Share on Twitter' onClick={this._shareOnTwitter} />
-            <PaperButton label='Share on Facebook' onClick={this._shareOnFacebook} />
+            <PaperButton label='Twitter' onClick={this._shareOnTwitter} />
+            <PaperButton label='Facebook' onClick={this._shareOnFacebook} />
+            <PaperButton label='Google+' onClick={this._shareOnGooglePlus} />
           </div>
         </Dialog>
       </section>

@@ -142,8 +142,6 @@ var Scatterplot = React.createClass({
       })
       .attr('y', height/2 + 60)
       .attr('text-anchor', 'middle')
-
-
   }
 })
 
