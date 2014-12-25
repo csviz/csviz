@@ -141,6 +141,8 @@ var Map = React.createClass({
         window.clearTimeout(closeTooltip)
         layer.setStyle({
           fillOpacity: 1
+
+          
         })
       }
 
