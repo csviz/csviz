@@ -30,7 +30,6 @@ var SocialPanel = React.createClass({
     return {
       shareContent: window.location.href,
       iframeOpen: false,
-      hasScale: false
     };
   },
 
@@ -44,7 +43,6 @@ var SocialPanel = React.createClass({
     var content = this.getShareContent()
     this.setState({
       shareContent: content,
-      hasScale: !this.state.hasScale
     })
     this.refs.shareDialog.show()
   },
@@ -113,7 +111,7 @@ var SocialPanel = React.createClass({
         <PaperButton className='share' label='Share' onClick={this._showDialog} />
         <PaperButton className='download' label='Download' onClick={this._download} />
 
-        <Dialog className={(this.state.hasScale ? 'scale ' : '') + 'share-dialog-box'} ref='shareDialog' title='Share' actions={dialogActions}>
+        <Dialog className='share-dialog-box' ref='shareDialog' title='Share' actions={dialogActions}>
           <span className="share-dialog-box-title">Just copy and paste the URL below to share your visualization.</span>
           <textarea
             onChange={this._setShareContent}

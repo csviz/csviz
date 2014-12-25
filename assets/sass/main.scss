@@ -25,14 +25,15 @@ html, body, #app {
     height: 100%;
     line-height: 120%;
     width: 100%;
-    min-width:300px;
+    min-width: 300px;
 }
 h1, h2, h3, h4, h5, h6 {
     line-height: 160%;
 }
 /*reset*/
-html{
-    @include desktop{
+
+html {
+    @include desktop {
         overflow: hidden
     }
 }
@@ -46,7 +47,9 @@ textarea {
 .dialog .dialog-content {
     padding-top: 10px;
 }
-.dialog .mui-paper{background:#f9f9f9}
+.dialog .mui-paper {
+    background: #f9f9f9
+}
 .dialog .dialog-content textarea {
     margin: $gutter/2 0 $gutter 0;
     padding: $larger/2;
@@ -60,29 +63,49 @@ textarea {
 .dialog .dialog-overlay {
     z-index: $create*50+1;
 }
-
-.dialog .dialog-actions .actions-right :last-child{
+.dialog .dialog-actions .actions-right:last-child {
     float: none;
-    position:absolute;
+    position: absolute;
     top: $gutter/4;
     right: $gutter/4;
-    color:$black!important;
+    color: $black!important;
     font-size: 24px;
-    &:hover{
+    &:hover {
         color: #000!important;
     }
 }
-
-
-.dialog textarea.iframe-copy{
-    float: left;
-width: 100%;
-height:70px;
+.dialog {
+    visibility: hidden;
+    opacity: 0;
+    transform-origin: center;
+    -webkit-transform-origin: center;
+    -moz-transform-origin: center;
+    .mui-paper {
+        -webkit-transform: scale(0.9);
+        -moz-transform: scale(0.9);
+        transform: scale(0.9);
+    }
 }
-
-
-
-
+.dialog.show {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+    -moz-transition: -moz-transform 0.4s, opacity 0.4s;
+    transition: transform 0.4s, opacity 0.4s;
+    .mui-paper {
+        -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+        -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+        transition: transform 0.2s, opacity 0.2s;
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        transform: scale(1);
+    }
+}
+.dialog textarea.iframe-copy {
+    float: left;
+    width: 100%;
+    height: 70px;
+}
 /* SIDEBAR */
 
 #main {
@@ -122,19 +145,18 @@ height:70px;
             position: relative;
             width: 100%;
             top: $gutter*2.5;
-            box-shadow:none;
+            box-shadow: none;
         }
-        .header-container{
+        .header-container {
             width: 100%;
             z-index: 0;
         }
         .header {
             background: $background;
             padding: 1.5*$gutter/2 $gutter;
-            @include tablet{
-                padding: 1.5*$gutter/2 $gutter/4+5 $gutter $gutter ;
-          box-shadow:0px 2px 5px rgba(0,0,0,.1);
-
+            @include tablet {
+                padding: 1.5*$gutter/2 $gutter/4+5 $gutter $gutter;
+                box-shadow: 0px 2px 5px rgba(0, 0, 0, .1);
             }
             h1 {
                 color: rgba(0, 0, 0, 0.9);
@@ -146,23 +168,21 @@ height:70px;
             span {
                 padding-left: $gutter;
             }
-
         }
         .tablet-nav {
             // border-bottom: 1px solid $line;
-
             h2, ul {
                 display: none
             }
             @include tablet {
-                position:fixed;
+                position: fixed;
                 top: 0px;
                 left: 0px;
                 width: 100%;
                 height: $gutter*2.5;
                 background: #fff;
                 z-index: $create*50;
-                min-width:$gutter*15;
+                min-width: $gutter*15;
                 h1, span {
                     display: none
                 }
@@ -176,7 +196,7 @@ height:70px;
                     margin: 0px;
                     padding: 0px;
                     float: left;
-                    font-weight:bold;
+                    font-weight: bold;
                     letter-spacing: 1px;
                 }
                 ul {
@@ -228,8 +248,6 @@ height:70px;
                     height: $gutter+5;
                     line-height: $gutter+5;
                     padding-left: $gutter/4;
-
-
                     &:hover {
                         color: inherit;
                     }
@@ -258,8 +276,8 @@ height:70px;
                     padding: 1.5*$gutter/2 $gutter;
                     padding-right: 1.5*$gutter;
                     width: 100%;
-                    &:hover{
-                        background:#fff
+                    &:hover {
+                        background: #fff
                     }
                 }
                 .mui-drop-down-menu {
@@ -283,7 +301,7 @@ height:70px;
                 box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
                 text-align: center;
                 width: ($sidebar - 3*$gutter - 10)/2;
-                @include tablet{
+                @include tablet {
                     width: 100%;
                     margin-bottom: $gutter/2
                 }
@@ -297,11 +315,10 @@ height:70px;
             }
             .share {
                 float: left;
-                @include tablet{
+                @include tablet {
                     float: none
                 }
             }
-
             .download .mui-paper-button-content span:before {
                 content: '\e744';
             }
@@ -309,61 +326,58 @@ height:70px;
                 content: '\e61a';
             }
         }
-                    .dialog{
-                position: fixed;
-                max-width: 600px;
-                width: 80%;
-                margin-left: -300px;
-                text-align: left;
-                z-index: $create*50;
-                .mui-paper-button {
-                    float: left;
-                    margin-right: 10px;
-                    width: ($sidebar - 3*$gutter)/2;
-                    @include tablet{
-                        float: none;
-                        width: 100%;
-                        margin-bottom: $gutter/2;
-                    }
-                }
-                .dialog-actions {
-                    padding: $gutter+8 $gutter $gutter/2+3 $gutter;
-                    margin-top: 35px;
-                    @include tablet{
-                        margin-top: 0px
-                    }
-                }
-                .dialog-title {
-                    text-align: left;
-                    color: $black;
-                }
-                .share-dialog-links{
-                        @include tablet {
-                            text-align: center
-                        }
-                }
-                .dialog-content span:first-child {
-                    text-align: left;
-                    color: $lightgrey;
-
-                }
-                .dialog-content span.add-to-website {
-                    cursor: pointer;
-margin: 35px 0 0 0;
-color: $black;
-float: left;
-font-size: 12px;
-&:hover{
-    color: #000;
-}
-
-                }
+        .dialog {
+            position: fixed;
+            max-width: 600px;
+            width: 80%;
+            margin-left: -300px;
+            text-align: left;
+            z-index: $create*50;
+            .mui-paper-button {
+                float: left;
+                margin-right: 10px;
+                width: ($sidebar - 3*$gutter)/2;
                 @include tablet {
-                    margin-left: -40%;
-                    min-width: 300px;
+                    float: none;
+                    width: 100%;
+                    margin-bottom: $gutter/2;
                 }
             }
-
+            .dialog-actions {
+                padding: $gutter+8 $gutter $gutter/2+3 $gutter;
+                margin-top: 35px;
+                @include tablet {
+                    margin-top: 0px
+                }
+            }
+            .dialog-title {
+                text-align: left;
+                color: $black;
+            }
+            .share-dialog-links {
+                @include tablet {
+                    text-align: center
+                }
+            }
+            .dialog-content span:first-child {
+                text-align: left;
+                color: $lightgrey;
+            }
+            .dialog-content span.add-to-website {
+                cursor: pointer;
+                margin: 35px 0 0 0;
+                color: $black;
+                float: left;
+                font-size: 12px;
+                &:hover {
+                    color: #000;
+                }
+            }
+            @include tablet {
+                margin-left: -40%;
+                min-width: 300px;
+            }
+        }
         .drilldown {
             background: $light;
             font-size: $larger;
@@ -374,8 +388,10 @@ font-size: 12px;
                 border-width: 1px 0;
                 font-weight: bold;
                 padding: 1.5*$gutter/2 $gutter 1.5*$gutter/2 0;
-                box-shadow:none;
-                span.chart{ padding-left:0px}
+                box-shadow: none;
+                span.chart {
+                    padding-left: 0px
+                }
             }
             .list {
                 list-style: none;
@@ -488,29 +504,26 @@ font-size: 12px;
 
 @import 'mapbox';
 #main {
-    .map-legends{
-     @include tablet{
-    //     position: fixed;
-    //     top: 50px;
-    //     width: 100%;
-    //     left: 0px;
-    //     border-radius:0px;
-    //     max-width: 100%;
-    //     box-shadow:0px 2px 5px rgba(0,0,0,.1);
-    //     ul{textarea:center; padding-left:$gutter/2}
-    background: none;
-    text-align: right;
-    box-shadow:none;
-    margin-bottom: 0px!important;
-    margin-right: 0px;
-     }
-
+    .map-legends {
+        @include tablet {
+            //     position: fixed;
+            //     top: 50px;
+            //     width: 100%;
+            //     left: 0px;
+            //     border-radius:0px;
+            //     max-width: 100%;
+            //     box-shadow:0px 2px 5px rgba(0,0,0,.1);
+            //     ul{textarea:center; padding-left:$gutter/2}
+            background: none;
+            text-align: right;
+            box-shadow: none;
+            margin-bottom: 0px!important;
+            margin-right: 0px;
+        }
     }
-
     .map-legend {
         .legend-list {
             list-style: none;
-
             li {
                 &:first-child {
                     .swatch {
@@ -522,12 +535,11 @@ font-size: 12px;
                         border-radius: 0 0 $radius $radius;
                     }
                 }
-                @include tablet{
+                @include tablet {
                     height: 15px;
                     line-height: 15px;
                     font-size: 11px
                 }
-
             }
         }
         .swatch {
@@ -535,32 +547,31 @@ font-size: 12px;
             float: left;
             margin-right: $gutter/4;
             width: $gutter;
-            @include tablet{
+            @include tablet {
                 float: right!important;
                 margin-left: 10px;
                 margin-right: 0px;
                 width: $gutter/2+5;
                 height: $gutter/2+5;
             }
-
         }
-
     }
     .leaflet-left {
         .leaflet-control {
             border: 0;
             box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
         }
-        .leaflet-control-layers-expanded{
+        .leaflet-control-layers-expanded {
             height: 26px;
             line-height: 26px;
-            padding-top:0px
-
+            padding-top: 0px
         }
     }
-    .leaflet-control-container{
-        @include tablet{
-        .leaflet-top{top:272px}
+    .leaflet-control-container {
+        @include tablet {
+            .leaflet-top {
+                top: 272px
+            }
         }
     }
     .search, .timeline {
@@ -584,8 +595,7 @@ font-size: 12px;
             top: 50px;
             width: 100%;
             z-index: $create*50+1;
-            box-shadow:0px 2px 5px rgba(0,0,0,.1);
-
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, .1);
         }
         input {
             box-shadow: none;
@@ -606,10 +616,10 @@ font-size: 12px;
             font-family: 'mdfonticon';
             padding: $gutter/4 $gutter/2;
             @include tablet {
-                position:absolute;
-                padding:0px;
+                position: absolute;
+                padding: 0px;
                 top: $gutter*0.5+3;
-                right:$gutter*2+10;
+                right: $gutter*2+10;
             }
         }
         .Select-arrow {
@@ -646,7 +656,7 @@ font-size: 12px;
             left: 0px;
             top: 0px;
             bottom: 0px;
-            border-bottom:1px solid $line;
+            border-bottom: 1px solid $line;
         }
         ul {
             list-style: none;
@@ -688,10 +698,7 @@ font-size: 12px;
         }
     }
 }
-
-
 //add
-
 //import
 @import 'select';
 @import 'spinner';
