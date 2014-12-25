@@ -125,6 +125,7 @@ textarea {
             span {
                 padding-left: $gutter;
             }
+
         }
         .tablet-nav {
             border-bottom: 1px solid $line;
@@ -255,7 +256,7 @@ textarea {
             .mui-paper-button {
                 box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
                 text-align: center;
-                width: ($sidebar - 3*$gutter)/2;
+                width: ($sidebar - 3*$gutter - 10)/2;
                 @include tablet{
                     width: 100%;
                     margin-bottom: $gutter/2
@@ -333,7 +334,9 @@ textarea {
                 border: 1px solid $line;
                 border-width: 1px 0;
                 font-weight: bold;
-                padding: 1.5*$gutter/2 $gutter;
+                padding: 1.5*$gutter/2 $gutter 1.5*$gutter/2 0;
+                box-shadow:none;
+                span.chart{ padding-left:0px}
             }
             .list {
                 list-style: none;
@@ -387,7 +390,7 @@ textarea {
             }
             .empty {
                 .value {
-                    color: $grey;
+                    color: #5262BC;
                     font-size: $small;
                     text-transform: uppercase;
                 }
@@ -473,10 +476,11 @@ textarea {
         .leaflet-control {
             border: 0;
             box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
-            @include tablet {
-                position: absolute;
-                top: 328px;
-            }
+        }
+    }
+    .leaflet-control-container{
+        @include tablet{
+        .leaflet-top{top:272px}
         }
     }
     .search, .timeline {
