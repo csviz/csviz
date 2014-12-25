@@ -31,22 +31,29 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 160%;
 }
 /*reset*/
-
+html{
+    @include desktop{
+        overflow: hidden
+    }
+}
 textarea {
     resize: none;
     border: none;
-    background: #f9f9f9;
-    color: $lightgrey;
+    background: #fff;
+    color: $black;
     letter-spacing: 1px;
 }
 .dialog .dialog-content {
     padding-top: 10px;
 }
+.dialog .mui-paper{background:#f9f9f9}
 .dialog .dialog-content textarea {
-    margin: $huge 0;
-    padding: $larger;
+    margin: $gutter/2 0 $gutter 0;
+    padding: $larger/2;
+    border: 1px solid #ddd;
     &:focus {
-        background: $background;
+        background: #fff;
+        border: 1px solid #aaa;
         box-shadow: none;
     }
 }
@@ -54,15 +61,28 @@ textarea {
     z-index: $create*50+1;
 }
 
-/*.leaflet-bottom.leaflet-right{
-    @include tablet{
-    width:$gutter*15; margin-left:-($gutter*7.5);left:50%;
-        .map-legends{
-        width:100%; padding:$gutter*2;
-        margin:0px;
-        }
+.dialog .dialog-actions .actions-right :last-child{
+    float: none;
+    position:absolute;
+    top: $gutter/4;
+    right: $gutter/4;
+    color:$black!important;
+    font-size: 24px;
+    &:hover{
+        color: #000!important;
     }
-}*/
+}
+
+
+.dialog textarea.iframe-copy{
+    float: left;
+width: 100%;
+height:70px;
+}
+
+
+
+
 /* SIDEBAR */
 
 #main {
@@ -112,8 +132,8 @@ textarea {
             background: $background;
             padding: 1.5*$gutter/2 $gutter;
             @include tablet{
-                padding: 1.5*$gutter/2 $gutter/4 $gutter $gutter ;
-            -moz-box-shadow:0px 2px 5px rgba(0,0,0,.1); -webkit-box-shadow:0px 2px 5px rgba(0,0,0,.1); box-shadow:0px 2px 5px rgba(0,0,0,.1);
+                padding: 1.5*$gutter/2 $gutter/4+5 $gutter $gutter ;
+          box-shadow:0px 2px 5px rgba(0,0,0,.1);
 
             }
             h1 {
@@ -167,9 +187,6 @@ textarea {
                     margin-top: -$gutter/2;
                     li {
                         display: inline-block;
-                        &:first-child {
-                            margin-right: $gutter/4;
-                        }
                         a {
                             width: 100%;
                             height: 100%;
@@ -260,9 +277,8 @@ textarea {
         }
         .links {
             background: $light;
-            text-align: center;
-            padding: 1.5*$gutter/2 $gutter;
             text-align: right;
+            padding: 1.5*$gutter/2 $gutter;
             .mui-paper-button {
                 box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
                 text-align: center;
@@ -306,12 +322,15 @@ textarea {
                     width: ($sidebar - 3*$gutter)/2;
                     @include tablet{
                         float: none;
+                        width: 100%;
+                        margin-bottom: $gutter/2;
                     }
                 }
                 .dialog-actions {
-                    padding: $gutter+8 $gutter 16px $gutter;
+                    padding: $gutter+8 $gutter $gutter/2+3 $gutter;
+                    margin-top: 35px;
                     @include tablet{
-                        padding-top:0px;
+                        margin-top: 0px
                     }
                 }
                 .dialog-title {
@@ -323,9 +342,20 @@ textarea {
                             text-align: center
                         }
                 }
-                .dialog-content span {
+                .dialog-content span:first-child {
                     text-align: left;
                     color: $lightgrey;
+
+                }
+                .dialog-content span.add-to-website {
+                    cursor: pointer;
+margin: 35px 0 0 0;
+color: $black;
+float: left;
+font-size: 12px;
+&:hover{
+    color: #000;
+}
 
                 }
                 @include tablet {
@@ -458,9 +488,29 @@ textarea {
 
 @import 'mapbox';
 #main {
+    .map-legends{
+     @include tablet{
+    //     position: fixed;
+    //     top: 50px;
+    //     width: 100%;
+    //     left: 0px;
+    //     border-radius:0px;
+    //     max-width: 100%;
+    //     box-shadow:0px 2px 5px rgba(0,0,0,.1);
+    //     ul{textarea:center; padding-left:$gutter/2}
+    background: none;
+    text-align: right;
+    box-shadow:none;
+    margin-bottom: 0px!important;
+    margin-right: 0px;
+     }
+
+    }
+
     .map-legend {
         .legend-list {
             list-style: none;
+
             li {
                 &:first-child {
                     .swatch {
@@ -472,6 +522,12 @@ textarea {
                         border-radius: 0 0 $radius $radius;
                     }
                 }
+                @include tablet{
+                    height: 15px;
+                    line-height: 15px;
+                    font-size: 11px
+                }
+
             }
         }
         .swatch {
@@ -479,12 +535,27 @@ textarea {
             float: left;
             margin-right: $gutter/4;
             width: $gutter;
+            @include tablet{
+                float: right!important;
+                margin-left: 10px;
+                margin-right: 0px;
+                width: $gutter/2+5;
+                height: $gutter/2+5;
+            }
+
         }
+
     }
     .leaflet-left {
         .leaflet-control {
             border: 0;
             box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+        }
+        .leaflet-control-layers-expanded{
+            height: 26px;
+            line-height: 26px;
+            padding-top:0px
+
         }
     }
     .leaflet-control-container{
@@ -513,7 +584,7 @@ textarea {
             top: 50px;
             width: 100%;
             z-index: $create*50+1;
-            -moz-box-shadow:0px 2px 5px rgba(0,0,0,.1); -webkit-box-shadow:0px 2px 5px rgba(0,0,0,.1); box-shadow:0px 2px 5px rgba(0,0,0,.1);
+            box-shadow:0px 2px 5px rgba(0,0,0,.1);
 
         }
         input {
@@ -617,5 +688,10 @@ textarea {
         }
     }
 }
+
+
+//add
+
+//import
 @import 'select';
 @import 'spinner';

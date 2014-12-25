@@ -29,7 +29,8 @@ var SocialPanel = React.createClass({
   getInitialState: function() {
     return {
       shareContent: window.location.href,
-      iframeOpen: false
+      iframeOpen: false,
+      hasScale: false
     };
   },
 
@@ -41,7 +42,10 @@ var SocialPanel = React.createClass({
 
   _showDialog() {
     var content = this.getShareContent()
-    this.setState({shareContent: content})
+    this.setState({
+      shareContent: content,
+      hasScale: !this.state.hasScale
+    })
     this.refs.shareDialog.show()
   },
 
@@ -94,13 +98,13 @@ var SocialPanel = React.createClass({
 
   render() {
     var dialogActions = [
-      { text: 'CLOSE' }
+      { text: '×' }
     ]
 
     var iframeUrl = this._buildIframeCode()
     var iframeBody = this.state.iframeOpen ? (
       <div className='body'>
-        <input ref='iframeInput' type="text" readOnly value={iframeUrl} autofocus onClick={this._focusOnInput} />
+        <textarea ref='iframeInput' type="text" className="iframe-copy" readOnly value={iframeUrl} autofocus onClick={this._focusOnInput} ></textarea>
       </div>
     ) : null
 
@@ -109,8 +113,8 @@ var SocialPanel = React.createClass({
         <PaperButton className='share' label='Share' onClick={this._showDialog} />
         <PaperButton className='download' label='Download' onClick={this._download} />
 
-        <Dialog className='share-dialog-box' ref='shareDialog' title='Share' actions={dialogActions}>
-          Just copy and paste the URL below to share your visualization.
+        <Dialog className={(this.state.hasScale ? 'scale ' : '') + 'share-dialog-box'} ref='shareDialog' title='Share' actions={dialogActions}>
+          <span className="share-dialog-box-title">Just copy and paste the URL below to share your visualization.</span>
           <textarea
             onChange={this._setShareContent}
             value={this.state.shareContent}
@@ -123,7 +127,7 @@ var SocialPanel = React.createClass({
             <PaperButton label='Google+' onClick={this._shareOnGooglePlus} />
           </div>
           <div className='iframe'>
-            <span onClick={this._toggleIframe}>Add to your website?</span>
+            <span onClick={this._toggleIframe} className="add-to-website">Add to your website?</span>
             {iframeBody}
           </div>
         </Dialog>
