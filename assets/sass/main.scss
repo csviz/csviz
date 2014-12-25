@@ -74,6 +74,12 @@ textarea {
         color: #000!important;
     }
 }
+.dialog .dialog-actions .actions-right .action{
+    color: $black!important;
+     &:hover {
+        color: #000!important;
+    }
+}
 .dialog {
     visibility: hidden;
     opacity: 0;
@@ -365,7 +371,7 @@ textarea {
             }
             .dialog-content span.add-to-website {
                 cursor: pointer;
-                margin: 35px 0 0 0;
+                margin: $gutter+10 0 0 0;
                 color: $black;
                 float: left;
                 font-size: 12px;
@@ -506,39 +512,48 @@ textarea {
 #main {
     .map-legends {
         @include tablet {
-            //     position: fixed;
-            //     top: 50px;
-            //     width: 100%;
-            //     left: 0px;
-            //     border-radius:0px;
-            //     max-width: 100%;
-            //     box-shadow:0px 2px 5px rgba(0,0,0,.1);
-            //     ul{textarea:center; padding-left:$gutter/2}
-            background: none;
-            text-align: right;
-            box-shadow: none;
-            margin-bottom: 0px!important;
-            margin-right: 0px;
+            max-width: 100%;
+            width: 100%;
+            position:fixed;
+            height: 50px;
+            top: 50px;
+            left: 0px;
+            border-radius:0px;
         }
     }
     .map-legend {
         .legend-list {
             list-style: none;
+            margin-bottom: 10px;
+            @include tablet{
+                float: none;
+                position:absolute;
+                  left: 50%;
+                  margin-left: -150px;
+            }
             li {
                 &:first-child {
                     .swatch {
                         border-radius: $radius $radius 0 0;
+                        @include tablet{
+                        border-radius:0px;
+                        }
                     }
                 }
                 &:last-child {
                     .swatch {
                         border-radius: 0 0 $radius $radius;
+                        @include tablet{
+                        border-radius:0px;
+                        }
                     }
                 }
                 @include tablet {
-                    height: 15px;
-                    line-height: 15px;
-                    font-size: 11px
+                  width: 50px;
+                  font-size: 9px;
+                  line-height: 10px;
+                  float: left;
+
                 }
             }
         }
@@ -548,11 +563,12 @@ textarea {
             margin-right: $gutter/4;
             width: $gutter;
             @include tablet {
-                float: right!important;
-                margin-left: 10px;
-                margin-right: 0px;
-                width: $gutter/2+5;
-                height: $gutter/2+5;
+               display: block;
+               float: left;
+               height: 5px;
+               margin-bottom: 5px;
+               
+               width: 50px;
             }
         }
     }
@@ -665,6 +681,8 @@ textarea {
                 cursor: pointer;
                 display: inline-block;
                 padding: $gutter/2 1.5*$gutter/2;
+                border-bottom: 1px solid #E5E5E5;
+                margin-bottom: -1px;
                 &.action {
                     &:before {
                         content: '\e833';
@@ -679,6 +697,7 @@ textarea {
                 }
                 &:first-child {
                     border-radius: $radius 0 0 $radius;
+
                 }
                 &:last-child {
                     border-radius: 0 $radius $radius 0;

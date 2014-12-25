@@ -4856,6 +4856,11 @@ textarea {
   .dialog .dialog-actions .actions-right:last-child:hover {
     color: #000 !important; }
 
+.dialog .dialog-actions .actions-right .action {
+  color: #4D4D4D !important; }
+  .dialog .dialog-actions .actions-right .action:hover {
+    color: #000 !important; }
+
 .dialog {
   visibility: hidden;
   opacity: 0;
@@ -5096,7 +5101,7 @@ textarea {
         color: #999; }
       #sidebar .sidebar-panel .dialog .dialog-content span.add-to-website {
         cursor: pointer;
-        margin: 35px 0 0 0;
+        margin: 30px 0 0 0;
         color: #4D4D4D;
         float: left;
         font-size: 12px; }
@@ -5973,22 +5978,38 @@ textarea {
 
 @media (max-width: 768px) {
   #main .map-legends {
-    background: none;
-    text-align: right;
-    box-shadow: none;
-    margin-bottom: 0px !important;
-    margin-right: 0px; } }
+    max-width: 100%;
+    width: 100%;
+    position: fixed;
+    height: 50px;
+    top: 50px;
+    left: 0px;
+    border-radius: 0px; } }
 #main .map-legend .legend-list {
-  list-style: none; }
+  list-style: none;
+  margin-bottom: 10px; }
+  @media (max-width: 768px) {
+    #main .map-legend .legend-list {
+      float: none;
+      position: absolute;
+      left: 50%;
+      margin-left: -150px; } }
   #main .map-legend .legend-list li:first-child .swatch {
     border-radius: 2px 2px 0 0; }
+    @media (max-width: 768px) {
+      #main .map-legend .legend-list li:first-child .swatch {
+        border-radius: 0px; } }
   #main .map-legend .legend-list li:last-child .swatch {
     border-radius: 0 0 2px 2px; }
+    @media (max-width: 768px) {
+      #main .map-legend .legend-list li:last-child .swatch {
+        border-radius: 0px; } }
   @media (max-width: 768px) {
     #main .map-legend .legend-list li {
-      height: 15px;
-      line-height: 15px;
-      font-size: 11px; } }
+      width: 50px;
+      font-size: 9px;
+      line-height: 10px;
+      float: left; } }
 #main .map-legend .swatch {
   height: 20px;
   float: left;
@@ -5996,11 +6017,11 @@ textarea {
   width: 20px; }
   @media (max-width: 768px) {
     #main .map-legend .swatch {
-      float: right !important;
-      margin-left: 10px;
-      margin-right: 0px;
-      width: 15px;
-      height: 15px; } }
+      display: block;
+      float: left;
+      height: 5px;
+      margin-bottom: 5px;
+      width: 50px; } }
 #main .leaflet-left .leaflet-control {
   border: 0;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1); }
@@ -6091,7 +6112,9 @@ textarea {
       border-right: 1px solid #E5E5E5;
       cursor: pointer;
       display: inline-block;
-      padding: 10px 15px; }
+      padding: 10px 15px;
+      border-bottom: 1px solid #E5E5E5;
+      margin-bottom: -1px; }
       #main .timeline ul li.action:before {
         content: '\e833';
         font-family: 'mdfonticon'; }

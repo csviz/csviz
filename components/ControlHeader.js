@@ -25,7 +25,7 @@ var ControlHeader = React.createClass({
     this.refs.legendDialog.show();
   },
 
-  _toogleSearch() {
+  _toggleSearch() {
     var currentSearchStatus = Store.getSearchStatus()
     var status = !currentSearchStatus
     MapActionCreators.changeSearchStatus(status)
@@ -48,8 +48,8 @@ var ControlHeader = React.createClass({
         <span>{site.description}</span>
         <h2>{site.name}</h2>
         <ul>
-          { /** <li><a onClick={this._showDialog}><img src="assets/images/icon-texture.png" width="18"/></a></li> **/ } 
-          <li><a onClick={this._toogleSearch}><img src="assets/images/icon-search.png" width="18"/></a></li>
+           <li><a onClick={this._showDialog}><img src="assets/images/icon-texture.png" width="18"/></a></li>
+          <li><a onClick={this._toggleSearch}><img src="assets/images/icon-search.png" width="18"/></a></li>
         </ul>
       </header>
       </div>
