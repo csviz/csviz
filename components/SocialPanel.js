@@ -28,7 +28,8 @@ var SocialPanel = React.createClass({
 
   getInitialState: function() {
     return {
-      shareContent: window.location.href
+      shareContent: window.location.href,
+      iframeOpen: false
     };
   },
 
@@ -77,10 +78,31 @@ var SocialPanel = React.createClass({
     window.open(google_url, 'Share via Google+', 'width=600,height=400,resizable,scrollbars,status')
   },
 
+  _toggleIframe() {
+    this.setState({iframeOpen: !this.state.iframeOpen})
+  },
+
+  _buildIframeCode() {
+    return `<iframe width="400" height="800" frameborder="0" scrolling="y" marginheight="0" marginwidth="0" src="${window.location.href}"></iframe>`
+  },
+
+  _focusOnInput(e) {
+    var input = e.target
+    input.focus()
+    input.select()
+  },
+
   render() {
     var dialogActions = [
       { text: 'CLOSE' }
     ]
+
+    var iframeUrl = this._buildIframeCode()
+    var iframeBody = this.state.iframeOpen ? (
+      <div className='body'>
+        <input ref='iframeInput' type="text" readOnly value={iframeUrl} autofocus onClick={this._focusOnInput} />
+      </div>
+    ) : null
 
     return (
       <section className='links'>
@@ -99,6 +121,10 @@ var SocialPanel = React.createClass({
             <PaperButton label='Twitter' onClick={this._shareOnTwitter} />
             <PaperButton label='Facebook' onClick={this._shareOnFacebook} />
             <PaperButton label='Google+' onClick={this._shareOnGooglePlus} />
+          </div>
+          <div className='iframe'>
+            <span onClick={this._toggleIframe}>Add to your website?</span>
+            {iframeBody}
           </div>
         </Dialog>
       </section>
