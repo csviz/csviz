@@ -1,8 +1,6 @@
 'use strict'
 
 var React = require('react')
-var mui = require('material-ui')
-var Dialog = mui.Dialog
 
 var MapActionCreators = require('../actions/MapActionCreators')
 var Store = require('../stores/Store')
@@ -13,6 +11,7 @@ var ControlHeader = React.createClass({
 
   componentDidMount() {
     Store.addSearchChangeListener(this.handleStoreChange)
+    Store.addLegendChangeListener(this.handleStoreChange)
 
     this.setState({})
   },
@@ -21,14 +20,16 @@ var ControlHeader = React.createClass({
     this.setState({})
   },
 
-  _showDialog() {
-    this.refs.legendDialog.show();
-  },
-
   _toggleSearch() {
     var currentSearchStatus = Store.getSearchStatus()
     var status = !currentSearchStatus
     MapActionCreators.changeSearchStatus(status)
+  },
+
+  _toggleLegend() {
+    var currentLegendStatus = Store.getLegendStatus()
+    var status = !currentLegendStatus
+    MapActionCreators.changeLegendStatus(status)
   },
 
   render() {
@@ -48,7 +49,7 @@ var ControlHeader = React.createClass({
         <span>{site.description}</span>
         <h2>{site.name}</h2>
         <ul>
-           <li><a onClick={this._showDialog}><img src="assets/images/icon-texture.png" width="18"/></a></li>
+          <li><a onClick={this._toggleLegend}><img src="assets/images/icon-texture.png" width="18"/></a></li>
           <li><a onClick={this._toggleSearch}><img src="assets/images/icon-search.png" width="18"/></a></li>
         </ul>
       </header>

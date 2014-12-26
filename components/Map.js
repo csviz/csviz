@@ -36,10 +36,36 @@ var Map = React.createClass({
     Store.addCountryChangeListener(this.handleCountryChange)
     Store.addIndicatorChangeListener(this.updateChoropleth)
     Store.addYearChangeListener(this.updateChoropleth)
+    Store.addLegendChangeListener(this.toggleLegend)
 
     L.mapbox.accessToken = mapbox_config.token
     var map = L.mapbox.map('map', mapbox_config.type).setView(mapbox_config.location, mapbox_config.zoomlevel)
     this.setState({map: map})
+  },
+
+  toggleLegend() {
+    var currentLegendStatus = Store.getLegendStatus()
+
+    if (!currentLegendStatus){
+      this.cleanLegend()
+    } else {
+      this.addLegend()
+    }
+  },
+
+  cleanLegend() {
+    if(this.state.map && !_.isEmpty(this.state.legend)) this.state.map.legendControl.removeLegend(this.state.legend)
+    this.setState({legend: null})
+  },
+
+  addLegend() {
+    var data = Store.getAll()
+    var global = data.global
+    var configs = data.configs
+    var selected_indicator = Store.getSelectedIndicator()
+    var legend = MapUtils.getLegendHTML(configs, global, selected_indicator)
+    this.state.map.legendControl.addLegend(legend)
+    this.setState({legend: legend})
   },
 
   handleCountryChange() {
@@ -141,8 +167,6 @@ var Map = React.createClass({
         window.clearTimeout(closeTooltip)
         layer.setStyle({
           fillOpacity: 1
-
-          
         })
       }
 
@@ -168,10 +192,10 @@ var Map = React.createClass({
 
     // add legend
     // clean up first
-    if(!_.isEmpty(this.state.legend)) map.legendControl.removeLegend(this.state.legend)
-    var legend = MapUtils.getLegendHTML(configs, global, selected_indicator)
-    map.legendControl.addLegend(legend)
-    this.setState({legend: legend})
+    this.cleanLegend()
+    if (window.innerWidth > 768) {
+      this.addLegend()
+    }
 
     // add country choropleth
     if (!this.state.countryLayer) {
