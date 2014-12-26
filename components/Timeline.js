@@ -4,6 +4,7 @@ var _ = require('lodash')
 var React = require('react')
 var Router = require('react-router')
 var objectAssign = require('object-assign')
+var cx = React.addons.classSet
 
 var MapActionCreators = require('../actions/MapActionCreators')
 var Store = require('../stores/Store')
@@ -88,8 +89,13 @@ var Timeline = React.createClass({
         return <li key={year} value={year} className={ (year == selected_year) ? 'active' : null } onClick={this.handleYearClick}>{year}</li>
       }, this)
 
+      var classes = cx({
+        'action': true,
+        'active': this.state.isTimelinePlaying
+      })
+
       playButton = (
-        <li className={ this.state.isTimelinePlaying ? 'action active' : 'action' } onClick={this.playTimeline}>
+        <li className={classes} onClick={this.playTimeline}>
           <span>
             { this.state.isTimelinePlaying ?
               'Stop' :

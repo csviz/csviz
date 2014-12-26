@@ -59,23 +59,6 @@ var IndicatorSelector = React.createClass({
         }
       })
 
-      // var menu = Object.keys(menuData).map(function(groupName) {
-      //   var menuItem = menuData[groupName].map(function(menuItemData, menuIndex) {
-      //     return (<option key={menuIndex} value={menuItemData.id}>{menuItemData.label}</option>)
-      //   })
-      //   return (
-      //     <optgroup key={groupName} label={groupName}>
-      //       {menuItem}
-      //     </optgroup>
-      //   )
-      // })
-
-      // var indicators = data.configs.indicators
-      // var MenuItems = Object.keys(indicators)
-      //   .filter(key => indicators[key].name)
-      //   .map(key => ({ payload: key, text: indicators[key].name }))
-      //   .map((data, index) => (<option key={index} value={data.payload}>{data.text}</option>))
-
       indicatorDescription = data.configs.indicators[selected_indicator].description
 
     } else {
