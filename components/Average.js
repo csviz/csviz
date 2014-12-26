@@ -69,11 +69,16 @@ var Average = React.createClass({
             })
 
             countryChart = <BarchartEnvelope data={countryData} width={80} height={20} />
-            countryChartBody = <Scatterplot data={countryData} selectedIndex={selectedIndex} onCircleClick={onCircleClick} />
+            countryChartBody = (
+              <div className={(selected_country == countryName ? ' show' : '') + ' detail'}>
+                <Scatterplot data={countryData} selectedIndex={selectedIndex} onCircleClick={onCircleClick} />
+              </div>
+            )
 
             hasData = true
           } else {
             formattedValue = 'No data'
+            countryChartBody = null
             hasData = false
           }
 
@@ -92,9 +97,7 @@ var Average = React.createClass({
                   {countryChart}
                 </span>
               </header>
-              <div className={(selected_country == countryName ? ' show' : '') + ' detail'}>
-                {countryChartBody}
-              </div>
+              {countryChartBody}
             </li>
           )
         }.bind(this))
