@@ -49,7 +49,7 @@ var SocialPanel = React.createClass({
 
   _download() {
     var selected_indicator = Store.getSelectedIndicator()
-    var source_path = this.props.data.global.meta.indicators[selected_indicator].source_file
+    var source_path = encodeURIComponent(this.props.data.global.meta.indicators[selected_indicator].source_file)
 
     var csv_url = `./data/${source_path}`
     axios.get(csv_url).then(function(res) {
