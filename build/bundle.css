@@ -5095,12 +5095,14 @@ textarea {
       #sidebar .sidebar-panel .dialog .mui-paper-button {
         float: left;
         margin-right: 10px;
-        width: 170px; }
+        width: 177px; }
         @media (max-width: 768px) {
           #sidebar .sidebar-panel .dialog .mui-paper-button {
             float: none;
             width: 100%;
             margin-bottom: 10px; } }
+      #sidebar .sidebar-panel .dialog .mui-paper-button:last-child {
+        margin-right: 0px; }
       #sidebar .sidebar-panel .dialog .dialog-actions {
         padding: 28px 20px 5px 20px;
         margin-top: 35px; }
@@ -6004,8 +6006,7 @@ textarea {
     left: 0px;
     border-radius: 0px; } }
 #main .map-legend .legend-list {
-  list-style: none;
-  margin-bottom: 10px; }
+  list-style: none; }
   @media (max-width: 768px) {
     #main .map-legend .legend-list {
       float: none;
@@ -6045,6 +6046,8 @@ textarea {
 #main .leaflet-left .leaflet-control {
   border: 0;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1); }
+#main .leaflet-left .leaflet-control-layers {
+  margin-top: 10px; }
 #main .leaflet-left .leaflet-control-layers-expanded {
   height: 26px;
   line-height: 26px;
@@ -6065,8 +6068,8 @@ textarea {
       border-radius: none;
       box-shadow: none; } }
 #main .search {
-  right: 410px;
-  top: 10px;
+  right: 420px;
+  top: 20px;
   width: 240px; }
   @media (max-width: 768px) {
     #main .search {
@@ -6117,8 +6120,8 @@ textarea {
     #main .search .Select-menu .Select-option.is-focused {
       background: #F9F9F9; }
 #main .timeline {
-  bottom: 30px;
-  left: 10px; }
+  bottom: 20px;
+  left: 20px; }
   @media (max-width: 768px) {
     #main .timeline {
       position: relative;
@@ -6155,6 +6158,24 @@ textarea {
       @media (max-width: 768px) {
         #main .timeline ul li {
           padding: 16px 10px; } }
+
+.leaflet-left .leaflet-control {
+  margin-left: 20px; }
+
+.leaflet-top .leaflet-control {
+  margin-top: 20px; }
+
+.leaflet-right .map-legends.leaflet-control {
+  margin-right: 20px;
+  margin-bottom: 5px; }
+
+.leaflet-container .leaflet-control-attribution {
+  background: rgba(0, 0, 0, 0.1);
+  font-size: 10px;
+  height: 15px;
+  line-height: 15px; }
+  .leaflet-container .leaflet-control-attribution a {
+    color: rgba(255, 255, 255, 0.3); }
 
 /**
  * React Select

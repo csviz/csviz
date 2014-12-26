@@ -73,6 +73,7 @@ var IndicatorSelector = React.createClass({
           </select>
         </header>
         <p className='description'>{indicatorDescription}</p>
+      
       </section>
     )
   }

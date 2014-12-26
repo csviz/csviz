@@ -114,7 +114,7 @@ textarea {
     height: 70px;
 }
 
-button{}
+
 /* SIDEBAR */
 
 #main {
@@ -369,12 +369,15 @@ button{}
             .mui-paper-button {
                 float: left;
                 margin-right: $gutter/2;
-                width: ($sidebar - 3*$gutter)/2;
+                width: ($sidebar - 3*$gutter)/2+7;
                 @include tablet {
                     float: none;
                     width: 100%;
                     margin-bottom: $gutter/2;
                 }
+            }
+            .mui-paper-button:last-child{
+                margin-right: 0px;
             }
             .dialog-actions {
                 padding: $gutter+8 $gutter $gutter/4 $gutter;
@@ -552,7 +555,6 @@ button{}
     .map-legend {
         .legend-list {
             list-style: none;
-            margin-bottom: $gutter/2;
             @include tablet{
                 float: none;
                 position:absolute;
@@ -607,6 +609,8 @@ button{}
             border: 0;
             box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
         }
+.leaflet-control-layers
+{margin-top:10px}
         .leaflet-control-layers-expanded {
             height: 26px;
             line-height: 26px;
@@ -633,8 +637,8 @@ button{}
         }
     }
     .search {
-        right: $sidebar + $gutter/2;
-        top: $gutter/2;
+        right: $sidebar + $gutter/2+10;
+        top: $gutter/2+10;
         width: 240px;
         @include tablet {
             left: 0px;
@@ -695,8 +699,8 @@ button{}
         }
     }
     .timeline {
-        bottom: $gutter*1.5;
-        left: $gutter/2;
+        bottom: $gutter;
+        left: $gutter;
         @include tablet {
             position: relative;
             left: 0px;
@@ -748,6 +752,26 @@ button{}
     }
 }
 //add
+.leaflet-left .leaflet-control {
+    margin-left: 20px;
+}
+.leaflet-top .leaflet-control {
+    margin-top: 20px;
+}
+.leaflet-right .map-legends.leaflet-control{margin-right:20px; margin-bottom:5px;}
+.leaflet-bottom .map-legends.leaflet-control{}
+
+.leaflet-container .leaflet-control-attribution {
+    background: rgba(0, 0, 0, .1);
+    font-size: 10px;
+    height: 15px;
+    line-height: 15px;
+    a {
+        color:rgba(255,255,255,.3)
+    }
+}
+
+
 //import
 @import 'select';
 @import 'spinner';
