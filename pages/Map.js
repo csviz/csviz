@@ -38,9 +38,14 @@ var MapPage = React.createClass({
   },
 
   render() {
+    var cx = React.addons.classSet
+    var classes = cx({
+      'loading': _.isEmpty(this.state.data)
+    })
+
     return (
       <DocumentTitle title='Map'>
-        <section className={_.isEmpty(this.state.data) ? 'loading' : ''} id='app'>
+        <section className={classes} id='app'>
           <Map data={this.state.data} />
           <MapControls data={this.state.data} />
         </section>

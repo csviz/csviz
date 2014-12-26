@@ -7,6 +7,7 @@ var Router = require('react-router')
 var objectAssign = require('object-assign')
 var BarchartEnvelope = require('./BarchartEnvelope')
 var Scatterplot = require('./Scatterplot')
+var cx = React.addons.classSet
 
 var MapActionCreators = require('../actions/MapActionCreators')
 var Store = require('../stores/Store')
@@ -76,8 +77,14 @@ var Average = React.createClass({
             hasData = false
           }
 
+          var classes = cx({
+            'countryItem': true,
+            'empty': !hasData,
+            'active': selected_country == countryName
+          })
+
           return (
-            <li key={key} className={ (hasData ? '' : 'empty') + (selected_country == countryName ? ' active' : '') + ' countryItem'}>
+            <li key={key} className={classes}>
               <header onClick={this.onCountryClick.bind(this, countryName)}>
                 <span className='label'>{global.meta.locations[countryName].label}</span>
                 <span className='value'>{formattedValue}</span>
@@ -114,8 +121,14 @@ var Average = React.createClass({
           var countryValue = indicators[countryName][selected_indicator]
           var formattedValue = countryValue ? (numeral(countryValue).format('0.000') + '%') : 'No data'
 
+          var classes = cx({
+            'countryItem': true,
+            'empty': !countryValue,
+            'active': selected_country == countryName
+          })
+
           return (
-            <li key={key} className={ (countryValue ? '' : 'empty') + (selected_country == countryName ? ' active' : '') + ' countryItem'} onClick={this.onCountryClick.bind(this, countryName)}>
+            <li key={key} className={classes} onClick={this.onCountryClick.bind(this, countryName)}>
               <span className='label'>{global.meta.locations[countryName].label}</span>
               <span className='value'>{formattedValue}</span>
             </li>
