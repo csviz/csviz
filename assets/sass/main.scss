@@ -54,10 +54,10 @@ textarea {
     margin: $gutter/2 0 $gutter 0;
     padding: $larger/2;
     border: 1px solid $background;
-    height: $gutter*3+20;
+    height: $gutter*4;
     &:focus {
         background: #fff;
-        border: 1px solid #aaa;
+        border: 1px solid #bbb;
         box-shadow: none;
     }
 }
@@ -71,12 +71,14 @@ textarea {
     right: $gutter/2+6;
     color: $black!important;
     font-size: 24px;
+    @include transition(all, 0.3s, ease);
     &:hover {
         color: #000!important;
     }
 }
 .dialog .dialog-actions .actions-right .action{
     color: $black!important;
+    @include transition(all, 0.3s, ease);
      &:hover {
         color: #000!important;
     }
@@ -111,7 +113,7 @@ textarea {
 .dialog textarea.iframe-copy {
     float: left;
     width: 100%;
-    height: 70px;
+    height: $gutter*4;
 }
 
 
@@ -236,6 +238,7 @@ textarea {
                             float: left;
                             padding: $gutter/2+1;
                             cursor: pointer;
+                            @include transition(all, 0.3s, ease);
                             &:hover img {
                                 opacity: .8
                             }
@@ -299,6 +302,7 @@ textarea {
                     padding: 1.5*$gutter/2 $gutter;
                     padding-right: 1.5*$gutter;
                     width: 100%;
+                    @include transition(all, 0.3s, ease);
                     &:hover {
                         background: $light;
                     }
@@ -325,14 +329,19 @@ textarea {
                 box-shadow: none;
                 text-align: center;
                 width: ($sidebar - 3*$gutter - 10)/2;
+                height: $gutter*2;
+                line-height: $gutter*2;
+
                 @include tablet {
                     width: 100%;
                     margin-bottom: $gutter/2
                 }
                 .mui-paper-container {
                     box-shadow: none !important;
-                    background:#dfdfdf;
+                    background:$background;
+                    @include transition(all, 0.3s, ease);
                     &:hover{
+                        background:#dfdfdf;
                         .mui-paper-button-content{
                         span{color:#000}
                     }
@@ -406,9 +415,35 @@ textarea {
                 color: $black;
                 float: left;
                 font-size: 12px;
+                @include transition(all, 0.3s, ease);
                 &:hover {
                     color: #000;
                 }
+
+            }
+
+           .setting{
+                float: right;
+                margin: 20px 0px 0px 10px;
+                font-size: 12px;
+
+
+                span{
+                    margin:0px 5px 0px 15px;
+                    color: $black!important;
+                }
+                input{
+                        border: 1px solid $background;
+                        width: 60px;
+                        height: 26px;
+                        margin-top: -4px;
+
+                        &:focus {
+                            border: 1px solid #bbb;
+                            box-shadow: none;
+                        }
+                }
+
             }
             @include tablet {
                 margin-left: -40%;
@@ -436,6 +471,7 @@ textarea {
                     header {
                         cursor: pointer;
                         padding: 1.5*$gutter/2 $gutter;
+                        @include transition(all, 0.3s, ease);
                         &:hover {
                             background: #FFF;
                         }
@@ -542,17 +578,27 @@ textarea {
 @import 'mapbox';
 #main {
     .map-legends {
+        position: fixed;
+top: 50%;
+left: 20px;
+margin-top: -60px;
+background:none;
+box-shadow: none;
         @include tablet {
             max-width: 100%;
-            width: 100%;
-            position:fixed;
-            height:$gutter*4+10;
-            top: 50px;
-            left: 0px;
-            border-radius:0px;
+width: 100%;
+position: fixed;
+height: 80px;
+top: 50px;
+left: 0px;
+border-radius: 0px;
+background: #fff;
+margin: 0px;
+box-shadow:none
         }
     }
     .map-legend {
+        padding:0px;
         .legend-list {
             list-style: none;
             @include tablet{
@@ -561,13 +607,37 @@ textarea {
                 top: $gutter+10;
                   left: 50%;
                   margin-left: -150px;
+
             }
             li {
+                height: $gutter+10;
+                line-height: $gutter+10;
+                color: #000;
+                font-size: 11px;
+                .swatch {
+                    height: $gutter;
+                    float: left;
+                    margin-right: $gutter/2;
+                    width: $gutter+10;
+                    height: $gutter+10;
+                    box-shadow: 0px 1px 5px rgba(0, 0, 0, .2);
+                    @include tablet {
+                       display: block;
+                       float: left;
+                       height: $gutter/4+2;
+                       margin-bottom: 6px;
+                       
+                       width: 50px;
+                       box-shadow:none;
+                    }
+                }
                 &:first-child {
                     .swatch {
                         border-radius: $radius $radius 0 0;
+                        box-shadow: 0px -1px 5px rgba(0, 0, 0, .2);
                         @include tablet{
                         border-radius:0px;
+                        box-shadow:none
                         }
                     }
                 }
@@ -589,20 +659,7 @@ textarea {
                 }
             }
         }
-        .swatch {
-            height: $gutter;
-            float: left;
-            margin-right: $gutter/4;
-            width: $gutter;
-            @include tablet {
-               display: block;
-               float: left;
-               height: $gutter/4+3;
-               margin-bottom: 5px;
-               
-               width: 50px;
-            }
-        }
+        
     }
     .leaflet-left {
         .leaflet-control {
@@ -612,15 +669,16 @@ textarea {
 .leaflet-control-layers
 {margin-top:10px}
         .leaflet-control-layers-expanded {
-            height: 26px;
-            line-height: 26px;
-            padding-top: 0px
+            height: 30px;
+            line-height: 30px;
+            padding-top: 0px;
+            span{margin-left:5px}
         }
     }
     .leaflet-control-container {
         @include tablet {
             .leaflet-top {
-                top: 272px
+                top: 260px
             }
         }
     }
@@ -654,11 +712,14 @@ textarea {
         .Select-control {
             border: 0;
             border-radius: $radius;
+            height: 40px;
+line-height: 24px;
             @include tablet {
                 border-radius: 0px;
                 padding: $larger+1 $gutter;
+                height: $gutter*2+10;
                 .Select-placeholder {
-                    padding: $larger+1 $gutter;
+                    padding: $gutter/2+3 $gutter;
                 }
             }
         }
@@ -668,14 +729,14 @@ textarea {
             @include tablet {
                 position: absolute;
                 padding: 0px;
-                top: $gutter*0.5+3;
+                top: $gutter*0.5+1;
                 right: $gutter*2+10;
             }
         }
         .Select-arrow {
-            top: $gutter/2+4;
+            top: $gutter/2+7;
             @include tablet {
-                top: $gutter+2;
+                top: $gutter+3;
                 right: $gutter+3;
             }
         }
@@ -701,22 +762,27 @@ textarea {
     .timeline {
         bottom: $gutter;
         left: $gutter;
+        height: $gutter*2;
+
         @include tablet {
             position: relative;
             left: 0px;
             top: 0px;
             bottom: 0px;
+            height: $gutter*2+10;
             border-bottom: 1px solid $background;
         }
         ul {
             list-style: none;
             li {
+                height: $gutter*2;
                 border-right: 1px solid $background;
                 cursor: pointer;
                 display: inline-block;
                 padding: $gutter/2 1.5*$gutter/2;
                 border-bottom: 1px solid #E5E5E5;
                 margin-bottom: -1px;
+                @include transition(all, 0.3s, ease);
                 &.action {
                     &:before {
                         content: '\e833';
@@ -738,14 +804,15 @@ textarea {
                     border-right: 0;
                 }
                 &:hover {
-                    background: $light;
+                    background: $background;
                 }
                 &.active {
-                    background: $light;
+                    background: $background;
                     font-weight: bold;
                 }
                 @include tablet {
                     padding: 1.5*$gutter/2+1 1.5*$gutter/3;
+                    height: $gutter*2+10;
                 }
             }
         }
@@ -759,16 +826,27 @@ textarea {
     margin-top: 20px;
 }
 .leaflet-right .map-legends.leaflet-control{margin-right:20px; margin-bottom:5px;}
-.leaflet-bottom .map-legends.leaflet-control{}
+.leaflet-bar .leaflet-control-zoom-in{background-position:2px 2px}
+.leaflet-bar .leaflet-control-zoom-out {
+background-position: 2px -24px;
+}
+.leaflet-control-layers-toggle {
+background-position: 2px -103px;
+}
 
 .leaflet-container .leaflet-control-attribution {
-    background: rgba(0, 0, 0, .1);
+    background: rgba(0, 0, 0, .2);
     font-size: 10px;
     height: 15px;
     line-height: 15px;
     a {
-        color:rgba(255,255,255,.3)
+        color:rgba(255,255,255,.5)
     }
+}
+
+.leaflet-bar a, .mapbox-icon, .map-tooltip.closable .close, .leaflet-control-layers-toggle, .leaflet-popup-close-button, .mapbox-button-icon:before{
+    width: 30px;
+    height: 30px;
 }
 
 

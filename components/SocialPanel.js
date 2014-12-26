@@ -30,6 +30,8 @@ var SocialPanel = React.createClass({
     return {
       shareContent: window.location.href,
       iframeOpen: false,
+      iframeWidth: 480,
+      iframeHeight: 800
     };
   },
 
@@ -85,13 +87,23 @@ var SocialPanel = React.createClass({
   },
 
   _buildIframeCode() {
-    return `<iframe width="400" height="800" frameborder="0" scrolling="y" marginheight="0" marginwidth="0" src="${window.location.href}"></iframe>`
+    var iframeWidth = this.state.iframeWidth
+    var iframeHeight = this.state.iframeHeight
+    return `<iframe width="${iframeWidth}" height="${iframeHeight}" frameborder="0" scrolling="y" marginheight="0" marginwidth="0" src="${window.location.href}"></iframe>`
   },
 
   _focusOnInput(e) {
     var input = e.target
     input.focus()
     input.select()
+  },
+
+  _onWidthChange(e) {
+    this.setState({iframeWidth: e.target.value})
+  },
+
+  _onHeightChange(e) {
+    this.setState({iframeHeight: e.target.value})
   },
 
   render() {
@@ -102,9 +114,15 @@ var SocialPanel = React.createClass({
     var iframeUrl = this._buildIframeCode()
     var iframeBody = this.state.iframeOpen ? (
       <div className='body'>
-        <textarea ref='iframeInput' type="text" className="iframe-copy" readOnly value={iframeUrl} autofocus onClick={this._focusOnInput} ></textarea>
+        <textarea ref='iframeInput' type="text" className="iframe-copy" value={iframeUrl} autofocus onClick={this._focusOnInput} ></textarea>
       </div>
     ) : null
+    var iframeSetting = this.state.iframeOpen ? (
+      <div className='setting'>
+        <label>Width:<input onChange={this._onWidthChange} type='number' name='Width' value={this.state.iframeWidth} /></label>
+        <label>Height:<input onChange={this._onHeightChange} type='number' name='Height' value={this.state.iframeHeight} /></label>
+      </div>
+    ): null
 
     return (
       <section className='links'>
@@ -126,6 +144,7 @@ var SocialPanel = React.createClass({
           </div>
           <div className='iframe'>
             <span onClick={this._toggleIframe} className="add-to-website">Add to your website?</span>
+            {iframeSetting}
             {iframeBody}
           </div>
         </Dialog>
