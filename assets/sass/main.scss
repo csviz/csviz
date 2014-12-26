@@ -54,6 +54,7 @@ textarea {
     margin: $gutter/2 0 $gutter 0;
     padding: $larger/2;
     border: 1px solid #ddd;
+    height: $gutter*3+10;
     &:focus {
         background: #fff;
         border: 1px solid #aaa;
@@ -112,6 +113,8 @@ textarea {
     width: 100%;
     height: 70px;
 }
+
+button{}
 /* SIDEBAR */
 
 #main {
@@ -515,7 +518,7 @@ textarea {
             max-width: 100%;
             width: 100%;
             position:fixed;
-            height: 50px;
+            height:$gutter*4+10;
             top: 50px;
             left: 0px;
             border-radius:0px;
@@ -528,6 +531,7 @@ textarea {
             @include tablet{
                 float: none;
                 position:absolute;
+                top: $gutter+10;
                   left: 50%;
                   margin-left: -150px;
             }
@@ -553,6 +557,7 @@ textarea {
                   font-size: 9px;
                   line-height: 10px;
                   float: left;
+                  text-align: center
 
                 }
             }
@@ -565,7 +570,7 @@ textarea {
             @include tablet {
                display: block;
                float: left;
-               height: 5px;
+               height: $gutter/2+2;
                margin-bottom: 5px;
                
                width: 50px;

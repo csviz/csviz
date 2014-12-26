@@ -4837,7 +4837,8 @@ textarea {
 .dialog .dialog-content textarea {
   margin: 10px 0 20px 0;
   padding: 7.5px;
-  border: 1px solid #ddd; }
+  border: 1px solid #ddd;
+  height: 70px; }
   .dialog .dialog-content textarea:focus {
     background: #fff;
     border: 1px solid #aaa;
@@ -5981,7 +5982,7 @@ textarea {
     max-width: 100%;
     width: 100%;
     position: fixed;
-    height: 50px;
+    height: 90px;
     top: 50px;
     left: 0px;
     border-radius: 0px; } }
@@ -5992,6 +5993,7 @@ textarea {
     #main .map-legend .legend-list {
       float: none;
       position: absolute;
+      top: 30px;
       left: 50%;
       margin-left: -150px; } }
   #main .map-legend .legend-list li:first-child .swatch {
@@ -6009,7 +6011,8 @@ textarea {
       width: 50px;
       font-size: 9px;
       line-height: 10px;
-      float: left; } }
+      float: left;
+      text-align: center; } }
 #main .map-legend .swatch {
   height: 20px;
   float: left;
@@ -6019,7 +6022,7 @@ textarea {
     #main .map-legend .swatch {
       display: block;
       float: left;
-      height: 5px;
+      height: 12px;
       margin-bottom: 5px;
       width: 50px; } }
 #main .leaflet-left .leaflet-control {
