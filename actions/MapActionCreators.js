@@ -39,6 +39,13 @@ var MapActionCreators = {
       type: ActionTypes.CHANGE_SEARCH_STATUS,
       response: status
     })
+  },
+
+  changeLegendStatus(status) {
+    AppDispatcher.handleViewAction({
+      type: ActionTypes.CHANGE_LEGEND_STATUS,
+      response: status
+    })
   }
 }
 

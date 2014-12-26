@@ -12,10 +12,11 @@ var YEAR_CHANGE_EVENT = 'year change'
 var COUNTRY_CHANGE_EVENT = 'country change'
 var INDICATOR_CHANGE_EVENT = 'indicator change'
 var TOGGLE_SEARCH_EVNET = 'toggle search'
+var TOGGLE_LEGEND_EVNET = 'toggle legend'
 
 // init data
 var _data = {}
-var _selected_year, _selected_indicator, _selected_country, _showSearch = false
+var _selected_year, _selected_indicator, _selected_country, _showSearch = false, _showLegend = false
 
 // init store
 var Store = objectAssign({}, EventEmitter.prototype, {
@@ -37,6 +38,10 @@ var Store = objectAssign({}, EventEmitter.prototype, {
 
   getSearchStatus() {
     return _showSearch
+  },
+
+  getLegendStatus() {
+    return _showLegend
   },
 
   addChangeListener(callback) {
@@ -81,6 +86,14 @@ var Store = objectAssign({}, EventEmitter.prototype, {
 
   emitSearchChange() {
     this.emit(TOGGLE_SEARCH_EVNET)
+  },
+
+  addLegendChangeListener(callback) {
+    this.on(TOGGLE_LEGEND_EVNET, callback)
+  },
+
+  emitLegendChange() {
+    this.emit(TOGGLE_LEGEND_EVNET)
   }
 })
 
@@ -98,6 +111,10 @@ function setSelectedCountry(country) {
 
 function setSearchStatus(status) {
   _showSearch = status
+}
+
+function setLegendStatus(status) {
+  _showLegend = status
 }
 
 Store.dispatchToken = AppDispatcher.register(function(payload) {
@@ -141,6 +158,11 @@ Store.dispatchToken = AppDispatcher.register(function(payload) {
     case ActionTypes.CHANGE_SEARCH_STATUS:
       setSearchStatus(response)
       Store.emitSearchChange()
+      break
+
+    case ActionTypes.CHANGE_LEGEND_STATUS:
+      setLegendStatus(response)
+      Store.emitLegendChange()
       break
   }
 
