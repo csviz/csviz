@@ -581,7 +581,7 @@ textarea {
         position: fixed;
 top: 50%;
 left: 20px;
-margin-top: -60px;
+margin-top: -$gutter*5+10;
 background:none;
 box-shadow: none;
         @include tablet {
@@ -620,7 +620,7 @@ box-shadow:none
                     margin-right: $gutter/2;
                     width: $gutter+10;
                     height: $gutter+10;
-                    box-shadow: 0px 1px 5px rgba(0, 0, 0, .2);
+                    box-shadow: 0px 1px 5px rgba(0, 0, 0, .1);
                     @include tablet {
                        display: block;
                        float: left;
@@ -634,7 +634,7 @@ box-shadow:none
                 &:first-child {
                     .swatch {
                         border-radius: $radius $radius 0 0;
-                        box-shadow: 0px -1px 5px rgba(0, 0, 0, .2);
+                        box-shadow: 0px -1px 5px rgba(0, 0, 0, .1);
                         @include tablet{
                         border-radius:0px;
                         box-shadow:none

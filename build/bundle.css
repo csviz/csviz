@@ -6054,7 +6054,7 @@ textarea {
   position: fixed;
   top: 50%;
   left: 20px;
-  margin-top: -60px;
+  margin-top: -90px;
   background: none;
   box-shadow: none; }
   @media (max-width: 768px) {
@@ -6091,7 +6091,7 @@ textarea {
         margin-right: 10px;
         width: 30px;
         height: 30px;
-        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2); }
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1); }
         @media (max-width: 768px) {
           #main .map-legend .legend-list li .swatch {
             display: block;
@@ -6102,7 +6102,7 @@ textarea {
             box-shadow: none; } }
       #main .map-legend .legend-list li:first-child .swatch {
         border-radius: 2px 2px 0 0;
-        box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.2); }
+        box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.1); }
         @media (max-width: 768px) {
           #main .map-legend .legend-list li:first-child .swatch {
             border-radius: 0px;
