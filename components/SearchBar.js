@@ -16,7 +16,9 @@ var Timeline = React.createClass({
   setStatusOnresize() {
     if (window.innerWidth > 768) {
       MapActionCreators.changeSearchStatus(true)
+      MapActionCreators.changeLegendStatus(true)
     } else {
+      MapActionCreators.changeLegendStatus(false)
       MapActionCreators.changeSearchStatus(false)
     }
   },
