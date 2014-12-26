@@ -139,7 +139,7 @@ Store.dispatchToken = AppDispatcher.register(function(payload) {
           setSelectedYear(_data.configs.indicators[response].years[0])
         }
       } catch (e) {
-        console.error('try to set default year error ', err)
+        console.error('try to set default year error ', e)
       }
 
       Store.emitIndicatorChange()
