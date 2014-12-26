@@ -51,7 +51,7 @@ var BarchartEnvelope = React.createClass({
 
     var barchartScale = d3.scale.linear()
       .domain(d3.extent(data))
-      .range([2, height - 2])
+      .range([1, height - 1])
 
     var svg = d3.select(this.getDOMNode())
       .append('svg')
@@ -71,7 +71,7 @@ var BarchartEnvelope = React.createClass({
         })
         // the width of the rect is actually calculated from the muted array
         .attr('width', function() {
-          return width / data.length - 2
+          return width / data.length - 5
         })
         .attr('height', function(d) {
           return barchartScale(d)

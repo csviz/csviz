@@ -1092,21 +1092,29 @@
     "legend": false,
     "menu": [
       "Learning Reading Lowest Girls - SACMEQ",
-      "Youth (15-24) literacy rate (%) Male",
-      "Learning Math highest Girls - TIMS",
-      "AID committed for Basic Education- Current prices (USD millions)",
-      "Primary Out of School Children Rate Male (%)",
-      "Learning Reading highest Boys - SACMEQ",
-      "Primary Completion Rate Total (%)",
-      "Lower Secondary Completion Rate GPI",
-      "Percentage of repeaters in lower secondary Total (%)",
-      "Primary Gross Enrollment Ratio Total (%)",
-      "Primary Completion Rate Female (%)",
-      "Learning Reading highest Girls - SACMEQ",
-      "Learning Math highest Total - TIMS",
-      "Learning Math Lowest Girls - SACMEQ",
-      "JSRs conducted",
-      "AID committed for Basic Education as % of GDP",
+      {
+        "group1": [
+          "Youth (15-24) literacy rate (%) Male",
+          "Learning Math highest Girls - TIMS",
+          "AID committed for Basic Education- Current prices (USD millions)",
+          "Primary Out of School Children Rate Male (%)"
+        ]
+      },
+      {
+        "group2": [
+          "Learning Reading highest Boys - SACMEQ",
+          "Primary Completion Rate Total (%)",
+          "Lower Secondary Completion Rate GPI",
+          "Percentage of repeaters in lower secondary Total (%)",
+          "Primary Gross Enrollment Ratio Total (%)",
+          "Primary Completion Rate Female (%)",
+          "Learning Reading highest Girls - SACMEQ",
+          "Learning Math highest Total - TIMS",
+          "Learning Math Lowest Girls - SACMEQ",
+          "JSRs conducted",
+          "AID committed for Basic Education as % of GDP"
+        ]
+      },
       "Learning Math highest Boys - SACMEQ",
       "Lower Secondary Completion Rate Male (%)",
       "Learning Reading Lowest Total - PASEC",

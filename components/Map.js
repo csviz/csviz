@@ -46,10 +46,11 @@ var Map = React.createClass({
   toggleLegend() {
     var currentLegendStatus = Store.getLegendStatus()
 
-    if (!currentLegendStatus){
+    if (currentLegendStatus){
       this.cleanLegend()
-    } else {
       this.addLegend()
+    } else {
+      this.cleanLegend()
     }
   },
 
