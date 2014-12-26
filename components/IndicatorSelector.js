@@ -49,7 +49,7 @@ var IndicatorSelector = React.createClass({
           var groupName = Object.keys(menuItem)[0]
           var options = menuItem[groupName].map(function(optionsItem, index) {
             var value = MapUtils.getCountryNameId(optionsItem)
-            return (<option key={index} value={optionsItem}>{optionsItem}</option>)
+            return (<option key={index} value={value}>{optionsItem}</option>)
           })
           return (
             <optgroup key={groupName} label={groupName}>
