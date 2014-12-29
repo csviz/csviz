@@ -5016,60 +5016,6 @@ textarea {
               transition: all 0.3s ease; }
               #sidebar .sidebar-panel .tablet-nav ul li a:hover img {
                 opacity: 0.8; } }
-    #sidebar .sidebar-panel .indicator .select {
-      border: 1px solid #EDEDED;
-      border-width: 1px 0;
-      font-weight: bold;
-      font-size: 17px;
-      position: relative;
-      word-wrap: break-word; }
-      #sidebar .sidebar-panel .indicator .select:after {
-        color: #BBB;
-        content: '\e640';
-        cursor: pointer;
-        font-family: 'mdfonticon';
-        line-height: inherit;
-        pointer-events: none;
-        position: absolute;
-        right: 5px;
-        top: 50%;
-        margin-top: -12px;
-        word-wrap: break-word;
-        height: 25px;
-        line-height: 25px;
-        padding-left: 5px; }
-        #sidebar .sidebar-panel .indicator .select:after:hover {
-          color: inherit; }
-      #sidebar .sidebar-panel .indicator .select:hover:after {
-        color: inherit; }
-      #sidebar .sidebar-panel .indicator .select select {
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        -ms-appearance: none;
-        -o-appearance: none;
-        background: #fff;
-        border: 0;
-        box-shadow: none;
-        color: inherit;
-        cursor: pointer;
-        font-family: inherit;
-        font-size: inherit;
-        height: auto;
-        line-height: 120%;
-        outline: none;
-        padding: 15px 20px;
-        padding-right: 30px;
-        width: 100%;
-        -webkit-transition: all 0.3s ease;
-        -moz-transition: all 0.3s ease;
-        -ms-transition: all 0.3s ease;
-        -o-transition: all 0.3s ease;
-        transition: all 0.3s ease; }
-        #sidebar .sidebar-panel .indicator .select select:hover {
-          background: #F9F9F9; }
-      #sidebar .sidebar-panel .indicator .select .mui-drop-down-menu .mui-menu-control .mui-menu-label {
-        padding-left: 20px; }
     #sidebar .sidebar-panel .indicator .description {
       margin: 0;
       padding: 15px 20px; }
@@ -5239,53 +5185,6 @@ textarea {
         font-size: 11px;
         text-transform: uppercase; }
 
-/* ------- */
-/*.container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.main {
-  .map-container {
-    position: relative;
-  }
-
-  @include tablet {
-    padding-top: $padding;
-    margin-top: $header;
-    .map-container {
-      margin-top: -$padding * 2;
-      #map {
-        height: 500px;
-      }
-    }
-  }
-
-  @include desktop {
-    width: 68.75%;
-    float: left;
-    border-right: 1px solid rgba(0, 0, 0, 0.05);
-    .map-container {
-      #map {
-        height: 100vh;
-        width: 100%;
-      }
-    }
-    .card {
-      padding-top: 0;
-    }
-  }
-
-}
-
-.card {
-  padding: $padding 0;
-  @include tablet {
-    background-color: #fff;
-  }
-}
-*/
 /* MAP */
 /* general typography */
 .leaflet-container {
@@ -6119,6 +6018,18 @@ textarea {
           line-height: 10px;
           float: left;
           text-align: center; } }
+  #main .map-legend .swatch {
+    height: 20px;
+    float: left;
+    margin-right: 5px;
+    width: 20px; }
+    @media (max-width: 768px) {
+      #main .map-legend .swatch {
+        display: block;
+        float: left;
+        height: 8px;
+        margin-bottom: 5px;
+        width: 50px; } }
 #main .leaflet-left .leaflet-control {
   border: 0;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1); }
@@ -6413,7 +6324,9 @@ textarea {
   color: #666666;
   cursor: pointer;
   display: block;
-  padding: 8px 10px; }
+  padding: 8px 10px;
+  height: 40px;
+  line-height: 24px; }
 
 .Select-option:last-child {
   border-bottom-right-radius: 4px;
@@ -6559,17 +6472,16 @@ textarea {
   position: relative;
   overflow: hidden;
   background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 2px;
+  border-radius: 0px;
   box-sizing: border-box;
   color: #333;
-  cursor: default;
   outline: none;
-  padding: 8px 52px 8px 10px;
+  border-bottom: 1px solid #EDEDED;
+  height: 48px;
+  line-height: 32px;
+  cursor: pointer;
+  padding: 8px 52px 8px 20px;
   transition: all 200ms ease; }
-
-.Dropdown-control:hover {
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06); }
 
 .Dropdown-arrow {
   border-color: #999 transparent transparent;
@@ -6581,7 +6493,7 @@ textarea {
   margin-top: -ceil(2.5);
   position: absolute;
   right: 10px;
-  top: 14px;
+  top: 22px;
   width: 0; }
 
 .is-open .Dropdown-arrow {
@@ -6590,11 +6502,10 @@ textarea {
 
 .Dropdown-menu {
   background-color: white;
-  border: 1px solid #ccc;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
   box-sizing: border-box;
   margin-top: -1px;
-  max-height: 200px;
+  max-height: 350px;
   overflow-y: auto;
   position: absolute;
   top: 100%;
@@ -6613,18 +6524,15 @@ textarea {
   color: rgba(51, 51, 51, 0.8);
   cursor: pointer;
   display: block;
-  padding: 8px 10px; }
-
-.Dropdown-option:last-child {
-  border-bottom-right-radius: 2px;
-  border-bottom-left-radius: 2px; }
+  padding: 12px 10px;
+  line-height: 20px; }
 
 .Dropdown-option:hover {
-  background-color: #f2f9fc;
+  background-color: #f9f9f9;
   color: #333; }
 
 .Dropdown-option.is-selected {
-  background-color: #f2f9fc;
+  background-color: #f9f9f9;
   color: #333; }
 
 .Dropdown-noresults {

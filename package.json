@@ -11,7 +11,7 @@
     "uglify-css": "cp build/bundle.css build/.bundle.css && rm build/bundle.css && node_modules/.bin/uglifycss build/.bundle.css > build/bundle.css && rm build/.bundle.css",
     "build": "mkdir -p build && npm run lib && npm run build-js && npm run build-css && npm run uglify-css",
     "watch-css": "watchy -w assets/sass -- 'npm run build-css'",
-    "browser-sync": "browser-sync start --server --files 'build/*.*' --logLevel silent",
+    "browser-sync": "browser-sync start --port 8000 --server --files 'build/*.*' --logLevel silent",
     "watch-js": "watchify main.js -t [ reactify --extension js --harmony ] -o build/bundle.js -dv",
     "watch": "npm run lib && npm run browser-sync & npm run watch-js & npm run watch-css",
     "clean": "rm -rf build && mkdir build",
