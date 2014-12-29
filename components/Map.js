@@ -131,7 +131,7 @@ var Map = React.createClass({
           color = MapUtils.getSelectColor(value, configs, selected_indicator)
         }
 
-        return {
+        return  {
           weight: 0.5,
           opacity: 0.8,
           color: 'white',
@@ -199,14 +199,12 @@ var Map = React.createClass({
     }
 
     // add country choropleth
-    if (!this.state.countryLayer) {
-      var countryLayer = L.geoJson(data.geo.filter(function (shape) {
-        return MapUtils.getCountryNameId(shape.properties['ISO_NAME']) in indicators
-      }), {
-        style: getStyle,
-        onEachFeature: onEachFeature
-      }).addTo(map)
-    }
+    var countryLayer = L.geoJson(data.geo.filter(function (shape) {
+      return MapUtils.getCountryNameId(shape.properties['ISO_NAME']) in indicators
+    }), {
+      style: getStyle,
+      onEachFeature: onEachFeature
+    }).addTo(map)
 
     if (!this.state.controlLayer) {
       var controlLayer = L.control.layers(null, {
