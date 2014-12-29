@@ -5,6 +5,7 @@ var React = require('react')
 var Router = require('react-router')
 var objectAssign = require('object-assign')
 var MapUtils = require('../utils/MapUtils')
+var Dropdown = require('./Dropdown')
 
 var MapActionCreators = require('../actions/MapActionCreators')
 var Store = require('../stores/Store')
@@ -24,18 +25,19 @@ var IndicatorSelector = React.createClass({
     this.setState({})
   },
 
-  hanldeSelectChange(e) {
+  hanldeSelectChange(options) {
     var queries = this.getQuery()
-    var _queries = objectAssign(queries, {indicator: e.target.value})
+    var _queries = objectAssign(queries, {indicator: options.value})
 
     this.replaceWith('app', {}, _queries)
-    MapActionCreators.changeIndicator(e.target.value)
+    MapActionCreators.changeIndicator(options.value)
   },
 
   render() {
-    var MenuItems, indicatorDescription
+    var MenuItems, indicatorDescription, defaultIndicator
     var data = this.props.data
     var selected_indicator = Store.getSelectedIndicator()
+
 
     // after get the configs
     if (data.configs && data.configs.indicators && selected_indicator) {
@@ -44,18 +46,23 @@ var IndicatorSelector = React.createClass({
       var menu = menuData.map(function(menuItem, menuIndex) {
         if (_.isString(menuItem)) {
           var value = MapUtils.getCountryNameId(menuItem)
-          return (<option key={menuIndex} value={value}>{menuItem}</option>)
+          var _options = { value: value, label: menuItem }
+          // set default one
+          if (value === selected_indicator) defaultIndicator = _options
+          return _options
         } else if (_.isObject(menuItem)) {
           var groupName = Object.keys(menuItem)[0]
           var options = menuItem[groupName].map(function(optionsItem, index) {
             var value = MapUtils.getCountryNameId(optionsItem)
-            return (<option key={index} value={value}>{optionsItem}</option>)
+            var _options = { value: value, label: optionsItem }
+            if (value === selected_indicator) defaultIndicator = _options
+            return _options
           })
-          return (
-            <optgroup key={groupName} label={groupName}>
-              {options}
-            </optgroup>
-          )
+          return {
+            type: 'group',
+            name: groupName,
+            items: options
+          }
         }
       })
 
@@ -68,9 +75,7 @@ var IndicatorSelector = React.createClass({
     return (
       <section className='indicator'>
         <header className='select'>
-          <select onChange={this.hanldeSelectChange} value={selected_indicator}>
-            {menu}
-          </select>
+          <Dropdown options={menu} onChange={this.hanldeSelectChange} value={defaultIndicator} />
         </header>
         <p className='description'>{indicatorDescription}</p>
       </section>

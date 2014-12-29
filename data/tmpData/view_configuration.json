@@ -1034,7 +1034,7 @@
         "2012"
       ]
     },
-    "youth__female": {
+    "youth__literacy_rate__female": {
       "description": "Youth (15-24) literacy rate (%) female",
       "display": "{{ currentIndicator }}%",
       "name": "Youth (15-24) literacy rate (%) female",
@@ -1047,7 +1047,7 @@
         "2007-2012"
       ]
     },
-    "youth__male": {
+    "youth__literacy_rate__male": {
       "description": "Youth (15-24) literacy rate (%) Male",
       "display": "{{ currentIndicator }}%",
       "name": "Youth (15-24) literacy rate (%) Male",
@@ -1060,7 +1060,7 @@
         "2007-2012"
       ]
     },
-    "youth__total": {
+    "youth__literacy_rate__total": {
       "description": "Youth (15-24) literacy rate (%) Total",
       "display": "{{ currentIndicator }}%",
       "name": "Youth (15-24) literacy rate (%) Total",
@@ -1075,19 +1075,19 @@
     }
   },
   "site": {
-    "description": "test strip name",
+    "description": "csviz",
     "logo": "http://csviz.dev.wiredcraft.com/assets/images/logo.png",
-    "name": "teststripname",
-    "repository": "fraserxu/teststripname",
-    "url": "https://fraserxu.github.io/teststripname"
+    "name": "csviz",
+    "repository": "fraserxu/csviz",
+    "url": "https://fraserxu.github.io/csviz"
   },
   "ui": {
     "choropleth": [
-      "#ccebc5",
-      "#a8ddb5",
-      "#7bccc4",
-      "#43a2ca",
-      "#0868ac"
+      "#42c6da",
+      "#3cb9ec",
+      "#42a5f5",
+      "#4a80df",
+      "#5c6bc0"
     ],
     "legend": false,
     "menu": [
