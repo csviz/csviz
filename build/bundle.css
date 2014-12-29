@@ -6124,9 +6124,11 @@ textarea {
       height: 50px;
       border-bottom: 1px solid #EDEDED; } }
   #main .timeline ul {
-    list-style: none; }
+    list-style: none;
+    overflow: hidden; }
     #main .timeline ul li {
       height: 40px;
+      line-height: 20px;
       border-right: 1px solid #EDEDED;
       cursor: pointer;
       display: inline-block;

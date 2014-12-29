@@ -679,8 +679,10 @@ textarea {
         }
         ul {
             list-style: none;
+            overflow: hidden;
             li {
                 height: $gutter*2;
+                line-height: $gutter;
                 border-right: 1px solid $background;
                 cursor: pointer;
                 display: inline-block;
