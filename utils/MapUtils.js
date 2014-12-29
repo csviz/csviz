@@ -79,17 +79,6 @@ var MapUtils = {
   },
 
   /**
-   * Center the given country on the map
-   */
-  centerOnCountry(layer, map) {
-    setTimeout(function() {
-      map.fitBounds(layer.getBounds(), {maxZoom: 5})
-    }, 0)
-
-    // layer.setStyle({ color: 'black' })
-  },
-
-  /**
    * Get Legend Html with the selected Indicator
    */
   getLegendHTML(configs, global, selected_indicator) {

@@ -39,7 +39,7 @@ var Map = React.createClass({
     Store.addLegendChangeListener(this.toggleLegend)
 
     L.mapbox.accessToken = mapbox_config.token
-    var map = L.mapbox.map('map', mapbox_config.type).setView(mapbox_config.location, mapbox_config.zoomlevel)
+    var map = L.mapbox.map('map', mapbox_config.type, { maxZoom: 4 }).setView(mapbox_config.location, mapbox_config.zoomlevel)
     this.setState({map: map})
   },
 
@@ -81,8 +81,8 @@ var Map = React.createClass({
           var selected_indicator = Store.getSelectedIndicator()
           var selected_year = Store.getSelectedYear()
 
-          this.state.map.fitBounds(layer.getBounds())
-          MapUtils.centerOnCountry(layer, this.state.map)
+          var center = layer.getBounds().getCenter()
+          this.state.map.panTo(center)
           MapUtils.addTooltip(this.state.map, layer, popup, indicators, selected_indicator, configs, selected_year)
         }
       }.bind(this))
@@ -181,12 +181,9 @@ var Map = React.createClass({
 
       // on map click handler
       function onMapClick(e) {
-        var layer = e.target
         var selectedCountryName = MapUtils.getCountryNameId(e.target.feature.properties['ISO_NAME'])
-
         self.updateQuery({country: selectedCountryName})
-
-        MapUtils.centerOnCountry(layer, map)
+        map.panTo(e.latlng)
         MapActionCreators.changeSelectedCountry(selectedCountryName)
       }
     }
