@@ -78,6 +78,7 @@ var IndicatorSelector = React.createClass({
           <Dropdown options={menu} onChange={this.hanldeSelectChange} value={defaultIndicator} />
         </header>
         <p className='description'>{indicatorDescription}</p>
+      
       </section>
     )
   }
