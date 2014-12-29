@@ -3,6 +3,7 @@
 var axios = require('axios')
 var topojson = require('topojson')
 var MapServerActionCreators = require('../actions/MapServerActionCreators')
+var MapUtils = require('./MapUtils')
 
 var _config = require('../config.json')
 var geoPath = _config.geoPath
@@ -23,7 +24,8 @@ var API = {
         MapServerActionCreators.handleDATASuccess(_data)
 
         var MapActionCreators = require('../actions/MapActionCreators')
-        var defaultIndicator = queries.indicator || Object.keys(_data.global.meta.indicators)[0]
+        var menu = _data.configs.ui.menu
+        var defaultIndicator = queries.indicator || MapUtils.getCountryNameId(menu[0])
         MapActionCreators.changeIndicator(defaultIndicator)
         if (_data.configs.indicators[defaultIndicator].years.length) {
           var defaultYear = queries.year || _data.configs.indicators[defaultIndicator].years[0]
