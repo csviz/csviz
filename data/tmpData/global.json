@@ -211,6 +211,7 @@
             "2012": null
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": null,
@@ -565,6 +566,7 @@
             "2012": null
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": 1.7538573069,
@@ -754,6 +756,12 @@
             "2007-2012": 98.79119
           }
         }
+      },
+      "australia": {
+        "map_of_the_global_partnership_for_education": 1
+      },
+      "belgium": {
+        "map_of_the_global_partnership_for_education": 1
       },
       "benin": {
         "_of_missing_data_domestic_financing": {
@@ -965,6 +973,7 @@
             "2012": null
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": null,
@@ -1319,6 +1328,7 @@
             "2012": 70.01737
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": 5.7723945543,
@@ -1719,6 +1729,7 @@
             "2012": 20.1292
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": 26.1819076529,
@@ -2179,6 +2190,7 @@
             "2012": 20.18082
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": 24.9579267117,
@@ -2579,6 +2591,7 @@
             "2012": 48.05515
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": 1.9646209946,
@@ -2979,6 +2992,7 @@
             "2012": null
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": 14.8307575644,
@@ -3168,6 +3182,9 @@
             "2007-2012": 80.57444
           }
         }
+      },
+      "canada": {
+        "map_of_the_global_partnership_for_education": 1
       },
       "central_african_republic": {
         "_of_missing_data_domestic_financing": {
@@ -3379,6 +3396,7 @@
             "2012": 13.01564
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": null,
@@ -3839,6 +3857,7 @@
             "2012": 16.01364
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": null,
@@ -4299,6 +4318,7 @@
             "2012": null
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": null,
@@ -4506,6 +4526,9 @@
             "2013": null
           }
         }
+      },
+      "congo_drc": {
+        "map_of_the_global_partnership_for_education": 0
       },
       "cote_divoire": {
         "learning_math_highest_boys__pasec": {
@@ -4779,6 +4802,7 @@
             "2012": 34.38738
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": 9.1890113349,
@@ -5413,6 +5437,9 @@
           }
         }
       },
+      "denmark": {
+        "map_of_the_global_partnership_for_education": 1
+      },
       "djibouti": {
         "_of_missing_data_domestic_financing": {
           "years": {
@@ -5623,6 +5650,7 @@
             "2012": 48.57465
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": 6.8529810298,
@@ -6023,6 +6051,7 @@
             "2012": 45.2533
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": 13.990738105,
@@ -6423,6 +6452,7 @@
             "2012": 26.95311
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": 9.8342267699,
@@ -6612,6 +6642,9 @@
             "2007-2012": 54.98298
           }
         }
+      },
+      "france": {
+        "map_of_the_global_partnership_for_education": 1
       },
       "gambia": {
         "_of_missing_data_domestic_financing": {
@@ -6807,6 +6840,7 @@
             "2012": 64.78845
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": 3.778621426,
@@ -7209,6 +7243,7 @@
             "2012": 108.34803
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": 0.3545058499,
@@ -7398,6 +7433,9 @@
             "2007-2012": 99.80049
           }
         }
+      },
+      "germany": {
+        "map_of_the_global_partnership_for_education": 1
       },
       "ghana": {
         "_of_missing_data_domestic_financing": {
@@ -7639,6 +7677,7 @@
             "2012": 66.4855
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": 4.3164457907,
@@ -8039,6 +8078,7 @@
             "2012": 36.17633
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": null,
@@ -8439,6 +8479,7 @@
             "2012": null
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": null,
@@ -8839,6 +8880,7 @@
             "2012": null
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": 12.6758936649,
@@ -9239,6 +9281,7 @@
             "2012": null
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": null,
@@ -9593,6 +9636,7 @@
             "2012": 49.44529
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": null,
@@ -9782,6 +9826,15 @@
             "2007-2012": 94.98095
           }
         }
+      },
+      "ireland": {
+        "map_of_the_global_partnership_for_education": 1
+      },
+      "italy": {
+        "map_of_the_global_partnership_for_education": 1
+      },
+      "japan": {
+        "map_of_the_global_partnership_for_education": 1
       },
       "kenya": {
         "_of_missing_data_domestic_financing": {
@@ -10053,6 +10106,7 @@
             "2012": null
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": null,
@@ -10259,7 +10313,8 @@
             "2012": null,
             "2013": null
           }
-        }
+        },
+        "map_of_the_global_partnership_for_education": 0
       },
       "kyrgyzstan": {
         "_of_missing_data_domestic_financing": {
@@ -10661,7 +10716,8 @@
             "2012": 1,
             "2013": null
           }
-        }
+        },
+        "map_of_the_global_partnership_for_education": 0
       },
       "lao_peoples_democratic_republic": {
         "_of_missing_data_domestic_financing": {
@@ -11317,6 +11373,7 @@
             "2012": 41.3433
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": 12.3432735738,
@@ -11717,6 +11774,7 @@
             "2012": null
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": 6.2654663783,
@@ -11906,6 +11964,9 @@
             "2007-2012": 49.07411
           }
         }
+      },
+      "luxembourg": {
+        "map_of_the_global_partnership_for_education": 0
       },
       "madagascar": {
         "_of_missing_data_domestic_financing": {
@@ -12117,6 +12178,7 @@
             "2012": 33.38515
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": 11.7054934687,
@@ -12577,6 +12639,7 @@
             "2012": null
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": 12.061691373,
@@ -12977,6 +13040,7 @@
             "2012": null
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": 16.8718196549,
@@ -13377,6 +13441,7 @@
             "2012": 19.87255
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": 11.1889935274,
@@ -13583,7 +13648,8 @@
             "2012": null,
             "2013": null
           }
-        }
+        },
+        "map_of_the_global_partnership_for_education": 0
       },
       "mongolia": {
         "_of_missing_data_domestic_financing": {
@@ -13810,6 +13876,7 @@
             "2012": 91.94814
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": null,
@@ -14270,6 +14337,7 @@
             "2012": 23.14901
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": 12.6758103831,
@@ -14670,6 +14738,7 @@
             "2012": 76.9316
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": 7.9005067492,
@@ -14859,6 +14928,9 @@
             "2007-2012": 82.35369
           }
         }
+      },
+      "netherlands": {
+        "map_of_the_global_partnership_for_education": 1
       },
       "nicaragua": {
         "_of_missing_data_domestic_financing": {
@@ -15070,6 +15142,7 @@
             "2012": null
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": 9.5967653121,
@@ -15470,6 +15543,7 @@
             "2012": 12.20577
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": 21.684230233,
@@ -15824,6 +15898,7 @@
             "2012": null
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": null,
@@ -16014,6 +16089,9 @@
           }
         }
       },
+      "norway": {
+        "map_of_the_global_partnership_for_education": 1
+      },
       "pakistan": {
         "_of_missing_data_domestic_financing": {
           "years": {
@@ -16178,6 +16256,7 @@
             "2012": 42.90592
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": 4.6987824386,
@@ -16578,6 +16657,7 @@
             "2012": 62.09288
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": null,
@@ -17152,6 +17232,12 @@
           }
         }
       },
+      "romania": {
+        "map_of_the_global_partnership_for_education": 1
+      },
+      "russia": {
+        "map_of_the_global_partnership_for_education": 1
+      },
       "rwanda": {
         "_of_missing_data_domestic_financing": {
           "years": {
@@ -17362,6 +17448,7 @@
             "2012": 27.78457
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": null,
@@ -17762,6 +17849,7 @@
             "2012": null
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": 34.3289745354,
@@ -18162,6 +18250,7 @@
             "2012": 34.77488
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": 14.0657140506,
@@ -18562,6 +18651,7 @@
             "2012": 55.62633
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": 12.4702526295,
@@ -18946,6 +19036,7 @@
             "2012": null
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": null,
@@ -19400,6 +19491,7 @@
             "2012": null
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": null,
@@ -19589,6 +19681,9 @@
             "2007-2012": null
           }
         }
+      },
+      "spain": {
+        "map_of_the_global_partnership_for_education": 1
       },
       "sudan": {
         "_of_missing_data_domestic_financing": {
@@ -19800,6 +19895,7 @@
             "2012": null
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": 4.7656987347,
@@ -19989,6 +20085,12 @@
             "2007-2012": 87.91188
           }
         }
+      },
+      "sweden": {
+        "map_of_the_global_partnership_for_education": 1
+      },
+      "switzerland": {
+        "map_of_the_global_partnership_for_education": 1
       },
       "tajikistan": {
         "_of_missing_data_domestic_financing": {
@@ -20200,6 +20302,7 @@
             "2012": 86.41057
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": 0.4756279037,
@@ -20466,7 +20569,8 @@
           "years": {
             "2007": 1.4
           }
-        }
+        },
+        "map_of_the_global_partnership_for_education": 0
       },
       "tanzaniamainland": {
         "jsr_report_available": {
@@ -20716,6 +20820,7 @@
             "2012": null
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": 1.6505440178,
@@ -21176,6 +21281,7 @@
             "2012": null
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": 25.4739181184,
@@ -21778,6 +21884,7 @@
             "2012": null
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": 2.3090862245,
@@ -21967,6 +22074,9 @@
             "2007-2012": 87.40883
           }
         }
+      },
+      "united_kingdom": {
+        "map_of_the_global_partnership_for_education": 1
       },
       "united_republic_of_tanzania": {
         "_of_missing_data_domestic_financing": {
@@ -22352,6 +22462,9 @@
           }
         }
       },
+      "united_states": {
+        "map_of_the_global_partnership_for_education": 1
+      },
       "uzbekistan": {
         "_of_missing_data_domestic_financing": {
           "years": {
@@ -22516,6 +22629,7 @@
             "2012": null
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": null,
@@ -23106,7 +23220,8 @@
             "2012": null,
             "2013": 1
           }
-        }
+        },
+        "map_of_the_global_partnership_for_education": 0
       },
       "yemen": {
         "_of_missing_data_domestic_financing": {
@@ -23318,6 +23433,7 @@
             "2012": 48.58968
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": null,
@@ -23778,6 +23894,7 @@
             "2012": null
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": 6.4253892226,
@@ -24238,6 +24355,7 @@
             "2012": null
           }
         },
+        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": null,
@@ -25309,6 +25427,12 @@
           "2012"
         ]
       },
+      "map_of_the_global_partnership_for_education": {
+        "avg": 0.23076923076923078,
+        "max_value": 1,
+        "min_value": 0,
+        "source_file": "Map of the Global Partnership For Education (GPE).csv"
+      },
       "percentage_of_repeaters_in_lower_secondary_total": {
         "avg": {
           "years": {
@@ -25759,298 +25883,472 @@
     "locations": {
       "afghanistan": {
         "ISO": "AFG",
+        "fragile": true,
         "label": "Afghanistan"
       },
       "albania": {
         "ISO": "ALB",
+        "fragile": false,
         "label": "Albania"
+      },
+      "australia": {
+        "ISO": "AUS",
+        "fragile": false,
+        "label": "Australia"
+      },
+      "belgium": {
+        "ISO": "BEL",
+        "fragile": false,
+        "label": "Belgium"
       },
       "benin": {
         "ISO": "BEN",
+        "fragile": false,
         "label": "Benin"
       },
       "bhutan": {
         "ISO": "BTN",
+        "fragile": false,
         "label": "Bhutan"
       },
       "burkina_faso": {
         "ISO": "BFA",
+        "fragile": false,
         "label": "Burkina Faso"
       },
       "burundi": {
         "ISO": "BDI",
+        "fragile": true,
         "label": "Burundi"
       },
       "cambodia": {
         "ISO": "KHM",
+        "fragile": false,
         "label": "Cambodia"
       },
       "cameroon": {
         "ISO": "CMR",
+        "fragile": false,
         "label": "Cameroon"
+      },
+      "canada": {
+        "ISO": "CAN",
+        "fragile": false,
+        "label": "Canada"
       },
       "central_african_republic": {
         "ISO": "CAF",
+        "fragile": true,
         "label": "Central African Republic"
       },
       "chad": {
         "ISO": "TCD",
+        "fragile": true,
         "label": "Chad"
       },
       "comoros": {
         "ISO": "COM",
+        "fragile": true,
         "label": "Comoros"
       },
       "congo": {
         "ISO": "COD",
+        "fragile": false,
         "label": "Congo (DRC)"
+      },
+      "congo_drc": {
+        "ISO": "COD",
+        "fragile": true,
+        "label": "Congo DRC"
       },
       "cote_divoire": {
         "ISO": "CIV",
+        "fragile": false,
         "label": "Cote d'Ivoire"
       },
       "cte_divoire": {
         "ISO": "CIV",
+        "fragile": false,
         "label": "C\u00f4te d'Ivoire"
       },
       "democratic_republic_of_the_congo": {
         "ISO": "COD",
+        "fragile": false,
         "label": "Democratic Republic of the Congo"
+      },
+      "denmark": {
+        "ISO": "DNK",
+        "fragile": false,
+        "label": "Denmark"
       },
       "djibouti": {
         "ISO": "DJI",
+        "fragile": false,
         "label": "Djibouti"
       },
       "eritrea": {
         "ISO": "ERI",
+        "fragile": true,
         "label": "Eritrea"
       },
       "ethiopia": {
         "ISO": "ETH",
+        "fragile": true,
         "label": "Ethiopia"
+      },
+      "france": {
+        "ISO": "FRA",
+        "fragile": false,
+        "label": "France"
       },
       "gambia": {
         "ISO": "GMB",
+        "fragile": false,
         "label": "Gambia"
       },
       "gambia_the": {
         "ISO": "GMB",
+        "fragile": false,
         "label": "Gambia, The"
       },
       "georgia": {
         "ISO": "GEO",
+        "fragile": false,
         "label": "Georgia"
+      },
+      "germany": {
+        "ISO": "DEU",
+        "fragile": false,
+        "label": "Germany"
       },
       "ghana": {
         "ISO": "GHA",
+        "fragile": false,
         "label": "Ghana"
       },
       "guinea": {
         "ISO": "GIN",
+        "fragile": false,
         "label": "Guinea"
       },
       "guineabissau": {
         "ISO": "GNB",
+        "fragile": true,
         "label": "Guinea-Bissau"
       },
       "guyana": {
         "ISO": "GUY",
+        "fragile": false,
         "label": "Guyana"
       },
       "haiti": {
         "ISO": "HTI",
+        "fragile": true,
         "label": "Haiti"
       },
       "honduras": {
         "ISO": "HND",
+        "fragile": false,
         "label": "Honduras"
+      },
+      "ireland": {
+        "ISO": "IRL",
+        "fragile": false,
+        "label": "Ireland"
+      },
+      "italy": {
+        "ISO": "ITA",
+        "fragile": false,
+        "label": "Italy"
+      },
+      "japan": {
+        "ISO": "JPN",
+        "fragile": false,
+        "label": "Japan"
       },
       "kenya": {
         "ISO": "KEN",
+        "fragile": false,
         "label": "Kenya"
       },
       "kyrgyz_republic": {
         "ISO": "GBR",
+        "fragile": false,
         "label": "Kyrgyz Republic"
       },
       "kyrgyzstan": {
         "ISO": "KGZ",
+        "fragile": false,
         "label": "Kyrgyzstan"
       },
       "lao_pdr": {
         "ISO": "LAO",
+        "fragile": false,
         "label": "Lao PDR"
       },
       "lao_peoples_democratic_republic": {
         "ISO": "LAO",
+        "fragile": false,
         "label": "Lao People's Democratic Republic"
       },
       "lesotho": {
         "ISO": "LSO",
+        "fragile": false,
         "label": "Lesotho"
       },
       "liberia": {
         "ISO": "LBR",
+        "fragile": true,
         "label": "Liberia"
+      },
+      "luxembourg": {
+        "ISO": "LUX",
+        "fragile": false,
+        "label": "Luxembourg"
       },
       "madagascar": {
         "ISO": "MDG",
+        "fragile": true,
         "label": "Madagascar"
       },
       "malawi": {
         "ISO": "MWI",
+        "fragile": true,
         "label": "Malawi"
       },
       "mali": {
         "ISO": "MLI",
+        "fragile": true,
         "label": "Mali"
       },
       "mauritania": {
         "ISO": "MRT",
+        "fragile": false,
         "label": "Mauritania"
       },
       "moldova": {
         "ISO": "MDA",
+        "fragile": false,
         "label": "Moldova"
       },
       "mongolia": {
         "ISO": "MNG",
+        "fragile": false,
         "label": "Mongolia"
       },
       "mozambique": {
         "ISO": "MOZ",
+        "fragile": false,
         "label": "Mozambique"
       },
       "nepal": {
         "ISO": "NPL",
+        "fragile": true,
         "label": "Nepal"
+      },
+      "netherlands": {
+        "ISO": "NLD",
+        "fragile": false,
+        "label": "Netherlands"
       },
       "nicaragua": {
         "ISO": "NIC",
+        "fragile": false,
         "label": "Nicaragua"
       },
       "niger": {
         "ISO": "NER",
+        "fragile": true,
         "label": "Niger"
       },
       "nigeria": {
         "ISO": "NGA",
+        "fragile": true,
         "label": "Nigeria"
+      },
+      "norway": {
+        "ISO": "NOR",
+        "fragile": false,
+        "label": "Norway"
       },
       "pakistan": {
         "ISO": "PAK",
+        "fragile": true,
         "label": "Pakistan"
       },
       "papua_new_guinea": {
         "ISO": "PNG",
+        "fragile": false,
         "label": "Papua New Guinea"
       },
       "republic_of_moldova": {
         "ISO": "MDA",
+        "fragile": false,
         "label": "Republic of Moldova"
+      },
+      "romania": {
+        "ISO": "ROU",
+        "fragile": false,
+        "label": "Romania"
+      },
+      "russia": {
+        "ISO": "RUS",
+        "fragile": false,
+        "label": "Russia"
       },
       "rwanda": {
         "ISO": "RWA",
+        "fragile": false,
         "label": "Rwanda"
       },
       "sao_tome_and_principe": {
         "ISO": "STP",
+        "fragile": false,
         "label": "Sao Tome and Principe"
       },
       "senegal": {
         "ISO": "SEN",
+        "fragile": false,
         "label": "Senegal"
       },
       "sierra_leone": {
         "ISO": "SLE",
+        "fragile": true,
         "label": "Sierra Leone"
       },
       "somalia": {
         "ISO": "SOM",
+        "fragile": true,
         "label": "Somalia"
       },
       "somalia_somaliland": {
         "ISO": "SOM",
+        "fragile": false,
         "label": "Somalia -Somaliland"
       },
       "somaliacentral_south": {
         "ISO": "NF-",
+        "fragile": false,
         "label": "Somalia-Central South"
       },
       "somaliapuntland": {
         "ISO": "NF-",
+        "fragile": false,
         "label": "Somalia-Puntland"
       },
       "south_sudan": {
         "ISO": "SSD",
+        "fragile": true,
         "label": "South Sudan"
+      },
+      "spain": {
+        "ISO": "ESP",
+        "fragile": false,
+        "label": "Spain"
       },
       "sudan": {
         "ISO": "SDN",
+        "fragile": true,
         "label": "Sudan"
+      },
+      "sweden": {
+        "ISO": "SWE",
+        "fragile": false,
+        "label": "Sweden"
+      },
+      "switzerland": {
+        "ISO": "CHE",
+        "fragile": false,
+        "label": "Switzerland"
       },
       "tajikistan": {
         "ISO": "TJK",
+        "fragile": false,
         "label": "Tajikistan"
       },
       "tanzania": {
         "ISO": "TZA",
+        "fragile": false,
         "label": "Tanzania"
       },
       "tanzaniamainland": {
         "ISO": "NF-",
+        "fragile": false,
         "label": "Tanzania-Mainland"
       },
       "tanzaniazanzibar": {
         "ISO": "TZA",
+        "fragile": false,
         "label": "Tanzania-Zanzibar"
       },
       "timor_leste": {
         "ISO": "TLS",
+        "fragile": false,
         "label": "Timor Leste"
       },
       "timorleste": {
         "ISO": "TLS",
+        "fragile": true,
         "label": "Timor-Leste"
       },
       "togo": {
         "ISO": "TGO",
+        "fragile": true,
         "label": "Togo"
       },
       "total": {
         "ISO": "BOL",
+        "fragile": false,
         "label": "Total"
       },
       "uganda": {
         "ISO": "UGA",
+        "fragile": true,
         "label": "Uganda"
+      },
+      "united_kingdom": {
+        "ISO": "GBR",
+        "fragile": false,
+        "label": "United Kingdom"
       },
       "united_republic_of_tanzania": {
         "ISO": "TZA",
+        "fragile": false,
         "label": "United Republic of Tanzania"
+      },
+      "united_states": {
+        "ISO": "USA",
+        "fragile": false,
+        "label": "United States"
       },
       "uzbekistan": {
         "ISO": "UZB",
+        "fragile": false,
         "label": "Uzbekistan"
       },
       "viet_nam": {
         "ISO": "VNM",
+        "fragile": false,
         "label": "Viet Nam"
       },
       "vietnam": {
         "ISO": "VNM",
+        "fragile": false,
         "label": "Vietnam"
       },
       "yemen": {
         "ISO": "YEM",
+        "fragile": true,
         "label": "Yemen"
       },
       "zambia": {
         "ISO": "ZMB",
+        "fragile": false,
         "label": "Zambia"
       },
       "zimbabwe": {
         "ISO": "ZWE",
+        "fragile": true,
         "label": "Zimbabwe"
       }
     },
