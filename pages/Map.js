@@ -10,6 +10,7 @@ var Store = require('../stores/Store')
 
 var Map = require('../components/Map')
 var MapControls = require('../components/MapControls')
+var Pattern = require('../components/Pattern')
 
 var MapPage = React.createClass({
 
@@ -47,6 +48,7 @@ var MapPage = React.createClass({
       <DocumentTitle title='Map'>
         <section className={classes} id='app'>
           <Map data={this.state.data} />
+          <Pattern />
           <MapControls data={this.state.data} />
         </section>
       </DocumentTitle>

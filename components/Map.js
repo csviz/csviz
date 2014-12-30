@@ -108,9 +108,6 @@ var Map = React.createClass({
       for (var layer_i in this.state.countryLayer._layers) {
         map.removeLayer(this.state.countryLayer._layers[layer_i])
       }
-      this.setState({
-        countryLayer: null
-      })
     }
 
     // get style function
@@ -143,6 +140,7 @@ var Map = React.createClass({
         return {
           weight: 0.5,
           opacity: 0.8,
+          fillOpacity: 0.65,
           color: 'white',
           fillColor: '#eeeeee'
         }
@@ -150,7 +148,6 @@ var Map = React.createClass({
 
     }
 
-    // on each feature handler
     function onEachFeature(feature, layer) {
       var closeTooltip
       var popup = new L.Popup({ autoPan: false, closeButton: false })
@@ -169,6 +166,9 @@ var Map = React.createClass({
         layer.setStyle({
           fillOpacity: 1
         })
+        if (!L.Browser.ie && !L.Browser.opera) {
+          layer.bringToFront()
+        }
       }
 
       // on mouse out handler
@@ -188,12 +188,55 @@ var Map = React.createClass({
       }
     }
 
-    // add legend
-    // clean up first
-    this.cleanLegend()
-    if (window.innerWidth > 768) {
-      this.addLegend()
+    function onEachFragileFeature(feature, layer) {
+      setTimeout(function() {
+        var countryName = MapUtils.getCountryNameId(layer.feature.properties['ISO_NAME'])
+        if(layer._container && meta.locations[countryName].fragile) {
+          layer._container.children[0].style.fill = 'url(#fragilePattern)'
+        }
+      }, 0)
+
+      var closeTooltip
+      var popup = new L.Popup({ autoPan: false, closeButton: false })
+
+      layer.on({
+        mousemove: mousemove,
+        mouseout: mouseout,
+        click: onMapClick
+      })
+
+      // mouse move handler
+      function mousemove(e) {
+        var layer = e.target
+        MapUtils.addTooltip(map, layer, popup, indicators, selected_indicator, configs, selected_year, e)
+        window.clearTimeout(closeTooltip)
+        layer.setStyle({
+          fillOpacity: 1
+        })
+        if (!L.Browser.ie && !L.Browser.opera) {
+          layer.bringToFront()
+        }
+      }
+
+      // on mouse out handler
+      function mouseout(e) {
+        countryLayer.resetStyle(e.target)
+        closeTooltip = window.setTimeout(function() {
+          map.closePopup()
+        }, 100)
+      }
+
+      // on map click handler
+      function onMapClick(e) {
+        var selectedCountryName = MapUtils.getCountryNameId(e.target.feature.properties['ISO_NAME'])
+        self.updateQuery({country: selectedCountryName})
+        map.panTo(e.latlng)
+        MapActionCreators.changeSelectedCountry(selectedCountryName)
+      }
     }
+
+    this.cleanLegend()
+    if (window.innerWidth > 768) { this.addLegend() }
 
     // add country choropleth
     var countryLayer = L.geoJson(data.geo.filter(function (shape) {
@@ -203,17 +246,29 @@ var Map = React.createClass({
       onEachFeature: onEachFeature
     }).addTo(map)
 
+    if (!this.state.fragileCountryLayer) {
+      var fragileCountryLayer = L.geoJson(data.geo.filter(function (shape) {
+        return MapUtils.getCountryNameId(shape.properties['ISO_NAME']) in indicators
+      }), {
+        style: getStyle,
+        onEachFeature: onEachFragileFeature
+      }).addTo(map)
+    }
+
     if (!this.state.controlLayer) {
       var controlLayer = L.control.layers(null, {
+        'Fragile States': fragileCountryLayer,
         'Country Label': L.mapbox.tileLayer(mapbox_config.label)
       }, {
-        position: 'topleft'
+        position: 'topleft',
+        autoZIndex: 'true'
       }).addTo(map)
       this.setState({controlLayer: controlLayer})
     }
 
     this.setState({
-      countryLayer: countryLayer
+      countryLayer: countryLayer,
+      fragileCountryLayer: fragileCountryLayer
     })
   },
 
@@ -230,7 +285,6 @@ var Map = React.createClass({
         <Timeline data={this.props.data} />
         <SearchBar data={this.props.data} />
       </section>
-
     )
   }
 
