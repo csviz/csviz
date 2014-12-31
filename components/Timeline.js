@@ -7,13 +7,14 @@ var objectAssign = require('object-assign')
 var cx = React.addons.classSet
 
 var MapActionCreators = require('../actions/MapActionCreators')
+var queryMixin = require('../mixins/queryMixin')
 var Store = require('../stores/Store')
 
 var Timeline = React.createClass({
 
   displayName: 'Timeline',
 
-  mixins: [ Router.State, Router.Navigation ],
+  mixins: [ Router.State, Router.Navigation, queryMixin ],
 
   getInitialState() {
     return {
@@ -39,11 +40,7 @@ var Timeline = React.createClass({
 
   handleYearClick(e) {
     var selected_year = e.target.innerHTML
-    var queries = this.getQuery()
-    var _queries = objectAssign(queries, {year: selected_year})
-
-    this.replaceWith('app', {}, _queries)
-
+    this.updateQuery({year: selected_year})
     MapActionCreators.changeSelectedYear(selected_year)
   },
 

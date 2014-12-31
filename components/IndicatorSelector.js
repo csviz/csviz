@@ -8,13 +8,14 @@ var MapUtils = require('../utils/MapUtils')
 var Dropdown = require('./Dropdown')
 
 var MapActionCreators = require('../actions/MapActionCreators')
+var queryMixin = require('../mixins/queryMixin')
 var Store = require('../stores/Store')
 
 var IndicatorSelector = React.createClass({
 
   displayName: 'IndicatorSelector',
 
-  mixins: [ Router.State, Router.Navigation ],
+  mixins: [ Router.State, Router.Navigation, queryMixin ],
 
   componentDidMount() {
     Store.addIndicatorChangeListener(this.handleStoreChange)
@@ -26,10 +27,7 @@ var IndicatorSelector = React.createClass({
   },
 
   hanldeSelectChange(options) {
-    var queries = this.getQuery()
-    var _queries = objectAssign(queries, {indicator: options.value})
-
-    this.replaceWith('app', {}, _queries)
+    this.updateQuery({indicator: options.value})
     MapActionCreators.changeIndicator(options.value)
   },
 
@@ -78,7 +76,7 @@ var IndicatorSelector = React.createClass({
           <Dropdown options={menu} onChange={this.hanldeSelectChange} value={defaultIndicator} />
         </header>
         <p className='description'>{indicatorDescription}</p>
-      
+
       </section>
     )
   }

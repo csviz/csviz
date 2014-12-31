@@ -3,7 +3,6 @@
 var _ = require('lodash')
 var React = require('react')
 var Router = require('react-router')
-var objectAssign = require('object-assign')
 var mapbox = require('mapbox.js')
 var numeral = require('numeral')
 
@@ -12,6 +11,7 @@ var Store = require('../stores/Store')
 var MapUtils = require('../utils/MapUtils')
 var Timeline = require('./Timeline')
 var SearchBar = require('./SearchBar')
+var queryMixin = require('../mixins/queryMixin')
 
 var config = require('../config.json')
 var mapbox_config = config.mapbox
@@ -20,7 +20,7 @@ var Map = React.createClass({
 
   displayName: 'MapComponent',
 
-  mixins: [ Router.State, Router.Navigation ],
+  mixins: [ Router.State, Router.Navigation, queryMixin ],
 
   getInitialState() {
     return {
@@ -145,7 +145,14 @@ var Map = React.createClass({
           fillColor: '#eeeeee'
         }
       }
+    }
 
+    // get style function
+    function getFragileStyle(feature) {
+      return {
+        weight: 0.5,
+        color: 'white'
+      }
     }
 
     function onEachFeature(feature, layer) {
@@ -238,19 +245,17 @@ var Map = React.createClass({
     this.cleanLegend()
     if (window.innerWidth > 768) { this.addLegend() }
 
-    // add country choropleth
-    var countryLayer = L.geoJson(data.geo.filter(function (shape) {
-      return MapUtils.getCountryNameId(shape.properties['ISO_NAME']) in indicators
-    }), {
+
+    var filteredCountry = data.geo.filter((shape) => MapUtils.getCountryNameId(shape.properties['ISO_NAME']) in indicators)
+
+    var countryLayer = L.geoJson(filteredCountry, {
       style: getStyle,
       onEachFeature: onEachFeature
     }).addTo(map)
 
     if (!this.state.fragileCountryLayer) {
-      var fragileCountryLayer = L.geoJson(data.geo.filter(function (shape) {
-        return MapUtils.getCountryNameId(shape.properties['ISO_NAME']) in indicators
-      }), {
-        style: getStyle,
+      var fragileCountryLayer = L.geoJson(filteredCountry, {
+        style: getFragileStyle,
         onEachFeature: onEachFragileFeature
       }).addTo(map)
     }
@@ -270,12 +275,6 @@ var Map = React.createClass({
       countryLayer: countryLayer,
       fragileCountryLayer: fragileCountryLayer
     })
-  },
-
-  updateQuery(data) {
-    var queries = this.getQuery()
-    var _queries = objectAssign(queries, data)
-    this.replaceWith('app', {}, _queries)
   },
 
   render() {

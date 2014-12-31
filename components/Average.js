@@ -10,13 +10,14 @@ var Scatterplot = require('./Scatterplot')
 var cx = React.addons.classSet
 
 var MapActionCreators = require('../actions/MapActionCreators')
+var queryMixin = require('../mixins/queryMixin')
 var Store = require('../stores/Store')
 
 var Average = React.createClass({
 
   displayName: 'Average',
 
-  mixins: [ Router.State, Router.Navigation ],
+  mixins: [ Router.State, Router.Navigation, queryMixin ],
 
   componentDidMount() {
     Store.addIndicatorChangeListener(this.handleStoreChange)
@@ -31,17 +32,15 @@ var Average = React.createClass({
   },
 
   onCountryClick(countryName) {
-    var queries = this.getQuery()
-    var _queries = objectAssign(queries, {country: countryName})
-
-    this.replaceWith('app', {}, _queries)
+    this.updateQuery({country: countryName})
     MapActionCreators.changeSelectedCountry(countryName)
   },
 
   onCircleClick(d, i) {
     var selected_indicator = Store.getSelectedIndicator()
-    var selectedYear = this.props.data.global.meta.indicators[selected_indicator].years[i]
-    MapActionCreators.changeSelectedYear(selectedYear)
+    var selected_year = this.props.data.global.meta.indicators[selected_indicator].years[i]
+    this.updateQuery({year: selected_year})
+    MapActionCreators.changeSelectedYear(selected_year)
   },
 
   render() {

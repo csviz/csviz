@@ -34,17 +34,6 @@ var MapUtils = {
 
   },
 
-  getSelectColor(value, configs, selected_indicator) {
-    var d = configs.indicators[selected_indicator].mapping[value]
-
-    var max = _.max(configs.indicators[selected_indicator].mapping)
-    var min = _.min(configs.indicators[selected_indicator].mapping)
-    var start = configs.ui.choropleth.start
-    var end = configs.ui.choropleth.end
-
-    return MapUtils.getColorCode(min, max, start, end, d)
-  },
-
   /**
    * A simple template helper function to genrerate markup from data
    */

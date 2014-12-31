@@ -5,13 +5,17 @@ var React = require('react')
 var mui = require('material-ui')
 var Paper = mui.Paper
 var SearchBar = require('react-select')
+var Router = require('react-router')
 
 var MapActionCreators = require('../actions/MapActionCreators')
+var queryMixin = require('../mixins/queryMixin')
 var Store = require('../stores/Store')
 
 var Timeline = React.createClass({
 
   displayName: 'SearchBar',
+
+  mixins: [ Router.State, Router.Navigation, queryMixin ],
 
   setStatusOnresize() {
     if (window.innerWidth > 768) {
@@ -41,6 +45,7 @@ var Timeline = React.createClass({
 
   handleSearchChange(countryName) {
     if(_.contains(Object.keys(this.props.data.global.meta.locations), countryName)) {
+      this.updateQuery({country: countryName})
       MapActionCreators.changeSelectedCountry(countryName)
     }
   },
