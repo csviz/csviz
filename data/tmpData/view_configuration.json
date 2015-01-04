@@ -640,6 +640,33 @@
       "type": "number",
       "years": [
         "2007"
+      ],
+      "choropleth":[
+        {
+          "color": "#feedde",
+          "domain": [1.0, 2.0],
+          "label": "1.0 - 2.0"
+        },
+        {
+          "color": "#fdbe85",
+          "domain": [2.0, 4.0],
+          "label": "2.0 - 4.0"
+        },
+        {
+          "color": "#fd8d3c",
+          "domain": [4.0, 6.0],
+          "label": "4.0 - 6.0"
+        },
+        {
+          "color": "#e6550d",
+          "domain": [6.0, 8.0],
+          "label": "6.0 - 8.0"
+        },
+        {
+          "color": "#a63603",
+          "domain": [8.0, 16.0],
+          "label": "8.0 - 16.0"
+        }
       ]
     },
     "learning_reading_lowest_total__pasec": {

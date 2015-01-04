@@ -150,7 +150,7 @@ var Map = React.createClass({
     // get style function
     function getFragileStyle(feature) {
       return {
-        weight: 0.5,
+        weight: 0,
         color: 'white'
       }
     }

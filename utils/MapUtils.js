@@ -17,21 +17,32 @@ var MapUtils = {
    * Given a value, to calculate the color value from the current indicator and confif data
    */
   getNumberColor(value, configs, meta, selected_indicator) {
-    var min = meta.indicators[selected_indicator].min_value
-    var max = meta.indicators[selected_indicator].max_value
 
-    // TODO: read color from individual indicator config
+    // read color from individual indicator config
+    if (configs.indicators[selected_indicator].choropleth) {
+      var customChoropleth = configs.indicators[selected_indicator].choropleth
+      var i = 0
+      while (i < customChoropleth.length) {
+        if (value > customChoropleth[i].domain[0] && value < customChoropleth[i].domain[1]) {
+          break
+        }
+        i += 1
+      }
+      return customChoropleth[i].color
+    } else {
+      var min = meta.indicators[selected_indicator].min_value
+      var max = meta.indicators[selected_indicator].max_value
+      
+      var colors = configs.ui.choropleth
+      var steps = configs.ui.choropleth.length
+      var step = (max - min)/steps
+      var colorIndex = ((value - min)/step).toFixed()
 
-    var colors = configs.ui.choropleth
-    var steps = configs.ui.choropleth.length
-    var step = (max - min)/steps
-    var colorIndex = ((value - min)/step).toFixed()
+      if (colorIndex <= 0) { colorIndex = 0 }
+      if (colorIndex >= steps) { colorIndex = steps - 1 }
 
-    if (colorIndex <= 0) { colorIndex = 0 }
-    if (colorIndex >= steps) { colorIndex = steps - 1 }
-
-    return colors[colorIndex]
-
+      return colors[colorIndex]
+    }
   },
 
   /**
@@ -72,30 +83,46 @@ var MapUtils = {
    */
   getLegendHTML(configs, global, selected_indicator) {
 
-    if (_.isNull(global.meta.indicators[selected_indicator].min_value) || _.isNull(global.meta.indicators[selected_indicator].max_value)) return
+    // custom color goes first
+    if(configs.indicators[selected_indicator].choropleth) {
+      var labels = []
+      // legend for country with Data not available
+      labels.push('<li><span class="swatch" style="background:#eeeeee"></span>Data not available</li>')      
 
-    var labels = [], from, to, color
-    var min = global.meta.indicators[selected_indicator].min_value.toFixed()
-    var max = global.meta.indicators[selected_indicator].max_value.toFixed()
-    var colors = configs.ui.choropleth
-    var steps = configs.ui.choropleth.length
-    var step = ((max - min)/steps).toFixed()
+      var customChoropleth = configs.indicators[selected_indicator].choropleth
 
-    // legend for country with Data not available
-    labels.push('<li><span class="swatch" style="background:#eeeeee"></span>Data not available</li>')
+      customChoropleth.forEach(function(item) {
+        labels.push(`<li><span class='swatch' style='background:${item.color}'></span>${item.label}</li>`)
+      })
 
-    for (var i = 0; i < steps; i++) {
-      if (i == 0) {
-        from = parseInt(min)
-        to = parseInt(from) + parseInt(step)
-      } else {
-        from = parseInt(to + 1)
-        to = parseInt(from) + parseInt(step)
+      return `<ul class='legend-list'>${labels.join('')}</ul>`
+    } else {
+      if (_.isNull(global.meta.indicators[selected_indicator].min_value) || _.isNull(global.meta.indicators[selected_indicator].max_value)) return
+
+      var labels = [], from, to, color
+      var min = global.meta.indicators[selected_indicator].min_value.toFixed()
+      var max = global.meta.indicators[selected_indicator].max_value.toFixed()
+      var colors = configs.ui.choropleth
+      var steps = configs.ui.choropleth.length
+      var step = ((max - min)/steps).toFixed()
+
+      // legend for country with Data not available
+      labels.push('<li><span class="swatch" style="background:#eeeeee"></span>Data not available</li>')
+
+      for (var i = 0; i < steps; i++) {
+        if (i == 0) {
+          from = parseInt(min)
+          to = parseInt(from) + parseInt(step)
+        } else {
+          from = parseInt(to)
+          to = parseInt(from) + parseInt(step)
+        }
+        labels.push(`<li><span class='swatch' style='background:${colors[i]}'></span>${numeral(from).format('0.0a')}${' &ndash; '}${numeral(to).format('0.0a')}</li>`)
       }
-      labels.push(`<li><span class='swatch' style='background:${colors[i]}'></span>${numeral(from).format('0.0a')}${' &ndash; '}${numeral(to).format('0.0a')}</li>`)
-    }
 
-    return `<ul class='legend-list'>${labels.join('')}</ul>`
+      return `<ul class='legend-list'>${labels.join('')}</ul>`  
+    }
+    
   },
 
   /**
