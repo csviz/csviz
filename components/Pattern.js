@@ -23,7 +23,9 @@ var Pattern = React.createClass({
     var svg = d3.select(this.getDOMNode())
       .style({
         width: 300,
-        height: 300
+        height: 300,
+        position: 'absolute',
+        'z-index': -1
       })
       .append('defs')
       .append('pattern')

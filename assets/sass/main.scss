@@ -583,7 +583,7 @@ textarea {
     .leaflet-control-container {
         @include tablet {
             .leaflet-top {
-                top: 260px
+                top: 220px
             }
         }
     }
@@ -662,6 +662,27 @@ textarea {
                     background: $light;
                 }
             }
+        }
+    }
+    .about {
+        left: $gutter;
+        top: 130px;
+        width: 30px;
+        height: 30px;
+        background: #FFF;
+        border-radius: $radius;
+        box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+        line-height: 140%;
+        position: absolute;
+        z-index: 999;
+        padding: $gutter/4;
+        .mui-icon {
+            font-size: 20px;
+        }
+        @include tablet {
+            left: $gutter;
+            top: $gutter*20;
+            border-bottom: 1px solid $background;
         }
     }
     .timeline {

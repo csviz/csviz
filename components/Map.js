@@ -5,6 +5,9 @@ var React = require('react')
 var Router = require('react-router')
 var mapbox = require('mapbox.js')
 var numeral = require('numeral')
+var mui = require('material-ui')
+var Dialog = mui.Dialog
+var Icon = mui.Icon
 
 var MapActionCreators = require('../actions/MapActionCreators')
 var Store = require('../stores/Store')
@@ -277,12 +280,26 @@ var Map = React.createClass({
     })
   },
 
+  _showDialog() {
+    this.refs.aboutDialog.show()
+  },
+
   render() {
+    var dialogActions = [
+      { text: '×' }
+    ]
+
     return (
       <section id='main'>
         <div id='map'></div>
         <Timeline data={this.props.data} />
         <SearchBar data={this.props.data} />
+        <div className='about' onClick={this._showDialog}>
+          <Icon icon='action-info' />
+        </div>
+        <Dialog className='about-dialog-box' ref='aboutDialog' title='About' actions={dialogActions}>
+          <span className="about-dialog-box-title">The Global Partnership for Education is the only multilateral partnership devoted to getting all children into school for a quality education in the world's poorest countries.</span>
+        </Dialog>
       </section>
     )
   }
