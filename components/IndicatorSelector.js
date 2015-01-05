@@ -3,7 +3,7 @@
 var _ = require('lodash')
 var React = require('react')
 var Router = require('react-router')
-var objectAssign = require('object-assign')
+var objectAssign = require('react/lib/Object.assign')
 var MapUtils = require('../utils/MapUtils')
 var Dropdown = require('./Dropdown')
 

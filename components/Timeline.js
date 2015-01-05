@@ -3,7 +3,7 @@
 var _ = require('lodash')
 var React = require('react')
 var Router = require('react-router')
-var objectAssign = require('object-assign')
+var objectAssign = require('react/lib/Object.assign')
 var cx = React.addons.classSet
 
 var MapActionCreators = require('../actions/MapActionCreators')

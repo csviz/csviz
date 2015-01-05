@@ -1,6 +1,6 @@
 'use strict'
 
-var objectAssign = require('object-assign')
+var objectAssign = require('react/lib/Object.assign')
 
 var updateQueryMixin = {
   updateQuery(data) {

@@ -2,7 +2,7 @@
 
 var _ = require('lodash')
 var EventEmitter = require('events').EventEmitter
-var objectAssign = require('object-assign')
+var objectAssign = require('react/lib/Object.assign')
 var shallowEqual = require('react/lib/shallowEqual')
 var CHANGE_EVENT = 'change'
 
