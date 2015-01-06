@@ -6110,19 +6110,25 @@ textarea {
     #main .search .Select-menu .Select-option.is-focused {
       background: #F9F9F9; }
 #main .about {
-  left: 20px;
-  top: 130px;
+  right: 270px;
+  top: 25px;
   width: 30px;
   height: 30px;
-  background: #FFF;
   border-radius: 2px;
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
   line-height: 140%;
   position: absolute;
   z-index: 999;
   padding: 5px; }
   #main .about .mui-icon {
-    font-size: 20px; }
+    font-size: 20px;
+    color: #fff;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+    #main .about .mui-icon:hover {
+      color: #E5E5E5; }
   @media (max-width: 768px) {
     #main .about {
       left: 20px;
@@ -6497,10 +6503,11 @@ textarea {
   color: #333;
   outline: none;
   border-bottom: 1px solid #EDEDED;
-  height: 48px;
-  line-height: 32px;
+  height: auto;
+  min-height: 48px;
+  line-height: 20px;
   cursor: pointer;
-  padding: 8px 52px 8px 20px;
+  padding: 14px 52px 14px 20px;
   transition: all 200ms ease; }
 
 .Dropdown-arrow {
@@ -6510,10 +6517,10 @@ textarea {
   content: ' ';
   display: block;
   height: 0;
-  margin-top: -ceil(2.5);
+  margin-top: -2.5px;
   position: absolute;
   right: 10px;
-  top: 22px;
+  top: 50%;
   width: 0; }
 
 .is-open .Dropdown-arrow {
@@ -6530,7 +6537,7 @@ textarea {
   position: absolute;
   top: 100%;
   width: 100%;
-  z-index: 1000;
+  z-index: 999;
   -webkit-overflow-scrolling: touch; }
 
 .Dropdown-menu .group > .title {

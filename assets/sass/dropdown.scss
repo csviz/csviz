@@ -10,11 +10,11 @@
     color: #333;
     outline: none;
     border-bottom: 1px solid #EDEDED;
-    
-    height: 48px;
-    line-height: 32px;
+    height:auto;
+    min-height: 48px;
+    line-height: 20px;
     cursor: pointer;
-    padding: 8px 52px 8px 20px;
+    padding: 14px 52px 14px 20px;
     transition: all 200ms ease;
     // &:hover {
     //     background: #f4f4f4;
@@ -28,10 +28,10 @@
     content: ' ';
     display: block;
     height: 0;
-    margin-top: -ceil(2.5);
+    margin-top: -2.5px;
     position: absolute;
     right: 10px;
-    top: 22px;
+    top: 50%;
     width: 0
 }
 .is-open .Dropdown-arrow {
@@ -48,7 +48,7 @@
     position: absolute;
     top: 100%;
     width: 100%;
-    z-index: 1000;
+    z-index: 999;
     -webkit-overflow-scrolling: touch;
 }
 .Dropdown-menu .group > .title {
