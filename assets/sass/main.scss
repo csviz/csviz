@@ -725,7 +725,7 @@ textarea {
                 }
                 &:first-child {
                     border-radius: $radius 0 0 $radius;
-
+                    width: 44px;
                 }
                 &:last-child {
                     border-radius: 0 $radius $radius 0;
