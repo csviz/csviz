@@ -84,7 +84,7 @@ var MapUtils = {
   getLegendHTML(configs, global, selected_indicator) {
 
     // custom color goes first
-    if(configs.indicators[selected_indicator].choropleth) {
+    if(configs && configs.indicators[selected_indicator].choropleth) {
       var labels = []
       // legend for country with Data not available
       labels.push('<li><span class="swatch" style="background:#eeeeee"></span>Data not available</li>')      

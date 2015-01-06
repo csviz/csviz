@@ -12,7 +12,8 @@ var Scatterplot = React.createClass({
   getDefaultProps: function() {
     return {
       width: 310,
-      height: 150,
+      height: 80,
+      labelHeight: 20,
       data: [15, 12, 25, 8, 20]
     }
   },
@@ -37,17 +38,18 @@ var Scatterplot = React.createClass({
 
     var width = this.props.width
     var height = this.props.height
+    var labelHeight = this.props.labelHeight
     var data = this.props.data.slice()
     var selectedIndex = this.props.selectedIndex
     var onCircleClick = this.props.onCircleClick || (function() {})
 
     var xScale = d3.scale.linear()
       .domain([0, data.length])
-      .range([height/4 + 2, width])
+      .range([height/2, width - height/2])
 
     var rScale = d3.scale.linear()
       .domain([d3.min(data), d3.max(data)])
-      .range([5, height/4])
+      .range([5, height/2 - 5])
 
     var svg = d3.select(this.getDOMNode())
       .append('svg')
@@ -62,7 +64,7 @@ var Scatterplot = React.createClass({
       .attr('cx', function(d, i) {
         return xScale(i)
       })
-      .attr('cy', height/2 - 20)
+      .attr('cy', height/2)
       .attr('r', function(d) {
         return rScale(d)
       })
@@ -103,7 +105,13 @@ var Scatterplot = React.createClass({
         onCircleClick(d, i)
       })
 
-    svg.selectAll('year-label')
+    var yearLabel = d3.select(this.getDOMNode())
+      .append('svg')
+      .attr('width', width)
+      .attr('height', labelHeight)
+      .append('g')
+
+    yearLabel.selectAll('year-label')
       .data(data)
       .enter()
       .append('text')
@@ -124,10 +132,16 @@ var Scatterplot = React.createClass({
       .attr('x', function(d, i) {
         return xScale(i)
       })
-      .attr('y', height/2 + 40)
+      .attr('y', labelHeight)
       .attr('text-anchor', 'middle')
 
-    svg.selectAll('values')
+    var valueLabel = d3.select(this.getDOMNode())
+      .append('svg')
+      .attr('width', width)
+      .attr('height', labelHeight)
+      .append('g')
+      
+    valueLabel.selectAll('values')
       .data(data)
       .enter()
       .append('text')
@@ -140,7 +154,7 @@ var Scatterplot = React.createClass({
       .attr('x', function(d, i) {
         return xScale(i)
       })
-      .attr('y', height/2 + 60)
+      .attr('y', labelHeight)
       .attr('text-anchor', 'middle')
   }
 })

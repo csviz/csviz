@@ -6165,7 +6165,8 @@ textarea {
       #main .timeline ul li.action span {
         display: none; }
       #main .timeline ul li:first-child {
-        border-radius: 2px 0 0 2px; }
+        border-radius: 2px 0 0 2px;
+        width: 44px; }
       #main .timeline ul li:last-child {
         border-radius: 0 2px 2px 0;
         border-right: 0; }

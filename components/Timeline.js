@@ -71,7 +71,7 @@ var Timeline = React.createClass({
           this.replaceWith('app', {}, _queries)
           MapActionCreators.changeSelectedYear(next_year)
         }
-      }.bind(this), 600)
+      }.bind(this), 300)
       this.setState({ playLoop: playLoop })
     }
 
