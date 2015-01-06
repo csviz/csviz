@@ -153,8 +153,11 @@ var Map = React.createClass({
     // get style function
     function getFragileStyle(feature) {
       return {
-        weight: 0,
-        color: 'white'
+        weight: 1,
+        opacity: 0.8,
+        color: 'rgba(0, 0, 0, 0)',
+        fillOpacity: 0.65,
+        fillColor: 'rgba(0, 0, 0, 0)'
       }
     }
 
@@ -247,7 +250,6 @@ var Map = React.createClass({
 
     this.cleanLegend()
     if (window.innerWidth > 768) { this.addLegend() }
-
 
     var filteredCountry = data.geo.filter((shape) => MapUtils.getCountryNameId(shape.properties['ISO_NAME']) in indicators)
 
