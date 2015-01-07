@@ -87,6 +87,7 @@ var MapUtils = {
     if(configs && configs.indicators[selected_indicator].choropleth) {
       var labels = []
       // legend for country with Data not available
+      labels.push('<li><span class="swatch fragile"></span>Fragile State</li>')
       labels.push('<li><span class="swatch" style="background:#eeeeee"></span>Data not available</li>')      
 
       var customChoropleth = configs.indicators[selected_indicator].choropleth
@@ -107,6 +108,7 @@ var MapUtils = {
       var step = ((max - min)/steps).toFixed()
 
       // legend for country with Data not available
+      labels.push('<li><span class="swatch fragile"></span>Fragile State</li>')
       labels.push('<li><span class="swatch" style="background:#eeeeee"></span>Data not available</li>')
 
       for (var i = 0; i < steps; i++) {

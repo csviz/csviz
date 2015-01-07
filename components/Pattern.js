@@ -13,17 +13,35 @@ var Pattern = React.createClass({
     return React.createElement('svg', null)
   },
 
+  buildPath: function(data) {
+    var gap = data.mw / data.steps
+    var path = []
+    for (var i = 0; i < data.steps; i++) {
+      path.push('M0 ' + gap * (data.steps - i - 1) + ' l' + gap * (i + 1) + ',' + gap * (i + 1))
+    }
+    for (var i = 0; i < data.steps - 1; i++) {
+      path.push('M' + gap * (i + 1) + ' 0 l' + gap * (data.steps - i - 1) + ',' + gap * (data.steps - i - 1))
+    }
+    return path
+  },
+
   generatePattern: function() {
     var el = this.getDOMNode()
     while (el.firstChild) {
       el.removeChild(el.firstChild)
     }
 
-    var paths = ['M0 15 l5,5', 'M0 10 l10,10', 'M0 5 l15,15', 'M0 0 l20,20', 'M15 0 l5,5', 'M10 0 l10,10', 'M5 0 l15,15']
+    var data = {
+      mw: 20,
+      mh: 20,
+      steps: 5
+    }
+
+    var paths = this.buildPath(data)
     var svg = d3.select(this.getDOMNode())
       .style({
-        width: 300,
-        height: 300,
+        width: 20,
+        height: 20,
         position: 'absolute',
         'z-index': -1
       })
