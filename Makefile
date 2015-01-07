@@ -1,4 +1,4 @@
-GITHUB_REPO ?= https://$token:@github.com/csviz/csviz.git
+GITHUB_REPO ?= https://$(token):@github.com/csviz/csviz.git
 
 demo.deploy:
 	git config user.name 'csviz' && \
