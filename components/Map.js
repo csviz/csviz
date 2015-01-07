@@ -107,11 +107,7 @@ var Map = React.createClass({
     var indicators = global.data.locations
 
     // clean up existing layers
-    if (this.state.countryLayer && this.state.countryLayer._layers !== undefined) {
-      for (var layer_i in this.state.countryLayer._layers) {
-        map.removeLayer(this.state.countryLayer._layers[layer_i])
-      }
-    }
+    if (this.state.countryLayer) map.removeLayer(this.state.countryLayer)
 
     // get style function
     function getStyle(feature) {
@@ -258,11 +254,15 @@ var Map = React.createClass({
       onEachFeature: onEachFeature
     }).addTo(map)
 
-    if (!this.state.fragileCountryLayer) {
+    this.setState({countryLayer: countryLayer})
+
+    // fragile layer and controll layer should be reused, country layer update all the time
+    if (_.isUndefined(this.state.fragileCountryLayer)) {
       var fragileCountryLayer = L.geoJson(filteredCountry, {
         style: getFragileStyle,
         onEachFeature: onEachFragileFeature
       }).addTo(map)
+      this.setState({ fragileCountryLayer: fragileCountryLayer })
     }
 
     if (!this.state.controlLayer) {
@@ -276,10 +276,6 @@ var Map = React.createClass({
       this.setState({controlLayer: controlLayer})
     }
 
-    this.setState({
-      countryLayer: countryLayer,
-      fragileCountryLayer: fragileCountryLayer
-    })
   },
 
   _showDialog() {
