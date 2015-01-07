@@ -6,8 +6,10 @@ demo.deploy:
 	git config --global push.default matching && \
 	git checkout -b gh-pages && \
 	git reset --hard origin/master && \
+	npm install && \
+	npm run build && \
 	cp -r data/tmpData/* data/ && \
-	git add -Af data && \
+	git add -Af data build && \
 	git commit -am 'gh-pages update' && \
 	git remote set-url origin $(GITHUB_REPO) && \
 	git push -ufq origin gh-pages
