@@ -19,6 +19,14 @@
     // &:hover {
     //     background: #f4f4f4;
     // }
+    .placeholder{
+        font-size: 15px;
+        color:#b7b7b7;
+        transition: all 200ms ease;
+        &:hover{
+           color:#aaa;
+        }
+    }
 }
 
 .Dropdown-arrow {
@@ -52,7 +60,7 @@
     -webkit-overflow-scrolling: touch;
 }
 .Dropdown-menu .group > .title {
-    padding: 8px 10px;
+    padding: 8px 20px;
     color: rgba(51, 51, 51, 1);
     font-weight: bold;
     text-transform: capitalize;
@@ -62,7 +70,7 @@
     color: rgba(51, 51, 51, 0.8);
     cursor: pointer;
     display: block;
-    padding: 12px 10px;
+    padding: 12px 20px;
     line-height: 20px;
 }
 

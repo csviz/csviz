@@ -2,7 +2,7 @@
 /* Variables */
 
 $header: 5px;
-$sidebar: 400px;
+$sidebar: 470px;
 $gutter: 20px;
 $radius: 2px;
 $small: 11px;
@@ -22,49 +22,134 @@ $create:20;
 /* GENERAL */
 
 html, body, #app {
-    height: 100%;
-    line-height: 120%;
-    width: 100%;
-    min-width: 300px;
+  height: 100%;
+  line-height: 120%;
+  width: 100%;
+  min-width: 300px;
 }
 h1, h2, h3, h4, h5, h6 {
-    line-height: 160%;
+  line-height: 160%;
 }
 /*reset*/
 
 html {
-    @include desktop {
-        overflow: hidden
-    }
+  @include desktop {
+    overflow: hidden
+  }
 }
 textarea {
-    resize: none;
-    border: none;
-    background: #fff;
+  resize: none;
+  border: none;
+  background: #fff;
+  color: $black;
+  letter-spacing: 1px;
+}
+.dialog {
+  position: fixed;
+  max-width: 600px;
+  width: 80%;
+  margin-left: -300px;
+  text-align: left;
+  z-index: $create*50;
+  visibility: hidden;
+  opacity: 0;
+  transform-origin: center;
+  -webkit-transform-origin: center;
+  -moz-transform-origin: center;
+  .mui-paper {
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  .mui-paper-button {
+    float: left;
+    margin-right: $gutter/2;
+    width: 177px!important;
+    @include tablet {
+      float: none;
+      width: 100%;
+      margin-bottom: $gutter/2;
+    }
+  }
+  .mui-paper-button:last-child {
+    margin-right: 0px;
+  }
+  .dialog-actions {
+    padding: $gutter+8 $gutter $gutter/4 $gutter;
+    margin-top: 35px;
+    @include tablet {
+      margin-top: 0px
+    }
+  }
+  .dialog-title {
+    text-align: left;
     color: $black;
-    letter-spacing: 1px;
-}
-.dialog .dialog-content {
+    padding: 14px 24px 0 24px;
+  }
+  .share-dialog-links {
+    @include tablet {
+      text-align: center
+    }
+  }
+  .dialog-content span:first-child {
+    text-align: left;
+    color: $lightgrey;
+  }
+  .dialog-content span.add-to-website {
+    cursor: pointer;
+    margin: $gutter 0 0 0;
+    color: $black;
+    float: left;
+    font-size: 12px;
+    @include transition(all, 0.3s, ease);
+    &:hover {
+      color: #000;
+    }
+  }
+  .setting {
+    float: right;
+    margin: 20px 0px 0px 10px;
+    font-size: 12px;
+    span {
+      margin: 0px 5px 0px 15px;
+      color: $black!important;
+    }
+    input {
+      border: 1px solid $background;
+      width: 60px;
+      height: 26px;
+      margin-top: -4px;
+      &:focus {
+        border: 1px solid #bbb;
+        box-shadow: none;
+      }
+    }
+  }
+  @include tablet {
+    margin-left: -40%;
+    min-width: 300px;
+  }
+  .dialog-content {
     padding-top: $gutter/2;
-}
-.dialog .mui-paper {
+  }
+  .mui-paper {
     background: $light;
-}
-.dialog .dialog-content textarea {
+  }
+  .dialog-content textarea {
     margin: $gutter/2 0 $gutter 0;
     padding: $larger/2;
     border: 1px solid $background;
     height: $gutter*4;
     &:focus {
-        background: #fff;
-        border: 1px solid #bbb;
-        box-shadow: none;
+      background: #fff;
+      border: 1px solid #bbb;
+      box-shadow: none;
     }
-}
-.dialog .dialog-overlay {
+  }
+  .dialog-overlay {
     z-index: $create*50+1;
-}
-.dialog .dialog-actions .actions-right:last-child {
+  }
+  .dialog-actions .actions-right:last-child {
     float: none;
     position: absolute;
     top: $gutter/2+2;
@@ -73,48 +158,48 @@ textarea {
     font-size: 24px;
     @include transition(all, 0.3s, ease);
     &:hover {
-        color: #000!important;
+      color: #000!important;
     }
-}
-.dialog .dialog-actions .actions-right .action{
+  }
+  .dialog-actions .actions-right .action {
     color: $black!important;
     @include transition(all, 0.3s, ease);
-     &:hover {
-        color: #000!important;
+    &:hover {
+      color: #000!important;
     }
-}
-.dialog {
-    visibility: hidden;
-    opacity: 0;
-    transform-origin: center;
-    -webkit-transform-origin: center;
-    -moz-transform-origin: center;
-    .mui-paper {
-        -webkit-transform: scale(0.9);
-        -moz-transform: scale(0.9);
-        transform: scale(0.9);
-    }
-}
-.dialog.show {
+  }
+  &.show {
+    position: fixed;
+    z-index: 1000;
     visibility: visible;
     opacity: 1;
     -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
     -moz-transition: -moz-transform 0.4s, opacity 0.4s;
     transition: transform 0.4s, opacity 0.4s;
     .mui-paper {
-        -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
-        -moz-transition: -moz-transform 0.2s, opacity 0.2s;
-        transition: transform 0.2s, opacity 0.2s;
-        -webkit-transform: scale(1);
-        -moz-transform: scale(1);
-        transform: scale(1);
+      -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+      -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+      transition: transform 0.2s, opacity 0.2s;
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      transform: scale(1);
     }
-}
-.dialog textarea.iframe-copy {
+  }
+  textarea.iframe-copy {
     float: left;
     width: 100%;
     height: $gutter*4;
+  }
+  &.about-dialog-box{
+    .dialog-content{
+        float: left;
+        width: 100%;
+    }
+  }
 }
+
+
+
 
 
 /* SIDEBAR */
@@ -125,7 +210,7 @@ textarea {
     position: fixed;
     right: $sidebar;
     top: 0;
-    z-index: 0;
+    z-index: 1;
     @include tablet {
         position: relative;
         width: 100%;
@@ -194,6 +279,7 @@ textarea {
 
             }
         }
+
         .tablet-nav {
             // border-bottom: 1px solid $background;
             h2, ul {
@@ -206,7 +292,7 @@ textarea {
                 width: 100%;
                 height: $gutter*2.5;
                 background: #fff;
-                z-index: $create*50;
+                z-index: $create*50+1;
                 min-width: $gutter*15;
                 h1, span {
                     display: none
@@ -257,136 +343,8 @@ textarea {
                 padding: 1.5*$gutter/2 $gutter;
             }
         }
-        .links {
-            background: #fff;
-            text-align: right;
-            padding: 1.5*$gutter/2 $gutter;
-            border-top:1px solid $background;
-            .mui-paper-button {
-                box-shadow: none;
-                text-align: center;
-                width: ($sidebar - 3*$gutter - 10)/2;
-                height: $gutter*2;
-                line-height: $gutter*2;
-
-                @include tablet {
-                    width: 100%;
-                    margin-bottom: $gutter/2
-                }
-                .mui-paper-container {
-                    box-shadow: none !important;
-                    background:$background;
-                    @include transition(all, 0.3s, ease);
-                    &:hover{
-                        background:#dfdfdf;
-                        .mui-paper-button-content{
-                        span{color:#000}
-                    }
-                        }
-                    .mui-paper-button-content{
-                        span{color:$black;}
-                    }
-                }
-                .mui-paper-button-content span:before {
-                    font-family: 'mdfonticon';
-                    margin-right: $gutter/2;
-                }
-            }
-            .share {
-                float: left;
-                @include tablet {
-                    float: none
-                }
-            }
-            .download .mui-paper-button-content span:before {
-                content: '\e744';
-            }
-            .share .mui-paper-button-content span:before {
-                content: '\e61a';
-            }
-        }
-        .dialog {
-            position: fixed;
-            max-width: 600px;
-            width: 80%;
-            margin-left: -300px;
-            text-align: left;
-            z-index: $create*50;
-            .mui-paper-button {
-                float: left;
-                margin-right: $gutter/2;
-                width: ($sidebar - 3*$gutter)/2+7;
-                @include tablet {
-                    float: none;
-                    width: 100%;
-                    margin-bottom: $gutter/2;
-                }
-            }
-            .mui-paper-button:last-child{
-                margin-right: 0px;
-            }
-            .dialog-actions {
-                padding: $gutter+8 $gutter $gutter/4 $gutter;
-                margin-top: 35px;
-                @include tablet {
-                    margin-top: 0px
-                }
-            }
-            .dialog-title {
-                text-align: left;
-                color: $black;
-                padding: 14px 24px 0 24px;
-            }
-            .share-dialog-links {
-                @include tablet {
-                    text-align: center
-                }
-            }
-            .dialog-content span:first-child {
-                text-align: left;
-                color: $lightgrey;
-            }
-            .dialog-content span.add-to-website {
-                cursor: pointer;
-                margin: $gutter 0 0 0;
-                color: $black;
-                float: left;
-                font-size: 12px;
-                @include transition(all, 0.3s, ease);
-                &:hover {
-                    color: #000;
-                }
-
-            }
-
-           .setting{
-                float: right;
-                margin: 20px 0px 0px 10px;
-                font-size: 12px;
 
 
-                span{
-                    margin:0px 5px 0px 15px;
-                    color: $black!important;
-                }
-                input{
-                        border: 1px solid $background;
-                        width: 60px;
-                        height: 26px;
-                        margin-top: -4px;
-
-                        &:focus {
-                            border: 1px solid #bbb;
-                            box-shadow: none;
-                        }
-                }
-
-            }
-            @include tablet {
-                margin-left: -40%;
-                min-width: 300px;
-            }
-        }
         .drilldown {
             background: $light;
             font-size: $larger;
@@ -462,6 +420,55 @@ textarea {
             }
         }
     }
+            .links {
+            background: #fff;
+            text-align: right;
+            padding: 1.5*$gutter/2 $gutter;
+            border-top:1px solid $background;
+            .mui-paper-button {
+                box-shadow: none;
+                text-align: center;
+                width: ($sidebar - 3*$gutter - 10)/2;
+                height: $gutter*2;
+                line-height: $gutter*2;
+
+                @include tablet {
+                    width: 100%;
+                    margin-bottom: $gutter/2
+                }
+                .mui-paper-container {
+                    box-shadow: none !important;
+                    background:$background;
+                    @include transition(all, 0.3s, ease);
+                    &:hover{
+                        background:#dfdfdf;
+                        .mui-paper-button-content{
+                        span{color:#000}
+                    }
+                        }
+                    .mui-paper-button-content{
+                        span{color:$black;}
+                    }
+                }
+                .mui-paper-button-content span:before {
+                    font-family: 'mdfonticon';
+                    margin-right: $gutter/2;
+                }
+            }
+            .share {
+                float: left;
+                @include tablet {
+                    float: none
+                }
+            }
+            .download .mui-paper-button-content span:before {
+                content: '\e744';
+            }
+            .share .mui-paper-button-content span:before {
+                content: '\e61a';
+            }
+        }
+
 }
 
 /* MAP */
@@ -470,11 +477,12 @@ textarea {
 #main {
     .map-legends {
         position: fixed;
-        top: 50%;
-        left: 20px;
-        margin-top: -$gutter*5+10;
-        background:none;
-        box-shadow: none;
+        bottom: 20px;
+        right: $sidebar;
+        background:rgba(255,255,255,.4);
+        padding:$gutter/2;
+        box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+
         @include tablet {
             max-width: 100%;
             width: 100%;
@@ -483,7 +491,7 @@ textarea {
             top: 50px;
             left: 0px;
             border-radius: 0px;
-            background: #fff;
+            background:rgba(255,255,255,.4);
             margin: 0px;
             box-shadow:none
         }
@@ -497,7 +505,7 @@ textarea {
                 position:absolute;
                 top: $gutter+10;
                 left: 50%;
-                margin-left: -150px;
+                margin-left: -175px;
 
             }
             li {
@@ -505,10 +513,11 @@ textarea {
                 line-height: $gutter+10;
                 color: #000;
                 font-size: 11px;
+                text-align: right;
                 .swatch {
                     height: $gutter;
-                    float: left;
-                    margin-right: $gutter/2;
+                    float: right;               
+                    margin-left: $gutter/2;
                     width: $gutter+10;
                     height: $gutter+10;
                     box-shadow: 0px 1px 5px rgba(0, 0, 0, .1);
@@ -521,8 +530,8 @@ textarea {
                        float: left;
                        height: $gutter/4+2;
                        margin-bottom: 6px;
-
                        width: 50px;
+                       margin-left: 0px;
                        box-shadow:none;
                     }
                 }
@@ -532,7 +541,7 @@ textarea {
                         box-shadow: 0px -1px 5px rgba(0, 0, 0, .1);
                         @include tablet{
                         border-radius:0px;
-                        box-shadow:none
+                        box-shadow:none;
                         }
                     }
                 }
@@ -669,8 +678,8 @@ textarea {
         }
     }
     .about {
-        right: 270px;
-        top: 25px;
+        left: 20px;
+        top: 130px;
         width: 30px;
         height: 30px;
         border-radius: $radius;
@@ -678,12 +687,14 @@ textarea {
         position: absolute;
         z-index: 999;
         padding: $gutter/4;
+        background: #fff;
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, .1);
         .mui-icon {
             font-size: 20px;
-            color:#fff;
+            color:$black;
              @include transition(all, 0.3s, ease);
             &:hover{
-                color: $line;
+                color: #000;
             }
         }
         @include tablet {
