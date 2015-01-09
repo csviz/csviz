@@ -21,10 +21,10 @@
     // }
     .placeholder{
         font-size: 15px;
-        color:#b7b7b7;
+        // color:#b7b7b7;
         transition: all 200ms ease;
         &:hover{
-           color:#aaa;
+           // color:#aaa;
         }
     }
 }
@@ -38,7 +38,7 @@
     height: 0;
     margin-top: -2.5px;
     position: absolute;
-    right: 10px;
+    right: 20px;
     top: 50%;
     width: 0
 }

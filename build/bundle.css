@@ -5080,6 +5080,7 @@ textarea {
                 opacity: 0.8; } }
     #sidebar .sidebar-panel .indicator .description {
       margin: 0;
+      color: #aaa;
       padding: 15px 20px; }
     #sidebar .sidebar-panel .drilldown {
       background: #F9F9F9;
@@ -6516,10 +6517,7 @@ textarea {
   transition: all 200ms ease; }
   .Dropdown-control .placeholder {
     font-size: 15px;
-    color: #b7b7b7;
     transition: all 200ms ease; }
-    .Dropdown-control .placeholder:hover {
-      color: #aaa; }
 
 .Dropdown-arrow {
   border-color: #999 transparent transparent;
@@ -6530,7 +6528,7 @@ textarea {
   height: 0;
   margin-top: -2.5px;
   position: absolute;
-  right: 10px;
+  right: 20px;
   top: 50%;
   width: 0; }
 

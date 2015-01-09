@@ -340,6 +340,7 @@ textarea {
 
             .description {
                 margin: 0;
+                color:#aaa;
                 padding: 1.5*$gutter/2 $gutter;
             }
         }
@@ -585,7 +586,7 @@ textarea {
         }
         .leaflet-control-layers {
           margin-top:10px;
-          
+
         }
         .leaflet-control-layers-expanded {
             // height: 30px;
