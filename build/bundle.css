@@ -5112,7 +5112,7 @@ textarea {
           -webkit-transition: all 0.3s;
           transition: all 0.3s; }
         #sidebar .sidebar-panel .drilldown .list li circle:hover {
-          fill: orange; }
+          fill: #4d4d4d; }
         #sidebar .sidebar-panel .drilldown .list li text {
           font-family: Roboto, sans-serif; }
       #sidebar .sidebar-panel .drilldown .label {
