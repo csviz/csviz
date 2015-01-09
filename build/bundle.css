@@ -5977,6 +5977,7 @@ textarea {
         left: 50%;
         margin-left: -175px; } }
     #main .map-legend .legend-list li {
+      font-family: 'Roboto', Arial, sans;
       height: 30px;
       line-height: 30px;
       color: #000;
@@ -6042,7 +6043,9 @@ textarea {
   height: 70px;
   line-height: 22px; }
   #main .leaflet-left .leaflet-control-layers-expanded span {
-    margin-left: 5px; }
+    margin-left: 5px;
+    position: relative;
+    font-family: 'Roboto', Arial, sans; }
 @media (max-width: 768px) {
   #main .leaflet-control-container .leaflet-top {
     top: 220px; }

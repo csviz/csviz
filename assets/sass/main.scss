@@ -16,6 +16,7 @@ $grey: #BBB;
 $line: #E5E5E5;
 $lightgrey: #999;
 $create:20;
+$font: 'Roboto', Arial, sans;
 /* Material UI */
 
 @import 'material';
@@ -510,6 +511,7 @@ textarea {
 
             }
             li {
+                font-family: $font;
                 height: $gutter+10;
                 line-height: $gutter+10;
                 color: #000;
@@ -594,8 +596,30 @@ textarea {
             padding: 13px 15px;
             height: 70px;
             line-height: 22px;
+            // input{
+            //     &[type=checkbox]{
+            //         opacity: 1;
 
-            span{margin-left:5px}
+            //     }
+            //      &:before{
+            //         position:absolute;
+            //         top: -1px;
+            //         content: '';
+            //             width: $gutter/2+3;
+            //             height: $gutter/2+3;
+            //             filter: grayscale(100%);
+            //             border:2px solid #000;
+            //             opacity: 1;
+                        
+            //     }
+            // }
+
+            span{
+                margin-left:5px;
+                position:relative;
+                font-family: $font;
+
+            }
         }
     }
     .leaflet-control-container {
