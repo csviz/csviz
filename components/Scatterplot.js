@@ -43,9 +43,9 @@ var Scatterplot = React.createClass({
     var selectedIndex = this.props.selectedIndex
     var onCircleClick = this.props.onCircleClick || (function() {})
 
-    var xScale = d3.scale.ordinal()
-      .domain(data)
-      .rangePoints([height/2, width - height/2], 0.5)
+    var xScale = d3.scale.linear()
+      .domain([0, data.length])
+      .range([height/2, width - height/2])
 
     var rScale = d3.scale.linear()
       .domain([d3.min(data), d3.max(data)])
@@ -62,14 +62,13 @@ var Scatterplot = React.createClass({
       .enter()
       .append('circle')
       .attr('cx', function(d, i) {
-        return xScale(d)
+        return xScale(i)
       })
       .attr('cy', height/2)
       .attr('r', function(d) {
         return rScale(d)
       })
       .attr('fill', function(d, i) {
-        if (selectedIndex === i) return '#4d4d4d'
         var data = Store.getAll()
         var selected_indicator = Store.getSelectedIndicator()
         if (_.isEmpty(data) || _.isEmpty(selected_indicator)) return
@@ -129,9 +128,12 @@ var Scatterplot = React.createClass({
       })
       .style('pointer-events', 'none')
       .attr('font-size', 12)
-      .attr('fill', '#5262BC')
+      .attr('fill', function(d, i) {
+        if (selectedIndex === i) return '#68db75'
+        return '#5262BC'
+      })
       .attr('x', function(d, i) {
-        return xScale(d)
+        return xScale(i)
       })
       .attr('y', labelHeight)
       .attr('text-anchor', 'middle')
@@ -151,9 +153,12 @@ var Scatterplot = React.createClass({
       })
       .style('pointer-events', 'none')
       .attr('font-size', 12)
-      .attr('fill', '#212121')
+      .attr('fill', function(d, i) {
+        if (selectedIndex === i) return '#68db75'
+        return '#212121'
+      })
       .attr('x', function(d, i) {
-        return xScale(d)
+        return xScale(i)
       })
       .attr('y', labelHeight)
       .attr('text-anchor', 'middle')

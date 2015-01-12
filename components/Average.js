@@ -22,13 +22,27 @@ var Average = React.createClass({
   componentDidMount() {
     Store.addIndicatorChangeListener(this.handleStoreChange)
     Store.addYearChangeListener(this.handleStoreChange)
-    Store.addCountryChangeListener(this.handleStoreChange)
+    Store.addCountryChangeListener(this.handleCountryChange)
 
     this.setState({})
   },
 
+  componentDidUpdate: function(prevProps, prevState) {
+    var averageContainer = this.getDOMNode()
+    var selectedCountryElement = averageContainer.querySelector('ul .countryItem.active')
+
+    if (!_.isUndefined(selectedCountryElement) && !_.isNull(selectedCountryElement)) {
+      this.scrollToTop(selectedCountryElement.offsetTop)
+    }
+
+  },
+
   handleStoreChange() {
     this.setState({})
+  },
+
+  handleCountryChange() {
+    this.handleStoreChange()
   },
 
   onCountryClick(countryName) {
@@ -41,6 +55,11 @@ var Average = React.createClass({
     var selected_year = this.props.data.global.meta.indicators[selected_indicator].years[i]
     this.updateQuery({year: selected_year})
     MapActionCreators.changeSelectedYear(selected_year)
+  },
+
+  scrollToTop(offsetTop) {
+    var sidebarPanel = document.querySelector('.sidebar-panel')
+    sidebarPanel.scrollTop = offsetTop
   },
 
   render() {
