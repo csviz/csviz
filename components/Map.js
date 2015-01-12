@@ -248,7 +248,20 @@ var Map = React.createClass({
     this.cleanLegend()
     if (window.innerWidth > 768) { this.addLegend() }
 
-    var filteredCountry = data.geo.filter((shape) => MapUtils.getCountryNameId(shape.properties['ISO_NAME']) in indicators)
+    var filteredCountry
+
+    // gpe specify stuff..
+    if (selected_indicator != 'map_of_the_global_partnership_for_education') {
+      filteredCountry = data.geo.filter((shape) => {
+        var countryName = MapUtils.getCountryNameId(shape.properties['ISO_NAME'])
+        return countryName in indicators && (indicators[countryName] && indicators[countryName]['map_of_the_global_partnership_for_education'] != 1)
+      })
+    } else {
+      filteredCountry = data.geo.filter((shape) => {
+        var countryName = MapUtils.getCountryNameId(shape.properties['ISO_NAME'])
+        return countryName in indicators
+      })
+    }
 
     var countryLayer = L.geoJson(filteredCountry, {
       style: getStyle,
