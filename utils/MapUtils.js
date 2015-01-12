@@ -83,12 +83,23 @@ var MapUtils = {
    */
   getLegendHTML(configs, global, selected_indicator) {
 
+    // the gpe stuff...
+    if (selected_indicator === 'map_of_the_global_partnership_for_education') {
+      var labels = []
+
+      labels.push('<li><span class="swatch fragile"></span>Fragile State</li>')
+      labels.push('<li><span class="swatch" style="background:#5c6bc0"></span>Donor</li>')
+      labels.push('<li><span class="swatch" style="background:#eeeeee"></span>Donee</li>')
+
+      return `<ul class='legend-list'>${labels.join('')}</ul>`
+    }
+
     // custom color goes first
     if(configs && configs.indicators[selected_indicator].choropleth) {
       var labels = []
       // legend for country with Data not available
       labels.push('<li><span class="swatch fragile"></span>Fragile State</li>')
-      labels.push('<li><span class="swatch" style="background:#eeeeee"></span>Data not available</li>')      
+      labels.push('<li><span class="swatch" style="background:#eeeeee"></span>Data not available</li>')
 
       var customChoropleth = configs.indicators[selected_indicator].choropleth
 
@@ -140,11 +151,19 @@ var MapUtils = {
     var countryName = MapUtils.getCountryNameId(layer.feature.properties['ISO_NAME'])
 
     if (countryName in indicators && indicators[countryName][selected_indicator] !== undefined) {
+
       var tooltipTemplate = configs.indicators[selected_indicator].tooltip
 
       // data with years
-      if (configs.indicators[selected_indicator].years.length) {
-        var value = indicators[countryName][selected_indicator].years[selected_year]
+      if (selected_indicator === 'map_of_the_global_partnership_for_education') {
+        value = indicators[countryName][selected_indicator]
+        if (value == 1) {
+          value = 'Donor'
+        } else {
+          value = 'Donee'
+        }
+      } else if (configs.indicators[selected_indicator].years.length) {
+        value = indicators[countryName][selected_indicator].years[selected_year]
 
         if (value) {
           if (!MapUtils.isInt(value)) {

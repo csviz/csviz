@@ -147,7 +147,7 @@ var Average = React.createClass({
           if (!hasInvalidValue) Chart = <BarchartEnvelope data={dataSeries} width={80} height={20}/>
         }
 
-      // indicator without years
+      // gpe spefic stuff, donnor/donor...
       } else {
         countryList = Object.keys(indicators).map(function(countryName, key) {
           var countryValue = indicators[countryName][selected_indicator]
@@ -161,8 +161,10 @@ var Average = React.createClass({
 
           return (
             <li key={key} className={classes} onClick={this.onCountryClick.bind(this, countryName)}>
-              <span className='label'>{global.meta.locations[countryName].label}</span>
-              <span className='value'>{formattedValue}</span>
+              <header onClick={this.onCountryClick.bind(this, countryName)}>
+                <span className='label'>{global.meta.locations[countryName].label}</span>
+                <span className='value'>{formattedValue}</span>
+              </header>
             </li>
           )
         }.bind(this))

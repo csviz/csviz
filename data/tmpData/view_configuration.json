@@ -1254,6 +1254,7 @@
     ], 
     "legend": false, 
     "menu": [
+      "Map of the Global Partnership For Education (GPE)",
       "AID committed for Basic Education- Current prices (USD millions)", 
       {
         "Group": [
@@ -1279,8 +1280,7 @@
       "Learning Reading Lowest Total - PASEC", 
       "Learning Math highest Boys - PASEC", 
       "Learning Reading Lowest Boys - PASEC", 
-      "AID disbursed for Basic Education- Current prices (USD millions)", 
-      "Map of the Global Partnership For Education (GPE)", 
+      "AID disbursed for Basic Education- Current prices (USD millions)",  
       "Pupil Teacher Ratio, Primary Education", 
       "Learning Reading Lowest Girls - PASEC", 
       "Learning Math highest Girls - PASEC", 
