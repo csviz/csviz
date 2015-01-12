@@ -8,6 +8,7 @@ var objectAssign = require('react/lib/Object.assign')
 var BarchartEnvelope = require('./BarchartEnvelope')
 var Scatterplot = require('./Scatterplot')
 var cx = React.addons.classSet
+var AdditiveAnimation = require('additive-animation')
 
 var MapActionCreators = require('../actions/MapActionCreators')
 var queryMixin = require('../mixins/queryMixin')
@@ -27,14 +28,13 @@ var Average = React.createClass({
     this.setState({})
   },
 
-  componentDidUpdate: function(prevProps, prevState) {
+  componentWillUpdate(prevProps, prevState) {
     var averageContainer = this.getDOMNode()
     var selectedCountryElement = averageContainer.querySelector('ul .countryItem.active')
 
     if (!_.isUndefined(selectedCountryElement) && !_.isNull(selectedCountryElement)) {
       this.scrollToTop(selectedCountryElement.offsetTop)
     }
-
   },
 
   handleStoreChange() {
@@ -59,7 +59,17 @@ var Average = React.createClass({
 
   scrollToTop(offsetTop) {
     var sidebarPanel = document.querySelector('.sidebar-panel')
-    sidebarPanel.scrollTop = offsetTop
+    var toState = offsetTop
+    // need to include the scatterplot height
+    var fromState = sidebarPanel.scrollTop
+
+    var animation = new AdditiveAnimation({
+      onRender: function(state) {
+        sidebarPanel.scrollTop = state.scrollTop
+      }
+    })
+
+    animation.animate({scrollTop: fromState}, {scrollTop: toState}, 1000, 'easeInOutQuart')
   },
 
   render() {
