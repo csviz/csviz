@@ -64,6 +64,7 @@ var Average = React.createClass({
     var fromState = sidebarPanel.scrollTop
 
     var animation = new AdditiveAnimation({
+      enabledRAF: true,
       onRender: function(state) {
         sidebarPanel.scrollTop = state.scrollTop
       }

@@ -11,7 +11,7 @@ var Store = require('../stores/Store')
 var Scatterplot = React.createClass({
   getDefaultProps: function() {
     return {
-      width: 400,
+      width: 450,
       height: 80,
       labelHeight: 20,
       data: [15, 12, 25, 8, 20]
@@ -62,7 +62,7 @@ var Scatterplot = React.createClass({
       .enter()
       .append('circle')
       .attr('cx', function(d, i) {
-        return xScale(i)
+        return xScale(i) + height/2
       })
       .attr('cy', height/2)
       .attr('r', function(d) {
@@ -133,7 +133,7 @@ var Scatterplot = React.createClass({
         return '#5262BC'
       })
       .attr('x', function(d, i) {
-        return xScale(i)
+        return xScale(i) + height/2
       })
       .attr('y', labelHeight)
       .attr('text-anchor', 'middle')
@@ -158,7 +158,7 @@ var Scatterplot = React.createClass({
         return '#212121'
       })
       .attr('x', function(d, i) {
-        return xScale(i)
+        return xScale(i) + height/2
       })
       .attr('y', labelHeight)
       .attr('text-anchor', 'middle')
