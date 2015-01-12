@@ -5,6 +5,7 @@ var React = require('react')
 var Router = require('react-router')
 var mapbox = require('mapbox.js')
 var numeral = require('numeral')
+var Showdown = require('showdown')
 var mui = require('material-ui')
 var Dialog = mui.Dialog
 var Icon = mui.Icon
@@ -283,9 +284,16 @@ var Map = React.createClass({
   },
 
   render() {
+    var about = ''
     var dialogActions = [
       { text: '×' }
     ]
+    
+    var converter = new Showdown.converter()
+    var data = Store.getAll()
+    if (data && data.configs) {
+      about = data.configs.site.about || 'No Description yet, please go to [CSViz](http://csviz.org) to update your description.'
+    }
 
     return (
       <section id='main'>
@@ -296,7 +304,11 @@ var Map = React.createClass({
           <Icon icon='action-info' />
         </div>
         <Dialog className='about-dialog-box' ref='aboutDialog' title='About' actions={dialogActions}>
-          <span className="about-dialog-box-title">The Global Partnership for Education is the only multilateral partnership devoted to getting all children into school for a quality education in the world's poorest countries.</span>
+          <div className="about-dialog-box-title"
+            dangerouslySetInnerHTML={{
+              __html: converter.makeHtml(about)
+            }}
+          />
         </Dialog>
       </section>
     )
