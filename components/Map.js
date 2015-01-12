@@ -5,7 +5,7 @@ var React = require('react')
 var Router = require('react-router')
 var mapbox = require('mapbox.js')
 var numeral = require('numeral')
-var Showdown = require('showdown')
+var marked = require('marked')
 var mui = require('material-ui')
 var Dialog = mui.Dialog
 var Icon = mui.Icon
@@ -288,8 +288,7 @@ var Map = React.createClass({
     var dialogActions = [
       { text: '×' }
     ]
-    
-    var converter = new Showdown.converter()
+
     var data = Store.getAll()
     if (data && data.configs) {
       about = data.configs.site.about || 'No Description yet, please go to [CSViz](http://csviz.org) to update your description.'
@@ -306,7 +305,7 @@ var Map = React.createClass({
         <Dialog className='about-dialog-box' ref='aboutDialog' title='About' actions={dialogActions}>
           <div className="about-dialog-box-title"
             dangerouslySetInnerHTML={{
-              __html: converter.makeHtml(about)
+              __html: marked(about)
             }}
           />
         </Dialog>
