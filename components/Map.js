@@ -74,6 +74,9 @@ var Map = React.createClass({
   },
 
   handleCountryChange() {
+    var data = Store.getAll()
+    var global = data.global
+    var meta = global.meta
     var selected_country = Store.getSelectedCountry()
 
     if (selected_country && this.state.map && this.state.countryLayer) {
