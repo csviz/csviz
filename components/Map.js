@@ -99,17 +99,10 @@ var Map = React.createClass({
 
   updateChoropleth() {
     var self = this
+    var map = this.state.map
     var data = Store.getAll()
     var selected_indicator = Store.getSelectedIndicator()
     var selected_year = Store.getSelectedYear()
-
-    if (_.isEmpty(data) || _.isEmpty(selected_indicator)) return
-
-    var global = data.global
-    var meta = global.meta
-    var map = this.state.map
-    var configs = data.configs
-    var indicators = global.data.locations
 
     // clean up existing layers
     if (this.state.countryLayer && this.state.countryLayer._layers !== undefined) {
@@ -117,6 +110,13 @@ var Map = React.createClass({
         map.removeLayer(this.state.countryLayer._layers[layer_i])
       }
     }
+
+    if (_.isEmpty(data) || _.isEmpty(selected_indicator)) return
+
+    var global = data.global
+    var meta = global.meta
+    var configs = data.configs
+    var indicators = global.data.locations
 
     // get style function
     function getStyle(feature) {
