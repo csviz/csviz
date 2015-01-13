@@ -79,6 +79,15 @@ var MapUtils = {
   },
 
   /**
+   * Get Country Name from ISO
+   */
+  getCountryNameFromMetaByISO(ISO, meta) {
+    return _.findKey(meta.locations, (location, key) => {
+      return location['ISO'] === ISO
+    })
+  },
+
+  /**
    * Get Legend Html with the selected Indicator
    */
   getLegendHTML(configs, global, selected_indicator) {
@@ -141,14 +150,18 @@ var MapUtils = {
   /**
    * Add a tooltip
    */
-  addTooltip(map, layer, popup, indicators, selected_indicator, configs, selected_year, e) {
+  addTooltip(map, layer, popup, global, selected_indicator, configs, selected_year, e) {
+
+    var meta = global.meta
+    var indicators = global.data.locations
 
     var latlng = e ? e.latlng : layer.getBounds().getCenter()
 
     popup.setLatLng(latlng)
 
     var value = 'Data not available'
-    var countryName = MapUtils.getCountryNameId(layer.feature.properties['ISO_NAME'])
+    // var countryName = MapUtils.getCountryNameId(layer.feature.properties['ISO_NAME'])
+    var countryName = MapUtils.getCountryNameFromMetaByISO(layer.feature.properties['ISO'], meta)
 
     if (countryName in indicators && indicators[countryName][selected_indicator] !== undefined) {
 

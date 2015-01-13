@@ -78,16 +78,17 @@ var Map = React.createClass({
 
     if (selected_country && this.state.map && this.state.countryLayer) {
       this.state.countryLayer.eachLayer(function(layer) {
-        if(MapUtils.getCountryNameId(layer.feature.properties['ISO_NAME']) === selected_country) {
+        if(MapUtils.getCountryNameFromMetaByISO(layer.feature.properties['ISO'], meta) === selected_country) {
           var popup = new L.Popup({ autoPan: false, closeButton: false })
           var indicators = this.props.data.global.data.locations
           var configs = this.props.data.configs
+          var global = this.props.data.global
           var selected_indicator = Store.getSelectedIndicator()
           var selected_year = Store.getSelectedYear()
 
           var center = layer.getBounds().getCenter()
           this.state.map.panTo(center)
-          MapUtils.addTooltip(this.state.map, layer, popup, indicators, selected_indicator, configs, selected_year)
+          MapUtils.addTooltip(this.state.map, layer, popup, global, selected_indicator, configs, selected_year)
         }
       }.bind(this))
     }
@@ -117,7 +118,8 @@ var Map = React.createClass({
     // get style function
     function getStyle(feature) {
       var value, color
-      var countryName = MapUtils.getCountryNameId(feature.properties['ISO_NAME'])
+      // var countryName = MapUtils.getCountryNameId(feature.properties['ISO_NAME'])
+      var countryName = MapUtils.getCountryNameFromMetaByISO(feature.properties['ISO'], meta)
 
       // make sure country exist
       if (countryName in indicators) value = indicators[countryName][selected_indicator]
@@ -175,7 +177,7 @@ var Map = React.createClass({
       // mouse move handler
       function mousemove(e) {
         var layer = e.target
-        MapUtils.addTooltip(map, layer, popup, indicators, selected_indicator, configs, selected_year, e)
+        MapUtils.addTooltip(map, layer, popup, global, selected_indicator, configs, selected_year, e)
         window.clearTimeout(closeTooltip)
         layer.setStyle({
           fillOpacity: 1
@@ -195,7 +197,8 @@ var Map = React.createClass({
 
       // on map click handler
       function onMapClick(e) {
-        var selectedCountryName = MapUtils.getCountryNameId(e.target.feature.properties['ISO_NAME'])
+        var selectedCountryName = MapUtils.getCountryNameFromMetaByISO(e.target.feature.properties['ISO'], meta)
+        // var selectedCountryName = MapUtils.getCountryNameId(e.target.feature.properties['ISO_NAME'])
         self.updateQuery({country: selectedCountryName})
         map.panTo(e.latlng)
         MapActionCreators.changeSelectedCountry(selectedCountryName)
@@ -204,7 +207,8 @@ var Map = React.createClass({
 
     function onEachFragileFeature(feature, layer) {
       setTimeout(function() {
-        var countryName = MapUtils.getCountryNameId(layer.feature.properties['ISO_NAME'])
+        // var countryName = MapUtils.getCountryNameId(layer.feature.properties['ISO_NAME'])
+        var countryName = MapUtils.getCountryNameFromMetaByISO(layer.feature.properties['ISO'], meta)
         if(layer._container && meta.locations[countryName].fragile) {
           layer._container.children[0].style.fill = 'url(#fragilePattern)'
         }
@@ -222,7 +226,7 @@ var Map = React.createClass({
       // mouse move handler
       function mousemove(e) {
         var layer = e.target
-        MapUtils.addTooltip(map, layer, popup, indicators, selected_indicator, configs, selected_year, e)
+        MapUtils.addTooltip(map, layer, popup, global, selected_indicator, configs, selected_year, e)
         window.clearTimeout(closeTooltip)
         layer.setStyle({
           fillOpacity: 1
@@ -242,7 +246,8 @@ var Map = React.createClass({
 
       // on map click handler
       function onMapClick(e) {
-        var selectedCountryName = MapUtils.getCountryNameId(e.target.feature.properties['ISO_NAME'])
+        var selectedCountryName = MapUtils.getCountryNameFromMetaByISO(e.target.feature.properties['ISO'], meta)
+        // var selectedCountryName = MapUtils.getCountryNameId(e.target.feature.properties['ISO_NAME'])
         self.updateQuery({country: selectedCountryName})
         map.panTo(e.latlng)
         MapActionCreators.changeSelectedCountry(selectedCountryName)
@@ -257,12 +262,14 @@ var Map = React.createClass({
     // gpe specify stuff..
     if (selected_indicator != 'map_of_the_global_partnership_for_education') {
       filteredCountry = data.geo.filter((shape) => {
-        var countryName = MapUtils.getCountryNameId(shape.properties['ISO_NAME'])
+        // var countryName = MapUtils.getCountryNameId(shape.properties['ISO_NAME'])
+        var countryName = MapUtils.getCountryNameFromMetaByISO(shape.properties['ISO'], meta)
         return countryName in indicators && (indicators[countryName] && indicators[countryName]['map_of_the_global_partnership_for_education'] != 1)
       })
     } else {
       filteredCountry = data.geo.filter((shape) => {
-        var countryName = MapUtils.getCountryNameId(shape.properties['ISO_NAME'])
+        var countryName = MapUtils.getCountryNameFromMetaByISO(shape.properties['ISO'], meta)
+        // var countryName = MapUtils.getCountryNameId(shape.properties['ISO_NAME'])
         return countryName in indicators
       })
     }
