@@ -108,7 +108,11 @@ var Map = React.createClass({
     var indicators = global.data.locations
 
     // clean up existing layers
-    if (this.state.countryLayer) map.removeLayer(this.state.countryLayer)
+    if (this.state.countryLayer && this.state.countryLayer._layers !== undefined) {
+      for (var layer_i in this.state.countryLayer._layers) {
+        map.removeLayer(this.state.countryLayer._layers[layer_i])
+      }
+    }
 
     // get style function
     function getStyle(feature) {

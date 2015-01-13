@@ -88,7 +88,12 @@ var Average = React.createClass({
       if (!_.isEmpty(configs) && configs.indicators[selected_indicator].years.length) {
         var selectedIndex = _.indexOf(global.meta.indicators[selected_indicator].years, selected_year)
 
-        countryList = Object.keys(indicators).map(function(countryName, key) {
+        // filter country with gpe stuff
+        countryList = Object.keys(indicators)
+        .filter(function(countryName) {
+          return countryName in indicators && (indicators[countryName] && indicators[countryName]['map_of_the_global_partnership_for_education'] != 1)
+        })
+        .map(function(countryName, key) {
           var hasData, formattedValue, countryData, countryChart
 
           if (indicators[countryName][selected_indicator]) {
@@ -151,7 +156,7 @@ var Average = React.createClass({
       } else {
         countryList = Object.keys(indicators).map(function(countryName, key) {
           var countryValue = indicators[countryName][selected_indicator]
-          var formattedValue = countryValue ? (numeral(countryValue).format('0.000') + '%') : 'No data'
+          var formattedValue = countryValue ? 'Donor' : 'Donee'
 
           var classes = cx({
             'countryItem': true,
