@@ -32,24 +32,24 @@ var Pattern = React.createClass({
     }
 
     var data = {
-      mw: 20,
-      mh: 20,
-      steps: 5
+      mw: 6,
+      mh: 6,
+      steps: 1
     }
 
     var paths = this.buildPath(data)
     var svg = d3.select(this.getDOMNode())
       .style({
-        width: 20,
-        height: 20,
+        width: data.mw,
+        height: data.mh,
         position: 'absolute',
         'z-index': -1
       })
       .append('defs')
       .append('pattern')
       .attr({
-        height: 20,
-        width: 20,
+        height: data.mw,
+        width: data.mh,
         y: 0,
         x: 0,
         patternUnits: 'userSpaceOnUse',

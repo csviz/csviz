@@ -118,7 +118,7 @@ var MapUtils = {
 
       return `<ul class='legend-list'>${labels.join('')}</ul>`
     } else {
-      if (!_.isUndefined(global.meta) || _.isNull(global.meta.indicators[selected_indicator].min_value) || _.isNull(global.meta.indicators[selected_indicator].max_value)) return
+      if (_.isNull(global.meta.indicators[selected_indicator].min_value) || _.isNull(global.meta.indicators[selected_indicator].max_value)) return
 
       var labels = [], from, to, color
       var min = global.meta.indicators[selected_indicator].min_value.toFixed()
