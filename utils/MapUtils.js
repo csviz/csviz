@@ -32,7 +32,7 @@ var MapUtils = {
     } else {
       var min = meta.indicators[selected_indicator].min_value
       var max = meta.indicators[selected_indicator].max_value
-      
+
       var colors = configs.ui.choropleth
       var steps = configs.ui.choropleth.length
       var step = (max - min)/steps
@@ -142,9 +142,25 @@ var MapUtils = {
         labels.push(`<li><span class='swatch' style='background:${colors[i]}'></span>${numeral(from).format('0.0a')}${' &ndash; '}${numeral(to).format('0.0a')}</li>`)
       }
 
-      return `<ul class='legend-list'>${labels.join('')}</ul>`  
+      return `<ul class='legend-list'>${labels.join('')}</ul>`
     }
-    
+
+  },
+
+  getFormatFromPrecision(precision) {
+    var format
+
+    if (precision == 1) {
+      format = `0.0`
+    } else if (precision == 2) {
+      format = `0.00`
+    } else if (precision == 3) {
+      format = `0.000`
+    } else {
+      format = `0,0`
+    }
+
+    return format
   },
 
   /**
@@ -152,47 +168,39 @@ var MapUtils = {
    */
   addTooltip(map, layer, popup, global, selected_indicator, configs, selected_year, e) {
 
-    var meta = global.meta
-    var indicators = global.data.locations
-
-    var latlng = e ? e.latlng : layer.getBounds().getCenter()
+    var meta = global.meta,
+      indicators = global.data.locations,
+      value = 'Data not available',
+      countryName = MapUtils.getCountryNameFromMetaByISO(layer.feature.properties['ISO'], meta),
+      latlng = e ? e.latlng : layer.getBounds().getCenter(),
+      tooltipTemplate = configs.indicators[selected_indicator].tooltip,
+      precision = parseInt(configs.indicators[selected_indicator].precision),
+      format = MapUtils.getFormatFromPrecision(precision)
 
     popup.setLatLng(latlng)
 
-    var value = 'Data not available'
-    // var countryName = MapUtils.getCountryNameId(layer.feature.properties['ISO_NAME'])
-    var countryName = MapUtils.getCountryNameFromMetaByISO(layer.feature.properties['ISO'], meta)
-
     if (countryName in indicators && indicators[countryName][selected_indicator] !== undefined) {
 
-      var tooltipTemplate = configs.indicators[selected_indicator].tooltip
-
-      // data with years
+      // gpe
       if (selected_indicator === 'map_of_the_global_partnership_for_education') {
-        value = indicators[countryName][selected_indicator]
-        if (value == 1) {
-          value = 'Donor'
-        } else {
-          value = 'Donee'
-        }
+        value = indicators[countryName][selected_indicator] == 1 ? 'Donor' : 'Donee'
+      // data with years
       } else if (configs.indicators[selected_indicator].years.length) {
         value = indicators[countryName][selected_indicator].years[selected_year]
 
-        if (value) {
-          if (!MapUtils.isInt(value)) {
-            value = indicators[countryName][selected_indicator].years[selected_year].toFixed(2)
-            value = numeral(value).format('0.000')
-          }
-          value = MapUtils.compileTemplate(tooltipTemplate, {currentIndicator: value})
-        } else {
+        if (!value) {
           value = 'Data not available'
+        } else {
+          value = indicators[countryName][selected_indicator].years[selected_year]
+          value = numeral(value).format(format)
+          value = MapUtils.compileTemplate(tooltipTemplate, {currentIndicator: value})
         }
-
+      // data without years
       } else {
         if(indicators[countryName][selected_indicator]) {
           value = indicators[countryName][selected_indicator]
           if (value && !MapUtils.isInt(value)) {
-            value = numeral(value.toFixed(2)).format('0.000')
+            value = numeral(value).format(format)
           }
           value = MapUtils.compileTemplate(tooltipTemplate, {currentIndicator: value})
         }

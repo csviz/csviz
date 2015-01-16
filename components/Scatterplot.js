@@ -13,24 +13,15 @@ var Scatterplot = React.createClass({
     return {
       width: 450,
       height: 80,
-      labelHeight: 20,
-      data: [15, 12, 25, 8, 20]
+      labelHeight: 20
     }
   },
 
-  componentDidMount: function() {
-    this.renderGraph()
+  componentWillReceiveProps(nextProps) {
+    if(nextProps.data) this.renderGraph(nextProps.data)
   },
 
-  componentDidUpdate: function() {
-    this.renderGraph()
-  },
-
-  render: function() {
-    return React.createElement('div', null)
-  },
-
-  renderGraph: function() {
+  renderGraph: function(data) {
     var el = this.getDOMNode()
     while (el.firstChild) {
       el.removeChild(el.firstChild)
@@ -39,7 +30,6 @@ var Scatterplot = React.createClass({
     var width = this.props.width
     var height = this.props.height
     var labelHeight = this.props.labelHeight
-    var data = this.props.data.slice()
     var selectedIndex = this.props.selectedIndex
     var onCircleClick = this.props.onCircleClick || (function() {})
 
@@ -62,7 +52,7 @@ var Scatterplot = React.createClass({
       .enter()
       .append('circle')
       .attr('cx', function(d, i) {
-        return xScale(i) + height/2
+        return xScale(i)
       })
       .attr('cy', height/2)
       .attr('r', function(d) {
@@ -116,15 +106,18 @@ var Scatterplot = React.createClass({
       .enter()
       .append('text')
       .text(function(d, i) {
-        try {
-          var _data = Store.getAll()
-          var selected_indicator = Store.getSelectedIndicator()
-          var meta = _data.global.meta.indicators
-          var indicatorData = meta[selected_indicator]
-        } catch (e) {
-          console.error('get year from meta error', e)
+        if (selectedIndex === i) {
+          try {
+            var _data = Store.getAll()
+            var selected_indicator = Store.getSelectedIndicator()
+            var meta = _data.global.meta.indicators
+            var indicatorData = meta[selected_indicator]
+          } catch (e) {
+            console.error('get year from meta error', e)
+          }
+          return indicatorData.years[i]
         }
-        return indicatorData.years[i]
+
       })
       .style('pointer-events', 'none')
       .attr('font-size', 12)
@@ -133,7 +126,7 @@ var Scatterplot = React.createClass({
         return '#5262BC'
       })
       .attr('x', function(d, i) {
-        return xScale(i) + height/2
+        return xScale(i)
       })
       .attr('y', labelHeight)
       .attr('text-anchor', 'middle')
@@ -143,13 +136,15 @@ var Scatterplot = React.createClass({
       .attr('width', width)
       .attr('height', labelHeight)
       .append('g')
-      
+
     valueLabel.selectAll('values')
       .data(data)
       .enter()
       .append('text')
       .text(function(d, i) {
-        return numeral(d).format('0.00')
+        if (selectedIndex === i) {
+          return numeral(d).format('0.00')
+        }
       })
       .style('pointer-events', 'none')
       .attr('font-size', 12)
@@ -158,10 +153,14 @@ var Scatterplot = React.createClass({
         return '#212121'
       })
       .attr('x', function(d, i) {
-        return xScale(i) + height/2
+        return xScale(i)
       })
       .attr('y', labelHeight)
       .attr('text-anchor', 'middle')
+  },
+
+  render: function() {
+    return React.createElement('div', null)
   }
 })
 

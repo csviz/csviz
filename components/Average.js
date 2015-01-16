@@ -9,6 +9,7 @@ var BarchartEnvelope = require('./BarchartEnvelope')
 var Scatterplot = require('./Scatterplot')
 var cx = React.addons.classSet
 var AdditiveAnimation = require('additive-animation')
+var MapUtils = require('../utils/MapUtils')
 
 var MapActionCreators = require('../actions/MapActionCreators')
 var queryMixin = require('../mixins/queryMixin')
@@ -84,6 +85,9 @@ var Average = React.createClass({
 
     if (!_.isEmpty(selected_indicator) && !_.isEmpty(global)) {
       var indicators = global.data.locations
+      var precision = parseInt(configs.indicators[selected_indicator].precision)
+      var format = MapUtils.getFormatFromPrecision(precision)
+
       // indicator with years
       if (!_.isEmpty(configs) && configs.indicators[selected_indicator].years.length) {
         var selectedIndex = _.indexOf(global.meta.indicators[selected_indicator].years, selected_year)
@@ -97,7 +101,7 @@ var Average = React.createClass({
           var hasData, formattedValue, countryData, countryChart
 
           if (indicators[countryName][selected_indicator]) {
-            formattedValue = numeral(indicators[countryName][selected_indicator].years[selected_year]).format('0.000')
+            formattedValue = numeral(indicators[countryName][selected_indicator].years[selected_year]).format(format)
             countryData = _.map(indicators[countryName][selected_indicator].years, function(value) {
               return value || 0
             })
@@ -138,7 +142,7 @@ var Average = React.createClass({
 
         if (global.meta.indicators[selected_indicator].avg) {
           var hasInvalidValue = false
-          average = numeral(global.meta.indicators[selected_indicator].avg.years[selected_year]).format('0.000')
+          average = numeral(global.meta.indicators[selected_indicator].avg.years[selected_year]).format(format)
 
           var dataSeries = _.map(global.meta.indicators[selected_indicator].avg.years, function(value) {
             if (!value) {
@@ -173,7 +177,7 @@ var Average = React.createClass({
             </li>
           )
         }.bind(this))
-        average = numeral(global.meta.indicators[selected_indicator].avg).format('0.000') + '%'
+        average = numeral(global.meta.indicators[selected_indicator].avg).format(format)
       }
 
     }
