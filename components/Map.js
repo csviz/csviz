@@ -39,7 +39,7 @@ var Map = React.createClass({
     Store.addChangeListener(this.updateChoropleth)
     Store.addCountryChangeListener(this.handleCountryChange)
     Store.addIndicatorChangeListener(this.updateChoropleth)
-    Store.addYearChangeListener(this.updateChoropleth)
+    Store.addYearChangeListener(this.handleYearChange)
     Store.addLegendChangeListener(this.toggleLegend)
 
     L.mapbox.accessToken = mapbox_config.token
@@ -71,6 +71,29 @@ var Map = React.createClass({
     var legend = MapUtils.getLegendHTML(configs, global, selected_indicator)
     this.state.map.legendControl.addLegend(legend)
     this.setState({legend: legend})
+  },
+
+  handleYearChange() {
+    this.updateChoropleth()
+    var data = Store.getAll()
+    var global = data.global
+    var meta = global.meta
+    var selected_country = Store.getSelectedCountry()
+
+    if (selected_country && this.state.map && this.state.countryLayer) {
+      this.state.countryLayer.eachLayer(function(layer) {
+        if(MapUtils.getCountryNameFromMetaByISO(layer.feature.properties['ISO'], meta) === selected_country) {
+          var popup = new L.Popup({ autoPan: false, closeButton: false })
+          var indicators = this.props.data.global.data.locations
+          var configs = this.props.data.configs
+          var global = this.props.data.global
+          var selected_indicator = Store.getSelectedIndicator()
+          var selected_year = Store.getSelectedYear()
+
+          MapUtils.addTooltip(this.state.map, layer, popup, global, selected_indicator, configs, selected_year)
+        }
+      }.bind(this))
+    }
   },
 
   handleCountryChange() {
