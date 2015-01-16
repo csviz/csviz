@@ -39,7 +39,7 @@ var Scatterplot = React.createClass({
 
     var rScale = d3.scale.linear()
       .domain([d3.min(data), d3.max(data)])
-      .range([5, xScale(0)/2 - 5])
+      .range([xScale(0)/2 - 10, xScale(0)/2 - 5])
 
     var svg = d3.select(this.getDOMNode())
       .append('svg')
