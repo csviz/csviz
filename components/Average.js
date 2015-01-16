@@ -142,7 +142,10 @@ var Average = React.createClass({
 
         if (global.meta.indicators[selected_indicator].avg) {
           var hasInvalidValue = false
-          average = numeral(global.meta.indicators[selected_indicator].avg.years[selected_year]).format(format)
+
+          if (selected_indicator != 'map_of_the_global_partnership_for_education') {
+            average = numeral(global.meta.indicators[selected_indicator].avg.years[selected_year]).format(format)
+          }
 
           var dataSeries = _.map(global.meta.indicators[selected_indicator].avg.years, function(value) {
             if (!value) {
@@ -177,7 +180,9 @@ var Average = React.createClass({
             </li>
           )
         }.bind(this))
-        average = numeral(global.meta.indicators[selected_indicator].avg).format(format)
+        if (selected_indicator != 'map_of_the_global_partnership_for_education') {
+          average = numeral(global.meta.indicators[selected_indicator].avg).format(format)
+        }
       }
 
     }
