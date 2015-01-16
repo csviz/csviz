@@ -33,9 +33,11 @@ var Scatterplot = React.createClass({
     var selectedIndex = this.props.selectedIndex
     var onCircleClick = this.props.onCircleClick || (function() {})
 
+    var xRangeStart = width/data.length/2 > height/2 ? height/2 : width/data.length/2
+
     var xScale = d3.scale.linear()
       .domain([0, data.length])
-      .range([height/2, width - height/2])
+      .range([xRangeStart, width - xRangeStart])
 
     var rScale = d3.scale.linear()
       .domain([d3.min(data), d3.max(data)])
@@ -157,6 +159,18 @@ var Scatterplot = React.createClass({
       })
       .attr('y', labelHeight)
       .attr('text-anchor', 'middle')
+
+
+      // try to transform
+      var x3 = (this.props.width - svg[0][0].getBoundingClientRect().width)/2
+      var x0 = xScale(0)
+      var r0 = rScale(data[0])
+      var x1 = x0 - r0
+      var x2 = x3 - x1
+
+      svg.attr('transform', `translate(${x2}, 0)`)
+      yearLabel.attr('transform', `translate(${x2}, 0)`)
+      valueLabel.attr('transform', `translate(${x2}, 0)`)
   },
 
   render: function() {
