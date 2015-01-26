@@ -5950,7 +5950,7 @@ textarea {
   position: fixed;
   bottom: 20px;
   right: 470px;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(0, 0, 0, 0.4);
   padding: 10px;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1); }
   @media (max-width: 768px) {
@@ -5980,7 +5980,7 @@ textarea {
       font-family: 'Roboto', Arial, sans;
       height: 30px;
       line-height: 30px;
-      color: #000;
+      color: #FFF;
       font-size: 11px;
       text-align: right; }
       #main .map-legend .legend-list li .swatch {
