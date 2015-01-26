@@ -247,7 +247,7 @@ var MapUtils = {
     popup.setContent('<div class="marker-title">' + layer.feature.properties['ISO_NAME'] + '</div>' + value)
 
     if (!popup._map) popup.openOn(map)
-    if (!L.Browser.ie && !L.Browser.opera) layer.bringToFront()
+    // if (!L.Browser.ie && !L.Browser.opera) layer.bringToFront()
   }
 }
 
