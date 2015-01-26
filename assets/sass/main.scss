@@ -198,26 +198,28 @@ textarea {
         max-height: 500px;
         overflow-y: auto;
         width: 100%;
-        h3,
-        h4 {
+        h4,
+        h5 {
             margin: 0 0 $gutter;
         }
-        h3 {
-            font-size: inherit;
-        }
         h4 {
+            font-size: 16px;
+        }
+        h5 {
+            color: inherit;
             font-size: 13px;
             font-weight: bold;
         }
         dl {
-            line-height: 120%;
             font-size: 13px;
+            line-height: 120%;
+            margin: 0 0 $gutter $gutter/2;
             dt {
-              
+              text-transform: uppercase;
             }
             dd {
               font-style: italic;
-              margin-left: 2*$gutter;
+              margin-left: $gutter;
             }
         }
     }
