@@ -106,7 +106,7 @@ var Average = React.createClass({
               return value || 0
             })
 
-            countryChart = <BarchartEnvelope data={countryData} width={80} height={20} />
+            countryChart = <BarchartEnvelope onCircleClick={onCircleClick} selectedIndex={selectedIndex} data={countryData} width={80} height={20} />
             countryChartBody = (
               <div className={(selected_country == countryName ? ' show' : '') + ' detail'}>
                 <Scatterplot data={countryData} selectedIndex={selectedIndex} onCircleClick={onCircleClick} />
@@ -156,7 +156,7 @@ var Average = React.createClass({
             }
           })
 
-          if (!hasInvalidValue) Chart = <BarchartEnvelope data={dataSeries} width={80} height={20}/>
+          if (!hasInvalidValue) Chart = <BarchartEnvelope onCircleClick={onCircleClick} selectedIndex={selectedIndex} data={dataSeries} width={80} height={20}/>
         }
 
       // gpe spefic stuff, donnor/donor...

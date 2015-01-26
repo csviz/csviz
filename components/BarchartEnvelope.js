@@ -23,6 +23,9 @@ var BarchartEnvelope = React.createClass({
       el.removeChild(el.firstChild)
     }
 
+    var selectedIndex = this.props.selectedIndex
+    var onCircleClick = this.props.onCircleClick || (function() {})
+
     var width = this.props.width
     var height = this.props.height
     var data = nextProps.data.map(function(value) {
@@ -65,9 +68,13 @@ var BarchartEnvelope = React.createClass({
         return barchartScale(d)
       })
       .attr('fill', function(d, i) {
+        if (selectedIndex === i) return '#4D4D4D'
         return '#ccc'
       })
       .style('cursor', 'pointer')
+      .on('click', function(d, i) {
+        onCircleClick(d, i)
+      })
   },
 
   render: function() {
