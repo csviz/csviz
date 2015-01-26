@@ -212,11 +212,8 @@ textarea {
         }
         dl {
             font-size: 13px;
-            line-height: 120%;
+            line-height: 140%;
             margin: 0 0 $gutter $gutter/2;
-            dt {
-              text-transform: uppercase;
-            }
             dd {
               font-style: italic;
               margin-left: $gutter;
