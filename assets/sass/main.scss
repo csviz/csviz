@@ -195,6 +195,31 @@ textarea {
     .dialog-content{
         float: left;
         width: 100%;
+        max-height: 500px;
+        overflow-y: auto;
+        width: 100%;
+        h3,
+        h4 {
+            margin: 0 0 $gutter;
+        }
+        h3 {
+            font-size: inherit;
+        }
+        h4 {
+            font-size: 13px;
+            font-weight: bold;
+        }
+        dl {
+            line-height: 120%;
+            font-size: 13px;
+            dt {
+              
+            }
+            dd {
+              font-style: italic;
+              margin-left: 2*$gutter;
+            }
+        }
     }
   }
 }
