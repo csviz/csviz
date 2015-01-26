@@ -37,7 +37,7 @@ var MapUtils = {
       var colors = safeTraverse(configs, 'ui', 'choropleth')
       var steps = safeTraverse(configs, 'ui', 'choropleth', 'length')
 
-      if (max && min && steps) {
+      if (max && steps) {
         var step = (max - min)/steps
         var colorIndex = ((value - min)/step).toFixed()
 

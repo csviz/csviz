@@ -42,6 +42,7 @@ var MapControls = React.createClass({
     } else {
       this.addClass(body, 'isSidebarOpen')
     }
+
   },
 
   render() {
