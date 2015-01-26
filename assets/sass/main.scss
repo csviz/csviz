@@ -287,13 +287,13 @@ textarea {
               &:hover{
                 &:after{
                   color: #000;
-                }           
+                }
                 }
               }
             }
           }
         }
-     
+
         .header-container {
             width: 100%;
             z-index: 0;
@@ -565,6 +565,9 @@ textarea {
                 color: #FFF;
                 font-size: 11px;
                 text-align: right;
+                &.hide {
+                  display: none;
+                }
                 .swatch {
                     height: $gutter;
                     float: right;
@@ -893,7 +896,7 @@ textarea {
         @include transition(all, 0.3s, ease);
         right: 0px;
       }
-  
+
     }
     #sidebar {
       .sidebar-panel {

@@ -6044,6 +6044,8 @@ textarea {
         color: #FFF;
         font-size: 11px;
         text-align: right; }
+        #main .map-legend .legend-list li.hide {
+          display: none; }
         #main .map-legend .legend-list li .swatch {
           height: 20px;
           float: right;
