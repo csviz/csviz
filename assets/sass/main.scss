@@ -481,7 +481,7 @@ textarea {
         position: fixed;
         bottom: 20px;
         right: $sidebar;
-        background:rgba(255,255,255,.4);
+        background:rgba(0,0,0,.4);
         padding:$gutter/2;
         box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
 
@@ -514,12 +514,12 @@ textarea {
                 font-family: $font;
                 height: $gutter+10;
                 line-height: $gutter+10;
-                color: #000;
+                color: #FFF;
                 font-size: 11px;
                 text-align: right;
                 .swatch {
                     height: $gutter;
-                    float: right;               
+                    float: right;
                     margin-left: $gutter/2;
                     width: $gutter+10;
                     height: $gutter+10;
@@ -610,7 +610,7 @@ textarea {
             //             filter: grayscale(100%);
             //             border:2px solid #000;
             //             opacity: 1;
-                        
+
             //     }
             // }
 
