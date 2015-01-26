@@ -193,11 +193,11 @@ var MapUtils = {
       indicators = global.data.locations,
       value = 'Data not available',
       countryName = MapUtils.getCountryNameFromMetaByISO(layer.feature.properties['ISO'], meta),
-      latlng = e ? e.latlng : layer.getBounds().getCenter(),
-      format = MapUtils.getFormatFromPrecision(precision)
+      latlng = e ? e.latlng : layer.getBounds().getCenter();
 
-    var precision = safeTraverse(configs, 'indicators', selected_indicator, precision)
+    var precision = safeTraverse(configs, 'indicators', selected_indicator, 'precision')
     if (precision) precision = parseInt(precision)
+    var format = MapUtils.getFormatFromPrecision(precision)
     var tooltipTemplate = safeTraverse(configs, 'indicators', selected_indicator, 'tooltip')
 
     popup.setLatLng(latlng)
