@@ -3,7 +3,8 @@
 var _ = require('lodash')
 var numeral = require('numeral')
 var d3 = require('d3')
-var safeTraverse = require('./safeTraverse');
+var safeTraverse = require('./safeTraverse')
+var mustache = require('mustache')
 
 var MapUtils = {
 
@@ -47,6 +48,19 @@ var MapUtils = {
       }
 
     }
+  },
+
+  matchContentFromTemplate(template) {
+    // return template.match(/{{\s*[\w\.]+\s*}}/g)
+    //   .map(function(x) { return x.match(/[\w\.]+/)[0]; });
+    var list = [],
+      re = /{{\s*([^}]+)\s*}}/g,
+      item;
+
+    while (item = re.exec(template))
+      list.push(item[1]);
+
+    return list
   },
 
   /**
@@ -200,19 +214,33 @@ var MapUtils = {
         if (!value) {
           value = 'Data not available'
         } else {
-          value = safeTraverse(indicators, countryName, selected_indicator, 'years', selected_year)
-          value = numeral(value).format(format)
-          if (tooltipTemplate) value = MapUtils.compileTemplate(tooltipTemplate, {currentIndicator: value})
+          var dataObject = {}
+          var values = MapUtils.matchContentFromTemplate(tooltipTemplate)
+          if (values.length) {
+            values.map((indicatorName) => {
+              indicatorName = indicatorName.trim()
+              var indicatorId = MapUtils.getCountryNameId(indicatorName)
+              var data = safeTraverse(indicators, countryName, indicatorId, 'years', selected_year)
+              dataObject[indicatorName] = numeral(data).format(format)
+            })
+          }
+
+          if (tooltipTemplate) value = mustache.render(tooltipTemplate, dataObject)
         }
       // data without years
       } else {
-        value = safeTraverse(indicators, countryName, selected_indicator)
-        if(value) {
-          if (value && !MapUtils.isInt(value)) {
-            value = numeral(value).format(format)
-          }
-          if (tooltipTemplate) value = MapUtils.compileTemplate(tooltipTemplate, {currentIndicator: value})
+        var dataObject = {}
+        var values = MapUtils.matchContentFromTemplate(tooltipTemplate)
+        if (values.length) {
+          values.map((indicatorName) => {
+            indicatorName = indicatorName.trim()
+            var indicatorId = MapUtils.getCountryNameId(indicatorName)
+            var data = safeTraverse(indicators, countryName, indicatorId, 'years', selected_year)
+            dataObject[indicatorName] = numeral(data).format(format)
+          })
         }
+
+        if (tooltipTemplate) value = mustache.render(tooltipTemplate, dataObject)
       }
     }
 
