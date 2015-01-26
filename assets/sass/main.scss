@@ -302,6 +302,9 @@ textarea {
         }
       }
     }
+    .sidebar-panel {
+      width: $sidebar;
+    }
   }
 }
 
@@ -314,7 +317,6 @@ textarea {
         position: absolute;
         right: 0;
         top: 0;
-        width: $sidebar;
         overflow-x:hidden;
         overflow-y: scroll;
         .header-container {
