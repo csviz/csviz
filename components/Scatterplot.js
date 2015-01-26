@@ -61,14 +61,20 @@ var Scatterplot = React.createClass({
         return rScale(d)
       })
       .attr('fill', function(d, i) {
-        var data = Store.getAll()
-        var selected_indicator = Store.getSelectedIndicator()
-        if (_.isEmpty(data) || _.isEmpty(selected_indicator)) return
 
-        var configs = data.configs
-        var meta = data.global.meta
+        if (d == 0) {
+          return '#BBB'
+        } else {
+          var data = Store.getAll()
+          var selected_indicator = Store.getSelectedIndicator()
+          if (_.isEmpty(data) || _.isEmpty(selected_indicator)) return
 
-        return MapUtils.getNumberColor(d, configs, meta, selected_indicator)
+          var configs = data.configs
+          var meta = data.global.meta
+
+          return MapUtils.getNumberColor(d, configs, meta, selected_indicator)
+        }
+
       })
       .style('cursor', 'pointer')
       .style('opacity', function(d, i) {
@@ -79,18 +85,22 @@ var Scatterplot = React.createClass({
         }
       })
       .on('mouseover', function(d) {
-        d3.select(this)
-          .attr('r', function(d) {
-            return rScale(d) + 2
-          })
+        if (d != 0) {
+          d3.select(this)
+            .attr('r', function(d) {
+              return rScale(d) + 2
+            })
+        }
       })
       .on('mouseout', function(d) {
-        d3.select(this)
-          .transition()
-          .delay(250)
-          .attr('r', function(d) {
-            return rScale(d)
-          })
+        if ( d!= 0) {
+          d3.select(this)
+            .transition()
+            .delay(250)
+            .attr('r', function(d) {
+              return rScale(d)
+            })
+        }
       })
       .on('click', function(d, i) {
         d3.select(this).style('opacity', .8)
@@ -108,24 +118,24 @@ var Scatterplot = React.createClass({
       .enter()
       .append('text')
       .text(function(d, i) {
-        if (selectedIndex === i) {
-          try {
-            var _data = Store.getAll()
-            var selected_indicator = Store.getSelectedIndicator()
-            var meta = _data.global.meta.indicators
-            var indicatorData = meta[selected_indicator]
-          } catch (e) {
-            console.error('get year from meta error', e)
-          }
-          return indicatorData.years[i]
+        try {
+          var _data = Store.getAll()
+          var selected_indicator = Store.getSelectedIndicator()
+          var meta = _data.global.meta.indicators
+          var indicatorData = meta[selected_indicator]
+        } catch (e) {
+          console.error('get year from meta error', e)
         }
-
+        return indicatorData.years[i]
       })
       .style('pointer-events', 'none')
       .attr('font-size', 12)
       .attr('fill', function(d, i) {
-        if (selectedIndex === i) return '#68db75'
-        return '#5262BC'
+        if (selectedIndex === i) return '#4D4D4D'
+        return '#BBB'
+      })
+      .style('font-weight', function(d, i) {
+        if (selectedIndex === i) return 'bold'
       })
       .attr('x', function(d, i) {
         return xScale(i)
@@ -144,15 +154,16 @@ var Scatterplot = React.createClass({
       .enter()
       .append('text')
       .text(function(d, i) {
-        if (selectedIndex === i) {
-          return numeral(d).format('0.00')
-        }
+        return numeral(d).format('0.0a')
       })
       .style('pointer-events', 'none')
       .attr('font-size', 12)
       .attr('fill', function(d, i) {
-        if (selectedIndex === i) return '#68db75'
-        return '#212121'
+        if (selectedIndex === i) return '#4D4D4D'
+        return '#BBB'
+      })
+      .style('font-weight', function(d, i) {
+        if (selectedIndex === i) return 'bold'
       })
       .attr('x', function(d, i) {
         return xScale(i)
