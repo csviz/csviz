@@ -2094,24 +2094,19 @@
             "2013": 1
           }
         },
-        "learning_math_highest_boys__pasec": {
-          "years": {
-            "2009/2010": 68.7853
-          }
-        },
-        "learning_math_highest_girls__pasec": {
-          "years": {
-            "2009/2010": 63.7859
-          }
-        },
-        "learning_math_highest_total__pasec": {
-          "years": {
-            "2009/2010": 66.3764
-          }
-        },
         "learning_math_lowest_boys__pasec": {
           "years": {
             "2009/2010": 12.2
+          }
+        },
+        "learning_math_lowest_boys__sacmeq": {
+          "years": {
+            "2009/2010": null
+          }
+        },
+        "learning_math_lowest_boys__tims": {
+          "years": {
+            "2009/2010": null
           }
         },
         "learning_math_lowest_girls__pasec": {
@@ -2119,39 +2114,29 @@
             "2009/2010": 17.3949
           }
         },
+        "learning_math_lowest_girls__sacmeq": {
+          "years": {
+            "2009/2010": null
+          }
+        },
+        "learning_math_lowest_girls__tims": {
+          "years": {
+            "2009/2010": null
+          }
+        },
         "learning_math_lowest_total__pasec": {
           "years": {
             "2009/2010": 14.7004
           }
         },
-        "learning_reading_highest_boys__pasec": {
+        "learning_math_lowest_total__sacmeq": {
           "years": {
-            "2009/2010": 54.2042
+            "2009/2010": null
           }
         },
-        "learning_reading_highest_girls__pasec": {
+        "learning_math_lowest_total__tims": {
           "years": {
-            "2009/2010": 52.5766
-          }
-        },
-        "learning_reading_highest_total__pasec": {
-          "years": {
-            "2009/2010": 53.42
-          }
-        },
-        "learning_reading_lowest_boys__pasec": {
-          "years": {
-            "2009/2010": 17.4453
-          }
-        },
-        "learning_reading_lowest_girls__pasec": {
-          "years": {
-            "2009/2010": 15.5683
-          }
-        },
-        "learning_reading_lowest_total__pasec": {
-          "years": {
-            "2009/2010": 16.5409
+            "2009/2010": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -3761,24 +3746,19 @@
             "2013": null
           }
         },
-        "learning_math_highest_boys__pasec": {
-          "years": {
-            "2009/2010": 45.5686
-          }
-        },
-        "learning_math_highest_girls__pasec": {
-          "years": {
-            "2009/2010": 37.5368
-          }
-        },
-        "learning_math_highest_total__pasec": {
-          "years": {
-            "2009/2010": 42.4314
-          }
-        },
         "learning_math_lowest_boys__pasec": {
           "years": {
             "2009/2010": 32.2
+          }
+        },
+        "learning_math_lowest_boys__sacmeq": {
+          "years": {
+            "2009/2010": null
+          }
+        },
+        "learning_math_lowest_boys__tims": {
+          "years": {
+            "2009/2010": null
           }
         },
         "learning_math_lowest_girls__pasec": {
@@ -3786,39 +3766,29 @@
             "2009/2010": 37.7887
           }
         },
+        "learning_math_lowest_girls__sacmeq": {
+          "years": {
+            "2009/2010": null
+          }
+        },
+        "learning_math_lowest_girls__tims": {
+          "years": {
+            "2009/2010": null
+          }
+        },
         "learning_math_lowest_total__pasec": {
           "years": {
             "2009/2010": 34.392
           }
         },
-        "learning_reading_highest_boys__pasec": {
+        "learning_math_lowest_total__sacmeq": {
           "years": {
-            "2009/2010": 38.0838
+            "2009/2010": null
           }
         },
-        "learning_reading_highest_girls__pasec": {
+        "learning_math_lowest_total__tims": {
           "years": {
-            "2009/2010": 35.8108
-          }
-        },
-        "learning_reading_highest_total__pasec": {
-          "years": {
-            "2009/2010": 37.196
-          }
-        },
-        "learning_reading_lowest_boys__pasec": {
-          "years": {
-            "2009/2010": 35.5878
-          }
-        },
-        "learning_reading_lowest_girls__pasec": {
-          "years": {
-            "2009/2010": 38.6199
-          }
-        },
-        "learning_reading_lowest_total__pasec": {
-          "years": {
-            "2009/2010": 36.7721
+            "2009/2010": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -4222,24 +4192,19 @@
             "2013": null
           }
         },
-        "learning_math_highest_boys__pasec": {
-          "years": {
-            "2009/2010": 43.5
-          }
-        },
-        "learning_math_highest_girls__pasec": {
-          "years": {
-            "2009/2010": 39.4529
-          }
-        },
-        "learning_math_highest_total__pasec": {
-          "years": {
-            "2009/2010": 41.8343
-          }
-        },
         "learning_math_lowest_boys__pasec": {
           "years": {
             "2009/2010": 24.4
+          }
+        },
+        "learning_math_lowest_boys__sacmeq": {
+          "years": {
+            "2009/2010": null
+          }
+        },
+        "learning_math_lowest_boys__tims": {
+          "years": {
+            "2009/2010": null
           }
         },
         "learning_math_lowest_girls__pasec": {
@@ -4247,39 +4212,29 @@
             "2009/2010": 31.9432
           }
         },
+        "learning_math_lowest_girls__sacmeq": {
+          "years": {
+            "2009/2010": null
+          }
+        },
+        "learning_math_lowest_girls__tims": {
+          "years": {
+            "2009/2010": null
+          }
+        },
         "learning_math_lowest_total__pasec": {
           "years": {
             "2009/2010": 28.8
           }
         },
-        "learning_reading_highest_boys__pasec": {
+        "learning_math_lowest_total__sacmeq": {
           "years": {
-            "2009/2010": 26.9135
+            "2009/2010": null
           }
         },
-        "learning_reading_highest_girls__pasec": {
+        "learning_math_lowest_total__tims": {
           "years": {
-            "2009/2010": 25.5677
-          }
-        },
-        "learning_reading_highest_total__pasec": {
-          "years": {
-            "2009/2010": 26.2
-          }
-        },
-        "learning_reading_lowest_boys__pasec": {
-          "years": {
-            "2009/2010": 35.2182
-          }
-        },
-        "learning_reading_lowest_girls__pasec": {
-          "years": {
-            "2009/2010": 35.243
-          }
-        },
-        "learning_reading_lowest_total__pasec": {
-          "years": {
-            "2009/2010": 35.2
+            "2009/2010": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -4531,24 +4486,19 @@
         "map_of_the_global_partnership_for_education": 0
       },
       "cote_divoire": {
-        "learning_math_highest_boys__pasec": {
-          "years": {
-            "2009/2010": 27.1379
-          }
-        },
-        "learning_math_highest_girls__pasec": {
-          "years": {
-            "2009/2010": 23.3502
-          }
-        },
-        "learning_math_highest_total__pasec": {
-          "years": {
-            "2009/2010": 25.3951
-          }
-        },
         "learning_math_lowest_boys__pasec": {
           "years": {
             "2009/2010": 43.4
+          }
+        },
+        "learning_math_lowest_boys__sacmeq": {
+          "years": {
+            "2009/2010": null
+          }
+        },
+        "learning_math_lowest_boys__tims": {
+          "years": {
+            "2009/2010": null
           }
         },
         "learning_math_lowest_girls__pasec": {
@@ -4556,39 +4506,29 @@
             "2009/2010": 45.7983
           }
         },
+        "learning_math_lowest_girls__sacmeq": {
+          "years": {
+            "2009/2010": null
+          }
+        },
+        "learning_math_lowest_girls__tims": {
+          "years": {
+            "2009/2010": null
+          }
+        },
         "learning_math_lowest_total__pasec": {
           "years": {
             "2009/2010": 44.5256
           }
         },
-        "learning_reading_highest_boys__pasec": {
+        "learning_math_lowest_total__sacmeq": {
           "years": {
-            "2009/2010": 36.791
+            "2009/2010": null
           }
         },
-        "learning_reading_highest_girls__pasec": {
+        "learning_math_lowest_total__tims": {
           "years": {
-            "2009/2010": 39.8668
-          }
-        },
-        "learning_reading_highest_total__pasec": {
-          "years": {
-            "2009/2010": 38.2062
-          }
-        },
-        "learning_reading_lowest_boys__pasec": {
-          "years": {
-            "2009/2010": 32.9606
-          }
-        },
-        "learning_reading_lowest_girls__pasec": {
-          "years": {
-            "2009/2010": 32.9728
-          }
-        },
-        "learning_reading_lowest_total__pasec": {
-          "years": {
-            "2009/2010": 32.9662
+            "2009/2010": null
           }
         }
       },
@@ -5151,24 +5091,19 @@
             "2013": 0.0306256508
           }
         },
-        "learning_math_highest_boys__pasec": {
-          "years": {
-            "2009/2010": 65.5458
-          }
-        },
-        "learning_math_highest_girls__pasec": {
-          "years": {
-            "2009/2010": 62.9555
-          }
-        },
-        "learning_math_highest_total__pasec": {
-          "years": {
-            "2009/2010": 64.3846
-          }
-        },
         "learning_math_lowest_boys__pasec": {
           "years": {
             "2009/2010": 13.6
+          }
+        },
+        "learning_math_lowest_boys__sacmeq": {
+          "years": {
+            "2009/2010": null
+          }
+        },
+        "learning_math_lowest_boys__tims": {
+          "years": {
+            "2009/2010": null
           }
         },
         "learning_math_lowest_girls__pasec": {
@@ -5176,39 +5111,29 @@
             "2009/2010": 16.4216
           }
         },
+        "learning_math_lowest_girls__sacmeq": {
+          "years": {
+            "2009/2010": null
+          }
+        },
+        "learning_math_lowest_girls__tims": {
+          "years": {
+            "2009/2010": null
+          }
+        },
         "learning_math_lowest_total__pasec": {
           "years": {
             "2009/2010": 14.7906
           }
         },
-        "learning_reading_highest_boys__pasec": {
+        "learning_math_lowest_total__sacmeq": {
           "years": {
-            "2009/2010": 50.5171
+            "2009/2010": null
           }
         },
-        "learning_reading_highest_girls__pasec": {
+        "learning_math_lowest_total__tims": {
           "years": {
-            "2009/2010": 45.0015
-          }
-        },
-        "learning_reading_highest_total__pasec": {
-          "years": {
-            "2009/2010": 48.0121
-          }
-        },
-        "learning_reading_lowest_boys__pasec": {
-          "years": {
-            "2009/2010": 24.3883
-          }
-        },
-        "learning_reading_lowest_girls__pasec": {
-          "years": {
-            "2009/2010": 28.5138
-          }
-        },
-        "learning_reading_lowest_total__pasec": {
-          "years": {
-            "2009/2010": 26.2375
+            "2009/2010": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -7177,27 +7102,42 @@
             "2013": null
           }
         },
-        "learning_math_highest_boys__tims": {
+        "learning_math_lowest_boys__pasec": {
           "years": {
             "2011": null
           }
         },
-        "learning_math_highest_girls__tims": {
+        "learning_math_lowest_boys__sacmeq": {
           "years": {
             "2011": null
-          }
-        },
-        "learning_math_highest_total__tims": {
-          "years": {
-            "2011": 2.6483
           }
         },
         "learning_math_lowest_boys__tims": {
+          "years": {
+            "2011": 0
+          }
+        },
+        "learning_math_lowest_girls__pasec": {
+          "years": {
+            "2011": null
+          }
+        },
+        "learning_math_lowest_girls__sacmeq": {
           "years": {
             "2011": null
           }
         },
         "learning_math_lowest_girls__tims": {
+          "years": {
+            "2011": 0
+          }
+        },
+        "learning_math_lowest_total__pasec": {
+          "years": {
+            "2011": null
+          }
+        },
+        "learning_math_lowest_total__sacmeq": {
           "years": {
             "2011": null
           }
@@ -7611,27 +7551,42 @@
             "2013": 1
           }
         },
-        "learning_math_highest_boys__tims": {
+        "learning_math_lowest_boys__pasec": {
           "years": {
             "2011": null
           }
         },
-        "learning_math_highest_girls__tims": {
+        "learning_math_lowest_boys__sacmeq": {
           "years": {
             "2011": null
           }
         },
-        "learning_math_highest_total__tims": {
+        "learning_math_lowest_boys__tims": {
           "years": {
             "2011": 0
           }
         },
-        "learning_math_lowest_boys__tims": {
+        "learning_math_lowest_girls__pasec": {
+          "years": {
+            "2011": null
+          }
+        },
+        "learning_math_lowest_girls__sacmeq": {
           "years": {
             "2011": null
           }
         },
         "learning_math_lowest_girls__tims": {
+          "years": {
+            "2011": 0
+          }
+        },
+        "learning_math_lowest_total__pasec": {
+          "years": {
+            "2011": null
+          }
+        },
+        "learning_math_lowest_total__sacmeq": {
           "years": {
             "2011": null
           }
@@ -10010,19 +9965,9 @@
             "2013": null
           }
         },
-        "learning_math_highest_boys__sacmeq": {
+        "learning_math_lowest_boys__pasec": {
           "years": {
-            "2007": 1.9
-          }
-        },
-        "learning_math_highest_girls__sacmeq": {
-          "years": {
-            "2007": 0.9
-          }
-        },
-        "learning_math_highest_total__sacmeq": {
-          "years": {
-            "2007": 1.4
+            "2007": null
           }
         },
         "learning_math_lowest_boys__sacmeq": {
@@ -10030,9 +9975,29 @@
             "2007": 0.4
           }
         },
+        "learning_math_lowest_boys__tims": {
+          "years": {
+            "2007": null
+          }
+        },
+        "learning_math_lowest_girls__pasec": {
+          "years": {
+            "2007": null
+          }
+        },
         "learning_math_lowest_girls__sacmeq": {
           "years": {
             "2007": 0.8
+          }
+        },
+        "learning_math_lowest_girls__tims": {
+          "years": {
+            "2007": null
+          }
+        },
+        "learning_math_lowest_total__pasec": {
+          "years": {
+            "2007": null
           }
         },
         "learning_math_lowest_total__sacmeq": {
@@ -10040,34 +10005,9 @@
             "2007": 0.6
           }
         },
-        "learning_reading_highest_boys__sacmeq": {
+        "learning_math_lowest_total__tims": {
           "years": {
-            "2007": 7.1
-          }
-        },
-        "learning_reading_highest_girls__sacmeq": {
-          "years": {
-            "2007": 5.6
-          }
-        },
-        "learning_reading_highest_total__sacmeq": {
-          "years": {
-            "2007": 6.4
-          }
-        },
-        "learning_reading_lowest_boys__sacmeq": {
-          "years": {
-            "2007": 2.3
-          }
-        },
-        "learning_reading_lowest_girls__sacmeq": {
-          "years": {
-            "2007": 2.3
-          }
-        },
-        "learning_reading_lowest_total__sacmeq": {
-          "years": {
-            "2007": 2.3
+            "2007": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -11277,19 +11217,9 @@
             "2013": null
           }
         },
-        "learning_math_highest_boys__sacmeq": {
+        "learning_math_lowest_boys__pasec": {
           "years": {
-            "2007": 0.1
-          }
-        },
-        "learning_math_highest_girls__sacmeq": {
-          "years": {
-            "2007": 0.1
-          }
-        },
-        "learning_math_highest_total__sacmeq": {
-          "years": {
-            "2007": 0.1
+            "2007": null
           }
         },
         "learning_math_lowest_boys__sacmeq": {
@@ -11297,9 +11227,29 @@
             "2007": 3.2
           }
         },
+        "learning_math_lowest_boys__tims": {
+          "years": {
+            "2007": null
+          }
+        },
+        "learning_math_lowest_girls__pasec": {
+          "years": {
+            "2007": null
+          }
+        },
         "learning_math_lowest_girls__sacmeq": {
           "years": {
             "2007": 3.8
+          }
+        },
+        "learning_math_lowest_girls__tims": {
+          "years": {
+            "2007": null
+          }
+        },
+        "learning_math_lowest_total__pasec": {
+          "years": {
+            "2007": null
           }
         },
         "learning_math_lowest_total__sacmeq": {
@@ -11307,34 +11257,9 @@
             "2007": 3.5
           }
         },
-        "learning_reading_highest_boys__sacmeq": {
+        "learning_math_lowest_total__tims": {
           "years": {
-            "2007": 0.3
-          }
-        },
-        "learning_reading_highest_girls__sacmeq": {
-          "years": {
-            "2007": 0.5
-          }
-        },
-        "learning_reading_highest_total__sacmeq": {
-          "years": {
-            "2007": 0.4
-          }
-        },
-        "learning_reading_lowest_boys__sacmeq": {
-          "years": {
-            "2007": 5.2
-          }
-        },
-        "learning_reading_lowest_girls__sacmeq": {
-          "years": {
-            "2007": 3.6
-          }
-        },
-        "learning_reading_lowest_total__sacmeq": {
-          "years": {
-            "2007": 4.4
+            "2007": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -12543,19 +12468,9 @@
             "2013": 1
           }
         },
-        "learning_math_highest_boys__sacmeq": {
+        "learning_math_lowest_boys__pasec": {
           "years": {
-            "2007": 0
-          }
-        },
-        "learning_math_highest_girls__sacmeq": {
-          "years": {
-            "2007": 0
-          }
-        },
-        "learning_math_highest_total__sacmeq": {
-          "years": {
-            "2007": 0
+            "2007": null
           }
         },
         "learning_math_lowest_boys__sacmeq": {
@@ -12563,9 +12478,29 @@
             "2007": 8.7
           }
         },
+        "learning_math_lowest_boys__tims": {
+          "years": {
+            "2007": null
+          }
+        },
+        "learning_math_lowest_girls__pasec": {
+          "years": {
+            "2007": null
+          }
+        },
         "learning_math_lowest_girls__sacmeq": {
           "years": {
             "2007": 8.5
+          }
+        },
+        "learning_math_lowest_girls__tims": {
+          "years": {
+            "2007": null
+          }
+        },
+        "learning_math_lowest_total__pasec": {
+          "years": {
+            "2007": null
           }
         },
         "learning_math_lowest_total__sacmeq": {
@@ -12573,34 +12508,9 @@
             "2007": 8.6
           }
         },
-        "learning_reading_highest_boys__sacmeq": {
+        "learning_math_lowest_total__tims": {
           "years": {
-            "2007": 0.1
-          }
-        },
-        "learning_reading_highest_girls__sacmeq": {
-          "years": {
-            "2007": 0.1
-          }
-        },
-        "learning_reading_highest_total__sacmeq": {
-          "years": {
-            "2007": 0.1
-          }
-        },
-        "learning_reading_lowest_boys__sacmeq": {
-          "years": {
-            "2007": 10.2
-          }
-        },
-        "learning_reading_lowest_girls__sacmeq": {
-          "years": {
-            "2007": 9.1
-          }
-        },
-        "learning_reading_lowest_total__sacmeq": {
-          "years": {
-            "2007": 9.7
+            "2007": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -13825,21 +13735,6 @@
             "2013": null
           }
         },
-        "learning_math_highest_boys__tims": {
-          "years": {
-            "2011": null
-          }
-        },
-        "learning_math_highest_girls__tims": {
-          "years": {
-            "2011": null
-          }
-        },
-        "learning_math_highest_total__tims": {
-          "years": {
-            "2011": null
-          }
-        },
         "lower_secondary_completion_rate_female": {
           "years": {
             "2008": null,
@@ -14241,19 +14136,9 @@
             "2013": null
           }
         },
-        "learning_math_highest_boys__sacmeq": {
+        "learning_math_lowest_boys__pasec": {
           "years": {
-            "2007": 0
-          }
-        },
-        "learning_math_highest_girls__sacmeq": {
-          "years": {
-            "2007": 0
-          }
-        },
-        "learning_math_highest_total__sacmeq": {
-          "years": {
-            "2007": 0
+            "2007": null
           }
         },
         "learning_math_lowest_boys__sacmeq": {
@@ -14261,9 +14146,29 @@
             "2007": 4.3
           }
         },
+        "learning_math_lowest_boys__tims": {
+          "years": {
+            "2007": null
+          }
+        },
+        "learning_math_lowest_girls__pasec": {
+          "years": {
+            "2007": null
+          }
+        },
         "learning_math_lowest_girls__sacmeq": {
           "years": {
             "2007": 6
+          }
+        },
+        "learning_math_lowest_girls__tims": {
+          "years": {
+            "2007": null
+          }
+        },
+        "learning_math_lowest_total__pasec": {
+          "years": {
+            "2007": null
           }
         },
         "learning_math_lowest_total__sacmeq": {
@@ -14271,34 +14176,9 @@
             "2007": 5.1
           }
         },
-        "learning_reading_highest_boys__sacmeq": {
+        "learning_math_lowest_total__tims": {
           "years": {
-            "2007": 0.3
-          }
-        },
-        "learning_reading_highest_girls__sacmeq": {
-          "years": {
-            "2007": 0.2
-          }
-        },
-        "learning_reading_highest_total__sacmeq": {
-          "years": {
-            "2007": 0.25
-          }
-        },
-        "learning_reading_lowest_boys__sacmeq": {
-          "years": {
-            "2007": 5.8
-          }
-        },
-        "learning_reading_lowest_girls__sacmeq": {
-          "years": {
-            "2007": 7.7
-          }
-        },
-        "learning_reading_lowest_total__sacmeq": {
-          "years": {
-            "2007": 6.7
+            "2007": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -20510,19 +20390,9 @@
             "2013": null
           }
         },
-        "learning_math_highest_boys__sacmeq": {
+        "learning_math_lowest_boys__pasec": {
           "years": {
-            "2007": 1.7
-          }
-        },
-        "learning_math_highest_girls__sacmeq": {
-          "years": {
-            "2007": 0.3
-          }
-        },
-        "learning_math_highest_total__sacmeq": {
-          "years": {
-            "2007": 1
+            "2007": null
           }
         },
         "learning_math_lowest_boys__sacmeq": {
@@ -20530,9 +20400,29 @@
             "2007": 0.7
           }
         },
+        "learning_math_lowest_boys__tims": {
+          "years": {
+            "2007": null
+          }
+        },
+        "learning_math_lowest_girls__pasec": {
+          "years": {
+            "2007": null
+          }
+        },
         "learning_math_lowest_girls__sacmeq": {
           "years": {
             "2007": 0.6
+          }
+        },
+        "learning_math_lowest_girls__tims": {
+          "years": {
+            "2007": null
+          }
+        },
+        "learning_math_lowest_total__pasec": {
+          "years": {
+            "2007": null
           }
         },
         "learning_math_lowest_total__sacmeq": {
@@ -20540,34 +20430,9 @@
             "2007": 0.7
           }
         },
-        "learning_reading_highest_boys__sacmeq": {
+        "learning_math_lowest_total__tims": {
           "years": {
-            "2007": 7.4
-          }
-        },
-        "learning_reading_highest_girls__sacmeq": {
-          "years": {
-            "2007": 5
-          }
-        },
-        "learning_reading_highest_total__sacmeq": {
-          "years": {
-            "2007": 6.2
-          }
-        },
-        "learning_reading_lowest_boys__sacmeq": {
-          "years": {
-            "2007": 1.2
-          }
-        },
-        "learning_reading_lowest_girls__sacmeq": {
-          "years": {
-            "2007": 1.6
-          }
-        },
-        "learning_reading_lowest_total__sacmeq": {
-          "years": {
-            "2007": 1.4
+            "2007": null
           }
         },
         "map_of_the_global_partnership_for_education": 0
@@ -21185,24 +21050,19 @@
             "2013": 1
           }
         },
-        "learning_math_highest_boys__pasec": {
-          "years": {
-            "2009/2010": 44.2184
-          }
-        },
-        "learning_math_highest_girls__pasec": {
-          "years": {
-            "2009/2010": 40.7804
-          }
-        },
-        "learning_math_highest_total__pasec": {
-          "years": {
-            "2009/2010": 42.7263
-          }
-        },
         "learning_math_lowest_boys__pasec": {
           "years": {
             "2009/2010": 29.3
+          }
+        },
+        "learning_math_lowest_boys__sacmeq": {
+          "years": {
+            "2009/2010": null
+          }
+        },
+        "learning_math_lowest_boys__tims": {
+          "years": {
+            "2009/2010": null
           }
         },
         "learning_math_lowest_girls__pasec": {
@@ -21210,39 +21070,29 @@
             "2009/2010": 30.1879
           }
         },
+        "learning_math_lowest_girls__sacmeq": {
+          "years": {
+            "2009/2010": null
+          }
+        },
+        "learning_math_lowest_girls__tims": {
+          "years": {
+            "2009/2010": null
+          }
+        },
         "learning_math_lowest_total__pasec": {
           "years": {
             "2009/2010": 29.7009
           }
         },
-        "learning_reading_highest_boys__pasec": {
+        "learning_math_lowest_total__sacmeq": {
           "years": {
-            "2009/2010": 27.7052
+            "2009/2010": null
           }
         },
-        "learning_reading_highest_girls__pasec": {
+        "learning_math_lowest_total__tims": {
           "years": {
-            "2009/2010": 25.1944
-          }
-        },
-        "learning_reading_highest_total__pasec": {
-          "years": {
-            "2009/2010": 26.6155
-          }
-        },
-        "learning_reading_lowest_boys__pasec": {
-          "years": {
-            "2009/2010": 40.3067
-          }
-        },
-        "learning_reading_lowest_girls__pasec": {
-          "years": {
-            "2009/2010": 43.5873
-          }
-        },
-        "learning_reading_lowest_total__pasec": {
-          "years": {
-            "2009/2010": 41.7305
+            "2009/2010": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -21646,19 +21496,9 @@
             "2013": 1
           }
         },
-        "learning_math_highest_boys__sacmeq": {
+        "learning_math_lowest_boys__pasec": {
           "years": {
-            "2007": 0.1
-          }
-        },
-        "learning_math_highest_girls__sacmeq": {
-          "years": {
-            "2007": 0
-          }
-        },
-        "learning_math_highest_total__sacmeq": {
-          "years": {
-            "2007": 0
+            "2007": null
           }
         },
         "learning_math_lowest_boys__sacmeq": {
@@ -21666,9 +21506,29 @@
             "2007": 4.7
           }
         },
+        "learning_math_lowest_boys__tims": {
+          "years": {
+            "2007": null
+          }
+        },
+        "learning_math_lowest_girls__pasec": {
+          "years": {
+            "2007": null
+          }
+        },
         "learning_math_lowest_girls__sacmeq": {
           "years": {
             "2007": 5.2
+          }
+        },
+        "learning_math_lowest_girls__tims": {
+          "years": {
+            "2007": null
+          }
+        },
+        "learning_math_lowest_total__pasec": {
+          "years": {
+            "2007": null
           }
         },
         "learning_math_lowest_total__sacmeq": {
@@ -21676,34 +21536,9 @@
             "2007": 5
           }
         },
-        "learning_reading_highest_boys__sacmeq": {
+        "learning_math_lowest_total__tims": {
           "years": {
-            "2007": 0.6
-          }
-        },
-        "learning_reading_highest_girls__sacmeq": {
-          "years": {
-            "2007": 0.5
-          }
-        },
-        "learning_reading_highest_total__sacmeq": {
-          "years": {
-            "2007": 0.5
-          }
-        },
-        "learning_reading_lowest_boys__sacmeq": {
-          "years": {
-            "2007": 5.3
-          }
-        },
-        "learning_reading_lowest_girls__sacmeq": {
-          "years": {
-            "2007": 6.3
-          }
-        },
-        "learning_reading_lowest_total__sacmeq": {
-          "years": {
-            "2007": 5.8
+            "2007": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -23656,19 +23491,9 @@
             "2013": 1
           }
         },
-        "learning_math_highest_boys__sacmeq": {
+        "learning_math_lowest_boys__pasec": {
           "years": {
-            "2007": 0
-          }
-        },
-        "learning_math_highest_girls__sacmeq": {
-          "years": {
-            "2007": 0
-          }
-        },
-        "learning_math_highest_total__sacmeq": {
-          "years": {
-            "2007": 0
+            "2007": null
           }
         },
         "learning_math_lowest_boys__sacmeq": {
@@ -23676,9 +23501,29 @@
             "2007": 11.7
           }
         },
+        "learning_math_lowest_boys__tims": {
+          "years": {
+            "2007": null
+          }
+        },
+        "learning_math_lowest_girls__pasec": {
+          "years": {
+            "2007": null
+          }
+        },
         "learning_math_lowest_girls__sacmeq": {
           "years": {
             "2007": 15.9
+          }
+        },
+        "learning_math_lowest_girls__tims": {
+          "years": {
+            "2007": null
+          }
+        },
+        "learning_math_lowest_total__pasec": {
+          "years": {
+            "2007": null
           }
         },
         "learning_math_lowest_total__sacmeq": {
@@ -23686,34 +23531,9 @@
             "2007": 13.7
           }
         },
-        "learning_reading_highest_boys__sacmeq": {
+        "learning_math_lowest_total__tims": {
           "years": {
-            "2007": 0.6
-          }
-        },
-        "learning_reading_highest_girls__sacmeq": {
-          "years": {
-            "2007": 0.5
-          }
-        },
-        "learning_reading_highest_total__sacmeq": {
-          "years": {
-            "2007": 0.5
-          }
-        },
-        "learning_reading_lowest_boys__sacmeq": {
-          "years": {
-            "2007": 15.8
-          }
-        },
-        "learning_reading_lowest_girls__sacmeq": {
-          "years": {
-            "2007": 15.7
-          }
-        },
-        "learning_reading_lowest_total__sacmeq": {
-          "years": {
-            "2007": 15.8
+            "2007": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -24117,19 +23937,9 @@
             "2013": null
           }
         },
-        "learning_math_highest_boys__sacmeq": {
+        "learning_math_lowest_boys__pasec": {
           "years": {
-            "2007": 1.3
-          }
-        },
-        "learning_math_highest_girls__sacmeq": {
-          "years": {
-            "2007": 0.8
-          }
-        },
-        "learning_math_highest_total__sacmeq": {
-          "years": {
-            "2007": 1
+            "2007": null
           }
         },
         "learning_math_lowest_boys__sacmeq": {
@@ -24137,9 +23947,29 @@
             "2007": 3.6
           }
         },
+        "learning_math_lowest_boys__tims": {
+          "years": {
+            "2007": null
+          }
+        },
+        "learning_math_lowest_girls__pasec": {
+          "years": {
+            "2007": null
+          }
+        },
         "learning_math_lowest_girls__sacmeq": {
           "years": {
             "2007": 3.6
+          }
+        },
+        "learning_math_lowest_girls__tims": {
+          "years": {
+            "2007": null
+          }
+        },
+        "learning_math_lowest_total__pasec": {
+          "years": {
+            "2007": null
           }
         },
         "learning_math_lowest_total__sacmeq": {
@@ -24147,34 +23977,9 @@
             "2007": 3.6
           }
         },
-        "learning_reading_highest_boys__sacmeq": {
+        "learning_math_lowest_total__tims": {
           "years": {
-            "2007": 4.5
-          }
-        },
-        "learning_reading_highest_girls__sacmeq": {
-          "years": {
-            "2007": 4.4
-          }
-        },
-        "learning_reading_highest_total__sacmeq": {
-          "years": {
-            "2007": 4.5
-          }
-        },
-        "learning_reading_lowest_boys__sacmeq": {
-          "years": {
-            "2007": 7.5
-          }
-        },
-        "learning_reading_lowest_girls__sacmeq": {
-          "years": {
-            "2007": 4.8
-          }
-        },
-        "learning_reading_lowest_total__sacmeq": {
-          "years": {
-            "2007": 6
+            "2007": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -24419,7 +24224,7 @@
         },
         "max_value": 100,
         "min_value": 0,
-        "source_file": "% of missing data, domestic financing (%)-reformatted.csv",
+        "source_file": "% of missing data, domestic financing (%).csv",
         "years": [
           "2008",
           "2009",
@@ -24438,7 +24243,7 @@
         },
         "max_value": 100,
         "min_value": 0,
-        "source_file": "% of missing data outcome indicators (%)-reformatted.csv",
+        "source_file": "% of missing data outcome indicators (%).csv",
         "years": [
           "2008",
           "2009",
@@ -24457,7 +24262,7 @@
         },
         "max_value": 100,
         "min_value": 0,
-        "source_file": "% of missing data, service delivery (%)-reformatted.csv",
+        "source_file": "% of missing data, service delivery (%).csv",
         "years": [
           "2008",
           "2009",
@@ -24477,7 +24282,7 @@
         },
         "max_value": 5.5142581239,
         "min_value": 0.0050650546,
-        "source_file": "AID committed for Basic Education as % of GDP-reformatted.csv",
+        "source_file": "AID committed for Basic Education - All.csv",
         "years": [
           "2008",
           "2009",
@@ -24498,7 +24303,7 @@
         },
         "max_value": 3351.4551185,
         "min_value": 0,
-        "source_file": "AID committed for Basic Education- Current prices (USD millions)-reformatted.csv",
+        "source_file": "AID committed for Basic Education - All.csv",
         "years": [
           "2008",
           "2009",
@@ -24519,7 +24324,7 @@
         },
         "max_value": 8.7699208259,
         "min_value": 0.0166566171,
-        "source_file": "AID committed for total Education as % of GDP-reformatted.csv",
+        "source_file": "AID committed for total Education - All.csv",
         "years": [
           "2008",
           "2009",
@@ -24540,7 +24345,7 @@
         },
         "max_value": 7238.233475,
         "min_value": 0,
-        "source_file": "AID committed for total Education- Current prices (USD millions)-reformatted.csv",
+        "source_file": "AID committed for total Education - All.csv",
         "years": [
           "2008",
           "2009",
@@ -24561,7 +24366,7 @@
         },
         "max_value": 4.3793614183,
         "min_value": 0.0101036427,
-        "source_file": "AID disbursed for Basic Education as % of GDP-reformatted.csv",
+        "source_file": "AID disbursed for Basic Education - All.csv",
         "years": [
           "2008",
           "2009",
@@ -24582,7 +24387,7 @@
         },
         "max_value": 2876.6044549,
         "min_value": 0,
-        "source_file": "AID disbursed for Basic Education- Current prices (USD millions)-reformatted.csv",
+        "source_file": "AID disbursed for Basic Education - All.csv",
         "years": [
           "2008",
           "2009",
@@ -24603,7 +24408,7 @@
         },
         "max_value": 7.6547928546,
         "min_value": 0.0400280655,
-        "source_file": "AID disbursed for total Education as % of GDP-reformatted.csv",
+        "source_file": "AID disbursed for total Education - All.csv",
         "years": [
           "2008",
           "2009",
@@ -24624,7 +24429,7 @@
         },
         "max_value": 5794.8439178,
         "min_value": 0,
-        "source_file": "AID disbursed for total Education- Current prices (USD millions)-reformatted.csv",
+        "source_file": "AID disbursed for total Education - All.csv",
         "years": [
           "2008",
           "2009",
@@ -24645,7 +24450,7 @@
         },
         "max_value": 69.34212,
         "min_value": 17.35672,
-        "source_file": "Educational expenditure in primary as % of total educational expenditure-reformatted.csv",
+        "source_file": "Educational expenditure in primary as % of total educational expenditure.csv",
         "years": [
           "2008",
           "2009",
@@ -24663,7 +24468,7 @@
         },
         "max_value": 4987777.27528943,
         "min_value": 0,
-        "source_file": "Equivalent Children Supported in basic education-reformatted.csv",
+        "source_file": "Equivalent Children Supported in basic education.csv",
         "years": [
           "2012",
           "2013"
@@ -24684,7 +24489,7 @@
         },
         "max_value": 121000000,
         "min_value": 153.282,
-        "source_file": "GPE Annual Funding Approvals-reformatted.csv",
+        "source_file": "GPE Annual Funding Approvals.csv",
         "years": [
           "2003-2006",
           "2007",
@@ -24713,7 +24518,7 @@
         },
         "max_value": 83630507.49,
         "min_value": 0,
-        "source_file": "GPE Annual Funding Disbursements-reformatted.csv",
+        "source_file": "GPE Annual Funding Disbursements.csv",
         "years": [
           "2004",
           "2005",
@@ -24740,7 +24545,7 @@
         },
         "max_value": 3.1007751938,
         "min_value": 0.0483008453,
-        "source_file": "GPE Funding Approval as % of GDP-reformatted.csv",
+        "source_file": "GPE Funding Approval as % of GDP.csv",
         "years": [
           "2008",
           "2009",
@@ -24763,7 +24568,7 @@
         },
         "max_value": 1.2372476666,
         "min_value": 0.0020939697,
-        "source_file": "GPE Funding Disbursement  as % of GDP-reformatted.csv",
+        "source_file": "GPE Funding Disbursement  as % of GDP.csv",
         "years": [
           "2008",
           "2009",
@@ -24811,394 +24616,157 @@
           "2013"
         ]
       },
-      "learning_math_highest_boys__pasec": {
-        "avg": {
-          "years": {
-            "2009/2010": 49.126
-          }
-        },
-        "max_value": 68.7853,
-        "min_value": 27.1379,
-        "source_file": "Learning Math highest Boys - PASEC-reformatted.csv",
-        "years": [
-          "2009/2010"
-        ]
-      },
-      "learning_math_highest_boys__sacmeq": {
-        "avg": {
-          "years": {
-            "2007": 0.6375000000000001
-          }
-        },
-        "max_value": 1.9,
-        "min_value": 0,
-        "source_file": "Learning Math highest Boys - SACMEQ-reformatted.csv",
-        "years": [
-          "2007"
-        ]
-      },
-      "learning_math_highest_boys__tims": {
-        "avg": {
-          "years": {
-            "2011": null
-          }
-        },
-        "max_value": null,
-        "min_value": null,
-        "source_file": "Learning Math highest Boys - TIMS-reformatted.csv",
-        "years": [
-          "2011"
-        ]
-      },
-      "learning_math_highest_girls__pasec": {
-        "avg": {
-          "years": {
-            "2009/2010": 44.64361666666667
-          }
-        },
-        "max_value": 63.7859,
-        "min_value": 23.3502,
-        "source_file": "Learning Math highest Girls - PASEC-reformatted.csv",
-        "years": [
-          "2009/2010"
-        ]
-      },
-      "learning_math_highest_girls__sacmeq": {
-        "avg": {
-          "years": {
-            "2007": 0.2625
-          }
-        },
-        "max_value": 0.9,
-        "min_value": 0,
-        "source_file": "Learning Math highest Girls - SACMEQ-reformatted.csv",
-        "years": [
-          "2007"
-        ]
-      },
-      "learning_math_highest_girls__tims": {
-        "avg": {
-          "years": {
-            "2011": null
-          }
-        },
-        "max_value": null,
-        "min_value": null,
-        "source_file": "Learning Math highest Girls - TIMS-reformatted.csv",
-        "years": [
-          "2011"
-        ]
-      },
-      "learning_math_highest_total__pasec": {
-        "avg": {
-          "years": {
-            "2009/2010": 47.19135
-          }
-        },
-        "max_value": 66.3764,
-        "min_value": 25.3951,
-        "source_file": "Learning Math highest Total - PASEC-reformatted.csv",
-        "years": [
-          "2009/2010"
-        ]
-      },
-      "learning_math_highest_total__sacmeq": {
-        "avg": {
-          "years": {
-            "2007": 0.4375
-          }
-        },
-        "max_value": 1.4,
-        "min_value": 0,
-        "source_file": "Learning Math highest Total - SACMEQ-reformatted.csv",
-        "years": [
-          "2007"
-        ]
-      },
-      "learning_math_highest_total__tims": {
-        "avg": {
-          "years": {
-            "2011": 1.32415
-          }
-        },
-        "max_value": 2.6483,
-        "min_value": 0,
-        "source_file": "Learning Math highest Total - TIMS-reformatted.csv",
-        "years": [
-          "2011"
-        ]
-      },
       "learning_math_lowest_boys__pasec": {
         "avg": {
           "years": {
-            "2009/2010": 25.850000000000005
+            "2007": null,
+            "2009/2010": 25.850000000000005,
+            "2011": null
           }
         },
         "max_value": 43.4,
         "min_value": 12.2,
-        "source_file": "Learning Math Lowest Boys - PASEC-reformatted.csv",
+        "source_file": "Learning Math Lowest Boys - All.csv",
         "years": [
-          "2009/2010"
+          "2007",
+          "2009/2010",
+          "2011"
         ]
       },
       "learning_math_lowest_boys__sacmeq": {
         "avg": {
           "years": {
-            "2007": 4.6625
+            "2007": 4.6625,
+            "2009/2010": null,
+            "2011": null
           }
         },
         "max_value": 11.7,
         "min_value": 0.4,
-        "source_file": "Learning Math Lowest Boys - SACMEQ-reformatted.csv",
+        "source_file": "Learning Math Lowest Boys - All.csv",
         "years": [
-          "2007"
+          "2007",
+          "2009/2010",
+          "2011"
         ]
       },
       "learning_math_lowest_boys__tims": {
         "avg": {
           "years": {
-            "2011": null
+            "2007": null,
+            "2009/2010": null,
+            "2011": 0.0
           }
         },
-        "max_value": null,
-        "min_value": null,
-        "source_file": "Learning Math Lowest Boys - TIMS-reformatted.csv",
+        "max_value": 0,
+        "min_value": 0,
+        "source_file": "Learning Math Lowest Boys - All.csv",
         "years": [
+          "2007",
+          "2009/2010",
           "2011"
         ]
       },
       "learning_math_lowest_girls__pasec": {
         "avg": {
           "years": {
-            "2009/2010": 29.922433333333334
+            "2007": null,
+            "2009/2010": 29.922433333333334,
+            "2011": null
           }
         },
         "max_value": 45.7983,
         "min_value": 16.4216,
-        "source_file": "Learning Math Lowest Girls - PASEC-reformatted.csv",
+        "source_file": "Learning Math Lowest Girls - All.csv",
         "years": [
-          "2009/2010"
+          "2007",
+          "2009/2010",
+          "2011"
         ]
       },
       "learning_math_lowest_girls__sacmeq": {
         "avg": {
           "years": {
-            "2007": 5.550000000000001
+            "2007": 5.550000000000001,
+            "2009/2010": null,
+            "2011": null
           }
         },
         "max_value": 15.9,
         "min_value": 0.6,
-        "source_file": "Learning Math Lowest Girls - SACMEQ-reformatted.csv",
+        "source_file": "Learning Math Lowest Girls - All.csv",
         "years": [
-          "2007"
+          "2007",
+          "2009/2010",
+          "2011"
         ]
       },
       "learning_math_lowest_girls__tims": {
         "avg": {
           "years": {
-            "2011": null
+            "2007": null,
+            "2009/2010": null,
+            "2011": 0.0
           }
         },
-        "max_value": null,
-        "min_value": null,
-        "source_file": "Learning Math Lowest Girls - TIMS-reformatted.csv",
+        "max_value": 0,
+        "min_value": 0,
+        "source_file": "Learning Math Lowest Girls - All.csv",
         "years": [
+          "2007",
+          "2009/2010",
           "2011"
         ]
       },
       "learning_math_lowest_total__pasec": {
         "avg": {
           "years": {
-            "2009/2010": 27.818249999999995
+            "2007": null,
+            "2009/2010": 27.818249999999995,
+            "2011": null
           }
         },
         "max_value": 44.5256,
         "min_value": 14.7004,
-        "source_file": "Learning Math Lowest Total - PASEC-reformatted.csv",
+        "source_file": "Learning Math Lowest Total - All.csv",
         "years": [
-          "2009/2010"
+          "2007",
+          "2009/2010",
+          "2011"
         ]
       },
       "learning_math_lowest_total__sacmeq": {
         "avg": {
           "years": {
-            "2007": 5.1
+            "2007": 5.1,
+            "2009/2010": null,
+            "2011": null
           }
         },
         "max_value": 13.7,
         "min_value": 0.6,
-        "source_file": "Learning Math Lowest Total - SACMEQ-reformatted.csv",
+        "source_file": "Learning Math Lowest Total - All.csv",
         "years": [
-          "2007"
+          "2007",
+          "2009/2010",
+          "2011"
         ]
       },
       "learning_math_lowest_total__tims": {
         "avg": {
           "years": {
+            "2007": null,
+            "2009/2010": null,
             "2011": 58.24435
           }
         },
         "max_value": 78.586,
         "min_value": 37.9027,
-        "source_file": "Learning Math Lowest Total - TIMS-reformatted.csv",
+        "source_file": "Learning Math Lowest Total - All.csv",
         "years": [
+          "2007",
+          "2009/2010",
           "2011"
-        ]
-      },
-      "learning_reading_highest_boys__pasec": {
-        "avg": {
-          "years": {
-            "2009/2010": 39.0358
-          }
-        },
-        "max_value": 54.2042,
-        "min_value": 26.9135,
-        "source_file": "Learning Reading highest Boys - PASEC-reformatted.csv",
-        "years": [
-          "2009/2010"
-        ]
-      },
-      "learning_reading_highest_boys__sacmeq": {
-        "avg": {
-          "years": {
-            "2007": 2.6125
-          }
-        },
-        "max_value": 7.4,
-        "min_value": 0.1,
-        "source_file": "Learning Reading highest Boys - SACMEQ-reformatted.csv",
-        "years": [
-          "2007"
-        ]
-      },
-      "learning_reading_highest_girls__pasec": {
-        "avg": {
-          "years": {
-            "2009/2010": 37.3363
-          }
-        },
-        "max_value": 52.5766,
-        "min_value": 25.1944,
-        "source_file": "Learning Reading highest Girls - PASEC-reformatted.csv",
-        "years": [
-          "2009/2010"
-        ]
-      },
-      "learning_reading_highest_girls__sacmeq": {
-        "avg": {
-          "years": {
-            "2007": 2.0999999999999996
-          }
-        },
-        "max_value": 5.6,
-        "min_value": 0.1,
-        "source_file": "Learning Reading highest Girls - SACMEQ-reformatted.csv",
-        "years": [
-          "2007"
-        ]
-      },
-      "learning_reading_highest_total__pasec": {
-        "avg": {
-          "years": {
-            "2009/2010": 38.274966666666664
-          }
-        },
-        "max_value": 53.42,
-        "min_value": 26.2,
-        "source_file": "Learning Reading highest Total - PASEC-reformatted.csv",
-        "years": [
-          "2009/2010"
-        ]
-      },
-      "learning_reading_highest_total__sacmeq": {
-        "avg": {
-          "years": {
-            "2007": 2.35625
-          }
-        },
-        "max_value": 6.4,
-        "min_value": 0.1,
-        "source_file": "Learning Reading highest Total - SACMEQ-reformatted.csv",
-        "years": [
-          "2007"
-        ]
-      },
-      "learning_reading_lowest_boys__pasec": {
-        "avg": {
-          "years": {
-            "2009/2010": 30.98448333333334
-          }
-        },
-        "max_value": 40.3067,
-        "min_value": 17.4453,
-        "source_file": "Learning Reading Lowest Boys - PASEC-reformatted.csv",
-        "years": [
-          "2009/2010"
-        ]
-      },
-      "learning_reading_lowest_boys__sacmeq": {
-        "avg": {
-          "years": {
-            "2007": 6.6625
-          }
-        },
-        "max_value": 15.8,
-        "min_value": 1.2,
-        "source_file": "Learning Reading Lowest Boys - SACMEQ-reformatted.csv",
-        "years": [
-          "2007"
-        ]
-      },
-      "learning_reading_lowest_girls__pasec": {
-        "avg": {
-          "years": {
-            "2009/2010": 32.417516666666664
-          }
-        },
-        "max_value": 43.5873,
-        "min_value": 15.5683,
-        "source_file": "Learning Reading Lowest Girls - PASEC-reformatted.csv",
-        "years": [
-          "2009/2010"
-        ]
-      },
-      "learning_reading_lowest_girls__sacmeq": {
-        "avg": {
-          "years": {
-            "2007": 6.387499999999999
-          }
-        },
-        "max_value": 15.7,
-        "min_value": 1.6,
-        "source_file": "Learning Reading Lowest Girls - SACMEQ-reformatted.csv",
-        "years": [
-          "2007"
-        ]
-      },
-      "learning_reading_lowest_total__pasec": {
-        "avg": {
-          "years": {
-            "2009/2010": 31.574533333333335
-          }
-        },
-        "max_value": 41.7305,
-        "min_value": 16.5409,
-        "source_file": "Learning Reading Lowest Total - PASEC-reformatted.csv",
-        "years": [
-          "2009/2010"
-        ]
-      },
-      "learning_reading_lowest_total__sacmeq": {
-        "avg": {
-          "years": {
-            "2007": 6.512499999999999
-          }
-        },
-        "max_value": 15.8,
-        "min_value": 1.4,
-        "source_file": "Learning Reading Lowest Total - SACMEQ-reformatted.csv",
-        "years": [
-          "2007"
         ]
       },
       "lower_secondary_completion_rate_female": {
@@ -25213,7 +24781,7 @@
         },
         "max_value": 107.5602876326,
         "min_value": 6.6894297433,
-        "source_file": "Lower Secondary Completion Rate Female (%)-reformatted.csv",
+        "source_file": "Lower Secondary Completion Rate - All.csv",
         "years": [
           "2008",
           "2009",
@@ -25234,7 +24802,7 @@
         },
         "max_value": 1.4225202974,
         "min_value": 0,
-        "source_file": "Lower Secondary Completion Rate GPI-reformatted.csv",
+        "source_file": "Lower Secondary Completion Rate - All.csv",
         "years": [
           "2008",
           "2009",
@@ -25255,7 +24823,7 @@
         },
         "max_value": 109.75992,
         "min_value": 10.85285,
-        "source_file": "Lower Secondary Completion Rate Male (%)-reformatted.csv",
+        "source_file": "Lower Secondary Completion Rate - All.csv",
         "years": [
           "2008",
           "2009",
@@ -25276,7 +24844,7 @@
         },
         "max_value": 108.34803,
         "min_value": 9.22702,
-        "source_file": "Lower Secondary Completion Rate Total (%)-reformatted.csv",
+        "source_file": "Lower Secondary Completion Rate - All.csv",
         "years": [
           "2008",
           "2009",
@@ -25303,7 +24871,7 @@
         },
         "max_value": 34.3289745354,
         "min_value": 0.0484046211,
-        "source_file": "Percentage of repeaters in lower secondary Total (%)-reformatted.csv",
+        "source_file": "Percentage of repeaters in lower secondary Total (%).csv",
         "years": [
           "2008",
           "2009",
@@ -25324,7 +24892,7 @@
         },
         "max_value": 36.2200217739,
         "min_value": 0,
-        "source_file": "Percentage of repeaters in primary Total (%)-reformatted.csv",
+        "source_file": "Percentage of repeaters in primary Total (%).csv",
         "years": [
           "2008",
           "2009",
@@ -25345,7 +24913,7 @@
         },
         "max_value": 100,
         "min_value": 13.68571,
-        "source_file": "Percentage of teacher trained, Lower Secondary  Education-reformatted.csv",
+        "source_file": "Percentage of teacher trained, Lower Secondary Education.csv",
         "years": [
           "2008",
           "2009",
@@ -25366,7 +24934,7 @@
         },
         "max_value": 100,
         "min_value": 36.43654,
-        "source_file": "Percentage of teacher trained, Primary Education-reformatted.csv",
+        "source_file": "Percentage of teacher trained, Primary Education.csv",
         "years": [
           "2008",
           "2009",
@@ -25387,7 +24955,7 @@
         },
         "max_value": 129.90136,
         "min_value": 22.9928,
-        "source_file": "Primary Completion Rate Female (%)-reformatted.csv",
+        "source_file": "Primary Completion Rate - All.csv",
         "years": [
           "2008",
           "2009",
@@ -25408,7 +24976,7 @@
         },
         "max_value": 1.3609825841,
         "min_value": 0.5753977135,
-        "source_file": "Primary Completion Rate GPI-reformatted.csv",
+        "source_file": "Primary Completion Rate - All.csv",
         "years": [
           "2008",
           "2009",
@@ -25429,7 +24997,7 @@
         },
         "max_value": 130.53185,
         "min_value": 33.96457,
-        "source_file": "Primary Completion Rate Male (%)-reformatted.csv",
+        "source_file": "Primary Completion Rate - All.csv",
         "years": [
           "2008",
           "2009",
@@ -25450,7 +25018,7 @@
         },
         "max_value": 130.21946,
         "min_value": 31.20823,
-        "source_file": "Primary Completion Rate Total (%)-reformatted.csv",
+        "source_file": "Primary Completion Rate - All.csv",
         "years": [
           "2008",
           "2009",
@@ -25471,7 +25039,7 @@
         },
         "max_value": 115.45589,
         "min_value": 1.09033,
-        "source_file": "Primary Gross Enrollment Ratio Female (%)-reformatted.csv",
+        "source_file": "Primary Gross Enrollment Ratio - All.csv",
         "years": [
           "2008",
           "2009",
@@ -25492,7 +25060,7 @@
         },
         "max_value": 1.142300523,
         "min_value": 0.8293680835,
-        "source_file": "Primary Gross Enrollment Ratio GPI-reformatted.csv",
+        "source_file": "Primary Gross Enrollment Ratio - All.csv",
         "years": [
           "2008",
           "2009",
@@ -25513,7 +25081,7 @@
         },
         "max_value": 112.46256,
         "min_value": 0.99693,
-        "source_file": "Primary Gross Enrollment Ratio Male (%)-reformatted.csv",
+        "source_file": "Primary Gross Enrollment Ratio - All.csv",
         "years": [
           "2008",
           "2009",
@@ -25534,7 +25102,7 @@
         },
         "max_value": 113.92949,
         "min_value": 1.04281,
-        "source_file": "Primary Gross Enrollment Ratio Total (%)-reformatted.csv",
+        "source_file": "Primary Gross Enrollment Ratio - All.csv",
         "years": [
           "2008",
           "2009",
@@ -25555,7 +25123,7 @@
         },
         "max_value": 70.59044,
         "min_value": 0.72272,
-        "source_file": "Primary Out of School Children Rate Female (%)-reformatted.csv",
+        "source_file": "Primary Out of School Children Rate - All.csv",
         "years": [
           "2008",
           "2009",
@@ -25576,7 +25144,7 @@
         },
         "max_value": 66.98267,
         "min_value": 0.51488,
-        "source_file": "Primary Out of School Children Rate Male (%)-reformatted.csv",
+        "source_file": "Primary Out of School Children Rate - All.csv",
         "years": [
           "2008",
           "2009",
@@ -25597,7 +25165,7 @@
         },
         "max_value": 68.75296,
         "min_value": 0.59912,
-        "source_file": "Primary Out of School Children Rate Total (%)-reformatted.csv",
+        "source_file": "Primary Out of School Children Rate - All.csv",
         "years": [
           "2008",
           "2009",
@@ -25618,7 +25186,7 @@
         },
         "max_value": 12.98229,
         "min_value": 1.20532,
-        "source_file": "Public expenditure on education as % of GDP-reformatted.csv",
+        "source_file": "Public expenditure on education as % of GDP.csv",
         "years": [
           "2008",
           "2009",
@@ -25639,7 +25207,7 @@
         },
         "max_value": 27.75288,
         "min_value": 7.16742,
-        "source_file": "Public Expenditure on Education as % of Public Expenditure-reformatted.csv",
+        "source_file": "Public Expenditure on Education as % of Public Expenditure.csv",
         "years": [
           "2008",
           "2009",
@@ -25660,7 +25228,7 @@
         },
         "max_value": 55.99961,
         "min_value": 7.13811,
-        "source_file": "Pupil Teacher Ratio, Lower Secondary Education-reformatted.csv",
+        "source_file": "Pupil Teacher Ratio, Lower Secondary Education.csv",
         "years": [
           "2008",
           "2009",
@@ -25681,7 +25249,7 @@
         },
         "max_value": 100.23649,
         "min_value": 6.25983,
-        "source_file": "Pupil Teacher Ratio, Primary Education-reformatted.csv",
+        "source_file": "Pupil Teacher Ratio, Primary Education.csv",
         "years": [
           "2008",
           "2009",
@@ -25699,7 +25267,7 @@
         },
         "max_value": 100,
         "min_value": 14.23355,
-        "source_file": "Youth (15-24) literacy rate (%) female-reformatted.csv",
+        "source_file": "Youth (15-24) literacy rate (%) - All.csv",
         "years": [
           "2000-2005",
           "2007-2012"
@@ -25714,7 +25282,7 @@
         },
         "max_value": 100,
         "min_value": 26.23006,
-        "source_file": "Youth (15-24) literacy rate (%) Male-reformatted.csv",
+        "source_file": "Youth (15-24) literacy rate (%) - All.csv",
         "years": [
           "2000-2005",
           "2007-2012"
@@ -25729,7 +25297,7 @@
         },
         "max_value": 100,
         "min_value": 19.79119,
-        "source_file": "Youth (15-24) literacy rate (%) Total-reformatted.csv",
+        "source_file": "Youth (15-24) literacy rate (%) - All.csv",
         "years": [
           "2000-2005",
           "2007-2012"
