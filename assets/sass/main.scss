@@ -229,21 +229,68 @@ textarea {
     width: 100%;
     height: 100%;
     .sidebar-panel {
+        @include transition(all, 0.3s, ease);
         background: #FFF;
         border-left: 1px solid $background;
         bottom: 0;
         box-shadow: -2px 0 1px rgba(0, 0, 0, 0.08); // Need to make it x-compatible
-        overflow-y: auto;
         position: absolute;
         right: 0;
         top: 0;
         width: $sidebar;
+        overflow: visible!important;
+        overflow-y: auto;
         @include tablet {
             position: relative;
             width: 100%;
             top: $gutter*2.5;
             box-shadow: none;
+            .sidebar-toggle{
+                display: none;
+            }
         }
+        @include desktop {
+          .sidebar-toggle {
+            position: absolute;
+            width: $gutter*2;
+            height: $gutter*2;
+            left: -($gutter*2) - 1;
+            top: $gutter;
+            z-index: 1;
+            button {
+              width: $gutter*2;
+              height: $gutter*2;
+              float: left;
+              margin: 0px;
+              background: #fff;
+              border-radius: $radius 0 0 $radius;
+              border:0px;
+              &:after{
+                color: $black;
+                transform: rotate(0deg);
+                @include transition(all, 0.3s, ease);
+                content: '\e648';
+                font-family: 'mdfonticon';
+                font-size: 20px;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: $gutter*2;
+                height: $gutter*2;
+                line-height: $gutter*2;
+                text-align: center;
+                &:hover{
+                 color: #000;
+                }
+              }
+              &:focus {
+                box-shadow: none;
+              }
+
+            }
+          }
+        }
+     
         .header-container {
             width: 100%;
             z-index: 0;
@@ -477,14 +524,15 @@ textarea {
 
 @import 'mapbox';
 #main {
+    @include transition(all, 0.3s, ease);
     .map-legends {
+        @include transition(all, 0.3s, ease);
         position: fixed;
         bottom: 20px;
         right: $sidebar;
         background:rgba(0,0,0,.4);
         padding:$gutter/2;
         box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
-
         @include tablet {
             max-width: 100%;
             width: 100%;
@@ -642,9 +690,10 @@ textarea {
         }
     }
     .search {
-        right: $sidebar + $gutter/2+10;
+        right: $sidebar + $gutter/2+40;
         top: $gutter/2+10;
         width: 240px;
+        @include transition(all, 0.3s, ease);
         @include tablet {
             left: 0px;
             top: 50px;
@@ -828,6 +877,43 @@ textarea {
     width: 30px;
     height: 30px;
 }
+
+//slider toggle
+
+.isSidebarOpen {
+  @include desktop {
+    #main {
+      right: 0px!important;
+      @include transition(all, 0.3s, ease);
+      .search{
+        @include transition(all, 0.3s, ease);
+        right: 50px;
+      }
+      .map-legends{
+        @include transition(all, 0.3s, ease);
+        right: 0px;
+      }
+  
+    }
+    #sidebar {
+      .sidebar-panel {
+        @include transition(all, 0.3s, ease);
+        right: -$sidebar!important;
+        .sidebar-toggle {
+          button {
+            &:after {
+              @include transition(all, 0.3s, ease);
+              content: '\e64d';
+              font-size:18px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
 
 //import
 @import 'select';

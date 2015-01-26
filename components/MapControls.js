@@ -49,7 +49,7 @@ var MapControls = React.createClass({
       <aside id='sidebar'>
         <div className='sidebar-panel'>
           <div className='sidebar-toggle'>
-            <button name='button' onClick={this.toggleSidebar}>Toggle Sidebar</button>
+            <button name='button' onClick={this.toggleSidebar}></button>
           </div>
           <ControlHeader data={this.props.data} />
           <IndicatorSelector data={this.props.data} />
