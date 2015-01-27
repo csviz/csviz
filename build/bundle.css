@@ -5024,7 +5024,7 @@ textarea {
     #sidebar .sidebar-toggle {
       box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
       position: absolute;
-      width: 40px;
+      width: 20px;
       height: 40px;
       right: 470px;
       top: 20px;
@@ -5036,7 +5036,7 @@ textarea {
       transition: all 0.3s ease; }
       #sidebar .sidebar-toggle button {
         background: rgba(0, 0, 0, 0.4);
-        width: 40px;
+        width: 20px;
         height: 40px;
         margin: 0px;
         border-radius: 2px 0 0 2px;
@@ -5056,23 +5056,18 @@ textarea {
           content: '\e647';
           font-family: 'mdfonticon';
           text-shadow: none;
-          font-size: 24px;
           position: absolute;
           top: 0px;
           left: 0px;
-          width: 40px;
+          width: 20px;
           height: 40px;
           line-height: 40px;
-          text-align: center; }
+          text-align: center;
+          font-size: 22px; }
         #sidebar .sidebar-toggle button:focus {
           box-shadow: none; }
-<<<<<<< HEAD
         #sidebar .sidebar-toggle button:hover {
           background: rgba(0, 0, 0, 0.5); }
-=======
-        #sidebar .sidebar-toggle button:hover:after {
-          color: #000; }
->>>>>>> 6f419cc2761cd6f95f28846efa6569681b4987dc
 
     #sidebar .sidebar-panel {
       width: 470px; }
@@ -5092,7 +5087,7 @@ textarea {
   right: 0;
   top: 0;
   overflow-x: hidden;
-  overflow-y: scroll; }
+  overflow-y: auto; }
   @media (max-width: 768px) {
     .sidebar-panel {
       width: 100%;
@@ -6088,13 +6083,13 @@ textarea {
         line-height: 30px;
         color: #FFF;
         font-size: 11px;
-        text-align: right; }
+        text-align: left; }
         #main .map-legend .legend-list li.hide {
           display: none; }
         #main .map-legend .legend-list li .swatch {
           height: 20px;
-          float: right;
-          margin-left: 10px;
+          float: left;
+          margin-right: 10px;
           width: 30px;
           height: 30px;
           box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1); }
@@ -6170,7 +6165,7 @@ textarea {
         border-radius: none;
         box-shadow: none; } }
   #main .search {
-    right: 520px;
+    right: 500px;
     top: 20px;
     width: 240px;
     -webkit-transition: all 0.3s ease;
@@ -6258,8 +6253,13 @@ textarea {
         border-bottom: 1px solid #EDEDED; } }
   #main .timeline {
     bottom: 20px;
-    left: 184px;
-    height: 40px; }
+    right: 490px;
+    height: 40px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
     @media (max-width: 768px) {
       #main .timeline {
         position: relative;
@@ -6282,6 +6282,7 @@ textarea {
         padding: 10px 15px;
         border-bottom: 1px solid #E5E5E5;
         margin-bottom: -1px;
+        float: right;
         -webkit-transition: all 0.3s ease;
         -moz-transition: all 0.3s ease;
         -ms-transition: all 0.3s ease;
@@ -6343,42 +6344,18 @@ textarea {
 
 @media (min-width: 769px) {
   .isSidebarOpen #main {
-    right: 0px !important;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease; }
+    right: 0px !important; }
     .isSidebarOpen #main .search {
-      -webkit-transition: all 0.3s ease;
-      -moz-transition: all 0.3s ease;
-      -ms-transition: all 0.3s ease;
-      -o-transition: all 0.3s ease;
-      transition: all 0.3s ease;
-      right: 50px; }
+      right: 30px; }
+    .isSidebarOpen #main .timeline {
+      right: 20px !important; }
 
   .isSidebarOpen #sidebar .sidebar-toggle {
     right: 0px;
-    top: 20px;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease; }
+    top: 20px; }
     .isSidebarOpen #sidebar .sidebar-toggle button:after {
-      -webkit-transition: all 0.3s ease;
-      -moz-transition: all 0.3s ease;
-      -ms-transition: all 0.3s ease;
-      -o-transition: all 0.3s ease;
-      transition: all 0.3s ease;
-      content: '\e646';
-      font-size: 24px; }
+      content: '\e646'; }
   .isSidebarOpen #sidebar .sidebar-panel {
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
     right: -470px !important; }
  }
 

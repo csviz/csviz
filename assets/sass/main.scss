@@ -267,7 +267,7 @@ textarea {
     .sidebar-toggle {
       box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
       position: absolute;
-      width: $gutter*2;
+      width: $gutter;
       height: $gutter*2;
       right: $sidebar;
       top: $gutter;
@@ -275,7 +275,7 @@ textarea {
       @include transition(all, 0.3s, ease);
       button {
         background: rgba(0,0,0,0.4);
-        width: $gutter*2;
+        width: $gutter;
         height: $gutter*2;
         margin: 0px;
         border-radius: $radius 0 0 $radius;
@@ -287,14 +287,14 @@ textarea {
           content: '\e647';
           font-family: 'mdfonticon';
           text-shadow: none;
-          font-size: 24px;
           position: absolute;
           top: 0px;
           left: 0px;
-          width: $gutter*2;
+          width: $gutter;
           height: $gutter*2;
           line-height: $gutter*2;
           text-align: center;
+          font-size: 22px;
         }
         &:focus {
           box-shadow: none;
@@ -324,7 +324,7 @@ textarea {
   right: 0;
   top: 0;
   overflow-x:hidden;
-  overflow-y: scroll;
+  overflow-y:auto;
   .header-container {
     width: 100%;
     z-index: 0;
@@ -590,14 +590,14 @@ textarea {
         line-height: $gutter+10;
         color: #FFF;
         font-size: 11px;
-        text-align: right;
+        text-align: left;
         &.hide {
           display: none;
         }
         .swatch {
           height: $gutter;
-          float: right;
-          margin-left: $gutter/2;
+          float: left;
+          margin-right: $gutter/2;
           width: $gutter+10;
           height: $gutter+10;
           box-shadow: 0px 1px 5px rgba(0, 0, 0, .1);
@@ -695,7 +695,7 @@ textarea {
     }
   }
   .search {
-    right: $sidebar + $gutter/2+40;
+    right: $sidebar + $gutter/2+20;
     top: $gutter/2+10;
     width: 240px;
     @include transition(all, 0.3s, ease);
@@ -788,8 +788,9 @@ textarea {
   }
   .timeline {
     bottom: $gutter;
-    left: 184px;
+    right:$sidebar + $gutter;
     height: $gutter*2;
+    @include transition(all, 0.3s, ease);
     @include tablet {
       position: relative;
       left: 0px;
@@ -812,6 +813,7 @@ textarea {
         padding: $gutter/2 1.5*$gutter/2;
         border-bottom: 1px solid #E5E5E5;
         margin-bottom: -1px;
+        float: right;
         @include transition(all, 0.3s, ease);
         &.action {
           &:before {
@@ -886,27 +888,24 @@ textarea {
   @include desktop {
     #main {
       right: 0px!important;
-      @include transition(all, 0.3s, ease);
       .search {
-        @include transition(all, 0.3s, ease);
-        right: 50px;
+        right: 30px;
+      }
+      .timeline{
+        right: $gutter!important;
       }
     }
     #sidebar {
       .sidebar-toggle {
         right: 0px;
         top: $gutter;
-        @include transition(all, 0.3s, ease);
         button {
           &:after {
-            @include transition(all, 0.3s, ease);
             content: '\e646';
-            font-size: 24px;
           }
         }
       }
       .sidebar-panel {
-        @include transition(all, 0.3s, ease);
         right: -$sidebar!important;
       }
     }
