@@ -5055,6 +5055,9 @@ textarea {
   width: 470px;
   overflow-x: hidden;
   overflow-y: scroll; }
+  @media (max-width: 768px) {
+    .sidebar-panel {
+      width: 100%; } }
   .sidebar-panel .header-container {
     width: 100%;
     z-index: 0; }

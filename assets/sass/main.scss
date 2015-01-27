@@ -282,6 +282,9 @@ textarea {
 }
 
     .sidebar-panel {
+        @include tablet {
+          width: 100%;
+        }
         @include transition(all, 0.3s, ease);
         background: #FFF;
         border-left: 1px solid $background;
