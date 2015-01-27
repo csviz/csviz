@@ -4464,164 +4464,7 @@
           }
         }
       },
-      "congo_drc": {
-        "_of_missing_data_domestic_financing": {
-          "years": {
-            "2008": 100,
-            "2009": 100,
-            "2010": 0,
-            "2011": 100
-          }
-        },
-        "_of_missing_data_outcome_indicators": {
-          "years": {
-            "2008": 20,
-            "2009": 20,
-            "2010": 20,
-            "2011": 20
-          }
-        },
-        "_of_missing_data_service_delivery": {
-          "years": {
-            "2008": 50,
-            "2009": 50,
-            "2010": 50,
-            "2011": 50
-          }
-        },
-        "aid_committed_for_basic_education_as__of_gdp": {
-          "years": {
-            "2008": 0.3950421432,
-            "2009": 0.938056462,
-            "2010": 0.4943859768,
-            "2011": 0.3752317243,
-            "2012": 0.2315183278
-          }
-        },
-        "aid_committed_for_basic_education_current_prices": {
-          "years": {
-            "2008": 45.8051365,
-            "2009": 104.1993118,
-            "2010": 64.8832156,
-            "2011": 59.1027489,
-            "2012": 39.929966
-          }
-        },
-        "aid_committed_for_total_education_as__of_gdp": {
-          "years": {
-            "2008": 0.6177599828,
-            "2009": 1.7256013738,
-            "2010": 0.8506980585,
-            "2011": 0.6933902724,
-            "2012": 0.5772335247
-          }
-        },
-        "aid_committed_for_total_education_current_prices": {
-          "years": {
-            "2008": 71.62927,
-            "2009": 191.6798006,
-            "2010": 111.6456132,
-            "2011": 109.2159018,
-            "2012": 99.555466
-          }
-        },
-        "aid_disbursed_for_basic_education_as__of_gdp": {
-          "years": {
-            "2008": 0.4141530315,
-            "2009": 0.9092475162,
-            "2010": 0.6736227469,
-            "2011": 0.4839741318,
-            "2012": 0.4032151939
-          }
-        },
-        "aid_disbursed_for_basic_education_current_prices": {
-          "years": {
-            "2008": 48.021044,
-            "2009": 100.9992141,
-            "2010": 88.4062493,
-            "2011": 76.2307655,
-            "2012": 69.5425245
-          }
-        },
-        "aid_disbursed_for_total_education_as__of_gdp": {
-          "years": {
-            "2008": 0.7197619319,
-            "2009": 1.6658348055,
-            "2010": 1.1023850168,
-            "2011": 0.8484507714,
-            "2012": 0.6708593842
-          }
-        },
-        "aid_disbursed_for_total_education_current_prices": {
-          "years": {
-            "2008": 83.456396,
-            "2009": 185.0409302,
-            "2010": 144.6770096,
-            "2011": 133.639481,
-            "2012": 115.703118
-          }
-        },
-        "educational_expenditure_in_primary_as__of_total_educational_expenditure": {
-          "years": {
-            "2008": null,
-            "2009": null,
-            "2010": 33.33619,
-            "2011": null,
-            "2012": null
-          }
-        },
-        "equivalent_children_supported_in_basic_education": {
-          "years": {
-            "2012": 0,
-            "2013": 405811.391001413
-          }
-        },
-        "gpe_annual_funding_approvals": {
-          "years": {
-            "2003-2006": null,
-            "2007": null,
-            "2008": null,
-            "2009": null,
-            "2010": null,
-            "2011": null,
-            "2012": 100000000,
-            "2013": null
-          }
-        },
-        "gpe_annual_funding_disbursements": {
-          "years": {
-            "2004": 0,
-            "2005": 0,
-            "2006": 0,
-            "2007": 0,
-            "2008": 0,
-            "2009": 0,
-            "2010": 0,
-            "2011": 0,
-            "2012": 0,
-            "2013": 5682895.76
-          }
-        },
-        "gpe_funding_approval_as__of_gdp": {
-          "years": {
-            "2008": null,
-            "2009": null,
-            "2010": null,
-            "2011": null,
-            "2012": 0.5798109816,
-            "2013": null
-          }
-        },
-        "gpe_funding_disbursement__as__of_gdp": {
-          "years": {
-            "2008": null,
-            "2009": null,
-            "2010": null,
-            "2011": null,
-            "2012": null,
-            "2013": 0.0306256508
-          }
-        },
+      "congo": {
         "jsr_report_available": {
           "years": {
             "2010": null,
@@ -4637,10 +4480,15 @@
             "2012": null,
             "2013": null
           }
-        },
+        }
+      },
+      "congo_drc": {
+        "map_of_the_global_partnership_for_education": 0
+      },
+      "cote_divoire": {
         "learning_math_lowest_boys__pasec": {
           "years": {
-            "2009/2010": 13.6
+            "2009/2010": 43.4
           }
         },
         "learning_math_lowest_boys__sacmeq": {
@@ -4655,7 +4503,7 @@
         },
         "learning_math_lowest_girls__pasec": {
           "years": {
-            "2009/2010": 16.4216
+            "2009/2010": 45.7983
           }
         },
         "learning_math_lowest_girls__sacmeq": {
@@ -4670,7 +4518,7 @@
         },
         "learning_math_lowest_total__pasec": {
           "years": {
-            "2009/2010": 14.7906
+            "2009/2010": 44.5256
           }
         },
         "learning_math_lowest_total__sacmeq": {
@@ -4681,232 +4529,6 @@
         "learning_math_lowest_total__tims": {
           "years": {
             "2009/2010": null
-          }
-        },
-        "lower_secondary_completion_rate_female": {
-          "years": {
-            "2008": null,
-            "2009": null,
-            "2010": null,
-            "2011": null,
-            "2012": 30.1421449902
-          }
-        },
-        "lower_secondary_completion_rate_gpi": {
-          "years": {
-            "2008": null,
-            "2009": null,
-            "2010": null,
-            "2011": null,
-            "2012": 0.5918621988
-          }
-        },
-        "lower_secondary_completion_rate_male": {
-          "years": {
-            "2008": null,
-            "2009": null,
-            "2010": null,
-            "2011": null,
-            "2012": 50.92764
-          }
-        },
-        "lower_secondary_completion_rate_total": {
-          "years": {
-            "2008": null,
-            "2009": null,
-            "2010": null,
-            "2011": null,
-            "2012": 41.90902
-          }
-        },
-        "map_of_the_global_partnership_for_education": 0,
-        "percentage_of_repeaters_in_lower_secondary_total": {
-          "years": {
-            "2008": 11.7076815844,
-            "2009": null,
-            "2010": null,
-            "2011": null,
-            "2012": 11.8596035669
-          }
-        },
-        "percentage_of_repeaters_in_primary_total": {
-          "years": {
-            "2008": 15.3373811146,
-            "2009": 15.3373858829,
-            "2010": 14.1180043702,
-            "2011": 12.3441270161,
-            "2012": 11.2092958786
-          }
-        },
-        "percentage_of_teacher_trained_lower_secondary__education": {
-          "years": {
-            "2008": null,
-            "2009": null,
-            "2010": null,
-            "2011": null,
-            "2012": null
-          }
-        },
-        "percentage_of_teacher_trained_primary_education": {
-          "years": {
-            "2008": 93.26745,
-            "2009": 93.3934,
-            "2010": 91.66748,
-            "2011": 89.85311,
-            "2012": 93.5459
-          }
-        },
-        "primary_completion_rate_female": {
-          "years": {
-            "2008": 49.29861,
-            "2009": 51.6589,
-            "2010": 54.96792,
-            "2011": 55.6835,
-            "2012": 62.10323
-          }
-        },
-        "primary_completion_rate_gpi": {
-          "years": {
-            "2008": 0.6955376545,
-            "2009": 0.6947103792,
-            "2010": 0.7531371741,
-            "2011": 0.7192444172,
-            "2012": 0.7439208893
-          }
-        },
-        "primary_completion_rate_male": {
-          "years": {
-            "2008": 70.87842,
-            "2009": 74.36034,
-            "2010": 72.98527,
-            "2011": 77.41944,
-            "2012": 83.48096
-          }
-        },
-        "primary_completion_rate_total": {
-          "years": {
-            "2008": 60.11833,
-            "2009": 63.0388,
-            "2010": 63.99845,
-            "2011": 66.57711,
-            "2012": 72.81776
-          }
-        },
-        "primary_gross_enrollment_ratio_female": {
-          "years": {
-            "2008": 3.57011,
-            "2009": 4.3198,
-            "2010": 3.73201,
-            "2011": 4.06761,
-            "2012": 4.44968
-          }
-        },
-        "primary_gross_enrollment_ratio_gpi": {
-          "years": {
-            "2008": 1.0509658579,
-            "2009": 1.0580691304,
-            "2010": 1.0638356703,
-            "2011": 1.0512902025,
-            "2012": 1.0574058188
-          }
-        },
-        "primary_gross_enrollment_ratio_male": {
-          "years": {
-            "2008": 3.39698,
-            "2009": 4.08272,
-            "2010": 3.50807,
-            "2011": 3.86916,
-            "2012": 4.20811
-          }
-        },
-        "primary_gross_enrollment_ratio_total": {
-          "years": {
-            "2008": 3.4832,
-            "2009": 4.20078,
-            "2010": 3.61964,
-            "2011": 3.96807,
-            "2012": 4.32854
-          }
-        },
-        "primary_out_of_school_children_rate_female": {
-          "years": {
-            "2008": null,
-            "2009": null,
-            "2010": null,
-            "2011": null,
-            "2012": null
-          }
-        },
-        "primary_out_of_school_children_rate_male": {
-          "years": {
-            "2008": null,
-            "2009": null,
-            "2010": null,
-            "2011": null,
-            "2012": null
-          }
-        },
-        "primary_out_of_school_children_rate_total": {
-          "years": {
-            "2008": null,
-            "2009": null,
-            "2010": null,
-            "2011": null,
-            "2012": null
-          }
-        },
-        "public_expenditure_on_education_as__of_gdp": {
-          "years": {
-            "2008": null,
-            "2009": null,
-            "2010": 2.50895,
-            "2011": null,
-            "2012": null
-          }
-        },
-        "public_expenditure_on_education_as__of_public_expenditure": {
-          "years": {
-            "2008": null,
-            "2009": null,
-            "2010": 8.89245,
-            "2011": null,
-            "2012": null
-          }
-        },
-        "pupil_teacher_ratio_lower_secondary_education": {
-          "years": {
-            "2008": null,
-            "2009": null,
-            "2010": null,
-            "2011": null,
-            "2012": null
-          }
-        },
-        "pupil_teacher_ratio_primary_education": {
-          "years": {
-            "2008": 39.02034,
-            "2009": 37.32547,
-            "2010": 37.0131,
-            "2011": 37.37094,
-            "2012": 34.74758
-          }
-        },
-        "youth__literacy_rate__female": {
-          "years": {
-            "2000-2005": 63.0907,
-            "2007-2012": 53.25022
-          }
-        },
-        "youth__literacy_rate__male": {
-          "years": {
-            "2000-2005": 77.98111,
-            "2007-2012": 78.93642
-          }
-        },
-        "youth__literacy_rate__total": {
-          "years": {
-            "2000-2005": 70.41626,
-            "2007-2012": 65.77653
           }
         }
       },
@@ -5082,51 +4704,6 @@
             "2011": null,
             "2012": null,
             "2013": null
-          }
-        },
-        "learning_math_lowest_boys__pasec": {
-          "years": {
-            "2009/2010": 43.4
-          }
-        },
-        "learning_math_lowest_boys__sacmeq": {
-          "years": {
-            "2009/2010": null
-          }
-        },
-        "learning_math_lowest_boys__tims": {
-          "years": {
-            "2009/2010": null
-          }
-        },
-        "learning_math_lowest_girls__pasec": {
-          "years": {
-            "2009/2010": 45.7983
-          }
-        },
-        "learning_math_lowest_girls__sacmeq": {
-          "years": {
-            "2009/2010": null
-          }
-        },
-        "learning_math_lowest_girls__tims": {
-          "years": {
-            "2009/2010": null
-          }
-        },
-        "learning_math_lowest_total__pasec": {
-          "years": {
-            "2009/2010": 44.5256
-          }
-        },
-        "learning_math_lowest_total__sacmeq": {
-          "years": {
-            "2009/2010": null
-          }
-        },
-        "learning_math_lowest_total__tims": {
-          "years": {
-            "2009/2010": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -5353,6 +4930,435 @@
           "years": {
             "2000-2005": 60.72365,
             "2007-2012": 67.52731
+          }
+        }
+      },
+      "democratic_republic_of_the_congo": {
+        "_of_missing_data_domestic_financing": {
+          "years": {
+            "2008": 100,
+            "2009": 100,
+            "2010": 0,
+            "2011": 100
+          }
+        },
+        "_of_missing_data_outcome_indicators": {
+          "years": {
+            "2008": 20,
+            "2009": 20,
+            "2010": 20,
+            "2011": 20
+          }
+        },
+        "_of_missing_data_service_delivery": {
+          "years": {
+            "2008": 50,
+            "2009": 50,
+            "2010": 50,
+            "2011": 50
+          }
+        },
+        "aid_committed_for_basic_education_as__of_gdp": {
+          "years": {
+            "2008": 0.3950421432,
+            "2009": 0.938056462,
+            "2010": 0.4943859768,
+            "2011": 0.3752317243,
+            "2012": 0.2315183278
+          }
+        },
+        "aid_committed_for_basic_education_current_prices": {
+          "years": {
+            "2008": 45.8051365,
+            "2009": 104.1993118,
+            "2010": 64.8832156,
+            "2011": 59.1027489,
+            "2012": 39.929966
+          }
+        },
+        "aid_committed_for_total_education_as__of_gdp": {
+          "years": {
+            "2008": 0.6177599828,
+            "2009": 1.7256013738,
+            "2010": 0.8506980585,
+            "2011": 0.6933902724,
+            "2012": 0.5772335247
+          }
+        },
+        "aid_committed_for_total_education_current_prices": {
+          "years": {
+            "2008": 71.62927,
+            "2009": 191.6798006,
+            "2010": 111.6456132,
+            "2011": 109.2159018,
+            "2012": 99.555466
+          }
+        },
+        "aid_disbursed_for_basic_education_as__of_gdp": {
+          "years": {
+            "2008": 0.4141530315,
+            "2009": 0.9092475162,
+            "2010": 0.6736227469,
+            "2011": 0.4839741318,
+            "2012": 0.4032151939
+          }
+        },
+        "aid_disbursed_for_basic_education_current_prices": {
+          "years": {
+            "2008": 48.021044,
+            "2009": 100.9992141,
+            "2010": 88.4062493,
+            "2011": 76.2307655,
+            "2012": 69.5425245
+          }
+        },
+        "aid_disbursed_for_total_education_as__of_gdp": {
+          "years": {
+            "2008": 0.7197619319,
+            "2009": 1.6658348055,
+            "2010": 1.1023850168,
+            "2011": 0.8484507714,
+            "2012": 0.6708593842
+          }
+        },
+        "aid_disbursed_for_total_education_current_prices": {
+          "years": {
+            "2008": 83.456396,
+            "2009": 185.0409302,
+            "2010": 144.6770096,
+            "2011": 133.639481,
+            "2012": 115.703118
+          }
+        },
+        "educational_expenditure_in_primary_as__of_total_educational_expenditure": {
+          "years": {
+            "2008": null,
+            "2009": null,
+            "2010": 33.33619,
+            "2011": null,
+            "2012": null
+          }
+        },
+        "equivalent_children_supported_in_basic_education": {
+          "years": {
+            "2012": 0,
+            "2013": 405811.391001413
+          }
+        },
+        "gpe_annual_funding_approvals": {
+          "years": {
+            "2003-2006": null,
+            "2007": null,
+            "2008": null,
+            "2009": null,
+            "2010": null,
+            "2011": null,
+            "2012": 100000000,
+            "2013": null
+          }
+        },
+        "gpe_annual_funding_disbursements": {
+          "years": {
+            "2004": 0,
+            "2005": 0,
+            "2006": 0,
+            "2007": 0,
+            "2008": 0,
+            "2009": 0,
+            "2010": 0,
+            "2011": 0,
+            "2012": 0,
+            "2013": 5682895.76
+          }
+        },
+        "gpe_funding_approval_as__of_gdp": {
+          "years": {
+            "2008": null,
+            "2009": null,
+            "2010": null,
+            "2011": null,
+            "2012": 0.5798109816,
+            "2013": null
+          }
+        },
+        "gpe_funding_disbursement__as__of_gdp": {
+          "years": {
+            "2008": null,
+            "2009": null,
+            "2010": null,
+            "2011": null,
+            "2012": null,
+            "2013": 0.0306256508
+          }
+        },
+        "learning_math_lowest_boys__pasec": {
+          "years": {
+            "2009/2010": 13.6
+          }
+        },
+        "learning_math_lowest_boys__sacmeq": {
+          "years": {
+            "2009/2010": null
+          }
+        },
+        "learning_math_lowest_boys__tims": {
+          "years": {
+            "2009/2010": null
+          }
+        },
+        "learning_math_lowest_girls__pasec": {
+          "years": {
+            "2009/2010": 16.4216
+          }
+        },
+        "learning_math_lowest_girls__sacmeq": {
+          "years": {
+            "2009/2010": null
+          }
+        },
+        "learning_math_lowest_girls__tims": {
+          "years": {
+            "2009/2010": null
+          }
+        },
+        "learning_math_lowest_total__pasec": {
+          "years": {
+            "2009/2010": 14.7906
+          }
+        },
+        "learning_math_lowest_total__sacmeq": {
+          "years": {
+            "2009/2010": null
+          }
+        },
+        "learning_math_lowest_total__tims": {
+          "years": {
+            "2009/2010": null
+          }
+        },
+        "lower_secondary_completion_rate_female": {
+          "years": {
+            "2008": null,
+            "2009": null,
+            "2010": null,
+            "2011": null,
+            "2012": 30.1421449902
+          }
+        },
+        "lower_secondary_completion_rate_gpi": {
+          "years": {
+            "2008": null,
+            "2009": null,
+            "2010": null,
+            "2011": null,
+            "2012": 0.5918621988
+          }
+        },
+        "lower_secondary_completion_rate_male": {
+          "years": {
+            "2008": null,
+            "2009": null,
+            "2010": null,
+            "2011": null,
+            "2012": 50.92764
+          }
+        },
+        "lower_secondary_completion_rate_total": {
+          "years": {
+            "2008": null,
+            "2009": null,
+            "2010": null,
+            "2011": null,
+            "2012": 41.90902
+          }
+        },
+        "percentage_of_repeaters_in_lower_secondary_total": {
+          "years": {
+            "2008": 11.7076815844,
+            "2009": null,
+            "2010": null,
+            "2011": null,
+            "2012": 11.8596035669
+          }
+        },
+        "percentage_of_repeaters_in_primary_total": {
+          "years": {
+            "2008": 15.3373811146,
+            "2009": 15.3373858829,
+            "2010": 14.1180043702,
+            "2011": 12.3441270161,
+            "2012": 11.2092958786
+          }
+        },
+        "percentage_of_teacher_trained_lower_secondary__education": {
+          "years": {
+            "2008": null,
+            "2009": null,
+            "2010": null,
+            "2011": null,
+            "2012": null
+          }
+        },
+        "percentage_of_teacher_trained_primary_education": {
+          "years": {
+            "2008": 93.26745,
+            "2009": 93.3934,
+            "2010": 91.66748,
+            "2011": 89.85311,
+            "2012": 93.5459
+          }
+        },
+        "primary_completion_rate_female": {
+          "years": {
+            "2008": 49.29861,
+            "2009": 51.6589,
+            "2010": 54.96792,
+            "2011": 55.6835,
+            "2012": 62.10323
+          }
+        },
+        "primary_completion_rate_gpi": {
+          "years": {
+            "2008": 0.6955376545,
+            "2009": 0.6947103792,
+            "2010": 0.7531371741,
+            "2011": 0.7192444172,
+            "2012": 0.7439208893
+          }
+        },
+        "primary_completion_rate_male": {
+          "years": {
+            "2008": 70.87842,
+            "2009": 74.36034,
+            "2010": 72.98527,
+            "2011": 77.41944,
+            "2012": 83.48096
+          }
+        },
+        "primary_completion_rate_total": {
+          "years": {
+            "2008": 60.11833,
+            "2009": 63.0388,
+            "2010": 63.99845,
+            "2011": 66.57711,
+            "2012": 72.81776
+          }
+        },
+        "primary_gross_enrollment_ratio_female": {
+          "years": {
+            "2008": 3.57011,
+            "2009": 4.3198,
+            "2010": 3.73201,
+            "2011": 4.06761,
+            "2012": 4.44968
+          }
+        },
+        "primary_gross_enrollment_ratio_gpi": {
+          "years": {
+            "2008": 1.0509658579,
+            "2009": 1.0580691304,
+            "2010": 1.0638356703,
+            "2011": 1.0512902025,
+            "2012": 1.0574058188
+          }
+        },
+        "primary_gross_enrollment_ratio_male": {
+          "years": {
+            "2008": 3.39698,
+            "2009": 4.08272,
+            "2010": 3.50807,
+            "2011": 3.86916,
+            "2012": 4.20811
+          }
+        },
+        "primary_gross_enrollment_ratio_total": {
+          "years": {
+            "2008": 3.4832,
+            "2009": 4.20078,
+            "2010": 3.61964,
+            "2011": 3.96807,
+            "2012": 4.32854
+          }
+        },
+        "primary_out_of_school_children_rate_female": {
+          "years": {
+            "2008": null,
+            "2009": null,
+            "2010": null,
+            "2011": null,
+            "2012": null
+          }
+        },
+        "primary_out_of_school_children_rate_male": {
+          "years": {
+            "2008": null,
+            "2009": null,
+            "2010": null,
+            "2011": null,
+            "2012": null
+          }
+        },
+        "primary_out_of_school_children_rate_total": {
+          "years": {
+            "2008": null,
+            "2009": null,
+            "2010": null,
+            "2011": null,
+            "2012": null
+          }
+        },
+        "public_expenditure_on_education_as__of_gdp": {
+          "years": {
+            "2008": null,
+            "2009": null,
+            "2010": 2.50895,
+            "2011": null,
+            "2012": null
+          }
+        },
+        "public_expenditure_on_education_as__of_public_expenditure": {
+          "years": {
+            "2008": null,
+            "2009": null,
+            "2010": 8.89245,
+            "2011": null,
+            "2012": null
+          }
+        },
+        "pupil_teacher_ratio_lower_secondary_education": {
+          "years": {
+            "2008": null,
+            "2009": null,
+            "2010": null,
+            "2011": null,
+            "2012": null
+          }
+        },
+        "pupil_teacher_ratio_primary_education": {
+          "years": {
+            "2008": 39.02034,
+            "2009": 37.32547,
+            "2010": 37.0131,
+            "2011": 37.37094,
+            "2012": 34.74758
+          }
+        },
+        "youth__literacy_rate__female": {
+          "years": {
+            "2000-2005": 63.0907,
+            "2007-2012": 53.25022
+          }
+        },
+        "youth__literacy_rate__male": {
+          "years": {
+            "2000-2005": 77.98111,
+            "2007-2012": 78.93642
+          }
+        },
+        "youth__literacy_rate__total": {
+          "years": {
+            "2000-2005": 70.41626,
+            "2007-2012": 65.77653
           }
         }
       },
@@ -6723,22 +6729,6 @@
             "2013": 0.3384283482
           }
         },
-        "jsr_report_available": {
-          "years": {
-            "2010": null,
-            "2011": 1,
-            "2012": null,
-            "2013": null
-          }
-        },
-        "jsrs_conducted": {
-          "years": {
-            "2010": null,
-            "2011": 1,
-            "2012": null,
-            "2013": null
-          }
-        },
         "lower_secondary_completion_rate_female": {
           "years": {
             "2008": 50.7995618839,
@@ -6963,6 +6953,24 @@
           "years": {
             "2000-2005": 52.55502,
             "2007-2012": 69.43474
+          }
+        }
+      },
+      "gambia_the": {
+        "jsr_report_available": {
+          "years": {
+            "2010": null,
+            "2011": 1,
+            "2012": null,
+            "2013": null
+          }
+        },
+        "jsrs_conducted": {
+          "years": {
+            "2010": null,
+            "2011": 1,
+            "2012": null,
+            "2013": null
           }
         }
       },
@@ -10230,6 +10238,25 @@
         }
       },
       "kyrgyz_republic": {
+        "jsr_report_available": {
+          "years": {
+            "2010": null,
+            "2011": 1,
+            "2012": null,
+            "2013": null
+          }
+        },
+        "jsrs_conducted": {
+          "years": {
+            "2010": null,
+            "2011": 1,
+            "2012": null,
+            "2013": null
+          }
+        },
+        "map_of_the_global_partnership_for_education": 0
+      },
+      "kyrgyzstan": {
         "_of_missing_data_domestic_financing": {
           "years": {
             "2008": 66.6666666667,
@@ -10387,22 +10414,6 @@
             "2013": 0.0140994233
           }
         },
-        "jsr_report_available": {
-          "years": {
-            "2010": null,
-            "2011": 1,
-            "2012": null,
-            "2013": null
-          }
-        },
-        "jsrs_conducted": {
-          "years": {
-            "2010": null,
-            "2011": 1,
-            "2012": null,
-            "2013": null
-          }
-        },
         "lower_secondary_completion_rate_female": {
           "years": {
             "2008": 85.1762834075,
@@ -10439,7 +10450,6 @@
             "2012": 89.45274
           }
         },
-        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": 0.1216301058,
@@ -10631,6 +10641,25 @@
         }
       },
       "lao_pdr": {
+        "jsr_report_available": {
+          "years": {
+            "2010": null,
+            "2011": 1,
+            "2012": 1,
+            "2013": null
+          }
+        },
+        "jsrs_conducted": {
+          "years": {
+            "2010": null,
+            "2011": 1,
+            "2012": 1,
+            "2013": null
+          }
+        },
+        "map_of_the_global_partnership_for_education": 0
+      },
+      "lao_peoples_democratic_republic": {
         "_of_missing_data_domestic_financing": {
           "years": {
             "2008": 33.3333333333,
@@ -10788,22 +10817,6 @@
             "2013": 0.0691279178
           }
         },
-        "jsr_report_available": {
-          "years": {
-            "2010": null,
-            "2011": 1,
-            "2012": 1,
-            "2013": null
-          }
-        },
-        "jsrs_conducted": {
-          "years": {
-            "2010": null,
-            "2011": 1,
-            "2012": 1,
-            "2013": null
-          }
-        },
         "lower_secondary_completion_rate_female": {
           "years": {
             "2008": 40.8236637853,
@@ -10840,7 +10853,6 @@
             "2012": 43.96423
           }
         },
-        "map_of_the_global_partnership_for_education": 0,
         "percentage_of_repeaters_in_lower_secondary_total": {
           "years": {
             "2008": 1.8664513119,
@@ -11879,7 +11891,7 @@
         }
       },
       "luxembourg": {
-        "map_of_the_global_partnership_for_education": 1
+        "map_of_the_global_partnership_for_education": 0
       },
       "madagascar": {
         "_of_missing_data_domestic_financing": {
@@ -20461,6 +20473,16 @@
           }
         }
       },
+      "timor_leste": {
+        "jsr_report_available": {
+          "years": {
+            "2010": 1,
+            "2011": null,
+            "2012": null,
+            "2013": null
+          }
+        }
+      },
       "timorleste": {
         "_of_missing_data_domestic_financing": {
           "years": {
@@ -20617,14 +20639,6 @@
             "2011": null,
             "2012": null,
             "2013": 0.0065219325
-          }
-        },
-        "jsr_report_available": {
-          "years": {
-            "2010": 1,
-            "2011": null,
-            "2012": null,
-            "2013": null
           }
         },
         "jsrs_conducted": {
@@ -24840,7 +24854,7 @@
         ]
       },
       "map_of_the_global_partnership_for_education": {
-        "avg": 0.24358974358974358,
+        "avg": 0.23076923076923078,
         "max_value": 1,
         "min_value": 0,
         "source_file": "Map of the Global Partnership For Education (GPE).csv"
@@ -25295,271 +25309,355 @@
     "locations": {
       "afghanistan": {
         "ISO": "AFG",
+        "donor": false,
         "fragile": true,
         "label": "Afghanistan"
       },
       "albania": {
         "ISO": "ALB",
+        "donor": false,
         "fragile": false,
         "label": "Albania"
       },
       "australia": {
         "ISO": "AUS",
+        "donor": true,
         "fragile": false,
         "label": "Australia"
       },
       "belgium": {
         "ISO": "BEL",
+        "donor": true,
         "fragile": false,
         "label": "Belgium"
       },
       "benin": {
         "ISO": "BEN",
+        "donor": false,
         "fragile": false,
         "label": "Benin"
       },
       "bhutan": {
         "ISO": "BTN",
+        "donor": false,
         "fragile": false,
         "label": "Bhutan"
       },
       "burkina_faso": {
         "ISO": "BFA",
+        "donor": false,
         "fragile": false,
         "label": "Burkina Faso"
       },
       "burundi": {
         "ISO": "BDI",
+        "donor": false,
         "fragile": true,
         "label": "Burundi"
       },
       "cambodia": {
         "ISO": "KHM",
+        "donor": false,
         "fragile": false,
         "label": "Cambodia"
       },
       "cameroon": {
         "ISO": "CMR",
+        "donor": false,
         "fragile": false,
         "label": "Cameroon"
       },
       "canada": {
         "ISO": "CAN",
+        "donor": true,
         "fragile": false,
         "label": "Canada"
       },
       "central_african_republic": {
         "ISO": "CAF",
+        "donor": false,
         "fragile": true,
         "label": "Central African Republic"
       },
       "chad": {
         "ISO": "TCD",
+        "donor": false,
         "fragile": true,
         "label": "Chad"
       },
       "comoros": {
         "ISO": "COM",
+        "donor": false,
         "fragile": true,
         "label": "Comoros"
       },
+      "congo": {
+        "ISO": "NF-",
+        "fragile": false,
+        "label": "Congo (DRC)"
+      },
       "congo_drc": {
         "ISO": "NF-",
+        "donor": false,
         "fragile": true,
         "label": "Congo DRC"
       },
+      "cote_divoire": {
+        "ISO": "CIV",
+        "fragile": false,
+        "label": "Cote d'Ivoire"
+      },
       "cte_divoire": {
         "ISO": "NF-",
+        "donor": false,
         "fragile": false,
         "label": "C\u00f4te d'Ivoire"
       },
+      "democratic_republic_of_the_congo": {
+        "ISO": "COD",
+        "fragile": false,
+        "label": "Democratic Republic of the Congo"
+      },
       "denmark": {
         "ISO": "DNK",
+        "donor": true,
         "fragile": false,
         "label": "Denmark"
       },
       "djibouti": {
         "ISO": "DJI",
+        "donor": false,
         "fragile": false,
         "label": "Djibouti"
       },
       "eritrea": {
         "ISO": "ERI",
+        "donor": false,
         "fragile": true,
         "label": "Eritrea"
       },
       "ethiopia": {
         "ISO": "ETH",
+        "donor": false,
         "fragile": true,
         "label": "Ethiopia"
       },
       "france": {
         "ISO": "FRA",
+        "donor": true,
         "fragile": false,
         "label": "France"
       },
       "gambia": {
         "ISO": "NF-",
+        "donor": false,
         "fragile": false,
         "label": "Gambia"
       },
+      "gambia_the": {
+        "ISO": "NF-",
+        "fragile": false,
+        "label": "Gambia, The"
+      },
       "georgia": {
         "ISO": "GEO",
+        "donor": false,
         "fragile": false,
         "label": "Georgia"
       },
       "germany": {
         "ISO": "DEU",
+        "donor": true,
         "fragile": false,
         "label": "Germany"
       },
       "ghana": {
         "ISO": "GHA",
+        "donor": false,
         "fragile": false,
         "label": "Ghana"
       },
       "guinea": {
         "ISO": "GIN",
+        "donor": false,
         "fragile": false,
         "label": "Guinea"
       },
       "guineabissau": {
         "ISO": "GNB",
+        "donor": false,
         "fragile": true,
         "label": "Guinea-Bissau"
       },
       "guyana": {
         "ISO": "GUY",
+        "donor": false,
         "fragile": false,
         "label": "Guyana"
       },
       "haiti": {
         "ISO": "HTI",
+        "donor": false,
         "fragile": true,
         "label": "Haiti"
       },
       "honduras": {
         "ISO": "HND",
+        "donor": false,
         "fragile": false,
         "label": "Honduras"
       },
       "ireland": {
         "ISO": "IRL",
+        "donor": true,
         "fragile": false,
         "label": "Ireland"
       },
       "italy": {
         "ISO": "ITA",
+        "donor": true,
         "fragile": false,
         "label": "Italy"
       },
       "japan": {
         "ISO": "JPN",
+        "donor": true,
         "fragile": false,
         "label": "Japan"
       },
       "kenya": {
         "ISO": "KEN",
+        "donor": false,
         "fragile": false,
         "label": "Kenya"
       },
       "kyrgyz_republic": {
         "ISO": "NF-",
+        "donor": false,
         "fragile": false,
         "label": "Kyrgyz Republic"
       },
+      "kyrgyzstan": {
+        "ISO": "KGZ",
+        "fragile": false,
+        "label": "Kyrgyzstan"
+      },
       "lao_pdr": {
         "ISO": "NF-",
+        "donor": false,
         "fragile": false,
         "label": "Lao PDR"
       },
+      "lao_peoples_democratic_republic": {
+        "ISO": "NF-",
+        "fragile": false,
+        "label": "Lao People's Democratic Republic"
+      },
       "lesotho": {
         "ISO": "LSO",
+        "donor": false,
         "fragile": false,
         "label": "Lesotho"
       },
       "liberia": {
         "ISO": "LBR",
+        "donor": false,
         "fragile": true,
         "label": "Liberia"
       },
       "luxembourg": {
         "ISO": "LUX",
+        "donor": false,
         "fragile": false,
         "label": "Luxembourg"
       },
       "madagascar": {
         "ISO": "MDG",
+        "donor": false,
         "fragile": true,
         "label": "Madagascar"
       },
       "malawi": {
         "ISO": "MWI",
+        "donor": false,
         "fragile": true,
         "label": "Malawi"
       },
       "mali": {
         "ISO": "MLI",
+        "donor": false,
         "fragile": true,
         "label": "Mali"
       },
       "mauritania": {
         "ISO": "MRT",
+        "donor": false,
         "fragile": false,
         "label": "Mauritania"
       },
       "moldova": {
         "ISO": "MDA",
+        "donor": false,
         "fragile": false,
         "label": "Moldova"
       },
       "mongolia": {
         "ISO": "MNG",
+        "donor": false,
         "fragile": false,
         "label": "Mongolia"
       },
       "mozambique": {
         "ISO": "MOZ",
+        "donor": false,
         "fragile": false,
         "label": "Mozambique"
       },
       "nepal": {
         "ISO": "NPL",
+        "donor": false,
         "fragile": true,
         "label": "Nepal"
       },
       "netherlands": {
         "ISO": "NLD",
+        "donor": true,
         "fragile": false,
         "label": "Netherlands"
       },
       "nicaragua": {
         "ISO": "NIC",
+        "donor": false,
         "fragile": false,
         "label": "Nicaragua"
       },
       "niger": {
         "ISO": "NER",
+        "donor": false,
         "fragile": true,
         "label": "Niger"
       },
       "nigeria": {
         "ISO": "NGA",
+        "donor": false,
         "fragile": true,
         "label": "Nigeria"
       },
       "norway": {
         "ISO": "NOR",
+        "donor": true,
         "fragile": false,
         "label": "Norway"
       },
       "pakistan": {
         "ISO": "PAK",
+        "donor": false,
         "fragile": true,
         "label": "Pakistan"
       },
       "papua_new_guinea": {
         "ISO": "PNG",
+        "donor": false,
         "fragile": false,
         "label": "Papua New Guinea"
       },
@@ -25570,36 +25668,43 @@
       },
       "romania": {
         "ISO": "ROU",
+        "donor": true,
         "fragile": false,
         "label": "Romania"
       },
       "russia": {
         "ISO": "RUS",
+        "donor": true,
         "fragile": false,
         "label": "Russia"
       },
       "rwanda": {
         "ISO": "RWA",
+        "donor": false,
         "fragile": false,
         "label": "Rwanda"
       },
       "sao_tome_and_principe": {
         "ISO": "STP",
+        "donor": false,
         "fragile": false,
         "label": "Sao Tome and Principe"
       },
       "senegal": {
         "ISO": "SEN",
+        "donor": false,
         "fragile": false,
         "label": "Senegal"
       },
       "sierra_leone": {
         "ISO": "SLE",
+        "donor": false,
         "fragile": true,
         "label": "Sierra Leone"
       },
       "somalia": {
         "ISO": "SOM",
+        "donor": false,
         "fragile": true,
         "label": "Somalia"
       },
@@ -25620,36 +25725,43 @@
       },
       "south_sudan": {
         "ISO": "SSD",
+        "donor": false,
         "fragile": true,
         "label": "South Sudan"
       },
       "spain": {
         "ISO": "ESP",
+        "donor": true,
         "fragile": false,
         "label": "Spain"
       },
       "sudan": {
         "ISO": "SDN",
+        "donor": false,
         "fragile": true,
         "label": "Sudan"
       },
       "sweden": {
         "ISO": "SWE",
+        "donor": true,
         "fragile": false,
         "label": "Sweden"
       },
       "switzerland": {
         "ISO": "CHE",
+        "donor": true,
         "fragile": false,
         "label": "Switzerland"
       },
       "tajikistan": {
         "ISO": "TJK",
+        "donor": false,
         "fragile": false,
         "label": "Tajikistan"
       },
       "tanzania": {
         "ISO": "TZA",
+        "donor": false,
         "fragile": false,
         "label": "Tanzania"
       },
@@ -25663,23 +25775,32 @@
         "fragile": false,
         "label": "Tanzania-Zanzibar"
       },
+      "timor_leste": {
+        "ISO": "NF-",
+        "fragile": false,
+        "label": "Timor Leste"
+      },
       "timorleste": {
         "ISO": "TLS",
+        "donor": false,
         "fragile": true,
         "label": "Timor-Leste"
       },
       "togo": {
         "ISO": "TGO",
+        "donor": false,
         "fragile": true,
         "label": "Togo"
       },
       "uganda": {
         "ISO": "UGA",
+        "donor": false,
         "fragile": true,
         "label": "Uganda"
       },
       "united_kingdom": {
         "ISO": "GBR",
+        "donor": true,
         "fragile": false,
         "label": "United Kingdom"
       },
@@ -25690,11 +25811,13 @@
       },
       "united_states": {
         "ISO": "USA",
+        "donor": true,
         "fragile": false,
         "label": "United States"
       },
       "uzbekistan": {
         "ISO": "UZB",
+        "donor": false,
         "fragile": false,
         "label": "Uzbekistan"
       },
@@ -25705,21 +25828,25 @@
       },
       "vietnam": {
         "ISO": "VNM",
+        "donor": false,
         "fragile": false,
         "label": "Vietnam"
       },
       "yemen": {
         "ISO": "YEM",
+        "donor": false,
         "fragile": true,
         "label": "Yemen"
       },
       "zambia": {
         "ISO": "ZMB",
+        "donor": false,
         "fragile": false,
         "label": "Zambia"
       },
       "zimbabwe": {
         "ISO": "ZWE",
+        "donor": false,
         "fragile": true,
         "label": "Zimbabwe"
       }
