@@ -59,11 +59,11 @@ Côte d'Ivoire,2009,13.3050323677
 Côte d'Ivoire,2011,14.1230942022
 Côte d'Ivoire,2010,13.7259048503
 Côte d'Ivoire,2012,13.0451337609
-Democratic Republic of the Congo,2008,11.7076815844
-Democratic Republic of the Congo,2009,
-Democratic Republic of the Congo,2011,
-Democratic Republic of the Congo,2010,
-Democratic Republic of the Congo,2012,11.8596035669
+Congo DRC,2008,11.7076815844
+Congo DRC,2009,
+Congo DRC,2011,
+Congo DRC,2010,
+Congo DRC,2012,11.8596035669
 Djibouti,2008,6.8529810298
 Djibouti,2009,5.724660562
 Djibouti,2011,6.5211875159
@@ -124,16 +124,16 @@ Kenya,2009,
 Kenya,2011,
 Kenya,2010,
 Kenya,2012,
-Kyrgyzstan,2008,0.1216301058
-Kyrgyzstan,2009,0.0883419195
-Kyrgyzstan,2011,0.0662827623
-Kyrgyzstan,2010,0.0751709267
-Kyrgyzstan,2012,0.0484046211
-Lao People's Democratic Republic,2008,1.8664513119
-Lao People's Democratic Republic,2009,1.7866119382
-Lao People's Democratic Republic,2011,1.4489563633
-Lao People's Democratic Republic,2010,1.5101911816
-Lao People's Democratic Republic,2012,1.3866666667
+Kyrgyz Republic,2008,0.1216301058
+Kyrgyz Republic,2009,0.0883419195
+Kyrgyz Republic,2011,0.0662827623
+Kyrgyz Republic,2010,0.0751709267
+Kyrgyz Republic,2012,0.0484046211
+Lao PDR,2008,1.8664513119
+Lao PDR,2009,1.7866119382
+Lao PDR,2011,1.4489563633
+Lao PDR,2010,1.5101911816
+Lao PDR,2012,1.3866666667
 Lesotho,2008,12.3432735738
 Lesotho,2009,12.2837431038
 Lesotho,2011,5.3794571581

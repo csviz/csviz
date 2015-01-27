@@ -58,9 +58,13 @@ var Timeline = React.createClass({
 
     if (currentSearchStatus && this.props.data.global) {
 
-      options = Object.keys(this.props.data.global.meta.locations).map(function(country) {
-        return { value: country, label: this.props.data.global.meta.locations[country].label}
-      }.bind(this))
+      options = Object.keys(this.props.data.global.meta.locations)
+        .filter(function(country) {
+          return !this.props.data.global.meta.locations[country].donor
+        }.bind(this))
+        .map(function(country) {
+          return { value: country, label: this.props.data.global.meta.locations[country].label}
+        }.bind(this))
 
       SearchBarComponent = (<SearchBar
         name='country'
