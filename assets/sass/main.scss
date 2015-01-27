@@ -195,6 +195,30 @@ textarea {
     .dialog-content{
         float: left;
         width: 100%;
+        max-height: 500px;
+        overflow-y: auto;
+        width: 100%;
+        h4,
+        h5 {
+            margin: 0 0 $gutter;
+        }
+        h4 {
+            font-size: 16px;
+        }
+        h5 {
+            color: inherit;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        dl {
+            font-size: 13px;
+            line-height: 140%;
+            margin: 0 0 $gutter $gutter/2;
+            dd {
+              font-style: italic;
+              margin-left: $gutter;
+            }
+        }
     }
   }
 }
@@ -278,6 +302,9 @@ textarea {
         }
       }
     }
+    .sidebar-panel {
+      width: $sidebar;
+    }
   }
 }
 
@@ -290,7 +317,6 @@ textarea {
         position: absolute;
         right: 0;
         top: 0;
-        width: $sidebar;
         overflow-x:hidden;
         overflow-y: scroll;
         .header-container {
