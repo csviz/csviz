@@ -5066,8 +5066,13 @@ textarea {
           text-align: center; }
         #sidebar .sidebar-toggle button:focus {
           box-shadow: none; }
+<<<<<<< HEAD
         #sidebar .sidebar-toggle button:hover {
           background: rgba(0, 0, 0, 0.5); }
+=======
+        #sidebar .sidebar-toggle button:hover:after {
+          color: #000; }
+>>>>>>> 6f419cc2761cd6f95f28846efa6569681b4987dc
 
     #sidebar .sidebar-panel {
       width: 470px; }

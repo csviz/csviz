@@ -25,12 +25,12 @@ var MapUtils = {
     if (customChoropleth) {
       var i = 0
       while (i < customChoropleth.length) {
-        if (value > customChoropleth[i].range[0] && value < customChoropleth[i].range[1]) {
+        if (value >= customChoropleth[i].range[0] && value <= customChoropleth[i].range[1]) {
           break
         }
         i += 1
       }
-      return safeTraverse(customChoropleth[i - 1], 'color')
+      return safeTraverse(customChoropleth[i], 'color')
     } else {
       var min = safeTraverse(meta, 'indicators', selected_indicator, 'min_value')
       var max = safeTraverse(meta, 'indicators', selected_indicator, 'max_value' )
@@ -115,8 +115,8 @@ var MapUtils = {
       var labels = []
 
       labels.push('<li class="fragile-container"><span class="swatch fragile"></span>Fragile State</li>')
-      labels.push('<li><span class="swatch" style="background:#5c6bc0"></span>Donor</li>')
-      labels.push('<li><span class="swatch" style="background:#eeeeee"></span>Donee</li>')
+      labels.push('<li><span class="swatch" style="background:#5c6bc0"></span>GPE Donors</li>')
+      labels.push('<li><span class="swatch" style="background:#eeeeee"></span>GPE Developing Country Partners</li>')
 
       return `<ul class='legend-list'>${labels.join('')}</ul>`
     }
@@ -206,7 +206,7 @@ var MapUtils = {
 
       // gpe
       if (selected_indicator === 'map_of_the_global_partnership_for_education') {
-        value = safeTraverse(indicators, countryName, selected_indicator) == 1 ? 'Donor' : 'Donee'
+        value = safeTraverse(indicators, countryName, selected_indicator) == 1 ? 'GPE Donors' : 'GPE Developing Country Partners'
       // data with years
       } else if (safeTraverse(configs, 'indicators', selected_indicator, 'years', 'length')) {
         value = safeTraverse(indicators, countryName, selected_indicator, 'years', selected_year)
