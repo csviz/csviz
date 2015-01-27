@@ -58,6 +58,30 @@ var Map = React.createClass({
     }
   },
 
+  hasClass(el, className) {
+    if (el.classList) {
+      return el.classList.contains(className)
+    } else {
+      return new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className)
+    }
+  },
+
+  addClass(el, className) {
+    if (el.classList) {
+      el.classList.add(className)
+    } else {
+      el.className += ' ' + className
+    }
+  },
+
+  removeClass(el, className) {
+    if (el.classList) {
+      el.classList.remove(className)
+    } else {
+      el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ')
+    }
+  },
+
   cleanLegend() {
     if(this.state.map && !_.isEmpty(this.state.legend)) this.state.map.legendControl.removeLegend(this.state.legend)
     this.setState({legend: null})
@@ -326,6 +350,20 @@ var Map = React.createClass({
       }).addTo(map)
       this.setState({controlLayer: controlLayer})
     }
+
+    map.on('overlayremove', function(e) {
+      if (e.name === 'Fragile States') {
+        var fragileContainer = document.querySelector('.fragile-container')
+        self.addClass(fragileContainer, 'hide')
+      }
+    })
+
+    map.on('overlayadd', function(e) {
+      if (e.name === 'Fragile States') {
+        var fragileContainer = document.querySelector('.fragile-container')
+        self.removeClass(fragileContainer, 'hide')
+      }
+    })
 
   },
 

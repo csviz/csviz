@@ -4821,6 +4821,10 @@ h1, h2, h3, h4, h5, h6 {
   html {
     overflow: hidden; } }
 
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden; } }
+
 textarea {
   resize: none;
   border: none;
@@ -4962,7 +4966,25 @@ textarea {
     height: 80px; }
   .dialog.about-dialog-box .dialog-content {
     float: left;
+    width: 100%;
+    max-height: 500px;
+    overflow-y: auto;
     width: 100%; }
+    .dialog.about-dialog-box .dialog-content h4, .dialog.about-dialog-box .dialog-content h5 {
+      margin: 0 0 20px; }
+    .dialog.about-dialog-box .dialog-content h4 {
+      font-size: 16px; }
+    .dialog.about-dialog-box .dialog-content h5 {
+      color: inherit;
+      font-size: 13px;
+      font-weight: bold; }
+    .dialog.about-dialog-box .dialog-content dl {
+      font-size: 13px;
+      line-height: 140%;
+      margin: 0 0 20px 10px; }
+      .dialog.about-dialog-box .dialog-content dl dd {
+        font-style: italic;
+        margin-left: 20px; }
 
 /* SIDEBAR */
 #main {
@@ -4979,6 +5001,9 @@ textarea {
       height: 450px;
       padding-top: 50px;
       z-index: 1; } }
+  @media (min-width: 769px) {
+    #main {
+      overflow: hidden; } }
   #main #map {
     background: #4D4D4D;
     height: 100%;
@@ -4991,17 +5016,18 @@ textarea {
     #sidebar {
       position: relative;
       width: 100%;
-      top: 50px;
+      float: left;
       box-shadow: none; }
       #sidebar .sidebar-toggle {
         display: none; } }
   @media (min-width: 769px) {
     #sidebar .sidebar-toggle {
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
       position: absolute;
       width: 40px;
       height: 40px;
-      right: 26px;
-      top: 4px;
+      right: 470px;
+      top: 20px;
       z-index: 1;
       -webkit-transition: all 0.3s ease;
       -moz-transition: all 0.3s ease;
@@ -5009,23 +5035,28 @@ textarea {
       -o-transition: all 0.3s ease;
       transition: all 0.3s ease; }
       #sidebar .sidebar-toggle button {
-        background: none;
+        background: rgba(0, 0, 0, 0.4);
         width: 40px;
         height: 40px;
-        float: left;
         margin: 0px;
         border-radius: 2px 0 0 2px;
-        border: 0px; }
+        border: 0px;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease; }
         #sidebar .sidebar-toggle button:after {
-          color: #4D4D4D;
+          color: #fff;
           -webkit-transition: all 0.3s ease;
           -moz-transition: all 0.3s ease;
           -ms-transition: all 0.3s ease;
           -o-transition: all 0.3s ease;
           transition: all 0.3s ease;
-          content: '\e648';
+          content: '\e647';
           font-family: 'mdfonticon';
-          font-size: 20px;
+          text-shadow: none;
+          font-size: 24px;
           position: absolute;
           top: 0px;
           left: 0px;
@@ -5035,8 +5066,11 @@ textarea {
           text-align: center; }
         #sidebar .sidebar-toggle button:focus {
           box-shadow: none; }
-        #sidebar .sidebar-toggle button:hover:after {
-          color: #000; }
+        #sidebar .sidebar-toggle button:hover {
+          background: rgba(0, 0, 0, 0.5); }
+
+    #sidebar .sidebar-panel {
+      width: 470px; }
  }
 
 .sidebar-panel {
@@ -5052,12 +5086,13 @@ textarea {
   position: absolute;
   right: 0;
   top: 0;
-  width: 470px;
   overflow-x: hidden;
   overflow-y: scroll; }
   @media (max-width: 768px) {
     .sidebar-panel {
-      width: 100%; } }
+      width: 100%;
+      position: relative;
+      overflow-y: auto; } }
   .sidebar-panel .header-container {
     width: 100%;
     z-index: 0; }
@@ -6014,9 +6049,10 @@ textarea {
     transition: all 0.3s ease;
     position: fixed;
     bottom: 20px;
-    right: 470px;
+    left: 20px;
     background: rgba(0, 0, 0, 0.4);
     padding: 10px;
+    margin: 0px;
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1); }
     @media (max-width: 768px) {
       #main .map-legends {
@@ -6027,7 +6063,7 @@ textarea {
         top: 50px;
         left: 0px;
         border-radius: 0px;
-        background: rgba(255, 255, 255, 0.4);
+        background: rgba(0, 0, 0, 0.4);
         margin: 0px;
         box-shadow: none; } }
   #main .map-legend {
@@ -6048,6 +6084,8 @@ textarea {
         color: #FFF;
         font-size: 11px;
         text-align: right; }
+        #main .map-legend .legend-list li.hide {
+          display: none; }
         #main .map-legend .legend-list li .swatch {
           height: 20px;
           float: right;
@@ -6104,7 +6142,7 @@ textarea {
   #main .leaflet-left .leaflet-control-layers {
     margin-top: 10px; }
   #main .leaflet-left .leaflet-control-layers-expanded {
-    padding: 13px 15px;
+    padding: 10px 15px 13px;
     height: 70px;
     line-height: 22px; }
     #main .leaflet-left .leaflet-control-layers-expanded span {
@@ -6127,7 +6165,7 @@ textarea {
         border-radius: none;
         box-shadow: none; } }
   #main .search {
-    right: 490px;
+    right: 520px;
     top: 20px;
     width: 240px;
     -webkit-transition: all 0.3s ease;
@@ -6215,7 +6253,7 @@ textarea {
         border-bottom: 1px solid #EDEDED; } }
   #main .timeline {
     bottom: 20px;
-    left: 20px;
+    left: 184px;
     height: 40px; }
     @media (max-width: 768px) {
       #main .timeline {
@@ -6223,8 +6261,10 @@ textarea {
         left: 0px;
         top: 0px;
         bottom: 0px;
-        height: 50px;
-        border-bottom: 1px solid #EDEDED; } }
+        height: auto;
+        border-bottom: 1px solid #EDEDED;
+        float: left;
+        width: 100%; } }
     #main .timeline ul {
       list-style: none;
       overflow: hidden; }
@@ -6311,13 +6351,6 @@ textarea {
       -o-transition: all 0.3s ease;
       transition: all 0.3s ease;
       right: 50px; }
-    .isSidebarOpen #main .map-legends {
-      -webkit-transition: all 0.3s ease;
-      -moz-transition: all 0.3s ease;
-      -ms-transition: all 0.3s ease;
-      -o-transition: all 0.3s ease;
-      transition: all 0.3s ease;
-      right: 0px; }
 
   .isSidebarOpen #sidebar .sidebar-toggle {
     right: 0px;
@@ -6327,16 +6360,14 @@ textarea {
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease; }
-    .isSidebarOpen #sidebar .sidebar-toggle button {
-      background: #fff; }
-      .isSidebarOpen #sidebar .sidebar-toggle button:after {
-        -webkit-transition: all 0.3s ease;
-        -moz-transition: all 0.3s ease;
-        -ms-transition: all 0.3s ease;
-        -o-transition: all 0.3s ease;
-        transition: all 0.3s ease;
-        content: '\e64d';
-        font-size: 18px; }
+    .isSidebarOpen #sidebar .sidebar-toggle button:after {
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      content: '\e646';
+      font-size: 24px; }
   .isSidebarOpen #sidebar .sidebar-panel {
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
