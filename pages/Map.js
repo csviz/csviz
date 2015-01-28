@@ -26,12 +26,17 @@ var MapPage = React.createClass({
 
   componentDidMount() {
     Store.addChangeListener(this.handleStoresChanged)
+    Store.addIndicatorChangeListener(this.addIndicatorChangeListener)
 
     MapActionCreators.requestAll(this.getQuery())
   },
 
   componentWillUnmount() {
     Store.removeChangeListener(this.handleStoresChanged)
+  },
+
+  addIndicatorChangeListener() {
+    this.setState({})
   },
 
   handleStoresChanged() {
@@ -43,13 +48,16 @@ var MapPage = React.createClass({
     var classes = cx({
       'loading': _.isEmpty(this.state.data)
     })
-    var site = {}
+    var siteName = '', indicatorName = ''
+
     if (this.state.data && this.state.data.configs) {
-      site = this.state.data.configs.site || {}
+      siteName = this.state.data.configs.site.name
+      var selected_indicator = Store.getSelectedIndicator()
+      if (!_.isUndefined(selected_indicator)) indicatorName = this.state.data.global.meta.indicators[selected_indicator].source_file.replace('.csv', '') + ' |'
     }
 
     return (
-      <DocumentTitle title={site.name} >
+      <DocumentTitle title={indicatorName + ' ' + siteName} >
         <section className={classes} id='app'>
           <Map data={this.state.data} />
           <Pattern />
