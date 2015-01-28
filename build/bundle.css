@@ -4859,6 +4859,9 @@ textarea {
         margin-bottom: 10px; } }
   .dialog .mui-paper-button:last-child {
     margin-right: 0px; }
+    @media screen and (max-width: 550px) {
+      .dialog .mui-paper-button:last-child {
+        margin-right: 10px; } }
   .dialog .dialog-actions {
     padding: 28px 20px 5px 20px;
     margin-top: 35px; }
@@ -5176,7 +5179,8 @@ textarea {
     background: #F9F9F9;
     font-size: 15px;
     line-height: 120%;
-    text-align: right; }
+    text-align: right;
+    float: left; }
     .sidebar-panel .drilldown .header {
       border-width: 1px 0;
       font-weight: bold;
@@ -5242,8 +5246,12 @@ textarea {
     line-height: 40px; }
     @media (max-width: 768px) {
       .links .mui-paper-button {
-        width: 100%;
-        margin-bottom: 10px; } }
+        width: 48.5%;
+        margin-bottom: 15px; }
+        .links .mui-paper-button.share {
+          float: left; }
+        .links .mui-paper-button.download {
+          float: right; } }
     .links .mui-paper-button .mui-paper-container {
       box-shadow: none !important;
       background: #EDEDED;
@@ -6296,7 +6304,8 @@ textarea {
           display: none; }
         #main .timeline ul li:first-child {
           border-radius: 2px 0 0 2px;
-          width: 44px; }
+          width: 44px;
+          text-align: center; }
         #main .timeline ul li:last-child {
           border-radius: 0 2px 2px 0;
           border-right: 0; }
@@ -6678,10 +6687,9 @@ textarea {
   margin-top: -1px;
   max-height: 350px;
   overflow-y: auto;
-  position: absolute;
+  position: relative;
   top: 100%;
   width: 100%;
-  z-index: 999;
   -webkit-overflow-scrolling: touch; }
 
 .Dropdown-menu .group > .title {

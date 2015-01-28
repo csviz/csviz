@@ -17,6 +17,7 @@ $line: #E5E5E5;
 $lightgrey: #999;
 $create:20;
 $font: 'Roboto', Arial, sans;
+$break-small: 550px;
 /* Material UI */
 
 @import 'material';
@@ -79,6 +80,9 @@ textarea {
   }
   .mui-paper-button:last-child {
     margin-right: 0px;
+    @media screen and (max-width: $break-small) {
+      margin-right: 10px;
+    }
   }
   .dialog-actions {
     padding: $gutter+8 $gutter $gutter/4 $gutter;
@@ -428,6 +432,7 @@ textarea {
     font-size: $larger;
     line-height: 120%;
     text-align: right;
+    float: left;
     .header {
       border-width: 1px 0;
       font-weight: bold;
@@ -507,8 +512,14 @@ textarea {
     height: $gutter*2;
     line-height: $gutter*2;
     @include tablet {
-      width: 100%;
-      margin-bottom: $gutter/2
+      width: 48.5%;
+      margin-bottom: $gutter*0.75;
+      &.share{
+        float: left;
+      }
+      &.download{
+        float: right;
+      }
     }
     .mui-paper-container {
       box-shadow: none !important;
@@ -829,6 +840,7 @@ textarea {
         &:first-child {
           border-radius: $radius 0 0 $radius;
           width: 44px;
+          text-align: center;
         }
         &:last-child {
           border-radius: 0 $radius $radius 0;
