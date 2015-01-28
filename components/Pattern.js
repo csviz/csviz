@@ -32,8 +32,8 @@ var Pattern = React.createClass({
     }
 
     var data = {
-      mw: 6,
-      mh: 6,
+      mw: 10,
+      mh: 10,
       steps: 1
     }
 
@@ -59,16 +59,16 @@ var Pattern = React.createClass({
       .style({
         fill: 'none',
         stroke: '#fff',
-        'stroke-width': 2
+        'stroke-width': 1
       })
 
     svg.selectAll('path')
       .data(paths)
       .enter()
-      .append('path')
-      .attr('d', function(d) {
-        return d
-      })
+      .append('circle')
+      .attr('cx', 1)
+      .attr('cy', 1)
+      .attr('r', 1)
   }
 })
 
