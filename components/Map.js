@@ -43,7 +43,14 @@ var Map = React.createClass({
     Store.addLegendChangeListener(this.toggleLegend)
 
     L.mapbox.accessToken = mapbox_config.token
-    var map = L.mapbox.map('map', mapbox_config.type, { maxZoom: 4 }).setView(mapbox_config.location, mapbox_config.zoomlevel)
+
+    var map = L.mapbox.map('map', mapbox_config.type, {
+      maxZoom: 4,
+      trackResize: true
+    }).setView(mapbox_config.location, mapbox_config.zoomlevel)
+
+    window.mapInstance = map
+
     this.setState({map: map})
   },
 

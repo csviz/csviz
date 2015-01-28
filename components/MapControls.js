@@ -42,7 +42,9 @@ var MapControls = React.createClass({
     } else {
       this.addClass(body, 'isSidebarOpen')
     }
-
+    setTimeout(() => {
+      if(mapInstance) mapInstance._onResize()
+    }, 100)
   },
 
   render() {

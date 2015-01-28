@@ -48,8 +48,6 @@ var MapPage = React.createClass({
       site = this.state.data.configs.site || {}
     }
 
-    console.log(site, this.state.data)
-
     return (
       <DocumentTitle title={site.name} >
         <section className={classes} id='app'>
