@@ -53,10 +53,15 @@
     margin-top: -1px;
     max-height: 350px;
     overflow-y: auto;
-    position: relative;
+    position: absolute;
     top: 100%;
     width: 100%;
+    z-index: 999;
     -webkit-overflow-scrolling: touch;
+    @include tablet{
+      position:relative;
+      z-index: 0;
+    }
 }
 .Dropdown-menu .group > .title {
     padding: 8px 20px;

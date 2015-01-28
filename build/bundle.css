@@ -5180,7 +5180,8 @@ textarea {
     font-size: 15px;
     line-height: 120%;
     text-align: right;
-    float: left; }
+    float: left;
+    width: 100%; }
     .sidebar-panel .drilldown .header {
       border-width: 1px 0;
       font-weight: bold;
@@ -6687,10 +6688,15 @@ textarea {
   margin-top: -1px;
   max-height: 350px;
   overflow-y: auto;
-  position: relative;
+  position: absolute;
   top: 100%;
   width: 100%;
+  z-index: 999;
   -webkit-overflow-scrolling: touch; }
+  @media (max-width: 768px) {
+    .Dropdown-menu {
+      position: relative;
+      z-index: 0; } }
 
 .Dropdown-menu .group > .title {
   padding: 8px 20px;

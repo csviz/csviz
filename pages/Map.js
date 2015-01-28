@@ -43,9 +43,15 @@ var MapPage = React.createClass({
     var classes = cx({
       'loading': _.isEmpty(this.state.data)
     })
+    var site = {}
+    if (this.state.data && this.state.data.configs) {
+      site = this.state.data.configs.site || {}
+    }
+
+    console.log(site, this.state.data)
 
     return (
-      <DocumentTitle title='Map'>
+      <DocumentTitle title={site.name} >
         <section className={classes} id='app'>
           <Map data={this.state.data} />
           <Pattern />
