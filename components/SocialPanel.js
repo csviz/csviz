@@ -37,6 +37,8 @@ var SocialPanel = React.createClass({
 
   getShareContent() {
     var selected_indicator = Store.getSelectedIndicator() || ''
+    selected_indicator = this.props.data.global.meta.indicators[selected_indicator].source_file.replace('.csv', '') || selected_indicator
+
     var selected_year = Store.getSelectedYear() || ''
     return `${selected_indicator} for ${selected_year} via @gpforeducation ${window.location.href}`
   },
