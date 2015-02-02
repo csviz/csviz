@@ -28,18 +28,15 @@ html, body, #app {
   line-height: 120%;
   width: 100%;
   min-width: 300px;
-  overflow:hidden;
+  @include desktop {
+    overflow: hidden;
+  }
 }
 h1, h2, h3, h4, h5, h6 {
   line-height: 160%;
 }
 /*reset*/
 
-html {
-  @include desktop {
-    overflow: hidden
-  }
-}
 body {
   @include tablet {
     overflow-x: hidden;
@@ -102,9 +99,11 @@ textarea {
       text-align: center
     }
   }
-  .dialog-content span:first-child {
-    text-align: left;
-    color: $lightgrey;
+  .dialog-content span {
+    &:first-child{
+     text-align: left;
+     color: $lightgrey;
+    }
   }
   .dialog-content span.add-to-website {
     cursor: pointer;
@@ -248,7 +247,7 @@ textarea {
     z-index: 1
   }
   @include desktop {
-    overflow:hidden;
+    overflow: hidden;
   }
   #map {
     background: $black;
@@ -279,7 +278,7 @@ textarea {
       z-index: 1;
       @include transition(all, 0.3s, ease);
       button {
-        background: rgba(0,0,0,0.4);
+        background: rgba(0, 0, 0, 0.4);
         width: $gutter;
         height: $gutter*2;
         margin: 0px;
@@ -304,7 +303,7 @@ textarea {
           box-shadow: none;
         }
         &:hover {
-          background: rgba(0,0,0,0.5);
+          background: rgba(0, 0, 0, 0.5);
         }
       }
     }
@@ -316,7 +315,7 @@ textarea {
 .sidebar-panel {
   @include tablet {
     width: 100%;
-    position:relative;
+    position: relative;
     overflow-y: auto;
   }
   @include transition(all, 0.3s, ease);
@@ -329,9 +328,35 @@ textarea {
   top: 0;
   overflow-x:hidden;
   overflow-y:auto;
-  .header-container {
-    width: 100%;
-    z-index: 0;
+  @include desktop {
+    .header-container, .indicator .select {
+      position: fixed;
+      width: $sidebar;
+      right: 0px;
+      z-index: 0;
+    }
+    .header-container {
+      top: 0px;
+    }
+    .indicator .select {
+      top: 48px;
+    }
+    .drilldown {
+      .header {
+        &.sticky {
+          position: fixed;
+          top: 96px;
+          right: 0px;
+          width: $sidebar;
+          border-bottom: 1px solid $line;
+        }
+      }
+    }
+    .indicator {
+      .description {
+        margin-top: 96px!important;
+      }
+    }
   }
   .header {
     background: $background;
@@ -422,8 +447,9 @@ textarea {
       //margin-top: $gutter*2.5
     }
     .description {
-      margin: 0;
+      margin: 0px;
       color: #aaa;
+      background: #fff;
       padding: 1.5*$gutter/2 $gutter;
     }
   }
@@ -437,10 +463,10 @@ textarea {
     .header {
       border-width: 1px 0;
       font-weight: bold;
-      padding: 1.5*$gutter/2 $gutter 1.5*$gutter/2 0;
+      padding: 1.5*$gutter/2 $gutter;
       box-shadow: none;
       background: $light;
-      span.chart {
+      span.label, span.chart {
         padding-left: 0px
       }
     }
@@ -515,17 +541,21 @@ textarea {
     @include tablet {
       width: 48.5%;
       margin-bottom: $gutter*0.75;
-      &.share{
+      &.share {
         float: left;
       }
-      &.download{
+      &.download {
         float: right;
       }
     }
     .mui-paper-container {
       box-shadow: none !important;
       background: $background;
+      position: static;
       @include transition(all, 0.3s, ease);
+      .mui-ripple {
+        display: none;
+      }
       &:hover {
         background: #dfdfdf;
         .mui-paper-button-content {
@@ -535,6 +565,7 @@ textarea {
         }
       }
       .mui-paper-button-content {
+        position: static;
         span {
           color: $black;
         }
@@ -570,7 +601,7 @@ textarea {
     left: $gutter;
     background: rgba(0, 0, 0, 0.4);
     padding: $gutter/2;
-    margin:0px;
+    margin: 0px;
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
     @include tablet {
       max-width: 100%;
@@ -800,7 +831,7 @@ textarea {
   }
   .timeline {
     bottom: $gutter;
-    right:$sidebar + $gutter;
+    right: $sidebar + $gutter;
     height: $gutter*2;
     @include transition(all, 0.3s, ease);
     @include tablet {
@@ -897,7 +928,7 @@ textarea {
 }
 //slider toggle
 .isSidebarOpen {
-  #main{
+  #main {
     right: 0px!important;
   }
   @include desktop {
@@ -906,7 +937,7 @@ textarea {
       .search {
         right: 30px;
       }
-      .timeline{
+      .timeline {
         right: $gutter!important;
       }
     }
