@@ -6347,6 +6347,8 @@ textarea {
   width: 30px;
   height: 30px; }
 
+.isSidebarOpen #main {
+  right: 0px !important; }
 @media (min-width: 769px) {
   .isSidebarOpen #main {
     right: 0px !important; }
@@ -6362,6 +6364,7 @@ textarea {
       content: '\e646'; }
   .isSidebarOpen #sidebar .sidebar-panel {
     right: -470px !important;
+    position: fixed;
     top: 0px; }
  }
 

@@ -897,6 +897,9 @@ textarea {
 }
 //slider toggle
 .isSidebarOpen {
+  #main{
+    right: 0px!important;
+  }
   @include desktop {
     #main {
       right: 0px!important;
@@ -919,6 +922,7 @@ textarea {
       }
       .sidebar-panel {
         right: -$sidebar!important;
+        position: fixed;
         top: 0px;
       }
     }
