@@ -20,7 +20,7 @@
   cursor: default;
   outline: none;
   padding: 8px 52px 8px 10px;
-  transition: all 200ms ease;
+  @include transition(all, 0.3s, ease);
 }
 // .Select-control:hover {
 //   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
@@ -47,6 +47,8 @@
   position: absolute;
   top: 0;
   left: 0;
+  height: 40px;
+  line-height: 22px;
 }
 .has-value > .Select-control > .Select-placeholder {
   color: #333333;
@@ -94,6 +96,7 @@
   position: absolute;
   right: 17px;
   top: 0;
+  height: $gutter*2;
 }
 .Select-clear:hover {
   color: #c0392b;

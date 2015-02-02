@@ -28,6 +28,7 @@ html, body, #app {
   line-height: 120%;
   width: 100%;
   min-width: 300px;
+  overflow:hidden;
 }
 h1, h2, h3, h4, h5, h6 {
   line-height: 160%;
@@ -270,7 +271,7 @@ textarea {
   @include desktop {
     .sidebar-toggle {
       box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
-      position: absolute;
+      position: fixed;
       width: $gutter;
       height: $gutter*2;
       right: $sidebar;
@@ -284,7 +285,6 @@ textarea {
         margin: 0px;
         border-radius: $radius 0 0 $radius;
         border: 0px;
-        @include transition(all, 0.3s, ease);
         &:after {
           color: #fff;
           @include transition(all, 0.3s, ease);
@@ -709,7 +709,7 @@ textarea {
   .search {
     right: $sidebar + $gutter/2+20;
     top: $gutter/2+10;
-    width: 240px;
+    width: 260px;
     @include transition(all, 0.3s, ease);
     @include tablet {
       left: 0px;
@@ -919,6 +919,7 @@ textarea {
       }
       .sidebar-panel {
         right: -$sidebar!important;
+        top: 0px;
       }
     }
   }

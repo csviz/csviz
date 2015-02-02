@@ -4811,7 +4811,8 @@ html, body, #app {
   height: 100%;
   line-height: 120%;
   width: 100%;
-  min-width: 300px; }
+  min-width: 300px;
+  overflow: hidden; }
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 160%; }
@@ -5026,7 +5027,7 @@ textarea {
   @media (min-width: 769px) {
     #sidebar .sidebar-toggle {
       box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
-      position: absolute;
+      position: fixed;
       width: 20px;
       height: 40px;
       right: 470px;
@@ -5043,12 +5044,7 @@ textarea {
         height: 40px;
         margin: 0px;
         border-radius: 2px 0 0 2px;
-        border: 0px;
-        -webkit-transition: all 0.3s ease;
-        -moz-transition: all 0.3s ease;
-        -ms-transition: all 0.3s ease;
-        -o-transition: all 0.3s ease;
-        transition: all 0.3s ease; }
+        border: 0px; }
         #sidebar .sidebar-toggle button:after {
           color: #fff;
           -webkit-transition: all 0.3s ease;
@@ -6176,7 +6172,7 @@ textarea {
   #main .search {
     right: 500px;
     top: 20px;
-    width: 240px;
+    width: 260px;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
@@ -6365,7 +6361,8 @@ textarea {
     .isSidebarOpen #sidebar .sidebar-toggle button:after {
       content: '\e646'; }
   .isSidebarOpen #sidebar .sidebar-panel {
-    right: -470px !important; }
+    right: -470px !important;
+    top: 0px; }
  }
 
 /**
@@ -6390,7 +6387,11 @@ textarea {
   cursor: default;
   outline: none;
   padding: 8px 52px 8px 10px;
-  transition: all 200ms ease; }
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
 
 .is-open > .Select-control {
   border-bottom-right-radius: 0;
@@ -6411,7 +6412,9 @@ textarea {
   padding: 8px 10px;
   position: absolute;
   top: 0;
-  left: 0; }
+  left: 0;
+  height: 40px;
+  line-height: 22px; }
 
 .has-value > .Select-control > .Select-placeholder {
   color: #333333; }
@@ -6458,7 +6461,8 @@ textarea {
   padding: 6px 10px;
   position: absolute;
   right: 17px;
-  top: 0; }
+  top: 0;
+  height: 40px; }
 
 .Select-clear:hover {
   color: #c0392b; }
@@ -6692,11 +6696,19 @@ textarea {
   top: 100%;
   width: 100%;
   z-index: 999;
+  left: 0px;
+  display: none;
   -webkit-overflow-scrolling: touch; }
   @media (max-width: 768px) {
     .Dropdown-menu {
       position: relative;
       z-index: 0; } }
+
+.is-open .Dropdown-menu {
+  display: block; }
+
+.isSidebarOpen .is-open .Dropdown-menu {
+  display: none; }
 
 .Dropdown-menu .group > .title {
   padding: 8px 20px;
