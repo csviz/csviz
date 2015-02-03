@@ -4992,10 +4992,9 @@ textarea {
 #main {
   bottom: 0;
   left: 0;
-  position: fixed;
+  position: absolute;
   right: 470px;
-  top: 0;
-  z-index: 1; }
+  top: 0; }
   @media (max-width: 768px) {
     #main {
       position: relative;
@@ -5003,9 +5002,6 @@ textarea {
       height: 450px;
       padding-top: 50px;
       z-index: 1; } }
-  @media (min-width: 769px) {
-    #main {
-      overflow: hidden; } }
   #main #map {
     background: #4D4D4D;
     height: 100%;
@@ -5095,7 +5091,12 @@ textarea {
       position: fixed;
       width: 470px;
       right: 0px;
-      z-index: 0; }
+      z-index: 0;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
 
     .sidebar-panel .header-container {
       top: 0px; }
@@ -6390,6 +6391,8 @@ textarea {
     right: -470px !important;
     position: fixed;
     top: 0px; }
+    .isSidebarOpen #sidebar .sidebar-panel .header-container, .isSidebarOpen #sidebar .sidebar-panel .indicator .select {
+      right: -470px !important; }
  }
 
 /**

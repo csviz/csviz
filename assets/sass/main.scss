@@ -235,10 +235,10 @@ textarea {
 #main {
   bottom: 0;
   left: 0;
-  position: fixed;
+  position: absolute;
   right: $sidebar;
   top: 0;
-  z-index: 1;
+  // z-index: 1;
   @include tablet {
     position: relative;
     width: 100%;
@@ -246,9 +246,9 @@ textarea {
     padding-top: $gutter*2.5;
     z-index: 1
   }
-  @include desktop {
-    overflow: hidden;
-  }
+  // @include desktop {
+  //   overflow: hidden;
+  // }
   #map {
     background: $black;
     height: 100%;
@@ -334,6 +334,7 @@ textarea {
       width: $sidebar;
       right: 0px;
       z-index: 0;
+      @include transition(all, 0.3s, ease);
     }
     .header-container {
       top: 0px;
@@ -955,6 +956,9 @@ textarea {
         right: -$sidebar!important;
         position: fixed;
         top: 0px;
+        .header-container,.indicator .select{
+          right: -$sidebar!important;
+        }
       }
     }
   }
