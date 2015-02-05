@@ -50,8 +50,8 @@ var ControlHeader = React.createClass({
         <span>{site.description}</span>
         <h2>{site.name}</h2>
         <ul>
-          <li><a onClick={this._toggleLegend}><img src="assets/images/icon-texture.png" width="18"/></a></li>
-          <li><a onClick={this._toggleSearch}><img src="assets/images/icon-search.png" width="18"/></a></li>
+          <li><a onClick={this._toggleLegend}><img src="build/images/icon-texture.png" width="18"/></a></li>
+          <li><a onClick={this._toggleSearch}><img src="build/images/icon-search.png" width="18"/></a></li>
         </ul>
       </header>
       </div>
