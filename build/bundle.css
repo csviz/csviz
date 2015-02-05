@@ -4812,15 +4812,14 @@ html, body, #app {
   line-height: 120%;
   width: 100%;
   min-width: 300px; }
+  @media (min-width: 769px) {
+    html, body, #app {
+      overflow: hidden; } }
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 160%; }
 
 /*reset*/
-@media (min-width: 769px) {
-  html {
-    overflow: hidden; } }
-
 @media (max-width: 768px) {
   body {
     overflow-x: hidden; } }
@@ -4993,10 +4992,9 @@ textarea {
 #main {
   bottom: 0;
   left: 0;
-  position: fixed;
+  position: absolute;
   right: 470px;
-  top: 0;
-  z-index: 1; }
+  top: 0; }
   @media (max-width: 768px) {
     #main {
       position: relative;
@@ -5004,9 +5002,6 @@ textarea {
       height: 450px;
       padding-top: 50px;
       z-index: 1; } }
-  @media (min-width: 769px) {
-    #main {
-      overflow: hidden; } }
   #main #map {
     background: #4D4D4D;
     height: 100%;
@@ -5026,7 +5021,7 @@ textarea {
   @media (min-width: 769px) {
     #sidebar .sidebar-toggle {
       box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
-      position: absolute;
+      position: fixed;
       width: 20px;
       height: 40px;
       right: 470px;
@@ -5043,12 +5038,7 @@ textarea {
         height: 40px;
         margin: 0px;
         border-radius: 2px 0 0 2px;
-        border: 0px;
-        -webkit-transition: all 0.3s ease;
-        -moz-transition: all 0.3s ease;
-        -ms-transition: all 0.3s ease;
-        -o-transition: all 0.3s ease;
-        transition: all 0.3s ease; }
+        border: 0px; }
         #sidebar .sidebar-toggle button:after {
           color: #fff;
           -webkit-transition: all 0.3s ease;
@@ -5096,9 +5086,34 @@ textarea {
       width: 100%;
       position: relative;
       overflow-y: auto; } }
-  .sidebar-panel .header-container {
-    width: 100%;
-    z-index: 0; }
+  @media (min-width: 769px) {
+    .sidebar-panel .header-container, .sidebar-panel .indicator .select {
+      position: fixed;
+      width: 470px;
+      right: 0px;
+      z-index: 0;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+
+    .sidebar-panel .header-container {
+      top: 0px; }
+
+    .sidebar-panel .indicator .select {
+      top: 47px; }
+
+    .sidebar-panel .drilldown .header.sticky {
+      position: fixed;
+      top: 96px;
+      right: 0px;
+      width: 470px;
+      border-bottom: 1px solid #E5E5E5; }
+
+    .sidebar-panel .indicator .description {
+      margin-top: 96px !important; }
+ }
   .sidebar-panel .header {
     background: #EDEDED;
     padding: 15px 20px; }
@@ -5172,8 +5187,9 @@ textarea {
             .sidebar-panel .tablet-nav ul li a:hover img {
               opacity: 0.8; } }
   .sidebar-panel .indicator .description {
-    margin: 0;
+    margin: 0px;
     color: #aaa;
+    background: #fff;
     padding: 15px 20px; }
   .sidebar-panel .drilldown {
     background: #F9F9F9;
@@ -5185,10 +5201,10 @@ textarea {
     .sidebar-panel .drilldown .header {
       border-width: 1px 0;
       font-weight: bold;
-      padding: 15px 20px 15px 0;
+      padding: 15px 20px;
       box-shadow: none;
       background: #F9F9F9; }
-      .sidebar-panel .drilldown .header span.chart {
+      .sidebar-panel .drilldown .header span.label, .sidebar-panel .drilldown .header span.chart {
         padding-left: 0px; }
     .sidebar-panel .drilldown .list {
       list-style: none; }
@@ -5256,17 +5272,22 @@ textarea {
     .links .mui-paper-button .mui-paper-container {
       box-shadow: none !important;
       background: #EDEDED;
+      position: static;
       -webkit-transition: all 0.3s ease;
       -moz-transition: all 0.3s ease;
       -ms-transition: all 0.3s ease;
       -o-transition: all 0.3s ease;
       transition: all 0.3s ease; }
+      .links .mui-paper-button .mui-paper-container .mui-ripple {
+        display: none; }
       .links .mui-paper-button .mui-paper-container:hover {
         background: #dfdfdf; }
         .links .mui-paper-button .mui-paper-container:hover .mui-paper-button-content span {
           color: #000; }
-      .links .mui-paper-button .mui-paper-container .mui-paper-button-content span {
-        color: #4D4D4D; }
+      .links .mui-paper-button .mui-paper-container .mui-paper-button-content {
+        position: static; }
+        .links .mui-paper-button .mui-paper-container .mui-paper-button-content span {
+          color: #4D4D4D; }
     .links .mui-paper-button .mui-paper-button-content span:before {
       font-family: 'mdfonticon';
       margin-right: 10px; }
@@ -6176,7 +6197,7 @@ textarea {
   #main .search {
     right: 500px;
     top: 20px;
-    width: 240px;
+    width: 260px;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
@@ -6351,6 +6372,8 @@ textarea {
   width: 30px;
   height: 30px; }
 
+.isSidebarOpen #main {
+  right: 0px !important; }
 @media (min-width: 769px) {
   .isSidebarOpen #main {
     right: 0px !important; }
@@ -6365,7 +6388,11 @@ textarea {
     .isSidebarOpen #sidebar .sidebar-toggle button:after {
       content: '\e646'; }
   .isSidebarOpen #sidebar .sidebar-panel {
-    right: -470px !important; }
+    right: -470px !important;
+    position: fixed;
+    top: 0px; }
+    .isSidebarOpen #sidebar .sidebar-panel .header-container, .isSidebarOpen #sidebar .sidebar-panel .indicator .select {
+      right: -470px !important; }
  }
 
 /**
@@ -6390,7 +6417,11 @@ textarea {
   cursor: default;
   outline: none;
   padding: 8px 52px 8px 10px;
-  transition: all 200ms ease; }
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
 
 .is-open > .Select-control {
   border-bottom-right-radius: 0;
@@ -6411,7 +6442,9 @@ textarea {
   padding: 8px 10px;
   position: absolute;
   top: 0;
-  left: 0; }
+  left: 0;
+  height: 40px;
+  line-height: 22px; }
 
 .has-value > .Select-control > .Select-placeholder {
   color: #333333; }
@@ -6458,7 +6491,8 @@ textarea {
   padding: 6px 10px;
   position: absolute;
   right: 17px;
-  top: 0; }
+  top: 0;
+  height: 40px; }
 
 .Select-clear:hover {
   color: #c0392b; }
@@ -6692,11 +6726,19 @@ textarea {
   top: 100%;
   width: 100%;
   z-index: 999;
+  left: 0px;
+  display: none;
   -webkit-overflow-scrolling: touch; }
   @media (max-width: 768px) {
     .Dropdown-menu {
       position: relative;
       z-index: 0; } }
+
+.is-open .Dropdown-menu {
+  display: block; }
+
+.isSidebarOpen .is-open .Dropdown-menu {
+  display: none; }
 
 .Dropdown-menu .group > .title {
   padding: 8px 20px;
