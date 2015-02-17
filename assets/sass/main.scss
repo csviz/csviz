@@ -328,6 +328,7 @@ textarea {
   top: 0;
   overflow-x:hidden;
   overflow-y:auto;
+  z-index: 0;
   @include desktop {
     .header-container, .indicator .select {
       position: fixed;
@@ -351,11 +352,6 @@ textarea {
           width: $sidebar;
           border-bottom: 1px solid $line;
         }
-      }
-    }
-    .indicator {
-      .description {
-        margin-top: 96px!important;
       }
     }
   }
@@ -955,7 +951,7 @@ textarea {
       .sidebar-panel {
         right: -$sidebar!important;
         position: fixed;
-        top: 0px;
+        top: 96px;
         .header-container,.indicator .select{
           right: -$sidebar!important;
         }
