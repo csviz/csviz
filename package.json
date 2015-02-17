@@ -5,15 +5,16 @@
   "main": "main.js",
   "scripts": {
     "env": "env",
+    "assets": "npm run lib && cp -r assets/images build/ && cp -r assets/favicons build/",
     "lib": "cp -r node_modules/mapbox.js/theme/images build/",
     "build-js": "NODE_ENV=production node_modules/browserify/bin/cmd.js main.js -t [ reactify --extension js --harmony ] | node_modules/uglify-js/bin/uglifyjs -mc > build/bundle.js",
     "build-css": "node_modules/node-sass/bin/node-sass assets/sass/main.scss build/bundle.css",
     "uglify-css": "cp build/bundle.css build/.bundle.css && rm build/bundle.css && node_modules/.bin/uglifycss build/.bundle.css > build/bundle.css && rm build/.bundle.css",
-    "build": "mkdir -p build && npm run lib && npm run build-js && npm run build-css && npm run uglify-css",
+    "build": "mkdir -p build && npm run assets && npm run build-js && npm run build-css && npm run uglify-css",
     "watch-css": "watchy -w assets/sass -- 'npm run build-css'",
     "browser-sync": "browser-sync start --port 8000 --server --files 'build/*.*' --logLevel silent",
     "watch-js": "watchify main.js -t [ reactify --extension js --harmony ] -o build/bundle.js -dv",
-    "watch": "npm run lib && npm run browser-sync & npm run watch-js & npm run watch-css",
+    "watch": "npm run assets && npm run browser-sync & npm run watch-js & npm run watch-css",
     "clean": "rm -rf build && mkdir build",
     "deploy": "make demo.deploy"
   },
