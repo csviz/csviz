@@ -330,6 +330,7 @@ textarea {
   overflow-y:auto;
   z-index: 0;
   @include desktop {
+    padding-top: 96px;
     .header-container, .indicator .select {
       position: fixed;
       width: $sidebar;
@@ -951,7 +952,7 @@ textarea {
       .sidebar-panel {
         right: -$sidebar!important;
         position: fixed;
-        top: 96px;
+        top: 0px;
         .header-container,.indicator .select{
           right: -$sidebar!important;
         }
