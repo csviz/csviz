@@ -25309,71 +25309,85 @@
     "locations": {
       "afghanistan": {
         "ISO": "AFG",
+        "donor": false,
         "fragile": true,
         "label": "Afghanistan"
       },
       "albania": {
         "ISO": "ALB",
+        "donor": false,
         "fragile": false,
         "label": "Albania"
       },
       "australia": {
         "ISO": "AUS",
+        "donor": true,
         "fragile": false,
         "label": "Australia"
       },
       "belgium": {
         "ISO": "BEL",
+        "donor": true,
         "fragile": false,
         "label": "Belgium"
       },
       "benin": {
         "ISO": "BEN",
+        "donor": false,
         "fragile": false,
         "label": "Benin"
       },
       "bhutan": {
         "ISO": "BTN",
+        "donor": false,
         "fragile": false,
         "label": "Bhutan"
       },
       "burkina_faso": {
         "ISO": "BFA",
+        "donor": false,
         "fragile": false,
         "label": "Burkina Faso"
       },
       "burundi": {
         "ISO": "BDI",
+        "donor": false,
         "fragile": true,
         "label": "Burundi"
       },
       "cambodia": {
         "ISO": "KHM",
+        "donor": false,
         "fragile": false,
         "label": "Cambodia"
       },
       "cameroon": {
         "ISO": "CMR",
+        "donor": false,
         "fragile": false,
         "label": "Cameroon"
       },
       "canada": {
         "ISO": "CAN",
+        "donor": true,
         "fragile": false,
         "label": "Canada"
       },
       "central_african_republic": {
         "ISO": "CAF",
+        "donor": false,
         "fragile": true,
         "label": "Central African Republic"
       },
       "chad": {
         "ISO": "TCD",
+        "donor": false,
         "fragile": true,
         "label": "Chad"
       },
       "comoros": {
         "ISO": "COM",
+        "donor": false,
         "fragile": true,
         "label": "Comoros"
       },
@@ -25384,6 +25398,7 @@
       },
       "congo_drc": {
         "ISO": "NF-",
+        "donor": false,
         "fragile": true,
         "label": "Congo DRC"
       },
@@ -25394,6 +25409,7 @@
       },
       "cte_divoire": {
         "ISO": "NF-",
+        "donor": false,
         "fragile": false,
         "label": "C\u00f4te d'Ivoire"
       },
@@ -25404,31 +25420,37 @@
       },
       "denmark": {
         "ISO": "DNK",
+        "donor": true,
         "fragile": false,
         "label": "Denmark"
       },
       "djibouti": {
         "ISO": "DJI",
+        "donor": false,
         "fragile": false,
         "label": "Djibouti"
       },
       "eritrea": {
         "ISO": "ERI",
+        "donor": false,
         "fragile": true,
         "label": "Eritrea"
       },
       "ethiopia": {
         "ISO": "ETH",
+        "donor": false,
         "fragile": true,
         "label": "Ethiopia"
       },
       "france": {
         "ISO": "FRA",
+        "donor": true,
         "fragile": false,
         "label": "France"
       },
       "gambia": {
         "ISO": "NF-",
+        "donor": false,
         "fragile": false,
         "label": "Gambia"
       },
@@ -25439,66 +25461,79 @@
       },
       "georgia": {
         "ISO": "GEO",
+        "donor": false,
         "fragile": false,
         "label": "Georgia"
       },
       "germany": {
         "ISO": "DEU",
+        "donor": true,
         "fragile": false,
         "label": "Germany"
       },
       "ghana": {
         "ISO": "GHA",
+        "donor": false,
         "fragile": false,
         "label": "Ghana"
       },
       "guinea": {
         "ISO": "GIN",
+        "donor": false,
         "fragile": false,
         "label": "Guinea"
       },
       "guineabissau": {
         "ISO": "GNB",
+        "donor": false,
         "fragile": true,
         "label": "Guinea-Bissau"
       },
       "guyana": {
         "ISO": "GUY",
+        "donor": false,
         "fragile": false,
         "label": "Guyana"
       },
       "haiti": {
         "ISO": "HTI",
+        "donor": false,
         "fragile": true,
         "label": "Haiti"
       },
       "honduras": {
         "ISO": "HND",
+        "donor": false,
         "fragile": false,
         "label": "Honduras"
       },
       "ireland": {
         "ISO": "IRL",
+        "donor": true,
         "fragile": false,
         "label": "Ireland"
       },
       "italy": {
         "ISO": "ITA",
+        "donor": true,
         "fragile": false,
         "label": "Italy"
       },
       "japan": {
         "ISO": "JPN",
+        "donor": true,
         "fragile": false,
         "label": "Japan"
       },
       "kenya": {
         "ISO": "KEN",
+        "donor": false,
         "fragile": false,
         "label": "Kenya"
       },
       "kyrgyz_republic": {
         "ISO": "NF-",
+        "donor": false,
         "fragile": false,
         "label": "Kyrgyz Republic"
       },
@@ -25509,6 +25544,7 @@
       },
       "lao_pdr": {
         "ISO": "NF-",
+        "donor": false,
         "fragile": false,
         "label": "Lao PDR"
       },
@@ -25519,91 +25555,109 @@
       },
       "lesotho": {
         "ISO": "LSO",
+        "donor": false,
         "fragile": false,
         "label": "Lesotho"
       },
       "liberia": {
         "ISO": "LBR",
+        "donor": false,
         "fragile": true,
         "label": "Liberia"
       },
       "luxembourg": {
         "ISO": "LUX",
+        "donor": false,
         "fragile": false,
         "label": "Luxembourg"
       },
       "madagascar": {
         "ISO": "MDG",
+        "donor": false,
         "fragile": true,
         "label": "Madagascar"
       },
       "malawi": {
         "ISO": "MWI",
+        "donor": false,
         "fragile": true,
         "label": "Malawi"
       },
       "mali": {
         "ISO": "MLI",
+        "donor": false,
         "fragile": true,
         "label": "Mali"
       },
       "mauritania": {
         "ISO": "MRT",
+        "donor": false,
         "fragile": false,
         "label": "Mauritania"
       },
       "moldova": {
         "ISO": "MDA",
+        "donor": false,
         "fragile": false,
         "label": "Moldova"
       },
       "mongolia": {
         "ISO": "MNG",
+        "donor": false,
         "fragile": false,
         "label": "Mongolia"
       },
       "mozambique": {
         "ISO": "MOZ",
+        "donor": false,
         "fragile": false,
         "label": "Mozambique"
       },
       "nepal": {
         "ISO": "NPL",
+        "donor": false,
         "fragile": true,
         "label": "Nepal"
       },
       "netherlands": {
         "ISO": "NLD",
+        "donor": true,
         "fragile": false,
         "label": "Netherlands"
       },
       "nicaragua": {
         "ISO": "NIC",
+        "donor": false,
         "fragile": false,
         "label": "Nicaragua"
       },
       "niger": {
         "ISO": "NER",
+        "donor": false,
         "fragile": true,
         "label": "Niger"
       },
       "nigeria": {
         "ISO": "NGA",
+        "donor": false,
         "fragile": true,
         "label": "Nigeria"
       },
       "norway": {
         "ISO": "NOR",
+        "donor": true,
         "fragile": false,
         "label": "Norway"
       },
       "pakistan": {
         "ISO": "PAK",
+        "donor": false,
         "fragile": true,
         "label": "Pakistan"
       },
       "papua_new_guinea": {
         "ISO": "PNG",
+        "donor": false,
         "fragile": false,
         "label": "Papua New Guinea"
       },
@@ -25614,36 +25668,43 @@
       },
       "romania": {
         "ISO": "ROU",
+        "donor": true,
         "fragile": false,
         "label": "Romania"
       },
       "russia": {
         "ISO": "RUS",
+        "donor": true,
         "fragile": false,
         "label": "Russia"
       },
       "rwanda": {
         "ISO": "RWA",
+        "donor": false,
         "fragile": false,
         "label": "Rwanda"
       },
       "sao_tome_and_principe": {
         "ISO": "STP",
+        "donor": false,
         "fragile": false,
         "label": "Sao Tome and Principe"
       },
       "senegal": {
         "ISO": "SEN",
+        "donor": false,
         "fragile": false,
         "label": "Senegal"
       },
       "sierra_leone": {
         "ISO": "SLE",
+        "donor": false,
         "fragile": true,
         "label": "Sierra Leone"
       },
       "somalia": {
         "ISO": "SOM",
+        "donor": false,
         "fragile": true,
         "label": "Somalia"
       },
@@ -25664,36 +25725,43 @@
       },
       "south_sudan": {
         "ISO": "SSD",
+        "donor": false,
         "fragile": true,
         "label": "South Sudan"
       },
       "spain": {
         "ISO": "ESP",
+        "donor": true,
         "fragile": false,
         "label": "Spain"
       },
       "sudan": {
         "ISO": "SDN",
+        "donor": false,
         "fragile": true,
         "label": "Sudan"
       },
       "sweden": {
         "ISO": "SWE",
+        "donor": true,
         "fragile": false,
         "label": "Sweden"
       },
       "switzerland": {
         "ISO": "CHE",
+        "donor": true,
         "fragile": false,
         "label": "Switzerland"
       },
       "tajikistan": {
         "ISO": "TJK",
+        "donor": false,
         "fragile": false,
         "label": "Tajikistan"
       },
       "tanzania": {
         "ISO": "TZA",
+        "donor": false,
         "fragile": false,
         "label": "Tanzania"
       },
@@ -25714,21 +25782,25 @@
       },
       "timorleste": {
         "ISO": "TLS",
+        "donor": false,
         "fragile": true,
         "label": "Timor-Leste"
       },
       "togo": {
         "ISO": "TGO",
+        "donor": false,
         "fragile": true,
         "label": "Togo"
       },
       "uganda": {
         "ISO": "UGA",
+        "donor": false,
         "fragile": true,
         "label": "Uganda"
       },
       "united_kingdom": {
         "ISO": "GBR",
+        "donor": true,
         "fragile": false,
         "label": "United Kingdom"
       },
@@ -25739,11 +25811,13 @@
       },
       "united_states": {
         "ISO": "USA",
+        "donor": true,
         "fragile": false,
         "label": "United States"
       },
       "uzbekistan": {
         "ISO": "UZB",
+        "donor": false,
         "fragile": false,
         "label": "Uzbekistan"
       },
@@ -25754,21 +25828,25 @@
       },
       "vietnam": {
         "ISO": "VNM",
+        "donor": false,
         "fragile": false,
         "label": "Vietnam"
       },
       "yemen": {
         "ISO": "YEM",
+        "donor": false,
         "fragile": true,
         "label": "Yemen"
       },
       "zambia": {
         "ISO": "ZMB",
+        "donor": false,
         "fragile": false,
         "label": "Zambia"
       },
       "zimbabwe": {
         "ISO": "ZWE",
+        "donor": false,
         "fragile": true,
         "label": "Zimbabwe"
       }
