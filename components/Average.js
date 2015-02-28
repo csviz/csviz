@@ -5,12 +5,14 @@ var React = require('react')
 var numeral = require('numeral')
 var Router = require('react-router')
 var objectAssign = require('react/lib/Object.assign')
-var BarchartEnvelope = require('./BarchartEnvelope')
-var Scatterplot = require('./Scatterplot')
 var cx = React.addons.classSet
 var AdditiveAnimation = require('additive-animation')
-var MapUtils = require('../utils/MapUtils')
+var mustache = require('mustache')
 
+var safeTraverse = require('../utils/safeTraverse')
+var BarchartEnvelope = require('./BarchartEnvelope')
+var Scatterplot = require('./Scatterplot')
+var MapUtils = require('../utils/MapUtils')
 var MapActionCreators = require('../actions/MapActionCreators')
 var queryMixin = require('../mixins/queryMixin')
 var Store = require('../stores/Store')
@@ -75,7 +77,7 @@ var Average = React.createClass({
   },
 
   render() {
-    var average, Chart, countryList, countryChartBody
+    var overall, Chart, countryList, countryChartBody
     var global = this.props.data.global
     var configs = this.props.data.configs
     var selected_indicator = Store.getSelectedIndicator()
@@ -101,7 +103,11 @@ var Average = React.createClass({
           var hasData, formattedValue, countryData, countryChart
 
           if (indicators[countryName][selected_indicator]) {
-            formattedValue = numeral(indicators[countryName][selected_indicator].years[selected_year]).format(format)
+
+            // var tooltipTemplate = safeTraverse(configs, 'indicators', selected_indicator, 'tooltip')
+            // console.log(tooltipTemplate)
+
+            formattedValue = numeral(indicators[countryName][selected_indicator].years[selected_year]).format(format) + '%'
             countryData = _.map(indicators[countryName][selected_indicator].years, function(value) {
               return value || 0
             })
@@ -144,7 +150,7 @@ var Average = React.createClass({
           var hasInvalidValue = false
 
           if (selected_indicator != 'map_of_the_global_partnership_for_education') {
-            average = numeral(global.meta.indicators[selected_indicator].avg.years[selected_year]).format(format)
+            overall = numeral(global.meta.indicators[selected_indicator].avg.years[selected_year]).format(format)
           }
 
           var dataSeries = _.map(global.meta.indicators[selected_indicator].avg.years, function(value) {
@@ -163,7 +169,7 @@ var Average = React.createClass({
       } else {
         countryList = Object.keys(indicators).map(function(countryName, key) {
           var countryValue = indicators[countryName][selected_indicator]
-          var formattedValue = countryValue ? 'Donor' : 'Donee'
+          var formattedValue = countryValue ? 'DONOR' : 'DONEE'
 
           var classes = cx({
             'countryItem': true,
@@ -181,7 +187,7 @@ var Average = React.createClass({
           )
         }.bind(this))
         if (selected_indicator != 'map_of_the_global_partnership_for_education') {
-          average = numeral(global.meta.indicators[selected_indicator].avg).format(format)
+          overall = numeral(global.meta.indicators[selected_indicator].avg).format(format)
         }
       }
 
@@ -191,7 +197,7 @@ var Average = React.createClass({
       <section className='drilldown'>
         <header className='header'>
           <span className='label'>Average</span>
-          <span className='value'>{average}</span>
+          <span className='value'>{overall}</span>
           <span className='chart'>{Chart}</span>
         </header>
         <ul className='list'>
