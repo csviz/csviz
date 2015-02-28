@@ -23,14 +23,23 @@ var MapUtils = {
 
     // read color from individual indicator config
     if (customChoropleth) {
-      var i = 0
-      while (i < customChoropleth.length) {
-        if (value >= customChoropleth[i].range[0] && value <= customChoropleth[i].range[1]) {
-          break
+      if (selected_indicator == 'map_of_the_global_partnership_for_education') {
+        if (value == 0) {
+          return customChoropleth[1].color
+        } else if (value == 1) {
+          return customChoropleth[0].color
         }
-        i += 1
+      } else {
+        var i = 0
+        while (i < customChoropleth.length) {
+          if (value >= customChoropleth[i].range[0] && value <= customChoropleth[i].range[1]) {
+            break
+          }
+          i += 1
+        }
+        return safeTraverse(customChoropleth[i], 'color')
       }
-      return safeTraverse(customChoropleth[i], 'color')
+
     } else {
       var min = safeTraverse(meta, 'indicators', selected_indicator, 'min_value')
       var max = safeTraverse(meta, 'indicators', selected_indicator, 'max_value' )
@@ -109,32 +118,37 @@ var MapUtils = {
    * Get Legend Html with the selected Indicator
    */
   getLegendHTML(configs, global, selected_indicator) {
-
-    // the gpe stuff...
-    if (selected_indicator === 'map_of_the_global_partnership_for_education') {
-      var labels = []
-
-      labels.push('<li class="fragile-container"><span class="swatch fragile"></span>Fragile State</li>')
-      labels.push('<li><span class="swatch" style="background:#5c6bc0"></span>GPE Donors</li>')
-      labels.push('<li><span class="swatch" style="background:#eeeeee"></span>GPE Developing Country Partners</li>')
-
-      return `<ul class='legend-list'>${labels.join('')}</ul>`
-    }
-
     var customChoropleth = safeTraverse(configs, 'indicators', selected_indicator, 'choropleth')
 
     // custom color goes first
     if(customChoropleth) {
       var labels = []
-      // legend for country with Data not available
+
       labels.push('<li class="fragile-container"><span class="swatch fragile"></span>Fragile State</li>')
-      labels.push('<li><span class="swatch" style="background:#eeeeee"></span>Data not available</li>')
 
-      customChoropleth.forEach(function(item) {
-        labels.push(`<li><span class='swatch' style='background:${item.color}'></span>${item.label}</li>`)
-      })
+      // the gpe stuff...
+      if (selected_indicator === 'map_of_the_global_partnership_for_education') {
 
-      return `<ul class='legend-list'>${labels.join('')}</ul>`
+        // labels.push('<li><span class="swatch" style="background:#5c6bc0"></span>GPE Donors</li>')
+        // labels.push('<li><span class="swatch" style="background:#eeeeee"></span>GPE Developing Country Partners</li>')
+
+        customChoropleth.forEach(function(item) {
+          labels.push(`<li><span class='swatch' style='background:${item.color}'></span>${item.label}</li>`)
+        })
+
+        return `<ul class='legend-list'>${labels.join('')}</ul>`
+      } else {
+        // legend for country with Data not available
+        labels.push('<li><span class="swatch" style="background:#eeeeee"></span>Data not available</li>')
+
+        customChoropleth.forEach(function(item) {
+          labels.push(`<li><span class='swatch' style='background:${item.color}'></span>${item.label}</li>`)
+        })
+
+        return `<ul class='legend-list'>${labels.join('')}</ul>`
+      }
+
+
     } else {
       var _min = safeTraverse(global, 'meta', 'indicators', selected_indicator, 'min_value')
       var _max = safeTraverse(global, 'meta', 'indicators', selected_indicator, 'max_value')

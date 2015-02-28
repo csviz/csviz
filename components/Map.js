@@ -49,8 +49,6 @@ var Map = React.createClass({
       trackResize: true
     }).setView(mapbox_config.location, mapbox_config.zoomlevel)
 
-    window.mapInstance = map
-
     this.setState({map: map})
   },
 
@@ -180,10 +178,11 @@ var Map = React.createClass({
 
       // make sure country exist
       if (countryName in indicators) value = indicators[countryName][selected_indicator]
+
       // check if the value has years
       if (value && configs.indicators[selected_indicator].years.length) value = value.years[selected_year]
 
-      if (value) {
+      if (!_.isUndefined(value) && !_.isNull(value)) {
         // check the type of the data
         if (configs.indicators[selected_indicator].type == 'number') {
           color = MapUtils.getNumberColor(value, configs, meta, selected_indicator)
