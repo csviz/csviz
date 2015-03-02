@@ -73,32 +73,6 @@ var MapUtils = {
   },
 
   /**
-   * A simple template helper function to genrerate markup from data
-   */
-  compileTemplate(tpl, data) {
-    var re = /{{(.+?)}}/g,
-      reExp = /(^( )?(var|if|for|else|switch|case|break|{|}|;))(.*)?/g,
-      code = 'with(obj) { var r=[];\n',
-      cursor = 0,
-      result,
-      match
-    var add = function(line, js) {
-      js? (code += line.match(reExp) ? line + '\n' : 'r.push(' + line + ');\n') :
-        (code += line != '' ? 'r.push("' + line.replace(/"/g, '\\"') + '");\n' : '');
-      return add;
-    }
-    while(match = re.exec(tpl)) {
-      add(tpl.slice(cursor, match.index))(match[1], true);
-      cursor = match.index + match[0].length;
-    }
-    add(tpl.substr(cursor, tpl.length - cursor));
-    code = (code + 'return r.join(""); }').replace(/[\r\t\n]/g, '');
-    try { result = new Function('obj', code).apply(data, [data]); }
-    catch(err) { console.error("'" + err.message + "'", " in \n\nCode:\n", code, "\n"); }
-    return result
-  },
-
-  /**
    * Normalize country name
    */
   getCountryNameId(name) {
@@ -231,7 +205,7 @@ var MapUtils = {
           var dataObject = {}
           var values = MapUtils.matchContentFromTemplate(tooltipTemplate)
           if (values.length) {
-            values.map((indicatorName) => {
+            values.forEach((indicatorName) => {
               indicatorName = indicatorName.trim()
               var indicatorId = MapUtils.getCountryNameId(indicatorName)
               var data = safeTraverse(indicators, countryName, indicatorId, 'years', selected_year)
@@ -241,20 +215,6 @@ var MapUtils = {
 
           if (tooltipTemplate) value = mustache.render(tooltipTemplate, dataObject)
         }
-      // data without years
-      } else {
-        var dataObject = {}
-        var values = MapUtils.matchContentFromTemplate(tooltipTemplate)
-        if (values.length) {
-          values.map((indicatorName) => {
-            indicatorName = indicatorName.trim()
-            var indicatorId = MapUtils.getCountryNameId(indicatorName)
-            var data = safeTraverse(indicators, countryName, indicatorId, 'years', selected_year)
-            dataObject[indicatorName] = numeral(data).format(format)
-          })
-        }
-
-        if (tooltipTemplate) value = mustache.render(tooltipTemplate, dataObject)
       }
     }
 

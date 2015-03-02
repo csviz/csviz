@@ -94,6 +94,8 @@ var Average = React.createClass({
       if (!_.isEmpty(configs) && configs.indicators[selected_indicator].years.length) {
         var selectedIndex = _.indexOf(global.meta.indicators[selected_indicator].years, selected_year)
 
+        var displayTemplate = safeTraverse(configs, 'indicators', selected_indicator, 'display')
+
         // filter country with gpe stuff
         countryList = Object.keys(indicators)
         .filter(function(countryName) {
@@ -104,10 +106,17 @@ var Average = React.createClass({
 
           if (indicators[countryName][selected_indicator]) {
 
-            // var tooltipTemplate = safeTraverse(configs, 'indicators', selected_indicator, 'tooltip')
-            // console.log(tooltipTemplate)
+            var dataObject = {}
+            var values = MapUtils.matchContentFromTemplate(displayTemplate)
+            values.forEach((indicatorName) => {
+              indicatorName = indicatorName.trim()
+              var indicatorId = MapUtils.getCountryNameId(indicatorName)
+              var data = safeTraverse(indicators, countryName, indicatorId, 'years', selected_year)
+              dataObject[indicatorName] = numeral(data).format(format)
+            })
+            if (displayTemplate) formattedValue = mustache.render(displayTemplate, dataObject)
 
-            formattedValue = numeral(indicators[countryName][selected_indicator].years[selected_year]).format(format) + '%'
+            // formattedValue = numeral(indicators[countryName][selected_indicator].years[selected_year]).format(format)
             countryData = _.map(indicators[countryName][selected_indicator].years, function(value) {
               return value || 0
             })
