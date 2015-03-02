@@ -152,7 +152,7 @@ var MapUtils = {
     } else {
       var _min = safeTraverse(global, 'meta', 'indicators', selected_indicator, 'min_value')
       var _max = safeTraverse(global, 'meta', 'indicators', selected_indicator, 'max_value')
-      if (_.isNull(_min) || _.isNull(_max)) return
+      if (_.isNull(_min) || _.isNull(_max) || _.isUndefined(_min) || _.isUndefined(_max)) return
 
       var labels = [], from, to, color
       var min = _min.toFixed()

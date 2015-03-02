@@ -28,7 +28,7 @@ var Map = React.createClass({
 
   getInitialState() {
     return {
-      map: {},
+      map: null,
       countryLayer: null,
       legend: null,
       controlLayer: null
@@ -50,56 +50,6 @@ var Map = React.createClass({
     }).setView(mapbox_config.location, mapbox_config.zoomlevel)
 
     this.setState({map: map})
-  },
-
-  toggleLegend() {
-    var currentLegendStatus = Store.getLegendStatus()
-
-    if (currentLegendStatus){
-      this.cleanLegend()
-      this.addLegend()
-    } else {
-      this.cleanLegend()
-    }
-  },
-
-  hasClass(el, className) {
-    if (el.classList) {
-      return el.classList.contains(className)
-    } else {
-      return new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className)
-    }
-  },
-
-  addClass(el, className) {
-    if (el.classList) {
-      el.classList.add(className)
-    } else {
-      el.className += ' ' + className
-    }
-  },
-
-  removeClass(el, className) {
-    if (el.classList) {
-      el.classList.remove(className)
-    } else {
-      el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ')
-    }
-  },
-
-  cleanLegend() {
-    if(this.state.map && !_.isEmpty(this.state.legend)) this.state.map.legendControl.removeLegend(this.state.legend)
-    this.setState({legend: null})
-  },
-
-  addLegend() {
-    var data = Store.getAll()
-    var global = data.global
-    var configs = data.configs
-    var selected_indicator = Store.getSelectedIndicator()
-    var legend = MapUtils.getLegendHTML(configs, global, selected_indicator)
-    this.state.map.legendControl.addLegend(legend)
-    this.setState({legend: legend})
   },
 
   handleYearChange() {
@@ -155,15 +105,22 @@ var Map = React.createClass({
     var data = Store.getAll()
     var selected_indicator = Store.getSelectedIndicator()
     var selected_year = Store.getSelectedYear()
+    var filteredCountry
+
+    // return there's no data
+    if (_.isEmpty(data) || _.isEmpty(selected_indicator)) return
 
     // clean up existing layers
-    if (this.state.countryLayer && this.state.countryLayer._layers !== undefined) {
-      for (var layer_i in this.state.countryLayer._layers) {
-        map.removeLayer(this.state.countryLayer._layers[layer_i])
-      }
+    if (map.hasLayer(this.state.countryLayer)) {
+      this.state.countryLayer.clearLayers()
+      this.state.countryLayer.clearAllEventListeners()
+      map.removeLayer(this.state.countryLayer)
+      this.setState({countryLayer: null})
     }
-
-    if (_.isEmpty(data) || _.isEmpty(selected_indicator)) return
+    // clean up legend
+    this.cleanLegend()
+    // only show legend for desktop
+    if (window.innerWidth > 768) { this.addLegend() }
 
     var global = data.global
     var meta = global.meta
@@ -269,63 +226,17 @@ var Map = React.createClass({
           layer._container.children[0].style.fill = 'url(#fragilePattern)'
         }
       }, 0)
-
-      var closeTooltip
-      var popup = new L.Popup({ autoPan: false, closeButton: false })
-
-      layer.on({
-        mousemove: mousemove,
-        mouseout: mouseout,
-        click: onMapClick
-      })
-
-      // mouse move handler
-      function mousemove(e) {
-        var layer = e.target
-        MapUtils.addTooltip(map, layer, popup, global, selected_indicator, configs, selected_year, e)
-        window.clearTimeout(closeTooltip)
-        layer.setStyle({
-          fillOpacity: 1
-        })
-        if (!L.Browser.ie && !L.Browser.opera) {
-          layer.bringToFront()
-        }
-      }
-
-      // on mouse out handler
-      function mouseout(e) {
-        countryLayer.resetStyle(e.target)
-        closeTooltip = window.setTimeout(function() {
-          map.closePopup()
-        }, 100)
-      }
-
-      // on map click handler
-      function onMapClick(e) {
-        var selectedCountryName = MapUtils.getCountryNameFromMetaByISO(e.target.feature.properties['ISO'], meta)
-        // var selectedCountryName = MapUtils.getCountryNameId(e.target.feature.properties['ISO_NAME'])
-        self.updateQuery({country: selectedCountryName})
-        map.panTo(e.latlng)
-        MapActionCreators.changeSelectedCountry(selectedCountryName)
-      }
     }
-
-    this.cleanLegend()
-    if (window.innerWidth > 768) { this.addLegend() }
-
-    var filteredCountry
 
     // gpe specify stuff..
     if (selected_indicator != 'map_of_the_global_partnership_for_education') {
       filteredCountry = data.geo.filter((shape) => {
-        // var countryName = MapUtils.getCountryNameId(shape.properties['ISO_NAME'])
         var countryName = MapUtils.getCountryNameFromMetaByISO(shape.properties['ISO'], meta)
         return countryName in indicators && (indicators[countryName] && indicators[countryName]['map_of_the_global_partnership_for_education'] != 1)
       })
     } else {
       filteredCountry = data.geo.filter((shape) => {
         var countryName = MapUtils.getCountryNameFromMetaByISO(shape.properties['ISO'], meta)
-        // var countryName = MapUtils.getCountryNameId(shape.properties['ISO_NAME'])
         return countryName in indicators
       })
     }
@@ -333,7 +244,8 @@ var Map = React.createClass({
     var countryLayer = L.geoJson(filteredCountry, {
       style: getStyle,
       onEachFeature: onEachFeature
-    }).addTo(map)
+    })
+    countryLayer.addTo(map)
 
     this.setState({countryLayer: countryLayer})
 
@@ -405,6 +317,48 @@ var Map = React.createClass({
         </Dialog>
       </section>
     )
+  },
+
+  addClass(el, className) {
+    if (el.classList) {
+      el.classList.add(className)
+    } else {
+      el.className += ' ' + className
+    }
+  },
+
+  removeClass(el, className) {
+    if (el.classList) {
+      el.classList.remove(className)
+    } else {
+      el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ')
+    }
+  },
+
+    addLegend() {
+    var data = Store.getAll()
+    var global = data.global
+    var configs = data.configs
+    var selected_indicator = Store.getSelectedIndicator()
+    var legend = MapUtils.getLegendHTML(configs, global, selected_indicator)
+    this.state.map.legendControl.addLegend(legend)
+    this.setState({legend: legend})
+  },
+
+  cleanLegend() {
+    if(this.state.map && !_.isEmpty(this.state.legend)) this.state.map.legendControl.removeLegend(this.state.legend)
+    this.setState({legend: null})
+  },
+
+  toggleLegend() {
+    var currentLegendStatus = Store.getLegendStatus()
+
+    if (currentLegendStatus){
+      this.cleanLegend()
+      this.addLegend()
+    } else {
+      this.cleanLegend()
+    }
   }
 
 })
