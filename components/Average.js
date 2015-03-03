@@ -84,6 +84,7 @@ var Average = React.createClass({
     var selected_year = Store.getSelectedYear()
     var selected_country = Store.getSelectedCountry()
     var onCircleClick = this.onCircleClick
+    var hideAverage = false
 
     if (!_.isEmpty(selected_indicator) && !_.isEmpty(global)) {
       var indicators = global.data.locations
@@ -95,7 +96,7 @@ var Average = React.createClass({
         var selectedIndex = _.indexOf(global.meta.indicators[selected_indicator].years, selected_year)
 
         var displayTemplate = safeTraverse(configs, 'indicators', selected_indicator, 'display')
-        var hideAverage = safeTraverse(configs, 'indicators', selected_indicator, 'average')
+        hideAverage = safeTraverse(configs, 'indicators', selected_indicator, 'average')
 
         // filter country with gpe stuff
         countryList = Object.keys(indicators)
@@ -129,8 +130,6 @@ var Average = React.createClass({
               </div>
             )
 
-            if (hideAverage) formattedValue = ''
-
             hasData = true
           } else {
             formattedValue = 'No data'
@@ -162,11 +161,7 @@ var Average = React.createClass({
           var hasInvalidValue = false
 
           if (selected_indicator != 'map_of_the_global_partnership_for_education') {
-            if (hideAverage) {
-              overall = ''
-            } else {
-              overall = numeral(global.meta.indicators[selected_indicator].avg.years[selected_year]).format(format)
-            }
+            overall = numeral(global.meta.indicators[selected_indicator].avg.years[selected_year]).format(format)
           }
 
           var dataSeries = _.map(global.meta.indicators[selected_indicator].avg.years, function(value) {
@@ -211,11 +206,13 @@ var Average = React.createClass({
 
     return (
       <section className='drilldown'>
-        <header className='header'>
-          <span className='label'>Average</span>
-          <span className='value'>{overall}</span>
-          <span className='chart'>{Chart}</span>
-        </header>
+        { !hideAverage &&
+          <header className='header'>
+            <span className='label'>Average</span>
+            <span className='value'>{overall}</span>
+            <span className='chart'>{Chart}</span>
+          </header>
+        }
         <ul className='list'>
           {countryList}
         </ul>
