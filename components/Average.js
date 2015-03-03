@@ -95,6 +95,7 @@ var Average = React.createClass({
         var selectedIndex = _.indexOf(global.meta.indicators[selected_indicator].years, selected_year)
 
         var displayTemplate = safeTraverse(configs, 'indicators', selected_indicator, 'display')
+        var hideAverage = safeTraverse(configs, 'indicators', selected_indicator, 'average')
 
         // filter country with gpe stuff
         countryList = Object.keys(indicators)
@@ -128,6 +129,8 @@ var Average = React.createClass({
               </div>
             )
 
+            if (hideAverage) formattedValue = ''
+
             hasData = true
           } else {
             formattedValue = 'No data'
@@ -159,7 +162,11 @@ var Average = React.createClass({
           var hasInvalidValue = false
 
           if (selected_indicator != 'map_of_the_global_partnership_for_education') {
-            overall = numeral(global.meta.indicators[selected_indicator].avg.years[selected_year]).format(format)
+            if (hideAverage) {
+              overall = ''
+            } else {
+              overall = numeral(global.meta.indicators[selected_indicator].avg.years[selected_year]).format(format)
+            }
           }
 
           var dataSeries = _.map(global.meta.indicators[selected_indicator].avg.years, function(value) {
