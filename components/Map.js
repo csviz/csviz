@@ -302,6 +302,9 @@ var Map = React.createClass({
 
     return (
       <section id='main'>
+        <div className='sidebar-toggle'>
+          <button name='button' onClick={this.toggleSidebar}></button>
+        </div>
         <div id='map'></div>
         <Timeline data={this.props.data} />
         <SearchBar data={this.props.data} />
@@ -317,6 +320,26 @@ var Map = React.createClass({
         </Dialog>
       </section>
     )
+  },
+
+  hasClass(el, className) {
+    if (el.classList) {
+      return el.classList.contains(className)
+    } else {
+      return new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className)
+    }
+  },
+
+  toggleSidebar() {
+    var body = document.querySelector('body')
+    if(this.hasClass(body, 'isSidebarOpen')) {
+      this.removeClass(body, 'isSidebarOpen')
+    } else {
+      this.addClass(body, 'isSidebarOpen')
+    }
+    setTimeout(() => {
+      if(this.state.map) this.state.map._onResize()
+    }, 100)
   },
 
   addClass(el, className) {
@@ -335,7 +358,7 @@ var Map = React.createClass({
     }
   },
 
-    addLegend() {
+  addLegend() {
     var data = Store.getAll()
     var global = data.global
     var configs = data.configs
