@@ -59,7 +59,7 @@ var SocialPanel = React.createClass({
     axios.get(csv_url).then(function(res) {
       saveAs(new Blob([res.data], {
         type: 'text/plain;charset=utf-8'
-      }), source_path)
+      }), decodeURIComponent(source_path))
     })
   },
 

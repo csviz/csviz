@@ -41,7 +41,7 @@ var Dropdown = React.createClass({
   },
 
   fireChangeEvent: function(newState) {
-    if (newState.selected !== this.state.selected &&this.props.onChange) {
+    if (newState.selected !== this.state.selected && this.props.onChange) {
       this.props.onChange(newState.selected);
     }
   },
