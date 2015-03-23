@@ -81,7 +81,10 @@ var Map = React.createClass({
     var meta = global.meta
     var selected_country = Store.getSelectedCountry()
 
-    if (selected_country && this.state.map && this.state.countryLayer) {
+    if (selected_country === '') {
+      this.state.map.closePopup()
+      this.state.map.setView(mapbox_config.location, mapbox_config.zoomlevel)
+    } else if (selected_country && this.state.map && this.state.countryLayer) {
       this.state.countryLayer.eachLayer(function(layer) {
         if(MapUtils.getCountryNameFromMetaByISO(layer.feature.properties['ISO'], meta) === selected_country) {
           var popup = new L.Popup({ autoPan: false, closeButton: false })

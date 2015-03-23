@@ -44,7 +44,7 @@ var Timeline = React.createClass({
   },
 
   handleSearchChange(countryName) {
-    if(_.contains(Object.keys(this.props.data.global.meta.locations), countryName)) {
+    if(_.contains(Object.keys(this.props.data.global.meta.locations), countryName) || countryName === '') {
       this.updateQuery({country: countryName})
       MapActionCreators.changeSelectedCountry(countryName)
     }
