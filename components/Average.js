@@ -210,7 +210,7 @@ var Average = React.createClass({
       <section className='drilldown'>
         { !hideAverage &&
           <header className='header'>
-            <span className='label'>Average</span>
+            <span className='label'>Average in GPE countries</span>
             <span className='value'>{overall}</span>
             <span className='chart'>{Chart}</span>
           </header>
