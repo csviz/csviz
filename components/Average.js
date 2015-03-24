@@ -116,7 +116,9 @@ var Average = React.createClass({
               var data = safeTraverse(indicators, countryName, indicatorId, 'years', selected_year)
               dataObject[indicatorName] = numeral(data).format(format)
             })
+
             if (displayTemplate) formattedValue = mustache.render(displayTemplate, dataObject)
+            if (formattedValue === 0.00 || formattedValue === '0.00%') formattedValue = 'no data'
 
             // formattedValue = numeral(indicators[countryName][selected_indicator].years[selected_year]).format(format)
             countryData = _.map(indicators[countryName][selected_indicator].years, function(value) {

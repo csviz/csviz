@@ -60,10 +60,16 @@ var Scatterplot = React.createClass({
       .attr('r', function(d) {
         return rScale(d)
       })
+      .style('stroke-dasharray', function(d, i) {
+        if (d == 0) return ('5, 5')
+      })
+      .style('stroke', function(d, i) {
+        if (d == 0) return '#BBB'
+      })
       .attr('fill', function(d, i) {
 
         if (d == 0) {
-          return '#BBB'
+          return 'none'
         } else {
           var data = Store.getAll()
           var selected_indicator = Store.getSelectedIndicator()
@@ -147,6 +153,7 @@ var Scatterplot = React.createClass({
       .enter()
       .append('text')
       .text(function(d, i) {
+        if (d === 0) return 'no data'
         return numeral(d).format('0.0a')
       })
       .style('pointer-events', 'none')
