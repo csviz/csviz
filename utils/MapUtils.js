@@ -59,6 +59,11 @@ var MapUtils = {
     }
   },
 
+  getSelectColor(value, configs, selected_indicator) {
+    var customChoropleth = safeTraverse(configs, 'indicators', selected_indicator, 'choropleth')
+    // TODO...
+  },
+
   matchContentFromTemplate(template) {
     // return template.match(/{{\s*[\w\.]+\s*}}/g)
     //   .map(function(x) { return x.match(/[\w\.]+/)[0]; });

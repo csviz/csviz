@@ -146,7 +146,9 @@ var Map = React.createClass({
         // check the type of the data
         if (configs.indicators[selected_indicator].type == 'number') {
           color = MapUtils.getNumberColor(value, configs, meta, selected_indicator)
-        } else {
+        } else if (configs.indicators[selected_indicator].type == 'boolean') {
+
+          // TODO: apply color for boolean values
           color = MapUtils.getSelectColor(value, configs, selected_indicator)
         }
 

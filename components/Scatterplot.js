@@ -77,13 +77,6 @@ var Scatterplot = React.createClass({
 
       })
       .style('cursor', 'pointer')
-      .style('opacity', function(d, i) {
-        if (selectedIndex === i) {
-          return .9
-        } else {
-          return .6
-        }
-      })
       .on('mouseover', function(d) {
         if (d != 0) {
           d3.select(this)
