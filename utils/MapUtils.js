@@ -42,7 +42,7 @@ var MapUtils = {
 
     } else {
       var min = safeTraverse(meta, 'indicators', selected_indicator, 'min_value')
-      var max = safeTraverse(meta, 'indicators', selected_indicator, 'max_value' )
+      var max = safeTraverse(meta, 'indicators', selected_indicator, 'max_value')
       var colors = safeTraverse(configs, 'ui', 'choropleth')
       var steps = safeTraverse(configs, 'ui', 'choropleth', 'length')
 
@@ -61,7 +61,18 @@ var MapUtils = {
 
   getSelectColor(value, configs, selected_indicator) {
     var customChoropleth = safeTraverse(configs, 'indicators', selected_indicator, 'choropleth')
-    // TODO...
+
+    if (customChoropleth) {
+      var i = 0
+      while (i < customChoropleth.length) {
+        if (value >= customChoropleth[i].range[0] && value <= customChoropleth[i].range[1]) {
+          break
+        }
+        i += 1
+      }
+      return safeTraverse(customChoropleth[i], 'color')
+    }
+
   },
 
   matchContentFromTemplate(template) {

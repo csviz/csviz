@@ -16,6 +16,7 @@ var MapUtils = require('../utils/MapUtils')
 var MapActionCreators = require('../actions/MapActionCreators')
 var queryMixin = require('../mixins/queryMixin')
 var Store = require('../stores/Store')
+var AverageHeader = require('./AverageHeader')
 
 var Average = React.createClass({
 
@@ -77,7 +78,7 @@ var Average = React.createClass({
   },
 
   render() {
-    var overall, Chart, countryList, countryChartBody
+    var overall, countryList, countryChartBody
     var global = this.props.data.global
     var configs = this.props.data.configs
     var selected_indicator = Store.getSelectedIndicator()
@@ -159,28 +160,9 @@ var Average = React.createClass({
           )
         }.bind(this))
 
-        if (global.meta.indicators[selected_indicator].avg) {
-          var hasInvalidValue = false
-
-          if (selected_indicator != 'map_of_the_global_partnership_for_education') {
-            overall = numeral(global.meta.indicators[selected_indicator].avg.years[selected_year]).format(format)
-          }
-
-          var dataSeries = _.map(global.meta.indicators[selected_indicator].avg.years, function(value) {
-            if (!value) {
-              hasInvalidValue = true
-              console.warn(selected_indicator + ' has invalid data')
-            } else {
-              return value.toFixed(2)
-            }
-          })
-
-          if (!hasInvalidValue) Chart = <BarchartEnvelope onCircleClick={onCircleClick} selectedIndex={selectedIndex} data={dataSeries} width={80} height={20}/>
-        }
-
       // gpe spefic stuff, donnor/donor...
       } else {
-        countryList = Object.keys(indicators).map(function(countryName, key) {
+        countryList = Object.keys(indicators).map((countryName, key) => {
           var countryValue = indicators[countryName][selected_indicator]
           var formattedValue = countryValue ? 'DONOR' : 'DONEE'
 
@@ -198,22 +180,15 @@ var Average = React.createClass({
               </header>
             </li>
           )
-        }.bind(this))
-        if (selected_indicator != 'map_of_the_global_partnership_for_education') {
-          overall = numeral(global.meta.indicators[selected_indicator].avg).format(format)
-        }
+        })
       }
 
     }
 
     return (
       <section className='drilldown'>
-        { !hideAverage &&
-          <header className='header'>
-            <span className='label'>Average in GPE countries</span>
-            <span className='value'>{overall}</span>
-            <span className='chart'>{Chart}</span>
-          </header>
+        { !hideAverage && !_.isEmpty(this.props.data) && selected_indicator &&
+          <AverageHeader data={this.props.data} selectedIndicator={selected_indicator} selectedYear={selected_year} />
         }
         <ul className='list'>
           {countryList}

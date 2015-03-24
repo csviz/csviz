@@ -59,13 +59,21 @@ var BarchartEnvelope = React.createClass({
         return xScale(i)
       })
       .attr('y', function(d) {
-        return height - barchartScale(d)
+        if (d) {
+          return height - barchartScale(d)
+        } else {
+          return height
+        }
       })
       .attr('width', function() {
         return width / data.length - 5
       })
       .attr('height', function(d) {
-        return barchartScale(d)
+        if (d) {
+          return barchartScale(d)
+        } else {
+          return 0
+        }
       })
       .attr('fill', function(d, i) {
         if (selectedIndex === i) return '#4D4D4D'
