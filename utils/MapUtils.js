@@ -206,37 +206,29 @@ var MapUtils = {
 
     popup.setLatLng(latlng)
 
-    if (countryName in indicators && safeTraverse(indicators, countryName, selected_indicator)) {
+    if (countryName in indicators && selected_indicator !== 'map_of_the_global_partnership_for_education') {
+      if (configs.indicators[selected_indicator].type === 'boolean') {
+        value = safeTraverse(indicators, countryName, selected_indicator, 'years', selected_year) ? 'Conducted' : 'Not Conducted'
+      } else if (configs.indicators[selected_indicator].type === 'number') {
+        value = safeTraverse(indicators, countryName, selected_indicator, 'years', selected_year)
 
-      // gpe
-      if (selected_indicator === 'map_of_the_global_partnership_for_education') {
-        value = safeTraverse(indicators, countryName, selected_indicator) == 1 ? 'GPE Donors' : 'GPE Developing Country Partners'
-      // data with years
-      } else {
-        if (configs.indicators[selected_indicator].type === 'boolean') {
-          value = safeTraverse(indicators, countryName, selected_indicator, 'years', selected_year) ? 'Conducted' : 'Not Conducted'
-        } else if (configs.indicators[selected_indicator].type === 'number') {
-          value = safeTraverse(indicators, countryName, selected_indicator, 'years', selected_year)
-
-          if (!value) {
-            value = 'Data not available'
-          } else {
-            var dataObject = {}
-            var values = MapUtils.matchContentFromTemplate(tooltipTemplate)
-            if (values.length) {
-              values.forEach((indicatorName) => {
-                indicatorName = indicatorName.trim()
-                var indicatorId = MapUtils.getCountryNameId(indicatorName)
-                var data = safeTraverse(indicators, countryName, indicatorId, 'years', selected_year)
-                dataObject[indicatorName] = numeral(data).format(format)
-              })
-            }
-
-            if (tooltipTemplate) value = mustache.render(tooltipTemplate, dataObject)
+        if (!value) {
+          value = 'Data not available'
+        } else {
+          var dataObject = {}
+          var values = MapUtils.matchContentFromTemplate(tooltipTemplate)
+          if (values.length) {
+            values.forEach((indicatorName) => {
+              indicatorName = indicatorName.trim()
+              var indicatorId = MapUtils.getCountryNameId(indicatorName)
+              var data = safeTraverse(indicators, countryName, indicatorId, 'years', selected_year)
+              dataObject[indicatorName] = numeral(data).format(format)
+            })
           }
+
+          if (tooltipTemplate) value = mustache.render(tooltipTemplate, dataObject)
         }
       }
-
     }
 
     popup.setContent('<div class="marker-title">' + layer.feature.properties['ISO_NAME'] + '</div>' + value)

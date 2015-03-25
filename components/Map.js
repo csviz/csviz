@@ -60,7 +60,7 @@ var Map = React.createClass({
     var selected_country = Store.getSelectedCountry()
 
     if (selected_country && this.state.map && this.state.countryLayer) {
-      this.state.countryLayer.eachLayer(function(layer) {
+      this.state.countryLayer.eachLayer((layer) => {
         if(MapUtils.getCountryNameFromMetaByISO(layer.feature.properties['ISO'], meta) === selected_country) {
           var popup = new L.Popup({ autoPan: false, closeButton: false })
           var indicators = this.props.data.global.data.locations
@@ -69,9 +69,11 @@ var Map = React.createClass({
           var selected_indicator = Store.getSelectedIndicator()
           var selected_year = Store.getSelectedYear()
 
-          MapUtils.addTooltip(this.state.map, layer, popup, global, selected_indicator, configs, selected_year)
+          if (selected_indicator !== 'map_of_the_global_partnership_for_education') {
+            MapUtils.addTooltip(this.state.map, layer, popup, global, selected_indicator, configs, selected_year)
+          }
         }
-      }.bind(this))
+      })
     }
   },
 
@@ -85,7 +87,7 @@ var Map = React.createClass({
       this.state.map.closePopup()
       this.state.map.setView(mapbox_config.location, mapbox_config.zoomlevel)
     } else if (selected_country && this.state.map && this.state.countryLayer) {
-      this.state.countryLayer.eachLayer(function(layer) {
+      this.state.countryLayer.eachLayer((layer) => {
         if(MapUtils.getCountryNameFromMetaByISO(layer.feature.properties['ISO'], meta) === selected_country) {
           var popup = new L.Popup({ autoPan: false, closeButton: false })
           var indicators = this.props.data.global.data.locations
@@ -95,10 +97,13 @@ var Map = React.createClass({
           var selected_year = Store.getSelectedYear()
 
           var center = layer.getBounds().getCenter()
+
           this.state.map.panTo(center)
-          MapUtils.addTooltip(this.state.map, layer, popup, global, selected_indicator, configs, selected_year)
+          if (selected_indicator !== 'map_of_the_global_partnership_for_education') {
+            MapUtils.addTooltip(this.state.map, layer, popup, global, selected_indicator, configs, selected_year)
+          }
         }
-      }.bind(this))
+      })
     }
   },
 
@@ -193,7 +198,11 @@ var Map = React.createClass({
       // mouse move handler
       function mousemove(e) {
         var layer = e.target
-        MapUtils.addTooltip(map, layer, popup, global, selected_indicator, configs, selected_year, e)
+
+        if (selected_indicator !== 'map_of_the_global_partnership_for_education') {
+          MapUtils.addTooltip(map, layer, popup, global, selected_indicator, configs, selected_year, e)
+        }
+
         window.clearTimeout(closeTooltip)
         layer.setStyle({
           fillOpacity: 1
@@ -226,7 +235,7 @@ var Map = React.createClass({
         // var countryName = MapUtils.getCountryNameId(layer.feature.properties['ISO_NAME'])
         var countryName = MapUtils.getCountryNameFromMetaByISO(layer.feature.properties['ISO'], meta)
         if(layer._container && meta.locations[countryName].fragile) {
-          layer._container.children[0].style.fill = 'url(#fragilePattern)'
+          layer._container.childNodes[0].style.fill = 'url(#fragilePattern)'
         }
       }, 0)
     }
