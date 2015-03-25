@@ -97,6 +97,7 @@ var Map = React.createClass({
           var selected_year = Store.getSelectedYear()
 
           var center = layer.getBounds().getCenter()
+
           this.state.map.panTo(center)
           if (selected_indicator !== 'map_of_the_global_partnership_for_education') {
             MapUtils.addTooltip(this.state.map, layer, popup, global, selected_indicator, configs, selected_year)

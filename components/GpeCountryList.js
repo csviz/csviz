@@ -34,7 +34,7 @@ var GpeCountryList = React.createClass({
       });
 
       return (
-        <li key={key} className={classes} onClick={this.onCountryClick.bind(this, countryName)}>
+        <li key={key} className={classes}>
           <header onClick={this.onCountryClick.bind(this, countryName)}>
             <span className='label'>{this.props.data.global.meta.locations[countryName].label}</span>
             <span className='value'>{formattedValue}</span>
