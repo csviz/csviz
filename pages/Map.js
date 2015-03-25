@@ -7,7 +7,7 @@ var DocumentTitle = require('react-document-title')
 
 var MapActionCreators = require('../actions/MapActionCreators')
 var Store = require('../stores/Store')
-
+var ControlHeader = require('../components/ControlHeader')
 var Map = require('../components/Map')
 var MapControls = require('../components/MapControls')
 var Pattern = require('../components/Pattern')
@@ -59,6 +59,7 @@ var MapPage = React.createClass({
     return (
       <DocumentTitle title={indicatorName + ' ' + siteName} >
         <section className={classes} id='app'>
+          <ControlHeader data={this.state.data} />
           <Map data={this.state.data} />
           <Pattern />
           <MapControls data={this.state.data} />
