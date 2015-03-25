@@ -2,27 +2,17 @@
 
 var _ = require('lodash')
 var React = require('react')
-var numeral = require('numeral')
-var Router = require('react-router')
-var objectAssign = require('react/lib/Object.assign')
-var cx = React.addons.classSet
 var AdditiveAnimation = require('additive-animation')
-var mustache = require('mustache')
 
 var safeTraverse = require('../utils/safeTraverse')
-var BarchartEnvelope = require('./BarchartEnvelope')
-var Scatterplot = require('./Scatterplot')
-var MapUtils = require('../utils/MapUtils')
-var MapActionCreators = require('../actions/MapActionCreators')
-var queryMixin = require('../mixins/queryMixin')
 var Store = require('../stores/Store')
 var AverageHeader = require('./AverageHeader')
+var GpeCountryList = require('./GpeCountryList')
+var CountryList = require('./CountryList')
 
 var Average = React.createClass({
 
   displayName: 'Average',
-
-  mixins: [ Router.State, Router.Navigation, queryMixin ],
 
   componentDidMount() {
     Store.addIndicatorChangeListener(this.handleStoreChange)
@@ -33,8 +23,12 @@ var Average = React.createClass({
   },
 
   componentWillUpdate(prevProps, prevState) {
-    var averageContainer = this.getDOMNode()
-    var selectedCountryElement = averageContainer.querySelector('ul .countryItem.active')
+    var selectedCountryElement;
+    var averageContainer = this.getDOMNode();
+
+    if(averageContainer) {
+      selectedCountryElement = averageContainer.querySelector('ul .countryItem.active')
+    }
 
     if (!_.isUndefined(selectedCountryElement) && !_.isNull(selectedCountryElement)) {
       this.scrollToTop(selectedCountryElement.offsetTop)
@@ -47,18 +41,6 @@ var Average = React.createClass({
 
   handleCountryChange() {
     this.handleStoreChange()
-  },
-
-  onCountryClick(countryName) {
-    this.updateQuery({country: countryName})
-    MapActionCreators.changeSelectedCountry(countryName)
-  },
-
-  onCircleClick(d, i) {
-    var selected_indicator = Store.getSelectedIndicator()
-    var selected_year = this.props.data.global.meta.indicators[selected_indicator].years[i]
-    this.updateQuery({year: selected_year})
-    MapActionCreators.changeSelectedYear(selected_year)
   },
 
   scrollToTop(offsetTop) {
@@ -78,121 +60,29 @@ var Average = React.createClass({
   },
 
   render() {
-    var overall, countryList, countryChartBody
     var global = this.props.data.global
     var configs = this.props.data.configs
+
     var selected_indicator = Store.getSelectedIndicator()
     var selected_year = Store.getSelectedYear()
     var selected_country = Store.getSelectedCountry()
-    var onCircleClick = this.onCircleClick
-    var hideAverage = false
 
-    if (!_.isEmpty(selected_indicator) && !_.isEmpty(global)) {
-      var indicators = global.data.locations
-      var precision = parseInt(configs.indicators[selected_indicator].precision)
-      var format = MapUtils.getFormatFromPrecision(precision)
-
-      // indicator with years
-      if (!_.isEmpty(configs) && configs.indicators[selected_indicator].years.length) {
-        var selectedIndex = _.indexOf(global.meta.indicators[selected_indicator].years, selected_year)
-
-        var displayTemplate = safeTraverse(configs, 'indicators', selected_indicator, 'display')
-        hideAverage = safeTraverse(configs, 'indicators', selected_indicator, 'average')
-
-        // filter country with gpe stuff
-        countryList = Object.keys(indicators)
-        .filter(function(countryName) {
-          return countryName in indicators && (indicators[countryName] && indicators[countryName]['map_of_the_global_partnership_for_education'] != 1)
-        })
-        .map(function(countryName, key) {
-          var hasData, formattedValue, countryData, countryChart
-
-          if (indicators[countryName][selected_indicator]) {
-
-            var dataObject = {}
-            var values = MapUtils.matchContentFromTemplate(displayTemplate)
-            values.forEach((indicatorName) => {
-              indicatorName = indicatorName.trim()
-              var indicatorId = MapUtils.getCountryNameId(indicatorName)
-              var data = safeTraverse(indicators, countryName, indicatorId, 'years', selected_year)
-              dataObject[indicatorName] = numeral(data).format(format)
-            })
-
-            if (displayTemplate) formattedValue = mustache.render(displayTemplate, dataObject)
-            if (formattedValue === 0.00 || formattedValue === '0.00%') formattedValue = 'no data'
-
-            // formattedValue = numeral(indicators[countryName][selected_indicator].years[selected_year]).format(format)
-            countryData = _.map(indicators[countryName][selected_indicator].years, function(value) {
-              return value || 0
-            })
-
-            countryChart = <BarchartEnvelope onCircleClick={onCircleClick} selectedIndex={selectedIndex} data={countryData} width={80} height={20} />
-            countryChartBody = (
-              <div className={(selected_country == countryName ? ' show' : '') + ' detail'}>
-                <Scatterplot data={countryData} selectedIndex={selectedIndex} onCircleClick={onCircleClick} />
-              </div>
-            )
-
-            hasData = true
-          } else {
-            formattedValue = 'No data'
-            countryChartBody = null
-            hasData = false
-          }
-
-          var classes = cx({
-            'countryItem': true,
-            'empty': !hasData,
-            'active': selected_country == countryName
-          })
-
-          return (
-            <li key={key} className={classes}>
-              <header onClick={this.onCountryClick.bind(this, countryName)}>
-                <span className='label'>{global.meta.locations[countryName].label}</span>
-                <span className='value'>{formattedValue}</span>
-                <span className='chart'>
-                  {countryChart}
-                </span>
-              </header>
-              {countryChartBody}
-            </li>
-          )
-        }.bind(this))
-
-      // gpe spefic stuff, donnor/donor...
-      } else {
-        countryList = Object.keys(indicators).map((countryName, key) => {
-          var countryValue = indicators[countryName][selected_indicator]
-          var formattedValue = countryValue ? 'DONOR' : 'DONEE'
-
-          var classes = cx({
-            'countryItem': true,
-            'empty': !countryValue,
-            'active': selected_country == countryName
-          })
-
-          return (
-            <li key={key} className={classes} onClick={this.onCountryClick.bind(this, countryName)}>
-              <header onClick={this.onCountryClick.bind(this, countryName)}>
-                <span className='label'>{global.meta.locations[countryName].label}</span>
-                <span className='value'>{formattedValue}</span>
-              </header>
-            </li>
-          )
-        })
-      }
-
-    }
+    // return null if there's no data ready
+    if(!selected_indicator || !global || !configs) return null
 
     return (
       <section className='drilldown'>
-        { !hideAverage && !_.isEmpty(this.props.data) && selected_indicator &&
+        { !safeTraverse(configs, 'indicators', selected_indicator, 'average') && !_.isEmpty(this.props.data) && selected_indicator &&
           <AverageHeader data={this.props.data} selectedIndicator={selected_indicator} selectedYear={selected_year} />
         }
-        <ul className='list'>
-          {countryList}
-        </ul>
+
+        { selected_indicator === 'map_of_the_global_partnership_for_education' &&
+          <GpeCountryList {...this.props} selectedIndicator={selected_indicator} selectedCountry={selected_country}/>
+        }
+
+        { selected_indicator != 'map_of_the_global_partnership_for_education' &&
+          <CountryList {...this.props} selectedIndicator={selected_indicator} selectedCountry={selected_country} selectedYear={selected_year} />
+        }
       </section>
     )
   }
