@@ -235,7 +235,7 @@ var Map = React.createClass({
         // var countryName = MapUtils.getCountryNameId(layer.feature.properties['ISO_NAME'])
         var countryName = MapUtils.getCountryNameFromMetaByISO(layer.feature.properties['ISO'], meta)
         if(layer._container && meta.locations[countryName].fragile) {
-          layer._container.children[0].style.fill = 'url(#fragilePattern)'
+          layer._container.childNodes[0].style.fill = 'url(#fragilePattern)'
         }
       }, 0)
     }
