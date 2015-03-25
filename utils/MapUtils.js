@@ -212,26 +212,31 @@ var MapUtils = {
       if (selected_indicator === 'map_of_the_global_partnership_for_education') {
         value = safeTraverse(indicators, countryName, selected_indicator) == 1 ? 'GPE Donors' : 'GPE Developing Country Partners'
       // data with years
-      } else if (safeTraverse(configs, 'indicators', selected_indicator, 'years', 'length')) {
-        value = safeTraverse(indicators, countryName, selected_indicator, 'years', selected_year)
+      } else {
+        if (configs.indicators[selected_indicator].type === 'boolean') {
+          value = safeTraverse(indicators, countryName, selected_indicator, 'years', selected_year) ? 'Conducted' : 'Not Conducted'
+        } else if (configs.indicators[selected_indicator].type === 'number') {
+          value = safeTraverse(indicators, countryName, selected_indicator, 'years', selected_year)
 
-        if (!value) {
-          value = 'Data not available'
-        } else {
-          var dataObject = {}
-          var values = MapUtils.matchContentFromTemplate(tooltipTemplate)
-          if (values.length) {
-            values.forEach((indicatorName) => {
-              indicatorName = indicatorName.trim()
-              var indicatorId = MapUtils.getCountryNameId(indicatorName)
-              var data = safeTraverse(indicators, countryName, indicatorId, 'years', selected_year)
-              dataObject[indicatorName] = numeral(data).format(format)
-            })
+          if (!value) {
+            value = 'Data not available'
+          } else {
+            var dataObject = {}
+            var values = MapUtils.matchContentFromTemplate(tooltipTemplate)
+            if (values.length) {
+              values.forEach((indicatorName) => {
+                indicatorName = indicatorName.trim()
+                var indicatorId = MapUtils.getCountryNameId(indicatorName)
+                var data = safeTraverse(indicators, countryName, indicatorId, 'years', selected_year)
+                dataObject[indicatorName] = numeral(data).format(format)
+              })
+            }
+
+            if (tooltipTemplate) value = mustache.render(tooltipTemplate, dataObject)
           }
-
-          if (tooltipTemplate) value = mustache.render(tooltipTemplate, dataObject)
         }
       }
+
     }
 
     popup.setContent('<div class="marker-title">' + layer.feature.properties['ISO_NAME'] + '</div>' + value)

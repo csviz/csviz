@@ -33,7 +33,7 @@ var CountryList = React.createClass({
   },
 
   render() {
-    var countryChartBody;
+    var countryChart, countryChartBody;
     var indicators = this.props.data.global.data.locations;
     var selected_country = this.props.selectedCountry;
     var selected_indicator = this.props.selectedIndicator;
@@ -51,39 +51,48 @@ var CountryList = React.createClass({
         return countryName in indicators && (indicators[countryName] && indicators[countryName]['map_of_the_global_partnership_for_education'] != 1)
       })
       .map((countryName, key) => {
-        var hasData, formattedValue, countryData, countryChart
+        var hasData, formattedValue, countryData, countryChart;
 
-        if (indicators[countryName][selected_indicator]) {
+        // the country does not have that indicator, return no data
+        if (!indicators[countryName][selected_indicator]) {
+          formattedValue = 'No data'
+          countryChartBody = null
+          hasData = false
+        } else {
+          hasData = true
 
-          var dataObject = {}
-          var values = MapUtils.matchContentFromTemplate(displayTemplate)
-          values.forEach((indicatorName) => {
-            indicatorName = indicatorName.trim()
-            var indicatorId = MapUtils.getCountryNameId(indicatorName)
-            var data = safeTraverse(indicators, countryName, indicatorId, 'years', selected_year)
-            dataObject[indicatorName] = numeral(data).format(format)
-          })
+          // if the type is boolean value
+          if (this.props.data.configs.indicators[selected_indicator].type === 'boolean') {
+            countryChart = null
+            formattedValue = indicators[countryName][selected_indicator].years[selected_year] ? 'Conducted' : 'Not Conducted';
+            countryData = _.map(indicators[countryName][selected_indicator].years, (value) => value || false )
+          } else if (this.props.data.configs.indicators[selected_indicator].type === 'number') {
+            var dataObject = {}
+            var values = MapUtils.matchContentFromTemplate(displayTemplate)
+            values.forEach((indicatorName) => {
+              indicatorName = indicatorName.trim()
+              var indicatorId = MapUtils.getCountryNameId(indicatorName)
+              var data = safeTraverse(indicators, countryName, indicatorId, 'years', selected_year)
+              dataObject[indicatorName] = numeral(data).format(format)
+            })
 
-          if (displayTemplate) formattedValue = mustache.render(displayTemplate, dataObject)
-          if (formattedValue === 0.00 || formattedValue === '0.00%') formattedValue = 'no data'
+            if (displayTemplate) formattedValue = mustache.render(displayTemplate, dataObject)
+            if (formattedValue === 0.00 || formattedValue === '0.00%') formattedValue = 'no data'
 
-          // formattedValue = numeral(indicators[countryName][selected_indicator].years[selected_year]).format(format)
-          countryData = _.map(indicators[countryName][selected_indicator].years, function(value) {
-            return value || 0
-          })
+            countryData = _.map(indicators[countryName][selected_indicator].years, (value) => value || 0 )
+            countryChart = (
+              <span className='chart'>
+                <BarchartEnvelope onCircleClick={onCircleClick} selectedIndex={selectedIndex} data={countryData} width={80} height={20} />
+              </span>
+            )
 
-          countryChart = <BarchartEnvelope onCircleClick={onCircleClick} selectedIndex={selectedIndex} data={countryData} width={80} height={20} />
+          }
+
           countryChartBody = (
             <div className={(selected_country == countryName ? ' show' : '') + ' detail'}>
               <Scatterplot data={countryData} selectedIndex={selectedIndex} onCircleClick={onCircleClick} />
             </div>
           )
-
-          hasData = true
-        } else {
-          formattedValue = 'No data'
-          countryChartBody = null
-          hasData = false
         }
 
         var classes = cx({
@@ -97,9 +106,7 @@ var CountryList = React.createClass({
             <header onClick={this.onCountryClick.bind(this, countryName)}>
               <span className='label'>{this.props.data.global.meta.locations[countryName].label}</span>
               <span className='value'>{formattedValue}</span>
-              <span className='chart'>
-                {countryChart}
-              </span>
+              {countryChart}
             </header>
             {countryChartBody}
           </li>

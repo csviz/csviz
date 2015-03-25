@@ -154,6 +154,8 @@ var Scatterplot = React.createClass({
       .append('text')
       .text(function(d, i) {
         if (d === 0) return 'no data'
+        if (d === false) return 'Not Conducted'
+        if (d === true) return 'Conducted'
         return numeral(d).format('0.0a')
       })
       .style('pointer-events', 'none')

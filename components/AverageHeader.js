@@ -25,7 +25,7 @@ var AverageHeader = React.createClass({
   },
 
   render() {
-    var overall;
+    var overall, Chart;
     var configs = this.props.data.configs;
     var global = this.props.data.global;
     var selected_indicator = this.props.selectedIndicator;
@@ -34,13 +34,18 @@ var AverageHeader = React.createClass({
     // Chart
     var selectedIndex = _.indexOf(global.meta.indicators[selected_indicator].years, selected_year);
     var dataSeries = _.map(global.meta.indicators[selected_indicator].avg.years, (value) => value.toFixed(2))
-    var Chart = <BarchartEnvelope onCircleClick={this.onCircleClick} selectedIndex={selectedIndex} data={dataSeries} width={80} height={20}/>
+
+    if (configs.indicators[selected_indicator].type !== 'boolean') {
+      Chart = <BarchartEnvelope onCircleClick={this.onCircleClick} selectedIndex={selectedIndex} data={dataSeries} width={80} height={20}/>
+    }
 
     // Overall
     if (selected_indicator != 'map_of_the_global_partnership_for_education') {
       var precision = parseInt(configs.indicators[selected_indicator].precision)
       var format = MapUtils.getFormatFromPrecision(precision)
-      overall = numeral(global.meta.indicators[selected_indicator].avg.years[selected_year]).format(format)
+      if (configs.indicators[selected_indicator].type != 'boolean') {
+        overall = numeral(global.meta.indicators[selected_indicator].avg.years[selected_year]).format(format)
+      }
     }
 
     return (
