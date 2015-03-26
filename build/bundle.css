@@ -5000,7 +5000,7 @@ textarea {
     #main {
       width: 100%;
       height: 350px;
-      top: 50px;
+      top: 60px;
       z-index: 1; } }
   #main #map {
     background: #4D4D4D;
@@ -5069,7 +5069,8 @@ textarea {
     transition: all 0.3s ease; } }
 .header-container .header {
   background: #EDEDED;
-  padding: 15px 20px; }
+  height: 60px;
+  padding: 5px 20px; }
   @media (max-width: 768px) {
     .header-container .header {
       padding: 15px 10px 20px 20px;
@@ -5077,34 +5078,34 @@ textarea {
   .header-container .header h1 {
     color: rgba(0, 0, 0, 0.9);
     font-size: 17px;
-    line-height: 1;
     margin: 0;
     display: inline-block; }
   .header-container .header span {
     padding-left: 20px; }
   .header-container .header .site-logo {
-    width: 24px;
-    height: 24px;
-    background: #e0e0e0;
-    border-radius: 100%;
-    overflow: hidden;
+    border-radius: 2px;
+    float: left;
+    height: 50px;
     margin-right: 10px;
-    float: left; }
+    overflow: hidden;
+    padding: 5px 5px 5px 0px; }
     .header-container .header .site-logo img {
       float: left;
-      width: 100%; }
+      height: 100%; }
 .header-container .tablet-nav h2, .header-container .tablet-nav ul {
   display: none; }
+.header-container .tablet-nav h1 {
+  line-height: 50px; }
 @media (max-width: 768px) {
   .header-container .tablet-nav {
     position: fixed;
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 50px;
+    height: 60px;
     background: #fff;
-    z-index: 1001;
     min-width: 300px;
+    padding: 5px 20px;
     z-index: 1; }
     .header-container .tablet-nav h1, .header-container .tablet-nav span {
       display: none; }
@@ -5112,19 +5113,19 @@ textarea {
       display: block; }
     .header-container .tablet-nav h2 {
       font-size: 20px;
-      line-height: 100%;
+      line-height: 50px;
       color: #4D4D4D;
       margin: 0px;
       padding: 0px;
       float: left;
-      font-weight: bold;
+      font-size: 15px;
       letter-spacing: 1px; }
     .header-container .tablet-nav ul {
       list-style: none;
       float: right;
       text-align: right;
       height: 40px;
-      margin-top: -10px; }
+      margin-top: 5px; }
       .header-container .tablet-nav ul li {
         display: inline-block; }
         .header-container .tablet-nav ul li a {
@@ -5149,7 +5150,7 @@ textarea {
       box-shadow: none;
       border-radius: 0px;
       float: left;
-      margin-top: 400px;
+      margin-top: 410px;
       position: relative;
       width: 100%; } }
   @media (min-width: 769px) {
@@ -5175,7 +5176,7 @@ textarea {
       overflow-y: auto; } }
   @media (min-width: 769px) {
     .sidebar-panel {
-      padding-top: 96px; }
+      padding-top: 106px; }
       .sidebar-panel .indicator .select {
         position: fixed;
         width: 470px;
@@ -5187,7 +5188,7 @@ textarea {
         -o-transition: all 0.3s ease;
         transition: all 0.3s ease; }
       .sidebar-panel .indicator .select {
-        top: 47px; }
+        top: 60px; }
       .sidebar-panel .drilldown .header.sticky {
         position: fixed;
         top: 96px;
