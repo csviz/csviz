@@ -212,7 +212,7 @@ var MapUtils = {
       } else if (configs.indicators[selected_indicator].type === 'number') {
         value = safeTraverse(indicators, countryName, selected_indicator, 'years', selected_year)
 
-        if (!value) {
+        if (_.isNull(value)) {
           value = 'Data not available'
         } else {
           var dataObject = {}
