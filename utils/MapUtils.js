@@ -114,7 +114,7 @@ var MapUtils = {
     if(customChoropleth) {
       var labels = []
 
-      labels.push('<li class="fragile-container"><span class="swatch fragile"></span>Fragile State</li>')
+      labels.push('<li class="fragile-container"><span class="swatch fragile"></span>Fragile and conflict-affected countries</li>')
 
       // the gpe stuff...
       if (selected_indicator === 'map_of_the_global_partnership_for_education') {
@@ -153,7 +153,7 @@ var MapUtils = {
       var step = ((max - min)/steps).toFixed()
 
       // legend for country with Data not available
-      labels.push('<li class="fragile-container"><span class="swatch fragile"></span>Fragile State</li>')
+      labels.push('<li class="fragile-container"><span class="swatch fragile"></span>Fragile and conflict-affected countries</li>')
       labels.push('<li><span class="swatch" style="background:#eeeeee"></span>Data not available</li>')
 
       for (var i = 0; i < steps; i++) {
