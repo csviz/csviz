@@ -2,25 +2,30 @@
     position: relative;
 }
 .Dropdown-control {
-    position: relative;
-    overflow: hidden;
+    color: #333;
+    cursor: pointer;
     background-color: white;
     border-radius: 0px;
     box-sizing: border-box;
-    color: #333;
-    outline: none;
     border-bottom: 1px solid #EDEDED;
+    display: table;
+    position: relative;
+    overflow: hidden; 
+    outline: none; 
     height:auto;
     min-height: 48px;
     line-height: 20px;
-    cursor: pointer;
-    padding: 14px 52px 14px 20px;
+    padding: 4px 35px 4px 20px;
     transition: all 200ms ease;
-    // &:hover {
-    //     background: #f4f4f4;
-    // }
+    width: 100%;
+    &:hover {
+        background-color: rgb(249,249,249);;
+    }
     .placeholder{
+        display: table-cell;
+        vertical-align: middle;
         font-size: 15px;
+        line-height: 16px;
         // color:#b7b7b7;
         transition: all 200ms ease;
         &:hover{
@@ -38,7 +43,7 @@
     height: 0;
     margin-top: -2.5px;
     position: absolute;
-    right: 26px;
+    right: 20px;
     top: 50%;
     width: 0
 }
@@ -47,6 +52,7 @@
     border-width: 0 5px 5px;
 }
 .Dropdown-menu {
+    border-top: 1px solid #EDEDED;
     background-color: white;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
     box-sizing: border-box;
