@@ -5197,6 +5197,7 @@ textarea {
         width: 470px;
         border-bottom: 1px solid #E5E5E5; } }
   .sidebar-panel .indicator .description {
+    line-height: 16px;
     margin: 0px;
     color: #aaa;
     background: #fff;
@@ -5268,7 +5269,7 @@ textarea {
   .links .mui-paper-button {
     box-shadow: none;
     text-align: center;
-    width: 200px;
+    width: 206px;
     height: 40px;
     line-height: 40px; }
     @media (max-width: 768px) {

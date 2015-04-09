@@ -476,6 +476,7 @@ textarea {
       //margin-top: $gutter*2.5
     }
     .description {
+      line-height: 16px;
       margin: 0px;
       color: #aaa;
       background: #fff;
@@ -566,7 +567,7 @@ textarea {
   .mui-paper-button {
     box-shadow: none;
     text-align: center;
-    width: ($sidebar - 3*$gutter - 10)/2;
+    width: ($sidebar - 3*$gutter - 10)/2 + 6px;
     height: $gutter*2;
     line-height: $gutter*2;
     @include tablet {
