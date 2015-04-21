@@ -346,7 +346,7 @@ textarea {
     .site-logo {
       border-radius: 2px;
       float: left;
-      height: 50px;   
+      height: 50px;
       margin-right: $gutter/2;
       max-width: 150px;
       overflow: hidden;
@@ -448,6 +448,8 @@ textarea {
   box-shadow: -2px 0 1px rgba(0, 0, 0, 0.08); // Need to make it x-compatible
   float: right;
   @include desktop {
+    height: 100%;
+    overflow-y: auto;
     padding-top: 106px;
     .indicator .select {
       position: fixed;

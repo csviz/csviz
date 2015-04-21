@@ -114,7 +114,7 @@ var CountryList = React.createClass({
       });
 
     return (
-      <ul className='list'>
+      <ul className='list scroller'>
         { countryList }
       </ul>
     );

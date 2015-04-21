@@ -44,15 +44,15 @@ var Average = React.createClass({
   },
 
   scrollToTop(offsetTop) {
-    var sidebarPanel = document.querySelector('.sidebar-panel')
-    var toState = offsetTop - 100
+    var drilldown = document.querySelector('.sidebar-panel')
+    var toState = offsetTop - 106
     // need to include the scatterplot height
-    var fromState = sidebarPanel.scrollTop
+    var fromState = drilldown.scrollTop
 
     var animation = new AdditiveAnimation({
       enabledRAF: true,
       onRender: function(state) {
-        sidebarPanel.scrollTop = state.scrollTop
+        drilldown.scrollTop = state.scrollTop
       }
     })
 
