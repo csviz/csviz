@@ -5,6 +5,7 @@ var React = require('react')
 var numeral = require('numeral')
 var Router = require('react-router')
 
+var safeTraverse = require('../utils/safeTraverse')
 var BarchartEnvelope = require('./BarchartEnvelope')
 var MapActionCreators = require('../actions/MapActionCreators')
 var queryMixin = require('../mixins/queryMixin')
@@ -44,7 +45,12 @@ var AverageHeader = React.createClass({
       var precision = parseInt(configs.indicators[selected_indicator].precision)
       var format = MapUtils.getFormatFromPrecision(precision)
       if (configs.indicators[selected_indicator].type != 'boolean') {
-        overall = numeral(global.meta.indicators[selected_indicator].avg.years[selected_year]).format(format)
+        var tail = ''
+        var displayTemplate = safeTraverse(this.props.data.configs, 'indicators', selected_indicator, 'display');
+        if (displayTemplate) {
+          tail = displayTemplate.substr(displayTemplate.lastIndexOf('}') + 1)
+        }
+        overall = numeral(global.meta.indicators[selected_indicator].avg.years[selected_year]).format(format) + tail
       }
     }
 
