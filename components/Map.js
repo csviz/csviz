@@ -45,7 +45,7 @@ var Map = React.createClass({
     L.mapbox.accessToken = mapbox_config.token
 
     var map = L.mapbox.map('map', mapbox_config.type, {
-      maxZoom: 4,
+      maxZoom: 6,
       trackResize: true
     }).setView(mapbox_config.location, mapbox_config.zoomlevel)
 

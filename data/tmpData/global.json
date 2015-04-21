@@ -1,4 +1,3 @@
-
 {
   "data": {
     "locations": {
@@ -170,10 +169,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": true,
-            "2012": false,
-            "2013": true
+            "2010": null,
+            "2011": 1,
+            "2012": null,
+            "2013": 1
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -525,10 +524,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": false,
-            "2012": false,
-            "2013": false
+            "2010": null,
+            "2011": null,
+            "2012": null,
+            "2013": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -932,10 +931,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": true,
-            "2011": false,
-            "2012": false,
-            "2013": true
+            "2010": 1,
+            "2011": null,
+            "2012": null,
+            "2013": 1
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -1287,10 +1286,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": true,
-            "2012": true,
-            "2013": false
+            "2010": null,
+            "2011": 1,
+            "2012": 1,
+            "2013": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -1688,10 +1687,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": true,
-            "2011": true,
-            "2012": true,
-            "2013": true
+            "2010": 1,
+            "2011": 1,
+            "2012": 1,
+            "2013": 1
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -2089,10 +2088,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": true,
-            "2012": false,
-            "2013": true
+            "2010": null,
+            "2011": 1,
+            "2012": null,
+            "2013": 1
           }
         },
         "learning_math_lowest_boys__pasec": {
@@ -2505,10 +2504,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": true,
-            "2011": true,
-            "2012": true,
-            "2013": true
+            "2010": 1,
+            "2011": 1,
+            "2012": 1,
+            "2013": 1
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -2906,10 +2905,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": true,
-            "2011": true,
-            "2012": false,
-            "2013": false
+            "2010": 1,
+            "2011": 1,
+            "2012": null,
+            "2013": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -3310,10 +3309,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": false,
-            "2012": true,
-            "2013": false
+            "2010": null,
+            "2011": null,
+            "2012": 1,
+            "2013": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -3711,10 +3710,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": false,
-            "2012": false,
-            "2013": false
+            "2010": null,
+            "2011": null,
+            "2012": null,
+            "2013": null
           }
         },
         "learning_math_lowest_boys__pasec": {
@@ -4127,10 +4126,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": false,
-            "2012": false,
-            "2013": false
+            "2010": null,
+            "2011": null,
+            "2012": null,
+            "2013": null
           }
         },
         "learning_math_lowest_boys__pasec": {
@@ -4543,10 +4542,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": false,
-            "2012": false,
-            "2013": false
+            "2010": null,
+            "2011": null,
+            "2012": null,
+            "2013": null
           }
         },
         "learning_math_lowest_boys__pasec": {
@@ -4959,10 +4958,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": false,
-            "2012": false,
-            "2013": false
+            "2010": null,
+            "2011": null,
+            "2012": null,
+            "2013": null
           }
         },
         "learning_math_lowest_boys__pasec": {
@@ -5378,10 +5377,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": false,
-            "2012": false,
-            "2013": false
+            "2010": null,
+            "2011": null,
+            "2012": null,
+            "2013": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -5779,10 +5778,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": false,
-            "2012": false,
-            "2013": false
+            "2010": null,
+            "2011": null,
+            "2012": null,
+            "2013": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -6180,10 +6179,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": false,
-            "2012": true,
-            "2013": true
+            "2010": null,
+            "2011": null,
+            "2012": 1,
+            "2013": 1
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -6584,10 +6583,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": true,
-            "2012": false,
-            "2013": false
+            "2010": null,
+            "2011": 1,
+            "2012": null,
+            "2013": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -6939,10 +6938,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": false,
-            "2012": false,
-            "2013": false
+            "2010": null,
+            "2011": null,
+            "2012": null,
+            "2013": null
           }
         },
         "learning_math_lowest_boys__tims": {
@@ -7358,10 +7357,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": true,
-            "2011": true,
-            "2012": true,
-            "2013": true
+            "2010": 1,
+            "2011": 1,
+            "2012": 1,
+            "2013": 1
           }
         },
         "learning_math_lowest_boys__tims": {
@@ -7774,10 +7773,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": true,
-            "2012": false,
-            "2013": false
+            "2010": null,
+            "2011": 1,
+            "2012": null,
+            "2013": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -8175,10 +8174,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": false,
-            "2012": false,
-            "2013": false
+            "2010": null,
+            "2011": null,
+            "2012": null,
+            "2013": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -8576,10 +8575,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": false,
-            "2012": false,
-            "2013": false
+            "2010": null,
+            "2011": null,
+            "2012": null,
+            "2013": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -8977,10 +8976,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": false,
-            "2012": false,
-            "2013": false
+            "2010": null,
+            "2011": null,
+            "2012": null,
+            "2013": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -9332,10 +9331,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": false,
-            "2012": false,
-            "2013": true
+            "2010": null,
+            "2011": null,
+            "2012": null,
+            "2013": 1
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -9742,10 +9741,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": false,
-            "2012": false,
-            "2013": false
+            "2010": null,
+            "2011": null,
+            "2012": null,
+            "2013": null
           }
         },
         "learning_math_lowest_boys__sacmeq": {
@@ -10158,10 +10157,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": true,
-            "2012": false,
-            "2013": false
+            "2010": null,
+            "2011": 1,
+            "2012": null,
+            "2013": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -10559,10 +10558,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": true,
-            "2012": true,
-            "2013": false
+            "2010": null,
+            "2011": 1,
+            "2012": 1,
+            "2013": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -10960,10 +10959,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": true,
-            "2012": false,
-            "2013": false
+            "2010": null,
+            "2011": 1,
+            "2012": null,
+            "2013": null
           }
         },
         "learning_math_lowest_boys__sacmeq": {
@@ -11376,10 +11375,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": false,
-            "2012": true,
-            "2013": true
+            "2010": null,
+            "2011": null,
+            "2012": 1,
+            "2013": 1
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -11780,10 +11779,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": true,
-            "2012": false,
-            "2013": false
+            "2010": null,
+            "2011": 1,
+            "2012": null,
+            "2013": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -12181,10 +12180,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": true,
-            "2011": false,
-            "2012": true,
-            "2013": true
+            "2010": 1,
+            "2011": null,
+            "2012": 1,
+            "2013": 1
           }
         },
         "learning_math_lowest_boys__sacmeq": {
@@ -12597,10 +12596,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": true,
-            "2011": false,
-            "2012": false,
-            "2013": false
+            "2010": 1,
+            "2011": null,
+            "2012": null,
+            "2013": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -12998,10 +12997,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": false,
-            "2012": true,
-            "2013": false
+            "2010": null,
+            "2011": null,
+            "2012": 1,
+            "2013": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -13399,10 +13398,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": true,
-            "2012": false,
-            "2013": false
+            "2010": null,
+            "2011": 1,
+            "2012": null,
+            "2013": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -13800,10 +13799,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": false,
-            "2012": false,
-            "2013": false
+            "2010": null,
+            "2011": null,
+            "2012": null,
+            "2013": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -14201,10 +14200,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": true,
-            "2012": true,
-            "2013": false
+            "2010": null,
+            "2011": 1,
+            "2012": 1,
+            "2013": null
           }
         },
         "learning_math_lowest_boys__sacmeq": {
@@ -14617,10 +14616,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": true,
-            "2011": true,
-            "2012": false,
-            "2013": true
+            "2010": 1,
+            "2011": 1,
+            "2012": null,
+            "2013": 1
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -15021,10 +15020,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": false,
-            "2012": true,
-            "2013": false
+            "2010": null,
+            "2011": null,
+            "2012": 1,
+            "2013": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -15422,10 +15421,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": true,
-            "2011": false,
-            "2012": true,
-            "2013": false
+            "2010": 1,
+            "2011": null,
+            "2012": 1,
+            "2013": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -15777,10 +15776,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": false,
-            "2012": false,
-            "2013": false
+            "2010": null,
+            "2011": null,
+            "2012": null,
+            "2013": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -16135,10 +16134,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": true,
-            "2011": false,
-            "2012": false,
-            "2013": false
+            "2010": 1,
+            "2011": null,
+            "2012": null,
+            "2013": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -16536,10 +16535,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": false,
-            "2012": false,
-            "2013": false
+            "2010": null,
+            "2011": null,
+            "2012": null,
+            "2013": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -16943,10 +16942,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": true,
-            "2011": false,
-            "2012": false,
-            "2013": true
+            "2010": 1,
+            "2011": null,
+            "2012": null,
+            "2013": 1
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -17344,10 +17343,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": false,
-            "2012": false,
-            "2013": false
+            "2010": null,
+            "2011": null,
+            "2012": null,
+            "2013": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -17745,10 +17744,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": true,
-            "2011": false,
-            "2012": true,
-            "2013": false
+            "2010": 1,
+            "2011": null,
+            "2012": 1,
+            "2013": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -18146,10 +18145,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": true,
-            "2011": true,
-            "2012": true,
-            "2013": false
+            "2010": 1,
+            "2011": 1,
+            "2012": 1,
+            "2013": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -18547,10 +18546,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": false,
-            "2012": false,
-            "2013": false
+            "2010": null,
+            "2011": null,
+            "2012": null,
+            "2013": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -18948,10 +18947,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": false,
-            "2012": false,
-            "2013": false
+            "2010": null,
+            "2011": null,
+            "2012": null,
+            "2013": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -19352,10 +19351,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": false,
-            "2012": false,
-            "2013": false
+            "2010": null,
+            "2011": null,
+            "2012": null,
+            "2013": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -19759,10 +19758,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": false,
-            "2012": false,
-            "2013": false
+            "2010": null,
+            "2011": null,
+            "2012": null,
+            "2013": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -20160,10 +20159,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": false,
-            "2012": false,
-            "2013": false
+            "2010": null,
+            "2011": null,
+            "2012": null,
+            "2013": null
           }
         },
         "learning_math_lowest_boys__sacmeq": {
@@ -20558,10 +20557,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": true,
-            "2011": false,
-            "2012": false,
-            "2013": false
+            "2010": 1,
+            "2011": null,
+            "2012": null,
+            "2013": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -20959,10 +20958,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": true,
-            "2012": true,
-            "2013": true
+            "2010": null,
+            "2011": 1,
+            "2012": 1,
+            "2013": 1
           }
         },
         "learning_math_lowest_boys__pasec": {
@@ -21375,10 +21374,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": false,
-            "2012": true,
-            "2013": true
+            "2010": null,
+            "2011": null,
+            "2012": 1,
+            "2013": 1
           }
         },
         "learning_math_lowest_boys__sacmeq": {
@@ -21771,10 +21770,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": false,
-            "2012": false,
-            "2013": false
+            "2010": null,
+            "2011": null,
+            "2012": null,
+            "2013": null
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -22172,10 +22171,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": false,
-            "2012": false,
-            "2013": true
+            "2010": null,
+            "2011": null,
+            "2012": null,
+            "2013": 1
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -22573,10 +22572,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": false,
-            "2012": false,
-            "2013": true
+            "2010": null,
+            "2011": null,
+            "2012": null,
+            "2013": 1
           }
         },
         "lower_secondary_completion_rate_female": {
@@ -22974,10 +22973,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": true,
-            "2011": false,
-            "2012": true,
-            "2013": true
+            "2010": 1,
+            "2011": null,
+            "2012": 1,
+            "2013": 1
           }
         },
         "learning_math_lowest_boys__sacmeq": {
@@ -23390,10 +23389,10 @@
         },
         "jsrs_conducted": {
           "years": {
-            "2010": false,
-            "2011": false,
-            "2012": false,
-            "2013": false
+            "2010": null,
+            "2011": null,
+            "2012": null,
+            "2013": null
           }
         },
         "learning_math_lowest_boys__sacmeq": {
@@ -24029,14 +24028,14 @@
       "jsrs_conducted": {
         "avg": {
           "years": {
-            "2010": 0.2459016393442623,
-            "2011": 0.29508196721311475,
-            "2012": 0.29508196721311475,
-            "2013": 0.2786885245901639
+            "2010": 1.875,
+            "2011": 1.894736842105263,
+            "2012": 1.894736842105263,
+            "2013": 1.8888888888888888
           }
         },
-        "max_value": true,
-        "min_value": false,
+        "max_value": 18,
+        "min_value": 1,
         "source_file": "JSRs conducted-reformatted.csv",
         "years": [
           "2010",
@@ -24791,7 +24790,7 @@
         "label": "Congo DRC"
       },
       "cte_divoire": {
-        "ISO": "NF-",
+        "ISO": "CIV",
         "donor": false,
         "fragile": false,
         "label": "C\u00f4te d'Ivoire"
@@ -24827,7 +24826,7 @@
         "label": "France"
       },
       "gambia_the": {
-        "ISO": "NF-",
+        "ISO": "GMB",
         "donor": false,
         "fragile": false,
         "label": "Gambia, The"
@@ -24905,13 +24904,13 @@
         "label": "Kenya"
       },
       "kyrgyz_republic": {
-        "ISO": "NF-",
+        "ISO": "KGZ",
         "donor": false,
         "fragile": false,
         "label": "Kyrgyz Republic"
       },
       "lao_pdr": {
-        "ISO": "NF-",
+        "ISO": "LAO",
         "donor": false,
         "fragile": false,
         "label": "Lao PDR"
@@ -25133,7 +25132,7 @@
         "label": "United Kingdom"
       },
       "united_republic_of_tanzania": {
-        "ISO": "NF-",
+        "ISO": "TZA",
         "fragile": false,
         "label": "United Republic of Tanzania"
       },
