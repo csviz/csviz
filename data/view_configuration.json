@@ -1,0 +1,1989 @@
+
+{
+  "indicators": {
+    "_of_missing_data_domestic_financing": {
+      "choropleth": [
+        {
+          "color": "#42c6da",
+          "label": "equal to 0",
+          "range": [
+            0,
+            0
+          ]
+        },
+        {
+          "color": "#3cb9ec",
+          "label": "between 0 and 50",
+          "range": [
+            0,
+            50
+          ]
+        },
+        {
+          "color": "#42a5f5",
+          "label": "between 50 and 100",
+          "range": [
+            50,
+            100
+          ]
+        },
+        {
+          "color": "#4a80df",
+          "label": "equal to 100",
+          "range": [
+            100,
+            100
+          ]
+        }
+      ],
+      "description": "Percentage of missing data among the following indicators: Public expenditure on education as % of GDP, Public expenditure on education as % of total government expenditure and Educational expenditure in primary as % of total educational expenditure.",
+      "display": "{{ % of missing data, domestic financing (%) }}%",
+      "max": 100,
+      "min": 0,
+      "name": "% of missing data, domestic financing (%)",
+      "precision": 2,
+      "source_file": "% of missing data, domestic financing (%).csv",
+      "tooltip": "{{ % of missing data, domestic financing (%) }}%",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011"
+      ]
+    },
+    "_of_missing_data_outcome_indicators": {
+      "choropleth": [
+        {
+          "color": "#42c6da",
+          "label": "equal to 0",
+          "range": [
+            0,
+            0
+          ]
+        },
+        {
+          "color": "#3cb9ec",
+          "label": "between 0 and 50",
+          "range": [
+            0,
+            50
+          ]
+        },
+        {
+          "color": "#42a5f5",
+          "label": "between 50 and 100",
+          "range": [
+            50,
+            100
+          ]
+        },
+        {
+          "color": "#4a80df",
+          "label": "equal to 100",
+          "range": [
+            100,
+            100
+          ]
+        }
+      ],
+      "description": "Percentage of missing data among the following indicators: Gross Enrollment Rate in Preprimary, Primary Gross Intake Rate, Primary Gross Enrollment Ratio, Primary Completion Rate and Lower Secondary Completion Rate.",
+      "display": "{{ % of missing data outcome indicators (%) }}%",
+      "max": 100,
+      "min": 0,
+      "name": "% of missing data outcome indicators (%)",
+      "precision": 2,
+      "source_file": "% of missing data outcome indicators (%).csv",
+      "tooltip": "{{ % of missing data outcome indicators (%) }}%",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011"
+      ]
+    },
+    "_of_missing_data_service_delivery": {
+      "choropleth": [
+        {
+          "color": "#42c6da",
+          "label": "equal to 0",
+          "range": [
+            0,
+            0
+          ]
+        },
+        {
+          "color": "#3cb9ec",
+          "label": "between 0 and 50",
+          "range": [
+            0,
+            50
+          ]
+        },
+        {
+          "color": "#42a5f5",
+          "label": "between 50 and 100",
+          "range": [
+            50,
+            100
+          ]
+        },
+        {
+          "color": "#4a80df",
+          "label": "equal to 100",
+          "range": [
+            100,
+            100
+          ]
+        }
+      ],
+      "description": "Percentage of missing data among the following indicators: % of teacher trained (in primary and lower secondary) and Pupil Teacher Ratio (in primary and lower secondary).",
+      "display": "{{ % of missing data, service delivery (%) }}%",
+      "max": 100,
+      "min": 0,
+      "name": "% of missing data, service delivery (%)",
+      "precision": 2,
+      "source_file": "% of missing data, service delivery (%).csv",
+      "tooltip": "{{ % of missing data, service delivery (%) }}%",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011"
+      ]
+    },
+    "aid_committed_for_basic_education_as__of_gdp": {
+      "choropleth": [
+        {
+          "color": "#f9a51a",
+          "label": "< 0.25",
+          "range": [
+            0.0050650546,
+            0.25
+          ]
+        },
+        {
+          "color": "#F47C30",
+          "label": "0.25 - 0.5",
+          "range": [
+            0.25,
+            0.5
+          ]
+        },
+        {
+          "color": "#EF4854",
+          "label": "\u2265 0.5",
+          "range": [
+            0.5,
+            5.5142581239
+          ]
+        }
+      ],
+      "description": "Sum of the Official Development Assistance committed to the support of activities in the basic education sector of development partner countries, as reported by donors and expressed as a percentage of Gross Domestic Product. Basic education aid includes flows directed to: primary education, basic life skills for youth and adults and early childhood education. ",
+      "display": "{{ AID committed for Basic Education as % of GDP }}%",
+      "max": 5.5142581239,
+      "min": 0.0050650546,
+      "name": "AID committed for Basic Education as % of GDP",
+      "precision": 2,
+      "source_file": "AID committed for Basic Education - All.csv",
+      "tooltip": "{{ AID committed for Basic Education as % of GDP }}% ${{ AID committed for Basic Education- Current prices (USD millions) }}M",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012"
+      ]
+    },
+    "aid_committed_for_basic_education_current_prices": {
+      "description": "Sum of the Official Development Assistance committed to the support of activities in the basic education sector of development partner countries, as reported by donors and expressed as a percentage of Gross Domestic Product. Basic education aid includes flows directed to: primary education, basic life skills for youth and adults and early childhood education.",
+      "display": "{{ AID committed for Basic Education- Current prices (USD millions) }}%",
+      "max": 3351.4551185,
+      "min": 0,
+      "name": "AID committed for Basic Education- Current prices (USD millions)",
+      "precision": 2,
+      "source_file": "AID committed for Basic Education - All.csv",
+      "tooltip": "${{ AID committed for Basic Education- Current prices (USD millions) }}M {{ AID committed for Basic Education as % of GDP }}%",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012"
+      ]
+    },
+    "aid_committed_for_total_education_as__of_gdp": {
+      "choropleth": [
+        {
+          "color": "#f9a51a",
+          "label": "< 0.5",
+          "range": [
+            0.0166566171,
+            0.5
+          ]
+        },
+        {
+          "color": "#F47C30",
+          "label": "0.5 - 1",
+          "range": [
+            0.5,
+            1
+          ]
+        },
+        {
+          "color": "#EF4854",
+          "label": "\u2265 1",
+          "range": [
+            1,
+            8.7699208259
+          ]
+        }
+      ],
+      "description": "Sum of the Official Development Assistance committed to the support of activities in the education sector of development partner countries (all levels included), as reported by donors and expressed as a percentage of Gross Domestic Product. Education aid includes flows directed to: Basic education, secondary education, higher education and level unspecified (education policy and administrative management, education facilities and training, teacher training or educational research).",
+      "display": "{{ AID committed for total Education as % of GDP }}% ${{ AID committed for total Education- Current prices (USD millions) }}M",
+      "max": 8.7699208259,
+      "min": 0.0166566171,
+      "name": "AID committed for total Education as % of GDP",
+      "precision": 2,
+      "source_file": "AID committed for total Education - All.csv",
+      "tooltip": "{{ AID committed for total Education as % of GDP }}% ${{ AID committed for total Education- Current prices (USD millions) }}M",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012"
+      ]
+    },
+    "aid_committed_for_total_education_current_prices": {
+      "description": "Total Official Development Assistance disbursed to support activities in the education sector of development partner countries (all levels included), as reported by donors and expressed as a percentage of Gross Domestic Product. Education aid includes flows directed to: Basic education, secondary education, higher education and level unspecified (education policy and administrative management, education facilities and training, teacher training or educational research).",
+      "display": "{{ AID committed for total Education- Current prices (USD millions) }}%",
+      "max": 7238.233475,
+      "min": 0,
+      "name": "AID committed for total Education- Current prices (USD millions)",
+      "precision": 2,
+      "source_file": "AID committed for total Education - All.csv",
+      "tooltip": "${{ AID committed for total Education- Current prices (USD millions) }}M {{ AID committed for total Education as % of GDP }}%",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012"
+      ]
+    },
+    "aid_disbursed_for_basic_education_as__of_gdp": {
+      "choropleth": [
+        {
+          "color": "#f9a51a",
+          "label": "< 0.25",
+          "range": [
+            0.0101036427,
+            0.25
+          ]
+        },
+        {
+          "color": "#F47C30",
+          "label": "0.25 - 0.5",
+          "range": [
+            0.25,
+            0.5
+          ]
+        },
+        {
+          "color": "#EF4854",
+          "label": "\u2265 0.5",
+          "range": [
+            0.5,
+            4.3793614183
+          ]
+        }
+      ],
+      "description": "Sum of the Official Development Assistance disbursed to support activities in the basic education sector of development partner countries, as reported by donors and expressed as a percentage of Gross Domestic Product. Basic education aid includes flows directed to: primary education, basic life skills for youth and adults and early childhood education.",
+      "display": "{{ AID disbursed for Basic Education as % of GDP }}%",
+      "max": 4.3793614183,
+      "min": 0.0101036427,
+      "name": "AID disbursed for Basic Education as % of GDP",
+      "precision": 2,
+      "source_file": "AID disbursed for Basic Education - All.csv",
+      "tooltip": "{{ AID disbursed for Basic Education as % of GDP }}% ${{ AID committed for Basic Education- Current prices (USD millions) }}M",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012"
+      ]
+    },
+    "aid_disbursed_for_basic_education_current_prices": {
+      "description": "Sum of the Official Development Assistance disbursed to support activities in the basic education sector of development partner countries, as reported by donors and expressed as a percentage of Gross Domestic Product. Basic education aid includes flows directed to: primary education, basic life skills for youth and adults and early childhood education.",
+      "display": "{{ AID disbursed for Basic Education- Current prices (USD millions) }}%",
+      "max": 2876.6044549,
+      "min": 0,
+      "name": "AID disbursed for Basic Education- Current prices (USD millions)",
+      "precision": 2,
+      "source_file": "AID disbursed for Basic Education - All.csv",
+      "tooltip": "${{ AID committed for Basic Education- Current prices (USD millions) }}M {{ AID disbursed for Basic Education as % of GDP }}%",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012"
+      ]
+    },
+    "aid_disbursed_for_total_education_as__of_gdp": {
+      "choropleth": [
+        {
+          "color": "#f9a51a",
+          "label": "< 0.5",
+          "range": [
+            0.0400280655,
+            0.5
+          ]
+        },
+        {
+          "color": "#F47C30",
+          "label": "0.5 - 1",
+          "range": [
+            0.5,
+            1
+          ]
+        },
+        {
+          "color": "#EF4854",
+          "label": "\u2265 1",
+          "range": [
+            1,
+            7.6547928546
+          ]
+        }
+      ],
+      "description": "Total Official Development Assistance disbursed to support activities in the education sector of development partner countries (all levels included), as reported by donors and expressed as a percentage of Gross Domestic Product. Education aid includes flows directed to: Basic education, secondary education, higher education and level unspecified (education policy and administrative management, education facilities and training, teacher training or educational research).",
+      "display": "{{ AID disbursed for total Education as % of GDP }}%",
+      "max": 7.6547928546,
+      "min": 0.0400280655,
+      "name": "AID disbursed for total Education as % of GDP",
+      "precision": 2,
+      "source_file": "AID disbursed for total Education - All.csv",
+      "tooltip": "{{ AID disbursed for total Education as % of GDP }}% ${{ AID committed for total Education- Current prices (USD millions) }}M",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012"
+      ]
+    },
+    "aid_disbursed_for_total_education_current_prices": {
+      "description": "Total Official Development Assistance disbursed to support activities in the education sector of development partner countries (all levels included), as reported by donors and expressed as a percentage of Gross Domestic Product. Education aid includes flows directed to: Basic education, secondary education, higher education and level unspecified (education policy and administrative management, education facilities and training, teacher training or educational research).",
+      "display": "{{ AID disbursed for total Education- Current prices (USD millions) }}%",
+      "max": 5794.8439178,
+      "min": 0,
+      "name": "AID disbursed for total Education- Current prices (USD millions)",
+      "precision": 2,
+      "source_file": "AID disbursed for total Education - All.csv",
+      "tooltip": "${{ AID committed for total Education- Current prices (USD millions) }}M {{ AID disbursed for total Education as % of GDP }}%",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012"
+      ]
+    },
+    "educational_expenditure_in_primary_as__of_total_educational_expenditure": {
+      "choropleth": [
+        {
+          "color": "#f9a51a",
+          "label": "< 40",
+          "range": [
+            17.35672,
+            40
+          ]
+        },
+        {
+          "color": "#F47C30",
+          "label": "40 - 45",
+          "range": [
+            40,
+            45
+          ]
+        },
+        {
+          "color": "#EF4854",
+          "label": "\u2265 45",
+          "range": [
+            45,
+            69.34212
+          ]
+        }
+      ],
+      "description": "Share of total public expenditure on education allocated to primary education.",
+      "display": "{{ Educational expenditure in primary as % of total educational expenditure }}%",
+      "max": 69.34212,
+      "min": 17.35672,
+      "name": "Educational expenditure in primary as % of total educational expenditure",
+      "precision": 2,
+      "source_file": "Educational expenditure in primary as % of total educational expenditure.csv",
+      "tooltip": "{{ Educational expenditure in primary as % of total educational expenditure }}%",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012"
+      ]
+    },
+    "equivalent_children_supported_in_basic_education": {
+      "description": "Number of \u201cequivalent student supported\u201d by GPE funding in primary and lower secondary education per annum.",
+      "display": "{{ Equivalent Children Supported in basic education }}%",
+      "max": 4987777.27528943,
+      "min": 0,
+      "name": "Equivalent Children Supported in basic education",
+      "precision": 2,
+      "source_file": "Equivalent Children Supported in basic education.csv",
+      "tooltip": "{{ Equivalent Children Supported in basic education }}%",
+      "type": "number",
+      "years": [
+        "2012",
+        "2013"
+      ]
+    },
+    "gpe_annual_funding_approvals": {
+      "description": "GPE Annual Funding Approvals",
+      "display": "{{ GPE Annual Funding Approvals }}%",
+      "max": 121000000,
+      "min": 153.282,
+      "name": "GPE Annual Funding Approvals",
+      "precision": 2,
+      "source_file": "GPE Annual Funding Approvals.csv",
+      "tooltip": "{{ GPE Annual Funding Approvals }}%",
+      "type": "number",
+      "years": [
+        "2003-2006",
+        "2007",
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012",
+        "2013"
+      ]
+    },
+    "gpe_annual_funding_disbursements": {
+      "description": "GPE Annual Funding Disbursements",
+      "display": "{{ GPE Annual Funding Disbursements }}%",
+      "max": 83630507.49,
+      "min": 0,
+      "name": "GPE Annual Funding Disbursements",
+      "precision": 2,
+      "source_file": "GPE Annual Funding Disbursements.csv",
+      "tooltip": "{{ GPE Annual Funding Disbursements }}%",
+      "type": "number",
+      "years": [
+        "2004",
+        "2005",
+        "2006",
+        "2007",
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012",
+        "2013"
+      ]
+    },
+    "gpe_funding_approval_as__of_gdp": {
+      "choropleth": [
+        {
+          "color": "#f9a51a",
+          "label": "< 0.25",
+          "range": [
+            0.0483008453,
+            0.25
+          ]
+        },
+        {
+          "color": "#F47C30",
+          "label": "0.25 - 0.5",
+          "range": [
+            0.25,
+            0.5
+          ]
+        },
+        {
+          "color": "#EF4854",
+          "label": "\u2265 0.5",
+          "range": [
+            0.5,
+            3.1007751938
+          ]
+        }
+      ],
+      "description": "Amount of Global Partnership for Education funding approved per year expressed as a percentage of Grosss Domestic Product. It only includes Program Implementation Grants. These grants provide funding for three-year programs that support the implementation of an Education Sector Plan, and represent the majority of GPE funding.",
+      "display": "{{ GPE Funding Approval as % of GDP }}%",
+      "max": 3.1007751938,
+      "min": 0.0483008453,
+      "name": "GPE Funding Approval as % of GDP",
+      "precision": 2,
+      "source_file": "GPE Funding Approval as % of GDP.csv",
+      "tooltip": "{{ GPE Funding Approval as % of GDP }}%",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012",
+        "2013"
+      ]
+    },
+    "gpe_funding_disbursement__as__of_gdp": {
+      "choropleth": [
+        {
+          "color": "#f9a51a",
+          "label": "< 0.1",
+          "range": [
+            0.0020939697,
+            0.1
+          ]
+        },
+        {
+          "color": "#F47C30",
+          "label": "0.1 - 0.25",
+          "range": [
+            0.1,
+            0.25
+          ]
+        },
+        {
+          "color": "#EF4854",
+          "label": "\u2265 0.25",
+          "range": [
+            0.25,
+            1.2372476666
+          ]
+        }
+      ],
+      "description": "Amount of Global Partnership for Education funding disbursed per year. It only includes Program Implementation Grants expressed as a percentage of Grosss Domestic Product. These grants provide funding for three-year programs that support the implementation of an Education Sector Plan, and represent the majority of GPE funding.",
+      "display": "{{ GPE Funding Disbursement  as % of GDP }}%",
+      "max": 1.2372476666,
+      "min": 0.0020939697,
+      "name": "GPE Funding Disbursement  as % of GDP",
+      "precision": 2,
+      "source_file": "GPE Funding Disbursement  as % of GDP.csv",
+      "tooltip": "{{ GPE Funding Disbursement  as % of GDP }}%",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012",
+        "2013"
+      ]
+    },
+    "jsr_report_available": {
+      "choropleth": [
+        {
+          "color": "#D1D1D2",
+          "label": "JSR report not available",
+          "range": [
+            0,
+            0
+          ]
+        },
+        {
+          "color": "#F9A51A",
+          "label": "JSR report available",
+          "range": [
+            1,
+            1
+          ]
+        }
+      ],
+      "description": "This indicator monitors whether a JSR report was made available to the GPE Secretariat. An aide-memoire gathers conclusions reached by stakeholders and is produced at the end of the JSR. The Local Education Groups voluntary share their JSR aide-memoires after annual JSRs are undertaken.",
+      "display": "{{ JSR report available }}%",
+      "max": 18,
+      "min": 1,
+      "name": "JSR report available",
+      "precision": 2,
+      "source_file": "JSR report available-reformatted.csv",
+      "tooltip": "{{ JSR report available }}%",
+      "type": "number",
+      "years": [
+        "2010",
+        "2011",
+        "2012",
+        "2013"
+      ]
+    },
+    "jsrs_conducted": {
+      "choropleth": [
+        {
+          "color": "#D1D1D2",
+          "label": "JSR not completed",
+          "range": [
+            0,
+            0
+          ]
+        },
+        {
+          "color": "#F9A51A",
+          "label": "JSR completed",
+          "range": [
+            1,
+            1
+          ]
+        }
+      ],
+      "description": "This indicator monitors whether the annual process of a Joint Sector Reviews (JSRs) is undertaken or not. A JSR is a monitoring and review mechanism where Local Education Group members get together to assess progress, challenges and funding of the education sector. JSRs provide an opportunity to measure progress against Education Sector Plans, as well as to influence allocations and work-plans. In general, they take place annually or biannually.",
+      "display": "{{ JSRs conducted }}%",
+      "max": "18",
+      "min": "1",
+      "name": "JSRs conducted",
+      "precision": 2,
+      "source_file": "JSRs conducted-reformatted.csv",
+      "tooltip": "{{ JSRs conducted }}%",
+      "type": "boolean",
+      "years": [
+        "2010",
+        "2011",
+        "2012",
+        "2013"
+      ]
+    },
+    "learning_math_lowest_boys__pasec": {
+      "description": "Proportion of students who obtained the lowest proficiency levels in reading international standardized assessments. Assessments included are PASEC, SACMEQ, TIMSS, PIRLS and LLECE. ",
+      "display": "{{ Learning Math Lowest Boys - PASEC }}%",
+      "max": 43.4,
+      "min": 12.2,
+      "name": "Learning Math Lowest Boys - PASEC",
+      "precision": 2,
+      "source_file": "Learning Math Lowest - PASEC.csv",
+      "tooltip": "Total: {{ Learning Math Lowest Total - PASEC }}% Boys: {{ Learning Math Lowest Boys - PASEC }}% Girls: {{ Learning Math Lowest Girls - PASEC }}%",
+      "type": "number",
+      "years": [
+        "2009/2010"
+      ]
+    },
+    "learning_math_lowest_boys__sacmeq": {
+      "description": "Proportion of students who obtained the lowest proficiency levels in reading international standardized assessments. Assessments included are PASEC, SACMEQ, TIMSS, PIRLS and LLECE. ",
+      "display": "{{ Learning Math Lowest Boys - SACMEQ }}%",
+      "max": 11.7,
+      "min": 0.4,
+      "name": "Learning Math Lowest Boys - SACMEQ",
+      "precision": 2,
+      "source_file": "Learning Math Lowest - SACMEQ.csv",
+      "tooltip": "Total: {{ Learning Math Lowest Total - SACMEQ }}% Boys: {{ Learning Math Lowest Boys - SACMEQ }}% Girls: {{ Learning Math Lowest Girls - SACMEQ }}%",
+      "type": "number",
+      "years": [
+        "2007"
+      ]
+    },
+    "learning_math_lowest_boys__tims": {
+      "description": "Proportion of students who obtained the lowest proficiency levels in reading international standardized assessments. Assessments included are PASEC, SACMEQ, TIMSS, PIRLS and LLECE. ",
+      "display": "{{ Learning Math Lowest Boys - TIMS }}%",
+      "max": 0,
+      "min": 0,
+      "name": "Learning Math Lowest Boys - TIMS",
+      "precision": 2,
+      "source_file": "Learning Math Lowest - TIMS.csv",
+      "tooltip": "Total: {{ Learning Math Lowest Total - TIMS }}% Boys: {{ Learning Math Lowest Boys - TIMS }}% Girls: {{ Learning Math Lowest Girls - TIMS }}%",
+      "type": "number",
+      "years": [
+        "2011"
+      ]
+    },
+    "learning_math_lowest_girls__pasec": {
+      "description": "Proportion of students who obtained the lowest proficiency levels in reading international standardized assessments. Assessments included are PASEC, SACMEQ, TIMSS, PIRLS and LLECE. ",
+      "display": "{{ Learning Math Lowest Girls - PASEC }}%",
+      "max": 45.7983,
+      "min": 16.4216,
+      "name": "Learning Math Lowest Girls - PASEC",
+      "precision": 2,
+      "source_file": "Learning Math Lowest - PASEC.csv",
+      "tooltip": "Total: {{ Learning Math Lowest Total - PASEC }}% Boys: {{ Learning Math Lowest Boys - PASEC }}% Girls: {{ Learning Math Lowest Girls - PASEC }}%",
+      "type": "number",
+      "years": [
+        "2009/2010"
+      ]
+    },
+    "learning_math_lowest_girls__sacmeq": {
+      "description": "Proportion of students who obtained the lowest proficiency levels in reading international standardized assessments. Assessments included are PASEC, SACMEQ, TIMSS, PIRLS and LLECE. ",
+      "display": "{{ Learning Math Lowest Girls - SACMEQ }}%",
+      "max": 15.9,
+      "min": 0.6,
+      "name": "Learning Math Lowest Girls - SACMEQ",
+      "precision": 2,
+      "source_file": "Learning Math Lowest - SACMEQ.csv",
+      "tooltip": "Total: {{ Learning Math Lowest Total - SACMEQ }}% Boys: {{ Learning Math Lowest Boys - SACMEQ }}% Girls: {{ Learning Math Lowest Girls - SACMEQ }}%",
+      "type": "number",
+      "years": [
+        "2007"
+      ]
+    },
+    "learning_math_lowest_girls__tims": {
+      "description": "Proportion of students who obtained the lowest proficiency levels in reading international standardized assessments. Assessments included are PASEC, SACMEQ, TIMSS, PIRLS and LLECE. ",
+      "display": "{{ Learning Math Lowest Girls - TIMS }}%",
+      "max": 0,
+      "min": 0,
+      "name": "Learning Math Lowest Girls - TIMS",
+      "precision": 2,
+      "source_file": "Learning Math Lowest - TIMS.csv",
+      "tooltip": "Total: {{ Learning Math Lowest Total - TIMS }}% Boys: {{ Learning Math Lowest Boys - TIMS }}% Girls: {{ Learning Math Lowest Girls - TIMS }}%",
+      "type": "number",
+      "years": [
+        "2011"
+      ]
+    },
+    "learning_math_lowest_total__pasec": {
+      "description": "Proportion of students who obtained the lowest proficiency levels in reading international standardized assessments. Assessments included are PASEC, SACMEQ, TIMSS, PIRLS and LLECE. ",
+      "display": "{{ Learning Math Lowest Total - PASEC }}%",
+      "max": 44.5256,
+      "min": 14.7004,
+      "name": "Learning Math Lowest Total - PASEC",
+      "precision": 2,
+      "source_file": "Learning Math Lowest - PASEC.csv",
+      "tooltip": "Total: {{ Learning Math Lowest Total - PASEC }}% Boys: {{ Learning Math Lowest Boys - PASEC }}% Girls: {{ Learning Math Lowest Girls - PASEC }}%",
+      "type": "number",
+      "years": [
+        "2009/2010"
+      ]
+    },
+    "learning_math_lowest_total__sacmeq": {
+      "description": "Proportion of students who obtained the lowest proficiency levels in reading international standardized assessments. Assessments included are PASEC, SACMEQ, TIMSS, PIRLS and LLECE. ",
+      "display": "{{ Learning Math Lowest Total - SACMEQ }}%",
+      "max": 13.7,
+      "min": 0.6,
+      "name": "Learning Math Lowest Total - SACMEQ",
+      "precision": 2,
+      "source_file": "Learning Math Lowest - SACMEQ.csv",
+      "tooltip": "Total: {{ Learning Math Lowest Total - SACMEQ }}% Boys: {{ Learning Math Lowest Boys - SACMEQ }}% Girls: {{ Learning Math Lowest Girls - SACMEQ }}%",
+      "type": "number",
+      "years": [
+        "2007"
+      ]
+    },
+    "learning_math_lowest_total__tims": {
+      "description": "Proportion of students who obtained the lowest proficiency levels in reading international standardized assessments. Assessments included are PASEC, SACMEQ, TIMSS, PIRLS and LLECE. ",
+      "display": "{{ Learning Math Lowest Total - TIMS }}%",
+      "max": 78.586,
+      "min": 37.9027,
+      "name": "Learning Math Lowest Total - TIMS",
+      "precision": 2,
+      "source_file": "Learning Math Lowest - TIMS.csv",
+      "tooltip": "Total: {{ Learning Math Lowest Total - TIMS }}% Boys: {{ Learning Math Lowest Boys - TIMS }}% Girls: {{ Learning Math Lowest Girls - TIMS }}%",
+      "type": "number",
+      "years": [
+        "2011"
+      ]
+    },
+    "lower_secondary_completion_rate_female": {
+      "choropleth": [
+        {
+          "color": "#f9a51a",
+          "label": "< 25",
+          "range": [
+            6.6894297433,
+            25
+          ]
+        },
+        {
+          "color": "#F47C30",
+          "label": "25 - 50",
+          "range": [
+            25,
+            50
+          ]
+        },
+        {
+          "color": "#EF4854",
+          "label": "\u2265 50",
+          "range": [
+            50,
+            107.5602876326
+          ]
+        }
+      ],
+      "description": "Total number of new entrants in the last grade of lower secondary education, regardless of age, expressed as a percentage of the population at the official entrance age to the last grade of lower secondary. This indicator, known as Gross Intake Rate to the Last Grade, is a proxy measure of the completion rate.",
+      "display": "{{ Lower Secondary Completion Rate Female (%) }}%",
+      "max": 107.5602876326,
+      "min": 6.6894297433,
+      "name": "Lower Secondary Completion Rate Female (%)",
+      "precision": 2,
+      "source_file": "Lower Secondary Completion Rate - All.csv",
+      "tooltip": "{{ Lower Secondary Completion Rate Female (%) }}%",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012"
+      ]
+    },
+    "lower_secondary_completion_rate_gpi": {
+      "choropleth": [
+        {
+          "color": "#f9a51a",
+          "label": "< 0.97",
+          "range": [
+            0,
+            0.97
+          ]
+        },
+        {
+          "color": "#F47C30",
+          "label": "0.97 - 1.03",
+          "range": [
+            0.97,
+            1.03
+          ]
+        },
+        {
+          "color": "#EF4854",
+          "label": "\u2265 1.03",
+          "range": [
+            1.03,
+            1.4225202974
+          ]
+        }
+      ],
+      "description": "Total number of new entrants in the last grade of lower secondary education, regardless of age, expressed as a percentage of the population at the official entrance age to the last grade of lower secondary. This indicator, known as Gross Intake Rate to the Last Grade, is a proxy measure of the completion rate.",
+      "display": "{{ Lower Secondary Completion Rate GPI }}%",
+      "max": 1.4225202974,
+      "min": 0,
+      "name": "Lower Secondary Completion Rate GPI",
+      "precision": 2,
+      "source_file": "Lower Secondary Completion Rate - All.csv",
+      "tooltip": "{{ Lower Secondary Completion Rate GPI }}%",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012"
+      ]
+    },
+    "lower_secondary_completion_rate_male": {
+      "choropleth": [
+        {
+          "color": "#f9a51a",
+          "label": "< 25",
+          "range": [
+            10.85285,
+            25
+          ]
+        },
+        {
+          "color": "#F47C30",
+          "label": "25 - 50",
+          "range": [
+            25,
+            50
+          ]
+        },
+        {
+          "color": "#EF4854",
+          "label": "\u2265 50",
+          "range": [
+            50,
+            109.75992
+          ]
+        }
+      ],
+      "description": "Total number of new entrants in the last grade of lower secondary education, regardless of age, expressed as a percentage of the population at the official entrance age to the last grade of lower secondary. This indicator, known as Gross Intake Rate to the Last Grade, is a proxy measure of the completion rate.",
+      "display": "{{ Lower Secondary Completion Rate Male (%) }}%",
+      "max": 109.75992,
+      "min": 10.85285,
+      "name": "Lower Secondary Completion Rate Male (%)",
+      "precision": 2,
+      "source_file": "Lower Secondary Completion Rate - All.csv",
+      "tooltip": "{{ Lower Secondary Completion Rate Male (%) }}%",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012"
+      ]
+    },
+    "lower_secondary_completion_rate_total": {
+      "choropleth": [
+        {
+          "color": "#f9a51a",
+          "label": "< 25",
+          "range": [
+            9.22702,
+            25
+          ]
+        },
+        {
+          "color": "#F47C30",
+          "label": "25 - 50",
+          "range": [
+            25,
+            50
+          ]
+        },
+        {
+          "color": "#EF4854",
+          "label": "\u2265 50",
+          "range": [
+            50,
+            108.34803
+          ]
+        }
+      ],
+      "description": "Total number of new entrants in the last grade of lower secondary education, regardless of age, expressed as a percentage of the population at the official entrance age to the last grade of lower secondary. This indicator, known as Gross Intake Rate to the Last Grade, is a proxy measure of the completion rate.",
+      "display": "{{ Lower Secondary Completion Rate Total (%) }}%",
+      "max": 108.34803,
+      "min": 9.22702,
+      "name": "Lower Secondary Completion Rate Total (%)",
+      "precision": 2,
+      "source_file": "Lower Secondary Completion Rate - All.csv",
+      "tooltip": "{{ Lower Secondary Completion Rate Total (%) }}%",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012"
+      ]
+    },
+    "map_of_the_global_partnership_for_education": {
+      "choropleth": [
+        {
+          "color": "Red",
+          "label": "GPE Donors",
+          "range": [
+            0,
+            0.5
+          ]
+        },
+        {
+          "color": "#123ab8",
+          "label": "GPE Developing Country Partners",
+          "range": [
+            0.5,
+            1
+          ]
+        }
+      ],
+      "description": "Map of the Global Partnership For Education (GPE)",
+      "display": "{{ Map of the Global Partnership For Education (GPE) }}%",
+      "max": 1,
+      "min": 0,
+      "name": "Map of the Global Partnership For Education (GPE)",
+      "precision": 2,
+      "source_file": "Map of the Global Partnership For Education (GPE).csv",
+      "tooltip": "{{ Map of the Global Partnership For Education (GPE) }}%",
+      "type": "number",
+      "years": []
+    },
+    "percentage_of_repeaters_in_lower_secondary_total": {
+      "choropleth": [
+        {
+          "color": "#f9a51a",
+          "label": "< 5",
+          "range": [
+            0.0484046211,
+            5
+          ]
+        },
+        {
+          "color": "#F47C30",
+          "label": "5 - 10",
+          "range": [
+            5,
+            10
+          ]
+        },
+        {
+          "color": "#EF4854",
+          "label": "\u2265 10",
+          "range": [
+            10,
+            34.3289745354
+          ]
+        }
+      ],
+      "description": "Total number of pupils enrolled in the same grade as in a previous year, as a percentage of the total enrolment in lower secondary education.",
+      "display": "{{ Percentage of repeaters in lower secondary Total (%) }}%",
+      "max": 34.3289745354,
+      "min": 0.0484046211,
+      "name": "Percentage of repeaters in lower secondary Total (%)",
+      "precision": 2,
+      "source_file": "Percentage of repeaters in lower secondary Total (%).csv",
+      "tooltip": "{{ Percentage of repeaters in lower secondary Total (%) }}%",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012"
+      ]
+    },
+    "percentage_of_repeaters_in_primary_total": {
+      "choropleth": [
+        {
+          "color": "#f9a51a",
+          "label": "< 5",
+          "range": [
+            0.0484046211,
+            5
+          ]
+        },
+        {
+          "color": "#F47C30",
+          "label": "5 - 10",
+          "range": [
+            5,
+            10
+          ]
+        },
+        {
+          "color": "#EF4854",
+          "label": "\u2265 10",
+          "range": [
+            10,
+            36.2200217739
+          ]
+        }
+      ],
+      "description": "Total number of pupils enrolled in the same grade as in a previous year, as a percentage of the total enrolment in primary education.",
+      "display": "{{ Percentage of repeaters in primary Total (%) }}%",
+      "max": 36.2200217739,
+      "min": 0,
+      "name": "Percentage of repeaters in primary Total (%)",
+      "precision": 2,
+      "source_file": "Percentage of repeaters in primary Total (%).csv",
+      "tooltip": "{{ Percentage of repeaters in primary Total (%) }}%",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012"
+      ]
+    },
+    "percentage_of_teacher_trained_lower_secondary__education": {
+      "choropleth": [
+        {
+          "color": "#f9a51a",
+          "label": "< 75",
+          "range": [
+            13.68571,
+            75
+          ]
+        },
+        {
+          "color": "#F47C30",
+          "label": "75 - 90",
+          "range": [
+            75,
+            90
+          ]
+        },
+        {
+          "color": "#EF4854",
+          "label": "\u2265 90",
+          "range": [
+            90,
+            100
+          ]
+        }
+      ],
+      "description": "Total number of teachers who have received the minimum (pre-service or in-service) teacher training required for teaching in lower secondary education, expressed as a percentage of the total number of teachers in lower secondary education.",
+      "display": "{{ Percentage of teacher trained, Lower Secondary  Education }}%",
+      "max": 100,
+      "min": 13.68571,
+      "name": "Percentage of teacher trained, Lower Secondary  Education",
+      "precision": 2,
+      "source_file": "Percentage of teacher trained, Lower Secondary Education.csv",
+      "tooltip": "{{ Percentage of teacher trained, Lower Secondary  Education }}%",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012"
+      ]
+    },
+    "percentage_of_teacher_trained_primary_education": {
+      "choropleth": [
+        {
+          "color": "#f9a51a",
+          "label": "< 75",
+          "range": [
+            36.43654,
+            75
+          ]
+        },
+        {
+          "color": "#F47C30",
+          "label": "75 - 90",
+          "range": [
+            75,
+            90
+          ]
+        },
+        {
+          "color": "#EF4854",
+          "label": "\u2265 90",
+          "range": [
+            90,
+            100
+          ]
+        }
+      ],
+      "description": "Total number of teachers who have received the minimum (pre-service or in-service) teacher training required for teaching in primary education, expressed as a percentage of the total number of teachers in primary education.",
+      "display": "{{ Percentage of teacher trained, Primary Education }}%",
+      "max": 100,
+      "min": 36.43654,
+      "name": "Percentage of teacher trained, Primary Education",
+      "precision": 2,
+      "source_file": "Percentage of teacher trained, Primary Education.csv",
+      "tooltip": "{{ Percentage of teacher trained, Primary Education }}%",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012"
+      ]
+    },
+    "preprimary_gross_enrollment_ratio_female": {
+      "description": "Pre-primary Gross Enrollment Ratio Female (%)",
+      "display": "{{ Pre-primary Gross Enrollment Ratio Female (%) }}%",
+      "max": 115.45589,
+      "min": 1.09033,
+      "name": "Pre-primary Gross Enrollment Ratio Female (%)",
+      "precision": 2,
+      "source_file": "Primary Gross Enrollment Ratio - All.csv",
+      "tooltip": "tooltip: {{ Pre-primary Gross Enrollment Ratio Female (%) }}%",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012"
+      ]
+    },
+    "preprimary_gross_enrollment_ratio_male": {
+      "description": "Pre-primary Gross Enrollment Ratio Male (%)",
+      "display": "{{ Pre-primary Gross Enrollment Ratio Male (%) }}%",
+      "max": 112.46256,
+      "min": 0.99693,
+      "name": "Pre-primary Gross Enrollment Ratio Male (%)",
+      "precision": 2,
+      "source_file": "Primary Gross Enrollment Ratio - All.csv",
+      "tooltip": "tooltip: {{ Pre-primary Gross Enrollment Ratio Male (%) }}%",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012"
+      ]
+    },
+    "preprimary_gross_enrollment_ratio_total": {
+      "description": "Pre-primary Gross Enrollment Ratio Total (%)",
+      "display": "{{ Pre-primary Gross Enrollment Ratio Total (%) }}%",
+      "max": 113.92949,
+      "min": 1.04281,
+      "name": "Pre-primary Gross Enrollment Ratio Total (%)",
+      "precision": 2,
+      "source_file": "Primary Gross Enrollment Ratio - All.csv",
+      "tooltip": "tooltip: {{ Pre-primary Gross Enrollment Ratio Total (%) }}%",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012"
+      ]
+    },
+    "primary_completion_rate_female": {
+      "choropleth": [
+        {
+          "color": "#f9a51a",
+          "label": "< 75",
+          "range": [
+            22.9928,
+            75
+          ]
+        },
+        {
+          "color": "#F47C30",
+          "label": "75 - 95",
+          "range": [
+            75,
+            95
+          ]
+        },
+        {
+          "color": "#EF4854",
+          "label": "\u2265 95",
+          "range": [
+            95,
+            129.90136
+          ]
+        }
+      ],
+      "description": "Total number of new entrants in the last grade of primary education, regardless of age, expressed as a percentage of the population at the official entrance age to the last grade of primary. This indicator, known as Gross Intake Rate to the Last Grade of Primary Education, is a proxy measure of primary completion rate.",
+      "display": "{{ Primary Completion Rate Female (%) }}%",
+      "max": 129.90136,
+      "min": 22.9928,
+      "name": "Primary Completion Rate Female (%)",
+      "precision": 2,
+      "source_file": "Primary Completion Rate - All.csv",
+      "tooltip": "{{ Primary Completion Rate Female (%) }}%",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012"
+      ]
+    },
+    "primary_completion_rate_gpi": {
+      "choropleth": [
+        {
+          "color": "#f9a51a",
+          "label": "< 0.97",
+          "range": [
+            0.5753977135,
+            0.97
+          ]
+        },
+        {
+          "color": "#F47C30",
+          "label": "0.97 - 1.03",
+          "range": [
+            0.97,
+            1.03
+          ]
+        },
+        {
+          "color": "#EF4854",
+          "label": "\u2265 0.97",
+          "range": [
+            1.03,
+            1.3609825841
+          ]
+        }
+      ],
+      "description": "Total number of new entrants in the last grade of primary education, regardless of age, expressed as a percentage of the population at the official entrance age to the last grade of primary. This indicator, known as Gross Intake Rate to the Last Grade of Primary Education, is a proxy measure of primary completion rate.",
+      "display": "{{ Primary Completion Rate GPI }}%",
+      "max": 1.3609825841,
+      "min": 0.5753977135,
+      "name": "Primary Completion Rate GPI",
+      "precision": 2,
+      "source_file": "Primary Completion Rate - All.csv",
+      "tooltip": "{{ Primary Completion Rate GPI }}%",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012"
+      ]
+    },
+    "primary_completion_rate_male": {
+      "choropleth": [
+        {
+          "color": "#f9a51a",
+          "label": "< 75",
+          "range": [
+            33.96457,
+            75
+          ]
+        },
+        {
+          "color": "#F47C30",
+          "label": "75 - 95",
+          "range": [
+            75,
+            95
+          ]
+        },
+        {
+          "color": "#EF4854",
+          "label": "\u2265 95",
+          "range": [
+            95,
+            130.53185
+          ]
+        }
+      ],
+      "description": "Total number of new entrants in the last grade of primary education, regardless of age, expressed as a percentage of the population at the official entrance age to the last grade of primary. This indicator, known as Gross Intake Rate to the Last Grade of Primary Education, is a proxy measure of primary completion rate.",
+      "display": "{{ Primary Completion Rate Male (%) }}%",
+      "max": 130.53185,
+      "min": 33.96457,
+      "name": "Primary Completion Rate Male (%)",
+      "precision": 2,
+      "source_file": "Primary Completion Rate - All.csv",
+      "tooltip": "{{ Primary Completion Rate Male (%) }}%",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012"
+      ]
+    },
+    "primary_completion_rate_total": {
+      "choropleth": [
+        {
+          "color": "#f9a51a",
+          "label": "< 75",
+          "range": [
+            31.20823,
+            75
+          ]
+        },
+        {
+          "color": "#F47C30",
+          "label": "75 - 95",
+          "range": [
+            75,
+            95
+          ]
+        },
+        {
+          "color": "#EF4854",
+          "label": "\u2265 95",
+          "range": [
+            95,
+            130.21946
+          ]
+        }
+      ],
+      "description": "Total number of new entrants in the last grade of primary education, regardless of age, expressed as a percentage of the population at the official entrance age to the last grade of primary. This indicator, known as Gross Intake Rate to the Last Grade of Primary Education, is a proxy measure of primary completion rate.",
+      "display": "{{ Primary Completion Rate Total (%) }}%",
+      "max": 130.21946,
+      "min": 31.20823,
+      "name": "Primary Completion Rate Total (%)",
+      "precision": 2,
+      "source_file": "Primary Completion Rate - All.csv",
+      "tooltip": "{{ Primary Completion Rate Total (%) }}%",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012"
+      ]
+    },
+    "primary_gross_enrollment_ratio_gpi": {
+      "choropleth": [
+        {
+          "color": "#f9a51a",
+          "label": "< 0.97",
+          "range": [
+            0.8293680835,
+            0.97
+          ]
+        },
+        {
+          "color": "#F47C30",
+          "label": "0.97 - 1.03",
+          "range": [
+            0.97,
+            1.03
+          ]
+        },
+        {
+          "color": "#EF4854",
+          "label": "\u2265 1.03",
+          "range": [
+            1.03,
+            1.142300523
+          ]
+        }
+      ],
+      "description": "Total number of children enrolled in early childhood care and education programs, regardless of age, expressed as a percentage of the population in the relevant official age group.",
+      "display": "{{ Primary Gross Enrollment Ratio GPI }}%",
+      "max": 1.142300523,
+      "min": 0.8293680835,
+      "name": "Primary Gross Enrollment Ratio GPI",
+      "precision": 2,
+      "source_file": "Primary Gross Enrollment Ratio - All.csv",
+      "tooltip": "{{ Primary Gross Enrollment Ratio GPI }}%",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012"
+      ]
+    },
+    "primary_out_of_school_children_rate_female": {
+      "choropleth": [
+        {
+          "color": "#f9a51a",
+          "label": "< 10",
+          "range": [
+            0.72272,
+            15
+          ]
+        },
+        {
+          "color": "#F47C30",
+          "label": "10 - 25",
+          "range": [
+            10,
+            25
+          ]
+        },
+        {
+          "color": "#EF4854",
+          "label": "\u2265 25",
+          "range": [
+            25,
+            70.59044
+          ]
+        }
+      ],
+      "description": "Children in the official primary school age range, who are not enrolled in either primary or secondary schools.",
+      "display": "{{ Primary Out of School Children Rate Female (%) }}%",
+      "max": 70.59044,
+      "min": 0.72272,
+      "name": "Primary Out of School Children Rate Female (%)",
+      "precision": 2,
+      "source_file": "Primary Out of School Children Rate - All.csv",
+      "tooltip": "{{ Primary Out of School Children Rate Female (%) }}%",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012"
+      ]
+    },
+    "primary_out_of_school_children_rate_male": {
+      "choropleth": [
+        {
+          "color": "#f9a51a",
+          "label": "< 10",
+          "range": [
+            0.51488,
+            15
+          ]
+        },
+        {
+          "color": "#F47C30",
+          "label": "10 - 25",
+          "range": [
+            10,
+            25
+          ]
+        },
+        {
+          "color": "#EF4854",
+          "label": "\u2265 25",
+          "range": [
+            25,
+            66.98267
+          ]
+        }
+      ],
+      "description": "Children in the official primary school age range, who are not enrolled in either primary or secondary schools.",
+      "display": "{{ Primary Out of School Children Rate Male (%) }}%",
+      "max": 66.98267,
+      "min": 0.51488,
+      "name": "Primary Out of School Children Rate Male (%)",
+      "precision": 2,
+      "source_file": "Primary Out of School Children Rate - All.csv",
+      "tooltip": "{{ Primary Out of School Children Rate Male (%) }}%",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012"
+      ]
+    },
+    "primary_out_of_school_children_rate_total": {
+      "choropleth": [
+        {
+          "color": "#f9a51a",
+          "label": "< 10",
+          "range": [
+            0.59912,
+            15
+          ]
+        },
+        {
+          "color": "#F47C30",
+          "label": "10 - 25",
+          "range": [
+            10,
+            25
+          ]
+        },
+        {
+          "color": "#EF4854",
+          "label": "\u2265 25",
+          "range": [
+            25,
+            68.75296
+          ]
+        }
+      ],
+      "description": "Children in the official primary school age range, who are not enrolled in either primary or secondary schools.",
+      "display": "{{ Primary Out of School Children Rate Total (%) }}%",
+      "max": 68.75296,
+      "min": 0.59912,
+      "name": "Primary Out of School Children Rate Total (%)",
+      "precision": 2,
+      "source_file": "Primary Out of School Children Rate - All.csv",
+      "tooltip": "{{ Primary Out of School Children Rate Total (%) }}%",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012"
+      ]
+    },
+    "public_expenditure_on_education_as__of_gdp": {
+      "choropleth": [
+        {
+          "color": "#f9a51a",
+          "label": "< 4",
+          "range": [
+            1.20532,
+            4
+          ]
+        },
+        {
+          "color": "#F47C30",
+          "label": "4 - 5",
+          "range": [
+            4,
+            5
+          ]
+        },
+        {
+          "color": "#EF4854",
+          "label": "\u2265 5",
+          "range": [
+            5,
+            12.98229
+          ]
+        }
+      ],
+      "description": "Public expenditure (current and capital) expressed as a percentage of Gross Domestic Product.",
+      "display": "{{ Public expenditure on education as % of GDP }}%",
+      "max": 12.98229,
+      "min": 1.20532,
+      "name": "Public expenditure on education as % of GDP",
+      "precision": 2,
+      "source_file": "Public expenditure on education as % of GDP.csv",
+      "tooltip": "{{ Public expenditure on education as % of GDP }}%",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012"
+      ]
+    },
+    "public_expenditure_on_education_as__of_public_expenditure": {
+      "choropleth": [
+        {
+          "color": "#f9a51a",
+          "label": "< 15",
+          "range": [
+            7.16742,
+            15
+          ]
+        },
+        {
+          "color": "#F47C30",
+          "label": "15 - 20",
+          "range": [
+            15,
+            20
+          ]
+        },
+        {
+          "color": "#EF4854",
+          "label": "\u2265 20",
+          "range": [
+            20,
+            27.75288
+          ]
+        }
+      ],
+      "description": "Public expenditure (current and capital) on education expressed as a percentage of the total public expenditures in a given financial year.",
+      "display": "{{ Public Expenditure on Education as % of Public Expenditure }}%",
+      "max": 27.75288,
+      "min": 7.16742,
+      "name": "Public Expenditure on Education as % of Public Expenditure",
+      "precision": 2,
+      "source_file": "Public Expenditure on Education as % of Public Expenditure.csv",
+      "tooltip": "{{ Public Expenditure on Education as % of Public Expenditure }}%",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012"
+      ]
+    },
+    "pupil_teacher_ratio_lower_secondary_education": {
+      "choropleth": [
+        {
+          "color": "#f9a51a",
+          "label": "< 40",
+          "range": [
+            7.13811,
+            30
+          ]
+        },
+        {
+          "color": "#F47C30",
+          "label": "30 - 40",
+          "range": [
+            30,
+            40
+          ]
+        },
+        {
+          "color": "#EF4854",
+          "label": "\u2265 40",
+          "range": [
+            40,
+            55.99961
+          ]
+        }
+      ],
+      "description": "Average number of pupils per teacher in lower secondary schools, based on headcounts of both pupils and teachers.",
+      "display": "{{ Pupil Teacher Ratio, Lower Secondary Education }}%",
+      "max": 55.99961,
+      "min": 7.13811,
+      "name": "Pupil Teacher Ratio, Lower Secondary Education",
+      "precision": 2,
+      "source_file": "Pupil Teacher Ratio, Lower Secondary Education.csv",
+      "tooltip": "{{ Pupil Teacher Ratio, Lower Secondary Education }}%",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012"
+      ]
+    },
+    "pupil_teacher_ratio_primary_education": {
+      "choropleth": [
+        {
+          "color": "#f9a51a",
+          "label": "< 40",
+          "range": [
+            6.25983,
+            40
+          ]
+        },
+        {
+          "color": "#F47C30",
+          "label": "40 - 50",
+          "range": [
+            40,
+            50
+          ]
+        },
+        {
+          "color": "#EF4854",
+          "label": "\u2265 50",
+          "range": [
+            50,
+            100.23649
+          ]
+        }
+      ],
+      "description": "Average number of pupils per teacher in primary schools, based on headcounts of both pupils and teachers.",
+      "display": "{{ Pupil Teacher Ratio, Primary Education }}%",
+      "max": 100.23649,
+      "min": 6.25983,
+      "name": "Pupil Teacher Ratio, Primary Education",
+      "precision": 2,
+      "source_file": "Pupil Teacher Ratio, Primary Education.csv",
+      "tooltip": "{{ Pupil Teacher Ratio, Primary Education }}%",
+      "type": "number",
+      "years": [
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012"
+      ]
+    },
+    "youth__literacy_rate__female": {
+      "choropleth": [
+        {
+          "color": "#f9a51a",
+          "label": "< 75",
+          "range": [
+            14.23355,
+            75
+          ]
+        },
+        {
+          "color": "#F47C30",
+          "label": "75 - 90",
+          "range": [
+            75,
+            90
+          ]
+        },
+        {
+          "color": "#EF4854",
+          "label": "\u2265 90",
+          "range": [
+            90,
+            100
+          ]
+        }
+      ],
+      "description": "Proportion of the population aged 15 to 24 years old who can both read and write with understanding a short simple statement on his/her everyday life. Generally, \u2018literacy\u2019 also encompasses \u2018numeracy\u2019, the ability to make simple arithmetic calculations.",
+      "display": "{{ Youth (15-24) literacy rate (%) female }}%",
+      "max": 100,
+      "min": 14.23355,
+      "name": "Youth (15-24) literacy rate (%) female",
+      "precision": 2,
+      "source_file": "Youth (15-24) literacy rate (%) - All.csv",
+      "tooltip": "{{ Youth (15-24) literacy rate (%) female }}%",
+      "type": "number",
+      "years": [
+        "2000-2005",
+        "2007-2012"
+      ]
+    },
+    "youth__literacy_rate__male": {
+      "choropleth": [
+        {
+          "color": "#f9a51a",
+          "label": "< 75",
+          "range": [
+            26.23006,
+            75
+          ]
+        },
+        {
+          "color": "#F47C30",
+          "label": "75 - 90",
+          "range": [
+            75,
+            90
+          ]
+        },
+        {
+          "color": "#EF4854",
+          "label": "\u2265 90",
+          "range": [
+            90,
+            100
+          ]
+        }
+      ],
+      "description": "Youth (15-24) literacy rate (%) Male",
+      "display": "{{ Youth (15-24) literacy rate (%) Male }}%",
+      "max": 100,
+      "min": 26.23006,
+      "name": "Youth (15-24) literacy rate (%) Male",
+      "precision": 2,
+      "source_file": "Youth (15-24) literacy rate (%) - All.csv",
+      "tooltip": "Boys: {{ Youth (15-24) literacy rate (%) Male }}% Girls: {{ Youth (15-24) literacy rate (%) female }}% Total: {{ Youth (15-24) literacy rate (%) Total }}%",
+      "type": "number",
+      "years": [
+        "2000-2005",
+        "2007-2012"
+      ]
+    },
+    "youth__literacy_rate__total": {
+      "choropleth": [
+        {
+          "color": "#f9a51a",
+          "label": "< 75",
+          "range": [
+            19.79119,
+            75
+          ]
+        },
+        {
+          "color": "#F47C30",
+          "label": "75 - 90",
+          "range": [
+            75,
+            90
+          ]
+        },
+        {
+          "color": "#EF4854",
+          "label": "\u2265 90",
+          "range": [
+            90,
+            100
+          ]
+        }
+      ],
+      "description": "Proportion of the population aged 15 to 24 years old who can both read and write with understanding a short simple statement on his/her everyday life. Generally, \u2018literacy\u2019 also encompasses \u2018numeracy\u2019, the ability to make simple arithmetic calculations.",
+      "display": "{{ Youth (15-24) literacy rate (%) Total }}%",
+      "max": 100,
+      "min": 19.79119,
+      "name": "Youth (15-24) literacy rate (%) Total",
+      "precision": 2,
+      "source_file": "Youth (15-24) literacy rate (%) - All.csv",
+      "tooltip": "{{ Youth (15-24) literacy rate (%) Total }}%",
+      "type": "number",
+      "years": [
+        "2000-2005",
+        "2007-2012"
+      ]
+    }
+  },
+  "site": {
+    "about": "Explore the status and progress of education across the globe through indicators collected by the Global Partnership for Education (GPE) and its partners.",
+    "description": "csviiz",
+    "logo": "http://csviz.dev.wiredcraft.com/assets/images/logo.png",
+    "name": "csviiz",
+    "repository": "fraserxu/csviiz",
+    "url": "https://fraserxu.github.io/csviiz"
+  },
+  "ui": {
+    "choropleth": [
+      "#42c6da",
+      "#3cb9ec",
+      "#42a5f5",
+      "#4a80df",
+      "#5c6bc0"
+    ],
+    "legend": false,
+    "menu": [
+      "Map of the Global Partnership For Education (GPE)",
+      {
+        "Access": [
+          "Pre-primary Gross Enrollment Ratio Female (%)",
+          "Pre-primary Gross Enrollment Ratio Male (%)",
+          "Pre-primary Gross Enrollment Ratio Total (%)",
+          "Primary Gross Enrollment Ratio GPI",
+          "Primary Completion Rate Total (%)",
+          "Primary Completion Rate Male (%)",
+          "Primary Completion Rate Female (%)",
+          "Primary Completion Rate GPI",
+          "Primary Out of School Children Rate Total (%)",
+          "Primary Out of School Children Rate Male (%)",
+          "Primary Out of School Children Rate Female (%)",
+          "Lower Secondary Completion Rate Total (%)",
+          "Lower Secondary Completion Rate Male (%)",
+          "Lower Secondary Completion Rate Female (%)",
+          "Lower Secondary Completion Rate GPI"
+        ]
+      },
+      {
+        "Teacher effectiveness": [
+          "Pupil Teacher Ratio, Primary Education",
+          "Pupil Teacher Ratio, Lower Secondary Education",
+          "Percentage of teacher trained, Primary Education",
+          "Percentage of teacher trained, Lower Secondary  Education"
+        ]
+      },
+      {
+        "Domestic and External Financing": [
+          "Public expenditure on education as % of GDP",
+          "Public Expenditure on Education as % of Public Expenditure",
+          "Educational expenditure in primary as % of total educational expenditure",
+          "AID committed for total Education as % of GDP",
+          "AID committed for total Education- Current prices (USD millions)",
+          "AID committed for Basic Education as % of GDP",
+          "AID committed for Basic Education- Current prices (USD millions)",
+          "AID disbursed for total Education as % of GDP",
+          "AID disbursed for total Education- Current prices (USD millions)",
+          "AID disbursed for Basic Education as % of GDP",
+          "AID disbursed for Basic Education- Current prices (USD millions)"
+        ]
+      },
+      {
+        "GPE Funding": [
+          "GPE Annual Funding Approvals",
+          "GPE Annual Funding Disbursements",
+          "GPE Funding Disbursement  as % of GDP",
+          "GPE Funding Approval as % of GDP",
+          "Equivalent Children Supported in basic education"
+        ]
+      },
+      {
+        "Learning Outcomes": [
+          "Youth (15-24) literacy rate (%) Male",
+          "Youth (15-24) literacy rate (%) female",
+          "Youth (15-24) literacy rate (%) Total",
+          "Learning Math Lowest Total - PASEC",
+          "Learning Math Lowest Boys - PASEC",
+          "Learning Math Lowest Girls - PASEC",
+          "Learning Math Lowest Total - SACMEQ",
+          "Learning Math Lowest Boys - SACMEQ",
+          "Learning Math Lowest Girls - SACMEQ",
+          "Learning Math Lowest Total - TIMS",
+          "Learning Math Lowest Boys - TIMS",
+          "Learning Math Lowest Girls - TIMS"
+        ]
+      },
+      {
+        "Joint Sector Reviews": [
+          "JSRs conducted",
+          "JSR report available"
+        ]
+      },
+      {
+        "Efficiency": [
+          "Percentage of repeaters in primary Total (%)",
+          "Percentage of repeaters in lower secondary Total (%)"
+        ]
+      },
+      {
+        "Missing Data": [
+          "% of missing data outcome indicators (%)",
+          "% of missing data, service delivery (%)",
+          "% of missing data, domestic financing (%)"
+        ]
+      }
+    ]
+  }
+}
